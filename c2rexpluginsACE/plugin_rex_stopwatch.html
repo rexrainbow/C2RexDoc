@@ -1,0 +1,130 @@
+<!DOCTYPE 5>
+<html>
+  <head>
+    <title>Plugin : Stopwatch</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="js/jquery-3.1.0.min.js">                         </script>
+    <script src="js/bootstrap.min.js">         </script>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header"><a class="navbar-brand" href="./index.html">Home</a></div>
+        <ul class="nav navbar-nav">
+          <li><a href="./pluginsIndex.html">Plugins      </a></li>
+          <li><a href="./behaviorsIndex.html">Behaviors                   </a></li>
+          <li><a href="./effectsIndex.html">Effects    </a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Plugin : Stopwatch</h1>
+      <p>Author:Rex.Rainbow</p>
+      <ul>
+        <li>Accumulate escaped time.</li>
+      </ul>
+      <div class="panel panel-default">
+        <div class="panel-title">
+          <h2>Properties</h2>
+        </div>
+        <div class="panel-body">
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">   
+          <h2>Actions</h2>
+        </div>
+        <div class="panel-body">
+          <h2>Control      </h2>
+          <h3>Action:Pause timer      </h3>
+          <ul>
+            <li>Pause timer.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Name ( number or string ) : The name of timer.</li>
+            </ul>
+          </ul>
+          <h3>Action:Resume timer      </h3>
+          <ul>
+            <li>Resume timer.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Name ( number or string ) : The name of timer.</li>
+            </ul>
+          </ul>
+          <h3>Action:Toggle timer      </h3>
+          <ul>
+            <li>Toggle timer.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Name ( number or string ) : The name of timer.</li>
+            </ul>
+          </ul>
+          <h2>Create      </h2>
+          <h3>Action:Start timer      </h3>
+          <ul>
+            <li>Start timer.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Name ( number or string ) : The name of timer.</li>
+              <li>Start ( number ) : Start at time.</li>
+            </ul>
+          </ul>
+          <h2>Destroy      </h2>
+          <h3>Action:Destroy timer      </h3>
+          <ul>
+            <li>Destroy timer.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Name ( number or string ) : The name of timer.</li>
+            </ul>
+          </ul>
+          <h2>Time      </h2>
+          <h3>Action:Shift escaped time      </h3>
+          <ul>
+            <li>Shift current escaped time.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Name ( number or string ) : The name of timer.</li>
+              <li>Offset ( number ) : Offset to time.</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">    
+        <div class="panel-title">    
+          <h2>Expressions</h2>
+        </div>
+        <div class="panel-body">           
+          <h2>Timer    </h2>
+          <h3>Expression:EscapedTime </h3>
+          <ul>
+            <li>Get escaped time in seconds.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>0 ( number or string ) : The name of timer to get.</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">       
+          <h2>Conditions</h2>
+        </div>
+        <div class="panel-body">              
+          <h2>Timer    </h2>
+          <h4>Condition:Is timmer running                    </h4>
+          <ul>
+            <li>Return true if timer is running.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Name ( number or string ) : Timer's name    </li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

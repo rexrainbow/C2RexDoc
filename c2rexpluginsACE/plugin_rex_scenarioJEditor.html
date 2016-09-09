@@ -1,0 +1,360 @@
+<!DOCTYPE 5>
+<html>
+  <head>
+    <title>Plugin : ScenarioJ Editor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="js/jquery-3.1.0.min.js">                         </script>
+    <script src="js/bootstrap.min.js">         </script>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header"><a class="navbar-brand" href="./index.html">Home</a></div>
+        <ul class="nav navbar-nav">
+          <li><a href="./pluginsIndex.html">Plugins      </a></li>
+          <li><a href="./behaviorsIndex.html">Behaviors                   </a></li>
+          <li><a href="./effectsIndex.html">Effects    </a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Plugin : ScenarioJ Editor</h1>
+      <p>Author:Rex.Rainbow</p>
+      <ul>
+        <li>Create Scenario-Json commands.</li>
+      </ul>
+      <div class="panel panel-default">
+        <div class="panel-title">
+          <h2>Properties</h2>
+        </div>
+        <div class="panel-body">
+          <h3>Mustache</h3>
+          <ul>
+            <li>Enable to process string by Mustache templating engine.                    </li>
+            <ul>
+              <li>Options : [&quot;No&quot;,&quot;Yes&quot;]</li>
+            </ul>
+          </ul>
+          <h3>Left delimiter</h3>
+          <ul>
+            <li>Left delimiter. Set &quot;&quot; to use default delimiter &quot;{{&quot;                    </li>
+          </ul>
+          <h3>Right delimiter</h3>
+          <ul>
+            <li>Right delimiter. Set &quot;&quot; to use default delimiter &quot;}}&quot;                    </li>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">   
+          <h2>Actions</h2>
+        </div>
+        <div class="panel-body">
+          <h2>C2 function call      </h2>
+          <h3>Action:Call C2 function      </h3>
+          <ul>
+            <li>Call a c2 function, running its 'On function' event.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Name ( string ) : The name of the c2 function to call.</li>
+              <li>Parameter {n} ( variadic ) : A parameter to pass for the c2 function call, which can be accessed with Function.Param({n}).</li>
+            </ul>
+          </ul>
+          <h2>Function      </h2>
+          <h3>Action:Stop function      </h3>
+          <ul>
+            <li>Exit current function, return to previous function body.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Function call      </h2>
+          <h3>Action:Set parameter      </h3>
+          <ul>
+            <li>Set a parameter table.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Name ( number or string ) : Name of parameter</li>
+              <li>Value ( number or string ) : Value</li>
+            </ul>
+          </ul>
+          <h3>Action:Call function      </h3>
+          <ul>
+            <li>Call a function, running its 'On function' event.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Name ( string ) : The name of the function to call.</li>
+            </ul>
+          </ul>
+          <h2>Global variable      </h2>
+          <h3>Action:Add to      </h3>
+          <ul>
+            <li>Add to the value of task variable.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Name ( string ) : Parameter's name</li>
+              <li>Value ( number or string ) : Value to set.</li>
+              <li>Task ( string ) : Task name. Set to &quot;&quot; for current task.</li>
+            </ul>
+          </ul>
+          <h3>Action:Set default value      </h3>
+          <ul>
+            <li>Set default value of global variable.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Name ( string ) : Parameter's name</li>
+              <li>Value ( number or string ) : The default value.</li>
+            </ul>
+          </ul>
+          <h3>Action:Set value      </h3>
+          <ul>
+            <li>Set global variable.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Name ( string ) : Parameter's name</li>
+              <li>Value ( number or string ) : Value to set.</li>
+            </ul>
+          </ul>
+          <h3>Action:Add to      </h3>
+          <ul>
+            <li>Add to the value of global variable.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Name ( string ) : Parameter's name</li>
+              <li>Value ( number or string ) : Value to set.</li>
+            </ul>
+          </ul>
+          <h2>Local variable      </h2>
+          <h3>Action:Set default value      </h3>
+          <ul>
+            <li>Set default value of local variable.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Name ( string ) : Parameter's name</li>
+              <li>Value ( number or string ) : The default value.</li>
+            </ul>
+          </ul>
+          <h3>Action:Set value      </h3>
+          <ul>
+            <li>Set local variable.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Name ( string ) : Parameter's name</li>
+              <li>Value ( number or string ) : Value to set.</li>
+              <li>Task ( string ) : Task name. Set to &quot;&quot; for current task.</li>
+            </ul>
+          </ul>
+          <h3>Action:Add to      </h3>
+          <ul>
+            <li>Add to the value of local variable.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Name ( string ) : Parameter's name</li>
+              <li>Value ( number or string ) : Value to set.</li>
+              <li>Task ( string ) : Task name. Set to &quot;&quot; for current task.</li>
+            </ul>
+          </ul>
+          <h2>Loop      </h2>
+          <h3>Action:Stop loop      </h3>
+          <ul>
+            <li>Stop current loop (for, while)   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Mustache      </h2>
+          <h3>Action:Set delimiters      </h3>
+          <ul>
+            <li>Set delimiters .   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Left delimiter ( string ) : Left delimiter. Set &quot;&quot; to use default delimiter &quot;{{&quot;</li>
+              <li>Right delimiter ( string ) : Right delimiter. Set &quot;&quot; to use default delimiter &quot;}}&quot;</li>
+            </ul>
+          </ul>
+          <h2>Task      </h2>
+          <h3>Action:Stop task      </h3>
+          <ul>
+            <li>Stop current task   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Task - Control      </h2>
+          <h3>Action:Start      </h3>
+          <ul>
+            <li>Start task.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Task ( string ) : Task name. Set to &quot;&quot; for current task.</li>
+              <li>Function ( string ) : Function name.</li>
+            </ul>
+          </ul>
+          <h2>Task variable      </h2>
+          <h3>Action:Set default value      </h3>
+          <ul>
+            <li>Set default value of task variable.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Name ( string ) : Parameter's name</li>
+              <li>Value ( number or string ) : The default value.</li>
+            </ul>
+          </ul>
+          <h3>Action:Set value      </h3>
+          <ul>
+            <li>Set task variable.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Name ( string ) : Parameter's name</li>
+              <li>Value ( number or string ) : Value to set.</li>
+              <li>Task ( string ) : Task name. Set to &quot;&quot; for current task.</li>
+            </ul>
+          </ul>
+          <h2>Wait      </h2>
+          <h3>Action:Wait      </h3>
+          <ul>
+            <li>Pending function execution until time-out or signal fired.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Delay time/Signal ( number or string ) : Number for delay time in seconds, or string of wait-signal.</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">    
+        <div class="panel-title">    
+          <h2>Expressions</h2>
+        </div>
+        <div class="panel-body">           
+          <h2>Content    </h2>
+          <h3>Expression:Content </h3>
+          <ul>
+            <li>Get content.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Expression    </h2>
+          <h3>Expression:Eval </h3>
+          <ul>
+            <li>Define expression, this string will be evaluated to get a number or a string.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Expression ( string ) : Expression.</li>
+            </ul>
+          </ul>
+          <h3>Expression:Num </h3>
+          <ul>
+            <li>Define expression, this string will be evaluated to get a number.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Number ( string ) : Number expression.</li>
+            </ul>
+          </ul>
+          <h3>Expression:Raw </h3>
+          <ul>
+            <li>Define raw string.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>String ( number or string ) : String expression.</li>
+            </ul>
+          </ul>
+          <h3>Expression:Mustache </h3>
+          <ul>
+            <li>Define string processed by mustache.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>String ( string ) : String expression.</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">       
+          <h2>Conditions</h2>
+        </div>
+        <div class="panel-body">              
+          <h2>0. Function body    </h2>
+          <h4>Condition:On function                    </h4>
+          <ul>
+            <li>Declare a function.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Name ( string ) : The name of the function that is being called.    </li>
+            </ul>
+          </ul>
+          <h2>If    </h2>
+          <h4>Condition:If                    </h4>
+          <ul>
+            <li>Declare a if condition.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Condition ( number or string ) : Condition.    </li>
+            </ul>
+          </ul>
+          <h4>Condition:Else if                    </h4>
+          <ul>
+            <li>Declare a else if condition.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Condition ( number or string ) : Condition.    </li>
+            </ul>
+          </ul>
+          <h4>Condition:Else                    </h4>
+          <ul>
+            <li>Declare a else condition.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Loop    </h2>
+          <h4>Condition:For                    </h4>
+          <ul>
+            <li>Declare a for loop.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Variable name ( string ) : Variable name of index.    </li>
+              <li>Start ( number or string ) : Start value.    </li>
+              <li>Stop ( number or string ) : Stop value.    </li>
+              <li>Step ( number or string ) : Step value.    </li>
+            </ul>
+          </ul>
+          <h4>Condition:While                    </h4>
+          <ul>
+            <li>Declare a while loop.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Continue ( number or string ) : Continue condition.    </li>
+            </ul>
+          </ul>
+          <h2>Switch    </h2>
+          <h4>Condition:Switch                    </h4>
+          <ul>
+            <li>Declare a switch block.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Exxpression ( string ) : Exxpression.    </li>
+            </ul>
+          </ul>
+          <h4>Condition:Case                    </h4>
+          <ul>
+            <li>Declare a case block.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Value ( number or string ) : Value to compare.    </li>
+            </ul>
+          </ul>
+          <h4>Condition:Default                    </h4>
+          <ul>
+            <li>Declare a default case block.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

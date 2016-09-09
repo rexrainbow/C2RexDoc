@@ -1,0 +1,219 @@
+<!DOCTYPE 5>
+<html>
+  <head>
+    <title>Behavior : Candlestick chart</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="js/jquery-3.1.0.min.js">                         </script>
+    <script src="js/bootstrap.min.js">         </script>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header"><a class="navbar-brand" href="./index.html">Home</a></div>
+        <ul class="nav navbar-nav">
+          <li><a href="./pluginsIndex.html">Plugins      </a></li>
+          <li><a href="./behaviorsIndex.html">Behaviors                   </a></li>
+          <li><a href="./effectsIndex.html">Effects    </a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Behavior : Candlestick chart</h1>
+      <p>Author:Rex.Rainbow</p>
+      <ul>
+        <li>Draw a candlestick chart on the canvas. The api of chart - https://github.com/amih/Candlestick.js</li>
+      </ul>
+      <div class="panel panel-default">
+        <div class="panel-title">
+          <h2>Properties</h2>
+        </div>
+        <div class="panel-body">
+          <h3>Background color</h3>
+          <ul>
+            <li>Background color.                    </li>
+          </ul>
+          <h3>Upper background color</h3>
+          <ul>
+            <li>Upper background color.                    </li>
+          </ul>
+          <h3>Upper scale font color</h3>
+          <ul>
+            <li>Upper scale font color.                    </li>
+          </ul>
+          <h3>Upper horizontal scale line color</h3>
+          <ul>
+            <li>Upper horizontal scale linecolor.                    </li>
+          </ul>
+          <h3>Upper vertical scale line color</h3>
+          <ul>
+            <li>Upper vertical scale linecolor.                    </li>
+          </ul>
+          <h3>Upper indicators line color 0</h3>
+          <ul>
+            <li>Upper indicators line color 0.                    </li>
+          </ul>
+          <h3>Upper indicators line color 1</h3>
+          <ul>
+            <li>Upper indicators line color 1.                    </li>
+          </ul>
+          <h3>Upper indicators line color 2</h3>
+          <ul>
+            <li>Upper indicators line color 2.                    </li>
+          </ul>
+          <h3>Upper indicators line color 3</h3>
+          <ul>
+            <li>Upper indicators line color 3.                    </li>
+          </ul>
+          <h3>Upper indicators line color 4</h3>
+          <ul>
+            <li>Upper indicators line color 4.                    </li>
+          </ul>
+          <h3>Upper indicators line color 5</h3>
+          <ul>
+            <li>Upper indicators line color 5.                    </li>
+          </ul>
+          <h3>Upper indicators line color 6</h3>
+          <ul>
+            <li>Upper indicators line color 6.                    </li>
+          </ul>
+          <h3>Upper candle color</h3>
+          <ul>
+            <li>Upper candle color.                    </li>
+          </ul>
+          <h3>Upper candle rise color</h3>
+          <ul>
+            <li>Upper candle rise color.                    </li>
+          </ul>
+          <h3>Upper candle fall color</h3>
+          <ul>
+            <li>Upper candle fall color.                    </li>
+          </ul>
+          <h3>Lower background color</h3>
+          <ul>
+            <li>Lower background color.                    </li>
+          </ul>
+          <h3>Lower MACD line color</h3>
+          <ul>
+            <li>Lower MACD line color.                    </li>
+          </ul>
+          <h3>Lower signal line color</h3>
+          <ul>
+            <li>Lower signal line color.                    </li>
+          </ul>
+          <h3>Lower histogram bins color</h3>
+          <ul>
+            <li>Lower histogram bins color.                    </li>
+          </ul>
+          <h3>Top margin</h3>
+          <ul>
+            <li>Top margin of this chart, in pixels.                    </li>
+          </ul>
+          <h3>Bottom margin</h3>
+          <ul>
+            <li>Bottom margin of this chart, in pixels.                    </li>
+          </ul>
+          <h3>Left margin</h3>
+          <ul>
+            <li>Left margin of this chart, in pixels.                    </li>
+          </ul>
+          <h3>Right margin</h3>
+          <ul>
+            <li>Right margin of this chart, in pixels.                    </li>
+          </ul>
+          <h3>Lower height</h3>
+          <ul>
+            <li>Height of lower chart, in pixels.                    </li>
+          </ul>
+          <h3>Candle width</h3>
+          <ul>
+            <li>Candle width, in pixels.                    </li>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">   
+          <h2>Actions</h2>
+        </div>
+        <div class="panel-body">
+          <h2>Draw      </h2>
+          <h3>Action:Draw      </h3>
+          <ul>
+            <li>Draw chart.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Data ( string ) : The data in the finance.yahoo.com format.</li>
+            </ul>
+          </ul>
+          <h2>Options      </h2>
+          <h3>Action:Set title      </h3>
+          <ul>
+            <li>Set title.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Title ( string ) : The title for the chart.</li>
+            </ul>
+          </ul>
+          <h3>Action:Set adjust      </h3>
+          <ul>
+            <li>Set adjust.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Adjust ( number ) : Adjust.</li>
+            </ul>
+          </ul>
+          <h2>Options - indicator      </h2>
+          <h3>Action:Add SMA      </h3>
+          <ul>
+            <li>Add SMA.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Type ( Combo ) : Type.</li>
+              <ul>
+                <li>Options : [&quot;Open&quot;,&quot;High&quot;,&quot;Low&quot;,&quot;Close&quot;,&quot;Volume&quot;]</li>
+              </ul>
+              <li>N ( number ) : N.</li>
+            </ul>
+          </ul>
+          <h3>Action:Add EMA      </h3>
+          <ul>
+            <li>Add EMA.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Type ( Combo ) : Type.</li>
+              <ul>
+                <li>Options : [&quot;Open&quot;,&quot;High&quot;,&quot;Low&quot;,&quot;Close&quot;,&quot;Volume&quot;]</li>
+              </ul>
+              <li>N ( number ) : N.</li>
+            </ul>
+          </ul>
+          <h3>Action:Add MACD      </h3>
+          <ul>
+            <li>Add MACD.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>N12 ( number ) : N12.</li>
+              <li>N26 ( number ) : N26.</li>
+              <li>N9 ( number ) : N9.</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">    
+        <div class="panel-title">    
+          <h2>Expressions</h2>
+        </div>
+        <div class="panel-body">           
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">       
+          <h2>Conditions</h2>
+        </div>
+        <div class="panel-body">              
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

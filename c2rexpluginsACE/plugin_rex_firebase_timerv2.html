@@ -1,0 +1,160 @@
+<!DOCTYPE 5>
+<html>
+  <head>
+    <title>Plugin : Timer V2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="js/jquery-3.1.0.min.js">                         </script>
+    <script src="js/bootstrap.min.js">         </script>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header"><a class="navbar-brand" href="./index.html">Home</a></div>
+        <ul class="nav navbar-nav">
+          <li><a href="./pluginsIndex.html">Plugins      </a></li>
+          <li><a href="./behaviorsIndex.html">Behaviors                   </a></li>
+          <li><a href="./effectsIndex.html">Effects    </a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Plugin : Timer V2</h1>
+      <p>Author:Rex.Rainbow</p>
+      <ul>
+        <li>Get elapsed interval from firebase - version 2.</li>
+      </ul>
+      <div class="panel panel-default">
+        <div class="panel-title">
+          <h2>Properties</h2>
+        </div>
+        <div class="panel-body">
+          <h3>Sub domain</h3>
+          <ul>
+            <li>Sub domain for this function.                    </li>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">   
+          <h2>Actions</h2>
+        </div>
+        <div class="panel-body">
+          <h2>Domain      </h2>
+          <h3>Action:Set sub domain      </h3>
+          <ul>
+            <li>Set domain ref.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Sub domain ( string ) : Sub domain for this function.</li>
+            </ul>
+          </ul>
+          <h2>Monitor      </h2>
+          <h3>Action:Start      </h3>
+          <ul>
+            <li>Start monitor timers.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>User ID ( string ) : User ID.</li>
+            </ul>
+          </ul>
+          <h3>Action:Stop      </h3>
+          <ul>
+            <li>Stop monitor.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Timer      </h2>
+          <h3>Action:Start      </h3>
+          <ul>
+            <li>Start timer.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>User ID ( string ) : User ID.</li>
+              <li>Timer ( string ) : Name of timer.</li>
+              <li>Interval ( number ) : Time-out interval, in seconds.</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">    
+        <div class="panel-title">    
+          <h2>Expressions</h2>
+        </div>
+        <div class="panel-body">           
+          <h2>Timer    </h2>
+          <h3>Expression:LastOwnerID </h3>
+          <ul>
+            <li>Get owner ID of last triggered timer.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:LastTimerName </h3>
+          <ul>
+            <li>Get timer name of last triggered timer.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Timestamp    </h2>
+          <h3>Expression:CurTimestamp </h3>
+          <ul>
+            <li>Get current timestamp.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">       
+          <h2>Conditions</h2>
+        </div>
+        <div class="panel-body">              
+          <h2>For each    </h2>
+          <h4>Condition:For each timer                    </h4>
+          <ul>
+            <li>Repeat the event for each timer.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Start timer    </h2>
+          <h4>Condition:On start timer                    </h4>
+          <ul>
+            <li>Triggered when start timer complete.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On start timer error                    </h4>
+          <ul>
+            <li>Triggered when start timer error.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Time out    </h2>
+          <h4>Condition:On time-out                    </h4>
+          <ul>
+            <li>Triggered when time-out.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Timers    </h2>
+          <h4>Condition:On update                    </h4>
+          <ul>
+            <li>Triggered when timers updated.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

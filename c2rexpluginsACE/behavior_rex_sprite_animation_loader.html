@@ -1,0 +1,132 @@
+<!DOCTYPE 5>
+<html>
+  <head>
+    <title>Behavior : Animation loader</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="js/jquery-3.1.0.min.js">                         </script>
+    <script src="js/bootstrap.min.js">         </script>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header"><a class="navbar-brand" href="./index.html">Home</a></div>
+        <ul class="nav navbar-nav">
+          <li><a href="./pluginsIndex.html">Plugins      </a></li>
+          <li><a href="./behaviorsIndex.html">Behaviors                   </a></li>
+          <li><a href="./effectsIndex.html">Effects    </a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Behavior : Animation loader</h1>
+      <p>Author:Rex.Rainbow</p>
+      <ul>
+        <li>Load animations from URL.</li>
+      </ul>
+      <div class="panel panel-default">
+        <div class="panel-title">
+          <h2>Properties</h2>
+        </div>
+        <div class="panel-body">
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">   
+          <h2>Actions</h2>
+        </div>
+        <div class="panel-body">
+          <h2>Animation      </h2>
+          <h3>Action:Load all animations      </h3>
+          <ul>
+            <li>Load all anmations from URL.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Size ( Combo ) : Whether to resize the sprite to the size of the loaded image, or stretch it to the current size.</li>
+              <ul>
+                <li>Options : [&quot;Resize to image size&quot;,&quot;Keep current size&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h2>URL      </h2>
+          <h3>Action:Set URL      </h3>
+          <ul>
+            <li>Set requested URL. Call this action under &quot;Condition: On get URL&quot;   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>URL ( string ) : URL of loaded frame.</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">    
+        <div class="panel-title">    
+          <h2>Expressions</h2>
+        </div>
+        <div class="panel-body">           
+          <h2>Loaded    </h2>
+          <h3>Expression:FrameURL </h3>
+          <ul>
+            <li>Get requested url. Use this expression under &quot;Condition: On frame loaded&quot;, or &quot;Condition: On frame loaded failed&quot;.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>URL    </h2>
+          <h3>Expression:AnimationName </h3>
+          <ul>
+            <li>Get request animation name. Use this expression under &quot;Condition: On get URL&quot;</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:FrameIndex </h3>
+          <ul>
+            <li>Get request frame index. Use this expression under &quot;Condition: On get URL&quot;</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">       
+          <h2>Conditions</h2>
+        </div>
+        <div class="panel-body">              
+          <h2>Loaded    </h2>
+          <h4>Condition:On all animations loaded                    </h4>
+          <ul>
+            <li>Triggered when all animations loaded.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On frame loaded successful                    </h4>
+          <ul>
+            <li>Triggered when a frame is loaded successful. Get animation name and frame index by &quot;expression:AnimationName&quot;, &quot;expression:FrameIndex&quot;                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On frame loaded failed                    </h4>
+          <ul>
+            <li>Triggered when a frame is loaded failed. Get animation name and frame index by &quot;expression:AnimationName&quot;, &quot;expression:FrameIndex&quot;                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>URL    </h2>
+          <h4>Condition:On get URL                    </h4>
+          <ul>
+            <li>Triggered when request a URL for loading a frame. Get animation name and frame index by &quot;expression:AnimationName&quot;, &quot;expression:FrameIndex&quot;                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

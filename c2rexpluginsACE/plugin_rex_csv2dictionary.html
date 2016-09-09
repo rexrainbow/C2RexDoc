@@ -1,0 +1,112 @@
+<!DOCTYPE 5>
+<html>
+  <head>
+    <title>Plugin : CSV to Dictionary</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="js/jquery-3.1.0.min.js">                         </script>
+    <script src="js/bootstrap.min.js">         </script>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header"><a class="navbar-brand" href="./index.html">Home</a></div>
+        <ul class="nav navbar-nav">
+          <li><a href="./pluginsIndex.html">Plugins      </a></li>
+          <li><a href="./behaviorsIndex.html">Behaviors                   </a></li>
+          <li><a href="./effectsIndex.html">Effects    </a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Plugin : CSV to Dictionary</h1>
+      <p>Author:Rex.Rainbow</p>
+      <ul>
+        <li>Transfer csv string to dictionary object</li>
+      </ul>
+      <div class="panel panel-default">
+        <div class="panel-title">
+          <h2>Properties</h2>
+        </div>
+        <div class="panel-body">
+          <h3>Delimiter</h3>
+          <ul>
+            <li>Set delimiter for splitting items.                    </li>
+          </ul>
+          <h3>Eval mode</h3>
+          <ul>
+            <li>Enable &quot;Eval mode&quot; for parsing value.                    </li>
+            <ul>
+              <li>Options : [&quot;No&quot;,&quot;Yes&quot;]</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">   
+          <h2>Actions</h2>
+        </div>
+        <div class="panel-body">
+          <h2>CSV to Dictionary      </h2>
+          <h3>Action:Put csv data into dictionary      </h3>
+          <ul>
+            <li>Put csv data into dictionary.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Data ( string ) : Data in CSV format</li>
+              <li>Dictionary ( object ) : Dictionary object</li>
+            </ul>
+          </ul>
+          <h2>Delimiter      </h2>
+          <h3>Action:Set delimiter      </h3>
+          <ul>
+            <li>Set delimiter for splitting items.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Delimiter ( string ) : Set delimiter for splitting items.</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">    
+        <div class="panel-title">    
+          <h2>Expressions</h2>
+        </div>
+        <div class="panel-body">           
+          <h2>For Each cell    </h2>
+          <h3>Expression:CurKey </h3>
+          <ul>
+            <li>Get the current key in a For Each loop.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:CurValue </h3>
+          <ul>
+            <li>Get the current cell value in a For Each loop.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">       
+          <h2>Conditions</h2>
+        </div>
+        <div class="panel-body">              
+          <h2>For each cell    </h2>
+          <h4>Condition:For each cell                    </h4>
+          <ul>
+            <li>Repeat the event for each cell in the csv table.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Data ( string ) : Data in CSV format    </li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

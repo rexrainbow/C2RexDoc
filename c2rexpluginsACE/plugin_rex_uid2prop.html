@@ -1,0 +1,361 @@
+<!DOCTYPE 5>
+<html>
+  <head>
+    <title>Plugin : UID to Properties</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="js/jquery-3.1.0.min.js">                         </script>
+    <script src="js/bootstrap.min.js">         </script>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header"><a class="navbar-brand" href="./index.html">Home</a></div>
+        <ul class="nav navbar-nav">
+          <li><a href="./pluginsIndex.html">Plugins      </a></li>
+          <li><a href="./behaviorsIndex.html">Behaviors                   </a></li>
+          <li><a href="./effectsIndex.html">Effects    </a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Plugin : UID to Properties</h1>
+      <p>Author:Rex.Rainbow</p>
+      <ul>
+        <li>Get/set properties (x,y,angle,opacity,private variable) by UID without picking first.</li>
+      </ul>
+      <div class="panel panel-default">
+        <div class="panel-title">
+          <h2>Properties</h2>
+        </div>
+        <div class="panel-body">
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">   
+          <h2>Actions</h2>
+        </div>
+        <div class="panel-body">
+          <h2>Angle      </h2>
+          <h3>Action:Set angle      </h3>
+          <ul>
+            <li>Set the angle the object is oriented at.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>UID ( number ) : Instance UID.</li>
+              <li>Angle ( number ) : New object angle, in degrees.</li>
+            </ul>
+          </ul>
+          <h3>Action:Rotate clockwise      </h3>
+          <ul>
+            <li>Rotate the object's angle clockwise by a number of degrees.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>UID ( number ) : Instance UID.</li>
+              <li>Degrees ( number ) : Number of degrees to rotate the object clockwise.</li>
+            </ul>
+          </ul>
+          <h3>Action:Rotate counter-clockwise      </h3>
+          <ul>
+            <li>Rotate the object's angle counter-clockwise by a number of degrees.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>UID ( number ) : Instance UID.</li>
+              <li>Degrees ( number ) : Number of degrees to rotate the object counter-clockwise.</li>
+            </ul>
+          </ul>
+          <h3>Action:Rotate toward angle      </h3>
+          <ul>
+            <li>Rotate the object towards another angle.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>UID ( number ) : Instance UID.</li>
+              <li>Degrees ( number ) : Number of degrees to rotate towards the target angle.</li>
+              <li>Angle ( number ) : Angle, in degrees, to rotate towards.</li>
+            </ul>
+          </ul>
+          <h3>Action:Rotate toward position      </h3>
+          <ul>
+            <li>Rotate the object towards a position.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>UID ( number ) : Instance UID.</li>
+              <li>Degrees ( number ) : Number of degrees to rotate towards the target position.</li>
+              <li>X ( number ) : X position to rotate toward.</li>
+              <li>Y ( number ) : Y position to rotate toward.</li>
+            </ul>
+          </ul>
+          <h3>Action:Set angle toward position      </h3>
+          <ul>
+            <li>Set the object's angle towards a position.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>UID ( number ) : Instance UID.</li>
+              <li>X ( number ) : X position to rotate toward.</li>
+              <li>Y ( number ) : Y position to rotate toward.</li>
+            </ul>
+          </ul>
+          <h2>Appear      </h2>
+          <h3>Action:Set visible      </h3>
+          <ul>
+            <li>Set whether the object is hidden or shown.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>UID ( number ) : Instance UID.</li>
+              <li>Visible ( number ) : Choose the object visible, from 0 (transparent) to 100 (opaque).</li>
+            </ul>
+          </ul>
+          <h3>Action:Set opacity      </h3>
+          <ul>
+            <li>Set how transparent the object appears.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>UID ( number ) : Instance UID.</li>
+              <li>Opacity ( number ) : Choose the object opacity, from 0 (transparent) to 100 (opaque).</li>
+            </ul>
+          </ul>
+          <h2>Destroy      </h2>
+          <h3>Action:Destroy instance      </h3>
+          <ul>
+            <li>Destroy instance.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>UID ( number ) : Instance UID.</li>
+            </ul>
+          </ul>
+          <h2>Position      </h2>
+          <h3>Action:Set X      </h3>
+          <ul>
+            <li>Set the object's X co-ordinate.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>UID ( number ) : Instance UID.</li>
+              <li>X ( number ) : New X co-ordinate, in pixels.</li>
+            </ul>
+          </ul>
+          <h3>Action:Set Y      </h3>
+          <ul>
+            <li>Set the object's Y co-ordinate.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>UID ( number ) : Instance UID.</li>
+              <li>Y ( number ) : New Y co-ordinate, in pixels.</li>
+            </ul>
+          </ul>
+          <h3>Action:Set position      </h3>
+          <ul>
+            <li>Set the object's X and Y co-ordinates at the same time.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>UID ( number ) : Instance UID.</li>
+              <li>X ( number ) : New X co-ordinate, in pixels.</li>
+              <li>Y ( number ) : New Y co-ordinate, in pixels.</li>
+            </ul>
+          </ul>
+          <h3>Action:Set position to another object      </h3>
+          <ul>
+            <li>Position object relative to another object.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>UID ( number ) : Instance UID.</li>
+              <li>UIDB ( number ) : Object to position by.</li>
+              <li>Image point (optional) ( number or string ) : The name or number of an image point in the object to position by.  Leave 0 for object's origin.</li>
+            </ul>
+          </ul>
+          <h3>Action:Move forward      </h3>
+          <ul>
+            <li>Move object forwards a number of pixels at its current angle.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>UID ( number ) : Instance UID.</li>
+              <li>Distance ( number ) : Distance, in pixels, to move the object forwards at its current angle.</li>
+            </ul>
+          </ul>
+          <h3>Action:Move at angle      </h3>
+          <ul>
+            <li>Move object a number of pixels at a given angle.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>UID ( number ) : Instance UID.</li>
+              <li>Angle ( number ) : Angle, in degrees, at which to move the object.</li>
+              <li>Distance ( number ) : Distance, in pixels, to move the object forwards at its current angle.</li>
+            </ul>
+          </ul>
+          <h2>Private variable      </h2>
+          <h3>Action:Define alias      </h3>
+          <ul>
+            <li>Define an alias of private variable.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Alias ( string ) : An alias to identify this private variable.</li>
+              <li>Object ( object ) : Object type.</li>
+              <li>Instance variable ( instance variable ) : Choose the instance variable in the above object.</li>
+            </ul>
+          </ul>
+          <h2>Size      </h2>
+          <h3>Action:Set width      </h3>
+          <ul>
+            <li>Set the object's width.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>UID ( number ) : Instance UID.</li>
+              <li>Width ( number ) : New object width, in pixels.</li>
+            </ul>
+          </ul>
+          <h3>Action:Set width      </h3>
+          <ul>
+            <li>Set the object's width.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>UID ( number ) : Instance UID.</li>
+              <li>Width ( number ) : New object width, in pixels.</li>
+            </ul>
+          </ul>
+          <h3>Action:Set height      </h3>
+          <ul>
+            <li>Set the object's height.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>UID ( number ) : Instance UID.</li>
+              <li>Height ( number ) : New object height, in pixels.</li>
+            </ul>
+          </ul>
+          <h3>Action:Set size      </h3>
+          <ul>
+            <li>Set the object's width and height at the same time.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>UID ( number ) : Instance UID.</li>
+              <li>Width ( number ) : New object width, in pixels.</li>
+              <li>Height ( number ) : New object height, in pixels.</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">    
+        <div class="panel-title">    
+          <h2>Expressions</h2>
+        </div>
+        <div class="panel-body">           
+          <h2>Angle    </h2>
+          <h3>Expression:Angle </h3>
+          <ul>
+            <li>Get instance's angle.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>UID ( number ) : The UID of instance.</li>
+            </ul>
+          </ul>
+          <h3>Expression:AngleTo </h3>
+          <ul>
+            <li>Get angle of 2 instances.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>A ( number ) : The UID of instance A.</li>
+              <li>B ( number ) : The UID of instance B.</li>
+            </ul>
+          </ul>
+          <h2>Distance    </h2>
+          <h3>Expression:DistanceTo </h3>
+          <ul>
+            <li>Get distance of 2 instances.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>A ( number ) : The UID of instance A.</li>
+              <li>B ( number ) : The UID of instance B.</li>
+            </ul>
+          </ul>
+          <h2>Image point    </h2>
+          <h3>Expression:ImgptX </h3>
+          <ul>
+            <li>Get instance's image point X.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>UID ( number ) : The UID of instance.</li>
+              <li>ImagePoint ( number or string ) : Name or number of image point to get.</li>
+            </ul>
+          </ul>
+          <h3>Expression:ImgptY </h3>
+          <ul>
+            <li>Get instance's image point Y.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>UID ( number ) : The UID of instance.</li>
+              <li>ImagePoint ( number or string ) : Name or number of image point to get.</li>
+            </ul>
+          </ul>
+          <h2>Opacity    </h2>
+          <h3>Expression:Opacity </h3>
+          <ul>
+            <li>Get instance's opacity.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>UID ( number ) : The UID of instance.</li>
+            </ul>
+          </ul>
+          <h2>Position    </h2>
+          <h3>Expression:X </h3>
+          <ul>
+            <li>Get instance's position X.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>UID ( number ) : The UID of instance.</li>
+            </ul>
+          </ul>
+          <h3>Expression:Y </h3>
+          <ul>
+            <li>Get instance's position Y.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>UID ( number ) : The UID of instance.</li>
+            </ul>
+          </ul>
+          <h2>Private variable    </h2>
+          <h3>Expression:PV </h3>
+          <ul>
+            <li>Get value of private variable by alias.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>UID ( number ) : The UID of instance.</li>
+              <li>Alias ( string ) : An alias to identify this private variable.</li>
+            </ul>
+          </ul>
+          <h2>Size    </h2>
+          <h3>Expression:Width </h3>
+          <ul>
+            <li>Get instance's width.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>UID ( number ) : The UID of instance.</li>
+            </ul>
+          </ul>
+          <h3>Expression:Height </h3>
+          <ul>
+            <li>Get instance's height.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>UID ( number ) : The UID of instance.</li>
+            </ul>
+          </ul>
+          <h2>Visible    </h2>
+          <h3>Expression:Visible </h3>
+          <ul>
+            <li>Get instance's visible.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>UID ( number ) : The UID of instance.</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">       
+          <h2>Conditions</h2>
+        </div>
+        <div class="panel-body">              
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

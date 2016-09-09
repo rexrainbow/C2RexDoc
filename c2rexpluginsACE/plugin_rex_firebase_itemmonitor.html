@@ -1,0 +1,250 @@
+<!DOCTYPE 5>
+<html>
+  <head>
+    <title>Plugin : Item monitor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="js/jquery-3.1.0.min.js">                         </script>
+    <script src="js/bootstrap.min.js">         </script>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header"><a class="navbar-brand" href="./index.html">Home</a></div>
+        <ul class="nav navbar-nav">
+          <li><a href="./pluginsIndex.html">Plugins      </a></li>
+          <li><a href="./behaviorsIndex.html">Behaviors                   </a></li>
+          <li><a href="./effectsIndex.html">Effects    </a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Plugin : Item monitor</h1>
+      <p>Author:Rex.Rainbow</p>
+      <ul>
+        <li>Monitor items' values.</li>
+      </ul>
+      <div class="panel panel-default">
+        <div class="panel-title">
+          <h2>Properties</h2>
+        </div>
+        <div class="panel-body">
+          <h3>Domain</h3>
+          <ul>
+            <li>The root location of the Firebase data.                    </li>
+          </ul>
+          <h3>Sub domain</h3>
+          <ul>
+            <li>Sub domain for this function.                    </li>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">   
+          <h2>Actions</h2>
+        </div>
+        <div class="panel-body">
+          <h2>Domain      </h2>
+          <h3>Action:Set domain      </h3>
+          <ul>
+            <li>Set domain ref.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Domain ( string ) : The root location of the Firebase data.</li>
+              <li>Sub domain ( string ) : Sub domain for this function.</li>
+            </ul>
+          </ul>
+          <h2>Monitor      </h2>
+          <h3>Action:Start      </h3>
+          <ul>
+            <li>Start monitor.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Action:Stop      </h3>
+          <ul>
+            <li>Stop monitor.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Query      </h2>
+          <h3>Action:Set query      </h3>
+          <ul>
+            <li>Set query object.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Query ( object ) : Query object.</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">    
+        <div class="panel-title">    
+          <h2>Expressions</h2>
+        </div>
+        <div class="panel-body">           
+          <h2>For Each    </h2>
+          <h3>Expression:CurItemID </h3>
+          <ul>
+            <li>Get current itemID in a For Each loop, in last load result. Or in save/remove callback.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:CurItemContent </h3>
+          <ul>
+            <li>Get last content in JSON string, used under &quot;condition: On item added&quot; or &quot;condition: On item removed&quot;. Add 2nd parameter for specific key, 3rd parameter for default value if this key is not existed.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:CurKey </h3>
+          <ul>
+            <li>Get current key in a For Each loop, in last load result.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:CurValue </h3>
+          <ul>
+            <li>Get current value in a For Each loop, in last load result.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Item    </h2>
+          <h3>Expression:LastValue </h3>
+          <ul>
+            <li>Get last value of key, used under &quot;condition: On any value changed&quot;, &quot;condition: On key added&quot; or &quot;condition: On key removed&quot;.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:PrevValue </h3>
+          <ul>
+            <li>Get previous value of key, used under &quot;condition: On any value changed&quot;, &quot;condition: On key added&quot; or &quot;condition: On key removed&quot;.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Items    </h2>
+          <h3>Expression:LastItemID </h3>
+          <ul>
+            <li>Get last itemID, used under &quot;condition: On item added&quot; or &quot;condition: On item removed&quot;.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:LastItemContent </h3>
+          <ul>
+            <li>Get last content in JSON string, used under &quot;condition: On item added&quot; or &quot;condition: On item removed&quot;. Add 2nd parameter for specific key, 3rd parameter for default value if this key is not existed.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Properties    </h2>
+          <h3>Expression:LastPropertyName </h3>
+          <ul>
+            <li>Get last content in JSON string, used under &quot;condition: On any value changed&quot;, &quot;condition: On key added&quot; or &quot;condition: On key removed&quot;.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Table    </h2>
+          <h3>Expression:At </h3>
+          <ul>
+            <li>Get value by itemId and key in last load result. Add 3rd parameter for default value if this key is not existed.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>ID ( string ) : ID of item.</li>
+              <li>Key ( string ) : The name of the key.</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">       
+          <h2>Conditions</h2>
+        </div>
+        <div class="panel-body">              
+          <h2>Load    </h2>
+          <h4>Condition:For each itemID                    </h4>
+          <ul>
+            <li>Repeat the event for each itemID of load result which sorted by itemID.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Order ( Combo ) : Order of itemID.    </li>
+              <ul>
+                <li>Options : [&quot;Small to large&quot;,&quot;Large to small&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h4>Condition:For each key                    </h4>
+          <ul>
+            <li>Repeat the event for each key of a item of load result.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>ID ( string ) : ID of item.    </li>
+            </ul>
+          </ul>
+          <h2>Monitor    </h2>
+          <h4>Condition:On any item changed                    </h4>
+          <ul>
+            <li>Triggered when any item changed, included item added, removed, value changed.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Monitor - item    </h2>
+          <h4>Condition:On item added                    </h4>
+          <ul>
+            <li>Triggered when item added.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On item removed                    </h4>
+          <ul>
+            <li>Triggered when item removed.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Monitor - key    </h2>
+          <h4>Condition:On value changed                    </h4>
+          <ul>
+            <li>Triggered when value changed.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Property ( string ) : Property name of item.    </li>
+            </ul>
+          </ul>
+          <h4>Condition:On any value changed                    </h4>
+          <ul>
+            <li>Triggered when any value changed.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On key added                    </h4>
+          <ul>
+            <li>Triggered when item added.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On key removed                    </h4>
+          <ul>
+            <li>Triggered when key removed.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,434 @@
+<!DOCTYPE 5>
+<html>
+  <head>
+    <title>Plugin : Nedb</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="js/jquery-3.1.0.min.js">                         </script>
+    <script src="js/bootstrap.min.js">         </script>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header"><a class="navbar-brand" href="./index.html">Home</a></div>
+        <ul class="nav navbar-nav">
+          <li><a href="./pluginsIndex.html">Plugins      </a></li>
+          <li><a href="./behaviorsIndex.html">Behaviors                   </a></li>
+          <li><a href="./effectsIndex.html">Effects    </a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Plugin : Nedb</h1>
+      <p>Author:Rex.Rainbow</p>
+      <ul>
+        <li>Asynchronous database. Reference from https://github.com/louischatriot/nedb</li>
+      </ul>
+      <div class="panel panel-default">
+        <div class="panel-title">
+          <h2>Properties</h2>
+        </div>
+        <div class="panel-body">
+          <h3>Database name</h3>
+          <ul>
+            <li>Database reference. Sets &quot;&quot; to be a private in-memory database.                    </li>
+          </ul>
+          <h3>Storage</h3>
+          <ul>
+            <li>Storage of this database.                    </li>
+            <ul>
+              <li>Options : [&quot;In memory&quot;,&quot;Disk&quot;]</li>
+            </ul>
+          </ul>
+          <h3>Unique index keys</h3>
+          <ul>
+            <li>Unique index keys, separated by &quot;,&quot;                    </li>
+          </ul>
+          <h3>Index keys</h3>
+          <ul>
+            <li>Index keys to speed up querying, separated by &quot;,&quot;                    </li>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">   
+          <h2>Actions</h2>
+        </div>
+        <div class="panel-body">
+          <h2>Filter - 1. new      </h2>
+          <h3>Action:1. New      </h3>
+          <ul>
+            <li>Create a new row filter.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Filter - 2. key      </h2>
+          <h3>Action:2. value compare      </h3>
+          <ul>
+            <li>Add a value compared for this key.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Key ( string ) : The name of the key.</li>
+              <li>Conditions ( Combo ) : Condition type.</li>
+              <ul>
+                <li>Options : [&quot;equal to&quot;,&quot;not equal to&quot;,&quot;greater than&quot;,&quot;less than&quot;,&quot;greater than or equal to&quot;,&quot;less than or equal to&quot;]</li>
+              </ul>
+              <li>Value ( number or string ) : The value to comparsion, could be number or string.</li>
+            </ul>
+          </ul>
+          <h3>Action:2. boolean value compare      </h3>
+          <ul>
+            <li>Add a boolean value compared for this key.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Key ( string ) : The name of the key.</li>
+              <li>Compared value ( Combo ) : Compared value.</li>
+              <ul>
+                <li>Options : [&quot;false&quot;,&quot;true&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h3>Action:2. value include      </h3>
+          <ul>
+            <li>Add a value including of this key.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Key ( string ) : The name of the key.</li>
+              <li>Value ( number or string ) : The value to set, could be number or string.</li>
+            </ul>
+          </ul>
+          <h2>Filter - 3. order      </h2>
+          <h3>Action:3. order      </h3>
+          <ul>
+            <li>Order rows.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Key ( string ) : The name of the key.</li>
+              <li>Order ( Combo ) : Order of rows.</li>
+              <ul>
+                <li>Options : [&quot;descending&quot;,&quot;ascending&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h2>Index keys      </h2>
+          <h3>Action:Set index keys      </h3>
+          <ul>
+            <li>Set index keys.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Keys ( string ) : Unique index keys, separated by &quot;,&quot;</li>
+              <li>Type ( Combo ) : Type of index keys.</li>
+              <ul>
+                <li>Options : [&quot;&quot;,&quot;Unique&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h2>Insert - CSV      </h2>
+          <h3>Action:Insert CSV data      </h3>
+          <ul>
+            <li>Insert data from CSV string.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>CSV string ( string ) : The CSV string for inserting.</li>
+              <li>Eval ( Combo ) : Eval the string.</li>
+              <ul>
+                <li>Options : [&quot;No&quot;,&quot;Yes&quot;]</li>
+              </ul>
+              <li>Delimiter ( string ) : Delimiter for splitting rows.</li>
+            </ul>
+          </ul>
+          <h3>Action:Define type      </h3>
+          <ul>
+            <li>Define value type of a key.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Key ( string ) : The name of the key.</li>
+              <li>Type ( Combo ) : Type.</li>
+              <ul>
+                <li>Options : [&quot;string&quot;,&quot;number&quot;,&quot;any (eval)&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h2>Insert - JSON      </h2>
+          <h3>Action:Insert JSON data      </h3>
+          <ul>
+            <li>Insert data from JSON string.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>JSON string ( string ) : The JSON string for inserting.</li>
+            </ul>
+          </ul>
+          <h2>Load      </h2>
+          <h3>Action:Load queried rows      </h3>
+          <ul>
+            <li>Load queried rows.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Remove      </h2>
+          <h3>Action:Remove all      </h3>
+          <ul>
+            <li>Remove all rows.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Action:Remove queried rows      </h3>
+          <ul>
+            <li>Remove queried rows.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Remove - row ID      </h2>
+          <h3>Action:Remove by row ID      </h3>
+          <ul>
+            <li>Remove row by row ID.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Row ID ( string ) : Row ID</li>
+            </ul>
+          </ul>
+          <h3>Action:Remove by row index      </h3>
+          <ul>
+            <li>Remove row by row index.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Index ( number ) : Index of queried rows.</li>
+            </ul>
+          </ul>
+          <h2>Save      </h2>
+          <h3>Action:Save      </h3>
+          <ul>
+            <li>Save prepared item into server.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Action:Update queried rows      </h3>
+          <ul>
+            <li>Update queried rows by prepared item.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Save - prepare item      </h2>
+          <h3>Action:Set value      </h3>
+          <ul>
+            <li>Set value into current item.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Key ( string ) : The name of the key.</li>
+              <li>Value ( number or string ) : The value to set, could be number or string.</li>
+              <li>Condition ( Combo ) : Set value if new value is greater or less then old value.</li>
+              <ul>
+                <li>Options : [&quot;&quot;,&quot;if greater&quot;,&quot;if less&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h3>Action:Set boolean value      </h3>
+          <ul>
+            <li>Set boolean value into current item.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Key ( string ) : The name of the key.</li>
+              <li>Boolean ( Combo ) : Boolean value.</li>
+              <ul>
+                <li>Options : [&quot;False&quot;,&quot;True&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h3>Action:Add to      </h3>
+          <ul>
+            <li>Add value to key.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Key ( string ) : The name of the key.</li>
+              <li>Value ( number or string ) : The value to set, could be number or string.</li>
+            </ul>
+          </ul>
+          <h2>Save - row ID      </h2>
+          <h3>Action:Set row ID      </h3>
+          <ul>
+            <li>Set row ID.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Row ID ( string ) : Row ID</li>
+            </ul>
+          </ul>
+          <h3>Action:Set row index      </h3>
+          <ul>
+            <li>Convert index of queried rows to row ID for saving. Append row if row ID had not found.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Index ( number ) : Index of queried rows.</li>
+            </ul>
+          </ul>
+          <h2>Save - save-all queue      </h2>
+          <h3>Action:Add to queue      </h3>
+          <ul>
+            <li>Add current prepared item into save-all queue.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Action:Save all      </h3>
+          <ul>
+            <li>Save all rows in queue.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">    
+        <div class="panel-title">    
+          <h2>Expressions</h2>
+        </div>
+        <div class="panel-body">           
+          <h2>Error    </h2>
+          <h3>Expression:LastErrorMessage </h3>
+          <ul>
+            <li>Get last error message.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Key name    </h2>
+          <h3>Expression:KeyRowID </h3>
+          <ul>
+            <li>Get key name of row ID.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Queried rows    </h2>
+          <h3>Expression:QueriedRowsAsJSON </h3>
+          <ul>
+            <li>Get JSON string of queried rows.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:QueriedRowsCount </h3>
+          <ul>
+            <li>Get current queried rows count.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Queried rows - For each row    </h2>
+          <h3>Expression:CurRowContent </h3>
+          <ul>
+            <li>Get current row content in JSON string in a For Each loop. Add 1st parameter to get value at the specific key. Add 2nd parameter for default value if this key is not existed.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:CurRowIndex </h3>
+          <ul>
+            <li>Get index oif current row in a For Each loop.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:CurRowID </h3>
+          <ul>
+            <li>Get current rowID in a For Each loop.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Queried rows - Index    </h2>
+          <h3>Expression:Index2QueriedRowContent </h3>
+          <ul>
+            <li>Get queried rows content by index in JSON format. Add 2nd parameter to get value at the specific key. Add 3rd parameter for default value if this key is not existed.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Index ( number ) : Index of queried rows.</li>
+            </ul>
+          </ul>
+          <h3>Expression:Index2QueriedRowID </h3>
+          <ul>
+            <li>Get rowID by Index of queried rows. Return &quot;&quot; if the specific row had not existed.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Index ( number ) : Index of queried rows.</li>
+            </ul>
+          </ul>
+          <h2>Save    </h2>
+          <h3>Expression:LastSavedRowID </h3>
+          <ul>
+            <li>Get last saved row ID.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">       
+          <h2>Conditions</h2>
+        </div>
+        <div class="panel-body">              
+          <h2>For each row    </h2>
+          <h4>Condition:For each row                    </h4>
+          <ul>
+            <li>Repeat the event for each queried row.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Load    </h2>
+          <h4>Condition:On load rows                    </h4>
+          <ul>
+            <li>Triggered when load rows complete.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On load rows error                    </h4>
+          <ul>
+            <li>Triggered when load rows error.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Remove    </h2>
+          <h4>Condition:On remove rows                    </h4>
+          <ul>
+            <li>Triggered when remove complete.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On remove rows error                    </h4>
+          <ul>
+            <li>Triggered when remove error.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Save    </h2>
+          <h4>Condition:On update                    </h4>
+          <ul>
+            <li>Triggered when update book complete.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On update error                    </h4>
+          <ul>
+            <li>Triggered when update book error.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

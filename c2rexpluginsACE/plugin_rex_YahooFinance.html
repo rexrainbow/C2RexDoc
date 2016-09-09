@@ -1,0 +1,99 @@
+<!DOCTYPE 5>
+<html>
+  <head>
+    <title>Plugin : Yahoo finance</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="js/jquery-3.1.0.min.js">                         </script>
+    <script src="js/bootstrap.min.js">         </script>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header"><a class="navbar-brand" href="./index.html">Home</a></div>
+        <ul class="nav navbar-nav">
+          <li><a href="./pluginsIndex.html">Plugins      </a></li>
+          <li><a href="./behaviorsIndex.html">Behaviors                   </a></li>
+          <li><a href="./effectsIndex.html">Effects    </a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Plugin : Yahoo finance</h1>
+      <p>Author:Rex.Rainbow</p>
+      <ul>
+        <li>Read stocks info from yahoo.finance.</li>
+      </ul>
+      <div class="panel panel-default">
+        <div class="panel-title">
+          <h2>Properties</h2>
+        </div>
+        <div class="panel-body">
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">   
+          <h2>Actions</h2>
+        </div>
+        <div class="panel-body">
+          <h2>Stock historical data      </h2>
+          <h3>Action:Request stock historical data      </h3>
+          <ul>
+            <li>Request stock historical data.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Tag ( string ) : A tag, which can be anything you like, to distinguish between different requests.</li>
+              <li>Symbol ( string ) : Symbol of stock.</li>
+              <li>Start year ( number ) : Start year of history.</li>
+              <li>Start month ( number ) : Start month of history.</li>
+              <li>Start date ( number ) : Start date of history.</li>
+              <li>End year ( number ) : End year of history.</li>
+              <li>End month ( number ) : End month of history.</li>
+              <li>End date ( number ) : End date of history.</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">    
+        <div class="panel-title">    
+          <h2>Expressions</h2>
+        </div>
+        <div class="panel-body">           
+          <h2>Result    </h2>
+          <h3>Expression:LastData </h3>
+          <ul>
+            <li>Get the data returned by the last successful request.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">       
+          <h2>Conditions</h2>
+        </div>
+        <div class="panel-body">              
+          <h2>Request    </h2>
+          <h4>Condition:On completed                    </h4>
+          <ul>
+            <li>Triggered when a request completes successfully.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Tag ( string ) : A tag, which can be anything you like, to distinguish between different requests.    </li>
+            </ul>
+          </ul>
+          <h4>Condition:On error                    </h4>
+          <ul>
+            <li>Triggered when an page request fails.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Tag ( string ) : A tag, which can be anything you like, to distinguish between different requests.    </li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

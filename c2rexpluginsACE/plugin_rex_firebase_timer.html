@@ -1,0 +1,246 @@
+<!DOCTYPE 5>
+<html>
+  <head>
+    <title>Plugin : Timer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="js/jquery-3.1.0.min.js">                         </script>
+    <script src="js/bootstrap.min.js">         </script>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header"><a class="navbar-brand" href="./index.html">Home</a></div>
+        <ul class="nav navbar-nav">
+          <li><a href="./pluginsIndex.html">Plugins      </a></li>
+          <li><a href="./behaviorsIndex.html">Behaviors                   </a></li>
+          <li><a href="./effectsIndex.html">Effects    </a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Plugin : Timer</h1>
+      <p>Author:Rex.Rainbow</p>
+      <ul>
+        <li>Get elapsed interval from firebase.</li>
+      </ul>
+      <div class="panel panel-default">
+        <div class="panel-title">
+          <h2>Properties</h2>
+        </div>
+        <div class="panel-body">
+          <h3>Domain</h3>
+          <ul>
+            <li>The root location of the Firebase data.                    </li>
+          </ul>
+          <h3>Sub domain</h3>
+          <ul>
+            <li>Sub domain for this function.                    </li>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">   
+          <h2>Actions</h2>
+        </div>
+        <div class="panel-body">
+          <h2>Domain      </h2>
+          <h3>Action:Set domain      </h3>
+          <ul>
+            <li>Set domain ref.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Domain ( string ) : The root location of the Firebase data.</li>
+              <li>Sub domain ( string ) : Sub domain for this function.</li>
+            </ul>
+          </ul>
+          <h2>On disconnect      </h2>
+          <h3>Action:Start on disconnect      </h3>
+          <ul>
+            <li>Start timer when disconnected.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>User ID ( string ) : User ID.</li>
+              <li>Timer ( string ) : Name of timer.</li>
+              <li>Interval ( number ) : Time-out interval, in seconds, for starting timer.</li>
+            </ul>
+          </ul>
+          <h3>Action:Delete on disconnect      </h3>
+          <ul>
+            <li>Delete timer when disconnected.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>User ID ( string ) : User ID.</li>
+              <li>Timer ( string ) : Name of timer.</li>
+            </ul>
+          </ul>
+          <h2>Timer      </h2>
+          <h3>Action:Start      </h3>
+          <ul>
+            <li>Start timer.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>User ID ( string ) : User ID.</li>
+              <li>Timer ( string ) : Name of timer.</li>
+              <li>Interval ( number ) : Time-out interval, in seconds.</li>
+            </ul>
+          </ul>
+          <h3>Action:Get or start      </h3>
+          <ul>
+            <li>Get timer.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>User ID ( string ) : User ID.</li>
+              <li>Timer ( string ) : Name of timer.</li>
+              <li>Interval ( number ) : Time-out interval, in seconds, for starting timer.</li>
+            </ul>
+          </ul>
+          <h3>Action:Remove      </h3>
+          <ul>
+            <li>Remove timer.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>User ID ( string ) : User ID.</li>
+              <li>Timer ( string ) : Name of timer.</li>
+            </ul>
+          </ul>
+          <h3>Action:Get      </h3>
+          <ul>
+            <li>Get timer.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>User ID ( string ) : User ID.</li>
+              <li>Timer ( string ) : Name of timer.</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">    
+        <div class="panel-title">    
+          <h2>Expressions</h2>
+        </div>
+        <div class="panel-body">           
+          <h2>Timer    </h2>
+          <h3>Expression:LastTimerName </h3>
+          <ul>
+            <li>Get timer name of last triggered timer</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:LastStartTimestamp </h3>
+          <ul>
+            <li>Get start timestamp of last triggered timer under &quot;Condition: On get timer&quot;.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:LastCurrentTimestamp </h3>
+          <ul>
+            <li>Get current timestamp of last triggered timer under &quot;Condition: On get timer&quot;.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:LastElapsedTime </h3>
+          <ul>
+            <li>Get elapsed time (current - start) of last triggered timer under &quot;Condition: On get timer&quot;, in seconds.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:LastTimeoutInterval </h3>
+          <ul>
+            <li>Get time-out interval of last triggered timer under &quot;Condition: On get timer&quot;, in seconds.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:LastRemainInterval </h3>
+          <ul>
+            <li>Get   interval of last triggered timer under &quot;Condition: On get timer&quot;, in seconds.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:LastOwnerID </h3>
+          <ul>
+            <li>Get owner ID of last triggered timer</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">       
+          <h2>Conditions</h2>
+        </div>
+        <div class="panel-body">              
+          <h2>Get timer    </h2>
+          <h4>Condition:On get timer                    </h4>
+          <ul>
+            <li>Triggered when get timer.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On get timer error                    </h4>
+          <ul>
+            <li>Triggered when get timer error.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Remove timer    </h2>
+          <h4>Condition:On remove timer complete                    </h4>
+          <ul>
+            <li>Triggered when remove timer complete.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On remove timer error                    </h4>
+          <ul>
+            <li>Triggered when remove timer error.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Start timer    </h2>
+          <h4>Condition:On start timer                    </h4>
+          <ul>
+            <li>Triggered when start timer complete.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On start timer error                    </h4>
+          <ul>
+            <li>Triggered when start timer error.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Time out    </h2>
+          <h4>Condition:Is time-out                    </h4>
+          <ul>
+            <li>Return true if current triggered timer is time-out under &quot;Condition: On get timer&quot;.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Valid    </h2>
+          <h4>Condition:Is valid                    </h4>
+          <ul>
+            <li>Return true if get valid timer.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

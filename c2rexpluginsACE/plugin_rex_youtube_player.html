@@ -1,0 +1,337 @@
+<!DOCTYPE 5>
+<html>
+  <head>
+    <title>Plugin : Youtube player</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="js/jquery-3.1.0.min.js">                         </script>
+    <script src="js/bootstrap.min.js">         </script>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header"><a class="navbar-brand" href="./index.html">Home</a></div>
+        <ul class="nav navbar-nav">
+          <li><a href="./pluginsIndex.html">Plugins      </a></li>
+          <li><a href="./behaviorsIndex.html">Behaviors                   </a></li>
+          <li><a href="./effectsIndex.html">Effects    </a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Plugin : Youtube player</h1>
+      <p>Author:Rex.Rainbow</p>
+      <ul>
+        <li>Play youtube video at iframe.</li>
+      </ul>
+      <div class="panel panel-default">
+        <div class="panel-title">
+          <h2>Properties</h2>
+        </div>
+        <div class="panel-body">
+          <h3>Video ID</h3>
+          <ul>
+            <li>Video ID to play.                    </li>
+          </ul>
+          <h3>Autoplay</h3>
+          <ul>
+            <li>Start playing upon buffered.                    </li>
+            <ul>
+              <li>Options : [&quot;No&quot;,&quot;Yes&quot;]</li>
+            </ul>
+          </ul>
+          <h3>Looping</h3>
+          <ul>
+            <li>Restart video after ended.                    </li>
+            <ul>
+              <li>Options : [&quot;No&quot;,&quot;Yes&quot;]</li>
+            </ul>
+          </ul>
+          <h3>Control bar</h3>
+          <ul>
+            <li>Enable control bar or not.                    </li>
+            <ul>
+              <li>Options : [&quot;No&quot;,&quot;Yes&quot;]</li>
+            </ul>
+          </ul>
+          <h3>Show info</h3>
+          <ul>
+            <li>Enable to show video information                    </li>
+            <ul>
+              <li>Options : [&quot;No&quot;,&quot;Yes&quot;]</li>
+            </ul>
+          </ul>
+          <h3>Modest branding</h3>
+          <ul>
+            <li>Enable to remove youtube logos                    </li>
+            <ul>
+              <li>Options : [&quot;No&quot;,&quot;Yes&quot;]</li>
+            </ul>
+          </ul>
+          <h3>Keyboard control</h3>
+          <ul>
+            <li>Enable to control video by keyboard.                    </li>
+            <ul>
+              <li>Options : [&quot;Yes&quot;,&quot;No&quot;]</li>
+            </ul>
+          </ul>
+          <h3>Initial visibility</h3>
+          <ul>
+            <li>Choose whether the text box is visible on startup.                    </li>
+            <ul>
+              <li>Options : [&quot;Invisible&quot;,&quot;Visible&quot;]</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">   
+          <h2>Actions</h2>
+        </div>
+        <div class="panel-body">
+          <h2>Appearance      </h2>
+          <h3>Action:Set visible      </h3>
+          <ul>
+            <li>Hide or show this object.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Visibility ( Combo ) : Choose whether to hide or show this object.</li>
+              <ul>
+                <li>Options : [&quot;Invisible&quot;,&quot;Visible&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h2>Full screen      </h2>
+          <h3>Action:Set full screen mode      </h3>
+          <ul>
+            <li>Enter or exit full screen mode. &quot;Enter full screen&quot; can only be called under a user input.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Command ( Combo ) : Enter or exit, or toggle fullscreen mode.</li>
+              <ul>
+                <li>Options : [&quot;Exit&quot;,&quot;Enter&quot;,&quot;Toggle&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h2>Size      </h2>
+          <h3>Action:Full window      </h3>
+          <ul>
+            <li>Enter or exit full window.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Command ( Combo ) : Enter or exit, or toggle fullscreen mode.</li>
+              <ul>
+                <li>Options : [&quot;Exit&quot;,&quot;Enter&quot;,&quot;Toggle&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h2>Video      </h2>
+          <h3>Action:Load video      </h3>
+          <ul>
+            <li>Load video with ID.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Video ID ( string ) : Video ID.</li>
+              <li>Play ( Combo ) : Start playing upon buffered.</li>
+              <ul>
+                <li>Options : [&quot;No&quot;,&quot;Yes&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h3>Action:Set playback time      </h3>
+          <ul>
+            <li>Set the current playback time in seconds.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Time ( number ) : Playback time in seconds to seek to.</li>
+            </ul>
+          </ul>
+          <h3>Action:Set looping      </h3>
+          <ul>
+            <li>Set whether the video loops when it reaches the end.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Mode ( Combo ) : Whether or not the video should loop when it reaches the end.</li>
+              <ul>
+                <li>Options : [&quot;not looping&quot;,&quot;looping&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h3>Action:Set muted      </h3>
+          <ul>
+            <li>Set whether the audio is muted.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Mode ( Combo ) : Whether or not the audio should be muted.</li>
+              <ul>
+                <li>Options : [&quot;not muted&quot;,&quot;muted&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h3>Action:Set volume      </h3>
+          <ul>
+            <li>Set the volume of the accompanying audio.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Volume ( number ) : The volume of the audio to set, from 0 to 100.</li>
+            </ul>
+          </ul>
+          <h3>Action:Pause      </h3>
+          <ul>
+            <li>Pause the current playback.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Action:Play      </h3>
+          <ul>
+            <li>Start playing the video if stopped or paused. On mobile, may only work in a user input trigger.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">    
+        <div class="panel-title">    
+          <h2>Expressions</h2>
+        </div>
+        <div class="panel-body">           
+          <h2>Debug    </h2>
+          <h3>Expression:VideoState </h3>
+          <ul>
+            <li>Current video statee.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Video    </h2>
+          <h3>Expression:PlaybackTime </h3>
+          <ul>
+            <li>Current playback time, in seconds.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:Duration </h3>
+          <ul>
+            <li>Video duration in seconds, if known.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:Volume </h3>
+          <ul>
+            <li>Current video volume in dB attenuation.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:ErrorCode </h3>
+          <ul>
+            <li>Current error code.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">       
+          <h2>Conditions</h2>
+        </div>
+        <div class="panel-body">              
+          <h2>Full screen    </h2>
+          <h4>Condition:Is full screen                    </h4>
+          <ul>
+            <li>True if video is in full screen mode.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Full window    </h2>
+          <h4>Condition:Is full window                    </h4>
+          <ul>
+            <li>True if video is in full window.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Initial    </h2>
+          <h4>Condition:On player ready                    </h4>
+          <ul>
+            <li>Triggered when player ready.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Mouse    </h2>
+          <h4>Condition:On mouse over                    </h4>
+          <ul>
+            <li>Triggered when mouse over.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Video    </h2>
+          <h4>Condition:Is playing                    </h4>
+          <ul>
+            <li>True if video is currently playing.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:Is paused                    </h4>
+          <ul>
+            <li>True if video is currently paused.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:Has ended                    </h4>
+          <ul>
+            <li>True if video has finished playing.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:Is muted                    </h4>
+          <ul>
+            <li>True if video sound is muted.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On playback event                    </h4>
+          <ul>
+            <li>Triggered when a playback event occurs.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Event ( Combo ) : The playback event to check for.    </li>
+              <ul>
+                <li>Options : [&quot;Unstarted&quot;,&quot;Ended&quot;,&quot;Playing&quot;,&quot;Paused&quot;,&quot;Buffering&quot;,&quot;Video cued&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h4>Condition:Compare playback time                    </h4>
+          <ul>
+            <li>Compare current playback time.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Comparison ( cmp ) : Choose the way to compare the distance travelled.    </li>
+              <li>Playback time ( number ) : Current playback time, in seconds.    </li>
+            </ul>
+          </ul>
+          <h4>Condition:On player error                    </h4>
+          <ul>
+            <li>Triggered when player has error.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

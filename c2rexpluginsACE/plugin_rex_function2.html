@@ -1,0 +1,216 @@
+<!DOCTYPE 5>
+<html>
+  <head>
+    <title>Plugin : Function2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="js/jquery-3.1.0.min.js">                         </script>
+    <script src="js/bootstrap.min.js">         </script>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header"><a class="navbar-brand" href="./index.html">Home</a></div>
+        <ul class="nav navbar-nav">
+          <li><a href="./pluginsIndex.html">Plugins      </a></li>
+          <li><a href="./behaviorsIndex.html">Behaviors                   </a></li>
+          <li><a href="./effectsIndex.html">Effects    </a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Plugin : Function2</h1>
+      <p>Author:Rex.Rainbow</p>
+      <ul>
+        <li>Run other events in an action, like functions in programming languages.</li>
+      </ul>
+      <div class="panel panel-default">
+        <div class="panel-title">
+          <h2>Properties</h2>
+        </div>
+        <div class="panel-body">
+          <h3>Debug mode</h3>
+          <ul>
+            <li>Enable to show log.                    </li>
+            <ul>
+              <li>Options : [&quot;Off&quot;,&quot;On&quot;]</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">   
+          <h2>Actions</h2>
+        </div>
+        <div class="panel-body">
+          <h2>Function      </h2>
+          <h3>Action:Call expression      </h3>
+          <ul>
+            <li>Call a function using a typed expression (via Function.Call()).   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Expression ( number or string ) : An expression to run, generally of the form Function.Call(&quot;func&quot;, ...)</li>
+            </ul>
+          </ul>
+          <h2>Interface      </h2>
+          <h3>Action:Declare parameter      </h3>
+          <ul>
+            <li>Declare input parameter in name string and it's default value   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Name ( string ) : Parameter's name</li>
+              <li>Value ( number or string ) : The default value.</li>
+              <li>Type check ( Combo ) : Type check.</li>
+              <ul>
+                <li>Options : [&quot;&quot;,&quot;number only&quot;,&quot;string only&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h2>Log      </h2>
+          <h3>Action:Dump      </h3>
+          <ul>
+            <li>Dump function infomation in console, it need turn on debug mode.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Parameter list      </h2>
+          <h3>Action:Call function      </h3>
+          <ul>
+            <li>Call a function, running its 'On function' event.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Name ( string ) : The name of the function to call.</li>
+              <li>Parameter {n} ( variadic ) : A parameter to pass for the function call, which can be accessed with Function.Param({n}).</li>
+            </ul>
+          </ul>
+          <h2>Parameter table      </h2>
+          <h3>Action:Set parameter      </h3>
+          <ul>
+            <li>Set a parameter table.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Name ( number or string ) : Name of parameter</li>
+              <li>Value ( number or string ) : Value</li>
+              <li>Table ( string ) : Name of parameter table.</li>
+            </ul>
+          </ul>
+          <h3>Action:Call function      </h3>
+          <ul>
+            <li>Call a function, running its 'On function' event with parameter table.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Name ( string ) : The name of the function to call.</li>
+              <li>Table ( string ) : Name of parameter table.</li>
+            </ul>
+          </ul>
+          <h2>Return      </h2>
+          <h3>Action:Set return value      </h3>
+          <ul>
+            <li>In an 'On function' event, set the return value.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Value ( number or string ) : A number or some text to return from the function call.</li>
+            </ul>
+          </ul>
+          <h2>Return: dictionary      </h2>
+          <h3>Action:Set return value      </h3>
+          <ul>
+            <li>In an 'On function' event, set the return value in a dictionary.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Name ( string ) : Parameter's name</li>
+              <li>Value ( number or string ) : A number or some text to return from the function call.</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">    
+        <div class="panel-title">    
+          <h2>Expressions</h2>
+        </div>
+        <div class="panel-body">           
+          <h2>Function    </h2>
+          <h3>Expression:ReturnValue </h3>
+          <ul>
+            <li>Get the value set by 'Set return value'. Add 2nd parameter for key and/or 3rd parameter for default value if key doesn't exist.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:ParamCount </h3>
+          <ul>
+            <li>Get the number of parameters passed to this function.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:Param </h3>
+          <ul>
+            <li>Get the value of a parameter passed to the function.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Index ( number or string ) : The zero-based index of the parameter to get, or name in string.</li>
+            </ul>
+          </ul>
+          <h3>Expression:Call </h3>
+          <ul>
+            <li>Call a function with parameters and return its return value.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Name ( string ) : The name of the function to call.</li>
+            </ul>
+          </ul>
+          <h3>Expression:CallwPT </h3>
+          <ul>
+            <li>Call a function with parameter table and return its return value.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Name ( string ) : The name of the function to call.</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">       
+          <h2>Conditions</h2>
+        </div>
+        <div class="panel-body">              
+          <h2>Function    </h2>
+          <h4>Condition:On function                    </h4>
+          <ul>
+            <li>Triggered when a function is called.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Name ( string ) : The name of the function that is being called.    </li>
+            </ul>
+          </ul>
+          <h2>Parameter    </h2>
+          <h4>Condition:Compare parameter                    </h4>
+          <ul>
+            <li>Compare the value of a parameter in a function call.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Index ( number or string ) : The zero-based index of the parameter to get, or name in string.    </li>
+              <li>Comparison ( cmp ) : How to compare the function parameter.    </li>
+              <li>Value ( number or string ) : The value to compare to.    </li>
+            </ul>
+          </ul>
+          <h4>Condition:Type of parameter                    </h4>
+          <ul>
+            <li>Test the type of parameter.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Index ( number or string ) : The zero-based index of the parameter to get, or name in string.    </li>
+              <li>Type ( Combo ) : The type of value.    </li>
+              <ul>
+                <li>Options : [&quot;Number&quot;,&quot;String&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,518 @@
+<!DOCTYPE 5>
+<html>
+  <head>
+    <title>Plugin : List control</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="js/jquery-3.1.0.min.js">                         </script>
+    <script src="js/bootstrap.min.js">         </script>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header"><a class="navbar-brand" href="./index.html">Home</a></div>
+        <ul class="nav navbar-nav">
+          <li><a href="./pluginsIndex.html">Plugins      </a></li>
+          <li><a href="./behaviorsIndex.html">Behaviors                   </a></li>
+          <li><a href="./effectsIndex.html">Effects    </a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Plugin : List control</h1>
+      <p>Author:Rex.Rainbow</p>
+      <ul>
+        <li>Manipulate instances of each line in a list.</li>
+      </ul>
+      <div class="panel panel-default">
+        <div class="panel-title">
+          <h2>Properties</h2>
+        </div>
+        <div class="panel-body">
+          <h3>Color</h3>
+          <ul>
+            <li>Color for showing at editor.                    </li>
+          </ul>
+          <h3>Line height</h3>
+          <ul>
+            <li>Default line height, in pixels.                    </li>
+          </ul>
+          <h3>Total lines</h3>
+          <ul>
+            <li>Total lines count in this list.                    </li>
+          </ul>
+          <h3>Clamp OY</h3>
+          <ul>
+            <li>Clamp offset Y in vertical boundary.                    </li>
+            <ul>
+              <li>Options : [&quot;NO&quot;,&quot;Yes&quot;]</li>
+            </ul>
+          </ul>
+          <h3>Axis</h3>
+          <ul>
+            <li>Axis of scrolling.                    </li>
+            <ul>
+              <li>Options : [&quot;Horizontal&quot;,&quot;Vertical&quot;]</li>
+            </ul>
+          </ul>
+          <h3>Hotspot</h3>
+          <ul>
+            <li>Choose the location of the hot spot in the object.                    </li>
+            <ul>
+              <li>Options : [&quot;Top-left&quot;,&quot;Top&quot;,&quot;Top-right&quot;,&quot;Left&quot;,&quot;Center&quot;,&quot;Right&quot;,&quot;Bottom-left&quot;,&quot;Bottom&quot;,&quot;Bottom-right&quot;]</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">   
+          <h2>Actions</h2>
+        </div>
+        <div class="panel-body">
+          <h2>Custom data      </h2>
+          <h3>Action:Set value      </h3>
+          <ul>
+            <li>Set custom data in a line.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Line index ( number ) : Line index.</li>
+              <li>Key ( string ) : The key of custom data.</li>
+              <li>Value ( number or string ) : The value to store in the line.</li>
+            </ul>
+          </ul>
+          <h3>Action:Clean key in all lines      </h3>
+          <ul>
+            <li>Clean key in all line.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Key ( string ) : The key of custom data.</li>
+            </ul>
+          </ul>
+          <h2>Insert      </h2>
+          <h3>Action:Insert new lines      </h3>
+          <ul>
+            <li>Insert new lines.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Insert at ( number ) : Line index for inserting.</li>
+              <li>Line number ( number ) : Line number for inserting.</li>
+            </ul>
+          </ul>
+          <h3>Action:Insert lines      </h3>
+          <ul>
+            <li>Insert lines with content.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Insert at ( number ) : Line index for inserting.</li>
+              <li>Content ( string ) : Content of lines in JSON string.</li>
+            </ul>
+          </ul>
+          <h3>Action:Push new lines      </h3>
+          <ul>
+            <li>Push new lines.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Where ( Combo ) : Whether to insert at the beginning or the end of the list.</li>
+              <ul>
+                <li>Options : [&quot;back&quot;,&quot;front&quot;]</li>
+              </ul>
+              <li>Line number ( number ) : Line number for inserting.</li>
+            </ul>
+          </ul>
+          <h3>Action:Push lines      </h3>
+          <ul>
+            <li>Push lines with content.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Where ( Combo ) : Whether to insert at the beginning or the end of the list.</li>
+              <ul>
+                <li>Options : [&quot;back&quot;,&quot;front&quot;]</li>
+              </ul>
+              <li>Content ( string ) : Content of lines in JSON string.</li>
+            </ul>
+          </ul>
+          <h2>Instances      </h2>
+          <h3>Action:Pin instance      </h3>
+          <ul>
+            <li>Pin instance to current visible line under &quot;Condition: On line visible&quot;. It will be destroyed while line is invisible.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Instance ( object ) : Instance belong the line.</li>
+            </ul>
+          </ul>
+          <h3>Action:Unpin instance      </h3>
+          <ul>
+            <li>Unpin instance from line.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Instance ( object ) : Instance belong the line.</li>
+            </ul>
+          </ul>
+          <h2>Line - offset Y      </h2>
+          <h3>Action:Set      </h3>
+          <ul>
+            <li>Set offset Y of line.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Line index ( number ) : Line index.</li>
+              <li>OY ( number ) : Offset Y of a line, in pixels.</li>
+            </ul>
+          </ul>
+          <h2>Line height      </h2>
+          <h3>Action:Set default line height      </h3>
+          <ul>
+            <li>Set default line height.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Line height ( number ) : Line height, in pixels.</li>
+            </ul>
+          </ul>
+          <h3>Action:Set line height      </h3>
+          <ul>
+            <li>Set line height.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Line index ( number ) : Line index.</li>
+              <li>Height ( number ) : Line height, in pixels.</li>
+            </ul>
+          </ul>
+          <h2>List      </h2>
+          <h3>Action:Set total lines count      </h3>
+          <ul>
+            <li>Set total lines count.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Total lines count ( number ) : Total lines count of this list.</li>
+            </ul>
+          </ul>
+          <h2>List - Offset Y      </h2>
+          <h3>Action:Scroll by percentage      </h3>
+          <ul>
+            <li>Scroll offset Y by percentage.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Percentage ( number ) : Scroll list, 0 is top, 1 is bottom.</li>
+            </ul>
+          </ul>
+          <h2>List - offset Y      </h2>
+          <h3>Action:Set      </h3>
+          <ul>
+            <li>Set offset Y.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>OY ( number ) : Offset Y of this list, in pixels. Start at 0.</li>
+            </ul>
+          </ul>
+          <h3>Action:Add to      </h3>
+          <ul>
+            <li>Add to Offset Y.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Value ( number ) : Add value to Offset Y, in pixels</li>
+            </ul>
+          </ul>
+          <h3>Action:Scroll to index      </h3>
+          <ul>
+            <li>Scroll offset Y to line lindex.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Line index ( number ) : Line index.</li>
+            </ul>
+          </ul>
+          <h2>Remove      </h2>
+          <h3>Action:Remove lines      </h3>
+          <ul>
+            <li>Remove lines.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Remove from ( number ) : Line index for removing.</li>
+              <li>Line number ( number ) : Line number for removing.</li>
+            </ul>
+          </ul>
+          <h2>SOL: instances      </h2>
+          <h3>Action:Pick instances      </h3>
+          <ul>
+            <li>Pick instances on line.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Line index ( number ) : Line index.</li>
+              <li>Object ( object ) : Object for picking</li>
+            </ul>
+          </ul>
+          <h3>Action:Pick all instances      </h3>
+          <ul>
+            <li>Pick all instances on line.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Line index ( number ) : Line index.</li>
+            </ul>
+          </ul>
+          <h2>Visible      </h2>
+          <h3>Action:Refresh      </h3>
+          <ul>
+            <li>Refresh visible lines.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">    
+        <div class="panel-title">    
+          <h2>Expressions</h2>
+        </div>
+        <div class="panel-body">           
+          <h2>Bound    </h2>
+          <h3>Expression:LastBoundOY </h3>
+          <ul>
+            <li>Get last bound of OY under &quot;Condition:On OY out of top bound&quot;, or &quot;Condition:On OY out of bottom bound&quot;.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Custom data    </h2>
+          <h3>Expression:At </h3>
+          <ul>
+            <li>Get value by line index and key. Add 3rd parameter for default value if this key is not existed.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Index ( number ) : Index of line.</li>
+              <li>Key ( string ) : The name of the key.</li>
+            </ul>
+          </ul>
+          <h3>Expression:LastRemovedLines </h3>
+          <ul>
+            <li>Get custom data of last removed lines in JSON string after &quot;Action: Remove lines&quot;.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:CustomDataInLines </h3>
+          <ul>
+            <li>Get custom data of lines.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Start index ( number ) : Start index of line.</li>
+              <li>Line number ( number ) : Line number.</li>
+            </ul>
+          </ul>
+          <h2>For each    </h2>
+          <h3>Expression:CurLineIndex </h3>
+          <ul>
+            <li>Get current line index in &quot;Condition: For each line&quot;, or &quot;Condition: For each visible line&quot;.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Line height    </h2>
+          <h3>Expression:DefaultLineHeight </h3>
+          <ul>
+            <li>Get default line height.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:LineHeight </h3>
+          <ul>
+            <li>Get line height.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Index ( number ) : Index of line.</li>
+            </ul>
+          </ul>
+          <h2>Line index    </h2>
+          <h3>Expression:UID2LineIndex </h3>
+          <ul>
+            <li>Get line index of pinned instance by UID. (-1) is invalid.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>UID ( number ) : UID of pinned instance.</li>
+            </ul>
+          </ul>
+          <h2>List    </h2>
+          <h3>Expression:TotalLinesCount </h3>
+          <ul>
+            <li>Get total lines count.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>OY    </h2>
+          <h3>Expression:OY </h3>
+          <ul>
+            <li>Get current OY.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:BotomOY </h3>
+          <ul>
+            <li>Get bottom OY.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:TopOY </h3>
+          <ul>
+            <li>Get top OY.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Offset Y    </h2>
+          <h3>Expression:LineIndex2LineTLY </h3>
+          <ul>
+            <li>Get top-left position Y by line index</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Line index ( number ) : Line index.</li>
+            </ul>
+          </ul>
+          <h2>Visibl - On visible    </h2>
+          <h3>Expression:LineIndex </h3>
+          <ul>
+            <li>Get selected line index in &quot;Condition: On line visible&quot;, or &quot;Condition: On line invisible&quot;.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:LineTLX </h3>
+          <ul>
+            <li>Get top-left position X of line in &quot;Condition: On line visible&quot;, in pixels</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:LineTLY </h3>
+          <ul>
+            <li>Get top-left position Y of line in &quot;Condition: On line visible&quot;, in pixels</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Visible    </h2>
+          <h3>Expression:LineCX </h3>
+          <ul>
+            <li>Get center position X of line in &quot;Condition: On line visible&quot;, in pixels</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:FirstVisibleLineIndex </h3>
+          <ul>
+            <li>Get first visible line index.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:LastVisibleLineIndex </h3>
+          <ul>
+            <li>Get last visible line index.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">       
+          <h2>Conditions</h2>
+        </div>
+        <div class="panel-body">              
+          <h2>Bound    </h2>
+          <h4>Condition:Is OY out of bound                    </h4>
+          <ul>
+            <li>Retrurn true if OY is out of bound.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Bound ( Combo ) : Bound types.    </li>
+              <ul>
+                <li>Options : [&quot;Top bound&quot;,&quot;Bottom bound&quot;,&quot;Top or bottom bounds&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h4>Condition:On OY out of bound                    </h4>
+          <ul>
+            <li>Triggered when OY out of bound.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Bound ( Combo ) : Bound types.    </li>
+              <ul>
+                <li>Options : [&quot;Top bound&quot;,&quot;Bottom bound&quot;,&quot;Top or bottom bounds&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h2>Filter    </h2>
+          <h4>Condition:For each matched line                    </h4>
+          <ul>
+            <li>Repeat the event for each matched line.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Key ( string ) : The key of custom data.    </li>
+              <li>Comparison ( cmp ) : Choose the way to compare data.    </li>
+              <li>Value ( number ) : The value to compare the data to.    </li>
+            </ul>
+          </ul>
+          <h2>List    </h2>
+          <h4>Condition:For each line                    </h4>
+          <ul>
+            <li>Repeat the event for each line in list.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:For each line in a range                    </h4>
+          <ul>
+            <li>Repeat the event for each line in a range in list.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Start ( number ) : Start line index.    </li>
+              <li>End ( number ) : Start line index.    </li>
+            </ul>
+          </ul>
+          <h2>SOL: instances    </h2>
+          <h4>Condition:Pick instances                    </h4>
+          <ul>
+            <li>Pick instances on line.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Line index ( number ) : Line index.    </li>
+              <li>Object ( object ) : Object for picking    </li>
+            </ul>
+          </ul>
+          <h4>Condition:Pick all instances                    </h4>
+          <ul>
+            <li>Pick all instances on line.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Line index ( number ) : Line index.    </li>
+            </ul>
+          </ul>
+          <h2>Visible    </h2>
+          <h4>Condition:On line visible                    </h4>
+          <ul>
+            <li>Triggered when a line is visible.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On line invisible                    </h4>
+          <ul>
+            <li>Triggered when a line is invisible.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:For each visible line                    </h4>
+          <ul>
+            <li>Repeat the event for each visible line.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

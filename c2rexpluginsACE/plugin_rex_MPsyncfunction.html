@@ -1,0 +1,230 @@
+<!DOCTYPE 5>
+<html>
+  <head>
+    <title>Plugin : MP Sync function</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="js/jquery-3.1.0.min.js">                         </script>
+    <script src="js/bootstrap.min.js">         </script>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header"><a class="navbar-brand" href="./index.html">Home</a></div>
+        <ul class="nav navbar-nav">
+          <li><a href="./pluginsIndex.html">Plugins      </a></li>
+          <li><a href="./behaviorsIndex.html">Behaviors                   </a></li>
+          <li><a href="./effectsIndex.html">Effects    </a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Plugin : MP Sync function</h1>
+      <p>Author:Rex.Rainbow</p>
+      <ul>
+        <li>Trigger &quot;On function&quot; for each peer.</li>
+      </ul>
+      <div class="panel panel-default">
+        <div class="panel-title">
+          <h2>Properties</h2>
+        </div>
+        <div class="panel-body">
+          <h3>Tag prefix</h3>
+          <ul>
+            <li>Tag prefix for sending and receiving message.                    </li>
+          </ul>
+          <h3>Response</h3>
+          <ul>
+            <li>Run function immediately or wait for host sendback.                    </li>
+            <ul>
+              <li>Options : [&quot;Immediate&quot;,&quot;Sendback&quot;]</li>
+            </ul>
+          </ul>
+          <h3>Pending mode</h3>
+          <ul>
+            <li>Enable to pending command execution until accepted. Turn off to run command directly.                    </li>
+            <ul>
+              <li>Options : [&quot;No&quot;,&quot;Yes&quot;]</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">   
+          <h2>Actions</h2>
+        </div>
+        <div class="panel-body">
+          <h2>Interface      </h2>
+          <h3>Action:Declare parameter      </h3>
+          <ul>
+            <li>Declare input parameter in name string and it's default value   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Name ( string ) : Parameter's name</li>
+              <li>Value ( number or string ) : The default value.</li>
+            </ul>
+          </ul>
+          <h2>Parameter list      </h2>
+          <h3>Action:Call function      </h3>
+          <ul>
+            <li>Call a function, running its 'On function' event.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Name ( string ) : The name of the function to call.</li>
+              <li>Parameter {n} ( variadic ) : A parameter to pass for the function call, which can be accessed with Function.Param({n}).</li>
+            </ul>
+          </ul>
+          <h2>Parameter table      </h2>
+          <h3>Action:Set parameter      </h3>
+          <ul>
+            <li>Set a parameter table.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Name ( number or string ) : Name of parameter</li>
+              <li>Value ( number or string ) : Value</li>
+            </ul>
+          </ul>
+          <h3>Action:Call function      </h3>
+          <ul>
+            <li>Call a function, running its 'On function' event with parameter table.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Name ( string ) : The name of the function to call.</li>
+            </ul>
+          </ul>
+          <h2>Pending      </h2>
+          <h3>Action:Accept      </h3>
+          <ul>
+            <li>Accept one command. Execute command if there has any pending command.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Action:Close      </h3>
+          <ul>
+            <li>Close acceptance.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Action:Discard&amp;Close      </h3>
+          <ul>
+            <li>Discard all pending commands and close acceptance.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Pending - ignored list      </h2>
+          <h3>Action:Add      </h3>
+          <ul>
+            <li>Add a function by name to to ignored list of blocking   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Name ( string ) : The name of the function.</li>
+            </ul>
+          </ul>
+          <h3>Action:Remove      </h3>
+          <ul>
+            <li>Remove the function by name from to ignored list of blocking   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Name ( string ) : The name of the function.</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">    
+        <div class="panel-title">    
+          <h2>Expressions</h2>
+        </div>
+        <div class="panel-body">           
+          <h2>Debug    </h2>
+          <h3>Expression:FunctionName </h3>
+          <ul>
+            <li>Function name for dubug, used under &quot;Condition:On any function&quot;.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:FunctionParams </h3>
+          <ul>
+            <li>Function parameters for dubug, used under &quot;Condition:On any function&quot;.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Function    </h2>
+          <h3>Expression:ParamCount </h3>
+          <ul>
+            <li>Get the number of parameters passed to this function.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:Param </h3>
+          <ul>
+            <li>Get the value of a parameter passed to the function.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Index ( number or string ) : The zero-based index of the parameter to get, or name in string.</li>
+            </ul>
+          </ul>
+          <h3>Expression:SenderAlias </h3>
+          <ul>
+            <li>The alias of sender, used under callback &quot;Condition:On function&quot;.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">       
+          <h2>Conditions</h2>
+        </div>
+        <div class="panel-body">              
+          <h2>Function    </h2>
+          <h4>Condition:On function                    </h4>
+          <ul>
+            <li>Triggered when a function is called.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Name ( string ) : The name of the function that is being called.    </li>
+            </ul>
+          </ul>
+          <h4>Condition:On any function                    </h4>
+          <ul>
+            <li>Triggered when any function is called. Dump the trace.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Parameter    </h2>
+          <h4>Condition:Compare parameter                    </h4>
+          <ul>
+            <li>Compare the value of a parameter in a function call.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Index ( number or string ) : The zero-based index of the parameter to get, or name in string.    </li>
+              <li>Comparison ( cmp ) : How to compare the function parameter.    </li>
+              <li>Value ( number or string ) : The value to compare to.    </li>
+            </ul>
+          </ul>
+          <h4>Condition:Type of parameter                    </h4>
+          <ul>
+            <li>Test the type of parameter.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Index ( number or string ) : The zero-based index of the parameter to get, or name in string.    </li>
+              <li>Type ( Combo ) : The type of value.    </li>
+              <ul>
+                <li>Options : [&quot;Number&quot;,&quot;String&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

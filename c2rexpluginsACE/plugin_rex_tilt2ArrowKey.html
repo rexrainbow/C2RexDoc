@@ -1,0 +1,231 @@
+<!DOCTYPE 5>
+<html>
+  <head>
+    <title>Plugin : Tilt to arrow key</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="js/jquery-3.1.0.min.js">                         </script>
+    <script src="js/bootstrap.min.js">         </script>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header"><a class="navbar-brand" href="./index.html">Home</a></div>
+        <ul class="nav navbar-nav">
+          <li><a href="./pluginsIndex.html">Plugins      </a></li>
+          <li><a href="./behaviorsIndex.html">Behaviors                   </a></li>
+          <li><a href="./effectsIndex.html">Effects    </a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Plugin : Tilt to arrow key</h1>
+      <p>Author:Rex.Rainbow</p>
+      <ul>
+        <li>Get arrow key event from tilt's beta and gamma input.</li>
+      </ul>
+      <div class="panel panel-default">
+        <div class="panel-title">
+          <h2>Properties</h2>
+        </div>
+        <div class="panel-body">
+          <h3>Calibration</h3>
+          <ul>
+            <li>Calibration zero angle.                    </li>
+            <ul>
+              <li>Options : [&quot;0&quot;,&quot;Current angle&quot;]</li>
+            </ul>
+          </ul>
+          <h3>Directions</h3>
+          <ul>
+            <li>The number of directions of movement available.                    </li>
+            <ul>
+              <li>Options : [&quot;Up &amp; down&quot;,&quot;Left &amp; right&quot;,&quot;4 directions&quot;,&quot;8 directions&quot;]</li>
+            </ul>
+          </ul>
+          <h3>Sensitivity</h3>
+          <ul>
+            <li>Sensitivity of tilt angle, in degree.                    </li>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">   
+          <h2>Actions</h2>
+        </div>
+        <div class="panel-body">
+          <h2>Sensitivity      </h2>
+          <h3>Action:Set sensitivity angle      </h3>
+          <ul>
+            <li>Set sensitivity angle of turning direction detection.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Sensitivity angle ( number ) : Sensitivity angle.</li>
+            </ul>
+          </ul>
+          <h2>calibration      </h2>
+          <h3>Action:Calibration      </h3>
+          <ul>
+            <li>Calibration zero angle.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>ZERO angle ( Combo ) : ZERO angle of Up-Bottom direction.</li>
+              <ul>
+                <li>Options : [&quot;0&quot;,&quot;current angle&quot;]</li>
+              </ul>
+              <li>ZERO angle ( Combo ) : ZERO angle of Left-Right direction.</li>
+              <ul>
+                <li>Options : [&quot;0&quot;,&quot;current angle&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">    
+        <div class="panel-title">    
+          <h2>Expressions</h2>
+        </div>
+        <div class="panel-body">           
+          <h2>Angle    </h2>
+          <h3>Expression:ZEROUD </h3>
+          <ul>
+            <li>Get zero of Up-Bottom.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:ZEROLR </h3>
+          <ul>
+            <li>Get zero of Left-Right.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:RotateUD </h3>
+          <ul>
+            <li>Get rotate angle of Up-Bottom.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:RotateLR </h3>
+          <ul>
+            <li>Get rotate angle of Left-Right.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:SensitivityAngle </h3>
+          <ul>
+            <li>Get sensitivity angle of turning direction detection.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">       
+          <h2>Conditions</h2>
+        </div>
+        <div class="panel-body">              
+          <h2>Is down    </h2>
+          <h4>Condition:Up arrow is down                    </h4>
+          <ul>
+            <li>Return true if Up arrow is currently held down.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:Down arrow is down                    </h4>
+          <ul>
+            <li>Return true if Down arrow is currently held down.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:Left arrow is down                    </h4>
+          <ul>
+            <li>Return true if Left arrow is currently held down.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:Right arrow is down                    </h4>
+          <ul>
+            <li>Return true if Right arrow is currently held down.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Pressd    </h2>
+          <h4>Condition:On Up arrow pressed                    </h4>
+          <ul>
+            <li>Triggered when Up arrow is pressed.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On Down arrow pressed                    </h4>
+          <ul>
+            <li>Triggered when Down arrow is pressed.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On Left arrow pressed                    </h4>
+          <ul>
+            <li>Triggered when Left arrow is pressed.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On Right arrow pressed                    </h4>
+          <ul>
+            <li>Triggered when Right arrow is pressed.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On any arrow pressed                    </h4>
+          <ul>
+            <li>Triggered when any arrow is pressed.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Released    </h2>
+          <h4>Condition:On Up arrow released                    </h4>
+          <ul>
+            <li>Triggered when Up arrow is released.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On Down arrow released                    </h4>
+          <ul>
+            <li>Triggered when Down arrow is released.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On Left arrow released                    </h4>
+          <ul>
+            <li>Triggered when Left arrow is released.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On Right arrow released                    </h4>
+          <ul>
+            <li>Triggered when Right arrow is released.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

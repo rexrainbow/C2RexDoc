@@ -1,0 +1,468 @@
+<!DOCTYPE 5>
+<html>
+  <head>
+    <title>Plugin : Leaderboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="js/jquery-3.1.0.min.js">                         </script>
+    <script src="js/bootstrap.min.js">         </script>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header"><a class="navbar-brand" href="./index.html">Home</a></div>
+        <ul class="nav navbar-nav">
+          <li><a href="./pluginsIndex.html">Plugins      </a></li>
+          <li><a href="./behaviorsIndex.html">Behaviors                   </a></li>
+          <li><a href="./effectsIndex.html">Effects    </a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Plugin : Leaderboard</h1>
+      <p>Author:Rex.Rainbow</p>
+      <ul>
+        <li>Leader board built on backendless.</li>
+      </ul>
+      <div class="panel panel-default">
+        <div class="panel-title">
+          <h2>Properties</h2>
+        </div>
+        <div class="panel-body">
+          <h3>Class</h3>
+          <ul>
+            <li>Class of the table.                    </li>
+          </ul>
+          <h3>Class name</h3>
+          <ul>
+            <li>Class name for storing leaderboard structure.                    </li>
+          </ul>
+          <h3>Primary keys</h3>
+          <ul>
+            <li>Primary keys for indexing.                    </li>
+          </ul>
+          <h3>ID</h3>
+          <ul>
+            <li>ID of leader board.                    </li>
+          </ul>
+          <h3>Tag</h3>
+          <ul>
+            <li>A tag that can be used to filter scores. Set &quot;&quot; to ignore this feature.                    </li>
+          </ul>
+          <h3>Page</h3>
+          <ul>
+            <li>Paging for reading.                    </li>
+          </ul>
+          <h3>Lines</h3>
+          <ul>
+            <li>Line count of each page for loading scores.                    </li>
+          </ul>
+          <h3>Order</h3>
+          <ul>
+            <li>Ranking order.                    </li>
+            <ul>
+              <li>Options : [&quot;Small to large&quot;,&quot;Large to small&quot;]</li>
+            </ul>
+          </ul>
+          <h3>Period</h3>
+          <ul>
+            <li>The time-frame to pull scores from.                    </li>
+            <ul>
+              <li>Options : [&quot;Current day&quot;,&quot;Current week&quot;,&quot;Current month&quot;,&quot;Current year&quot;,&quot;All-time&quot;]</li>
+            </ul>
+          </ul>
+          <h3>Linked tables</h3>
+          <ul>
+            <li>Linked tables.                    </li>
+          </ul>
+          <h3>Owner class name</h3>
+          <ul>
+            <li>Class name of owner data structure. Set &quot;&quot; to ignore owner data.                    </li>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">   
+          <h2>Actions</h2>
+        </div>
+        <div class="panel-body">
+          <h2>Configuration      </h2>
+          <h3>Action:Set board ID      </h3>
+          <ul>
+            <li>Set board ID and clean all.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>ID ( string ) : ID of leader board.</li>
+            </ul>
+          </ul>
+          <h3>Action:Set tag      </h3>
+          <ul>
+            <li>Set filter tag.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Tag ( string ) : A tag that can be used to filter scores. Set &quot;&quot; to ignore this feature.</li>
+            </ul>
+          </ul>
+          <h3>Action:Set period      </h3>
+          <ul>
+            <li>Set period.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Period ( Combo ) : The time-frame to pull scores from.</li>
+              <ul>
+                <li>Options : [&quot;Current day&quot;,&quot;Current week&quot;,&quot;Current month&quot;,&quot;Current year&quot;,&quot;All-time&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h3>Action:Set date time      </h3>
+          <ul>
+            <li>Set date time for querying.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Timestamp ( number ) : Datetime in timestamp.</li>
+            </ul>
+          </ul>
+          <h2>Initial      </h2>
+          <h3>Action:Initial table      </h3>
+          <ul>
+            <li>Initial table.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Ranking      </h2>
+          <h3>Action:Get ranking      </h3>
+          <ul>
+            <li>Get ranking.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>UserID ( string ) : UserID from authentication.</li>
+            </ul>
+          </ul>
+          <h2>Request      </h2>
+          <h3>Action:Request in a range      </h3>
+          <ul>
+            <li>Request in a range.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Start ( number ) : Start index, 0-based.</li>
+              <li>Lines ( number ) : Count of lines</li>
+            </ul>
+          </ul>
+          <h2>Request - page      </h2>
+          <h3>Action:Turn to page      </h3>
+          <ul>
+            <li>Turn to page.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Index ( number ) : Page index, 0-based.</li>
+            </ul>
+          </ul>
+          <h3>Action:Update current page      </h3>
+          <ul>
+            <li>Update current page.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Action:Turn to next page      </h3>
+          <ul>
+            <li>Update turn to next page.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Action:Turn to previous page      </h3>
+          <ul>
+            <li>Update turn to previous page.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Score      </h2>
+          <h3>Action:Post score      </h3>
+          <ul>
+            <li>Post score by user ID.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>UserID ( string ) : UserID.</li>
+              <li>Score ( number or string ) : User Score</li>
+              <li>Post condition ( Combo ) : Post if score is greater or less then saved score.</li>
+              <ul>
+                <li>Options : [&quot;&quot;,&quot;if greater&quot;,&quot;if less&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h3>Action:Get score      </h3>
+          <ul>
+            <li>Get score.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>UserID ( string ) : UserID from authentication.</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">    
+        <div class="panel-title">    
+          <h2>Expressions</h2>
+        </div>
+        <div class="panel-body">           
+          <h2>Configuration    </h2>
+          <h3>Expression:BoardID </h3>
+          <ul>
+            <li>Get board ID.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:Tag </h3>
+          <ul>
+            <li>Get tag.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Error    </h2>
+          <h3>Expression:ErrorCode </h3>
+          <ul>
+            <li>Error code.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:ErrorMessage </h3>
+          <ul>
+            <li>Error message.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Load - for each    </h2>
+          <h3>Expression:CurScore </h3>
+          <ul>
+            <li>Get the current user score in a For Each loop.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:CurUserID </h3>
+          <ul>
+            <li>Get the current user id in a For Each loop.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:CurUserData </h3>
+          <ul>
+            <li>Get value of current user data in a For Each loop.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Load - for each - index    </h2>
+          <h3>Expression:CurUserRank </h3>
+          <ul>
+            <li>Get the current user rank (0-based) in a For Each loop.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:CurStartIndex </h3>
+          <ul>
+            <li>Get start index in current received page.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:LoopIndex </h3>
+          <ul>
+            <li>Get loop index in current received page.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Page    </h2>
+          <h3>Expression:PageIndex </h3>
+          <ul>
+            <li>Get current page index. (0-based)</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Post    </h2>
+          <h3>Expression:PostScore </h3>
+          <ul>
+            <li>Get posted current user score under &quot;condition:On post complete&quot;.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:PostUserID </h3>
+          <ul>
+            <li>Get posted current user id under &quot;condition:On post complete&quot;.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Rank    </h2>
+          <h3>Expression:UserID2Rank </h3>
+          <ul>
+            <li>Get rank by user ID. Return (-1) if not found.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>UserID ( string ) : UserID from authentication.</li>
+            </ul>
+          </ul>
+          <h2>Rank index    </h2>
+          <h3>Expression:Rank2Score </h3>
+          <ul>
+            <li>Get user score by rank index. Add default value at 2nd parameter.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Rank ( number ) : Rank index (0-based).</li>
+            </ul>
+          </ul>
+          <h3>Expression:Rank2UserID </h3>
+          <ul>
+            <li>Get userID by rank index. Add default value at 2nd parameter.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Rank ( number ) : Rank index (0-based).</li>
+            </ul>
+          </ul>
+          <h3>Expression:Rank2UserData </h3>
+          <ul>
+            <li>Get user data by rank index. Add default value at 2nd parameter.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Rank ( number ) : Rank index (0-based).</li>
+            </ul>
+          </ul>
+          <h2>Ranking    </h2>
+          <h3>Expression:LastRanking </h3>
+          <ul>
+            <li>Get ranking of userID (0-based) under &quot;Condition:On get ranking&quot;. Return (-1) if invalided.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:LastUserID </h3>
+          <ul>
+            <li>Get requested userID under &quot;Condition:On get ranking&quot;. Return &quot;&quot; if invalided.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:LastScore </h3>
+          <ul>
+            <li>Get requested score under &quot;Condition:On get score&quot;. Return &quot;&quot; if invalided.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Received - for each    </h2>
+          <h3>Expression:CurRankingCount </h3>
+          <ul>
+            <li>Get ranking count in current received page.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">       
+          <h2>Conditions</h2>
+        </div>
+        <div class="panel-body">              
+          <h2>Load    </h2>
+          <h4>Condition:On receive                    </h4>
+          <ul>
+            <li>Triggered when receive updated.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On receive error                    </h4>
+          <ul>
+            <li>Triggered when receive ranks error.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:For each rank in a range                    </h4>
+          <ul>
+            <li>Repeat the event for each rank in a range.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Start ( number ) : Start from rank index (0-based).    </li>
+              <li>End ( number ) : End to rank index (0-based). This value should larger than Start.    </li>
+            </ul>
+          </ul>
+          <h4>Condition:Last page                    </h4>
+          <ul>
+            <li>Return true if current page is the last page.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Load - for each    </h2>
+          <h4>Condition:For each rank                    </h4>
+          <ul>
+            <li>Repeat the event for each rank.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Ranking    </h2>
+          <h4>Condition:On get ranking                    </h4>
+          <ul>
+            <li>Triggered when get ranking.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On get ranking error                    </h4>
+          <ul>
+            <li>Triggered when get ranking error.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Score - get    </h2>
+          <h4>Condition:On get score                    </h4>
+          <ul>
+            <li>Triggered when get score.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On get score error                    </h4>
+          <ul>
+            <li>Triggered when get score error.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Score - post    </h2>
+          <h4>Condition:On post                    </h4>
+          <ul>
+            <li>Triggered when post complete.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On post error                    </h4>
+          <ul>
+            <li>Triggered when post error.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

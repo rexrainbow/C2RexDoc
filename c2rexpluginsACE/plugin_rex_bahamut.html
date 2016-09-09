@@ -1,0 +1,235 @@
+<!DOCTYPE 5>
+<html>
+  <head>
+    <title>Plugin : Bahamut</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="js/jquery-3.1.0.min.js">                         </script>
+    <script src="js/bootstrap.min.js">         </script>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header"><a class="navbar-brand" href="./index.html">Home</a></div>
+        <ul class="nav navbar-nav">
+          <li><a href="./pluginsIndex.html">Plugins      </a></li>
+          <li><a href="./behaviorsIndex.html">Behaviors                   </a></li>
+          <li><a href="./effectsIndex.html">Effects    </a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Plugin : Bahamut</h1>
+      <p>Author:Rex.Rainbow</p>
+      <ul>
+        <li>Get user data from Bahamut website. http://www.gamer.com.tw/</li>
+      </ul>
+      <div class="panel panel-default">
+        <div class="panel-title">
+          <h2>Properties</h2>
+        </div>
+        <div class="panel-body">
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">   
+          <h2>Actions</h2>
+        </div>
+        <div class="panel-body">
+          <h2>Clean      </h2>
+          <h3>Action:Clean all users data      </h3>
+          <ul>
+            <li>Clean all users data.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Friend list      </h2>
+          <h3>Action:Get friends list      </h3>
+          <ul>
+            <li>Get friends list.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Name ( string ) : User name.</li>
+              <li>Tag ( string ) : Tag for received callback.</li>
+            </ul>
+          </ul>
+          <h2>User data      </h2>
+          <h3>Action:Get user data      </h3>
+          <ul>
+            <li>Get user data.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Name ( string ) : User name.</li>
+              <li>Tag ( string ) : Tag for received callback.</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">    
+        <div class="panel-title">    
+          <h2>Expressions</h2>
+        </div>
+        <div class="panel-body">           
+          <h2>Friend list    </h2>
+          <h3>Expression:CurFriendName </h3>
+          <ul>
+            <li>Get the current friends name in For each friends event.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:CurFriendNickname </h3>
+          <ul>
+            <li>Get the current friends nickname in For each friends event.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>User data    </h2>
+          <h3>Expression:CurUserName </h3>
+          <ul>
+            <li>Get current user name.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:STR </h3>
+          <ul>
+            <li>Get user's STR.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:DEX </h3>
+          <ul>
+            <li>Get user's DEX.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:INT </h3>
+          <ul>
+            <li>Get user's INT.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:LUK </h3>
+          <ul>
+            <li>Get user's LUK.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:VIT </h3>
+          <ul>
+            <li>Get user's VIT.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:AGI </h3>
+          <ul>
+            <li>Get user's AGI.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:MND </h3>
+          <ul>
+            <li>Get user's MND.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:ImageURL </h3>
+          <ul>
+            <li>Get url of user image.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:Nickname </h3>
+          <ul>
+            <li>Get user's nickname.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:LV </h3>
+          <ul>
+            <li>Get user's level.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:RACE </h3>
+          <ul>
+            <li>Get user's race.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:OCCUPATION </h3>
+          <ul>
+            <li>Get user's occupation.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">       
+          <h2>Conditions</h2>
+        </div>
+        <div class="panel-body">              
+          <h2>Friend list    </h2>
+          <h4>Condition:For each friend                    </h4>
+          <ul>
+            <li>Repeat the event for each friend.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Name ( string ) : User name.    </li>
+            </ul>
+          </ul>
+          <h4>Condition:On friends list received                    </h4>
+          <ul>
+            <li>Triggered when receives friends list.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Tag ( string ) : Tag.    </li>
+            </ul>
+          </ul>
+          <h4>Condition:On friends list received failed                    </h4>
+          <ul>
+            <li>Triggered when receives friends list failed.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Tag ( string ) : Tag.    </li>
+            </ul>
+          </ul>
+          <h2>User data    </h2>
+          <h4>Condition:On user data received                    </h4>
+          <ul>
+            <li>Triggered when receives user data.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Tag ( string ) : Tag.    </li>
+            </ul>
+          </ul>
+          <h4>Condition:On user data received failed                    </h4>
+          <ul>
+            <li>Triggered when receives user data failed.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Tag ( string ) : Tag.    </li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

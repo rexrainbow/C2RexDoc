@@ -1,0 +1,252 @@
+<!DOCTYPE 5>
+<html>
+  <head>
+    <title>Plugin : Marker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="js/jquery-3.1.0.min.js">                         </script>
+    <script src="js/bootstrap.min.js">         </script>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header"><a class="navbar-brand" href="./index.html">Home</a></div>
+        <ul class="nav navbar-nav">
+          <li><a href="./pluginsIndex.html">Plugins      </a></li>
+          <li><a href="./behaviorsIndex.html">Behaviors                   </a></li>
+          <li><a href="./effectsIndex.html">Effects    </a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Plugin : Marker</h1>
+      <p>Author:Rex.Rainbow</p>
+      <ul>
+        <li>Marker of google map.</li>
+      </ul>
+      <div class="panel panel-default">
+        <div class="panel-title">
+          <h2>Properties</h2>
+        </div>
+        <div class="panel-body">
+          <h3>Title</h3>
+          <ul>
+            <li>Rollover text.                    </li>
+          </ul>
+          <h3>Animation</h3>
+          <ul>
+            <li>Animation.                    </li>
+            <ul>
+              <li>Options : [&quot;None&quot;,&quot;BOUNCE&quot;,&quot;DROP&quot;]</li>
+            </ul>
+          </ul>
+          <h3>Label</h3>
+          <ul>
+            <li>                    </li>
+          </ul>
+          <h3>Label text</h3>
+          <ul>
+            <li>The text to be displayed in the label. Only the first character of this string will be shown.                    </li>
+          </ul>
+          <h3>Label color</h3>
+          <ul>
+            <li>The color of the label text.                    </li>
+          </ul>
+          <h3>Label font family</h3>
+          <ul>
+            <li>The font family of the label text (equivalent to the CSS font-family property).                    </li>
+          </ul>
+          <h3>Label font size</h3>
+          <ul>
+            <li>The font size of the label text (equivalent to the CSS font-size property). Default size is 14px.                    </li>
+          </ul>
+          <h3>Label font weight</h3>
+          <ul>
+            <li>The font weight of the label text (equivalent to the CSS font-weight property).                    </li>
+          </ul>
+          <h3>Icon</h3>
+          <ul>
+            <li>                    </li>
+          </ul>
+          <h3>Icon url</h3>
+          <ul>
+            <li>The URL of the image or sprite sheet.                    </li>
+          </ul>
+          <h3>Icon scaled width</h3>
+          <ul>
+            <li>The size of the entire image after scaling. Set (-1) to use default value.                    </li>
+          </ul>
+          <h3>Icon scaled height</h3>
+          <ul>
+            <li>The size of the entire image after scaling.  Set (-1) to use default value.                    </li>
+          </ul>
+          <h3>Symbol</h3>
+          <ul>
+            <li>                    </li>
+          </ul>
+          <h3>Symbol fill color</h3>
+          <ul>
+            <li>The symbol's fill color.                    </li>
+          </ul>
+          <h3>Symbol fill opacity</h3>
+          <ul>
+            <li>The symbol's fill opacity.                    </li>
+          </ul>
+          <h3>Symbol stroke color</h3>
+          <ul>
+            <li>The symbol's stroke color.                    </li>
+          </ul>
+          <h3>Symbol stroke opacity</h3>
+          <ul>
+            <li>The symbol's stroke opacity.                    </li>
+          </ul>
+          <h3>UI - Drag</h3>
+          <ul>
+            <li>                    </li>
+          </ul>
+          <h3>Clickable</h3>
+          <ul>
+            <li>If true, the marker receives mouse and touch events.                    </li>
+            <ul>
+              <li>Options : [&quot;Disabled&quot;,&quot;Enabled&quot;]</li>
+            </ul>
+          </ul>
+          <h3>Draggable</h3>
+          <ul>
+            <li>If true, the marker can be dragged.                    </li>
+            <ul>
+              <li>Options : [&quot;Disabled&quot;,&quot;Enabled&quot;]</li>
+            </ul>
+          </ul>
+          <h3>Appearance</h3>
+          <ul>
+            <li>                    </li>
+          </ul>
+          <h3>Opacity</h3>
+          <ul>
+            <li>The marker's opacity between 0.0 and 1.0.                    </li>
+          </ul>
+          <h3>Visible</h3>
+          <ul>
+            <li>If true, the marker is visible.                    </li>
+            <ul>
+              <li>Options : [&quot;Invisible&quot;,&quot;Visible&quot;]</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">   
+          <h2>Actions</h2>
+        </div>
+        <div class="panel-body">
+          <h2>Animation      </h2>
+          <h3>Action:Start      </h3>
+          <ul>
+            <li>Start animation.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Type ( Combo ) : Animation type.</li>
+              <ul>
+                <li>Options : [&quot;bounce&quot;,&quot;drop&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h3>Action:Stop      </h3>
+          <ul>
+            <li>Stop animation.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Appearance      </h2>
+          <h3>Action:Set visible      </h3>
+          <ul>
+            <li>Set visible status.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Visible ( Combo ) : Visible status.</li>
+              <ul>
+                <li>Options : [&quot;Invisible&quot;,&quot;Visible&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h2>Put      </h2>
+          <h3>Action:Put on map      </h3>
+          <ul>
+            <li>Put this marker on map.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Map ( object ) : Map object.</li>
+              <li>Latitude ( number ) : Latitude.</li>
+              <li>Longitude ( number ) : Longitude.</li>
+            </ul>
+          </ul>
+          <h2>Title      </h2>
+          <h3>Action:Set title      </h3>
+          <ul>
+            <li>Set title.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Title ( string ) : Rollover text.</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">    
+        <div class="panel-title">    
+          <h2>Expressions</h2>
+        </div>
+        <div class="panel-body">           
+          <h2>Position    </h2>
+          <h3>Expression:Latitude </h3>
+          <ul>
+            <li>Get latitude of current position.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:Longitude </h3>
+          <ul>
+            <li>Get longitude of current position.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Title    </h2>
+          <h3>Expression:Title </h3>
+          <ul>
+            <li>Get title.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">       
+          <h2>Conditions</h2>
+        </div>
+        <div class="panel-body">              
+          <h2>Input    </h2>
+          <h4>Condition:On clicked                    </h4>
+          <ul>
+            <li>Triggered when marker clicked.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Put    </h2>
+          <h4>Condition:Is on map                    </h4>
+          <ul>
+            <li>Return true if this marker is on the map.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

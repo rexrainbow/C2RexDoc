@@ -1,0 +1,126 @@
+<!DOCTYPE 5>
+<html>
+  <head>
+    <title>Plugin : Mustache</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="js/jquery-3.1.0.min.js">                         </script>
+    <script src="js/bootstrap.min.js">         </script>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header"><a class="navbar-brand" href="./index.html">Home</a></div>
+        <ul class="nav navbar-nav">
+          <li><a href="./pluginsIndex.html">Plugins      </a></li>
+          <li><a href="./behaviorsIndex.html">Behaviors                   </a></li>
+          <li><a href="./effectsIndex.html">Effects    </a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Plugin : Mustache</h1>
+      <p>Author:Rex.Rainbow</p>
+      <ul>
+        <li>Logic-less templates to render text content. Reference - https://github.com/janl/mustache.js</li>
+      </ul>
+      <div class="panel panel-default">
+        <div class="panel-title">
+          <h2>Properties</h2>
+        </div>
+        <div class="panel-body">
+          <h3>Left delimiter</h3>
+          <ul>
+            <li>Left delimiter. Set &quot;&quot; to use default delimiter &quot;{{&quot;                    </li>
+          </ul>
+          <h3>Right delimiter</h3>
+          <ul>
+            <li>Right delimiter. Set &quot;&quot; to use default delimiter &quot;}}&quot;                    </li>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">   
+          <h2>Actions</h2>
+        </div>
+        <div class="panel-body">
+          <h2>Delimiters      </h2>
+          <h3>Action:Set delimiters      </h3>
+          <ul>
+            <li>Set delimiters .   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Left delimiter ( string ) : Left delimiter. Set &quot;&quot; to use default delimiter &quot;{{&quot;</li>
+              <li>Right delimiter ( string ) : Right delimiter. Set &quot;&quot; to use default delimiter &quot;}}&quot;</li>
+            </ul>
+          </ul>
+          <h2>Variable      </h2>
+          <h3>Action:Clean      </h3>
+          <ul>
+            <li>Clean all variables.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Action:Set value      </h3>
+          <ul>
+            <li>Set variable value.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Name ( number or string ) : Variable name.</li>
+              <li>Value ( number or string ) : Variable value</li>
+            </ul>
+          </ul>
+          <h3>Action:Load from JSON      </h3>
+          <ul>
+            <li>Load variables from JSON string.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>JSON string ( string ) : JSON string.</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">    
+        <div class="panel-title">    
+          <h2>Expressions</h2>
+        </div>
+        <div class="panel-body">           
+          <h2>Render    </h2>
+          <h3>Expression:Render </h3>
+          <ul>
+            <li>Get render result. Add 2nd parameter for view in JSON string.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Template ( string ) : Template.</li>
+            </ul>
+          </ul>
+          <h2>Variable    </h2>
+          <h3>Expression:Value </h3>
+          <ul>
+            <li>Get variable value. Add 2nd parameter for default value if this variable does not exist.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Name ( number or string ) : Variable name.</li>
+            </ul>
+          </ul>
+          <h3>Expression:VariablesAsJSON </h3>
+          <ul>
+            <li>Get variables in JSON string.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">       
+          <h2>Conditions</h2>
+        </div>
+        <div class="panel-body">              
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

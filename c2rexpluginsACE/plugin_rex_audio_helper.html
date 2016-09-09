@@ -1,0 +1,154 @@
+<!DOCTYPE 5>
+<html>
+  <head>
+    <title>Plugin : Audio helper</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="js/jquery-3.1.0.min.js">                         </script>
+    <script src="js/bootstrap.min.js">         </script>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header"><a class="navbar-brand" href="./index.html">Home</a></div>
+        <ul class="nav navbar-nav">
+          <li><a href="./pluginsIndex.html">Plugins      </a></li>
+          <li><a href="./behaviorsIndex.html">Behaviors                   </a></li>
+          <li><a href="./effectsIndex.html">Effects    </a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Plugin : Audio helper</h1>
+      <p>Author:Rex.Rainbow</p>
+      <ul>
+        <li>Some helper methods for audio object</li>
+      </ul>
+      <div class="panel panel-default">
+        <div class="panel-title">
+          <h2>Properties</h2>
+        </div>
+        <div class="panel-body">
+          <h3>Audio effect</h3>
+          <ul>
+            <li>Use audio effect to do fading.                    </li>
+            <ul>
+              <li>Options : [&quot;No&quot;,&quot;Yes&quot;]</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">   
+          <h2>Actions</h2>
+        </div>
+        <div class="panel-body">
+          <h2>Playback      </h2>
+          <h3>Action:Play      </h3>
+          <ul>
+            <li>Play an audio file with fade-in.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Audio file ( audio ) : Choose the audio file to play.</li>
+              <li>Loop ( Combo ) : Whether or not to initially play the sound in a loop (repeating).</li>
+              <ul>
+                <li>Options : [&quot;not looping&quot;,&quot;looping&quot;]</li>
+              </ul>
+              <li>End volume ( number or string ) : Mapping from (1~0) to (0db~-60db) with linear interpolation. Or set volume in dB by string like &quot;0dB&quot;</li>
+              <li>Tag (optional) ( string ) : A tag, which can be anything you like, to use to reference this sound in future.</li>
+              <li>Fade-in time ( number ) : The duration of fade-in, in second.</li>
+              <li>Start volume ( number or string ) : Mapping from (1~0) to (0db~-60db) with linear interpolation. Or set volume in dB by string like &quot;0dB&quot;</li>
+            </ul>
+          </ul>
+          <h3>Action:Stop      </h3>
+          <ul>
+            <li>Stop a sound from playing with fade-out.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Tag ( string ) : The tag identifying the sound to stop.  Leave empty to affect the last played sound.</li>
+              <li>Fade-out ( number ) : The duration of fade-out, in second.</li>
+              <li>Stop volume ( number or string ) : Mapping from (1~0) to (0db~-60db) with linear interpolation. Or set volume in dB by string like &quot;0dB&quot;</li>
+            </ul>
+          </ul>
+          <h3>Action:Play (by name)      </h3>
+          <ul>
+            <li>Play an audio file using a string for the filename with fade.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Folder ( Combo ) : Choose the folder which contains the audio file.</li>
+              <ul>
+                <li>Options : [&quot;Sounds&quot;,&quot;Music&quot;]</li>
+              </ul>
+              <li>Audio file name ( string ) : A string with the name of the audio file to play, without the file extension.  For example, to play myfile.ogg, use only &quot;myfile&quot;.</li>
+              <li>Loop ( Combo ) : Whether or not to initially play the sound in a loop (repeating).</li>
+              <ul>
+                <li>Options : [&quot;not looping&quot;,&quot;looping&quot;]</li>
+              </ul>
+              <li>End volume ( number or string ) : Mapping from (1~0) to (0db~-60db) with linear interpolation. Or set volume in dB by string like &quot;0dB&quot;</li>
+              <li>Tag (optional) ( string ) : A tag, which can be anything you like, to use to reference this sound in future.</li>
+              <li>Fade-in time ( number ) : The duration of fade-in, in second.</li>
+              <li>Start volume ( number or string ) : Mapping from (1~0) to (0db~-60db) with linear interpolation. Or set volume in dB by string like &quot;0dB&quot;</li>
+            </ul>
+          </ul>
+          <h3>Action:Set paused      </h3>
+          <ul>
+            <li>Pause or resume audio with a given tag with fade.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Tag ( string ) : The audio tag to pause or resume.</li>
+              <li>State ( Combo ) : Whether to pause or resume the sound with the given tag.</li>
+              <ul>
+                <li>Options : [&quot;Pause&quot;,&quot;Resume&quot;]</li>
+              </ul>
+              <li>Fade ( number ) : The duration of fade, in second.</li>
+            </ul>
+          </ul>
+          <h2>Preload      </h2>
+          <h3>Action:Preload      </h3>
+          <ul>
+            <li>Download an audio file from the server without playing it. This ensures it will play immediately.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Audio file ( string ) : Audio file string</li>
+            </ul>
+          </ul>
+          <h2>Volume      </h2>
+          <h3>Action:Set volume      </h3>
+          <ul>
+            <li>Set the volume (loudness) of a sound with fade.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Tag ( string ) : The tag identifying the sound to loop.  Leave empty to affect the last played sound.</li>
+              <li>Volume ( number or string ) : Mapping from (1~0) to (0db~-60db) with linear interpolation. Or set volume in dB by string like &quot;0dB&quot;</li>
+              <li>Fade ( number ) : The duration of fade, in second.</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">    
+        <div class="panel-title">    
+          <h2>Expressions</h2>
+        </div>
+        <div class="panel-body">           
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">       
+          <h2>Conditions</h2>
+        </div>
+        <div class="panel-body">              
+          <h2>Fading    </h2>
+          <h4>Condition:Is fading                    </h4>
+          <ul>
+            <li>Return true if an audio is fading.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Tag ( string ) : A tag, which can be anything you like, to use to reference this sound in future.    </li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,605 @@
+<!DOCTYPE 5>
+<html>
+  <head>
+    <title>Plugin : Edge</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="js/jquery-3.1.0.min.js">                         </script>
+    <script src="js/bootstrap.min.js">         </script>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header"><a class="navbar-brand" href="./index.html">Home</a></div>
+        <ul class="nav navbar-nav">
+          <li><a href="./pluginsIndex.html">Plugins      </a></li>
+          <li><a href="./behaviorsIndex.html">Behaviors                   </a></li>
+          <li><a href="./effectsIndex.html">Effects    </a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Plugin : Edge</h1>
+      <p>Author:Rex.Rainbow</p>
+      <ul>
+        <li>Maintain edges on a board.</li>
+      </ul>
+      <div class="panel panel-default">
+        <div class="panel-title">
+          <h2>Properties</h2>
+        </div>
+        <div class="panel-body">
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">   
+          <h2>Actions</h2>
+        </div>
+        <div class="panel-body">
+          <h2>Logic: Move      </h2>
+          <h3>Action:Move edge between points      </h3>
+          <ul>
+            <li>Move edge between points.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Edge ( object ) : Edge object.</li>
+              <li>LX0 ( number ) : The logic X of point 0.</li>
+              <li>LY0 ( number ) : The logic Y of point 0.</li>
+              <li>LX1 ( number ) : The logic X of point 1.</li>
+              <li>LY1 ( number ) : The logic Y of point 1.</li>
+            </ul>
+          </ul>
+          <h3>Action:Move edge between chess      </h3>
+          <ul>
+            <li>Move edge between chess.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Edge ( object ) : Edge object.</li>
+              <li>UID0 ( number or string ) : The UID of chess</li>
+              <li>UID1 ( number or string ) : The UID of neighbor chess</li>
+            </ul>
+          </ul>
+          <h3>Action:Move edge around chess      </h3>
+          <ul>
+            <li>Move edge around chess.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Edge ( object ) : Edge object.</li>
+              <li>Chess ( object ) : Chess object.</li>
+              <li>Direction ( number ) : The direction of chess.</li>
+            </ul>
+          </ul>
+          <h2>Logic: Move - Hexagon grid (Left-Right)      </h2>
+          <h3>Action:Move edge around chess      </h3>
+          <ul>
+            <li>Move edge around chess.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Edge ( object ) : Edge object.</li>
+              <li>Chess ( object ) : Chess object.</li>
+              <li>Direction ( Combo ) : The direction of chess.</li>
+              <ul>
+                <li>Options : [&quot;Right&quot;,&quot;Down-right&quot;,&quot;Down-left&quot;,&quot;Left&quot;,&quot;Up-left&quot;,&quot;Up-right&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h2>Logic: Move - Hexagon grid (Up-Down)      </h2>
+          <h3>Action:Move edge around chess      </h3>
+          <ul>
+            <li>Move edge around chess.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Edge ( object ) : Edge object.</li>
+              <li>Chess ( object ) : Chess object.</li>
+              <li>Direction ( Combo ) : The direction of chess.</li>
+              <ul>
+                <li>Options : [&quot;Down-right&quot;,&quot;Down&quot;,&quot;Down-left&quot;,&quot;Up-left&quot;,&quot;Up&quot;,&quot;Up-right&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h2>Logic: Move - Square grid      </h2>
+          <h3>Action:Move edge around chess      </h3>
+          <ul>
+            <li>Move edge around chess.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Edge ( object ) : Edge object.</li>
+              <li>Chess ( object ) : Chess object.</li>
+              <li>Direction ( Combo ) : The direction of chess.</li>
+              <ul>
+                <li>Options : [&quot;Right&quot;,&quot;Down&quot;,&quot;Left&quot;,&quot;Up&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h2>Logic: Remove      </h2>
+          <h3>Action:Destroy edges      </h3>
+          <ul>
+            <li>Destroy edges and remove them from the board.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Edge ( object ) : Edge object.</li>
+            </ul>
+          </ul>
+          <h3>Action:Remove edges      </h3>
+          <ul>
+            <li>Remove edges from the board.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Edge ( object ) : Edge object.</li>
+            </ul>
+          </ul>
+          <h2>Physical: Create      </h2>
+          <h3>Action:Create edge between points      </h3>
+          <ul>
+            <li>Create edge between two logic points.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Edge ( object ) : Edge object.</li>
+              <li>LX0 ( number ) : The logic X of point 0.</li>
+              <li>LY0 ( number ) : The logic Y of point 0.</li>
+              <li>LX1 ( number ) : The logic X of point 1.</li>
+              <li>LY1 ( number ) : The logic Y of point 1.</li>
+              <li>Layer ( layer ) : Layer name of number.</li>
+            </ul>
+          </ul>
+          <h3>Action:Create edge between chess      </h3>
+          <ul>
+            <li>Create edge between chess.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Edge ( object ) : Edge object.</li>
+              <li>UID0 ( number or string ) : The UID of chess</li>
+              <li>UID1 ( number or string ) : The UID of neighbor chess</li>
+              <li>Layer ( layer ) : Layer name of number.</li>
+            </ul>
+          </ul>
+          <h3>Action:Create edge around chess      </h3>
+          <ul>
+            <li>Create edge around chess.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Edge ( object ) : Edge object.</li>
+              <li>Chess ( object ) : Chess object.</li>
+              <li>Direction ( number ) : The direction of chess. (-1) for all directions</li>
+              <li>Layer ( layer ) : Layer name of number.</li>
+            </ul>
+          </ul>
+          <h2>Physical: Create - Hexagon grid (Left-Right)      </h2>
+          <h3>Action:Create edge around chess      </h3>
+          <ul>
+            <li>Create edge around chess.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Edge ( object ) : Edge object.</li>
+              <li>Chess ( object ) : Chess object.</li>
+              <li>Direction ( Combo ) : The direction of chess.</li>
+              <ul>
+                <li>Options : [&quot;Right&quot;,&quot;Down-right&quot;,&quot;Down-left&quot;,&quot;Left&quot;,&quot;Up-left&quot;,&quot;Up-right&quot;]</li>
+              </ul>
+              <li>Layer ( layer ) : Layer name of number.</li>
+            </ul>
+          </ul>
+          <h2>Physical: Create - Hexagon grid (Up-Down)      </h2>
+          <h3>Action:Create edge around chess      </h3>
+          <ul>
+            <li>Create edge around chess.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Edge ( object ) : Edge object.</li>
+              <li>Chess ( object ) : Chess object.</li>
+              <li>Direction ( Combo ) : The direction of chess.</li>
+              <ul>
+                <li>Options : [&quot;Down-right&quot;,&quot;Down&quot;,&quot;Down-left&quot;,&quot;Up-left&quot;,&quot;Up&quot;,&quot;Up-right&quot;]</li>
+              </ul>
+              <li>Layer ( layer ) : Layer name of number.</li>
+            </ul>
+          </ul>
+          <h2>Physical: Create - Square grid      </h2>
+          <h3>Action:Create edge around chess      </h3>
+          <ul>
+            <li>Create edge around chess.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Edge ( object ) : Edge object.</li>
+              <li>Chess ( object ) : Chess object.</li>
+              <li>Direction ( Combo ) : The direction of chess.</li>
+              <ul>
+                <li>Options : [&quot;Right&quot;,&quot;Down&quot;,&quot;Left&quot;,&quot;Up&quot;]</li>
+              </ul>
+              <li>Layer ( layer ) : Layer name of number.</li>
+            </ul>
+          </ul>
+          <h2>Pick chess      </h2>
+          <h3>Action:Pick chess around edge at LZ      </h3>
+          <ul>
+            <li>Pick chess around edge.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Chess ( object ) : Chess object.</li>
+              <li>Edge ( object ) : Edge object.</li>
+              <li>Logic Z ( number or string ) : The Z index (0-based).</li>
+            </ul>
+          </ul>
+          <h3>Action:Pick chess around edge      </h3>
+          <ul>
+            <li>Pick chess around edge.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Chess ( object ) : Chess object.</li>
+              <li>Edge ( object ) : Edge object.</li>
+            </ul>
+          </ul>
+          <h2>Pick edge      </h2>
+          <h3>Action:Pick all edges      </h3>
+          <ul>
+            <li>Pick all edge.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Edge ( object ) : Edge object.</li>
+            </ul>
+          </ul>
+          <h3>Action:Pick edge between points      </h3>
+          <ul>
+            <li>Pick edge between two logic points.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Edge ( object ) : Edge object.</li>
+              <li>LX0 ( number ) : The logic X of point 0.</li>
+              <li>LY0 ( number ) : The logic Y of point 0.</li>
+              <li>LX1 ( number ) : The logic X of point 1.</li>
+              <li>LY1 ( number ) : The logic Y of point 1.</li>
+            </ul>
+          </ul>
+          <h3>Action:Pick edges between chess      </h3>
+          <ul>
+            <li>Pick edges between chess.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Edge ( object ) : Edge object.</li>
+              <li>UID0 ( number or string ) : The UID of chess</li>
+              <li>UID1 ( number or string ) : The UID of neighbor chess</li>
+            </ul>
+          </ul>
+          <h3>Action:Pick edges around chess      </h3>
+          <ul>
+            <li>Pick edges around chess at direction.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Edge ( object ) : Edge object.</li>
+              <li>Chess ( object ) : Chess object.</li>
+              <li>Direction ( number ) : The direction of chess.</li>
+            </ul>
+          </ul>
+          <h3>Action:Pick edges clamped by chess      </h3>
+          <ul>
+            <li>Pick edges clamped by chess.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Edge ( object ) : Edge object.</li>
+              <li>Chess ( object ) : Chess object.</li>
+            </ul>
+          </ul>
+          <h2>Pick edge - Hexagon grid (Left-Right)      </h2>
+          <h3>Action:Pick edges around chess      </h3>
+          <ul>
+            <li>Pick edges around chess at direction.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Edge ( object ) : Edge object.</li>
+              <li>Chess ( object ) : Chess object.</li>
+              <li>Direction ( Combo ) : The direction of chess.</li>
+              <ul>
+                <li>Options : [&quot;Right&quot;,&quot;Down-right&quot;,&quot;Down-left&quot;,&quot;Left&quot;,&quot;Up-left&quot;,&quot;Up-right&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h2>Pick edge - Hexagon grid (Up-Down)      </h2>
+          <h3>Action:Pick edges around chess      </h3>
+          <ul>
+            <li>Pick edges around chess at direction.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Edge ( object ) : Edge object.</li>
+              <li>Chess ( object ) : Chess object.</li>
+              <li>Direction ( Combo ) : The direction of chess.</li>
+              <ul>
+                <li>Options : [&quot;Down-right&quot;,&quot;Down&quot;,&quot;Down-left&quot;,&quot;Up-left&quot;,&quot;Up&quot;,&quot;Up-right&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h2>Pick edge - Square grid      </h2>
+          <h3>Action:Pick edges around chess      </h3>
+          <ul>
+            <li>Pick edges by chess and direction.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Edge ( object ) : Edge object.</li>
+              <li>Chess ( object ) : Chess object.</li>
+              <li>Direction ( Combo ) : The direction of chess.</li>
+              <ul>
+                <li>Options : [&quot;Right&quot;,&quot;Down&quot;,&quot;Left&quot;,&quot;Up&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h2>Setup      </h2>
+          <h3>Action:Setup      </h3>
+          <ul>
+            <li>Set board object.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Board ( object ) : Board object</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">    
+        <div class="panel-title">    
+          <h2>Expressions</h2>
+        </div>
+        <div class="panel-body">           
+          <h2>Edge    </h2>
+          <h3>Expression:LXY2EdgeUID </h3>
+          <ul>
+            <li>Get edge UID by LXY index. Return (-1) if this position has no edge.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>LX0 ( number ) : The logic X of point 0.</li>
+              <li>LY0 ( number ) : The logic Y of point 0.</li>
+              <li>LX1 ( number ) : The logic X of point 1.</li>
+              <li>LY1 ( number ) : The logic Y of point 1.</li>
+            </ul>
+          </ul>
+          <h3>Expression:ChessUID2EdgeUID </h3>
+          <ul>
+            <li>Get edge UID by chess UID. Return (-1) if this position has no edge.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>UID0 ( number or string ) : The UID of chess</li>
+              <li>UID1 ( number or string ) : The UID of neighbor chess</li>
+            </ul>
+          </ul>
+          <h3>Expression:ChessDIR2EdgeUID </h3>
+          <ul>
+            <li>Get edge UID by chess and direction. Return (-1) if this position has no edge.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>UID ( number or string ) : The UID of chess</li>
+              <li>Direction ( number ) : The direction of chess.</li>
+            </ul>
+          </ul>
+          <h3>Expression:ChessUID2EdgeCount </h3>
+          <ul>
+            <li>Get edge cout around the chess. Return (-1) if this chess is not on the board.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>UID ( number or string ) : The UID of chess</li>
+            </ul>
+          </ul>
+          <h2>Physical    </h2>
+          <h3>Expression:EdgeUID2PX </h3>
+          <ul>
+            <li>Get physical X co-ordinate of edge by UID. Return (-1) if this edge is not valided.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>UID ( number or string ) : The UID of edge</li>
+            </ul>
+          </ul>
+          <h3>Expression:EdgeUID2PY </h3>
+          <ul>
+            <li>Get physical Y co-ordinate of edge by UID. Return (-1) if this edge is not valided.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>UID ( number or string ) : The UID of edge</li>
+            </ul>
+          </ul>
+          <h3>Expression:EdgeUID2PA </h3>
+          <ul>
+            <li>Get physical angle of edge by UID. Return (-1) if this edge is not valided.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>UID ( number or string ) : The UID of edge</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">       
+          <h2>Conditions</h2>
+        </div>
+        <div class="panel-body">              
+          <h2>Has edge    </h2>
+          <h4>Condition:Has edge between points                    </h4>
+          <ul>
+            <li>Has edge between two points.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>LX0 ( number ) : The logic X of point 0.    </li>
+              <li>LY0 ( number ) : The logic Y of point 0.    </li>
+              <li>LX1 ( number ) : The logic X of point 1.    </li>
+              <li>LY1 ( number ) : The logic Y of point 1.    </li>
+            </ul>
+          </ul>
+          <h4>Condition:Has edge between chess                    </h4>
+          <ul>
+            <li>Has edge between chess.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>UID0 ( number or string ) : The UID of chess    </li>
+              <li>UID1 ( number or string ) : The UID of neighbor chess    </li>
+            </ul>
+          </ul>
+          <h4>Condition:Has edges around chess                    </h4>
+          <ul>
+            <li>Has any edge around chess at direction.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Chess ( object ) : Chess object.    </li>
+              <li>Direction ( number ) : The direction of chess. (-1) for all directions.    </li>
+            </ul>
+          </ul>
+          <h2>Has edge - Hexagon grid (Left-Right)    </h2>
+          <h4>Condition:Has edges around chess                    </h4>
+          <ul>
+            <li>Has edges around chess at direction.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Chess ( object ) : Chess object.    </li>
+              <li>Direction ( Combo ) : The direction of chess.    </li>
+              <ul>
+                <li>Options : [&quot;Right&quot;,&quot;Down-right&quot;,&quot;Down-left&quot;,&quot;Left&quot;,&quot;Up-left&quot;,&quot;Up-right&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h2>Has edge - Hexagon grid (Up-Down)    </h2>
+          <h4>Condition:Has edges around chess                    </h4>
+          <ul>
+            <li>Has edges around chess at direction.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Chess ( object ) : Chess object.    </li>
+              <li>Direction ( Combo ) : The direction of chess.    </li>
+              <ul>
+                <li>Options : [&quot;Down-right&quot;,&quot;Down&quot;,&quot;Down-left&quot;,&quot;Up-left&quot;,&quot;Up&quot;,&quot;Up-right&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h2>Has edge - Square grid    </h2>
+          <h4>Condition:Has edges around chess                    </h4>
+          <ul>
+            <li>Has edges by chess and direction.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Chess ( object ) : Chess object.    </li>
+              <li>Direction ( Combo ) : The direction of chess.    </li>
+              <ul>
+                <li>Options : [&quot;Right&quot;,&quot;Down&quot;,&quot;Left&quot;,&quot;Up&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h2>Kick    </h2>
+          <h4>Condition:On edge kicked                    </h4>
+          <ul>
+            <li>Triggered when edge kicked by &quot;action:Create edge&quot; or &quot;action:Move edge&quot;.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Edge ( object ) : Kicked edge object.    </li>
+            </ul>
+          </ul>
+          <h2>Pick chess    </h2>
+          <h4>Condition:Pick chess around edge at LZ                    </h4>
+          <ul>
+            <li>Pick chess around edge.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Chess ( object ) : Chess object.    </li>
+              <li>Edge ( object ) : Edge object.    </li>
+              <li>Logic Z ( number or string ) : The Z index (0-based).    </li>
+            </ul>
+          </ul>
+          <h4>Condition:Pick chess around edge                    </h4>
+          <ul>
+            <li>Pick chess around edge.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Chess ( object ) : Chess object.    </li>
+              <li>Edge ( object ) : Edge object.    </li>
+            </ul>
+          </ul>
+          <h2>Pick edge    </h2>
+          <h4>Condition:Pick all edges                    </h4>
+          <ul>
+            <li>Pick all edge.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Edge ( object ) : Edge object.    </li>
+            </ul>
+          </ul>
+          <h4>Condition:Pick edge between points                    </h4>
+          <ul>
+            <li>Pick edge between two logic points.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Edge ( object ) : Edge object.    </li>
+              <li>LX0 ( number ) : The logic X of point 0.    </li>
+              <li>LY0 ( number ) : The logic Y of point 0.    </li>
+              <li>LX1 ( number ) : The logic X of point 1.    </li>
+              <li>LY1 ( number ) : The logic Y of point 1.    </li>
+            </ul>
+          </ul>
+          <h4>Condition:Pick edges between chess                    </h4>
+          <ul>
+            <li>Pick edges between chess.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Edge ( object ) : Edge object.    </li>
+              <li>UID0 ( number or string ) : The UID of chess    </li>
+              <li>UID1 ( number or string ) : The UID of neighbor chess    </li>
+            </ul>
+          </ul>
+          <h4>Condition:Pick edges around chess                    </h4>
+          <ul>
+            <li>Pick edges around chess at direction.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Edge ( object ) : Edge object.    </li>
+              <li>Chess ( object ) : Chess object.    </li>
+              <li>Direction ( number ) : The direction of chess.    </li>
+            </ul>
+          </ul>
+          <h4>Condition:Pick edges clamped by chess                    </h4>
+          <ul>
+            <li>Pick edges clamped by chess.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Edge ( object ) : Edge object.    </li>
+              <li>Chess ( object ) : Chess object.    </li>
+            </ul>
+          </ul>
+          <h2>Pick edge - Hexagon grid (Left-Right)    </h2>
+          <h4>Condition:Pick edges around chess                    </h4>
+          <ul>
+            <li>Pick edges around chess at direction.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Edge ( object ) : Edge object.    </li>
+              <li>Chess ( object ) : Chess object.    </li>
+              <li>Direction ( Combo ) : The direction of chess.    </li>
+              <ul>
+                <li>Options : [&quot;Right&quot;,&quot;Down-right&quot;,&quot;Down-left&quot;,&quot;Left&quot;,&quot;Up-left&quot;,&quot;Up-right&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h2>Pick edge - Hexagon grid (Up-Down)    </h2>
+          <h4>Condition:Pick edges around chess                    </h4>
+          <ul>
+            <li>Pick edges around chess at direction.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Edge ( object ) : Edge object.    </li>
+              <li>Chess ( object ) : Chess object.    </li>
+              <li>Direction ( Combo ) : The direction of chess.    </li>
+              <ul>
+                <li>Options : [&quot;Down-right&quot;,&quot;Down&quot;,&quot;Down-left&quot;,&quot;Up-left&quot;,&quot;Up&quot;,&quot;Up-right&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h2>Pick edge - Square grid    </h2>
+          <h4>Condition:Pick edges around chess                    </h4>
+          <ul>
+            <li>Pick edges by chess and direction.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Edge ( object ) : Edge object.    </li>
+              <li>Chess ( object ) : Chess object.    </li>
+              <li>Direction ( Combo ) : The direction of chess.    </li>
+              <ul>
+                <li>Options : [&quot;Right&quot;,&quot;Down&quot;,&quot;Left&quot;,&quot;Up&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
