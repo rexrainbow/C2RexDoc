@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>rex_momentjs - Rex's plugins for Construct2</title>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+		<meta name="google-site-verification" content="AbKU1w_lq8tjMKAN0yt_O0WFqwDr4zH5bHiXJEpyErI" />
+		<link id="wsite-base-style" rel="stylesheet" type="text/css" href="http://cdn2.editmysite.com/css/sites.css?buildTime=1234" />
+<link rel="stylesheet" type="text/css" href="http://cdn1.editmysite.com/editor/libraries/fancybox/fancybox.css?1234" />
+<link rel="stylesheet" type="text/css" href="http://cdn2.editmysite.com/css/social-icons.css?buildtime=1234" media="screen,projection" />
+<link rel="stylesheet" type="text/css" href="files/main_style.css?1469150796" title="wsite-theme-css" />
+<link href='http://fonts.googleapis.com/css?family=Raleway:400,300,200,700&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+<link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,700,400italic,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,700,400italic,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+<style type='text/css'>
+.wsite-elements.wsite-not-footer div.paragraph, .wsite-elements.wsite-not-footer p, .wsite-elements.wsite-not-footer .product-block .product-title, .wsite-elements.wsite-not-footer .product-description, .wsite-elements.wsite-not-footer .wsite-form-field label, .wsite-elements.wsite-not-footer .wsite-form-field label, #wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {font-family:"Open Sans" !important;}
+#wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {}
+.wsite-elements.wsite-footer div.paragraph, .wsite-elements.wsite-footer p, .wsite-elements.wsite-footer .product-block .product-title, .wsite-elements.wsite-footer .product-description, .wsite-elements.wsite-footer .wsite-form-field label, .wsite-elements.wsite-footer .wsite-form-field label{}
+.wsite-elements.wsite-not-footer h2, .wsite-elements.wsite-not-footer .product-long .product-title, .wsite-elements.wsite-not-footer .product-large .product-title, .wsite-elements.wsite-not-footer .product-small .product-title, #wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {font-family:"Open Sans" !important;}
+#wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {}
+.wsite-elements.wsite-footer h2, .wsite-elements.wsite-footer .product-long .product-title, .wsite-elements.wsite-footer .product-large .product-title, .wsite-elements.wsite-footer .product-small .product-title{}
+#wsite-title {}
+.wsite-menu-default a {}
+.wsite-menu a {}
+.wsite-image div, .wsite-caption {}
+.galleryCaptionInnerText {}
+.fancybox-title {}
+.wslide-caption-text {}
+.wsite-phone {}
+.wsite-headline {}
+.wsite-headline-paragraph {}
+.wsite-button-inner {}
+.wsite-not-footer blockquote {}
+.wsite-footer blockquote {}
+.blog-header h2 a {}
+#wsite-content h2.wsite-product-title {}
+.wsite-product .wsite-product-price a {}
+</style>
+
+		<script><!--
+var STATIC_BASE = '//cdn1.editmysite.com/';
+var STYLE_PREFIX = 'wsite';
+//-->
+</script>
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js'></script>
+
+<script type="text/javascript" src="http://cdn2.editmysite.com/js/lang/zh/stl.js?buildTime=1234&"></script>
+<script src="http://cdn2.editmysite.com/js/site/main.js?buildTime=1234"></script><script type="text/javascript">_W.configDomain = "www.weebly.com";</script><script>_W.relinquish && _W.relinquish()</script>
+<script type="text/javascript" src="http://cdn2.editmysite.com/js/lang/zh/stl.js?buildTime=1234&"></script><script> _W.themePlugins = [];</script><script type="text/javascript"><!--
+	var IS_ARCHIVE = 1;
+	
+	(function(jQuery){
+		function initFlyouts(){
+			initPublishedFlyoutMenus(
+				[{"id":"608562111965458717","title":"Home","url":"index.html","target":"","nav_menu":false},{"id":"771034414327920939","title":"Map","url":"map.html","target":"","nav_menu":false},{"id":"807633210476052296","title":"Tutorial\/Templates","url":"tutorialtemplates.html","target":"","nav_menu":false},{"id":"462747272431172124","title":"News","url":"news.html","target":"","nav_menu":false},{"id":"661412759227518685","title":"About","url":"about.html","target":"","nav_menu":false}],
+				"276337786995404227",
+				'',
+				'active',
+				false,
+				{"navigation\/item":"<li {{#id}}id=\"{{id}}\"{{\/id}} class=\"wsite-menu-item-wrap\">\n\t<a\n\t\t{{^nav_menu}}\n\t\t\thref=\"{{url}}\"\n\t\t{{\/nav_menu}}\n\t\t{{#target}}\n\t\t\ttarget=\"{{target}}\"\n\t\t{{\/target}}\n\t\t{{#membership_required}}\n\t\t\tdata-membership-required=\"{{.}}\"\n\t\t{{\/membership_required}}\n\t\tclass=\"wsite-menu-item\"\n\t\t>\n\t\t{{{title_html}}}\n\t<\/a>\n\t{{#has_children}}{{> navigation\/flyout\/list}}{{\/has_children}}\n<\/li>\n","navigation\/flyout\/list":"<div class=\"wsite-menu-wrap\" style=\"display:none\">\n\t<ul class=\"wsite-menu\">\n\t\t{{#children}}{{> navigation\/flyout\/item}}{{\/children}}\n\t<\/ul>\n<\/div>\n","navigation\/flyout\/item":"<li {{#id}}id=\"{{id}}\"{{\/id}}\n\tclass=\"wsite-menu-subitem-wrap {{#is_current}}wsite-nav-current{{\/is_current}}\"\n\t>\n\t<a\n\t\t{{^nav_menu}}\n\t\t\thref=\"{{url}}\"\n\t\t{{\/nav_menu}}\n\t\t{{#target}}\n\t\t\ttarget=\"{{target}}\"\n\t\t{{\/target}}\n\t\tclass=\"wsite-menu-subitem\"\n\t\t>\n\t\t<span class=\"wsite-menu-title\">\n\t\t\t{{{title_html}}}\n\t\t<\/span>{{#has_children}}<span class=\"wsite-menu-arrow\">&gt;<\/span>{{\/has_children}}\n\t<\/a>\n\t{{#has_children}}{{> navigation\/flyout\/list}}{{\/has_children}}\n<\/li>\n"},
+				{}
+			)
+		}
+		if (jQuery) {
+			jQuery(document).ready(function() { jQuery(initFlyouts); });
+		}else{
+			if (Prototype.Browser.IE) window.onload = initFlyouts;
+			else document.observe('dom:loaded', initFlyouts);
+		}
+	})(window._W && _W.jQuery)
+//-->
+</script>
+		
+		<script
+  type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script "text/x-mathjax-config">
+MathJax.Hub.Config({
+	TeX: { extensions: [
+		"autoload-all.js"
+	]}
+}); </script>
+<script "text/x-mathjax-config">
+	MathJax.Hub.Register.StartupHook("TeX Jax Ready", function () {
+		MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{ cancel: ["Extension","cancel"] });
+	});
+</script>
+<script type="text/javascript">(function(d,s,id){var z=d.createElement(s);z.type="text/javascript";z.id=id;z.async=true;z.src="http://static.zotabox.com/8/e/8e2816f3964c02518b40c1e9ba84b04e/widgets.js";var sz=d.getElementsByTagName(s)[0];sz.parentNode.insertBefore(z,sz)}(document,"script","zb-embed-code"));</script>
+	</head>
+	<body class="no-header  wsite-theme-light  wsite-page-rex_momentjs full-width-on "><div class="body-wrap">
+	
+	<div id="header">
+		<div class="nav-trigger hamburger">
+			<div class="open-btn">
+				<span class="mobile"></span>
+				<span class="mobile"></span>
+				<span class="mobile"></span>
+			</div>
+		</div>
+		<div id="sitename"><span class="wsite-logo">
+
+	<a href="">
+	
+	<span id="wsite-title">Rex's plugins for Construct2</span>
+	
+	</a>
+
+</span></div>
+	</div>
+
+	<div id="wrapper">
+		<div class="bg-wrapper">
+			<div id="navigation"><ul class="wsite-menu-default">
+		<li id="pg608562111965458717" class="wsite-menu-item-wrap">
+			<a
+					href="index.html"
+				class="wsite-menu-item"
+				>
+				Home
+			</a>
+			
+		</li>
+		<li id="pg771034414327920939" class="wsite-menu-item-wrap">
+			<a
+					href="map.html"
+				class="wsite-menu-item"
+				>
+				Map
+			</a>
+			
+		</li>
+		<li id="pg807633210476052296" class="wsite-menu-item-wrap">
+			<a
+					href="tutorialtemplates.html"
+				class="wsite-menu-item"
+				>
+				Tutorial/Templates
+			</a>
+			
+		</li>
+		<li id="pg462747272431172124" class="wsite-menu-item-wrap">
+			<a
+					href="news.html"
+				class="wsite-menu-item"
+				>
+				News
+			</a>
+			
+		</li>
+		<li id="pg661412759227518685" class="wsite-menu-item-wrap">
+			<a
+					href="about.html"
+				class="wsite-menu-item"
+				>
+				About
+			</a>
+			
+		</li>
+</ul>
+</div>
+			<div id="content-wrapper">
+				<div id="content"><div id='wsite-content' class='wsite-elements wsite-not-footer'>
+<h2 class="wsite-content-title" style="text-align:left;">rex_momentjs<br /></h2>
+
+<div class="paragraph" style="text-align:left;"><a target="_blank" href="https://dl.dropboxusercontent.com/u/5779181/C2Repo/Zip/plugins/rex_momentjs.7z">Plugin</a>,<span><span><span> <a target="_blank" href="https://dl.dropboxusercontent.com/u/5779181/C2Repo/rex_momentjs.html">ACE table</a>, </span></span></span><font color="#d5d5d5"><a href="https://www.scirra.com/forum/plugin-system-date-and-time_t63492" target="_blank">Discussion thread</a></font><font color="#d5d5d5"></font><br />Dependence: None<br /></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><strong><font size="3">Introduction</font></strong><br /></span></span></span></span>Parse, validate, manipulate, and display dates. Reference : <a target="_blank" href="http://momentjs.com/">moment.js</a><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"></span></span></span></span><br /></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><strong><font size="3">Usage</font></strong><br /></div>
+
+<div class="paragraph" style="text-align:left;"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><strong>Set date</strong><br />Set date by one of these actions</span></span></span></span></span><ul><li>Action:Current date - Set date to current date. (<a target="_blank" href="https://onedrive.live.com/redir?resid=7497FD5EC94476E!2335&amp;authkey=!AJdDmvxiWnag0vs&amp;ithint=file%2ccapx">Sample capx</a>)</li><li>Action:Unix timestamp - Set date from unix timestamp. (<a target="_blank" href="https://onedrive.live.com/redir?resid=7497FD5EC94476E!2336&amp;authkey=!AIZMGSOPwrfMEbk&amp;ithint=file%2ccapx">Sample capx</a>)</li><li>Action:Date string - Set date from string.</li><li>Action:Clone - Clone date from another moment object.</li><li>Action:Set component - Set date component of current date value.<br /></li></ul></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Format of date string</strong><br /></div>
+
+<div class="paragraph" style="text-align:left;"><strong>ISO 8601 format</strong><br />"Action:Date string" will check string with <a href="http://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a> formats&nbsp; if the parameter "Format" is "". An ISO 8601 string requires a date part.<ul><li>2013-02-08 # A calendar date part<br /></li><li>2013-W06-5 # A week date part</li><li>2013-039 # An ordinal date part</li><li>20130208 # Basic (short) full date</li><li>2013W065 # Basic (short) week, weekday</li><li>2013W06 # Basic (short) week only</li><li>2013050 # Basic (short) ordinal date</li></ul>A time part can also be included, separated from the date part by a space or a uppercase T.<ul><li>2013-02-08T09 # An hour time part separated by a T</li><li>2013-02-08 09 # An hour time part separated by a space</li><li>2013-02-08 09:30 # An hour and minute time part</li><li>2013-02-08 09:30:26 # An hour, minute, and second time part</li><li>2013-02-08 09:30:26.123 # An hour, minute, second, and millisecond time part</li><li>2013-02-08 24:00:00.000 # hour 24, minute, second, millisecond equal 0 means next day at midnight</li><li>20130208T080910,123 # Short date and time up to ms, separated by comma</li><li>20130208T080910.123 # Short date and time up to ms</li><li>20130208T080910 # Short date and time up to seconds</li><li>20130208T0809 # Short date and time up to minutes</li><li>20130208T08 # Short date and time, hours only</li></ul>Any of the date parts can have a time part.<ul><li>2013-02-08 09 # A calendar date part and hour time part</li><li>2013-W06-5 09 # A week date part and hour time part</li><li>2013-039 09 # An ordinal date part and hour time part</li></ul>If a time part is included, an offset from UTC can also be included as +-HH:mm, +-HHmm, +-HH or Z.<ul><li>2013-02-08 09+07:00 # +-HH:mm</li><li>2013-02-08 09-0100 # +-HHmm</li><li>2013-02-08 09Z # Z</li><li>2013-02-08 09:30:26.123+07:00 # +-HH:mm</li><li>2013-02-08 09:30:26.123+07 # +-HH</li></ul></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Custom format</strong><br />Format is composed by these components, and&nbsp;ignores non-alphanumeric characters.<br />Year, month, and day tokens<ul><li>YYYY : 4 or 2 digit year (2014)</li><li>YY : 2 digit year (14)</li><li>Y : Year with any number of digits and sign (-25)</li><li>Q :Quarter of year. Sets month to first month in quarter. (1..4)</li><li>M MM : Month number (1..12)</li><li>MMM MMMM : Month name in locale (Jan..December)</li><li>D DD : Day of month (1..31)</li><li>Do : Day of month with ordinal (1st..31st)</li><li>DDD DDDD : Day of year (1..365)</li><li>X : Unix timestamp (1410715640.579)</li><li>x : Unix ms timestamp (1410715640579)</li></ul>Week year, week, and weekday tokens<ul><li>gggg : Locale 4 digit week year (2014)</li><li>gg : Locale 2 digit week year (14)</li><li>w ww : Locale week of year (1..53)</li><li>e : Locale day of week (0..6)</li><li>ddd dddd : Day name in locale (Mon...Sunday)</li><li>GGGG : ISO 4 digit week year (2014)</li><li>GG : ISO 2 digit week year (14)</li><li>W WW : ISO week of year (1..53)</li><li>E : ISO day of week (1..7)</li></ul>Hour, minute, second, millisecond, and offset tokens<ul><li>H HH : 24 hour time (0..23)</li><li>h hh : 12 hour time used with a A. (1..12)</li><li>a A : Post or ante meridiem (Note the one character a p are also considered valid) (am pm)</li><li>m mm : Minutes (0..59)</li><li>s ss : Seconds (0..59)</li><li>S SS SSS : Fractional seconds (0..999)</li><li>Z ZZ : Offset from UTC as +-HH:mm, +-HHmm, or Z (+12:00)</li></ul></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Check if date string is valid</strong><br />"Condition:Is valid" returns True if data string is valid. Set parameter "Strict mode" to "strict" to strict parsing requires that the format and input match exactly, including delimiters.</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Display date</strong><br /><a target="_blank" href="https://onedrive.live.com/redir?resid=7497FD5EC94476E%212338&amp;authkey=%21AFV7O7E8gBDyBXA&amp;ithint=file%2ccapx">Sample capx</a><br /></div>
+
+<div class="paragraph" style="text-align:left;">Get date displaying string by "Expression:Format", which returns date string with <span>ISO 8601 format, Or </span>add 2nd parameter to assign format.<br /><strong>Month</strong><ul><li>M : 1 2 ... 11 12</li><li>Mo : 1st 2nd ... 11th 12th</li><li>MM : 01 02 ... 11 12</li><li>MMM : Jan Feb ... Nov Dec</li><li>MMMM : January February ... November December</li></ul><strong>Quarter</strong><ul><li>Q : 1 2 3 4</li><li>Qo : 1st 2nd 3rd 4th</li></ul><strong>Day of Month</strong><ul><li>D : 1 2 ... 30 31</li><li>Do : 1st 2nd ... 30th 31st</li><li>DD : 01 02 ... 30 31</li></ul><strong>Day of Year</strong><ul><li>DDD : 1 2 ... 364 365</li><li>DDDo : 1st 2nd ... 364th 365th</li><li>DDDD : 001 002 ... 364 365<br /></li></ul><strong>Day of Week</strong><ul><li>d : 0 1 ... 5 6</li><li>do : 0th 1st ... 5th 6th</li><li>dd : Su Mo ... Fr Sa</li><li>ddd : Sun Mon ... Fri Sat</li><li>dddd : Sunday Monday ... Friday Saturday</li></ul><strong>Day of Week (Locale)</strong><ul><li>e : 0 1 ... 5 6</li></ul> <strong>Day of Week (ISO)</strong><ul><li>E : 1 2 ... 6 7</li></ul><strong>Week of Year</strong><ul><li>w : 1 2 ... 52 53</li><li>wo : 1st 2nd ... 52nd 53rd</li><li>ww : 01 02 ... 52 53</li></ul><strong>Week of Year (ISO)</strong><ul><li>W : 1 2 ... 52 53</li><li>Wo : 1st 2nd ... 52nd 53rd</li><li>WW : 01 02 ... 52 53</li></ul><strong>Year</strong><ul><li>YY : 70 71 ... 29 30</li><li>YYYY : 1970 1971 ... 2029 2030</li><li>Y : 1970 1971 ... 9999 +10000 +10001<strong> Note:</strong> This complies with the ISO 8601 standard for dates past the year 9999</li></ul><strong>Week Year</strong><ul><li>gg : 70 71 ... 29 30</li><li>gggg : 1970 1971 ... 2029 2030</li></ul><strong>Week Year (ISO)</strong><ul><li>GG : 70 71 ... 29 30</li><li>GGGG : 1970 1971 ... 2029 2030</li></ul><strong>AM/PM</strong><ul><li>A : AM PM</li><li>a : am pm</li></ul><strong>Hour</strong><ul><li>H : 0 1 ... 22 23</li><li>HH : 00 01 ... 22 23</li><li>h : 1 2 ... 11 12</li><li>hh : 01 02 ... 11 12</li><li>k : 1 2 ... 23 24</li><li>kk : 01 02 ... 23 24</li></ul><strong>Minute</strong><ul><li>m : 0 1 ... 58 59</li><li>mm : 00 01 ... 58 59</li></ul><strong>Second</strong><ul><li>s : 0 1 ... 58 59</li><li>ss : 00 01 ... 58 59</li></ul><strong>Fractional Second</strong><ul><li>S : 0 1 ... 8 9</li><li>SS : 00 01 ... 98 99</li><li>SSS : 000 001 ... 998 999</li><li>SSSS ... SSSSSSSSS : 000[0..] 001[0..] ... 998[0..] 999[0..]</li></ul><strong>Unix Timestamp</strong><ul><li>X : 1360013296</li></ul><strong>Unix Millisecond Timestamp</strong><ul><li>x : 1360013296123</li></ul></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Localized formats</strong><br />Because preferred formatting differs based on locale, there are a few tokens that can be used to format a moment based on its locale.<br />There are upper and lower case variations on the same formats. The lowercase version is intended to be the shortened version of its uppercase counterpart.<ul><li>Time : LT (8:30 PM) <br /></li><li>Time with seconds : LTS (8:30:25 PM) <br /></li><li>Month numeral, day of month, year : L (09/04/1986),&nbsp; l (9/4/1986) </li><li>Month name, day of month, year : LL (September 4 1986), ll (Sep 4 1986) </li><li>Month name, day of month, year, time : LLL (September 4 1986 8:30 PM),&nbsp; lll (Sep 4 1986 8:30 PM) </li><li>Month name, day of month, day of week, year, time : LLLL (Thursday, September 4 1986 8:30 PM). llll (Thu, Sep 4 1986 8:30 PM)</li></ul></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Escaping characters</strong><br />To escape characters in format strings, you can wrap the characters in square brackets, like "<span>[today] dddd".</span><br /></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Display language</strong><br /><a target="_blank" href="https://onedrive.live.com/redir?resid=7497FD5EC94476E!2345&amp;authkey=!AN2yY6NoEk94NjE&amp;ithint=file%2ccapx">Sample capx</a><br />Set display language by "Action:Set locale". <br /></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Add</strong><br /><a target="_blank" href="https://onedrive.live.com/redir?resid=7497FD5EC94476E!2337&amp;authkey=!AMec3g-i9C2k2Kg&amp;ithint=file%2ccapx">Sample capx</a><br />Call "Action:Add to" to add years, quarters, months, weeks, days, hours, minutes, seconds, milliseconds to current date value.<br /></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Get date</strong><br />Get date value from these expressions<ul><li>Expression:Year</li><li>Expression:Month ( 0..11 )</li><li>Expression:Date</li><li>Expression:Day</li><li>Expression:Quarter</li><li>Expression:Hours</li><li>Expression:Minutes</li><li>Expression:Seconds</li><li>Expression:Milliseconds</li><li>Expression:UnixTimestamp</li></ul></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Elapsed time</strong><br />Get Elapsed time in years, quarters, months, weeks, days, hours, minutes, seconds, milliseconds by these expressions. Add 1 at 2nd parameter to get float result. <ul><li>Expression:ElapsedYears<br /></li><li>Expression:ElapsedMonths<br /></li><li>Expression:ElapsedDays</li><li>Expression:ElapsedHours</li><li>Expression:ElapsedMinutes</li><li>Expression:ElapsedSeconds</li><li>Expression:ElapsedMilliseconds</li></ul></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Time zone</strong><br />See <a href="rex_momenttimezonejs.html">rex_momenttimezonejs plugin</a> for time zone feature,<br /></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div></div>
+</div>
+			</div>
+		</div>
+		<div id="footer">
+			<div id="footer-content">Create a <a target="_top" href="http://www.weebly.com/">free web site</a> with <a target="_top" href="http://www.weebly.com/" title="免费网站">Weebly</a></div>
+		</div>
+	</div>
+	
+	<div class="navmobile-wrapper">
+		<div id="navmobile" class="nav"><ul class="wsite-menu-default">
+		<li id="pg608562111965458717" class="wsite-menu-item-wrap">
+			<a
+					href="index.html"
+				class="wsite-menu-item"
+				>
+				Home
+			</a>
+			
+		</li>
+		<li id="pg771034414327920939" class="wsite-menu-item-wrap">
+			<a
+					href="map.html"
+				class="wsite-menu-item"
+				>
+				Map
+			</a>
+			
+		</li>
+		<li id="pg807633210476052296" class="wsite-menu-item-wrap">
+			<a
+					href="tutorialtemplates.html"
+				class="wsite-menu-item"
+				>
+				Tutorial/Templates
+			</a>
+			
+		</li>
+		<li id="pg462747272431172124" class="wsite-menu-item-wrap">
+			<a
+					href="news.html"
+				class="wsite-menu-item"
+				>
+				News
+			</a>
+			
+		</li>
+		<li id="pg661412759227518685" class="wsite-menu-item-wrap">
+			<a
+					href="about.html"
+				class="wsite-menu-item"
+				>
+				About
+			</a>
+			
+		</li>
+</ul>
+</div>
+	</div>
+
+</div>
+
+
+<script language="javascript" src="files/theme/plugins.js"></script>	 
+<script language="javascript" src="files/theme/custom.js"></script>
+<script language="javascript" src="files/theme/mobile.js"></script>	
+
+
+		<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-50390733-1', 'weebly.com');
+  ga('send', 'pageview');
+
+</script>
+	</body>
+</html>

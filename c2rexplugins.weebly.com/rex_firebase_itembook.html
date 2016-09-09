@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>rex_firebase_itembook - Rex's plugins for Construct2</title>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+		<meta name="google-site-verification" content="AbKU1w_lq8tjMKAN0yt_O0WFqwDr4zH5bHiXJEpyErI" />
+		<link id="wsite-base-style" rel="stylesheet" type="text/css" href="http://cdn2.editmysite.com/css/sites.css?buildTime=1234" />
+<link rel="stylesheet" type="text/css" href="http://cdn1.editmysite.com/editor/libraries/fancybox/fancybox.css?1234" />
+<link rel="stylesheet" type="text/css" href="http://cdn2.editmysite.com/css/social-icons.css?buildtime=1234" media="screen,projection" />
+<link rel="stylesheet" type="text/css" href="files/main_style.css?1469150796" title="wsite-theme-css" />
+<link href='http://fonts.googleapis.com/css?family=Raleway:400,300,200,700&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+<link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,700,400italic,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,700,400italic,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+<style type='text/css'>
+.wsite-elements.wsite-not-footer div.paragraph, .wsite-elements.wsite-not-footer p, .wsite-elements.wsite-not-footer .product-block .product-title, .wsite-elements.wsite-not-footer .product-description, .wsite-elements.wsite-not-footer .wsite-form-field label, .wsite-elements.wsite-not-footer .wsite-form-field label, #wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {font-family:"Open Sans" !important;}
+#wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {}
+.wsite-elements.wsite-footer div.paragraph, .wsite-elements.wsite-footer p, .wsite-elements.wsite-footer .product-block .product-title, .wsite-elements.wsite-footer .product-description, .wsite-elements.wsite-footer .wsite-form-field label, .wsite-elements.wsite-footer .wsite-form-field label{}
+.wsite-elements.wsite-not-footer h2, .wsite-elements.wsite-not-footer .product-long .product-title, .wsite-elements.wsite-not-footer .product-large .product-title, .wsite-elements.wsite-not-footer .product-small .product-title, #wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {font-family:"Open Sans" !important;}
+#wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {}
+.wsite-elements.wsite-footer h2, .wsite-elements.wsite-footer .product-long .product-title, .wsite-elements.wsite-footer .product-large .product-title, .wsite-elements.wsite-footer .product-small .product-title{}
+#wsite-title {}
+.wsite-menu-default a {}
+.wsite-menu a {}
+.wsite-image div, .wsite-caption {}
+.galleryCaptionInnerText {}
+.fancybox-title {}
+.wslide-caption-text {}
+.wsite-phone {}
+.wsite-headline {}
+.wsite-headline-paragraph {}
+.wsite-button-inner {}
+.wsite-not-footer blockquote {}
+.wsite-footer blockquote {}
+.blog-header h2 a {}
+#wsite-content h2.wsite-product-title {}
+.wsite-product .wsite-product-price a {}
+</style>
+
+		<script><!--
+var STATIC_BASE = '//cdn1.editmysite.com/';
+var STYLE_PREFIX = 'wsite';
+//-->
+</script>
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js'></script>
+
+<script type="text/javascript" src="http://cdn2.editmysite.com/js/lang/zh/stl.js?buildTime=1234&"></script>
+<script src="http://cdn2.editmysite.com/js/site/main.js?buildTime=1234"></script><script type="text/javascript">_W.configDomain = "www.weebly.com";</script><script>_W.relinquish && _W.relinquish()</script>
+<script type="text/javascript" src="http://cdn2.editmysite.com/js/lang/zh/stl.js?buildTime=1234&"></script><script> _W.themePlugins = [];</script><script type="text/javascript"><!--
+	var IS_ARCHIVE = 1;
+	
+	(function(jQuery){
+		function initFlyouts(){
+			initPublishedFlyoutMenus(
+				[{"id":"608562111965458717","title":"Home","url":"index.html","target":"","nav_menu":false},{"id":"771034414327920939","title":"Map","url":"map.html","target":"","nav_menu":false},{"id":"807633210476052296","title":"Tutorial\/Templates","url":"tutorialtemplates.html","target":"","nav_menu":false},{"id":"462747272431172124","title":"News","url":"news.html","target":"","nav_menu":false},{"id":"661412759227518685","title":"About","url":"about.html","target":"","nav_menu":false}],
+				"635163833766733516",
+				'',
+				'active',
+				false,
+				{"navigation\/item":"<li {{#id}}id=\"{{id}}\"{{\/id}} class=\"wsite-menu-item-wrap\">\n\t<a\n\t\t{{^nav_menu}}\n\t\t\thref=\"{{url}}\"\n\t\t{{\/nav_menu}}\n\t\t{{#target}}\n\t\t\ttarget=\"{{target}}\"\n\t\t{{\/target}}\n\t\t{{#membership_required}}\n\t\t\tdata-membership-required=\"{{.}}\"\n\t\t{{\/membership_required}}\n\t\tclass=\"wsite-menu-item\"\n\t\t>\n\t\t{{{title_html}}}\n\t<\/a>\n\t{{#has_children}}{{> navigation\/flyout\/list}}{{\/has_children}}\n<\/li>\n","navigation\/flyout\/list":"<div class=\"wsite-menu-wrap\" style=\"display:none\">\n\t<ul class=\"wsite-menu\">\n\t\t{{#children}}{{> navigation\/flyout\/item}}{{\/children}}\n\t<\/ul>\n<\/div>\n","navigation\/flyout\/item":"<li {{#id}}id=\"{{id}}\"{{\/id}}\n\tclass=\"wsite-menu-subitem-wrap {{#is_current}}wsite-nav-current{{\/is_current}}\"\n\t>\n\t<a\n\t\t{{^nav_menu}}\n\t\t\thref=\"{{url}}\"\n\t\t{{\/nav_menu}}\n\t\t{{#target}}\n\t\t\ttarget=\"{{target}}\"\n\t\t{{\/target}}\n\t\tclass=\"wsite-menu-subitem\"\n\t\t>\n\t\t<span class=\"wsite-menu-title\">\n\t\t\t{{{title_html}}}\n\t\t<\/span>{{#has_children}}<span class=\"wsite-menu-arrow\">&gt;<\/span>{{\/has_children}}\n\t<\/a>\n\t{{#has_children}}{{> navigation\/flyout\/list}}{{\/has_children}}\n<\/li>\n"},
+				{}
+			)
+		}
+		if (jQuery) {
+			jQuery(document).ready(function() { jQuery(initFlyouts); });
+		}else{
+			if (Prototype.Browser.IE) window.onload = initFlyouts;
+			else document.observe('dom:loaded', initFlyouts);
+		}
+	})(window._W && _W.jQuery)
+//-->
+</script>
+		
+		<script
+  type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script "text/x-mathjax-config">
+MathJax.Hub.Config({
+	TeX: { extensions: [
+		"autoload-all.js"
+	]}
+}); </script>
+<script "text/x-mathjax-config">
+	MathJax.Hub.Register.StartupHook("TeX Jax Ready", function () {
+		MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{ cancel: ["Extension","cancel"] });
+	});
+</script>
+<script type="text/javascript">(function(d,s,id){var z=d.createElement(s);z.type="text/javascript";z.id=id;z.async=true;z.src="http://static.zotabox.com/8/e/8e2816f3964c02518b40c1e9ba84b04e/widgets.js";var sz=d.getElementsByTagName(s)[0];sz.parentNode.insertBefore(z,sz)}(document,"script","zb-embed-code"));</script>
+	</head>
+	<body class="no-header  wsite-theme-light  wsite-page-rex_firebase_itembook full-width-on "><div class="body-wrap">
+	
+	<div id="header">
+		<div class="nav-trigger hamburger">
+			<div class="open-btn">
+				<span class="mobile"></span>
+				<span class="mobile"></span>
+				<span class="mobile"></span>
+			</div>
+		</div>
+		<div id="sitename"><span class="wsite-logo">
+
+	<a href="">
+	
+	<span id="wsite-title">Rex's plugins for Construct2</span>
+	
+	</a>
+
+</span></div>
+	</div>
+
+	<div id="wrapper">
+		<div class="bg-wrapper">
+			<div id="navigation"><ul class="wsite-menu-default">
+		<li id="pg608562111965458717" class="wsite-menu-item-wrap">
+			<a
+					href="index.html"
+				class="wsite-menu-item"
+				>
+				Home
+			</a>
+			
+		</li>
+		<li id="pg771034414327920939" class="wsite-menu-item-wrap">
+			<a
+					href="map.html"
+				class="wsite-menu-item"
+				>
+				Map
+			</a>
+			
+		</li>
+		<li id="pg807633210476052296" class="wsite-menu-item-wrap">
+			<a
+					href="tutorialtemplates.html"
+				class="wsite-menu-item"
+				>
+				Tutorial/Templates
+			</a>
+			
+		</li>
+		<li id="pg462747272431172124" class="wsite-menu-item-wrap">
+			<a
+					href="news.html"
+				class="wsite-menu-item"
+				>
+				News
+			</a>
+			
+		</li>
+		<li id="pg661412759227518685" class="wsite-menu-item-wrap">
+			<a
+					href="about.html"
+				class="wsite-menu-item"
+				>
+				About
+			</a>
+			
+		</li>
+</ul>
+</div>
+			<div id="content-wrapper">
+				<div id="content"><div id='wsite-content' class='wsite-elements wsite-not-footer'>
+<h2 class="wsite-content-title" style="text-align:left;"><font color="#d5d5d5">rex_firebase_itembook</font><br /></h2>
+
+<div class="paragraph" style="text-align:left;"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><a target="_blank" href="https://dl.dropboxusercontent.com/u/5779181/C2Repo/Zip/plugins/rex_firebase_itembook.7z">Plugin</a>,<span><span><span> <a target="_blank" href="https://dl.dropboxusercontent.com/u/5779181/C2Repo/rex_firebase_itembook.html">ACE table</a>, </span></span></span></span></span></span></span></span></span></span></span></span></span></span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><a target="_blank" href="https://www.scirra.com/forum/plugin-firebase_t121776">Discussion thread</a></span></span></span></span></span></span></span><br />Dependence: </span></span></span></span></span></span></span></span></span></span></span></span></span><span><span><span><span><span>one of these plugins</span></span></span></span></span></span></span></span></span></span><ul><li><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span><span><span><span><span><a href="rex_firebase_apiv3.html">rex_firebase_apiV3</a></span></span></span></span></span></span></span></span></span></span></span><br /></li></ul></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><strong><font size="3">Introduction</font></strong></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><br />Item tables to save and query items. Each value is indexed by (<strong>tableID, itemID, key</strong>).</div>
+
+<div class="paragraph" style="text-align:left;"><strong>Compare with <a href="rex_firebase_itemtable.html">rex_firebase_itemtable plugin</a></strong><br />This plugin contains multiple tables and it can modify multiple items across these tables in an atomic write process. i.e. values will be changed at the same time.<br />This plugin has querying function to pick items by a single condition.<br /></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><span style="font-weight:400"><span style="font-weight:400"><strong><font size="3">Usage</font></strong></span></span><br /></div>
+
+<div class="paragraph" style="text-align:left;"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><strong><font size="3">Save items</font></strong><br /><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><a target="_blank" href="https://onedrive.live.com/redir?resid=7497FD5EC94476E!2389&amp;authkey=!ABd702U8nJZBaDM&amp;ithint=file%2ccapx">Sample capx</a></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><br />There are two ways to build saved items, in enumeration or tree structure.<br /></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Enumeration</strong><br />Call these actions in "Prepare - Enumeration" category to build items.<ul><li>Action:Set value</li><li>Action:Set boolean value</li><li>Action:Set server timesetamp</li><li>Action:Set JSON<br /></li></ul></div>
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a>
+<img src="uploads/1/4/2/6/14264557/559736459.png" alt="图片" style="width:100%;max-width:556px" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Tree structure</strong><br />Add "Condition:Table node" to create a table node, then add "Condition:Item node" to create an item node. Then call these actions in "Prepare - Tree" category to add values.<ul><li>Action:Set value</li><li>Action:Set boolean value</li><li>Action:Set server timesetamp</li><li>Action:Set JSON</li></ul></div>
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a>
+<img src="uploads/1/4/2/6/14264557/478095000.png" alt="图片" style="width:100%;max-width:430px" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Push item</strong><br />Get a new itemID of "push" item by "Expression:GenerateKey", it will be saved in "Expression:LastGeneratedKey".<br /></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Set JSON by key</strong><br /><a target="_blank" href="https://onedrive.live.com/redir?resid=7497FD5EC94476E!2391&amp;authkey=!AObb58YvOQHgqAo&amp;ithint=file%2ccapx">Sample capx</a><br />Key string contains "." or "/" will be splitted into levels to create a JSON object&nbsp;above the root key. For example, set key "pos.x" to 10, will add {"x":10} at key "pos". And get 10 back by key "pos.x" directly in ""Expression:CurItemContent", or <span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400">"Expression:At".<br />User does not need to create or parse JSON by JSON plugin anymore.</span></span></span></span></span></span></span><br /></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Write to server</strong><br />Call "Action:Update" to upload all items to firebase server. "Condition:On update complete" will be triggered while writing completed, otherwise "Condition:On update error" will be triggered.<br /></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><strong>Remove an item</strong><br />Call "</span></span>Action:Remove" to remove a item.</span><br /><span><span><span><span>"</span></span></span></span>Condition:On remove complete<span><span><span><span>" will be triggered if save completed, otherwise "</span></span></span></span>Condition:On remove error<span><span><span><span>" will be triggered.</span></span></span></span></span><br /></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><span style="font-weight:400"><span style="font-weight:400"><strong><font size="3">Load items</font></strong></span></span><br /><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><a target="_blank" href="https://onedrive.live.com/redir?resid=7497FD5EC94476E!2387&amp;authkey=!AAwYkiXR60heTxc&amp;ithint=file%2ccapx">Sample capx</a><br /><strong>Load all tables/a table/an item</strong><br />Call "</span></span></span></span></span></span></span></span></span></span></span></span>Action:Load item" to load all tables/a table/an item.<ul><li>Load all tables: Set tableID "" to load all tables.</li><li>Load a table: Set itemID to "" to load all items in the table.</li><li>Load an item: tableID and itemID are not "" either.</li></ul>"Condition:On request complete" will be triggered while receiving items.<br /></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Retrieve items</strong><br />Get requested tableID by "Expression:LastTableID" under "Condition:On request complete".<br />Then retrieve items in this table under "Condition:For each itemID" by "Expression:CurItemID", and "Expression:CurItemContent".<br />"Expression:CurItemContent" has 3 types of output<ul><li>Expression:CurItemContent : return JSON string of all key-value pairs.</li><li>Expression:CurItemContent( key ) : return the value of a specific key.</li><li>Expression:CurItemContent( key , default_value ) : return the value of a specific key, or the default value if the key does not exist.</li></ul>Each key of a item could be retrieved under <span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400">"Condition:For each key" by "</span></span></span></span></span></span></span></span></span>Expression:CurKey" and "Expression:CurValue".<br /></div>
+
+<div class="paragraph" style="text-align:left;">Or get<span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"> a specific value by "Expression:At". This expression has 5 types of output</span></span></span></span></span></span></span><ul><li><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400">Expression:At : return JSON string of all tables</span></span></span></span></span></span></span></li><li><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400">Expression:At( tableID ) : return JSON string of all items in a table</span></span></span></span></span></span></span></li></ul><ul><li><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400">Expression:At</span></span></span></span></span></span></span></span>( tableID , itemID ) : return JSON string of an item in a table</li><li><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400">Expression:At( tableID , itemID , key ): return a value of a key in an item of a table</span></span></span></span></span></span></span></span></li><li><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400">Expression:At( tableID , itemID , key , default_value ) : return a value of a key in an item of a table, or a default value of this key does not exist.</span></span></span></span></span></span></span></span></li></ul></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Items list</strong><br /><a target="_blank" href="https://onedrive.live.com/redir?resid=7497FD5EC94476E!2388&amp;authkey=!AOOS1FJbvly3fW0&amp;ithint=file%2ccapx">Sample capx</a><br />User could put items into <a href="rex_taffydb.html">rex_taffydb object</a> by "Expression:AsItemList" to query and sort items locally.<br />"Expression:AsItemList" has 3 types of output.<ul><li>Expression:AsItemList : return items in all tables</li><li>Expression:AsItemList( tableID ): return items in a table</li><li>Expression:AsItemList( tableID , itemID ): return a item</li></ul>The key name of tableID and itemID is "tableID" and "itemID" by default. They could be changed by "Action:Set key name".<br /></div>
+
+<div class="paragraph" style="text-align:left;"><span style="font-weight:400"><span style="font-weight:400"><strong>Querying</strong></span></span><br />There are 2 querying actions<ul><li>"Action:Get items by "In Range" - Get items by single condition-In Range (start to end) with count limit in a table. Set count to -1 to get all matched items</li><li>"Action:Get items by comparison" - Get items by single condition with count limit in a table. Set count to -1 to get all matched items.</li></ul>"Condition:On request complete" will be triggered while receiving items.<br />Load items and put them into&nbsp;<a href="rex_taffydb.html">rex_taffydb object</a> to do more complex querying.<br /></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Requests queue</strong><br /><a target="_blank" href="https://onedrive.live.com/redir?resid=7497FD5EC94476E!2394&amp;authkey=!ABwc8mzQ8ZOwf2Q&amp;ithint=file%2ccapx">Sample capx</a><br />Uses requests queue feature if there are more then 1 load request in the same time. Follows these steps to run a requests queue.<ul><li>Call "Action:Start new request queue" to start a new queue<br /></li><li>Add request into this queue by <span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400">"</span></span></span></span></span></span></span></span></span></span></span></span>Action:Load item", "Action:Get items by "In Range", "Action:Get items by comparison".<br /></li><li>Call "Action:Process request queue" to start requests in queue</li><li>"Condition:On request complete" will be triggered while all requests competed.<br /></li></ul></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Clean request result tables</strong><br />Call "Action:Clean result table" to clean the request table. Set tableID to "" to clean all tables.<br /></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><strong>On disconnect</strong></span></span></span></span></span></span></span></span></span></span></span></span><br /><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><a target="_blank" href="https://onedrive.live.com/redir?resid=7497FD5EC94476E!2392&amp;authkey=!APnDmfhhwruoxjo&amp;ithint=file%2ccapx">Sample capx</a></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><br />There are two ways to build saved items, in enumeration or tree structure, like building items for saving.<br /><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span><span><span><span><span><span><span><span><span><span>Reference: <a href="rex_firebase_itemmonitor.html">rex_firebase_itemmonitor plugin</a></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><br /></div>
+
+<div class="paragraph" style="text-align:left;"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span><span><span><span><span><span><span><span><span><span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><br /></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Enumeration</strong><br />Call these actions in "On disconnected - Enumeration" category to register a disconnected handler.<ul><li>Action:Set value</li><li>Action:Set boolean value</li><li>Action:Set server timesetamp</li><li>Action:Set JSON<br /></li><li>Action:Remove key<br /></li></ul>There are 4 kind of action in "Action:Remove key".<ul><li>Set tableID to "" to remove all tables<br /></li><li>Set itemID to "" to remove all items in the table</li><li>Set key to "" to remove all keys in the item</li><li>Otherwise, remove a key in an item.</li></ul></div>
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a>
+<img src="uploads/1/4/2/6/14264557/756023236.png" alt="图片" style="width:100%;max-width:799px" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Tree structure</strong><br />Call these actions in "On disconnected - Tree" category to register a disconnected handler.<ul><li>Action:Set value</li><li>Action:Set boolean value</li><li>Action:Set server timesetamp</li><li>Action:Set JSON</li></ul>Or add "Condition:Remove on disconnected" under a table node or an item node to remove a table or an item, or call "Action:Remove key" in "On disconnected - Tree" category to remove a key in an item.<br /></div>
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a>
+<img src="uploads/1/4/2/6/14264557/514395510.png" alt="图片" style="width:100%;max-width:662px" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Reference path</strong><br />Get reference path by "Expression:Ref", it has 4 type of output.<br />Expression:Ref : return the root of all tables<br />Expression:Ref( tableID ) : return the reference path of a table<br />Expression:Ref( tableID , itemID ) : return the reference path of an item.<br />Expression:Ref( tableID , itemID , key ) :  return the reference path of a key in an item.<br /></div>
+
+<div class="paragraph" style="text-align:left;"><span style='text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); '><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "></span><span style=""></span></span></span></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div></div>
+</div>
+			</div>
+		</div>
+		<div id="footer">
+			<div id="footer-content">Create a <a target="_top" href="http://www.weebly.com/">free web site</a> with <a target="_top" href="http://www.weebly.com/" title="免费网站">Weebly</a></div>
+		</div>
+	</div>
+	
+	<div class="navmobile-wrapper">
+		<div id="navmobile" class="nav"><ul class="wsite-menu-default">
+		<li id="pg608562111965458717" class="wsite-menu-item-wrap">
+			<a
+					href="index.html"
+				class="wsite-menu-item"
+				>
+				Home
+			</a>
+			
+		</li>
+		<li id="pg771034414327920939" class="wsite-menu-item-wrap">
+			<a
+					href="map.html"
+				class="wsite-menu-item"
+				>
+				Map
+			</a>
+			
+		</li>
+		<li id="pg807633210476052296" class="wsite-menu-item-wrap">
+			<a
+					href="tutorialtemplates.html"
+				class="wsite-menu-item"
+				>
+				Tutorial/Templates
+			</a>
+			
+		</li>
+		<li id="pg462747272431172124" class="wsite-menu-item-wrap">
+			<a
+					href="news.html"
+				class="wsite-menu-item"
+				>
+				News
+			</a>
+			
+		</li>
+		<li id="pg661412759227518685" class="wsite-menu-item-wrap">
+			<a
+					href="about.html"
+				class="wsite-menu-item"
+				>
+				About
+			</a>
+			
+		</li>
+</ul>
+</div>
+	</div>
+
+</div>
+
+
+<script language="javascript" src="files/theme/plugins.js"></script>	 
+<script language="javascript" src="files/theme/custom.js"></script>
+<script language="javascript" src="files/theme/mobile.js"></script>	
+
+
+		<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-50390733-1', 'weebly.com');
+  ga('send', 'pageview');
+
+</script>
+	</body>
+</html>

@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>rex_board - Rex's plugins for Construct2</title>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+		<meta name="google-site-verification" content="AbKU1w_lq8tjMKAN0yt_O0WFqwDr4zH5bHiXJEpyErI" />
+		<link id="wsite-base-style" rel="stylesheet" type="text/css" href="http://cdn2.editmysite.com/css/sites.css?buildTime=1234" />
+<link rel="stylesheet" type="text/css" href="http://cdn1.editmysite.com/editor/libraries/fancybox/fancybox.css?1234" />
+<link rel="stylesheet" type="text/css" href="http://cdn2.editmysite.com/css/social-icons.css?buildtime=1234" media="screen,projection" />
+<link rel="stylesheet" type="text/css" href="files/main_style.css?1469150796" title="wsite-theme-css" />
+<link href='http://fonts.googleapis.com/css?family=Raleway:400,300,200,700&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+<link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,700,400italic,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,700,400italic,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+<style type='text/css'>
+.wsite-elements.wsite-not-footer div.paragraph, .wsite-elements.wsite-not-footer p, .wsite-elements.wsite-not-footer .product-block .product-title, .wsite-elements.wsite-not-footer .product-description, .wsite-elements.wsite-not-footer .wsite-form-field label, .wsite-elements.wsite-not-footer .wsite-form-field label, #wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {font-family:"Open Sans" !important;}
+#wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {}
+.wsite-elements.wsite-footer div.paragraph, .wsite-elements.wsite-footer p, .wsite-elements.wsite-footer .product-block .product-title, .wsite-elements.wsite-footer .product-description, .wsite-elements.wsite-footer .wsite-form-field label, .wsite-elements.wsite-footer .wsite-form-field label{}
+.wsite-elements.wsite-not-footer h2, .wsite-elements.wsite-not-footer .product-long .product-title, .wsite-elements.wsite-not-footer .product-large .product-title, .wsite-elements.wsite-not-footer .product-small .product-title, #wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {font-family:"Open Sans" !important;}
+#wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {}
+.wsite-elements.wsite-footer h2, .wsite-elements.wsite-footer .product-long .product-title, .wsite-elements.wsite-footer .product-large .product-title, .wsite-elements.wsite-footer .product-small .product-title{}
+#wsite-title {}
+.wsite-menu-default a {}
+.wsite-menu a {}
+.wsite-image div, .wsite-caption {}
+.galleryCaptionInnerText {}
+.fancybox-title {}
+.wslide-caption-text {}
+.wsite-phone {}
+.wsite-headline {}
+.wsite-headline-paragraph {}
+.wsite-button-inner {}
+.wsite-not-footer blockquote {}
+.wsite-footer blockquote {}
+.blog-header h2 a {}
+#wsite-content h2.wsite-product-title {}
+.wsite-product .wsite-product-price a {}
+</style>
+
+		<script><!--
+var STATIC_BASE = '//cdn1.editmysite.com/';
+var STYLE_PREFIX = 'wsite';
+//-->
+</script>
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js'></script>
+
+<script type="text/javascript" src="http://cdn2.editmysite.com/js/lang/zh/stl.js?buildTime=1234&"></script>
+<script src="http://cdn2.editmysite.com/js/site/main.js?buildTime=1234"></script><script type="text/javascript">_W.configDomain = "www.weebly.com";</script><script>_W.relinquish && _W.relinquish()</script>
+<script type="text/javascript" src="http://cdn2.editmysite.com/js/lang/zh/stl.js?buildTime=1234&"></script><script> _W.themePlugins = [];</script><script type="text/javascript"><!--
+	var IS_ARCHIVE = 1;
+	
+	(function(jQuery){
+		function initFlyouts(){
+			initPublishedFlyoutMenus(
+				[{"id":"608562111965458717","title":"Home","url":"index.html","target":"","nav_menu":false},{"id":"771034414327920939","title":"Map","url":"map.html","target":"","nav_menu":false},{"id":"807633210476052296","title":"Tutorial\/Templates","url":"tutorialtemplates.html","target":"","nav_menu":false},{"id":"462747272431172124","title":"News","url":"news.html","target":"","nav_menu":false},{"id":"661412759227518685","title":"About","url":"about.html","target":"","nav_menu":false}],
+				"750497949935532039",
+				'',
+				'active',
+				false,
+				{"navigation\/item":"<li {{#id}}id=\"{{id}}\"{{\/id}} class=\"wsite-menu-item-wrap\">\n\t<a\n\t\t{{^nav_menu}}\n\t\t\thref=\"{{url}}\"\n\t\t{{\/nav_menu}}\n\t\t{{#target}}\n\t\t\ttarget=\"{{target}}\"\n\t\t{{\/target}}\n\t\t{{#membership_required}}\n\t\t\tdata-membership-required=\"{{.}}\"\n\t\t{{\/membership_required}}\n\t\tclass=\"wsite-menu-item\"\n\t\t>\n\t\t{{{title_html}}}\n\t<\/a>\n\t{{#has_children}}{{> navigation\/flyout\/list}}{{\/has_children}}\n<\/li>\n","navigation\/flyout\/list":"<div class=\"wsite-menu-wrap\" style=\"display:none\">\n\t<ul class=\"wsite-menu\">\n\t\t{{#children}}{{> navigation\/flyout\/item}}{{\/children}}\n\t<\/ul>\n<\/div>\n","navigation\/flyout\/item":"<li {{#id}}id=\"{{id}}\"{{\/id}}\n\tclass=\"wsite-menu-subitem-wrap {{#is_current}}wsite-nav-current{{\/is_current}}\"\n\t>\n\t<a\n\t\t{{^nav_menu}}\n\t\t\thref=\"{{url}}\"\n\t\t{{\/nav_menu}}\n\t\t{{#target}}\n\t\t\ttarget=\"{{target}}\"\n\t\t{{\/target}}\n\t\tclass=\"wsite-menu-subitem\"\n\t\t>\n\t\t<span class=\"wsite-menu-title\">\n\t\t\t{{{title_html}}}\n\t\t<\/span>{{#has_children}}<span class=\"wsite-menu-arrow\">&gt;<\/span>{{\/has_children}}\n\t<\/a>\n\t{{#has_children}}{{> navigation\/flyout\/list}}{{\/has_children}}\n<\/li>\n"},
+				{}
+			)
+		}
+		if (jQuery) {
+			jQuery(document).ready(function() { jQuery(initFlyouts); });
+		}else{
+			if (Prototype.Browser.IE) window.onload = initFlyouts;
+			else document.observe('dom:loaded', initFlyouts);
+		}
+	})(window._W && _W.jQuery)
+//-->
+</script>
+		
+		<script
+  type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script "text/x-mathjax-config">
+MathJax.Hub.Config({
+	TeX: { extensions: [
+		"autoload-all.js"
+	]}
+}); </script>
+<script "text/x-mathjax-config">
+	MathJax.Hub.Register.StartupHook("TeX Jax Ready", function () {
+		MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{ cancel: ["Extension","cancel"] });
+	});
+</script>
+<script type="text/javascript">(function(d,s,id){var z=d.createElement(s);z.type="text/javascript";z.id=id;z.async=true;z.src="http://static.zotabox.com/8/e/8e2816f3964c02518b40c1e9ba84b04e/widgets.js";var sz=d.getElementsByTagName(s)[0];sz.parentNode.insertBefore(z,sz)}(document,"script","zb-embed-code"));</script>
+	</head>
+	<body class="no-header  wsite-theme-light  wsite-page-rex_board full-width-on "><div class="body-wrap">
+	
+	<div id="header">
+		<div class="nav-trigger hamburger">
+			<div class="open-btn">
+				<span class="mobile"></span>
+				<span class="mobile"></span>
+				<span class="mobile"></span>
+			</div>
+		</div>
+		<div id="sitename"><span class="wsite-logo">
+
+	<a href="">
+	
+	<span id="wsite-title">Rex's plugins for Construct2</span>
+	
+	</a>
+
+</span></div>
+	</div>
+
+	<div id="wrapper">
+		<div class="bg-wrapper">
+			<div id="navigation"><ul class="wsite-menu-default">
+		<li id="pg608562111965458717" class="wsite-menu-item-wrap">
+			<a
+					href="index.html"
+				class="wsite-menu-item"
+				>
+				Home
+			</a>
+			
+		</li>
+		<li id="pg771034414327920939" class="wsite-menu-item-wrap">
+			<a
+					href="map.html"
+				class="wsite-menu-item"
+				>
+				Map
+			</a>
+			
+		</li>
+		<li id="pg807633210476052296" class="wsite-menu-item-wrap">
+			<a
+					href="tutorialtemplates.html"
+				class="wsite-menu-item"
+				>
+				Tutorial/Templates
+			</a>
+			
+		</li>
+		<li id="pg462747272431172124" class="wsite-menu-item-wrap">
+			<a
+					href="news.html"
+				class="wsite-menu-item"
+				>
+				News
+			</a>
+			
+		</li>
+		<li id="pg661412759227518685" class="wsite-menu-item-wrap">
+			<a
+					href="about.html"
+				class="wsite-menu-item"
+				>
+				About
+			</a>
+			
+		</li>
+</ul>
+</div>
+			<div id="content-wrapper">
+				<div id="content"><div id='wsite-content' class='wsite-elements wsite-not-footer'>
+<h2 class="wsite-content-title" style="text-align:left;"><font color="#d5d5d5">rex_board</font><br /></h2>
+
+<div class="paragraph" style="text-align:left;"><a target="_blank" href="https://dl.dropboxusercontent.com/u/5779181/C2Repo/Zip/plugins/rex_board.7z">Plugin</a>,<span><span><span> <a target="_blank" href="https://dl.dropboxusercontent.com/u/5779181/C2Repo/rex_board.html">ACE table</a>, </span></span></span><font color="#d5d5d5"><a href="https://www.scirra.com/forum/plugin-board-layout2board-behavior-grid-move_t69647" target="_blank">Discussion thread</a></font><br />Dependence<span>: One of them</span><ul><li><span><span><a href="http://c2rexplugins.weebly.com/rex_board_squaretx.html">rex_board_squareTx</a></span></span></li><li><a href="http://c2rexplugins.weebly.com/rex_board_hextx.html">rex_board_hexTx</a></li></ul></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><span style='text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); '><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><strong><font size="3">Introduction</font></strong><br />This plugin is a data structure of <em>2d array</em>(x,y)+<em>1d hash-table</em>(z), to store the logical position of chess. This 2d array could be an orthogonal, isometric or hexagonal tile map combined with <a title="" style="" href="http://c2rexplugins.weebly.com/rex_board_squaretx.html">rex_board_squareTx</a> or <a title="" style="" href="http://c2rexplugins.weebly.com/rex_board_hextx.html">rex_board_hexTx</a> plugin.<ul><li>rex_board + <a title="" style="" href="http://c2rexplugins.weebly.com/rex_board_squaretx.html">rex_board_squareTx</a> = orthogonal or isometric, or staggered </li><li>rex_board + <a title="" style="" href="http://c2rexplugins.weebly.com/rex_board_hextx.html">rex_board_hexTx</a> = hexagonal</li></ul>It is a based plugin of my board-series plugins/behaviors.<br /><span></span></span></span></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><strong><font size="3">Usage</font></strong><br /></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Create chess</strong><br /><span></span><span style=""><a title="" href="https://onedrive.live.com/redir?resid=7497FD5EC94476E!521&amp;authkey=!ABKjYmMcxdof4EA&amp;ithint=file%2c.capx">Sample capx</a></span><br /></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Setup layout</strong><br />User should put one of board-layout plugin <br /><ul style=""><li style=""><a style="" title="" href="http://c2rexplugins.weebly.com/rex_board_squaretx.html">rex_board_squareTx</a> - orthogonal/isometric/staggered layout</li><li style=""><a style="" title="" href="http://c2rexplugins.weebly.com/rex_board_hextx.html">rex_board_hexTx</a> - hexagonal layout</li></ul>into project. Each board object should have a board-layout object.<br /><span>If the project has more then one</span> boards, and each board has different board-layout, they need to assign board-layout object manually by "Action:Setup layout".</div>
+
+<div class="paragraph" style="text-align:left;"><strong>Boundary</strong><br /><span>The boundary could be set by "</span>Width" and "Height" <span>at properties table.</span> Or use "Action:Set board width", "Action:Set board height".<br /><span>"</span>Expression:BoardWidth", "Expression:BoardHeight" could be used to get current boundary.<br /></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Logical position</strong><br />Each chess or tile has a logical position (x,y,z). Each logical position only could have one instance(chess/tile).<br />x and y are number type,<ul><li>The boundary of x is start at 0, to board.width-1.</li><li><span>T</span>he boundary of y is start at 0, to board.height-1.</li></ul>z could be number or string,<ul><li><strong>z=0</strong> is a tile. It will be used to find tile instance by other plugin/behavior.</li><li>other z values are chess.</li></ul></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Retrieve each cell</strong><br /><a target="_blank" href="https://onedrive.live.com/redir?resid=7497FD5EC94476E!2190&amp;authkey=!AO0wKF2e8k_pwoQ&amp;ithint=file%2ccapx">Sample capx</a><br />Uses "Condition:For each cell" to retrieve cell, get current logical X, logical Y index by ( Expression:CurLX, Expression:CurLY ).<br /></div>
+
+<div class="paragraph" style="text-align:left;"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span><strong>Create chess</strong><br /><span>Use one of these actions to create and add tile (lz = 0) or chess instance on the board,&nbsp;</span></span></span></span></span><ul><li><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span>Action:Create tile</span></span></span></span></li><li><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span>Action:Create chess</span></span></span></span></li><li><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span>Action:Create chess above tile, or</span></span></span></span></li><li><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span>Action:Fill tiles, to fill all tiles</span></span></span></span><br /></li></ul><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span>the created instance will be put at the right position directly.<br /><span>Check the configure </span>"X at (0,0)", "Y at (0,0)" in layout plugin (<a href="http://c2rexplugins.weebly.com/rex_board_squaretx.html">rex_board_squareTx</a>, or <a href="http://c2rexplugins.weebly.com/rex_board_hextx.html">rex_board_hexTx</a>) if the created chess does not appear.<br /><span>Tile (z=0) is a base logical position since any chess should stand above a tile.</span></span></span></span></span></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Add tiles</strong><br />Use one of these actions<ul><li>Action:Add tile</li><li>Action:Add chess, or Action:Add chess by UID</li></ul> to put the tile/chess on the board, i.e. set the logical position. These actions would not change the physical position of instance.</div>
+
+<div class="paragraph" style="text-align:left;"><strong>Remove/Destroy chess</strong><br />The chess will be remove from board when instance had been destroyed automatically, at next tick of destroying action (C2 engine will destroy instance at the tick end). So that the destroyed chess will be still on the board at current tick.<br />User should call one of these actions<ul><li>Action:Remove chess</li><li>Action:Remove chess by UID</li></ul>manually to remove chess from board for remainder actions.<br />Or use "Action:Destroy chess" to remove and destroy chess in one action.</div>
+
+<div class="paragraph" style="text-align:left;"><strong>Clean board</strong><br /><span></span>"Action:Reset board" will clean the board to empty.<br /></div>
+
+<div class="paragraph" style="text-align:left;"><strong>On the board</strong><br /><span>"</span>Condition:On the board" could be used to test if the chess is on the board.<br /></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Maximum or minimum of logic X, logic Y of all chess</strong><br />Get maximum logic X/Y of all chess by "Expression:MaxLX", "Expression:MaxLY". Get minimum logic X/Y of all chess by "Expression:MinLX", "Expression:MinLY".<br /></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><span style='text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); '><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><strong>Move chess</strong><br /><ul style=""><li>Action:Move chess</li><li>Action:Move chess by UID</li><li>Action:Move chess to xyz</li><li style="">Action:Move chess to xyz by UID</li><li style="">Action:Move chess to z</li></ul></span><span style=""><span style=""></span>could be used to move chess, these action will only change the logical position, not physical position, user need to move them manually.<br /></span></span></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Kicked chess</strong><br /><span>The chess will be kicked after chess created/added/moved, since </span>each logical position only could have one chess. <br /><span></span>"Condition:On chess kicked" will be triggered when chess kicking, to pick kicked chess.<span> <br /><span></span>Mostly, the kicking should not happened, so that </span>this condition might be used for debugging during development stage.<br /><span></span>To avoid kicking, user could assign z-index of each chess by its uid (for example, "uid"+chess.uid), so that all z-index of chess will be different.<br /></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Logical collision/overlapping</strong><br /><span></span>"Condition:On collision" will be triggered if the chess move to the same logical (x,y) position of other chess. <br /><span></span>"Condition:Is overlapping" is used to test if chess are overlapping with the same logical (x,y) position.<br /><span></span>The z index of these chess will be different for logical collision/overlapping. It will trigger "Condition:On chess kicked", <span></span>if the z-index of these chess are the same, see previous section.<span><span><br /></span></span></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Swap chess</strong><span> <br /><span>"</span></span>Action:Swap chess by UID" could swap the logical position of two chess by uid. This action will not change the physical position, user need to move them manually.</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><span style='text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); '><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><strong>Empty cell</strong><br /><ul><li>Condition:Is empty</li><li>Condition:Is occupied</li></ul><span>are </span>used to test if this cell is empty or not. Not that if a logical position is not in the board, these two conditions will return false.<br /></span></span></div>
+
+<div class="paragraph" style="text-align:left;"><span style='text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); '><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><strong>Get empty cell</strong><br /><a title="" target="_blank" href="https://onedrive.live.com/redir?resid=7497FD5EC94476E!547&amp;authkey=!ALfeMR4bsqOrWW8&amp;ithint=file%2c.capx"><span>Sample capx</span></a> , </span></span></span><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><a title="" style="" target="_blank" href="https://onedrive.live.com/redir?resid=7497FD5EC94476E%212049&amp;authkey=%21ABgmNYSj1VqJBwk&amp;ithint=file%2ccapx">Sample capx (on tiles)<br /></a></span></span></span><span style=""></span>"Condition:Has any empty cell", "</span></span></span></span></span><span style=""><span style=""><span style=""><span style=""><span style=""></span></span></span></span></span>Condition:Has any empty cell on tiles"<span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style=""><span style=""><span style=""> are used to check if there has any empty cell on the board, user could get the logical (x,y) of an empty cell by "Expression:EmptyLX", and "Expression:EmptyLY".<br /><span style=""></span>"Condition:Pick an empty cell", "</span></span></span></span></span><span style=""><span style=""><span style=""><span style=""><span style=""></span></span></span></span></span>Condition:Pick an empty cell on tiles"<span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style=""><span style=""><span style=""> are used to get an empty cell randomly, the logical (x,y) of picking result could be got by "Expression:EmptyLX", and "Expression:EmptyLY", too. <br /><span style="">If all cells are occupied, these two conditions will return false.</span><br /><span style="">There has another way to pick an empty cell, see the section of "Examples</span><span style=""></span><strong style="">" </strong>in <a style="" title="" href="rex_chess.html">rex_chess</a>.</span></span></span><br /></span></span></span></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><strong>SOL</strong><span><span></span></span><span><span style="display:none;"></span></span></div>
+
+<div class="paragraph" style="text-align:left;"><span style='text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); '><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><strong style="">Pick all chess</strong><br /><span style=""></span>These actions/conditions could pick all chess, put them into their SOL.</span></span></span><br /><span style=""><span style=""><span style=""><ul style=""><li style="">Condition:Pick all chess, Action:Pick all chess</li></ul>Or pick specific type of chess by these </span></span></span></span></span></span><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style="">actions/conditions</span></span></span></span></span></span><br /></span></span></span></span></span></span></span><ul><li><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style="">Condition:Pick chess,&nbsp;Action:Pick chess</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span style=""></span></span></span></span></span></span></span></span></li></ul><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></div>
+
+<div class="paragraph" style="text-align:left;"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span><strong>Pick chess according to logical position</strong><br />These actions/conditions could pick a chess which at specific logical (X,Y,Z) position.</span></span></span></span><ul><li><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span>Condition:Pick chess at Logic X,Y,Z,&nbsp; Action:Pick chess at Logic X,Y,Z</span></span></span></span></li></ul><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span>These actions/conditions could pick all chess which at specific logical position.</span></span></span></span><ul><li><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span>Condition:Pick chess at LX,&nbsp; Action:Pick chess at LX</span></span></span></span></li><li><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span>Condition:Pick chess at LY,&nbsp; Action:Pick chess at LY</span></span></span></span></li><li><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span>Condition:Pick chess at LZ,&nbsp; Action:Pick chess at LZ</span></span></span></span></li></ul><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span>These actions/conditions could pick chess at specific logical (X,Y) position.</span></span></span></span><ul><li><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span>Condition:Pick chess at Logic X,Y,&nbsp; Action:Pick chess at Logic X,Y</span></span></span></span><br /></li><li><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span></span></span></span></span>Condition:Pick chess inside a square, <span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span>Action:Pick chess inside a square</span></span></span></span><br /></li></ul></div>
+
+<div class="paragraph" style="text-align:left;"><span style='text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); '><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style=""><span style=""><span style=""><strong style="">Pick chess</strong><strong> above tiles</strong><br /><span style=""></span></span></span><span style=""><span style=""><span style=""><span style=""></span></span></span></span></span></span><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style=""><span style=""><span style="">These actions/conditions could pick chess above based tile.<br /><span style=""></span><ul style=""><li style="">Condition:Pick chess above tile,&nbsp; Action:Pick chess above tile</li><li style="">Condition:Pick chess above tile UID, Action:Pick chess above tile UID</li></ul>The UID parameter in "Condition:Pick chess above tile UID",  or "Action:Pick chess above tile UID" could be an UID number, or an UID  list in json string (for example, "[300, 301, 302, 303]"). User could  use <a style="" title="" href="rex_ginstgroup.html">instance group plugin</a>'s "Expression:GroupToString" directly to assign multiple tiles.<br /><span style=""></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></div>
+
+<div class="paragraph" style="text-align:left;"><span style='text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); '><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><strong>Pick neighbor chess</strong><br /><a title="" target="_blank" href="https://onedrive.live.com/redir?resid=7497FD5EC94476E!551&amp;authkey=!AMJfIWTBD5dhOWo&amp;ithint=file%2c.capx">Sample capx</a><br /><span></span>These actions/conditions could pick neighbor chess.<br /><ul><li>Condition:Pick neighbor chess,&nbsp; Action:Pick neighbor chess</li></ul>The direction parameter to (-1) would pick neighbors from all directions.<br /><span>Or use "</span>Expression:DIR2UID"<span></span> to get the neighbor chess (uid) by origin chess uid and direction.<span><br /><span></span></span>"Condition:Are neighbors (UID)" could be used to test two chess are neighbor or not.<br /><span>The code direction </span>could be get in layout plugin (<a style="" title="" href="http://c2rexplugins.weebly.com/rex_board_squaretx.html">rex_board_squareTx</a>, or <a style="" title="" href="http://c2rexplugins.weebly.com/rex_board_hextx.html">rex_board_hexTx</a>).</span></span></span></span></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Logical position and chess UID</strong><br /><span>These expressions could get logical position by chess UID, return (-1) if the chess is not on the board.<br /></span><ul><li>Expression:UID2LX </li><li>Expression:UID2LY </li><li>Expression:UID2LZ</li></ul><span></span><span>To get UID from logical position, use</span> <span>"</span>Expression:LXYZ2UID", return (-1) if this position has no chess.<br /></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Z-index</strong><br /><span></span>"Expression:LZ2UID" could get the chess at a z-index above other chess assign by uid. i.e. the same logical (x,y) but different z-index.<br />"Expression:LXY2ZCnt", "Expression:UID2ZCnt"  could be used to get the number of chess at the same logical  (x,y) position (with different z-index, of course).</div>
+
+<div class="paragraph" style="text-align:left;"><strong>Get physical position</strong><br /><span>These expressions could get physical position by logical position, or chess. Return (-1) for invalid value caused by out of boundary, or chess does not exist.<br /></span><ul><li>Expression:LXY2PX</li><li>Expression:LXY2PY </li><li>Expression:LXYZ2PX</li><li>Expression:LXYZ2PY</li><li>Expression:UID2PX</li><li>Expression:UID2PY</li></ul>These expressions could get the nearest physical position of valid logical position. It could help to get valid dropping point of chess.<br /><span></span><ul><li>Expression:PXY2NearestPX</li><li>Expression:PXY2NearestPY</li></ul>"Condition:Point is in board" could be used to test a physical is in a board or not.<span></span><br /><span></span></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Angle or distance of chess</strong><br /><span>"</span>Expression:UID2LA" could get the angle of logical axis from Origin chess to FaceTo chess, return (-1) for invalid angle. <span>For example, </span>the valid angles in square board are 0, 90, 180, 270.<br /><span>"</span>Expression:LogicDistance" could get logical distance of two chess, return (-1) if chess are not on the board. </div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><span style='text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); '><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><strong style="">Wrap</strong><br /><a style="" title="" target="_blank" href="https://onedrive.live.com/redir?resid=7497FD5EC94476E!988&amp;authkey=!AHykHMNgrlyZjkc&amp;ithint=file%2ccapx">Sample capx</a><br />Set "Wrap" in properties table to "Yes", or set by </span></span></span></span></span></span></span></span></span><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style="">"</span></span>Action:Set wrap mode"</span> could wrap this board. The leftmost tile will become the neighbor of rightmost tile. It will </span></span></span></span></span></span>effect the result of picking neighbors.</span></span><br /></span></span></div>
+
+<div><div class="wsite-image wsite-image-border-thin " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a>
+<img src="uploads/1/4/2/6/14264557/180823351.png" alt="图片" style="width:100%;max-width:324px" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<div class="paragraph" style="text-align:left;"><span style='text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); '><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="">This image is the result of picking neighbors in 8x8 </span><span style="">hexagonal board with "Wrap" to "Yes".<br /></span></span></span></span></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><strong>String symbol chess </strong><br /><a target="_blank" href="https://onedrive.live.com/redir?resid=7497FD5EC94476E!2186&amp;authkey=!ABdwrpLIbniQkJg&amp;ithint=file%2ccapx">Sample capx</a><br />A chess could be an instance, or replaced by a <em>unique string symbol</em> to reduce the amount of instances.<br />Call "Action:Add chess by UID" to add a string symbol into this board. Do NOT uses symbol string which composed by number characters ( "0" - "9" ) only, these kinds of string will be used in C2 engine for UID table of instances.<br /><span><span>Although string symbol is not a real instance, it still could use these expressions</span></span><ul><li>Get logical position (x, y, z) by ( Expression:UID2LX , Expression:UID2LY , Expression:UID2LZ )</li><li>Get string symbol at logic position by Expression:LXYZ2UID, or Expression:LZ2UID</li><li>Get ideal physical position (x, y) by ( Expression:UID2PX, Expression:UID2PY )</li><li>Get string symbol at physical position (x, y) by Expression:PXY2UID</li></ul></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Infinity board</strong><br /><a target="_blank" href="https://onedrive.live.com/redir?resid=7497FD5EC94476E!2413&amp;authkey=!ABq8xUOuGuFpcec&amp;ithint=file%2ccapx">Sample capx</a><br />Set property "Infinity" to "Yes" to become an infinity board. In this mode-<ul><li>There are not boundaries (board width or board height), chess could be place at any logic position.</li><li>Wrap mode is ignored,</li><li>Some actions or conditions are not supported like <span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span>"Action:Fill tiles".</span></span></span></span></li></ul></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><strong style="">Save&amp;Load</strong><br />This plugin support official save/load system, so that it could be saved&amp;loaded automatically.</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div></div>
+</div>
+			</div>
+		</div>
+		<div id="footer">
+			<div id="footer-content">Create a <a target="_top" href="http://www.weebly.com/">free web site</a> with <a target="_top" href="http://www.weebly.com/" title="免费网站">Weebly</a></div>
+		</div>
+	</div>
+	
+	<div class="navmobile-wrapper">
+		<div id="navmobile" class="nav"><ul class="wsite-menu-default">
+		<li id="pg608562111965458717" class="wsite-menu-item-wrap">
+			<a
+					href="index.html"
+				class="wsite-menu-item"
+				>
+				Home
+			</a>
+			
+		</li>
+		<li id="pg771034414327920939" class="wsite-menu-item-wrap">
+			<a
+					href="map.html"
+				class="wsite-menu-item"
+				>
+				Map
+			</a>
+			
+		</li>
+		<li id="pg807633210476052296" class="wsite-menu-item-wrap">
+			<a
+					href="tutorialtemplates.html"
+				class="wsite-menu-item"
+				>
+				Tutorial/Templates
+			</a>
+			
+		</li>
+		<li id="pg462747272431172124" class="wsite-menu-item-wrap">
+			<a
+					href="news.html"
+				class="wsite-menu-item"
+				>
+				News
+			</a>
+			
+		</li>
+		<li id="pg661412759227518685" class="wsite-menu-item-wrap">
+			<a
+					href="about.html"
+				class="wsite-menu-item"
+				>
+				About
+			</a>
+			
+		</li>
+</ul>
+</div>
+	</div>
+
+</div>
+
+
+<script language="javascript" src="files/theme/plugins.js"></script>	 
+<script language="javascript" src="files/theme/custom.js"></script>
+<script language="javascript" src="files/theme/mobile.js"></script>	
+
+
+		<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-50390733-1', 'weebly.com');
+  ga('send', 'pageview');
+
+</script>
+	</body>
+</html>

@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>rex_parse_leaderboard - Rex's plugins for Construct2</title>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+		<meta name="google-site-verification" content="AbKU1w_lq8tjMKAN0yt_O0WFqwDr4zH5bHiXJEpyErI" />
+		<link id="wsite-base-style" rel="stylesheet" type="text/css" href="http://cdn2.editmysite.com/css/sites.css?buildTime=1234" />
+<link rel="stylesheet" type="text/css" href="http://cdn1.editmysite.com/editor/libraries/fancybox/fancybox.css?1234" />
+<link rel="stylesheet" type="text/css" href="http://cdn2.editmysite.com/css/social-icons.css?buildtime=1234" media="screen,projection" />
+<link rel="stylesheet" type="text/css" href="files/main_style.css?1469150796" title="wsite-theme-css" />
+<link href='http://fonts.googleapis.com/css?family=Raleway:400,300,200,700&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+<link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,700,400italic,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,700,400italic,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+<style type='text/css'>
+.wsite-elements.wsite-not-footer div.paragraph, .wsite-elements.wsite-not-footer p, .wsite-elements.wsite-not-footer .product-block .product-title, .wsite-elements.wsite-not-footer .product-description, .wsite-elements.wsite-not-footer .wsite-form-field label, .wsite-elements.wsite-not-footer .wsite-form-field label, #wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {font-family:"Open Sans" !important;}
+#wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {}
+.wsite-elements.wsite-footer div.paragraph, .wsite-elements.wsite-footer p, .wsite-elements.wsite-footer .product-block .product-title, .wsite-elements.wsite-footer .product-description, .wsite-elements.wsite-footer .wsite-form-field label, .wsite-elements.wsite-footer .wsite-form-field label{}
+.wsite-elements.wsite-not-footer h2, .wsite-elements.wsite-not-footer .product-long .product-title, .wsite-elements.wsite-not-footer .product-large .product-title, .wsite-elements.wsite-not-footer .product-small .product-title, #wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {font-family:"Open Sans" !important;}
+#wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {}
+.wsite-elements.wsite-footer h2, .wsite-elements.wsite-footer .product-long .product-title, .wsite-elements.wsite-footer .product-large .product-title, .wsite-elements.wsite-footer .product-small .product-title{}
+#wsite-title {}
+.wsite-menu-default a {}
+.wsite-menu a {}
+.wsite-image div, .wsite-caption {}
+.galleryCaptionInnerText {}
+.fancybox-title {}
+.wslide-caption-text {}
+.wsite-phone {}
+.wsite-headline {}
+.wsite-headline-paragraph {}
+.wsite-button-inner {}
+.wsite-not-footer blockquote {}
+.wsite-footer blockquote {}
+.blog-header h2 a {}
+#wsite-content h2.wsite-product-title {}
+.wsite-product .wsite-product-price a {}
+</style>
+
+		<script><!--
+var STATIC_BASE = '//cdn1.editmysite.com/';
+var STYLE_PREFIX = 'wsite';
+//-->
+</script>
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js'></script>
+
+<script type="text/javascript" src="http://cdn2.editmysite.com/js/lang/zh/stl.js?buildTime=1234&"></script>
+<script src="http://cdn2.editmysite.com/js/site/main.js?buildTime=1234"></script><script type="text/javascript">_W.configDomain = "www.weebly.com";</script><script>_W.relinquish && _W.relinquish()</script>
+<script type="text/javascript" src="http://cdn2.editmysite.com/js/lang/zh/stl.js?buildTime=1234&"></script><script> _W.themePlugins = [];</script><script type="text/javascript"><!--
+	var IS_ARCHIVE = 1;
+	
+	(function(jQuery){
+		function initFlyouts(){
+			initPublishedFlyoutMenus(
+				[{"id":"608562111965458717","title":"Home","url":"index.html","target":"","nav_menu":false},{"id":"771034414327920939","title":"Map","url":"map.html","target":"","nav_menu":false},{"id":"807633210476052296","title":"Tutorial\/Templates","url":"tutorialtemplates.html","target":"","nav_menu":false},{"id":"462747272431172124","title":"News","url":"news.html","target":"","nav_menu":false},{"id":"661412759227518685","title":"About","url":"about.html","target":"","nav_menu":false}],
+				"186671334793751596",
+				'',
+				'active',
+				false,
+				{"navigation\/item":"<li {{#id}}id=\"{{id}}\"{{\/id}} class=\"wsite-menu-item-wrap\">\n\t<a\n\t\t{{^nav_menu}}\n\t\t\thref=\"{{url}}\"\n\t\t{{\/nav_menu}}\n\t\t{{#target}}\n\t\t\ttarget=\"{{target}}\"\n\t\t{{\/target}}\n\t\t{{#membership_required}}\n\t\t\tdata-membership-required=\"{{.}}\"\n\t\t{{\/membership_required}}\n\t\tclass=\"wsite-menu-item\"\n\t\t>\n\t\t{{{title_html}}}\n\t<\/a>\n\t{{#has_children}}{{> navigation\/flyout\/list}}{{\/has_children}}\n<\/li>\n","navigation\/flyout\/list":"<div class=\"wsite-menu-wrap\" style=\"display:none\">\n\t<ul class=\"wsite-menu\">\n\t\t{{#children}}{{> navigation\/flyout\/item}}{{\/children}}\n\t<\/ul>\n<\/div>\n","navigation\/flyout\/item":"<li {{#id}}id=\"{{id}}\"{{\/id}}\n\tclass=\"wsite-menu-subitem-wrap {{#is_current}}wsite-nav-current{{\/is_current}}\"\n\t>\n\t<a\n\t\t{{^nav_menu}}\n\t\t\thref=\"{{url}}\"\n\t\t{{\/nav_menu}}\n\t\t{{#target}}\n\t\t\ttarget=\"{{target}}\"\n\t\t{{\/target}}\n\t\tclass=\"wsite-menu-subitem\"\n\t\t>\n\t\t<span class=\"wsite-menu-title\">\n\t\t\t{{{title_html}}}\n\t\t<\/span>{{#has_children}}<span class=\"wsite-menu-arrow\">&gt;<\/span>{{\/has_children}}\n\t<\/a>\n\t{{#has_children}}{{> navigation\/flyout\/list}}{{\/has_children}}\n<\/li>\n"},
+				{}
+			)
+		}
+		if (jQuery) {
+			jQuery(document).ready(function() { jQuery(initFlyouts); });
+		}else{
+			if (Prototype.Browser.IE) window.onload = initFlyouts;
+			else document.observe('dom:loaded', initFlyouts);
+		}
+	})(window._W && _W.jQuery)
+//-->
+</script>
+		
+		<script
+  type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script "text/x-mathjax-config">
+MathJax.Hub.Config({
+	TeX: { extensions: [
+		"autoload-all.js"
+	]}
+}); </script>
+<script "text/x-mathjax-config">
+	MathJax.Hub.Register.StartupHook("TeX Jax Ready", function () {
+		MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{ cancel: ["Extension","cancel"] });
+	});
+</script>
+<script type="text/javascript">(function(d,s,id){var z=d.createElement(s);z.type="text/javascript";z.id=id;z.async=true;z.src="http://static.zotabox.com/8/e/8e2816f3964c02518b40c1e9ba84b04e/widgets.js";var sz=d.getElementsByTagName(s)[0];sz.parentNode.insertBefore(z,sz)}(document,"script","zb-embed-code"));</script>
+	</head>
+	<body class="no-header  wsite-theme-light  wsite-page-rex_parse_leaderboard full-width-on "><div class="body-wrap">
+	
+	<div id="header">
+		<div class="nav-trigger hamburger">
+			<div class="open-btn">
+				<span class="mobile"></span>
+				<span class="mobile"></span>
+				<span class="mobile"></span>
+			</div>
+		</div>
+		<div id="sitename"><span class="wsite-logo">
+
+	<a href="">
+	
+	<span id="wsite-title">Rex's plugins for Construct2</span>
+	
+	</a>
+
+</span></div>
+	</div>
+
+	<div id="wrapper">
+		<div class="bg-wrapper">
+			<div id="navigation"><ul class="wsite-menu-default">
+		<li id="pg608562111965458717" class="wsite-menu-item-wrap">
+			<a
+					href="index.html"
+				class="wsite-menu-item"
+				>
+				Home
+			</a>
+			
+		</li>
+		<li id="pg771034414327920939" class="wsite-menu-item-wrap">
+			<a
+					href="map.html"
+				class="wsite-menu-item"
+				>
+				Map
+			</a>
+			
+		</li>
+		<li id="pg807633210476052296" class="wsite-menu-item-wrap">
+			<a
+					href="tutorialtemplates.html"
+				class="wsite-menu-item"
+				>
+				Tutorial/Templates
+			</a>
+			
+		</li>
+		<li id="pg462747272431172124" class="wsite-menu-item-wrap">
+			<a
+					href="news.html"
+				class="wsite-menu-item"
+				>
+				News
+			</a>
+			
+		</li>
+		<li id="pg661412759227518685" class="wsite-menu-item-wrap">
+			<a
+					href="about.html"
+				class="wsite-menu-item"
+				>
+				About
+			</a>
+			
+		</li>
+</ul>
+</div>
+			<div id="content-wrapper">
+				<div id="content"><div id='wsite-content' class='wsite-elements wsite-not-footer'>
+<h2 class="wsite-content-title" style="text-align:left;"><span style='text-decoration:none; font-style:normal; font-weight:400; color:rgb(255, 255, 255); '><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(255, 255, 255); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(255, 255, 255); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(255, 255, 255); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(255, 255, 255); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(255, 255, 255); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(255, 255, 255); "></span><span style=""></span></span></span><span style=""><span style=""><span style=""></span></span></span></span></span></span><span style=""><span style=""><span style=""><span style=""><span style=""><span style="">rex_parse_leaderboard</span></span></span></span></span></span></span></h2>
+
+<div class="paragraph" style="text-align:left;"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><a target="_blank" href="https://dl.dropboxusercontent.com/u/5779181/C2Repo/Zip/plugins/rex_parse_leaderboard.7z">Plugin</a>,<span><span><span> <a target="_blank" href="https://dl.dropboxusercontent.com/u/5779181/C2Repo/rex_parse_leaderboard.html">ACE table</a></span></span></span></span></span></span></span></span></span></span></span></span></span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>, </span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><a target="_blank" href="https://www.scirra.com/forum/plugin-firebase_t121776">Discussion thread</a></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><br />Dependence: </span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><a target="_blank" href="rex_parse_initialize.html">rex_parse_initialize</a><br /></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><strong><font size="3">Introduction</font></strong></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><br />Leader board built on <a target="_blank" href="https://parse.com/">parse</a>.</span></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><span style='text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); '><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span><span><span> <font size="3"><strong><a title="" target="_blank" href="https://www.scirra.com/tutorials/1465/leader-board-tutorial-using-rexrainbow-parse-plugin">Tutorial by Jomo</a></strong></font></span></span></span></span></span></span></span></span></span></span></span></span></span><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""></span></span></span></span></span></span></span></span></span></span></span></span></span><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></div>
+
+<div class="paragraph" style="text-align:left;"><span style='text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); '><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="display:none;">_</span></span></span></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><span style='text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); '><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><strong><font size="3">Usage</font></strong><a title="" target="_blank" href="https://onedrive.live.com/redir?resid=7497FD5EC94476E!536&amp;authkey=!AHOh24sxVxcT6VQ&amp;ithint=file%2c.capx"><span><span class="rangySelectionBoundary" style="line-height: 0; display: none;" id="selectionBoundary_1419609309025_9500896465766738"><br /></span></span></a><br /><a title="" target="_blank" href="https://onedrive.live.com/redir?resid=7497FD5EC94476E!1899&amp;authkey=!AJN7HWFRxb7484w&amp;ithint=file%2ccapx">Sample capx</a><br /></span></span></span></span></span></span></span></span></div>
+
+<div class="paragraph" style="text-align:left;"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><strong>Prepare</strong></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><br />Add&nbsp;</span></span></span></span></span></span></span></span></span></span></span></span><a target="_blank" href="rex_parse_initialize.html">rex_parse_initialize</a><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"> to set api id and javascript key.</span></span></span></span></span></span></span></span></span></span></span></span><br /></div>
+
+<div class="paragraph" style="text-align:left;"><span style='text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); '><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><strong>Class name</strong><br />"Class name" in properties table is the "table name" shown at dash board.<br /></span></span></div>
+
+<div class="paragraph" style="text-align:left;"><span style='text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); '><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><strong>Authentication (optional)</strong><br /></span></span></span><span style=""><span style=""><span style="">It is recommend that getting UserID after login in </span></span></span><span style=""><span style=""><span style=""></span></span></span><span style=""><span style=""><span style=""><a href="rex_parse_authentication.html">rex_parse_authentication</a>. <br /></span></span></span></span></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><span style='text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); '><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><strong>Get score</strong><br />Call "</span></span></span><span style=""><span style=""><span style=""></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>Action:Get score<span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); ">" to get score.</span></span></span></span></span></span></span><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><br /><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style="">"</span></span></span></span></span></span><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>Condition:On get score<span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style="">" will be triggered while got score</span></span></span></span></span></span></span></span></span></span></span></span></span></span>, otherwise "</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>Condition:On get score error<span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style="">" will be triggered. <br />Get score by "</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>Expression:LastScore<span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style="">" under <span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style="">"</span></span></span></span></span></span><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>Condition:On get score<span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style="">"</span></span></span></span></span></span></span></span></span></span></span></span></span></span> condition. Return "" if requested userID does not exist.<br /></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></div>
+
+<div class="paragraph" style="text-align:left;"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><strong>Post score</strong><br />Call "</span></span></span>Action:Post score" to post score. It will save the score and other information indexed by UserID</span></span></span></span></span></span></span><span><span><span><span><span><span><span>.<br /><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>"</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>Condition:On post complete<span><span><span><span><span><span><span><span><span><span><span><span><span><span>" will be triggered if posting successful</span></span></span></span></span></span></span></span></span></span></span></span></span></span>ly, otherwise "Condition:On post error" will be triggered.<br />Get posted player name by "Expression:PostPlayerName" under <span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>"</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>Condition:On post complete<span><span><span><span><span><span><span><span><span><span><span><span><span><span>"</span></span></span></span></span></span></span></span></span></span></span></span></span></span> condition.</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><br /></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Post score if greater/if less</strong><br /><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><a target="_blank" href="https://1drv.ms/u/s!Am5HlOzVf0kHk1QpL8ik3qZ8qbHo">Sample capx</a><br />Call "</span></span></span>Action:Post score" and set "</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>Post condition" to "if greater", "if less" to post the score only when the new score is greater/less then saved score.<br /></div>
+
+<div class="paragraph" style="text-align:left;"><span>&#65279;</span><strong>Add to score</strong><span>&#65279;</span><br /><a target="_blank" href="https://1drv.ms/u/s!Am5HlOzVf0kHk1acUilGlVhMvYdL">Sample capx</a><br />Call "Action:Add to score" to add a value to current score.<br /></div>
+
+<div class="paragraph" style="text-align:left;"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><strong>Order</strong><br />Set "</span>Order" to "Large to small" or "Small to large" in properties table, to order these score of players.<br />It will sort by updated time if the score are the same.</span></span></span></span></span></span><br /></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><span style='text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); '><strong><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><strong><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style=""><strong>Requesting ranks</strong></span></span></strong></span></strong></span></div>
+
+<div class="paragraph" style="text-align:left;"><span style='text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); '><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><strong>Pages</strong><br />Ordered scores would be divided into pages, which started from page 0 (0-based).<br /></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span> <span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style="">C</span></span>all  one of these action </span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style="">to fetch score of players  from parse server. </span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><br /><ul><li>Action:Update current page</li><li>Action:Turn to next page</li><li>Action:Turn to previous page</li><li>Action:Turn to page</li></ul><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style="">"Condition:On update" will be triggered when received data, then use "</span></span><span style=""><span style=""></span></span>Condition:For
+   each rank", or "Condition:For each rank in a range" to retrieval 
+score   of each fetched player. During this condition, get information 
+by  these  expressions-<br /></span><ul style=""><li style="">Expression:PageIndex<span style=""></span>, which is 0-based<br /></li><li style=""><span style="">Expression:CurPlayerRank , which is 0-based</span><br /><span style=""></span></li><li style=""><span style="">Expression:CurPlayerName</span></li><li style=""><span style="">Expression:CurPlayerScore</span></li><li style=""><span style="">Expression:CurExtraData</span></li><li style=""><span style="">Expression:CurUserID</span></li></ul></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><ul style=""><li style=""><span style=""></span>Expression:LoopIndex, loop index in current for each loop<br /></li></ul></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style="">Or get these information by rank index with these expressions-<br /><span style=""></span><ul style=""><li style="">Expression:Rank2PlayerName</li><li style="">Expression:Rank2PlayerScore</li><li style="">Expression:Rank2ExtraData</li></ul>The rank index could be got by UserID with "<span style=""></span><span style=""></span>Expression:UserID2Rank"<span style=""></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style="">.<br /></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style="">Get ranking count of current page by "</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>Expression:CurRankingCount". <span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style="">"</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>Condition:Last page<span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style="">" will return true if current page is the last page, which the ranking count is less than requested count. </span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></div>
+
+<div class="paragraph" style="text-align:left;"><span style='text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); '><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><strong>Start from any index</strong><br />Call "</span><span style=""></span>Action:Request in a range<span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); ">" to show ranks started from any index. Do not mix this action with pages type request described at previous section.<br /></span><span style=""></span><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style="">Other things are the same as "Pages" in previous section.</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><span style='text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); '><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><strong>Leader board ID</strong><br /></span><span style=""></span><span style="">The plugin could support more then one leader board by changing the ID of leader board to other value. These leader board are put under the same "class name".<br />The initial ID of leader board</span> is set at "ID" field in properties table. Call "</span><span style=""></span>Action:Set leaderboard ID" to change the ID of current leader board. It will also reset the page index to 0, and clean all data.<br /></span></span></span></span></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><span style='text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); '><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><strong>Get ranking of UserID</strong><br /><a title="" target="_blank" href="https://onedrive.live.com/redir?resid=7497FD5EC94476E!2006&amp;authkey=!AJWvBUuWTOF37P4&amp;ithint=file%2ccapx">Sample capx</a><br />Call "</span></span><span style=""><span style=""></span></span>Action:Get ranking<span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); ">" to send a request to get ranking of UserID. <br />"</span></span><span style=""><span style=""></span></span>Condition:On get ranking" will triggered while found ranking of UserID, otherwise "Condition:On get ranking error" will be triggered.<br />Get the result of ranking by "Expression:LastRanking", requested UserID by "Expression:LastUserID" under <span style=""><span style="">"</span></span><span style=""><span style=""></span></span>Condition:On get ranking". Return (-1) </span></span></span><span style=""><span style=""><span style=""></span></span></span><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""> if requested userID does not exist.</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><span style='text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); '><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><strong>Get users count</strong><br /></span></span></span></span></span></span></span><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""></span></span></span></span></span></span></span><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""> Call "</span></span></span></span></span></span><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""></span></span></span></span></span></span>Action:Get users count<span style=""><span style=""><span style=""><span style=""><span style=""><span style=""></span>"</span></span></span></span></span> to get total saved users count.</span></span></span></span></span></span><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""> The result is put at "</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span style=""><span style=""><span style=""><span style=""></span></span></span></span>Expression:LastUsersCount<span style=""><span style=""><span style=""><span style="">"  under "</span></span></span></span><span style=""><span style=""><span style=""><span style=""></span></span></span></span>Condition:On get users count<span style=""><span style=""><span style=""><span style="">", otherwise  "</span></span></span></span><span style=""><span style=""><span style=""><span style=""></span></span></span></span>Condition:On get users count error<span style=""><span style=""><span style=""><span style="">" if requesting failed.</span></span></span></span><br /></span></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><span style='text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); '><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><strong>Access permission</strong><br /><a target="_blank" href="https://onedrive.live.com/redir?resid=7497FD5EC94476E!2017&amp;authkey=!AO0uUKOSoCJt5gI&amp;ithint=file%2ccapx">Sample capx</a><br />Set property "Access permission" to "Private" to protect score item only could be wrote by owner after authentication. Raise </span><span style=""></span><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style="">"Condition:On post error"</span></span></span></span></span></span></span></span></span></span></span></span></span> if item is not allowed to write.<br />Set <span style="">"Access permission" to "</span><span style=""></span><span style="">Public" or </span></span></span><span style=""><span style=""><span style="">authentication</span></span></span> fail will not set any <span style=""><span style=""><span style="">access permission. i.e any user could over write all score items.<br /></span></span></span></span></span></span></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><span style='text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); '><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><strong>Compare with <a href="rex_firebase_leaderboard.html">rex_firebase_leaderboard plugin</a></strong><br />This plugin and </span><span style=""></span><span style=""><span style=""><span style=""><a style="" href="rex_firebase_leaderboard.html">rex_firebase_leaderboard plugin</a></span></span> both support leader board. This plugin </span><span style=""></span>is good at showing ranks in pages, but this plugin could not show </span></span><span style=""><span style=""></span></span><span style=""><span style=""><span style=""><span style="">top N ranks in real-time</span></span>.<br /></span></span></span></span></span></span></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div></div>
+</div>
+			</div>
+		</div>
+		<div id="footer">
+			<div id="footer-content">Create a <a target="_top" href="http://www.weebly.com/">free web site</a> with <a target="_top" href="http://www.weebly.com/" title="免费网站">Weebly</a></div>
+		</div>
+	</div>
+	
+	<div class="navmobile-wrapper">
+		<div id="navmobile" class="nav"><ul class="wsite-menu-default">
+		<li id="pg608562111965458717" class="wsite-menu-item-wrap">
+			<a
+					href="index.html"
+				class="wsite-menu-item"
+				>
+				Home
+			</a>
+			
+		</li>
+		<li id="pg771034414327920939" class="wsite-menu-item-wrap">
+			<a
+					href="map.html"
+				class="wsite-menu-item"
+				>
+				Map
+			</a>
+			
+		</li>
+		<li id="pg807633210476052296" class="wsite-menu-item-wrap">
+			<a
+					href="tutorialtemplates.html"
+				class="wsite-menu-item"
+				>
+				Tutorial/Templates
+			</a>
+			
+		</li>
+		<li id="pg462747272431172124" class="wsite-menu-item-wrap">
+			<a
+					href="news.html"
+				class="wsite-menu-item"
+				>
+				News
+			</a>
+			
+		</li>
+		<li id="pg661412759227518685" class="wsite-menu-item-wrap">
+			<a
+					href="about.html"
+				class="wsite-menu-item"
+				>
+				About
+			</a>
+			
+		</li>
+</ul>
+</div>
+	</div>
+
+</div>
+
+
+<script language="javascript" src="files/theme/plugins.js"></script>	 
+<script language="javascript" src="files/theme/custom.js"></script>
+<script language="javascript" src="files/theme/mobile.js"></script>	
+
+
+		<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-50390733-1', 'weebly.com');
+  ga('send', 'pageview');
+
+</script>
+	</body>
+</html>

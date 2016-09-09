@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>rex_firebase_savedata - Rex's plugins for Construct2</title>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+		<meta name="google-site-verification" content="AbKU1w_lq8tjMKAN0yt_O0WFqwDr4zH5bHiXJEpyErI" />
+		<link id="wsite-base-style" rel="stylesheet" type="text/css" href="http://cdn2.editmysite.com/css/sites.css?buildTime=1234" />
+<link rel="stylesheet" type="text/css" href="http://cdn1.editmysite.com/editor/libraries/fancybox/fancybox.css?1234" />
+<link rel="stylesheet" type="text/css" href="http://cdn2.editmysite.com/css/social-icons.css?buildtime=1234" media="screen,projection" />
+<link rel="stylesheet" type="text/css" href="files/main_style.css?1469150796" title="wsite-theme-css" />
+<link href='http://fonts.googleapis.com/css?family=Raleway:400,300,200,700&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+<link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,700,400italic,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,700,400italic,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+<style type='text/css'>
+.wsite-elements.wsite-not-footer div.paragraph, .wsite-elements.wsite-not-footer p, .wsite-elements.wsite-not-footer .product-block .product-title, .wsite-elements.wsite-not-footer .product-description, .wsite-elements.wsite-not-footer .wsite-form-field label, .wsite-elements.wsite-not-footer .wsite-form-field label, #wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {font-family:"Open Sans" !important;}
+#wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {}
+.wsite-elements.wsite-footer div.paragraph, .wsite-elements.wsite-footer p, .wsite-elements.wsite-footer .product-block .product-title, .wsite-elements.wsite-footer .product-description, .wsite-elements.wsite-footer .wsite-form-field label, .wsite-elements.wsite-footer .wsite-form-field label{}
+.wsite-elements.wsite-not-footer h2, .wsite-elements.wsite-not-footer .product-long .product-title, .wsite-elements.wsite-not-footer .product-large .product-title, .wsite-elements.wsite-not-footer .product-small .product-title, #wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {font-family:"Open Sans" !important;}
+#wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {}
+.wsite-elements.wsite-footer h2, .wsite-elements.wsite-footer .product-long .product-title, .wsite-elements.wsite-footer .product-large .product-title, .wsite-elements.wsite-footer .product-small .product-title{}
+#wsite-title {}
+.wsite-menu-default a {}
+.wsite-menu a {}
+.wsite-image div, .wsite-caption {}
+.galleryCaptionInnerText {}
+.fancybox-title {}
+.wslide-caption-text {}
+.wsite-phone {}
+.wsite-headline {}
+.wsite-headline-paragraph {}
+.wsite-button-inner {}
+.wsite-not-footer blockquote {}
+.wsite-footer blockquote {}
+.blog-header h2 a {}
+#wsite-content h2.wsite-product-title {}
+.wsite-product .wsite-product-price a {}
+</style>
+
+		<script><!--
+var STATIC_BASE = '//cdn1.editmysite.com/';
+var STYLE_PREFIX = 'wsite';
+//-->
+</script>
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js'></script>
+
+<script type="text/javascript" src="http://cdn2.editmysite.com/js/lang/zh/stl.js?buildTime=1234&"></script>
+<script src="http://cdn2.editmysite.com/js/site/main.js?buildTime=1234"></script><script type="text/javascript">_W.configDomain = "www.weebly.com";</script><script>_W.relinquish && _W.relinquish()</script>
+<script type="text/javascript" src="http://cdn2.editmysite.com/js/lang/zh/stl.js?buildTime=1234&"></script><script> _W.themePlugins = [];</script><script type="text/javascript"><!--
+	var IS_ARCHIVE = 1;
+	
+	(function(jQuery){
+		function initFlyouts(){
+			initPublishedFlyoutMenus(
+				[{"id":"608562111965458717","title":"Home","url":"index.html","target":"","nav_menu":false},{"id":"771034414327920939","title":"Map","url":"map.html","target":"","nav_menu":false},{"id":"807633210476052296","title":"Tutorial\/Templates","url":"tutorialtemplates.html","target":"","nav_menu":false},{"id":"462747272431172124","title":"News","url":"news.html","target":"","nav_menu":false},{"id":"661412759227518685","title":"About","url":"about.html","target":"","nav_menu":false}],
+				"628800426819439118",
+				'',
+				'active',
+				false,
+				{"navigation\/item":"<li {{#id}}id=\"{{id}}\"{{\/id}} class=\"wsite-menu-item-wrap\">\n\t<a\n\t\t{{^nav_menu}}\n\t\t\thref=\"{{url}}\"\n\t\t{{\/nav_menu}}\n\t\t{{#target}}\n\t\t\ttarget=\"{{target}}\"\n\t\t{{\/target}}\n\t\t{{#membership_required}}\n\t\t\tdata-membership-required=\"{{.}}\"\n\t\t{{\/membership_required}}\n\t\tclass=\"wsite-menu-item\"\n\t\t>\n\t\t{{{title_html}}}\n\t<\/a>\n\t{{#has_children}}{{> navigation\/flyout\/list}}{{\/has_children}}\n<\/li>\n","navigation\/flyout\/list":"<div class=\"wsite-menu-wrap\" style=\"display:none\">\n\t<ul class=\"wsite-menu\">\n\t\t{{#children}}{{> navigation\/flyout\/item}}{{\/children}}\n\t<\/ul>\n<\/div>\n","navigation\/flyout\/item":"<li {{#id}}id=\"{{id}}\"{{\/id}}\n\tclass=\"wsite-menu-subitem-wrap {{#is_current}}wsite-nav-current{{\/is_current}}\"\n\t>\n\t<a\n\t\t{{^nav_menu}}\n\t\t\thref=\"{{url}}\"\n\t\t{{\/nav_menu}}\n\t\t{{#target}}\n\t\t\ttarget=\"{{target}}\"\n\t\t{{\/target}}\n\t\tclass=\"wsite-menu-subitem\"\n\t\t>\n\t\t<span class=\"wsite-menu-title\">\n\t\t\t{{{title_html}}}\n\t\t<\/span>{{#has_children}}<span class=\"wsite-menu-arrow\">&gt;<\/span>{{\/has_children}}\n\t<\/a>\n\t{{#has_children}}{{> navigation\/flyout\/list}}{{\/has_children}}\n<\/li>\n"},
+				{}
+			)
+		}
+		if (jQuery) {
+			jQuery(document).ready(function() { jQuery(initFlyouts); });
+		}else{
+			if (Prototype.Browser.IE) window.onload = initFlyouts;
+			else document.observe('dom:loaded', initFlyouts);
+		}
+	})(window._W && _W.jQuery)
+//-->
+</script>
+		
+		<script
+  type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script "text/x-mathjax-config">
+MathJax.Hub.Config({
+	TeX: { extensions: [
+		"autoload-all.js"
+	]}
+}); </script>
+<script "text/x-mathjax-config">
+	MathJax.Hub.Register.StartupHook("TeX Jax Ready", function () {
+		MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{ cancel: ["Extension","cancel"] });
+	});
+</script>
+<script type="text/javascript">(function(d,s,id){var z=d.createElement(s);z.type="text/javascript";z.id=id;z.async=true;z.src="http://static.zotabox.com/8/e/8e2816f3964c02518b40c1e9ba84b04e/widgets.js";var sz=d.getElementsByTagName(s)[0];sz.parentNode.insertBefore(z,sz)}(document,"script","zb-embed-code"));</script>
+	</head>
+	<body class="no-header  wsite-theme-light  wsite-page-rex_firebase_savedata full-width-on "><div class="body-wrap">
+	
+	<div id="header">
+		<div class="nav-trigger hamburger">
+			<div class="open-btn">
+				<span class="mobile"></span>
+				<span class="mobile"></span>
+				<span class="mobile"></span>
+			</div>
+		</div>
+		<div id="sitename"><span class="wsite-logo">
+
+	<a href="">
+	
+	<span id="wsite-title">Rex's plugins for Construct2</span>
+	
+	</a>
+
+</span></div>
+	</div>
+
+	<div id="wrapper">
+		<div class="bg-wrapper">
+			<div id="navigation"><ul class="wsite-menu-default">
+		<li id="pg608562111965458717" class="wsite-menu-item-wrap">
+			<a
+					href="index.html"
+				class="wsite-menu-item"
+				>
+				Home
+			</a>
+			
+		</li>
+		<li id="pg771034414327920939" class="wsite-menu-item-wrap">
+			<a
+					href="map.html"
+				class="wsite-menu-item"
+				>
+				Map
+			</a>
+			
+		</li>
+		<li id="pg807633210476052296" class="wsite-menu-item-wrap">
+			<a
+					href="tutorialtemplates.html"
+				class="wsite-menu-item"
+				>
+				Tutorial/Templates
+			</a>
+			
+		</li>
+		<li id="pg462747272431172124" class="wsite-menu-item-wrap">
+			<a
+					href="news.html"
+				class="wsite-menu-item"
+				>
+				News
+			</a>
+			
+		</li>
+		<li id="pg661412759227518685" class="wsite-menu-item-wrap">
+			<a
+					href="about.html"
+				class="wsite-menu-item"
+				>
+				About
+			</a>
+			
+		</li>
+</ul>
+</div>
+			<div id="content-wrapper">
+				<div id="content"><div id='wsite-content' class='wsite-elements wsite-not-footer'>
+<h2 class="wsite-content-title" style="text-align:left;"><font color="#d5d5d5"><span style="font-weight: 400;"><span><span><span><span><span><span><span>rex_firebase_savedata</span></span></span></span></span></span></span></span></font><br /></h2>
+
+<div class="paragraph" style="text-align:left;"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><a target="_blank" href="https://dl.dropboxusercontent.com/u/5779181/C2Repo/Zip/plugins/rex_firebase_savedata.7z">Plugin</a>,<span><span><span> <a target="_blank" href="https://dl.dropboxusercontent.com/u/5779181/C2Repo/rex_firebase_savedata.html">ACE table</a>, </span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><a href="https://www.scirra.com/forum/plugin-firebase_t121776" target="_blank">Discussion thread</a></span></span></span></span></span></span></span><br />Dependence: </span></span></span></span></span></span></span></span></span></span></span></span></span></span><span style="font-weight:400"><span style="font-weight:400"><span><span><span><span><span>one of these plugins</span></span></span></span></span></span></span></span></span></span><ul><li><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span><span><span><span><span><a href="rex_firebase_api.html">rex_firebase_api</a></span></span></span></span></span></span></span></span></span></span></li><li><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span><span><span><span><span><a href="rex_firebase_apiv3.html">rex_firebase_apiV3</a></span></span></span></span></span></span></span></span></span></span></span></li><li><a href="rex_wilddog_api.html">rex_wilddog_api<span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span><span><span><span><span></span></span></span></span></span></span></span></span></span></span></span></a></li></ul></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><span style='text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); '><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><strong><font size="3">Introduction</font></strong><br /></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span style=""><span style=""></span></span></span></span><span style=""><span style=""></span></span>Save slot on </span></span><span style=""><span style=""></span></span><span style=""><span style=""><span style=""><span style=""><a style="" title="" target="_blank" href="https://www.firebase.com/">firebase</a></span></span>.<br />It is designed to save game status on cloud (</span></span></span></span><span style=""><span style=""><span style=""><span style=""></span></span></span></span><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><a style="" title="" target="_blank" href="https://www.firebase.com/">firebase</a></span></span></span></span></span></span>).</span></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><strong><font size="3">Usage</font></strong><br /><a target="_blank" href="https://onedrive.live.com/redir?resid=7497FD5EC94476E!2365&amp;authkey=!AF0pjCi2EazCbEM&amp;ithint=file%2ccapx">Sample capx</a>, <a target="_blank" href="https://onedrive.live.com/redir?resid=7497FD5EC94476E%212370&amp;authkey=%21ADpnzvPNBk_U0So&amp;ithint=file%2ccapx">sample capx v3</a></span></span></span></span><br /></div>
+
+<div class="paragraph" style="text-align:left;"><span style='text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); '><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><strong>Concept</strong><br /></span></span></span></span></span></span>Each user has a dedicate slots set. Each slot has two parts - header and body.</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""> </span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><br /></span></span></span></span></span></span></span></span></span></span></span></div>
+
+<div class="paragraph" style="text-align:left;"><span style='text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); '><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><strong>Header</strong><br />Header is a 1d hash table, i.e. key - value pair, to describe </span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>this slot, all headers of this owner user would be read at the same time to be indexes of these slots.</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></div>
+
+<div class="paragraph" style="text-align:left;"><span style='text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); '><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style=""><span style=""><span style=""><span style=""><span style=""><strong>Body</strong><br />Body is a 1d hash table, to put main saving data. Read a specific slot body by slot nam</span></span></span></span></span>e.</span></span></span></span></span></span></span></span></span></span></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><span style='text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); '><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><strong>Prepare</strong><br /></span></span></span></span><span style=""><span style=""><span style=""><span style=""></span></span></span></span><a title="" style="" href="https://www.firebase.com/signup/?utm_medium=web&amp;utm_source=firechat">Sign up here for a free account</a> and get a domain URL like</span></span></span></span></span></span></span></span></span></span></span></span></div>
+
+<blockquote style="text-align:left;"><span style='text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); '><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); ">https://&lt;YOUR-FIREBASE&gt;.firebaseio.com</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></blockquote>
+
+<div class="paragraph" style="text-align:left;"><span style='text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); '><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); ">Set this domain URL into "</span></span><span style=""><span style=""></span></span>Domain" in properties table.</span></span></span><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""></span></span></span></span></span></span></span></span></span></span></span></span></span></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><span style='text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); '><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><strong>Set Owner<br /></strong></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span style=""></span></span></span></span></span></span></span><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""></span></span></span></span></span></span></span><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style="">Each user has a dedicate slots set.</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span> So first step is to set the owner user by "Action:Set owner". The parameter "User ID" might come from <a title="" href="rex_firebase_authentication.html">authentication</a>.</span></span></span></span></span></div>
+
+<div class="paragraph" style="text-align:left;"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><strong>Save</strong><br />Follow these steps to save a slot on cloud after set owner done.</span></span></span></span></span></span></span></span><ol><li><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400">Call "</span></span></span></span></span>Action:Set value" to assign value with key into header or body </span></span></span><br /></li><li><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400">Call "Action:Save" to push this slot on cloud by slot name. </span></span></span></li><li><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400">"Condition:On save complete" will be triggered if saving completed, otherwise "Condition:On save error" will be triggered.</span></span></span><br /></li></ol><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400">Older slot will be updated by these new key-value pairs.</span></span></span><br /></div>
+
+<div class="paragraph" style="text-align:left;"><span style='text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); '><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><strong>Load</strong><br />Follow these steps to load a slot from cloud after set owner done.<br /></span></span></span></span></span></span></span></span></span></span><ol><li><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); ">Call "</span></span></span></span></span></span></span></span><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""></span></span></span></span></span></span></span></span>Action:Get all headers" to get all headers of this owner user. "</span><span style=""></span>Condition:On get headers" will be triggered if get all headers. </span></li><li><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); ">There are two ways to retrieve header for showing them at UI. One is using "Condition:For each header", then get each slot name by "Expression:CurSlotName", and get value by "Expression:CurHeaderValue" with a key. The other is to get headers JSON string by "Expression:HeadersToJSON", put this string into <a title="" target="_blank" href="https://www.scirra.com/forum/plugin-json-import-export-generate-edit-inspect_t100042">Yann's JSON plugin</a>.</span></li><li><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); ">Call "Action:Get body" with a slot name parameter to get selected slot body. "Condition:On get body complete" will be triggered if get body. "Condition:On get body error" will be triggered if got nothing.</span></li><li><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); ">After got body completed, get body value by "Expression:BodyValue" with a key. Or get body JSON string by "Expression:BodyToJSON".</span></li></ol>If there is only a slot, the slot body could be load directly by step 3, 4.<br /><span></span></span></span></span></span></span></span></span></span></span></span></div>
+
+<div class="paragraph" style="text-align:left;"><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); ">After got headers, there are some conditions could be used to test if a slot is existed.<br /></span></span><ul><li><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); ">"</span><span style=""></span>Condition:Empty" is used to test if there is no slot.</span></li><li><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "> "Condition:Is occupied" is used to test if a specific slot had been used.</span></li></ul></span></span></span></div>
+
+<div class="paragraph" style="text-align:left;"><span style='text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); '><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><strong>Clean</strong><br />Call "</span><span style=""></span>Action:Clean slot" to clean a slot, header and body. Or call "Action:Clean all slots" to clean all slots.<br />"Condition:On clean complete" will be triggered if clean completed, otherwise "Condition:On clean error" will be triggered.<br /></span></span></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Security Rules<br /></strong><a target="_blank" href="https://1drv.ms/u/s%21Am5HlOzVf0kHk1uF5STtZ2Rfezaf">Sample capx</a><br /></div>
+
+<div class="paragraph" style="text-align:left;">Only author can write and read his own data. Assume that the sub-doman is "save-data", replace it according to your project.<br /></div>
+
+<div id="492268470664278178"><div><style type="text/css">
+	#element-d35fd93e-4a4d-4ecf-8bf1-ea88d2a89e95 .code-editor--light {
+  padding: 20px 0px;
+}
+#element-d35fd93e-4a4d-4ecf-8bf1-ea88d2a89e95 .code-editor--light .header {
+  padding: 10px 20px;
+  font-weight: bold;
+  border-left: 1px solid #C9CDCF;
+  border-right: 1px solid #C9CDCF;
+  border-top: 1px solid #C9CDCF;
+  background-color: #F8F8F8;
+  color: #363B3E;
+}
+#element-d35fd93e-4a4d-4ecf-8bf1-ea88d2a89e95 .code-editor--light .header .paragraph {
+  margin: 0;
+}
+#element-d35fd93e-4a4d-4ecf-8bf1-ea88d2a89e95 .code-editor--light .body-code {
+  margin: 0;
+  border: 1px solid #C9CDCF;
+  background-color: #FFFFFF;
+  color: #666C70;
+}
+#element-d35fd93e-4a4d-4ecf-8bf1-ea88d2a89e95 .code-editor--dark {
+  padding: 20px 0px;
+}
+#element-d35fd93e-4a4d-4ecf-8bf1-ea88d2a89e95 .code-editor--dark .ace-tomorrow-night-eighties {
+  background-color: #363B3E;
+}
+#element-d35fd93e-4a4d-4ecf-8bf1-ea88d2a89e95 .code-editor--dark .header {
+  padding: 10px 20px;
+  font-weight: bold;
+  border-left: 1px solid #E0E1E2;
+  border-right: 1px solid #E0E1E2;
+  border-top: 1px solid #E0E1E2;
+  background-color: #666C70;
+  color: #FFFFFF;
+}
+#element-d35fd93e-4a4d-4ecf-8bf1-ea88d2a89e95 .code-editor--dark .header .paragraph {
+  margin: 0;
+}
+#element-d35fd93e-4a4d-4ecf-8bf1-ea88d2a89e95 .code-editor--dark .body-code {
+  margin: 0;
+  border: 1px solid #E0E1E2;
+  background-color: #363B3E;
+  color: #F8F8F8;
+}
+
+</style><div id="element-d35fd93e-4a4d-4ecf-8bf1-ea88d2a89e95" data-platform-element-id="270170748587580171-1.3.1" class="platform-element-contents">
+	<div class="code-editor--dark">
+    <div class="header">
+        <div class="paragraph" style="text-align:left;">{"rules":<br />&nbsp;&nbsp;&nbsp; {"save-data":<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {"$user":<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {".read":"auth.uid === $user",<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ".write":"auth.uid === $user"}<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />&nbsp;&nbsp;&nbsp; }<br />}<br /></div>
+    </div>
+    <div class="body-code">
+        <pre class="editor"></pre>
+    </div>
+</div>
+</div>
+<div style="clear:both;"></div><script type="text/javascript" class="element-script">function setupElement492268470664278178() {
+	var elementRequire = require || _wAMD.require;
+	elementRequire([
+		'jquery',
+		'underscore',
+		'backbone',
+		'util/platform/elements/PlatformElement',
+		'util/platform/elements/PlatformElementSettings'
+	], function(
+		$,
+		_,
+		Backbone,
+		PlatformElement,
+		PlatformElementSettings
+	) {
+		var dependencies = ["\/\/marketplace.editmysite.com\/elements\/270170748587580171-1.3.1\/assets\/built-dependencies.js"] || [];
+		var platform_element_id = "270170748587580171-1.3.1";
+
+		if (typeof _W.loadedPlatformDependencies === 'undefined') {
+			_W.loadedPlatformDependencies = [];
+		}
+
+		if (typeof _W.platformElements === 'undefined') {
+			_W.platformElements = [];
+		}
+
+		if (typeof _W.platformElements[platform_element_id] === 'undefined') {
+			_W.platformElements[platform_element_id] = {};
+			_W.platformElements[platform_element_id].deferredObject = new $.Deferred();
+			_W.platformElements[platform_element_id].deferredPromise = _W.platformElements[platform_element_id].deferredObject.promise();
+		}
+
+		if(_.intersection(_W.loadedPlatformDependencies, dependencies).length !== dependencies.length){
+			_.reduce(dependencies, function(promise, nextScript){
+				_W.loadedPlatformDependencies.push(nextScript);
+				return promise.then(function(){
+					return $.getScript(nextScript);
+				});
+			}, $().promise()).then(function(){
+				_W.platformElements[platform_element_id].deferredObject.resolve();
+			});
+		}
+
+		if (dependencies.length === 0){
+			_W.platformElements[platform_element_id].deferredObject.resolve();
+		}
+
+		_W.platformElements[platform_element_id].deferredPromise.done(function(){
+			var _ElementDefinition = /**
+ * This is required for element rendering to be possible
+ * @type {PlatformElement}
+ */
+(function() {
+    var CodeBlock = PlatformElement.extend({
+        /**
+         * PlatformElement initialization. Code to setup the 
+         * element should go here.
+         */
+        initialize: function() {
+            this.theme = this.settings.get('style') == 'light' ? 'tomorrow' : 'tomorrow_night_eighties';
+
+            /**
+             * The script are not defined in the manifest 
+             * so that 6mb of scripts are not loaded. This 
+             * allows us to load only scripts needed for 
+             * each language and theme.
+             */
+            $.when(
+                $.getScript(this.assets_path + 'ace/mode-' + this.settings.get('syntax') + '.js'),
+                $.getScript(this.assets_path + 'ace/theme-' + this.theme + '.js')
+            ).done(function() {
+                /**
+                 * After the scripts are loaded, we can
+                 * then make the call to setup the editor.
+                 */
+                this.setUpEditor();
+            }.bind(this));
+
+            this.checkIfHeader();
+            this.modifyStyle();
+        },
+
+        /**
+         * Function to setup the editor
+         */
+        setUpEditor: function() {
+            this.editor = ace.edit(this.$el.find('.editor')[0]);
+            this.editor.setValue(this.settings.get('code'), -1);
+
+            this.editor.setTheme('ace/theme/' + this.theme);
+            this.editor.getSession().setMode('ace/mode/' + this.settings.get('syntax'));
+
+            this.editor.container.style.lineHeight = '26px';
+            this.editor.container.style.fontSize = '14px';
+            this.editor.renderer.setScrollMargin(20, 20);
+            this.editor.renderer.setPadding(20);
+
+            this.editor.setOptions({
+                'highlightActiveLine': this.settings.get('highlight_active_line'),
+                'readOnly': true,
+                'showPrintMargin': false
+            });
+
+            this.editor.renderer.setOptions({
+                'showGutter': this.settings.get('show_gutter'),
+                'maxLines': this.settings.get('max_lines'),
+                'minLines': this.settings.get('min_lines'),
+                'displayIndentGuides': this.settings.get('display_indent_guides')
+            });
+
+            this.editor.session.setOptions({
+                'wrap': this.settings.get('line_wrap'),
+                'useSoftTabs': this.settings.get('use_soft_tabs'),
+                'useWorker': false // workers rebind window.require so we need to disable them
+            });
+        },
+
+        /**
+         * Checks settings for whether or not the header
+         * should be displayed or not.
+         */
+        checkIfHeader: function() {
+            if(this.settings.get('display_header') == "0") {
+                this.$el.find('.header').remove();
+            }
+        },
+
+        /**
+         * Minor style tweaks done on some elements
+         */
+        modifyStyle: function() {
+            this.$el.find('.ace_content').css({
+                'margin-left': '20px'
+            });
+        }
+    });
+
+    return CodeBlock;
+})();;
+
+			if (typeof _ElementDefinition == 'undefined' || typeof _ElementDefinition == 'null') {
+				var _ElementDefinition = PlatformElement.extend({});
+			}
+
+			var _Element = _ElementDefinition.extend({
+				initialize: function() {
+					// we still want to call the initialize function defined by the developer
+					// however, we don't want to call it until placeholders have been replaced
+					this.placeholderInterval = setInterval(function() {
+						// so use setInterval to check for placeholders.
+						if (this.$('.platform-element-child-placeholder').length == 0) {
+							clearInterval(this.placeholderInterval);
+							this.constructor.__super__.initialize.apply(this);
+						}
+					}.bind(this), 100);
+				}
+			});
+
+			_Element.prototype.settings = new PlatformElementSettings({"max_lines_each":[{"max_lines_index":0},{"max_lines_index":1},{"max_lines_index":2},{"max_lines_index":3},{"max_lines_index":4},{"max_lines_index":5},{"max_lines_index":6},{"max_lines_index":7},{"max_lines_index":8},{"max_lines_index":9},{"max_lines_index":10},{"max_lines_index":11},{"max_lines_index":12},{"max_lines_index":13},{"max_lines_index":14},{"max_lines_index":15},{"max_lines_index":16},{"max_lines_index":17},{"max_lines_index":18},{"max_lines_index":19},{"max_lines_index":20},{"max_lines_index":21},{"max_lines_index":22},{"max_lines_index":23},{"max_lines_index":24},{"max_lines_index":25},{"max_lines_index":26},{"max_lines_index":27},{"max_lines_index":28},{"max_lines_index":29}],"min_lines_each":[{"min_lines_index":0}],"style":"dark","display_header":false,"syntax":"javascript","code":"{\"rules\":\n    {\"save-data\":\n        {\"$user\":\n            {\".read\":\"auth.uid === $user\",\n              \".write\":\"auth.uid === $user\"}\n        }\n    }\n}","highlight_active_line":false,"show_gutter":false,"display_indent_guides":false,"line_wrap":false,"use_soft_tabs":true,"max_lines":30,"min_lines":1});
+			_Element.prototype.settings.page_element_id = "492268470664278178";
+			
+			_Element.prototype.element_id = "d35fd93e-4a4d-4ecf-8bf1-ea88d2a89e95";
+			_Element.prototype.user_id = "14264557";
+			_Element.prototype.site_id = "850176657268961371";
+			_Element.prototype.assets_path = "//marketplace.editmysite.com/elements/270170748587580171-1.3.1/assets/";
+			new _Element({
+				el: '#element-d35fd93e-4a4d-4ecf-8bf1-ea88d2a89e95'
+			});
+		});
+	});
+}
+
+if (typeof document.documentElement.appReady == 'undefined') {
+	document.documentElement.appReady = 0;
+}
+
+if (document.documentElement.appReady || (window.inEditor && window.inEditor())) {
+	setupElement492268470664278178();
+} else if (document.createEvent && document.addEventListener) {
+	document.addEventListener('appReady', setupElement492268470664278178, false);
+} else {
+	document.documentElement.attachEvent('onpropertychange', function(event){
+		if (event.propertyName == 'appReady') {
+			setupElement492268470664278178();
+		}
+	});
+}
+
+</script></div></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div></div>
+</div>
+			</div>
+		</div>
+		<div id="footer">
+			<div id="footer-content">Create a <a target="_top" href="http://www.weebly.com/">free web site</a> with <a target="_top" href="http://www.weebly.com/" title="免费网站">Weebly</a></div>
+		</div>
+	</div>
+	
+	<div class="navmobile-wrapper">
+		<div id="navmobile" class="nav"><ul class="wsite-menu-default">
+		<li id="pg608562111965458717" class="wsite-menu-item-wrap">
+			<a
+					href="index.html"
+				class="wsite-menu-item"
+				>
+				Home
+			</a>
+			
+		</li>
+		<li id="pg771034414327920939" class="wsite-menu-item-wrap">
+			<a
+					href="map.html"
+				class="wsite-menu-item"
+				>
+				Map
+			</a>
+			
+		</li>
+		<li id="pg807633210476052296" class="wsite-menu-item-wrap">
+			<a
+					href="tutorialtemplates.html"
+				class="wsite-menu-item"
+				>
+				Tutorial/Templates
+			</a>
+			
+		</li>
+		<li id="pg462747272431172124" class="wsite-menu-item-wrap">
+			<a
+					href="news.html"
+				class="wsite-menu-item"
+				>
+				News
+			</a>
+			
+		</li>
+		<li id="pg661412759227518685" class="wsite-menu-item-wrap">
+			<a
+					href="about.html"
+				class="wsite-menu-item"
+				>
+				About
+			</a>
+			
+		</li>
+</ul>
+</div>
+	</div>
+
+</div>
+
+
+<script language="javascript" src="files/theme/plugins.js"></script>	 
+<script language="javascript" src="files/theme/custom.js"></script>
+<script language="javascript" src="files/theme/mobile.js"></script>	
+
+
+		<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-50390733-1', 'weebly.com');
+  ga('send', 'pageview');
+
+</script>
+	</body>
+</html>

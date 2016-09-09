@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>rex_scenarioJEditor - Rex's plugins for Construct2</title>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+		<meta name="google-site-verification" content="AbKU1w_lq8tjMKAN0yt_O0WFqwDr4zH5bHiXJEpyErI" />
+		<link id="wsite-base-style" rel="stylesheet" type="text/css" href="http://cdn2.editmysite.com/css/sites.css?buildTime=1234" />
+<link rel="stylesheet" type="text/css" href="http://cdn1.editmysite.com/editor/libraries/fancybox/fancybox.css?1234" />
+<link rel="stylesheet" type="text/css" href="http://cdn2.editmysite.com/css/social-icons.css?buildtime=1234" media="screen,projection" />
+<link rel="stylesheet" type="text/css" href="files/main_style.css?1469150796" title="wsite-theme-css" />
+<link href='http://fonts.googleapis.com/css?family=Raleway:400,300,200,700&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+<link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,700,400italic,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,700,400italic,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+<style type='text/css'>
+.wsite-elements.wsite-not-footer div.paragraph, .wsite-elements.wsite-not-footer p, .wsite-elements.wsite-not-footer .product-block .product-title, .wsite-elements.wsite-not-footer .product-description, .wsite-elements.wsite-not-footer .wsite-form-field label, .wsite-elements.wsite-not-footer .wsite-form-field label, #wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {font-family:"Open Sans" !important;}
+#wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {}
+.wsite-elements.wsite-footer div.paragraph, .wsite-elements.wsite-footer p, .wsite-elements.wsite-footer .product-block .product-title, .wsite-elements.wsite-footer .product-description, .wsite-elements.wsite-footer .wsite-form-field label, .wsite-elements.wsite-footer .wsite-form-field label{}
+.wsite-elements.wsite-not-footer h2, .wsite-elements.wsite-not-footer .product-long .product-title, .wsite-elements.wsite-not-footer .product-large .product-title, .wsite-elements.wsite-not-footer .product-small .product-title, #wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {font-family:"Open Sans" !important;}
+#wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {}
+.wsite-elements.wsite-footer h2, .wsite-elements.wsite-footer .product-long .product-title, .wsite-elements.wsite-footer .product-large .product-title, .wsite-elements.wsite-footer .product-small .product-title{}
+#wsite-title {}
+.wsite-menu-default a {}
+.wsite-menu a {}
+.wsite-image div, .wsite-caption {}
+.galleryCaptionInnerText {}
+.fancybox-title {}
+.wslide-caption-text {}
+.wsite-phone {}
+.wsite-headline {}
+.wsite-headline-paragraph {}
+.wsite-button-inner {}
+.wsite-not-footer blockquote {}
+.wsite-footer blockquote {}
+.blog-header h2 a {}
+#wsite-content h2.wsite-product-title {}
+.wsite-product .wsite-product-price a {}
+</style>
+
+		<script><!--
+var STATIC_BASE = '//cdn1.editmysite.com/';
+var STYLE_PREFIX = 'wsite';
+//-->
+</script>
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js'></script>
+
+<script type="text/javascript" src="http://cdn2.editmysite.com/js/lang/zh/stl.js?buildTime=1234&"></script>
+<script src="http://cdn2.editmysite.com/js/site/main.js?buildTime=1234"></script><script type="text/javascript">_W.configDomain = "www.weebly.com";</script><script>_W.relinquish && _W.relinquish()</script>
+<script type="text/javascript" src="http://cdn2.editmysite.com/js/lang/zh/stl.js?buildTime=1234&"></script><script> _W.themePlugins = [];</script><script type="text/javascript"><!--
+	var IS_ARCHIVE = 1;
+	
+	(function(jQuery){
+		function initFlyouts(){
+			initPublishedFlyoutMenus(
+				[{"id":"608562111965458717","title":"Home","url":"index.html","target":"","nav_menu":false},{"id":"771034414327920939","title":"Map","url":"map.html","target":"","nav_menu":false},{"id":"807633210476052296","title":"Tutorial\/Templates","url":"tutorialtemplates.html","target":"","nav_menu":false},{"id":"462747272431172124","title":"News","url":"news.html","target":"","nav_menu":false},{"id":"661412759227518685","title":"About","url":"about.html","target":"","nav_menu":false}],
+				"344256885263255079",
+				'',
+				'active',
+				false,
+				{"navigation\/item":"<li {{#id}}id=\"{{id}}\"{{\/id}} class=\"wsite-menu-item-wrap\">\n\t<a\n\t\t{{^nav_menu}}\n\t\t\thref=\"{{url}}\"\n\t\t{{\/nav_menu}}\n\t\t{{#target}}\n\t\t\ttarget=\"{{target}}\"\n\t\t{{\/target}}\n\t\t{{#membership_required}}\n\t\t\tdata-membership-required=\"{{.}}\"\n\t\t{{\/membership_required}}\n\t\tclass=\"wsite-menu-item\"\n\t\t>\n\t\t{{{title_html}}}\n\t<\/a>\n\t{{#has_children}}{{> navigation\/flyout\/list}}{{\/has_children}}\n<\/li>\n","navigation\/flyout\/list":"<div class=\"wsite-menu-wrap\" style=\"display:none\">\n\t<ul class=\"wsite-menu\">\n\t\t{{#children}}{{> navigation\/flyout\/item}}{{\/children}}\n\t<\/ul>\n<\/div>\n","navigation\/flyout\/item":"<li {{#id}}id=\"{{id}}\"{{\/id}}\n\tclass=\"wsite-menu-subitem-wrap {{#is_current}}wsite-nav-current{{\/is_current}}\"\n\t>\n\t<a\n\t\t{{^nav_menu}}\n\t\t\thref=\"{{url}}\"\n\t\t{{\/nav_menu}}\n\t\t{{#target}}\n\t\t\ttarget=\"{{target}}\"\n\t\t{{\/target}}\n\t\tclass=\"wsite-menu-subitem\"\n\t\t>\n\t\t<span class=\"wsite-menu-title\">\n\t\t\t{{{title_html}}}\n\t\t<\/span>{{#has_children}}<span class=\"wsite-menu-arrow\">&gt;<\/span>{{\/has_children}}\n\t<\/a>\n\t{{#has_children}}{{> navigation\/flyout\/list}}{{\/has_children}}\n<\/li>\n"},
+				{}
+			)
+		}
+		if (jQuery) {
+			jQuery(document).ready(function() { jQuery(initFlyouts); });
+		}else{
+			if (Prototype.Browser.IE) window.onload = initFlyouts;
+			else document.observe('dom:loaded', initFlyouts);
+		}
+	})(window._W && _W.jQuery)
+//-->
+</script>
+		
+		<script
+  type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script "text/x-mathjax-config">
+MathJax.Hub.Config({
+	TeX: { extensions: [
+		"autoload-all.js"
+	]}
+}); </script>
+<script "text/x-mathjax-config">
+	MathJax.Hub.Register.StartupHook("TeX Jax Ready", function () {
+		MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{ cancel: ["Extension","cancel"] });
+	});
+</script>
+<script type="text/javascript">(function(d,s,id){var z=d.createElement(s);z.type="text/javascript";z.id=id;z.async=true;z.src="http://static.zotabox.com/8/e/8e2816f3964c02518b40c1e9ba84b04e/widgets.js";var sz=d.getElementsByTagName(s)[0];sz.parentNode.insertBefore(z,sz)}(document,"script","zb-embed-code"));</script>
+	</head>
+	<body class="no-header  wsite-theme-light  wsite-page-rex_scenariojeditor full-width-on "><div class="body-wrap">
+	
+	<div id="header">
+		<div class="nav-trigger hamburger">
+			<div class="open-btn">
+				<span class="mobile"></span>
+				<span class="mobile"></span>
+				<span class="mobile"></span>
+			</div>
+		</div>
+		<div id="sitename"><span class="wsite-logo">
+
+	<a href="">
+	
+	<span id="wsite-title">Rex's plugins for Construct2</span>
+	
+	</a>
+
+</span></div>
+	</div>
+
+	<div id="wrapper">
+		<div class="bg-wrapper">
+			<div id="navigation"><ul class="wsite-menu-default">
+		<li id="pg608562111965458717" class="wsite-menu-item-wrap">
+			<a
+					href="index.html"
+				class="wsite-menu-item"
+				>
+				Home
+			</a>
+			
+		</li>
+		<li id="pg771034414327920939" class="wsite-menu-item-wrap">
+			<a
+					href="map.html"
+				class="wsite-menu-item"
+				>
+				Map
+			</a>
+			
+		</li>
+		<li id="pg807633210476052296" class="wsite-menu-item-wrap">
+			<a
+					href="tutorialtemplates.html"
+				class="wsite-menu-item"
+				>
+				Tutorial/Templates
+			</a>
+			
+		</li>
+		<li id="pg462747272431172124" class="wsite-menu-item-wrap">
+			<a
+					href="news.html"
+				class="wsite-menu-item"
+				>
+				News
+			</a>
+			
+		</li>
+		<li id="pg661412759227518685" class="wsite-menu-item-wrap">
+			<a
+					href="about.html"
+				class="wsite-menu-item"
+				>
+				About
+			</a>
+			
+		</li>
+</ul>
+</div>
+			<div id="content-wrapper">
+				<div id="content"><div id='wsite-content' class='wsite-elements wsite-not-footer'>
+<h2 class="wsite-content-title" style="text-align:left;"><span style="font-weight:400"><span></span></span>rex_scenarioJEditor<span style="font-weight:400"><span></span></span><br /></h2>
+
+<div class="paragraph" style="text-align:left;"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><a target="_blank" href="https://dl.dropboxusercontent.com/u/5779181/C2Repo/Zip/plugins/rex_scenarioJEditor.7z">Plugin</a>,<span><span><span> <a target="_blank" href="https://dl.dropboxusercontent.com/u/5779181/C2Repo/rex_scenarioJEditor.html">ACE table</a>, </span></span></span></span></span></span></span></span></span></span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><a href="https://www.scirra.com/forum/plugin-rex-comment_t125942" target="_blank">Discussion thread</a></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><br />Dependence: None</span></span></span></span></span></span></span></span><br /></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><strong><font size="3">Introduction</font></strong></span></span></span></span><br />Create Scenario-Json commands<span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400">. These commnds (script) could be saved into a string variable or an external text file.<br />Scenario-Json is the next generation of <a href="rex_scenario.html">rex_scenario plugin</a>.</span></span></span><br /></div>
+
+<div class="paragraph" style="text-align:left;"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><strong><font size="3">Motivation</font></strong></span></span></span></span><br /><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><a href="rex_scenario.html">rex_scenario plugin</a> runs external commands (script) in csv format, which can be edited in excel, open office, or google document. It could not handle control commands like <em>for loop, while, if..else if ... else..</em> well. So I tried to find another command (script) format with a better editor. Then I found that I could use C2 event sheet to be the external commands (script) editor, and save commands (script) in JSON format.<br />This rex_scenarioJEditor plugin provides actions/conditions/expressions to build external commands (script), then gets the content of commands (script) in JSON string, runs it in </span></span></span><a href="rex_scenariojengine.html">rex_scenarioJEngine object</a><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400">.</span></span></span><br /></div>
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a>
+<img src="uploads/1/4/2/6/14264557/449724539.png" alt="图片" style="width:100%;max-width:685px" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><span style="font-weight:400"><span style="font-weight:400"><strong><font size="3">Usage</font></strong></span></span><br /></div>
+
+<div class="paragraph" style="text-align:left;">Uses these <span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400">actions/conditions/expressions to build commands. Get commands by "</span></span></span><strong>Expression:Content</strong>" in a JSON string.<br /></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><span style="font-weight:400"><span style="font-weight:400"><strong><font size="3">Basic - declare a scenarioJ function, run C2 function, wait timeout or wait signal</font></strong></span></span><br /><span id="selectionBoundary_1460566485065_4655803644687303">&#65279;</span><a target="_blank" href="https://onedrive.live.com/redir?resid=7497FD5EC94476E!2302&amp;authkey=!AMw-TZPXTvORoyY&amp;ithint=file%2ccapx">sample capx</a><span id="selectionBoundary_1460566485046_43450961657264586">&#65279;</span><br /></div>
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a>
+<img src="uploads/1/4/2/6/14264557/686297737.png" alt="图片" style="width:100%;max-width:605px" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Condition:On function</strong><br />Declare a function with an unique function name . Function is the first level of commands, all commands are put in a function body, excepted "Condition:On function". Nest function declarations are not allowed.</div>
+
+<div class="paragraph" style="text-align:left;"><strong>Action:Call C2 function</strong><br />Call a c2 function. Interface of this action is equal to "Action: Call function" of official function object.</div>
+
+<div class="paragraph" style="text-align:left;"><strong>Action:Wait</strong><br />Suspend current execution until time-out if the input parameter is a number, otherwise it will wait until a specific signal fired ("Action:Fire signal" in <a href="rex_scenariojengine.html">rex_scenarioJEngine object</a>)<br />Add a <a href="http://c2rexplugins.weebly.com/rex_timeline.html">rex_timeline plugin</a> into project if waiting time-out.<br /></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><strong><font size="3">Variable types - local variables, task variables, global variables</font></strong><br /><span id="selectionBoundary_1460566485065_4655803644687303">&#65279;</span><span id="selectionBoundary_1460566485046_43450961657264586">There are 3 kinds of variables with different scope - </span>local variables, task variables, global variables. All of them are index by a string name. i.e. a 1d dictionary. Variables can be wrote in commands, or read in expressions.<br /></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Local variables</strong><br />local variables will be created when program jumps into a function, destroyed them while left function. Parameters carried by a function call will be put into local variables.</div>
+
+<div class="paragraph" style="text-align:left;"><strong>Task variables</strong><br />Task variables are alive until the last command executed.<br /></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Global variables</strong><br />Global variables are alive until this rex_scenarioJEngine has been destroyed.<br /></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><span style="font-weight:400"><span style="font-weight:400"><strong><font size="3">Parameter types - number, raw string, mustache string, expression</font></strong></span></span><br /><span id="selectionBoundary_1460566485065_4655803644687303">&#65279;</span><a target="_blank" href="https://onedrive.live.com/redir?resid=7497FD5EC94476E!2297&amp;authkey=!APR9ic5ti-mrQe8&amp;ithint=file%2ccapx">sample capx</a><span id="selectionBoundary_1460566485046_43450961657264586">&#65279;</span><br /></div>
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a>
+<img src="uploads/1/4/2/6/14264557/167582846.png" alt="图片" style="width:100%;max-width:718px" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<div class="paragraph" style="text-align:left;">There are 4 types of a parameter-<ul><li>Number: a number, or an expression of C2 which returns a number</li><li>Raw string: a string without any pre-processing. Specifics this type by "Expression:Raw( string )"</li><li>Mustache string: a string with mustache pre-processing. Specifics this type by "Expression:Mustache( string )"</li><li>Expression string: a string, which will be evaluated during run-time to get an expression. Specifics this type by "Expression:Eval( string )"<br /></li></ul></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Default string type</strong><br />String will be treated as "Mustache string" if property "Mustache" sets to "Yes" (default is "Yes").</div>
+
+<div class="paragraph" style="text-align:left;"><strong>Mustache string</strong><br />Variables are noted in<ul><li>{{local.coin}} : replaced by local variable "coin"</li><li>{{task.coin}} : replaced by task variable "coin"</li><li>{{global.coin}} : replaced by global variable "coin"</li></ul>In this sample, the execution result of "{{global.coin}} + 1" will be "99 + 1" in string.</div>
+
+<div class="paragraph" style="text-align:left;"><strong>Expression string</strong><br />Expression string will be evaluated with javascript syntax, to get number or boolean value.<br />Variables are noted in<ul><li>local.coin : read value of local variable "coin"</li><li>task.coin : read value of task variable "coin"</li><li>global.coin : read value of global variable "coin"</li></ul>In this sample, the execution result of "global.coin + 1" will be 100 in number.<br /></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><span style="font-weight:400"><span style="font-weight:400"><strong><font size="3">Conditions -<br />If ,else if, else</font></strong></span></span><br /><span id="selectionBoundary_1460566485065_4655803644687303">&#65279;</span><a target="_blank" href="https://onedrive.live.com/redir?resid=7497FD5EC94476E!2289&amp;authkey=!AObFokF6NXFL9H0&amp;ithint=file%2ccapx">Sample capx</a><span id="selectionBoundary_1460566485046_43450961657264586">&#65279;</span><br /></div>
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a>
+<img src="uploads/1/4/2/6/14264557/850722987.png" alt="图片" style="width:100%;max-width:517px" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<div class="paragraph" style="text-align:left;">Add condition block by these conditions "Condition:If", "Condition:Else if", and "Condition:Else".<br />Parameter in these conditions will be treated as <strong>expression string</strong> by default.<br /></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><span style="font-weight:400"><span style="font-weight:400"><strong><font size="3">Switch</font></strong></span></span><br /><span id="selectionBoundary_1460566485065_4655803644687303">&#65279;</span><a target="_blank" href="https://onedrive.live.com/redir?resid=7497FD5EC94476E%212297&amp;authkey=%21APR9ic5ti-mrQe8&amp;ithint=file%2ccapx">Sample capx</a><span id="selectionBoundary_1460566485046_43450961657264586">&#65279;</span><br /></div>
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a>
+<img src="uploads/1/4/2/6/14264557/611332962.png" alt="图片" style="width:100%;max-width:553px" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<div class="paragraph" style="text-align:left;">Add conditions "Condition:Switch", "Condition:Case", and "Condition:Default" to create Switch block,<br />Parameter in "Condition:Switch" will be treated as <strong>expression string</strong> by default.<br />Parameter in "Condition:Case" will be treated as <strong>default string</strong> by default. i.e. mustache string or raw string, or put a number value directly.<br /></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><span style="font-weight:400"><span style="font-weight:400"><strong><font size="3">Looping -<br />For loop</font></strong></span></span><br /><span id="selectionBoundary_1460566485065_4655803644687303">&#65279;</span><a target="_blank" href="https://onedrive.live.com/redir?resid=7497FD5EC94476E!2289&amp;authkey=!AObFokF6NXFL9H0&amp;ithint=file%2ccapx">Sample capx</a><span id="selectionBoundary_1460566485046_43450961657264586">&#65279;</span><br /></div>
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a>
+<img src="uploads/1/4/2/6/14264557/752080337.png" alt="图片" style="width:100%;max-width:537px" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<div class="paragraph" style="text-align:left;">&nbsp;Add for loop block by "Condition:For". Commands under this for loop block will be ran repeated, Value of loop index is saved as local variable, which will start from "start" parameter, add "step" for each iterator, stop until the loop index <span><span>exceed "stop" parameter, or </span></span>get an "Action:Stop loop" command.<br /><span><span>In this sample: start=10, stop=13, step=1. The loop index will become 10, 11, 12, 13. </span></span><br />Parameter of loop index will be treated as <strong>default string</strong> by default. Others (start, stop, step) will be treated as <strong>expression string</strong> by default, or put a number value directly.<br /></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><span style="font-weight:400"><span style="font-weight:400"><strong><font size="3">While loop</font></strong></span></span><br /><span id="selectionBoundary_1460566485065_4655803644687303">&#65279;</span><a target="_blank" href="https://onedrive.live.com/redir?resid=7497FD5EC94476E!2291&amp;authkey=!AEPeudmAZNkWdGo&amp;ithint=file%2ccapx">Sample capx</a><span id="selectionBoundary_1460566485046_43450961657264586">&#65279;</span><br /></div>
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a>
+<img src="uploads/1/4/2/6/14264557/308211053.png" alt="图片" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<div class="paragraph" style="text-align:left;">&nbsp;Add while loop block by "Condition: While". Commands under this while loop block will be ran repeated until the continue condition return 0, or get an "Action:Stop loop" command.<br />Parameter of continue-condition will be treated as <strong>expression string</strong> by default, or sets to 1 to run this while loop always.<br /></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><span style="font-weight:400"><span style="font-weight:400"><strong><font size="3">Write variables</font></strong></span></span></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Default value of local variable</strong><br /><a target="_blank" href="https://onedrive.live.com/redir?resid=7497FD5EC94476E!2289&amp;authkey=!AObFokF6NXFL9H0&amp;ithint=file%2ccapx">sample capx</a><span id="selectionBoundary_1460566485046_43450961657264586">&#65279;</span></div>
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a>
+<img src="uploads/1/4/2/6/14264557/943019607.png" alt="图片" style="width:100%;max-width:492px" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<div class="paragraph" style="text-align:left;">Set default value of local variables by "Action:Set default value". It only affects when this local variable is not existed.<br />This command is useful for setting default value of input function parameters, since input function parameters will be stored into local variables.</div>
+
+<div class="paragraph" style="text-align:left;"><strong>Set value of variable</strong><br />Add command "Action:Set value" to set value to a specific local/task/global variables. Parameter of value will be treated as <strong>default string</strong> by default, or put a number value directly.<br /></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Add to variable</strong><br /><a target="_blank" href="https://onedrive.live.com/redir?resid=7497FD5EC94476E!2298&amp;authkey=!AMN5yszUJvEWyYU&amp;ithint=file%2ccapx">Sample capx</a><br />Add command "Action:Add to" to add a value to a specific local/task/global variables. Parameter of value will be treated as <strong>expression string</strong> by default, or put a number value directly.<br /></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><span style="font-weight:400"><span style="font-weight:400"><strong><font size="3">Exit</font></strong></span></span><br /><span id="selectionBoundary_1460566485065_4655803644687303">&#65279;</span><a target="_blank" href="https://onedrive.live.com/redir?resid=7497FD5EC94476E%212291&amp;authkey=%21AEPeudmAZNkWdGo&amp;ithint=file%2ccapx">Sample capx</a><span id="selectionBoundary_1460566485046_43450961657264586">&#65279;</span><br /></div>
+
+<div class="paragraph" style="text-align:left;">Command of leaving current loop (while or for loop) is "Action:Stop loop".<br />"Action:Stop function" will leave current function body back to previous function. It is equal to "return" instruction.<br />"Action:Stop task" will turn off current execution. "Condition:On task done" or "Condition:On any task done" of&nbsp;<a href="rex_scenariojengine.html">rex_scenarioJEngine</a> will be triggered.<br /></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><span style="font-weight:400"><span style="font-weight:400"><strong><font size="3">Start task</font></strong></span></span><br /><span id="selectionBoundary_1460566485065_4655803644687303">&#65279;</span><a target="_blank" href="https://onedrive.live.com/redir?resid=7497FD5EC94476E!2313&amp;authkey=!AP_XfK12zXfgH-I&amp;ithint=file%2ccapx">Sample capx</a><span id="selectionBoundary_1460566485046_43450961657264586">&#65279;</span><br />Add command "Action:Start" to create a new task started from a function. Set task name to "" (empty string) will restart current task.<br />This command is similar with "Action: Call function". But command "Action: Call function" will push current scope into call-stack, command "Action:Start" will clean call-stack (i.e. re-start call-stack).<br /></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 10px; overflow: hidden; width: 100%;"></div></div>
+
+<div><div style="height: 10px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><font size="4"><strong>Mustache</strong></font><br />Left delimiter and right delimiter could be assigned in properties table, or set by "Action:Set delimiters".<br /></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div></div>
+</div>
+			</div>
+		</div>
+		<div id="footer">
+			<div id="footer-content">Create a <a target="_top" href="http://www.weebly.com/">free web site</a> with <a target="_top" href="http://www.weebly.com/" title="免费网站">Weebly</a></div>
+		</div>
+	</div>
+	
+	<div class="navmobile-wrapper">
+		<div id="navmobile" class="nav"><ul class="wsite-menu-default">
+		<li id="pg608562111965458717" class="wsite-menu-item-wrap">
+			<a
+					href="index.html"
+				class="wsite-menu-item"
+				>
+				Home
+			</a>
+			
+		</li>
+		<li id="pg771034414327920939" class="wsite-menu-item-wrap">
+			<a
+					href="map.html"
+				class="wsite-menu-item"
+				>
+				Map
+			</a>
+			
+		</li>
+		<li id="pg807633210476052296" class="wsite-menu-item-wrap">
+			<a
+					href="tutorialtemplates.html"
+				class="wsite-menu-item"
+				>
+				Tutorial/Templates
+			</a>
+			
+		</li>
+		<li id="pg462747272431172124" class="wsite-menu-item-wrap">
+			<a
+					href="news.html"
+				class="wsite-menu-item"
+				>
+				News
+			</a>
+			
+		</li>
+		<li id="pg661412759227518685" class="wsite-menu-item-wrap">
+			<a
+					href="about.html"
+				class="wsite-menu-item"
+				>
+				About
+			</a>
+			
+		</li>
+</ul>
+</div>
+	</div>
+
+</div>
+
+
+<script language="javascript" src="files/theme/plugins.js"></script>	 
+<script language="javascript" src="files/theme/custom.js"></script>
+<script language="javascript" src="files/theme/mobile.js"></script>	
+
+
+		<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-50390733-1', 'weebly.com');
+  ga('send', 'pageview');
+
+</script>
+	</body>
+</html>

@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>rex_slg_movement - Rex's plugins for Construct2</title>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+		<meta name="google-site-verification" content="AbKU1w_lq8tjMKAN0yt_O0WFqwDr4zH5bHiXJEpyErI" />
+		<link id="wsite-base-style" rel="stylesheet" type="text/css" href="http://cdn2.editmysite.com/css/sites.css?buildTime=1234" />
+<link rel="stylesheet" type="text/css" href="http://cdn1.editmysite.com/editor/libraries/fancybox/fancybox.css?1234" />
+<link rel="stylesheet" type="text/css" href="http://cdn2.editmysite.com/css/social-icons.css?buildtime=1234" media="screen,projection" />
+<link rel="stylesheet" type="text/css" href="files/main_style.css?1469150796" title="wsite-theme-css" />
+<link href='http://fonts.googleapis.com/css?family=Raleway:400,300,200,700&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+<link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,700,400italic,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,700,400italic,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+<style type='text/css'>
+.wsite-elements.wsite-not-footer div.paragraph, .wsite-elements.wsite-not-footer p, .wsite-elements.wsite-not-footer .product-block .product-title, .wsite-elements.wsite-not-footer .product-description, .wsite-elements.wsite-not-footer .wsite-form-field label, .wsite-elements.wsite-not-footer .wsite-form-field label, #wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {font-family:"Open Sans" !important;}
+#wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {}
+.wsite-elements.wsite-footer div.paragraph, .wsite-elements.wsite-footer p, .wsite-elements.wsite-footer .product-block .product-title, .wsite-elements.wsite-footer .product-description, .wsite-elements.wsite-footer .wsite-form-field label, .wsite-elements.wsite-footer .wsite-form-field label{}
+.wsite-elements.wsite-not-footer h2, .wsite-elements.wsite-not-footer .product-long .product-title, .wsite-elements.wsite-not-footer .product-large .product-title, .wsite-elements.wsite-not-footer .product-small .product-title, #wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {font-family:"Open Sans" !important;}
+#wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {}
+.wsite-elements.wsite-footer h2, .wsite-elements.wsite-footer .product-long .product-title, .wsite-elements.wsite-footer .product-large .product-title, .wsite-elements.wsite-footer .product-small .product-title{}
+#wsite-title {}
+.wsite-menu-default a {}
+.wsite-menu a {}
+.wsite-image div, .wsite-caption {}
+.galleryCaptionInnerText {}
+.fancybox-title {}
+.wslide-caption-text {}
+.wsite-phone {}
+.wsite-headline {}
+.wsite-headline-paragraph {}
+.wsite-button-inner {}
+.wsite-not-footer blockquote {}
+.wsite-footer blockquote {}
+.blog-header h2 a {}
+#wsite-content h2.wsite-product-title {}
+.wsite-product .wsite-product-price a {}
+</style>
+
+		<script><!--
+var STATIC_BASE = '//cdn1.editmysite.com/';
+var STYLE_PREFIX = 'wsite';
+//-->
+</script>
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js'></script>
+
+<script type="text/javascript" src="http://cdn2.editmysite.com/js/lang/zh/stl.js?buildTime=1234&"></script>
+<script src="http://cdn2.editmysite.com/js/site/main.js?buildTime=1234"></script><script type="text/javascript">_W.configDomain = "www.weebly.com";</script><script>_W.relinquish && _W.relinquish()</script>
+<script type="text/javascript" src="http://cdn2.editmysite.com/js/lang/zh/stl.js?buildTime=1234&"></script><script> _W.themePlugins = [];</script><script type="text/javascript"><!--
+	var IS_ARCHIVE = 1;
+	
+	(function(jQuery){
+		function initFlyouts(){
+			initPublishedFlyoutMenus(
+				[{"id":"608562111965458717","title":"Home","url":"index.html","target":"","nav_menu":false},{"id":"771034414327920939","title":"Map","url":"map.html","target":"","nav_menu":false},{"id":"807633210476052296","title":"Tutorial\/Templates","url":"tutorialtemplates.html","target":"","nav_menu":false},{"id":"462747272431172124","title":"News","url":"news.html","target":"","nav_menu":false},{"id":"661412759227518685","title":"About","url":"about.html","target":"","nav_menu":false}],
+				"874800275435870571",
+				'',
+				'active',
+				false,
+				{"navigation\/item":"<li {{#id}}id=\"{{id}}\"{{\/id}} class=\"wsite-menu-item-wrap\">\n\t<a\n\t\t{{^nav_menu}}\n\t\t\thref=\"{{url}}\"\n\t\t{{\/nav_menu}}\n\t\t{{#target}}\n\t\t\ttarget=\"{{target}}\"\n\t\t{{\/target}}\n\t\t{{#membership_required}}\n\t\t\tdata-membership-required=\"{{.}}\"\n\t\t{{\/membership_required}}\n\t\tclass=\"wsite-menu-item\"\n\t\t>\n\t\t{{{title_html}}}\n\t<\/a>\n\t{{#has_children}}{{> navigation\/flyout\/list}}{{\/has_children}}\n<\/li>\n","navigation\/flyout\/list":"<div class=\"wsite-menu-wrap\" style=\"display:none\">\n\t<ul class=\"wsite-menu\">\n\t\t{{#children}}{{> navigation\/flyout\/item}}{{\/children}}\n\t<\/ul>\n<\/div>\n","navigation\/flyout\/item":"<li {{#id}}id=\"{{id}}\"{{\/id}}\n\tclass=\"wsite-menu-subitem-wrap {{#is_current}}wsite-nav-current{{\/is_current}}\"\n\t>\n\t<a\n\t\t{{^nav_menu}}\n\t\t\thref=\"{{url}}\"\n\t\t{{\/nav_menu}}\n\t\t{{#target}}\n\t\t\ttarget=\"{{target}}\"\n\t\t{{\/target}}\n\t\tclass=\"wsite-menu-subitem\"\n\t\t>\n\t\t<span class=\"wsite-menu-title\">\n\t\t\t{{{title_html}}}\n\t\t<\/span>{{#has_children}}<span class=\"wsite-menu-arrow\">&gt;<\/span>{{\/has_children}}\n\t<\/a>\n\t{{#has_children}}{{> navigation\/flyout\/list}}{{\/has_children}}\n<\/li>\n"},
+				{}
+			)
+		}
+		if (jQuery) {
+			jQuery(document).ready(function() { jQuery(initFlyouts); });
+		}else{
+			if (Prototype.Browser.IE) window.onload = initFlyouts;
+			else document.observe('dom:loaded', initFlyouts);
+		}
+	})(window._W && _W.jQuery)
+//-->
+</script>
+		
+		<script
+  type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script "text/x-mathjax-config">
+MathJax.Hub.Config({
+	TeX: { extensions: [
+		"autoload-all.js"
+	]}
+}); </script>
+<script "text/x-mathjax-config">
+	MathJax.Hub.Register.StartupHook("TeX Jax Ready", function () {
+		MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{ cancel: ["Extension","cancel"] });
+	});
+</script>
+<script type="text/javascript">(function(d,s,id){var z=d.createElement(s);z.type="text/javascript";z.id=id;z.async=true;z.src="http://static.zotabox.com/8/e/8e2816f3964c02518b40c1e9ba84b04e/widgets.js";var sz=d.getElementsByTagName(s)[0];sz.parentNode.insertBefore(z,sz)}(document,"script","zb-embed-code"));</script>
+	</head>
+	<body class="no-header  wsite-theme-light  wsite-page-rex_slg_movement full-width-on "><div class="body-wrap">
+	
+	<div id="header">
+		<div class="nav-trigger hamburger">
+			<div class="open-btn">
+				<span class="mobile"></span>
+				<span class="mobile"></span>
+				<span class="mobile"></span>
+			</div>
+		</div>
+		<div id="sitename"><span class="wsite-logo">
+
+	<a href="">
+	
+	<span id="wsite-title">Rex's plugins for Construct2</span>
+	
+	</a>
+
+</span></div>
+	</div>
+
+	<div id="wrapper">
+		<div class="bg-wrapper">
+			<div id="navigation"><ul class="wsite-menu-default">
+		<li id="pg608562111965458717" class="wsite-menu-item-wrap">
+			<a
+					href="index.html"
+				class="wsite-menu-item"
+				>
+				Home
+			</a>
+			
+		</li>
+		<li id="pg771034414327920939" class="wsite-menu-item-wrap">
+			<a
+					href="map.html"
+				class="wsite-menu-item"
+				>
+				Map
+			</a>
+			
+		</li>
+		<li id="pg807633210476052296" class="wsite-menu-item-wrap">
+			<a
+					href="tutorialtemplates.html"
+				class="wsite-menu-item"
+				>
+				Tutorial/Templates
+			</a>
+			
+		</li>
+		<li id="pg462747272431172124" class="wsite-menu-item-wrap">
+			<a
+					href="news.html"
+				class="wsite-menu-item"
+				>
+				News
+			</a>
+			
+		</li>
+		<li id="pg661412759227518685" class="wsite-menu-item-wrap">
+			<a
+					href="about.html"
+				class="wsite-menu-item"
+				>
+				About
+			</a>
+			
+		</li>
+</ul>
+</div>
+			<div id="content-wrapper">
+				<div id="content"><div id='wsite-content' class='wsite-elements wsite-not-footer'>
+<h2 class="wsite-content-title" style="text-align:left;">rex_slg_movement</h2>
+
+<div class="paragraph" style="text-align:left;"><a title="" target="_blank" href="https://dl.dropboxusercontent.com/u/5779181/C2Repo/Zip/plugins/rex_slg_movement.7z">Plugin</a>,<span><span><span> <a title="" target="_blank" href="https://dl.dropboxusercontent.com/u/5779181/C2Repo/rex_slg_movement.html">ACE table</a>, </span></span></span><font color="#d5d5d5"><a href="https://www.scirra.com/forum/plugin-slg-movement_t75938" style="" title="" target="_blank">Discussion thread</a></font><br />Dependence: <a href="rex_board.html">rex_board</a>, <a title="" href="http://c2rexplugins.weebly.com/rex_ginstgroup.html"><span style="">rex_ginstgroup</span> plugin</a><br /></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><strong><font size="3">Introduction</font></strong><br />This plugin could get move-able area, or get moving path between two chess/tiles on an orthogonal or isometric, or hexagonal board object.<span><span></span></span><br /></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><strong><font size="3">Usage</font></strong><br /><a title="" target="_blank" href="https://onedrive.live.com/redir?resid=7497FD5EC94476E!525&amp;authkey=!AMVm3TWBA4wlk-g&amp;ithint=file%2c.capx"><span>Sample capx</span></a><br /></div>
+
+<div class="paragraph" style="text-align:left;"><span style='text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); '><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); ">There are 2 core actions in this plugin, <br /><ul><li>"Action:Get moveable area", "Action:Get moveable area by UID" which could get move-able area.</li><li>"Action:Get moving path", "Action:Get moving path by UID" which could get the shortest moving path between source chess to destination chess/tile.</li></ul></span></span></span></span></span></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Get moveable area</strong><br /><span></span>There are 5 parameters in this action.<span> </span><br /></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Chess</strong><br /><span></span>"Chess" is the target of moved chess instance.</div>
+
+<div class="paragraph" style="text-align:left;"><strong>Moving points and Moving cost</strong><br /><strong><span>Concept</span></strong><br /><span>Target chess has an energy point named "moving points", and each tile has a cost called "moving cost" to reduce the energy point of chess when this chess moves on the tile. <br /><span></span>The tile is "move-able" if this chess could "stand on" with remainder </span>moving points is equal or more then 0.<span></span><br /></div>
+
+<div class="paragraph" style="text-align:left;"><strong><span style="">Moving cost</span></strong><br /><span>This parameter </span>could be a number type, or a string type.<span> <span></span>Each tile has an equal moving cost with this number value.</span><br /><span>Put "</span>Expression:INFINITY" in this parameter to be an infinity cost. User might set the path mode to "A*" to get better performance in this case.<br /></div>
+
+<div class="paragraph" style="text-align:left;"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><strong>Cost function</strong><br />Moving cost of each tile could be got by a cost function named "Condition:On cost", if this parameter is a string.<br />There are some expressions could be used under this condition, </span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><ul><li><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400">Expression:ChessUID, to get target chess instance </span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></li><li><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400">Expression:TileUID, Expression:TileX, Expression:TileY, to get the target tile</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></li><li><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400">Expression:PreTileUID, Expression:PreTileX, Expression:PreTileY, to get previous tile&nbsp;</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></li><li><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400">Expression:PreTilePathCost, to get<span><span><span><span><span><span><span><span> path cost (accumulation cost from start tile) of previous tile</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></li><li><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400">Expression:StartTileUID, to test if previous tile is start tile by comparing<span><span><span><span><span><span><span><span><span><span><span><span><span><span> </span></span></span></span></span></span></span></span></span></span></span></span></span></span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>PreTileUID</span></span></span></span></span></span></span></span></span></span></span></span></span></span> to StartTileUID</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></li></ul></div>
+
+<blockquote style="text-align:left;"><span style='text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); '><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); ">Move chess "Expression:ChessUID"<br /><span></span>from tile "Expression:PreTileUID" at  ("Expression:PreTileX", "Expression:PreTileY") </span></span></span></span></span></span><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""></span></span></span></span></span></span><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style="">which has </span></span></span><span style=""><span style=""><span style=""></span></span></span><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style="">accumulation cost</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span> to </span><span style=""></span><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style="">Expression:PreTilePathCost</span></span></span></span></span></span></span></span></span></span></span></span><br /><span style=""></span>to tile "Expression:TileUID"  at ("Expression:TileX", "Expression:TileY")<br /></span></span></span></span><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""></span></span></span></span></span></span></span></span></span></span></span></span></span></blockquote>
+
+<div class="paragraph" style="text-align:left;"><span style='text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); '><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); ">Then call "Action:Set cost" to set the moving cost of this tile.  <br /><span></span>"Expression:BLOCKING" could be used in the parameter of this action for a  no move-able. Tile is also no move-able if no "Action:Set cost" had been called (i.e. no moving cost had been return) under "Condition:On  cost".</span></span></div>
+
+<div class="paragraph" style="text-align:left;"><strong>&nbsp;Cache cost</strong><br /><span>If set "Cache cost" to "Yes" in property table, the </span>"Condition:On cost"Set " will only be triggered once for each tile in a request.<br />Set "Cache cost" to "No" if user need to reference previous tile in cost function.<br />If <span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400">Expression:PreTileUID, or ( Expression:PreTileX, Expression:PreTileY ) had been used under "Condition:On cost", </span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span>remember set "Cache cost" to "Yes"</span><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span> usually.<br /></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Shuffle neighbors</strong><br /><a target="_blank" href="https://onedrive.live.com/redir?resid=7497FD5EC94476E!976&amp;authkey=!AJRxJLiWfO0sHQw&amp;ithint=file%2ccapx"><span>Sample capx</span></a><br /><span>If "Shuffle neighbors" in properties table sets to "Yes", the order of visited neighbors will be random, i.e. the order of visited nodes is not the same for each request.</span></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Group</strong><br /><span>The picking result will be put in a group of <a title="" href="rex_ginstgroup.html">instance group</a></span>. It is sorted by checking order.<br /><span></span>Figure below is the picked tiles of move-able area by configuration to<br /><ul style=""><li style="">Moving points = 3</li><li style="">Cost = 1</li><li style="">"Shuffle neighbors" = "No"<br /></li></ul></div>
+
+<div><div class="wsite-image wsite-image-border-thin " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a>
+<img src="uploads/1/4/2/6/14264557/366107048.png" alt="图片" style="width:100%;max-width:314px" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Filter</strong><br /><span>The picking result of moving area are tiles by default. Or use a filter function "</span>Condition:On filter<span>" if this parameter is not equal to "", to reset or add picked instances.<br /><span>Use "</span></span>Action:Append filter result<span><span>"</span> to add an instance by uid into picking result group, the tiles which had not been added into group will be excluded in this </span>"Action:Get moveable area".<span> <br /><span></span></span>This is an advance optional feature. See the capx at the last section.<br /> </div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Get moving path</strong><br />There are 5 parameters in this action.<span><br /></span></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Chess, and tile/chess</strong><br /><span>The 1st and 2nd parameters are the moving source chess and moving destination indicated by tile or chess.<br /></span></div>
+
+<div class="paragraph" style="text-align:left;"><strong style="">Moving points and Moving cost</strong><br /><span>These two parameters </span>are the same as "Action:Get moveable area", please see previous section.<br /><span>The shortest path is the path which could let the chess has the maximum remainder moving point when it moves to </span>destination.</div>
+
+<div class="paragraph" style="text-align:left;"><span style='text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); '><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><strong style="">Group</strong><br />The picking result will be put in a group of <a style="" title="" href="rex_ginstgroup.html">instance group</a> like "Action:Get moveable area". User could pop this group to get moving destinations in-order and move chess to the next destination by <a title="" href="rex_grid_move.html">rex_grid_move</a> behavior.<br /></span></span></div>
+
+<div><div class="wsite-image wsite-image-border-thin " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a>
+<img src="uploads/1/4/2/6/14264557/579145857.png" alt="图片" style="width:100%;max-width:573px" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<div class="paragraph" style="text-align:left;">User could set the "Force move" to "Yes" in properties table in rex_grid_move behavior, since the move-able (solid) had been determined by this "Get moving path" action.<br /><span>To bind the group of moving path</span> to private group of the moving chess, user could use "Expression: PrivateGroup" in <a href="rex_ginstgroup.html">rex_ginstgroup</a> object to get private group name.<br /></div>
+
+<div class="paragraph" style="text-align:left;"><span style='text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); '><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><strong>Exact or nearest</strong><br />Set "Exact" combo option to "</span><span style=""></span>nearest" could get <span style=""></span><span style=""></span>moving path from start tile to nearest target tile.<br />The result of instance group would be empty if <span style="">"Exact"</span> to "" and no path found from start tile to exact target tile.<br />Get nearest target tile UID by "Expression:NearestTileUID" after request for both </span><span style=""></span><span style=""><span style=""><span style=""><span style="">Exact or Nearest </span></span></span>modes.</span><br /></span></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Path mode</strong><br /><span>There might have more then one shortest path</span>. Plugin will get one of them by setting of "Path mode" in properties table.<br /><ul><li>"Random" is picking the path randomly</li><li><span>"</span>Diagonal" is picking the path which has the maximum changing of moving direction</li><li>"Straight" is picking the path which has the minimum changing of moving direction</li><li>"A*" is using A-star algorithm to find path, this will have the best performance<br /></li></ul></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><span style='text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); '><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style=""><strong style="">Wrap</strong><br /><a title="" style="" target="_blank" href="https://onedrive.live.com/redir?resid=7497FD5EC94476E!990&amp;authkey=!AAXv6WoYTYBmMHQ&amp;ithint=file%2ccapx">Sample capx</a><br /></span><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style="">Set "Wrap" in properties table to "Yes" </span></span></span></span></span></span></span>in <a title="" href="rex_board.html">rex_board object</a> will wrap the logical boundary. It will also effect the result of picking move-able area and moving path. Chess could move from left boundary to right boundary directly.<br /></span></span></span></span></div>
+
+<div><div class="wsite-image wsite-image-border-thin " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a>
+<img src="uploads/1/4/2/6/14264557/742164463.png" alt="图片" style="width:100%;max-width:316px" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<div class="paragraph" style="text-align:left;"><span style='text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); '><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); ">This image is the result of picking move-able area in wrapped board.<br /></span></span></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><span style='text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); '><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><strong>Accumulated cost</strong><br /><a title="" target="_blank" href="https://onedrive.live.com/redir?resid=7497FD5EC94476E!1433&amp;authkey=!AFeSa51UK70yCP0&amp;ithint=file%2ccapx">Sample capx</a><br />"Expression:UID2PathCost" could be used to get accumulated cost from start tile to a specific chess/tile in moveable area or moving path after call </span><span style=""></span><span style=""><span style=""><span style="">"Action:Get moveable area" or </span></span></span></span><span style=""><span style=""><span style=""><span style=""></span></span></span></span><span style=""><span style=""><span style=""><span style="">"Action:Get moving path". Return (-1) if this specific chess/tile is not in the last scan of request.<br /></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></div>
+
+<div><div class="wsite-image wsite-image-border-thin " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a>
+<img src="uploads/1/4/2/6/14264557/457773297.png" alt="图片" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Advance</strong><br /><a title="" target="_blank" href="https://onedrive.live.com/redir?resid=7497FD5EC94476E!271&amp;authkey=!AO2IO1PCb1t_9P4&amp;ithint=file%2c.capx"><span>Sample capx</span></a><br /><span>This sample capx shows how to implement the filter function and cost function to get move-able area, moving path, and the enemies in a range.<span></span></span></div>
+
+<div class="paragraph" style="text-align:left;"><strong>No overlap with other chess</strong><br /><span>To exclude the tiles which had chess </span>stand on for move-able area, it need to change the picking result of move-able area. Add the tile with no chess stand on, i.e. the cell of chess is empty, the other tiles which had not been added will be excluded.<br /><span><span></span></span></div>
+
+<div><div class="wsite-image wsite-image-border-thin " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a>
+<img src="uploads/1/4/2/6/14264557/703242163.png" alt="图片" style="width:100%;max-width:678px" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<div class="paragraph" style="text-align:left;"><span style='text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); '><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><strong>Pick enemies</strong><br />The <span></span>"Action:Get moveable area" also could pick enemies in a range condition. It need to change the picking result from tiles to the enemies which stand on these tiles.<br /></span></span></div>
+
+<div><div class="wsite-image wsite-image-border-thin " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a>
+<img src="uploads/1/4/2/6/14264557/367123360.png" alt="图片" style="width:100%;max-width:606px" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<div class="paragraph" style="text-align:left;"><strong>No moving across enemies</strong><br /><span></span>To set the enemies to be no across, just set the cost of these tiles which had enemies to be "BLOCKING" in "Action:Set cost" under "Condition:On  cost".<br /></div>
+
+<div><div class="wsite-image wsite-image-border-thin " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a>
+<img src="uploads/1/4/2/6/14264557/284043493.png" alt="图片" style="width:100%;max-width:592px" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><span style='text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); '><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><strong>Flood fill</strong><br /><a title="" target="_blank" href="https://onedrive.live.com/redir?resid=7497FD5EC94476E!1002&amp;authkey=!AOg3brQveOfct4k&amp;ithint=file%2ccapx">Sample capx</a><br /></span></span><span style=""><span style=""></span></span><span style="">"Action:Get moveable area" is using flood fill to find moveable area through </span></span><span style=""><span style=""></span></span><span style=""><span style=""> "Condition:On  cost"</span></span>. This feature also could be use for other propose, like picking neighbor chess/tile which have the same color in sample capx.<br /></span></span></span></span></span></span></span></div>
+
+<div><div class="wsite-image wsite-image-border-thin " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a>
+<img src="uploads/1/4/2/6/14264557/398311496.png" alt="图片" style="width:100%;max-width:505px" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<div class="paragraph" style="text-align:left;"><span style='text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); '><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); ">The steps of picking are - <br /></span></span></span></span></span></span><ol><li><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); ">Save target color in variable.</span></span></span></span></span></span></li><li><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); ">Call </span></span></span><span style=""><span style=""><span style=""></span></span></span><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style="">"Action:Get moveable area"</span></span></span></span></span>, sets the parameter of moving point to 1.</span></span></span></span></span></span></li><li><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style=""><span style=""><span style="">In </span></span><span style=""><span style=""></span></span><span style=""><span style=""><span style=""><span style=""></span></span><span style=""><span style=""></span></span><span style=""><span style=""> "Condition:On  cost", pick tile/chess instance by expression: TileUID, or ( expression: TileX, expression: TileY ), see </span></span></span></span></span></span></span><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""></span></span></span></span></span></span></span><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><strong style="">Cost function</strong></span></span></span></span> section for more detail.</span></span></span></span></span></span></span></span></li><li><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style=""><span style=""><span style=""><span style=""><span style=""><span style=""><span style="">Compare the color of picked instance with target color -- If the color of </span></span></span></span><span style=""><span style=""><span style=""><span style=""></span></span></span></span><span style=""><span style=""><span style=""><span style="">picked instance</span></span></span></span> is matched to target color, </span>return cost to 0 by </span><span style=""></span><span style="">"Action:Set cost". Otherwise do nothing, the cost will be BLOCKING by default.</span></span></span></li><li><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style=""><span style="">Finally, the matched tiles will be put into instance group by UID, then add the source tile into this group.</span></span></span></li></ol><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "></span></span></span></span></span></span></span></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Move on tilemap</strong><br /><span id="selectionBoundary_1455450150230_8905988265965262">&#65279;</span><a target="_blank" href="https://onedrive.live.com/redir?resid=7497FD5EC94476E!2191&amp;authkey=!ALPt9rXwfj5LzxA&amp;ithint=file%2ccapx">Sample capx</a><span id="selectionBoundary_1455450150229_9280417548046865">&#65279;</span><br />Covers all tiles (LZ=0) by string symbol, and sets the <a target="_blank" href="rex_board_squaretx.html">rex_board_squareTx</a> to align the tilemap object. Then uses string symbol tile in input parameter of "Get moving path" action.<br />Since the results in instance group are not UID of instance, user could not pick tile instances by SOL actions in instance group plugin, uses<ul><li>"Condition:For each UID" and "Expression:Item" to retrieve the string symbol (Get moveable area), or<br /></li><li>"Expression:Pop( group_name , 0)" to get string symbol in order (Get moving path)<br /></li></ul></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><span style='text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); '><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><strong>More samples</strong><br /><span></span><a title="" target="_blank" href="https://onedrive.live.com/redir?resid=7497FD5EC94476E!975&amp;authkey=!AA2l6zn4QARC4Gw&amp;ithint=file%2ccapx">Diffusion</a><span><br /></span></span></span></span></span></span><a title="" target="_blank" href="https://onedrive.live.com/redir?resid=7497FD5EC94476E!1434&amp;authkey=!AP_SV4mFTcXvszs&amp;ithint=file%2ccapx">Sternhalma</a> - Note that "</span><span style=""></span>Cache cost<span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); ">" is set to "No"<br /></span></span></span></span></span></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div></div>
+</div>
+			</div>
+		</div>
+		<div id="footer">
+			<div id="footer-content">Create a <a target="_top" href="http://www.weebly.com/">free web site</a> with <a target="_top" href="http://www.weebly.com/" title="免费网站">Weebly</a></div>
+		</div>
+	</div>
+	
+	<div class="navmobile-wrapper">
+		<div id="navmobile" class="nav"><ul class="wsite-menu-default">
+		<li id="pg608562111965458717" class="wsite-menu-item-wrap">
+			<a
+					href="index.html"
+				class="wsite-menu-item"
+				>
+				Home
+			</a>
+			
+		</li>
+		<li id="pg771034414327920939" class="wsite-menu-item-wrap">
+			<a
+					href="map.html"
+				class="wsite-menu-item"
+				>
+				Map
+			</a>
+			
+		</li>
+		<li id="pg807633210476052296" class="wsite-menu-item-wrap">
+			<a
+					href="tutorialtemplates.html"
+				class="wsite-menu-item"
+				>
+				Tutorial/Templates
+			</a>
+			
+		</li>
+		<li id="pg462747272431172124" class="wsite-menu-item-wrap">
+			<a
+					href="news.html"
+				class="wsite-menu-item"
+				>
+				News
+			</a>
+			
+		</li>
+		<li id="pg661412759227518685" class="wsite-menu-item-wrap">
+			<a
+					href="about.html"
+				class="wsite-menu-item"
+				>
+				About
+			</a>
+			
+		</li>
+</ul>
+</div>
+	</div>
+
+</div>
+
+
+<script language="javascript" src="files/theme/plugins.js"></script>	 
+<script language="javascript" src="files/theme/custom.js"></script>
+<script language="javascript" src="files/theme/mobile.js"></script>	
+
+
+		<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-50390733-1', 'weebly.com');
+  ga('send', 'pageview');
+
+</script>
+	</body>
+</html>

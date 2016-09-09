@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>rex_live2d - Rex's plugins for Construct2</title>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+		<meta name="google-site-verification" content="AbKU1w_lq8tjMKAN0yt_O0WFqwDr4zH5bHiXJEpyErI" />
+		<link id="wsite-base-style" rel="stylesheet" type="text/css" href="http://cdn2.editmysite.com/css/sites.css?buildTime=1234" />
+<link rel="stylesheet" type="text/css" href="http://cdn1.editmysite.com/editor/libraries/fancybox/fancybox.css?1234" />
+<link rel="stylesheet" type="text/css" href="http://cdn2.editmysite.com/css/social-icons.css?buildtime=1234" media="screen,projection" />
+<link rel="stylesheet" type="text/css" href="files/main_style.css?1469150796" title="wsite-theme-css" />
+<link href='http://fonts.googleapis.com/css?family=Raleway:400,300,200,700&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+<link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,700,400italic,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,700,400italic,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+<style type='text/css'>
+.wsite-elements.wsite-not-footer div.paragraph, .wsite-elements.wsite-not-footer p, .wsite-elements.wsite-not-footer .product-block .product-title, .wsite-elements.wsite-not-footer .product-description, .wsite-elements.wsite-not-footer .wsite-form-field label, .wsite-elements.wsite-not-footer .wsite-form-field label, #wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {font-family:"Open Sans" !important;}
+#wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {}
+.wsite-elements.wsite-footer div.paragraph, .wsite-elements.wsite-footer p, .wsite-elements.wsite-footer .product-block .product-title, .wsite-elements.wsite-footer .product-description, .wsite-elements.wsite-footer .wsite-form-field label, .wsite-elements.wsite-footer .wsite-form-field label{}
+.wsite-elements.wsite-not-footer h2, .wsite-elements.wsite-not-footer .product-long .product-title, .wsite-elements.wsite-not-footer .product-large .product-title, .wsite-elements.wsite-not-footer .product-small .product-title, #wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {font-family:"Open Sans" !important;}
+#wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {}
+.wsite-elements.wsite-footer h2, .wsite-elements.wsite-footer .product-long .product-title, .wsite-elements.wsite-footer .product-large .product-title, .wsite-elements.wsite-footer .product-small .product-title{}
+#wsite-title {}
+.wsite-menu-default a {}
+.wsite-menu a {}
+.wsite-image div, .wsite-caption {}
+.galleryCaptionInnerText {}
+.fancybox-title {}
+.wslide-caption-text {}
+.wsite-phone {}
+.wsite-headline {}
+.wsite-headline-paragraph {}
+.wsite-button-inner {}
+.wsite-not-footer blockquote {}
+.wsite-footer blockquote {}
+.blog-header h2 a {}
+#wsite-content h2.wsite-product-title {}
+.wsite-product .wsite-product-price a {}
+</style>
+
+		<script><!--
+var STATIC_BASE = '//cdn1.editmysite.com/';
+var STYLE_PREFIX = 'wsite';
+//-->
+</script>
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js'></script>
+
+<script type="text/javascript" src="http://cdn2.editmysite.com/js/lang/zh/stl.js?buildTime=1234&"></script>
+<script src="http://cdn2.editmysite.com/js/site/main.js?buildTime=1234"></script><script type="text/javascript">_W.configDomain = "www.weebly.com";</script><script>_W.relinquish && _W.relinquish()</script>
+<script type="text/javascript" src="http://cdn2.editmysite.com/js/lang/zh/stl.js?buildTime=1234&"></script><script> _W.themePlugins = [];</script><script type="text/javascript"><!--
+	var IS_ARCHIVE = 1;
+	
+	(function(jQuery){
+		function initFlyouts(){
+			initPublishedFlyoutMenus(
+				[{"id":"608562111965458717","title":"Home","url":"index.html","target":"","nav_menu":false},{"id":"771034414327920939","title":"Map","url":"map.html","target":"","nav_menu":false},{"id":"807633210476052296","title":"Tutorial\/Templates","url":"tutorialtemplates.html","target":"","nav_menu":false},{"id":"462747272431172124","title":"News","url":"news.html","target":"","nav_menu":false},{"id":"661412759227518685","title":"About","url":"about.html","target":"","nav_menu":false}],
+				"479302776242596950",
+				'',
+				'active',
+				false,
+				{"navigation\/item":"<li {{#id}}id=\"{{id}}\"{{\/id}} class=\"wsite-menu-item-wrap\">\n\t<a\n\t\t{{^nav_menu}}\n\t\t\thref=\"{{url}}\"\n\t\t{{\/nav_menu}}\n\t\t{{#target}}\n\t\t\ttarget=\"{{target}}\"\n\t\t{{\/target}}\n\t\t{{#membership_required}}\n\t\t\tdata-membership-required=\"{{.}}\"\n\t\t{{\/membership_required}}\n\t\tclass=\"wsite-menu-item\"\n\t\t>\n\t\t{{{title_html}}}\n\t<\/a>\n\t{{#has_children}}{{> navigation\/flyout\/list}}{{\/has_children}}\n<\/li>\n","navigation\/flyout\/list":"<div class=\"wsite-menu-wrap\" style=\"display:none\">\n\t<ul class=\"wsite-menu\">\n\t\t{{#children}}{{> navigation\/flyout\/item}}{{\/children}}\n\t<\/ul>\n<\/div>\n","navigation\/flyout\/item":"<li {{#id}}id=\"{{id}}\"{{\/id}}\n\tclass=\"wsite-menu-subitem-wrap {{#is_current}}wsite-nav-current{{\/is_current}}\"\n\t>\n\t<a\n\t\t{{^nav_menu}}\n\t\t\thref=\"{{url}}\"\n\t\t{{\/nav_menu}}\n\t\t{{#target}}\n\t\t\ttarget=\"{{target}}\"\n\t\t{{\/target}}\n\t\tclass=\"wsite-menu-subitem\"\n\t\t>\n\t\t<span class=\"wsite-menu-title\">\n\t\t\t{{{title_html}}}\n\t\t<\/span>{{#has_children}}<span class=\"wsite-menu-arrow\">&gt;<\/span>{{\/has_children}}\n\t<\/a>\n\t{{#has_children}}{{> navigation\/flyout\/list}}{{\/has_children}}\n<\/li>\n"},
+				{}
+			)
+		}
+		if (jQuery) {
+			jQuery(document).ready(function() { jQuery(initFlyouts); });
+		}else{
+			if (Prototype.Browser.IE) window.onload = initFlyouts;
+			else document.observe('dom:loaded', initFlyouts);
+		}
+	})(window._W && _W.jQuery)
+//-->
+</script>
+		
+		<script
+  type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script "text/x-mathjax-config">
+MathJax.Hub.Config({
+	TeX: { extensions: [
+		"autoload-all.js"
+	]}
+}); </script>
+<script "text/x-mathjax-config">
+	MathJax.Hub.Register.StartupHook("TeX Jax Ready", function () {
+		MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{ cancel: ["Extension","cancel"] });
+	});
+</script>
+<script type="text/javascript">(function(d,s,id){var z=d.createElement(s);z.type="text/javascript";z.id=id;z.async=true;z.src="http://static.zotabox.com/8/e/8e2816f3964c02518b40c1e9ba84b04e/widgets.js";var sz=d.getElementsByTagName(s)[0];sz.parentNode.insertBefore(z,sz)}(document,"script","zb-embed-code"));</script>
+	</head>
+	<body class="no-header  wsite-theme-light  wsite-page-rex_live2d full-width-on "><div class="body-wrap">
+	
+	<div id="header">
+		<div class="nav-trigger hamburger">
+			<div class="open-btn">
+				<span class="mobile"></span>
+				<span class="mobile"></span>
+				<span class="mobile"></span>
+			</div>
+		</div>
+		<div id="sitename"><span class="wsite-logo">
+
+	<a href="">
+	
+	<span id="wsite-title">Rex's plugins for Construct2</span>
+	
+	</a>
+
+</span></div>
+	</div>
+
+	<div id="wrapper">
+		<div class="bg-wrapper">
+			<div id="navigation"><ul class="wsite-menu-default">
+		<li id="pg608562111965458717" class="wsite-menu-item-wrap">
+			<a
+					href="index.html"
+				class="wsite-menu-item"
+				>
+				Home
+			</a>
+			
+		</li>
+		<li id="pg771034414327920939" class="wsite-menu-item-wrap">
+			<a
+					href="map.html"
+				class="wsite-menu-item"
+				>
+				Map
+			</a>
+			
+		</li>
+		<li id="pg807633210476052296" class="wsite-menu-item-wrap">
+			<a
+					href="tutorialtemplates.html"
+				class="wsite-menu-item"
+				>
+				Tutorial/Templates
+			</a>
+			
+		</li>
+		<li id="pg462747272431172124" class="wsite-menu-item-wrap">
+			<a
+					href="news.html"
+				class="wsite-menu-item"
+				>
+				News
+			</a>
+			
+		</li>
+		<li id="pg661412759227518685" class="wsite-menu-item-wrap">
+			<a
+					href="about.html"
+				class="wsite-menu-item"
+				>
+				About
+			</a>
+			
+		</li>
+</ul>
+</div>
+			<div id="content-wrapper">
+				<div id="content"><div id='wsite-content' class='wsite-elements wsite-not-footer'>
+<h2 class="wsite-content-title" style="text-align:left;">rex_live2d</h2>
+
+<div class="paragraph" style="text-align:left;"><a target="_blank" href="https://dl.dropboxusercontent.com/u/5779181/C2Repo/Zip/plugins/rex_live2d.7z">Plugin</a>,<span><span><span> <a target="_blank" href="https://dl.dropboxusercontent.com/u/5779181/C2Repo/rex_live2d.html">ACE table</a>, </span></span></span><font color="#d5d5d5"><a href="https://www.scirra.com/forum/plugin-live2d_t170099" target="_blank">Discussion thread</a></font><br />Dependence: None<br /></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><strong><font size="3">Introduction</font></strong></span></span></span></span><br />Load and play <a target="_blank" href="http://www.live2d.com/en">Live2D</a> object.</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><strong><font size="3">Usage</font></strong><br /><a target="_blank" href="https://onedrive.live.com/redir?resid=7497FD5EC94476E!2255&amp;authkey=!AA8-_wxUWhKOwxY&amp;ithint=file%2ccapx"><span>Sample capx</span></a><br /></div>
+
+<div class="paragraph" style="text-align:left;"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><strong>Load model</strong><br />Call</span></span></span></span></span> "Action:Load" to load the resources of the model by a <strong>model.json</strong> file, which is exported by Live2D editor. <em>Make sure the file path resources is correct, since C2 editor put all imported files into the root folder.</em><br /></div>
+
+<div class="paragraph" style="text-align:left;">"Condition:On loaded successful" under "Model" category will be triggered while all resources loaded successful; otherwise "Condition:On loaded failed", get path of loaded failed files by "Expression:LoadedFailedFilePaths" which will be Joined by ";". "Condition:Is ready" will return true after model loaded successful.<br /></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Play motion</strong><br />Call "Action:Start motion" to play a motion.<br />Get the name of current motion by "Expression:MotionName", or compare it by "Condition:Is motion playing".<br /></div>
+
+<div class="paragraph" style="text-align:left;"><strong>On motion began</strong><br />"Condition:On motion began", "Condition:On any motion began" will be triggered while start a new motion. Get the name of triggered motion by "Expression:TriggeredMotionName" under these conditions.<br /></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Get custom motion data</strong><br />Get custom data of current motion by "Expression:MotionData".&nbsp; <span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400">There are 3 kinds of return value in <span><span><span><span><span><span><span><span><span><span><span><span>this expression</span></span></span></span></span></span></span></span> -<br /></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><ul><li><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>"Expression:</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>MotionData<span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>" without any parameter, will return key-value pairs of current motion data in JSON string.</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><br /></li><li><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>"</span></span></span></span><span><span><span><span><span><span><span><span><span><span><span><span>Expression:</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>MotionData<span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>( key )" , will return the value of a specific key, or return 0 if the key does not exist.</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><br /></li><li><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>"</span></span></span></span><span><span><span><span><span><span><span><span><span><span><span><span>Expression:</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>MotionData<span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span><span><span><span><span><span><span><span><span><span><span><span><span><span>( key, default_value )" , will return the value of a specific key, or return default value if the key does not exist.</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><br /></li></ul><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span><span><span><span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></div>
+
+<div class="paragraph" style="text-align:left;">Designer could read the sound name back by Expression:MotionData("sound", "") and play it for current motion. (see model.json file in sample capx)<br /></div>
+
+<div class="paragraph" style="text-align:left;"><strong>On motion finished</strong><br />"Condition:On motion finished", "Condition:On any motion finished" will be triggered while current motion is finished. Get the name of triggered motion by "Expression:TriggeredMotionName" under these conditions.<br /></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Idle motion</strong><br />An idle motion will be played if no motion is played after previous motion had been finished. i.e. no "Action:Start motion" was called under "Condition:On motion finished", "Condition:On any motion finished".<br />The motion name of idle state could be set at "Idle motion" in properties table, or set by "Action:Set idle motion". Set idle motion name to "" could ignore this feature.<br /></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Set expression</strong><br />Call "Action:Set expression" to set the expression.<br /></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Hit test</strong><br />"Condition:Is inside area" will return true if a specific position is inside the part of model, the part name is defined in model.json file.<br /></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Sight</strong><br />Call "Action:Look at" to turn the head, eyes, and body of current model look at a specific position.<br />Call "Action:Look front" to let the model look front like default pose.<br /></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Breathing</strong><br />Set "Breathing" property to "Enable" or set by "Action:Breathing", to enable breathing motion of current model.<br /></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Lip sync</strong><br /><a target="_blank" href="https://onedrive.live.com/redir?resid=7497FD5EC94476E!2315&amp;authkey=!ABr9KDO6pMpCFQw&amp;ithint=file%2ccapx">Sample capx</a><br />Set property "Lip sync" to "Enable", or set by "Action:Lip sync" to enable this feature (default is "disable") , then call "Action:Set lip sync value" to change the lip.<br /></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Set or add parameters</strong><br /><a target="_blank" href="https://onedrive.live.com/redir?resid=7497FD5EC94476E!2474&amp;authkey=!AKusEKlTDQNJGbU&amp;ithint=file%2ccapx">Sample capx</a><br />Call "Action:Set value" or "Action:Add to" to set or add parameters of model manually. These actions might change current behavior of motion.<br /></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Official save/load</strong><br />This plugin does <strong>NOT</strong> support official save/load feature yet.<br /></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Appendix - content of model.json in sample capx</strong><br /></div>
+
+<div id="754959805373831074"><div><style type="text/css">
+	#element-7143a39a-4802-41ad-b616-5c9b847084a7 .code-editor--light {
+  padding: 20px 0px;
+}
+#element-7143a39a-4802-41ad-b616-5c9b847084a7 .code-editor--light .header {
+  padding: 10px 20px;
+  font-weight: bold;
+  border-left: 1px solid #C9CDCF;
+  border-right: 1px solid #C9CDCF;
+  border-top: 1px solid #C9CDCF;
+  background-color: #F8F8F8;
+  color: #363B3E;
+}
+#element-7143a39a-4802-41ad-b616-5c9b847084a7 .code-editor--light .header .paragraph {
+  margin: 0;
+}
+#element-7143a39a-4802-41ad-b616-5c9b847084a7 .code-editor--light .body-code {
+  margin: 0;
+  border: 1px solid #C9CDCF;
+  background-color: #FFFFFF;
+  color: #666C70;
+}
+#element-7143a39a-4802-41ad-b616-5c9b847084a7 .code-editor--dark {
+  padding: 20px 0px;
+}
+#element-7143a39a-4802-41ad-b616-5c9b847084a7 .code-editor--dark .ace-tomorrow-night-eighties {
+  background-color: #363B3E;
+}
+#element-7143a39a-4802-41ad-b616-5c9b847084a7 .code-editor--dark .header {
+  padding: 10px 20px;
+  font-weight: bold;
+  border-left: 1px solid #E0E1E2;
+  border-right: 1px solid #E0E1E2;
+  border-top: 1px solid #E0E1E2;
+  background-color: #666C70;
+  color: #FFFFFF;
+}
+#element-7143a39a-4802-41ad-b616-5c9b847084a7 .code-editor--dark .header .paragraph {
+  margin: 0;
+}
+#element-7143a39a-4802-41ad-b616-5c9b847084a7 .code-editor--dark .body-code {
+  margin: 0;
+  border: 1px solid #E0E1E2;
+  background-color: #363B3E;
+  color: #F8F8F8;
+}
+
+</style><div id="element-7143a39a-4802-41ad-b616-5c9b847084a7" data-platform-element-id="270170748587580171-1.3.1" class="platform-element-contents">
+	<div class="code-editor--dark">
+    <div class="header">
+        <div class="paragraph" style="text-align:left;"></div>
+    </div>
+    <div class="body-code">
+        <pre class="editor"></pre>
+    </div>
+</div>
+</div>
+<div style="clear:both;"></div><script type="text/javascript" class="element-script">function setupElement754959805373831074() {
+	var elementRequire = require || _wAMD.require;
+	elementRequire([
+		'jquery',
+		'underscore',
+		'backbone',
+		'util/platform/elements/PlatformElement',
+		'util/platform/elements/PlatformElementSettings'
+	], function(
+		$,
+		_,
+		Backbone,
+		PlatformElement,
+		PlatformElementSettings
+	) {
+		var dependencies = ["\/\/marketplace.editmysite.com\/elements\/270170748587580171-1.3.1\/assets\/built-dependencies.js"] || [];
+		var platform_element_id = "270170748587580171-1.3.1";
+
+		if (typeof _W.loadedPlatformDependencies === 'undefined') {
+			_W.loadedPlatformDependencies = [];
+		}
+
+		if (typeof _W.platformElements === 'undefined') {
+			_W.platformElements = [];
+		}
+
+		if (typeof _W.platformElements[platform_element_id] === 'undefined') {
+			_W.platformElements[platform_element_id] = {};
+			_W.platformElements[platform_element_id].deferredObject = new $.Deferred();
+			_W.platformElements[platform_element_id].deferredPromise = _W.platformElements[platform_element_id].deferredObject.promise();
+		}
+
+		if(_.intersection(_W.loadedPlatformDependencies, dependencies).length !== dependencies.length){
+			_.reduce(dependencies, function(promise, nextScript){
+				_W.loadedPlatformDependencies.push(nextScript);
+				return promise.then(function(){
+					return $.getScript(nextScript);
+				});
+			}, $().promise()).then(function(){
+				_W.platformElements[platform_element_id].deferredObject.resolve();
+			});
+		}
+
+		if (dependencies.length === 0){
+			_W.platformElements[platform_element_id].deferredObject.resolve();
+		}
+
+		_W.platformElements[platform_element_id].deferredPromise.done(function(){
+			var _ElementDefinition = /**
+ * This is required for element rendering to be possible
+ * @type {PlatformElement}
+ */
+(function() {
+    var CodeBlock = PlatformElement.extend({
+        /**
+         * PlatformElement initialization. Code to setup the 
+         * element should go here.
+         */
+        initialize: function() {
+            this.theme = this.settings.get('style') == 'light' ? 'tomorrow' : 'tomorrow_night_eighties';
+
+            /**
+             * The script are not defined in the manifest 
+             * so that 6mb of scripts are not loaded. This 
+             * allows us to load only scripts needed for 
+             * each language and theme.
+             */
+            $.when(
+                $.getScript(this.assets_path + 'ace/mode-' + this.settings.get('syntax') + '.js'),
+                $.getScript(this.assets_path + 'ace/theme-' + this.theme + '.js')
+            ).done(function() {
+                /**
+                 * After the scripts are loaded, we can
+                 * then make the call to setup the editor.
+                 */
+                this.setUpEditor();
+            }.bind(this));
+
+            this.checkIfHeader();
+            this.modifyStyle();
+        },
+
+        /**
+         * Function to setup the editor
+         */
+        setUpEditor: function() {
+            this.editor = ace.edit(this.$el.find('.editor')[0]);
+            this.editor.setValue(this.settings.get('code'), -1);
+
+            this.editor.setTheme('ace/theme/' + this.theme);
+            this.editor.getSession().setMode('ace/mode/' + this.settings.get('syntax'));
+
+            this.editor.container.style.lineHeight = '26px';
+            this.editor.container.style.fontSize = '14px';
+            this.editor.renderer.setScrollMargin(20, 20);
+            this.editor.renderer.setPadding(20);
+
+            this.editor.setOptions({
+                'highlightActiveLine': this.settings.get('highlight_active_line'),
+                'readOnly': true,
+                'showPrintMargin': false
+            });
+
+            this.editor.renderer.setOptions({
+                'showGutter': this.settings.get('show_gutter'),
+                'maxLines': this.settings.get('max_lines'),
+                'minLines': this.settings.get('min_lines'),
+                'displayIndentGuides': this.settings.get('display_indent_guides')
+            });
+
+            this.editor.session.setOptions({
+                'wrap': this.settings.get('line_wrap'),
+                'useSoftTabs': this.settings.get('use_soft_tabs'),
+                'useWorker': false // workers rebind window.require so we need to disable them
+            });
+        },
+
+        /**
+         * Checks settings for whether or not the header
+         * should be displayed or not.
+         */
+        checkIfHeader: function() {
+            if(this.settings.get('display_header') == "0") {
+                this.$el.find('.header').remove();
+            }
+        },
+
+        /**
+         * Minor style tweaks done on some elements
+         */
+        modifyStyle: function() {
+            this.$el.find('.ace_content').css({
+                'margin-left': '20px'
+            });
+        }
+    });
+
+    return CodeBlock;
+})();;
+
+			if (typeof _ElementDefinition == 'undefined' || typeof _ElementDefinition == 'null') {
+				var _ElementDefinition = PlatformElement.extend({});
+			}
+
+			var _Element = _ElementDefinition.extend({
+				initialize: function() {
+					// we still want to call the initialize function defined by the developer
+					// however, we don't want to call it until placeholders have been replaced
+					this.placeholderInterval = setInterval(function() {
+						// so use setInterval to check for placeholders.
+						if (this.$('.platform-element-child-placeholder').length == 0) {
+							clearInterval(this.placeholderInterval);
+							this.constructor.__super__.initialize.apply(this);
+						}
+					}.bind(this), 100);
+				}
+			});
+
+			_Element.prototype.settings = new PlatformElementSettings({"max_lines_each":[{"max_lines_index":0},{"max_lines_index":1},{"max_lines_index":2},{"max_lines_index":3},{"max_lines_index":4},{"max_lines_index":5},{"max_lines_index":6},{"max_lines_index":7},{"max_lines_index":8},{"max_lines_index":9},{"max_lines_index":10},{"max_lines_index":11},{"max_lines_index":12},{"max_lines_index":13},{"max_lines_index":14},{"max_lines_index":15},{"max_lines_index":16},{"max_lines_index":17},{"max_lines_index":18},{"max_lines_index":19},{"max_lines_index":20},{"max_lines_index":21},{"max_lines_index":22},{"max_lines_index":23},{"max_lines_index":24},{"max_lines_index":25},{"max_lines_index":26},{"max_lines_index":27},{"max_lines_index":28},{"max_lines_index":29}],"min_lines_each":[{"min_lines_index":0}],"style":"dark","display_header":false,"syntax":"javascript","code":"{\n    \"type\":\"Live2D Model Setting\",\n    \"name\":\"haru\",\n    \"model\":\"haru_01.moc\",\n    \"textures\":\n    [\n        \"haru_01.1024.texture_00.png\",\n        \"haru_01.1024.texture_01.png\",\n        \"haru_01.1024.texture_02.png\"\n    ],\n    \"physics\":\"haru.physics.json\",\n    \"pose\":\"haru.pose.json\",\n    \"expressions\":\n    [\n        {\"name\":\"f01\",\"file\":\"expressions.f01.exp.json\"},\n        {\"name\":\"f02\",\"file\":\"expressions.f02.exp.json\"},\n        {\"name\":\"f03\",\"file\":\"expressions.f03.exp.json\"},\n        {\"name\":\"f04\",\"file\":\"expressions.f04.exp.json\"},\n        {\"name\":\"f05\",\"file\":\"expressions.f05.exp.json\"},\n        {\"name\":\"f06\",\"file\":\"expressions.f06.exp.json\"},\n        {\"name\":\"f07\",\"file\":\"expressions.f07.exp.json\"},\n        {\"name\":\"f08\",\"file\":\"expressions.f08.exp.json\"}\n    ],    \n    \"layout\":\n    {\n        \"center_x\":0,\n        \"y\":1.2,\n        \"width\":2.9\n    },    \n    \"hit_areas\":\n    [\n        {\"name\":\"head\", \"id\":\"D_REF.HEAD\"},\n        {\"name\":\"body\", \"id\":\"D_REF.BODY\"}\n    ],    \n    \"motions\":\n    {\n        \"idle\":\n        [\n            {\"file\":\"motions.idle_00.mtn\" ,\"fade_in\":2000, \"fade_out\":2000},\n            {\"file\":\"motions.idle_01.mtn\" ,\"fade_in\":2000, \"fade_out\":2000},\n            {\"file\":\"motions.idle_02.mtn\" ,\"fade_in\":2000, \"fade_out\":2000}\n        ],\n        \"tap_body\":\n        [\n            { \"file\":\"motions.tapBody_00.mtn\" , \"sound\":\"tapBody_00\"},\n            { \"file\":\"motions.tapBody_01.mtn\" , \"sound\":\"tapBody_01\"},\n            { \"file\":\"motions.tapBody_02.mtn\" , \"sound\":\"tapBody_02\"}\n        ],\n        \"pinch_in\":\n        [\n            { \"file\":\"motions.pinchIn_00.mtn\", \"sound\":\"pinchIn_00\" }\n        ],\n        \"pinch_out\":\n        [\n            { \"file\":\"motions.pinchOut_00.mtn\", \"sound\":\"pinchOut_00\" }\n        ],\n        \"shake\":\n        [\n            { \"file\":\"motions.shake_00.mtn\", \"sound\":\"shake_00\",\"fade_in\":500 }\n        ],\n        \"flick_head\":\n        [\n            { \"file\":\"motions.flickHead_00.mtn\", \"sound\":\"flickHead_00\" }\n        ]\n    }    \n}","highlight_active_line":false,"show_gutter":false,"display_indent_guides":false,"line_wrap":false,"use_soft_tabs":true,"max_lines":30,"min_lines":1});
+			_Element.prototype.settings.page_element_id = "754959805373831074";
+			
+			_Element.prototype.element_id = "7143a39a-4802-41ad-b616-5c9b847084a7";
+			_Element.prototype.user_id = "14264557";
+			_Element.prototype.site_id = "850176657268961371";
+			_Element.prototype.assets_path = "//marketplace.editmysite.com/elements/270170748587580171-1.3.1/assets/";
+			new _Element({
+				el: '#element-7143a39a-4802-41ad-b616-5c9b847084a7'
+			});
+		});
+	});
+}
+
+if (typeof document.documentElement.appReady == 'undefined') {
+	document.documentElement.appReady = 0;
+}
+
+if (document.documentElement.appReady || (window.inEditor && window.inEditor())) {
+	setupElement754959805373831074();
+} else if (document.createEvent && document.addEventListener) {
+	document.addEventListener('appReady', setupElement754959805373831074, false);
+} else {
+	document.documentElement.attachEvent('onpropertychange', function(event){
+		if (event.propertyName == 'appReady') {
+			setupElement754959805373831074();
+		}
+	});
+}
+
+</script></div></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div></div>
+</div>
+			</div>
+		</div>
+		<div id="footer">
+			<div id="footer-content">Create a <a target="_top" href="http://www.weebly.com/">free web site</a> with <a target="_top" href="http://www.weebly.com/" title="免费网站">Weebly</a></div>
+		</div>
+	</div>
+	
+	<div class="navmobile-wrapper">
+		<div id="navmobile" class="nav"><ul class="wsite-menu-default">
+		<li id="pg608562111965458717" class="wsite-menu-item-wrap">
+			<a
+					href="index.html"
+				class="wsite-menu-item"
+				>
+				Home
+			</a>
+			
+		</li>
+		<li id="pg771034414327920939" class="wsite-menu-item-wrap">
+			<a
+					href="map.html"
+				class="wsite-menu-item"
+				>
+				Map
+			</a>
+			
+		</li>
+		<li id="pg807633210476052296" class="wsite-menu-item-wrap">
+			<a
+					href="tutorialtemplates.html"
+				class="wsite-menu-item"
+				>
+				Tutorial/Templates
+			</a>
+			
+		</li>
+		<li id="pg462747272431172124" class="wsite-menu-item-wrap">
+			<a
+					href="news.html"
+				class="wsite-menu-item"
+				>
+				News
+			</a>
+			
+		</li>
+		<li id="pg661412759227518685" class="wsite-menu-item-wrap">
+			<a
+					href="about.html"
+				class="wsite-menu-item"
+				>
+				About
+			</a>
+			
+		</li>
+</ul>
+</div>
+	</div>
+
+</div>
+
+
+<script language="javascript" src="files/theme/plugins.js"></script>	 
+<script language="javascript" src="files/theme/custom.js"></script>
+<script language="javascript" src="files/theme/mobile.js"></script>	
+
+
+		<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-50390733-1', 'weebly.com');
+  ga('send', 'pageview');
+
+</script>
+	</body>
+</html>

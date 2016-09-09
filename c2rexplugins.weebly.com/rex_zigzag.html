@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>rex_zigzag - Rex's plugins for Construct2</title>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+		<meta name="google-site-verification" content="AbKU1w_lq8tjMKAN0yt_O0WFqwDr4zH5bHiXJEpyErI" />
+		<link id="wsite-base-style" rel="stylesheet" type="text/css" href="http://cdn2.editmysite.com/css/sites.css?buildTime=1234" />
+<link rel="stylesheet" type="text/css" href="http://cdn1.editmysite.com/editor/libraries/fancybox/fancybox.css?1234" />
+<link rel="stylesheet" type="text/css" href="http://cdn2.editmysite.com/css/social-icons.css?buildtime=1234" media="screen,projection" />
+<link rel="stylesheet" type="text/css" href="files/main_style.css?1469150796" title="wsite-theme-css" />
+<link href='http://fonts.googleapis.com/css?family=Raleway:400,300,200,700&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+<link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,700,400italic,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,700,400italic,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+<style type='text/css'>
+.wsite-elements.wsite-not-footer div.paragraph, .wsite-elements.wsite-not-footer p, .wsite-elements.wsite-not-footer .product-block .product-title, .wsite-elements.wsite-not-footer .product-description, .wsite-elements.wsite-not-footer .wsite-form-field label, .wsite-elements.wsite-not-footer .wsite-form-field label, #wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {font-family:"Open Sans" !important;}
+#wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {}
+.wsite-elements.wsite-footer div.paragraph, .wsite-elements.wsite-footer p, .wsite-elements.wsite-footer .product-block .product-title, .wsite-elements.wsite-footer .product-description, .wsite-elements.wsite-footer .wsite-form-field label, .wsite-elements.wsite-footer .wsite-form-field label{}
+.wsite-elements.wsite-not-footer h2, .wsite-elements.wsite-not-footer .product-long .product-title, .wsite-elements.wsite-not-footer .product-large .product-title, .wsite-elements.wsite-not-footer .product-small .product-title, #wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {font-family:"Open Sans" !important;}
+#wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {}
+.wsite-elements.wsite-footer h2, .wsite-elements.wsite-footer .product-long .product-title, .wsite-elements.wsite-footer .product-large .product-title, .wsite-elements.wsite-footer .product-small .product-title{}
+#wsite-title {}
+.wsite-menu-default a {}
+.wsite-menu a {}
+.wsite-image div, .wsite-caption {}
+.galleryCaptionInnerText {}
+.fancybox-title {}
+.wslide-caption-text {}
+.wsite-phone {}
+.wsite-headline {}
+.wsite-headline-paragraph {}
+.wsite-button-inner {}
+.wsite-not-footer blockquote {}
+.wsite-footer blockquote {}
+.blog-header h2 a {}
+#wsite-content h2.wsite-product-title {}
+.wsite-product .wsite-product-price a {}
+</style>
+
+		<script><!--
+var STATIC_BASE = '//cdn1.editmysite.com/';
+var STYLE_PREFIX = 'wsite';
+//-->
+</script>
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js'></script>
+
+<script type="text/javascript" src="http://cdn2.editmysite.com/js/lang/zh/stl.js?buildTime=1234&"></script>
+<script src="http://cdn2.editmysite.com/js/site/main.js?buildTime=1234"></script><script type="text/javascript">_W.configDomain = "www.weebly.com";</script><script>_W.relinquish && _W.relinquish()</script>
+<script type="text/javascript" src="http://cdn2.editmysite.com/js/lang/zh/stl.js?buildTime=1234&"></script><script> _W.themePlugins = [];</script><script type="text/javascript"><!--
+	var IS_ARCHIVE = 1;
+	
+	(function(jQuery){
+		function initFlyouts(){
+			initPublishedFlyoutMenus(
+				[{"id":"608562111965458717","title":"Home","url":"index.html","target":"","nav_menu":false},{"id":"771034414327920939","title":"Map","url":"map.html","target":"","nav_menu":false},{"id":"807633210476052296","title":"Tutorial\/Templates","url":"tutorialtemplates.html","target":"","nav_menu":false},{"id":"462747272431172124","title":"News","url":"news.html","target":"","nav_menu":false},{"id":"661412759227518685","title":"About","url":"about.html","target":"","nav_menu":false}],
+				"226168592264572432",
+				'',
+				'active',
+				false,
+				{"navigation\/item":"<li {{#id}}id=\"{{id}}\"{{\/id}} class=\"wsite-menu-item-wrap\">\n\t<a\n\t\t{{^nav_menu}}\n\t\t\thref=\"{{url}}\"\n\t\t{{\/nav_menu}}\n\t\t{{#target}}\n\t\t\ttarget=\"{{target}}\"\n\t\t{{\/target}}\n\t\t{{#membership_required}}\n\t\t\tdata-membership-required=\"{{.}}\"\n\t\t{{\/membership_required}}\n\t\tclass=\"wsite-menu-item\"\n\t\t>\n\t\t{{{title_html}}}\n\t<\/a>\n\t{{#has_children}}{{> navigation\/flyout\/list}}{{\/has_children}}\n<\/li>\n","navigation\/flyout\/list":"<div class=\"wsite-menu-wrap\" style=\"display:none\">\n\t<ul class=\"wsite-menu\">\n\t\t{{#children}}{{> navigation\/flyout\/item}}{{\/children}}\n\t<\/ul>\n<\/div>\n","navigation\/flyout\/item":"<li {{#id}}id=\"{{id}}\"{{\/id}}\n\tclass=\"wsite-menu-subitem-wrap {{#is_current}}wsite-nav-current{{\/is_current}}\"\n\t>\n\t<a\n\t\t{{^nav_menu}}\n\t\t\thref=\"{{url}}\"\n\t\t{{\/nav_menu}}\n\t\t{{#target}}\n\t\t\ttarget=\"{{target}}\"\n\t\t{{\/target}}\n\t\tclass=\"wsite-menu-subitem\"\n\t\t>\n\t\t<span class=\"wsite-menu-title\">\n\t\t\t{{{title_html}}}\n\t\t<\/span>{{#has_children}}<span class=\"wsite-menu-arrow\">&gt;<\/span>{{\/has_children}}\n\t<\/a>\n\t{{#has_children}}{{> navigation\/flyout\/list}}{{\/has_children}}\n<\/li>\n"},
+				{}
+			)
+		}
+		if (jQuery) {
+			jQuery(document).ready(function() { jQuery(initFlyouts); });
+		}else{
+			if (Prototype.Browser.IE) window.onload = initFlyouts;
+			else document.observe('dom:loaded', initFlyouts);
+		}
+	})(window._W && _W.jQuery)
+//-->
+</script>
+		
+		<script
+  type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script "text/x-mathjax-config">
+MathJax.Hub.Config({
+	TeX: { extensions: [
+		"autoload-all.js"
+	]}
+}); </script>
+<script "text/x-mathjax-config">
+	MathJax.Hub.Register.StartupHook("TeX Jax Ready", function () {
+		MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{ cancel: ["Extension","cancel"] });
+	});
+</script>
+<script type="text/javascript">(function(d,s,id){var z=d.createElement(s);z.type="text/javascript";z.id=id;z.async=true;z.src="http://static.zotabox.com/8/e/8e2816f3964c02518b40c1e9ba84b04e/widgets.js";var sz=d.getElementsByTagName(s)[0];sz.parentNode.insertBefore(z,sz)}(document,"script","zb-embed-code"));</script>
+	</head>
+	<body class="no-header  wsite-theme-light  wsite-page-rex_zigzag full-width-on "><div class="body-wrap">
+	
+	<div id="header">
+		<div class="nav-trigger hamburger">
+			<div class="open-btn">
+				<span class="mobile"></span>
+				<span class="mobile"></span>
+				<span class="mobile"></span>
+			</div>
+		</div>
+		<div id="sitename"><span class="wsite-logo">
+
+	<a href="">
+	
+	<span id="wsite-title">Rex's plugins for Construct2</span>
+	
+	</a>
+
+</span></div>
+	</div>
+
+	<div id="wrapper">
+		<div class="bg-wrapper">
+			<div id="navigation"><ul class="wsite-menu-default">
+		<li id="pg608562111965458717" class="wsite-menu-item-wrap">
+			<a
+					href="index.html"
+				class="wsite-menu-item"
+				>
+				Home
+			</a>
+			
+		</li>
+		<li id="pg771034414327920939" class="wsite-menu-item-wrap">
+			<a
+					href="map.html"
+				class="wsite-menu-item"
+				>
+				Map
+			</a>
+			
+		</li>
+		<li id="pg807633210476052296" class="wsite-menu-item-wrap">
+			<a
+					href="tutorialtemplates.html"
+				class="wsite-menu-item"
+				>
+				Tutorial/Templates
+			</a>
+			
+		</li>
+		<li id="pg462747272431172124" class="wsite-menu-item-wrap">
+			<a
+					href="news.html"
+				class="wsite-menu-item"
+				>
+				News
+			</a>
+			
+		</li>
+		<li id="pg661412759227518685" class="wsite-menu-item-wrap">
+			<a
+					href="about.html"
+				class="wsite-menu-item"
+				>
+				About
+			</a>
+			
+		</li>
+</ul>
+</div>
+			<div id="content-wrapper">
+				<div id="content"><div id='wsite-content' class='wsite-elements wsite-not-footer'>
+<h2 class="wsite-content-title" style="text-align:left;">rex_zigzag</h2>
+
+<div class="paragraph" style="text-align:left;"><a title="" target="_blank" href="https://dl.dropboxusercontent.com/u/5779181/C2Repo/Zip/behaviors/rex_zigzag.7z">Plugin</a>,<span><span><span> <a title="" target="_blank" href="https://dl.dropboxusercontent.com/u/5779181/C2Repo/rex_zigzag.html">ACE table</a>, </span></span></span><a style="" href="https://www.scirra.com/forum/behavior-zigzag_t64505" title="" target="_blank">Discussion thread</a><br />Dependence: None<br /></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><strong><font size="3">Introduction</font></strong><br />Using <a title="" target="_blank" href="http://en.wikipedia.org/wiki/Logo_%28programming_language%29">LOGO-like</a> script to move or rotate sprite.</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><strong><font size="3">Usage</font></strong><br /></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Run commands</strong><br /><a title="" target="_blank" href="https://onedrive.live.com/redir?resid=7497FD5EC94476E%21699&amp;authkey=%21AB73Y415sX01nkg&amp;ithint=file%2ccapx"><span>Sample capx</span></a><ol><li>Set commands at "Commands" in properties table, or by "Action:Clean command queue", then "Action:Add commands", or "Action:Add command". The commands will be listed at next section.<br /></li><li><span>Run these commands in-order if "</span>Start" is "Yes" in properties table. Or call "Action:Execution start". Remember set "Activated" to "Yes" in properties table, or set by "Action:Set activated". The "Activated" is an enable switch of this behavior.<br /></li></ol></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Types of command</strong><br /><span>There are 5 kinds of command.<br /></span><ul><li>Move <u><strong>F</strong></u>orward : "F 100" means move the spsrite forward 100 pixels</li><li>Move <u><strong>B</strong></u>ack : "B 100"</li><li>Turn <u><strong>L</strong></u>eft : "L 60" means rotate the spsrite left 60 degrees</li><li>Turn <u><strong>R</strong></u>ight : "R 60"</li><li><u><strong>W</strong></u>ait : "W 1" means do nothing, just wait 1 second.</li></ul>The format of one command is "F/B/L/R/W #", for example<br /><span></span></div>
+
+<blockquote style="text-align:left;">F 100<br /></blockquote>
+
+<div class="paragraph" style="text-align:left;">Join commands by ";", for example<br /></div>
+
+<blockquote style="text-align:left;">F 100;R 60</blockquote>
+
+<div class="paragraph" style="text-align:left;"><strong>Repeat count</strong><br /><span>Commands will be executed repeatedly if "r</span>epeat count" is larger than 0 in properties table, or set by&nbsp; <span>"</span>Action:Set repeat count". Running infinity if repeat count is equal to 0.<br /></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Stop running</strong><br /><span>Call "</span>Action:Execution stop" to stop running.<br /></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Command queue</strong><br /><span>Add command into command queue by </span>"Action:Add commands", or "Action:Add command".<br />Clean the command queue by <span></span> "Action:Clean command queue".<br /><span>"</span>Condition:On command start" will be triggered when command executed start, and "Condition:On command finish" will be triggered when command executed finished.<br /><span>"</span>Condition:On command queue finish" will be triggered when all commands had been executed finished. This trigger will never be fired if it is in infinity mode, i.e. repeat count is 0.<br /><span>"</span>Condition:Is executing command" could be used to test if a specific kind of command is running.<br /></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Moving behavior</strong><br /><span>The moving behavior of this behavior is similar with <a title="" href="rex_moveto.html">rex_moveTo behavior</a>, which defined by "</span>Max moving speed", "Moving acceleration", "Moving deceleration" in properties table, or set them by "Action:Set maximum moving speed", "Action:Set moving acceleration", "Action:Set moving deceleration".<br /><span>"</span>Condition:Compare moving speed" could be used to compare the current moving speed.<br /></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Rotate behavior</strong><br /><span></span>The moving behavior of this behavior is defined by "Max rotation speed", "Rotation acceleration", "Rotation deceleration" in properties table, or set them by "Action:Set maximum rotation speed", "Action:Set rotation acceleration", "Action:Set rotation deceleration".<br /><span>"</span>Condition:Compare rotation speed" could be used to compare the current rotating speed. </div>
+
+<div class="paragraph" style="text-align:left;">Set <br /><ul style=""><li style="">"Max rotation speed" = 36000</li><li style="">"Rotation acceleration" = 0</li><li style="">"Rotation deceleration" = 0</li></ul>will rotate to target angle immediately.</div>
+
+<div class="paragraph" style="text-align:left;"><strong>Embed speed setting in commands string</strong><br /><a target="_blank" href="https://onedrive.live.com/redir?resid=7497FD5EC94476E!701&amp;authkey=!AH2WQAVc8n6QI9Y&amp;ithint=file%2ccapx"><span>Sample capx</span></a><br /><span>Speed setting could be embedded in command string by a JSON array with</span><br /></div>
+
+<blockquote style="text-align:left;">[max,acc,dec]</blockquote>
+
+<div class="paragraph" style="text-align:left;">For example,<br /></div>
+
+<blockquote style="text-align:left;">F 100 [400,0,0]</blockquote>
+
+<div class="paragraph" style="text-align:left;">The speed setting will change the moving behavior or rotate behavior of all remainder commands.<br /></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Rotatable</strong><br /><a title="" target="_blank" href="https://onedrive.live.com/redir?resid=7497FD5EC94476E!700&amp;authkey=!ANO3ugZqjsaMOsw&amp;ithint=file%2ccapx"><span>Sample capx</span></a><br /><span></span>The instance could be rotated by rotating command of this behavior if set "Rotatable" to "Yes" in properties table, or set by "Action:Set rotatable".<br /><ul><li><span>In rotatable mode, </span>start angle of commands is equal to the initial angle of this instance.</li><li><span>In non-rotatable mode,</span> start angle of commands is<span> set by "</span>Initial angle" in properties table.</li></ul>Set moving angle by "Action:Set moving angle", it also rotates instance at rotatable mode. <br /><span></span><br /><span></span></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Precise mode</strong><br /><span></span>Set "Precise mode" to "Yes" in properties table, or set by "Action:Set precise", to force sprite move to target.<br /><span>Set </span>"Precise mode" to "No" if user want to combine this zigzag behavior with other movement behavior like <a target="_blank" href="https://www.scirra.com/manual/103/sine">official sine behavior</a>.<br /></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Continued mode</strong><br /><span>Set "</span>Continued mode" to "Yes" in properties table could running in a continued-time, i.e. the calculating of time will be more precisely. <br />Set "Continued mode" to "No" is good enough, <span></span>usually.<br /></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div></div>
+</div>
+			</div>
+		</div>
+		<div id="footer">
+			<div id="footer-content">Create a <a target="_top" href="http://www.weebly.com/">free web site</a> with <a target="_top" href="http://www.weebly.com/" title="免费网站">Weebly</a></div>
+		</div>
+	</div>
+	
+	<div class="navmobile-wrapper">
+		<div id="navmobile" class="nav"><ul class="wsite-menu-default">
+		<li id="pg608562111965458717" class="wsite-menu-item-wrap">
+			<a
+					href="index.html"
+				class="wsite-menu-item"
+				>
+				Home
+			</a>
+			
+		</li>
+		<li id="pg771034414327920939" class="wsite-menu-item-wrap">
+			<a
+					href="map.html"
+				class="wsite-menu-item"
+				>
+				Map
+			</a>
+			
+		</li>
+		<li id="pg807633210476052296" class="wsite-menu-item-wrap">
+			<a
+					href="tutorialtemplates.html"
+				class="wsite-menu-item"
+				>
+				Tutorial/Templates
+			</a>
+			
+		</li>
+		<li id="pg462747272431172124" class="wsite-menu-item-wrap">
+			<a
+					href="news.html"
+				class="wsite-menu-item"
+				>
+				News
+			</a>
+			
+		</li>
+		<li id="pg661412759227518685" class="wsite-menu-item-wrap">
+			<a
+					href="about.html"
+				class="wsite-menu-item"
+				>
+				About
+			</a>
+			
+		</li>
+</ul>
+</div>
+	</div>
+
+</div>
+
+
+<script language="javascript" src="files/theme/plugins.js"></script>	 
+<script language="javascript" src="files/theme/custom.js"></script>
+<script language="javascript" src="files/theme/mobile.js"></script>	
+
+
+		<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-50390733-1', 'weebly.com');
+  ga('send', 'pageview');
+
+</script>
+	</body>
+</html>

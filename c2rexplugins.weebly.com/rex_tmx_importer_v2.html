@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>rex_tmx_importer_v2 - Rex's plugins for Construct2</title>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+		<meta name="google-site-verification" content="AbKU1w_lq8tjMKAN0yt_O0WFqwDr4zH5bHiXJEpyErI" />
+		<link id="wsite-base-style" rel="stylesheet" type="text/css" href="http://cdn2.editmysite.com/css/sites.css?buildTime=1234" />
+<link rel="stylesheet" type="text/css" href="http://cdn1.editmysite.com/editor/libraries/fancybox/fancybox.css?1234" />
+<link rel="stylesheet" type="text/css" href="http://cdn2.editmysite.com/css/social-icons.css?buildtime=1234" media="screen,projection" />
+<link rel="stylesheet" type="text/css" href="files/main_style.css?1469150796" title="wsite-theme-css" />
+<link href='http://fonts.googleapis.com/css?family=Raleway:400,300,200,700&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+<link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,700,400italic,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,700,400italic,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+<style type='text/css'>
+.wsite-elements.wsite-not-footer div.paragraph, .wsite-elements.wsite-not-footer p, .wsite-elements.wsite-not-footer .product-block .product-title, .wsite-elements.wsite-not-footer .product-description, .wsite-elements.wsite-not-footer .wsite-form-field label, .wsite-elements.wsite-not-footer .wsite-form-field label, #wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {font-family:"Open Sans" !important;}
+#wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {}
+.wsite-elements.wsite-footer div.paragraph, .wsite-elements.wsite-footer p, .wsite-elements.wsite-footer .product-block .product-title, .wsite-elements.wsite-footer .product-description, .wsite-elements.wsite-footer .wsite-form-field label, .wsite-elements.wsite-footer .wsite-form-field label{}
+.wsite-elements.wsite-not-footer h2, .wsite-elements.wsite-not-footer .product-long .product-title, .wsite-elements.wsite-not-footer .product-large .product-title, .wsite-elements.wsite-not-footer .product-small .product-title, #wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {font-family:"Open Sans" !important;}
+#wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {}
+.wsite-elements.wsite-footer h2, .wsite-elements.wsite-footer .product-long .product-title, .wsite-elements.wsite-footer .product-large .product-title, .wsite-elements.wsite-footer .product-small .product-title{}
+#wsite-title {}
+.wsite-menu-default a {}
+.wsite-menu a {}
+.wsite-image div, .wsite-caption {}
+.galleryCaptionInnerText {}
+.fancybox-title {}
+.wslide-caption-text {}
+.wsite-phone {}
+.wsite-headline {}
+.wsite-headline-paragraph {}
+.wsite-button-inner {}
+.wsite-not-footer blockquote {}
+.wsite-footer blockquote {}
+.blog-header h2 a {}
+#wsite-content h2.wsite-product-title {}
+.wsite-product .wsite-product-price a {}
+</style>
+
+		<script><!--
+var STATIC_BASE = '//cdn1.editmysite.com/';
+var STYLE_PREFIX = 'wsite';
+//-->
+</script>
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js'></script>
+
+<script type="text/javascript" src="http://cdn2.editmysite.com/js/lang/zh/stl.js?buildTime=1234&"></script>
+<script src="http://cdn2.editmysite.com/js/site/main.js?buildTime=1234"></script><script type="text/javascript">_W.configDomain = "www.weebly.com";</script><script>_W.relinquish && _W.relinquish()</script>
+<script type="text/javascript" src="http://cdn2.editmysite.com/js/lang/zh/stl.js?buildTime=1234&"></script><script> _W.themePlugins = [];</script><script type="text/javascript"><!--
+	var IS_ARCHIVE = 1;
+	
+	(function(jQuery){
+		function initFlyouts(){
+			initPublishedFlyoutMenus(
+				[{"id":"608562111965458717","title":"Home","url":"index.html","target":"","nav_menu":false},{"id":"771034414327920939","title":"Map","url":"map.html","target":"","nav_menu":false},{"id":"807633210476052296","title":"Tutorial\/Templates","url":"tutorialtemplates.html","target":"","nav_menu":false},{"id":"462747272431172124","title":"News","url":"news.html","target":"","nav_menu":false},{"id":"661412759227518685","title":"About","url":"about.html","target":"","nav_menu":false}],
+				"332212340430468681",
+				'',
+				'active',
+				false,
+				{"navigation\/item":"<li {{#id}}id=\"{{id}}\"{{\/id}} class=\"wsite-menu-item-wrap\">\n\t<a\n\t\t{{^nav_menu}}\n\t\t\thref=\"{{url}}\"\n\t\t{{\/nav_menu}}\n\t\t{{#target}}\n\t\t\ttarget=\"{{target}}\"\n\t\t{{\/target}}\n\t\t{{#membership_required}}\n\t\t\tdata-membership-required=\"{{.}}\"\n\t\t{{\/membership_required}}\n\t\tclass=\"wsite-menu-item\"\n\t\t>\n\t\t{{{title_html}}}\n\t<\/a>\n\t{{#has_children}}{{> navigation\/flyout\/list}}{{\/has_children}}\n<\/li>\n","navigation\/flyout\/list":"<div class=\"wsite-menu-wrap\" style=\"display:none\">\n\t<ul class=\"wsite-menu\">\n\t\t{{#children}}{{> navigation\/flyout\/item}}{{\/children}}\n\t<\/ul>\n<\/div>\n","navigation\/flyout\/item":"<li {{#id}}id=\"{{id}}\"{{\/id}}\n\tclass=\"wsite-menu-subitem-wrap {{#is_current}}wsite-nav-current{{\/is_current}}\"\n\t>\n\t<a\n\t\t{{^nav_menu}}\n\t\t\thref=\"{{url}}\"\n\t\t{{\/nav_menu}}\n\t\t{{#target}}\n\t\t\ttarget=\"{{target}}\"\n\t\t{{\/target}}\n\t\tclass=\"wsite-menu-subitem\"\n\t\t>\n\t\t<span class=\"wsite-menu-title\">\n\t\t\t{{{title_html}}}\n\t\t<\/span>{{#has_children}}<span class=\"wsite-menu-arrow\">&gt;<\/span>{{\/has_children}}\n\t<\/a>\n\t{{#has_children}}{{> navigation\/flyout\/list}}{{\/has_children}}\n<\/li>\n"},
+				{}
+			)
+		}
+		if (jQuery) {
+			jQuery(document).ready(function() { jQuery(initFlyouts); });
+		}else{
+			if (Prototype.Browser.IE) window.onload = initFlyouts;
+			else document.observe('dom:loaded', initFlyouts);
+		}
+	})(window._W && _W.jQuery)
+//-->
+</script>
+		
+		<script
+  type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script "text/x-mathjax-config">
+MathJax.Hub.Config({
+	TeX: { extensions: [
+		"autoload-all.js"
+	]}
+}); </script>
+<script "text/x-mathjax-config">
+	MathJax.Hub.Register.StartupHook("TeX Jax Ready", function () {
+		MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{ cancel: ["Extension","cancel"] });
+	});
+</script>
+<script type="text/javascript">(function(d,s,id){var z=d.createElement(s);z.type="text/javascript";z.id=id;z.async=true;z.src="http://static.zotabox.com/8/e/8e2816f3964c02518b40c1e9ba84b04e/widgets.js";var sz=d.getElementsByTagName(s)[0];sz.parentNode.insertBefore(z,sz)}(document,"script","zb-embed-code"));</script>
+	</head>
+	<body class="no-header  wsite-theme-light  wsite-page-rex_tmx_importer_v2 full-width-on "><div class="body-wrap">
+	
+	<div id="header">
+		<div class="nav-trigger hamburger">
+			<div class="open-btn">
+				<span class="mobile"></span>
+				<span class="mobile"></span>
+				<span class="mobile"></span>
+			</div>
+		</div>
+		<div id="sitename"><span class="wsite-logo">
+
+	<a href="">
+	
+	<span id="wsite-title">Rex's plugins for Construct2</span>
+	
+	</a>
+
+</span></div>
+	</div>
+
+	<div id="wrapper">
+		<div class="bg-wrapper">
+			<div id="navigation"><ul class="wsite-menu-default">
+		<li id="pg608562111965458717" class="wsite-menu-item-wrap">
+			<a
+					href="index.html"
+				class="wsite-menu-item"
+				>
+				Home
+			</a>
+			
+		</li>
+		<li id="pg771034414327920939" class="wsite-menu-item-wrap">
+			<a
+					href="map.html"
+				class="wsite-menu-item"
+				>
+				Map
+			</a>
+			
+		</li>
+		<li id="pg807633210476052296" class="wsite-menu-item-wrap">
+			<a
+					href="tutorialtemplates.html"
+				class="wsite-menu-item"
+				>
+				Tutorial/Templates
+			</a>
+			
+		</li>
+		<li id="pg462747272431172124" class="wsite-menu-item-wrap">
+			<a
+					href="news.html"
+				class="wsite-menu-item"
+				>
+				News
+			</a>
+			
+		</li>
+		<li id="pg661412759227518685" class="wsite-menu-item-wrap">
+			<a
+					href="about.html"
+				class="wsite-menu-item"
+				>
+				About
+			</a>
+			
+		</li>
+</ul>
+</div>
+			<div id="content-wrapper">
+				<div id="content"><div id='wsite-content' class='wsite-elements wsite-not-footer'>
+<h2 class="wsite-content-title" style="text-align:left;">rex_tmx_importer_v2</h2>
+
+<div class="paragraph" style="text-align:left;"><a target="_blank" href="https://dl.dropboxusercontent.com/u/5779181/C2Repo/Zip/plugins/rex_tmx_importer_v2.7z">Plugin</a>,<span><span><span> <a target="_blank" href="https://dl.dropboxusercontent.com/u/5779181/C2Repo/rex_tmx_importer_v2.html">ACE table</a></span></span></span> , <a href="https://www.scirra.com/forum/plugin-rex-tmx-importer-v2_t103854" target="_blank">Discussion thread</a><br />Dependence: <a href="rex_tmx_json_parser.html">rex_tmx_JSON_parser</a> or <a href="rex_tmx_xml_parser.html">rex_tmx_XML_parser</a><br /></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><strong><font size="3">Introduction</font></strong><br />Retrieve or create tiles by input string from exported file of <a title="" target="_blank" href="http://www.mapeditor.org/">tile map editor</a>.<span><br /></span></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><strong><font size="3">Usage</font></strong><br /><a title="" target="_blank" href="https://onedrive.live.com/redir?resid=7497FD5EC94476E!558&amp;authkey=!AMbD2IBIdygRjWE&amp;ithint=file%2c.capx"><span>Sample capx</span></a><br /></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Import tmx file</strong><br />Call <span></span>"Action:Import tmx" to import tmx file, <span>which has 2 kinds of format. Each format need a dedicated parser.<br /></span><ul><li><span><span></span>JSON format</span> - <a title="" style="" href="rex_tmx_json_parser.html">rex_tmx_JSON_parser</a></li><li><span>XML format</span> - <a href="rex_tmx_xml_parser.html">rex_tmx_XML_parser</a></li></ul>Remember that the XML could not be parsed in CocoonJS and Ejecta now.<br /><span></span></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Retrieve or create tiles</strong><br /><span></span>After importing tmx file by called "Action:Import tmx", user could call these actions to <span style="">retrieve or create tiles.<br /></span><ul><li><span style=""><span>"</span></span>Action:Create tiles" : it will create tile instances at the layer with the same name defined in tmx file, in one tick.<br /></li><li><span>"</span>Action:Retrieve tile array" : it will <span style="">retrieve</span> each available cell without creating any instance in one tick. User need to create tile instances manually under "Condition:On each tile cell".<br /></li><li><span>"</span>Action:Create tiles in a duration" : this action is similar as "Action:Create tiles", but it will create tiles in many ticks. It is useful for creating large number of tiles.<br /></li><li><span>"</span>Action:Retrieve tile array in a duration" : this action is similar as "Action:Retrieve tile array", but it will retrieve each available cell in many ticks.</li></ul><span></span></div>
+
+<div class="paragraph" style="text-align:left;"><strong>On each tile cell</strong><br /><span></span>These actions will trigger "Condition:On each tile cell" for each available cell, to configure or create tile manually.<span></span> Expressions in categories "<span style="">Map</span>", "<span style="">Tile: Layer</span>", "<span style="">Tile: Tileset</span>".<br /><span>For example, "</span>Expression:PhysicalX", "Expression:PhysicalY", and "Expression:LayerName", "Expression:Frame" could be used to create and set tile instances.<br /></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Offset of tiles</strong><br /><span>The offset of tiles is defined by "</span>X at (0,0)", "Y at (0,0)" in properties table, or by "Action:Set instance position of (0,0)". This information will be used while call "Action:Create tiles", or "Action:Create tiles in a duration", or "Expression:PhysicalX", "Expression:PhysicalY".</div>
+
+<div class="paragraph" style="text-align:left;"><strong>Retri</strong><strong><span>eve</span> properties</strong><br />Conditions in category "<span>For each property</span>" could be used to <span>retri</span><span>eve properties, get values by related expressions.</span><ul><li>"Condition:For each layer property" - "Expression:CurLayerPropName", "Expression:CurLayerPropValue"<br /></li><li><span>"</span>Condition:For each tileset property" - <span>"</span>Expression:CurTilesetPropName", "Expression:CurTilesetPropValue"</li><li><span>"</span>Condition:For each tile property" - <span>"</span>Expression:CurTilePropName", "Expression:CurTilePropValue"</li><li><span>"</span>Condition:For each map property" - <span>"</span>Expression:CurMapPropName", "Expression:CurMapPropValue"</li></ul></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Retrieve layers</strong><br />"Condition:For each layer" could be used to retrieve layers, get layer properties by "Condition:For each layer property" shown in previous section, or layer name by "Expression:LayerName"</div>
+
+<div class="paragraph" style="text-align:left;"><strong>Object layer</strong><br /><span>This plugin also could retrieve object layers under "</span>Condition:On each object", using expressions in category "<span style="">Object: Object</span><em style="">"</em>&nbsp; to get the information of each object.<br /></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Release tmx object</strong><br /><span>After r</span><span>etrieve or create tiles, call "</span>Action:Release tmx object" to release parsing result from memory.<br /></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><strong><span>Retrieve or create tiles</span> in a duration</strong><br /><a target="_blank" href="https://onedrive.live.com/redir?resid=7497FD5EC94476E!2153&amp;authkey=!AE_Wp947VpMJrPQ&amp;ithint=file%2ccapx">Sample caxp</a><br />"Action:Create tiles in a duration", or "Action:Retrieve tile array in a duration" are used to retrieve or create tiles in many ticks, these also will trigger "Condition:On retrieving duration", and "Condition:On retrieving finished". User could add processing UI under "Condition:On retrieving duration" with "Expression:RetrievingPercent".<br /><span>The parameter "</span>Processing time" is similar as "Percentage" in <a href="rex_eventbalancer.html">rex_eventbalancer</a>. It is the executing time counted by (1/60)*"Processing time" (second) in each tick in the duration.<br />Tmx object only could be released after retrieving finished. For example, call <span>"</span>Action:Release tmx object" under "Condition:On retrieving finished".<br /></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Retrieve tiles at logic X,Y</strong><br /><a target="_blank" href="https://onedrive.live.com/redir?resid=7497FD5EC94476E!2156&amp;authkey=!AB9QYNUJqBaf9JI&amp;ithint=file%2ccapx">Sample capx</a><br />Call "Condition:For each tile at logic XY" to get properties of tiles at logic X,Y. User could create a part of tiles in a specific range.</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Configure layout object</strong><br />User needs to configure layout objet (<a href="rex_board_squaretx.html">rex_board_squareTx</a>, or <a href="rex_board_hextx.html">rex_board_hexTx</a>) if using <a href="rex_board.html">rex_board</a> plugin to store tiles and chess<strong>.</strong><br /><a target="_blank" href="rex_board.html"><strong>Board</strong></a><br />Call "Action:Set board width", "Action:Set board height" and put "Expression:MapWidth", "Expression:MapHeight" to set it.<br /><a target="_blank" href="rex_board_squaretx.html"><strong>Square board</strong></a><br />Call "Action:Set orientation by number" (rex_board_squareTx) and put "Expression:IsIsometric" (rex_TMXImporter_v2) to set it. <br />Call "Action:Set cell size" (rex_board_squareTx) and put "Expression:TileWidth", "Expression:TileHeight" to set it.<br /><a target="_blank" href="rex_board_hextx.html"><strong>Hexagon board</strong></a><br />Call "Action:Set layout by number" (rex_board_hexTx) and put "Expression:IsUp2Down", "Expression:IsIndent" (rex_TMXImporter_v2) to set it.<br />Call "Action:Set cell size" (rex_board_hexTx) and put "Expression:TileWidth", "Expression:TileHeight" to set it.<br /></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Fill official tilemap</strong><br /><a target="_blank" href="https://onedrive.live.com/redir?resid=7497FD5EC94476E!2206&amp;authkey=!AJm76TJpfXwW-wc&amp;ithint=file%2ccapx">Sample capx</a><br />Call "Action:Reset tilemap" to resize the <a target="_blank" href="https://www.scirra.com/manual/172/tilemap">official tilemap object</a> and fill tile ID with a tmx layer.<br /></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Official save/load</strong><br /><a target="_blank" href="https://onedrive.live.com/redir?resid=7497FD5EC94476E!2157&amp;authkey=!AFGyKtekHqaMV_8&amp;ithint=file%2ccapx">Sample capx</a><br />This plugin support official save/load. User must keep parser object (i.e. do not destroy it) while official saving.</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div></div>
+</div>
+			</div>
+		</div>
+		<div id="footer">
+			<div id="footer-content">Create a <a target="_top" href="http://www.weebly.com/">free web site</a> with <a target="_top" href="http://www.weebly.com/" title="免费网站">Weebly</a></div>
+		</div>
+	</div>
+	
+	<div class="navmobile-wrapper">
+		<div id="navmobile" class="nav"><ul class="wsite-menu-default">
+		<li id="pg608562111965458717" class="wsite-menu-item-wrap">
+			<a
+					href="index.html"
+				class="wsite-menu-item"
+				>
+				Home
+			</a>
+			
+		</li>
+		<li id="pg771034414327920939" class="wsite-menu-item-wrap">
+			<a
+					href="map.html"
+				class="wsite-menu-item"
+				>
+				Map
+			</a>
+			
+		</li>
+		<li id="pg807633210476052296" class="wsite-menu-item-wrap">
+			<a
+					href="tutorialtemplates.html"
+				class="wsite-menu-item"
+				>
+				Tutorial/Templates
+			</a>
+			
+		</li>
+		<li id="pg462747272431172124" class="wsite-menu-item-wrap">
+			<a
+					href="news.html"
+				class="wsite-menu-item"
+				>
+				News
+			</a>
+			
+		</li>
+		<li id="pg661412759227518685" class="wsite-menu-item-wrap">
+			<a
+					href="about.html"
+				class="wsite-menu-item"
+				>
+				About
+			</a>
+			
+		</li>
+</ul>
+</div>
+	</div>
+
+</div>
+
+
+<script language="javascript" src="files/theme/plugins.js"></script>	 
+<script language="javascript" src="files/theme/custom.js"></script>
+<script language="javascript" src="files/theme/mobile.js"></script>	
+
+
+		<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-50390733-1', 'weebly.com');
+  ga('send', 'pageview');
+
+</script>
+	</body>
+</html>
