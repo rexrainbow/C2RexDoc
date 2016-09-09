@@ -1,0 +1,140 @@
+<!DOCTYPE 5>
+<html>
+  <head>
+    <title>Plugin : Maze gen</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="js/jquery-3.1.0.min.js">                         </script>
+    <script src="js/bootstrap.min.js">         </script>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header"><a class="navbar-brand" href="./index.html">Home</a></div>
+        <ul class="nav navbar-nav">
+          <li><a href="./pluginsIndex.html">Plugins      </a></li>
+          <li><a href="./behaviorsIndex.html">Behaviors                   </a></li>
+          <li><a href="./effectsIndex.html">Effects    </a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Plugin : Maze gen</h1>
+      <p>Author:Rex.Rainbow</p>
+      <ul>
+        <li>Generate random maze asynchronously. Reference: http://ondras.github.io/rot.js/hp/</li>
+      </ul>
+      <div class="panel panel-default">
+        <div class="panel-title">
+          <h2>Properties</h2>
+        </div>
+        <div class="panel-body">
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">   
+          <h2>Actions</h2>
+        </div>
+        <div class="panel-body">
+          <h2>Maze      </h2>
+          <h3>Action:Generate      </h3>
+          <ul>
+            <li>Generate maze.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Width ( number ) : Map width.</li>
+              <li>Height ( number ) : Map height.</li>
+              <li>Algorithm ( Combo ) : Algorithm.</li>
+              <ul>
+                <li>Options : [&quot;divide&quot;,&quot;icey&quot;,&quot;eller&quot;]</li>
+              </ul>
+              <li>Seed ( number ) : Random seed.</li>
+            </ul>
+          </ul>
+          <h3>Action:Cancel      </h3>
+          <ul>
+            <li>Cancel current generating process.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Action:Release      </h3>
+          <ul>
+            <li>Release map   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">    
+        <div class="panel-title">    
+          <h2>Expressions</h2>
+        </div>
+        <div class="panel-body">           
+          <h2>Map    </h2>
+          <h3>Expression:MapWidth </h3>
+          <ul>
+            <li>Get width of map.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:MapHeight </h3>
+          <ul>
+            <li>Get height of map.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:ValueAt </h3>
+          <ul>
+            <li>Get cell value at logic X,Y. 1 is a wall, 0 is an empty space. Return -1 if this cell is invalid.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>X ( number ) : Logic X.</li>
+              <li>Y ( number ) : Logic Y.</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">       
+          <h2>Conditions</h2>
+        </div>
+        <div class="panel-body">              
+          <h2>State    </h2>
+          <h4>Condition:Is generating                    </h4>
+          <ul>
+            <li>Return true if map is generating.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On completed                    </h4>
+          <ul>
+            <li>Trigger when map generating completed.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Value    </h2>
+          <h4>Condition:Is a wall                    </h4>
+          <ul>
+            <li>Return true if it is a empty space or a wll in a specific logic position.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>X ( number ) : Logic X.    </li>
+              <li>Y ( number ) : Logic Y.    </li>
+              <li>Type ( Combo ) : Type of tile.    </li>
+              <ul>
+                <li>Options : [&quot;empty space&quot;,&quot;wall&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

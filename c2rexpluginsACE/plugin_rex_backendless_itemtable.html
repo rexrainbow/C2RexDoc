@@ -1,0 +1,725 @@
+<!DOCTYPE 5>
+<html>
+  <head>
+    <title>Plugin : Item table</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="js/jquery-3.1.0.min.js">                         </script>
+    <script src="js/bootstrap.min.js">         </script>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header"><a class="navbar-brand" href="./index.html">Home</a></div>
+        <ul class="nav navbar-nav">
+          <li><a href="./pluginsIndex.html">Plugins      </a></li>
+          <li><a href="./behaviorsIndex.html">Behaviors                   </a></li>
+          <li><a href="./effectsIndex.html">Effects    </a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Plugin : Item table</h1>
+      <p>Author:Rex.Rainbow</p>
+      <ul>
+        <li>Items table indexed by (itemID, key), supports writing an item or reading items back.</li>
+      </ul>
+      <div class="panel panel-default">
+        <div class="panel-title">
+          <h2>Properties</h2>
+        </div>
+        <div class="panel-body">
+          <h3>Class</h3>
+          <ul>
+            <li>Class of the table.                    </li>
+          </ul>
+          <h3>Class name</h3>
+          <ul>
+            <li>Class name for storing items structure.                    </li>
+          </ul>
+          <h3>Page</h3>
+          <ul>
+            <li>Paging for reading.                    </li>
+          </ul>
+          <h3>Lines</h3>
+          <ul>
+            <li>Line count of each page.                    </li>
+          </ul>
+          <h3>Indexing</h3>
+          <ul>
+            <li>Primary keys for indexing.                    </li>
+          </ul>
+          <h3>Primary keys</h3>
+          <ul>
+            <li>Primary keys, separated by &quot;,&quot;                    </li>
+          </ul>
+          <h3>Misc</h3>
+          <ul>
+            <li>Other setting.                    </li>
+          </ul>
+          <h3>Clean meta data</h3>
+          <ul>
+            <li>Clean meta data of receiving items.                    </li>
+            <ul>
+              <li>Options : [&quot;No&quot;,&quot;Yes&quot;]</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">   
+          <h2>Actions</h2>
+        </div>
+        <div class="panel-body">
+          <h2>Filter - 1. new      </h2>
+          <h3>Action:1. New      </h3>
+          <ul>
+            <li>Create a new item filter.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Filter - 2. itemID      </h2>
+          <h3>Action:2. itemID include      </h3>
+          <ul>
+            <li>Add an itemID including.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>ItemID ( string ) : Object ID of item.</li>
+            </ul>
+          </ul>
+          <h2>Filter - 2. key      </h2>
+          <h3>Action:2. all values      </h3>
+          <ul>
+            <li>Add all values for this key.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Key ( string ) : The name of the key.</li>
+            </ul>
+          </ul>
+          <h3>Action:2. condition      </h3>
+          <ul>
+            <li>Add condition.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Condition ( string ) : Condition of filter.</li>
+            </ul>
+          </ul>
+          <h3>Action:2. value compare      </h3>
+          <ul>
+            <li>Add a value compared for this key.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Key ( string ) : The name of the key.</li>
+              <li>Conditions ( Combo ) : Condition type.</li>
+              <ul>
+                <li>Options : [&quot;equal to&quot;,&quot;not equal to&quot;,&quot;greater than&quot;,&quot;less than&quot;,&quot;greater than or equal to&quot;,&quot;less than or equal to&quot;]</li>
+              </ul>
+              <li>Value ( number or string ) : The value to comparsion, could be number or string.</li>
+            </ul>
+          </ul>
+          <h3>Action:2. timestamp constraint      </h3>
+          <ul>
+            <li>Add a timestamp constraint into filter. They will be jointed by AND operation.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>When ( Combo ) : Before or after the timestamp.</li>
+              <ul>
+                <li>Options : [&quot;Before&quot;,&quot;After&quot;]</li>
+              </ul>
+              <li>Timestamp ( number ) : Timestamp in milliseconds.</li>
+              <li>Include ( Combo ) : Include compared timestamp or excluded.</li>
+              <ul>
+                <li>Options : [&quot;Excluded&quot;,&quot;Included&quot;]</li>
+              </ul>
+              <li>Type ( Combo ) : Type of compared timestamp.</li>
+              <ul>
+                <li>Options : [&quot;Created&quot;,&quot;Updated&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h3>Action:2. string pattern compare      </h3>
+          <ul>
+            <li>Add string pattern compare for this key.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Key ( string ) : The name of the key.</li>
+              <li>Pattern ( string ) : String pattern.</li>
+              <li>Type ( Combo ) : Type of compared timestamp.</li>
+              <ul>
+                <li>Options : [&quot;at start&quot;,&quot;at end&quot;,&quot;within&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h3>Action:2. key exist      </h3>
+          <ul>
+            <li>Add existing for this key.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Key ( string ) : The name of the key.</li>
+              <li>Exist ( Combo ) : Key exists or not.</li>
+              <ul>
+                <li>Options : [&quot;does not exist&quot;,&quot;exist&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h3>Action:2. boolean value compare      </h3>
+          <ul>
+            <li>Add a boolean value compared for this key.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Key ( string ) : The name of the key.</li>
+              <li>Compared value ( Combo ) : Compared value.</li>
+              <ul>
+                <li>Options : [&quot;false&quot;,&quot;true&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h3>Action:2. value include      </h3>
+          <ul>
+            <li>Add a value including/not including of this key.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Key ( string ) : The name of the key.</li>
+              <li>Include ( Combo ) : Include or not.</li>
+              <ul>
+                <li>Options : [&quot;does not include&quot;,&quot;include&quot;]</li>
+              </ul>
+              <li>Value ( number or string ) : The value to set, could be number or string.</li>
+            </ul>
+          </ul>
+          <h2>Filter - 3. order      </h2>
+          <h3>Action:3. order      </h3>
+          <ul>
+            <li>Order items.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Key ( string ) : The name of the key.</li>
+              <li>Order ( Combo ) : Order of items.</li>
+              <ul>
+                <li>Options : [&quot;Descending&quot;,&quot;Ascending&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h2>Filter - 4. fetching fields      </h2>
+          <h3>Action:4. add a key      </h3>
+          <ul>
+            <li>Add a key into fetching fields.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Key ( string ) : The name of the key.</li>
+            </ul>
+          </ul>
+          <h3>Action:4. Get linked object      </h3>
+          <ul>
+            <li>Get linked object at this key.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Key ( string ) : The name of the key.</li>
+            </ul>
+          </ul>
+          <h2>Load      </h2>
+          <h3>Action:Load in a range      </h3>
+          <ul>
+            <li>Load in a range.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Start ( number ) : Start index, 0-based.</li>
+              <li>Lines ( number ) : Count of lines</li>
+            </ul>
+          </ul>
+          <h2>Load - all      </h2>
+          <h3>Action:Load all queried items      </h3>
+          <ul>
+            <li>Load all queried items.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Load - itemID      </h2>
+          <h3>Action:Load by itemID      </h3>
+          <ul>
+            <li>Load item by itemID.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>ID ( string ) : ID of item.</li>
+            </ul>
+          </ul>
+          <h2>Load - page      </h2>
+          <h3>Action:Turn to page      </h3>
+          <ul>
+            <li>Turn to page.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Index ( number ) : Page index, 0-based.</li>
+            </ul>
+          </ul>
+          <h3>Action:Update current page      </h3>
+          <ul>
+            <li>Update current page.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Action:Turn to next page      </h3>
+          <ul>
+            <li>Turn to next page.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Action:Turn to previous page      </h3>
+          <ul>
+            <li>Turn to previous page.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Load - random      </h2>
+          <h3>Action:Load random queried items      </h3>
+          <ul>
+            <li>Load random queried items.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Count ( number ) : Count of picked item.</li>
+            </ul>
+          </ul>
+          <h2>Primary keys      </h2>
+          <h3>Action:Set primary keys      </h3>
+          <ul>
+            <li>Set primary keys.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Keys ( string ) : Primary keys, separated by &quot;,&quot;</li>
+            </ul>
+          </ul>
+          <h2>Queried items count      </h2>
+          <h3>Action:Get items count      </h3>
+          <ul>
+            <li>Get queried items count.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Remove      </h2>
+          <h3>Action:Remove by itemID      </h3>
+          <ul>
+            <li>Remove item by itemID.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>ID ( string ) : ID of item.</li>
+            </ul>
+          </ul>
+          <h3>Action:Remove by index      </h3>
+          <ul>
+            <li>Remove item by index.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Index ( number ) : Index of queried rows.</li>
+            </ul>
+          </ul>
+          <h2>Remove - queried items      </h2>
+          <h3>Action:Remove queried items      </h3>
+          <ul>
+            <li>Remove queried items.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Save      </h2>
+          <h3>Action:Save      </h3>
+          <ul>
+            <li>Save prepared item into server.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Action:Set index      </h3>
+          <ul>
+            <li>Convert index of queried items to itemID for saving. Append item if index had not found.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Index ( number ) : Index of queried rows.</li>
+            </ul>
+          </ul>
+          <h2>Save - prepare item      </h2>
+          <h3>Action:Set value      </h3>
+          <ul>
+            <li>Set value into current item.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Key ( string ) : The name of the key.</li>
+              <li>Value ( number or string ) : The value to set, could be number or string.</li>
+              <li>Key type ( Combo ) : Key type.</li>
+              <ul>
+                <li>Options : [&quot;&quot;,&quot;Primary &quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h3>Action:Set boolean value      </h3>
+          <ul>
+            <li>Set boolean value into current item.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Key ( string ) : The name of the key.</li>
+              <li>Boolean ( Combo ) : Boolean value.</li>
+              <ul>
+                <li>Options : [&quot;False&quot;,&quot;True&quot;]</li>
+              </ul>
+              <li>Key type ( Combo ) : Key type.</li>
+              <ul>
+                <li>Options : [&quot;&quot;,&quot;Primary &quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h3>Action:Link to object      </h3>
+          <ul>
+            <li>Link to object at key into current item.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Key ( string ) : The name of the key.</li>
+              <li>Class name ( string ) : Class name of linked object.</li>
+              <li>Object ID ( string ) : Object ID of linked object.</li>
+            </ul>
+          </ul>
+          <h3>Action:Link to current user      </h3>
+          <ul>
+            <li>Link to current user at key into current item.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Key ( string ) : The name of the key.</li>
+            </ul>
+          </ul>
+          <h3>Action:Set itemID      </h3>
+          <ul>
+            <li>Set itemID of current item.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>ID ( string ) : ID of item.</li>
+            </ul>
+          </ul>
+          <h2>Save - save-all queue      </h2>
+          <h3>Action:Add to queue      </h3>
+          <ul>
+            <li>Add current prepared item into save-all queue.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Action:Save all      </h3>
+          <ul>
+            <li>Save all items in queue.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">    
+        <div class="panel-title">    
+          <h2>Expressions</h2>
+        </div>
+        <div class="panel-body">           
+          <h2>Error    </h2>
+          <h3>Expression:ErrorCode </h3>
+          <ul>
+            <li>Error code.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:ErrorMessage </h3>
+          <ul>
+            <li>Error message.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Load    </h2>
+          <h3>Expression:ItemsToJSON </h3>
+          <ul>
+            <li>Get all read items in JSON string.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:At </h3>
+          <ul>
+            <li>Get value from current database. Add index keys then add 1 data key. Add an optional default value at the last.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Load - for each    </h2>
+          <h3>Expression:CurItemID </h3>
+          <ul>
+            <li>Get the current itemID in a For Each loop.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:CurItemContent </h3>
+          <ul>
+            <li>Get current item content in JSON string in a For Each loop. Add 1st parameter to get value at the specific key. Add 2nd parameter for default value if this key is not existed.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:CurSavedTime </h3>
+          <ul>
+            <li>Get the current saved unix timestamp (number of milliseconds since the epoch) in a For Each loop.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Load - for each - index    </h2>
+          <h3>Expression:CurItemIndex </h3>
+          <ul>
+            <li>Get the current item index in a For Each loop.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:CurStartIndex </h3>
+          <ul>
+            <li>Get start index in current received page.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:LoopIndex </h3>
+          <ul>
+            <li>Get loop index in current received page.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Load - index    </h2>
+          <h3>Expression:Index2ItemID </h3>
+          <ul>
+            <li>Get itemID by global index.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Index ( number ) : Global index, 0-based.</li>
+            </ul>
+          </ul>
+          <h3>Expression:Index2ItemContent </h3>
+          <ul>
+            <li>Get item content in JSON string by global index. Add 2nd parameter to get value at the specific key. Add 3rd parameter for default value if this key is not existed.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Index ( number ) : Global index, 0-based.</li>
+            </ul>
+          </ul>
+          <h3>Expression:Index2SavedTime </h3>
+          <ul>
+            <li>Get saved unix timestamp (number of milliseconds since the epoch) by global index.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Index ( number ) : Global index, 0-based.</li>
+            </ul>
+          </ul>
+          <h2>Load by itemID    </h2>
+          <h3>Expression:LastFetchedItemID </h3>
+          <ul>
+            <li>Get last fetched itemID.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:LastFetchedItemContent </h3>
+          <ul>
+            <li>Get last fetched item content in JSON string. Add 1st parameter to get value at the specific key. Add 2nd parameter for default value if this key is not existed.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:LastFetchedSavedTime </h3>
+          <ul>
+            <li>Get last fetched item's saved unix timestamp (number of milliseconds since the epoch).</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Prepare item    </h2>
+          <h3>Expression:PreparedItemContent </h3>
+          <ul>
+            <li>Get prepared item content in JSON string. Add 1st parameter to get value at the specific key. Add 2nd parameter for default value if this key is not existed.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Queried items count    </h2>
+          <h3>Expression:LastItemsCount </h3>
+          <ul>
+            <li>Get last queried items count under &quot;Condition: On get items count complete&quot;.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Received    </h2>
+          <h3>Expression:ReceivedItemsCount </h3>
+          <ul>
+            <li>Get received items count in current received page.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Remove    </h2>
+          <h3>Expression:LastRemovedItemID </h3>
+          <ul>
+            <li>Get last removed itemID under &quot;Condition:On remove by itemID complete&quot;.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Save    </h2>
+          <h3>Expression:LastSavedItemID </h3>
+          <ul>
+            <li>Get last saved itemID.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">       
+          <h2>Conditions</h2>
+        </div>
+        <div class="panel-body">              
+          <h2>Load    </h2>
+          <h4>Condition:On receive items                    </h4>
+          <ul>
+            <li>Triggered when receive items complete.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On receive items error                    </h4>
+          <ul>
+            <li>Triggered when receive items error.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:Last page                    </h4>
+          <ul>
+            <li>Return true if current page is the last page.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Load - for each    </h2>
+          <h4>Condition:For each itemID                    </h4>
+          <ul>
+            <li>Repeat the event for each itemID of load result.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:For each item in a range                    </h4>
+          <ul>
+            <li>Repeat the event for each item in a range.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Start ( number ) : Start from message index (0-based).    </li>
+              <li>End ( number ) : End to message index (0-based). This value should larger than Start.    </li>
+            </ul>
+          </ul>
+          <h2>Load - itemID    </h2>
+          <h4>Condition:On load by itemID                    </h4>
+          <ul>
+            <li>Triggered when load by itemID item complete.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On load by itemID error                    </h4>
+          <ul>
+            <li>Triggered when load by itemID item error.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Queried items count    </h2>
+          <h4>Condition:On get items count                    </h4>
+          <ul>
+            <li>Triggered when get items count.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On get items count error                    </h4>
+          <ul>
+            <li>Triggered when get items count error.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Remove by itemID    </h2>
+          <h4>Condition:On remove by itemID                    </h4>
+          <ul>
+            <li>Triggered when remove by itemID complete.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On remove by itemID error                    </h4>
+          <ul>
+            <li>Triggered when remove by itemID error.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Remove by queried items    </h2>
+          <h4>Condition:On remove queried items                    </h4>
+          <ul>
+            <li>Triggered when remove complete.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On remove queried items error                    </h4>
+          <ul>
+            <li>Triggered when remove error.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Save    </h2>
+          <h4>Condition:On save                    </h4>
+          <ul>
+            <li>Triggered when save current item complete.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On save error                    </h4>
+          <ul>
+            <li>Triggered when save current item error.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Save all    </h2>
+          <h4>Condition:On save all                    </h4>
+          <ul>
+            <li>Triggered when save all items complete.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On save all error                    </h4>
+          <ul>
+            <li>Triggered when save all items error.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

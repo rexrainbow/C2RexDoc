@@ -1,0 +1,606 @@
+<!DOCTYPE 5>
+<html>
+  <head>
+    <title>Plugin : TMX Importer v2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="js/jquery-3.1.0.min.js">                         </script>
+    <script src="js/bootstrap.min.js">         </script>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header"><a class="navbar-brand" href="./index.html">Home</a></div>
+        <ul class="nav navbar-nav">
+          <li><a href="./pluginsIndex.html">Plugins      </a></li>
+          <li><a href="./behaviorsIndex.html">Behaviors                   </a></li>
+          <li><a href="./effectsIndex.html">Effects    </a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Plugin : TMX Importer v2</h1>
+      <p>Author:Rex.Rainbow</p>
+      <ul>
+        <li>Create sprites according to tmx exported file.</li>
+      </ul>
+      <div class="panel panel-default">
+        <div class="panel-title">
+          <h2>Properties</h2>
+        </div>
+        <div class="panel-body">
+          <h3>X at (0,0)</h3>
+          <ul>
+            <li>Physical X co-ordinate at logic (0,0).                    </li>
+          </ul>
+          <h3>Y at (0,0)</h3>
+          <ul>
+            <li>Physical Y co-ordinate at logic (0,0).                    </li>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">   
+          <h2>Actions</h2>
+        </div>
+        <div class="panel-body">
+          <h2>0: Load      </h2>
+          <h3>Action:Import tmx      </h3>
+          <ul>
+            <li>Import tmx string.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Input ( string ) : Input string.</li>
+              <li>Parser ( object ) : Parser object.</li>
+            </ul>
+          </ul>
+          <h2>Duration mode      </h2>
+          <h3>Action:Create tiles in a duration      </h3>
+          <ul>
+            <li>Retrieve tile array and creating tiles in a duration. It will trigger &quot;Condition:On each tile cell&quot;.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Tile ( object ) : Tile object.</li>
+              <li>Processing time ( number ) : Processing time per tick in percentage. A tick time is (1/60), 1 is using full tick time.</li>
+            </ul>
+          </ul>
+          <h3>Action:Retrieve tile array in a duration      </h3>
+          <ul>
+            <li>Retrieve tile array in a duration. It will trigger &quot;Condition:On each tile cell&quot;   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Processing time ( number ) : Processing time per tick in percentage. A tick time is (1/60), 1 is using full tick time.</li>
+            </ul>
+          </ul>
+          <h2>One tick mode      </h2>
+          <h3>Action:Create tiles      </h3>
+          <ul>
+            <li>Retrieve tile array and creating tiles. It will trigger &quot;Condition:On each tile cell&quot;.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Tile ( object ) : Tile object.</li>
+            </ul>
+          </ul>
+          <h3>Action:Retrieve tile array      </h3>
+          <ul>
+            <li>Retrieve tile array. It will trigger &quot;Condition:On each tile cell&quot;   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Release      </h2>
+          <h3>Action:Release tmx object      </h3>
+          <ul>
+            <li>Release tmx object.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Setup      </h2>
+          <h3>Action:Set instance position of (0,0)      </h3>
+          <ul>
+            <li>Set instance position of (0,0).   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>X ( number ) : X co-ordinate of instance at Logic(0,0).</li>
+              <li>Y ( number ) : Y co-ordinate of instance at Logic(0,0).</li>
+            </ul>
+          </ul>
+          <h2>Tilemap      </h2>
+          <h3>Action:Reset tilemap      </h3>
+          <ul>
+            <li>Reset tilemap by tile array of a layer.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Layer ( string ) : TMX layer.</li>
+              <li>Tilemap ( object ) : Tilemap object.</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">    
+        <div class="panel-title">    
+          <h2>Expressions</h2>
+        </div>
+        <div class="panel-body">           
+          <h2>Duration    </h2>
+          <h3>Expression:RetrievingPercent </h3>
+          <ul>
+            <li>Get percent of retrieving process.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>For Each    </h2>
+          <h3>Expression:CurLayerPropName </h3>
+          <ul>
+            <li>Get the name of current layer property in a For Each loop.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:CurLayerPropValue </h3>
+          <ul>
+            <li>Get the value of current layer property in a For Each loop.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:CurTilesetPropName </h3>
+          <ul>
+            <li>Get the name of current tileset property in a For Each loop.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:CurTilesetPropValue </h3>
+          <ul>
+            <li>Get the value of current tileset property in a For Each loop.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:CurTilePropName </h3>
+          <ul>
+            <li>Get the name of current tile property in a For Each loop.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:CurTilePropValue </h3>
+          <ul>
+            <li>Get the value of current tile property in a For Each loop.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:CurMapPropName </h3>
+          <ul>
+            <li>Get the name of current map property in a For Each loop.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:CurMapPropValue </h3>
+          <ul>
+            <li>Get the value of current map property in a For Each loop.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:CurObjectPropName </h3>
+          <ul>
+            <li>Get the name of current object property in a For Each loop.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:CurObjectPropValue </h3>
+          <ul>
+            <li>Get the value of current object property in a For Each loop.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Hex layout    </h2>
+          <h3>Expression:IsUp2Down </h3>
+          <ul>
+            <li>Return 1 if current hexagon map is up2down layout.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:IsIndent </h3>
+          <ul>
+            <li>Return 1 if current hexagon map is indent first line.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Map    </h2>
+          <h3>Expression:MapWidth </h3>
+          <ul>
+            <li>Get map width in tile number.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:MapHeight </h3>
+          <ul>
+            <li>Get map height in tile number.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:TileWidth </h3>
+          <ul>
+            <li>Get tile width in pixel.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:TileHeight </h3>
+          <ul>
+            <li>Get tile height in pixel.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:TotalWidth </h3>
+          <ul>
+            <li>Get total width in pixel.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:TotalHeight </h3>
+          <ul>
+            <li>Get total height in pixel.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:IsIsometric </h3>
+          <ul>
+            <li>Get orientation. 1=Isometric, 0=Orthogonal</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:MapProp </h3>
+          <ul>
+            <li>Get map properties. Add second parameters to set default value.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Name ( string ) : Property name.</li>
+            </ul>
+          </ul>
+          <h3>Expression:BackgroundColor </h3>
+          <ul>
+            <li>Get background color.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:POX </h3>
+          <ul>
+            <li>Get position X of logic (0,0).</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:POY </h3>
+          <ul>
+            <li>Get position Y of logic (0,0).</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Object: Object    </h2>
+          <h3>Expression:ObjectName </h3>
+          <ul>
+            <li>Get object name.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:ObjectType </h3>
+          <ul>
+            <li>Get object type.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:ObjectWidth </h3>
+          <ul>
+            <li>Get area width of object.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:ObjectHeight </h3>
+          <ul>
+            <li>Get area height of object.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:ObjectX </h3>
+          <ul>
+            <li>Get logical X index of object.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:ObjectY </h3>
+          <ul>
+            <li>Get logical Y index of object.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:ObjectProp </h3>
+          <ul>
+            <li>Get object properties.  Add second parameters to set default value.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Name ( string ) : Property name.</li>
+            </ul>
+          </ul>
+          <h2>Object: Object group    </h2>
+          <h3>Expression:ObjGroupName </h3>
+          <ul>
+            <li>Get object group name.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:ObjGroupWidth </h3>
+          <ul>
+            <li>Get area width of object group.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:ObjGroupHeight </h3>
+          <ul>
+            <li>Get area height of object group.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Tile    </h2>
+          <h3>Expression:TileID </h3>
+          <ul>
+            <li>Get tile id.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:LogicX </h3>
+          <ul>
+            <li>Get logic X index of created instance.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:LogicY </h3>
+          <ul>
+            <li>Get logic Y index of created instance.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:LayerProp </h3>
+          <ul>
+            <li>Get layer properties of created instance. Add second parameters to set default value.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Name ( string ) : Property name.</li>
+            </ul>
+          </ul>
+          <h3>Expression:TileProp </h3>
+          <ul>
+            <li>Get tile properties of created instance.  Add second parameters to set default value.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Name ( string ) : Property name.</li>
+            </ul>
+          </ul>
+          <h3>Expression:PhysicalX </h3>
+          <ul>
+            <li>Get physical X position (in pixel) of created instance.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:PhysicalY </h3>
+          <ul>
+            <li>Get logic Y position (in pixel) of created instance.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:LayerName </h3>
+          <ul>
+            <li>Get layer name of created instance.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:LayerOpacity </h3>
+          <ul>
+            <li>Get layer opacity of created instance.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:IsMirrored </h3>
+          <ul>
+            <li>Get mirrored of created instance.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:IsFlipped </h3>
+          <ul>
+            <li>Get flipped of created instance.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:InstUID </h3>
+          <ul>
+            <li>Get instance UID created by &quot;Action:Create tiles&quot;.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:Frame </h3>
+          <ul>
+            <li>Get frame number.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:TileAngle </h3>
+          <ul>
+            <li>Get angle of created instance.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Tileset    </h2>
+          <h3>Expression:ImageSource </h3>
+          <ul>
+            <li>Get image source of tileset.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:ImageWidth </h3>
+          <ul>
+            <li>Get image width of tileset.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:ImageHeight </h3>
+          <ul>
+            <li>Get image height of tileset.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:TilesetProp </h3>
+          <ul>
+            <li>Get tileset properties of created instance.  Add second parameters to set default value.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Name ( string ) : Property name.</li>
+            </ul>
+          </ul>
+          <h3>Expression:TilesetName </h3>
+          <ul>
+            <li>Get tileset name.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">       
+          <h2>Conditions</h2>
+        </div>
+        <div class="panel-body">              
+          <h2>Callback: Create tiless    </h2>
+          <h4>Condition:On each tile cell                    </h4>
+          <ul>
+            <li>Triggered when retrieving each available tile cell.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On each object                    </h4>
+          <ul>
+            <li>Triggered when retrieving each avaiable object on 'object layer'.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Duration    </h2>
+          <h4>Condition:On retrieving finished                    </h4>
+          <ul>
+            <li>Triggered when retrieving finished.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On retrieving duration                    </h4>
+          <ul>
+            <li>Triggered during retrieving duration tick.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>For each layer    </h2>
+          <h4>Condition:For each layer                    </h4>
+          <ul>
+            <li>Repeat the event for each layer.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>For each property    </h2>
+          <h4>Condition:For each layer property                    </h4>
+          <ul>
+            <li>Repeat the event for each layer property.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:For each tileset property                    </h4>
+          <ul>
+            <li>Repeat the event for each tileset property.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:For each tile property                    </h4>
+          <ul>
+            <li>Repeat the event for each tile property.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:For each map property                    </h4>
+          <ul>
+            <li>Repeat the event for each map property.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:For each object property                    </h4>
+          <ul>
+            <li>Repeat the event for each object property.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Logic XY    </h2>
+          <h4>Condition:For each tile at logic XY                    </h4>
+          <ul>
+            <li>Repeat the event for each tile at logic XY.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>X ( number ) : Logic X.    </li>
+              <li>Y ( number ) : Logic Y.    </li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

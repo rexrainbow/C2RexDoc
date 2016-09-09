@@ -1,0 +1,411 @@
+<!DOCTYPE 5>
+<html>
+  <head>
+    <title>Behavior : (Miniboard) Rotate</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="js/jquery-3.1.0.min.js">                         </script>
+    <script src="js/bootstrap.min.js">         </script>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header"><a class="navbar-brand" href="./index.html">Home</a></div>
+        <ul class="nav navbar-nav">
+          <li><a href="./pluginsIndex.html">Plugins      </a></li>
+          <li><a href="./behaviorsIndex.html">Behaviors                   </a></li>
+          <li><a href="./effectsIndex.html">Effects    </a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Behavior : (Miniboard) Rotate</h1>
+      <p>Author:Rex.Rainbow</p>
+      <ul>
+        <li>Spin chess on mini board logically and physically.</li>
+      </ul>
+      <div class="panel panel-default">
+        <div class="panel-title">
+          <h2>Properties</h2>
+        </div>
+        <div class="panel-body">
+          <h3>Direction</h3>
+          <ul>
+            <li>Face direction.                    </li>
+          </ul>
+          <h3>RotateTo</h3>
+          <ul>
+            <li>Set Yes to change the logical and physical position of chess. Set No will only change the logical position.                    </li>
+            <ul>
+              <li>Options : [&quot;No&quot;,&quot;Yes&quot;]</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">   
+          <h2>Actions</h2>
+        </div>
+        <div class="panel-body">
+          <h2>Face      </h2>
+          <h3>Action:Face      </h3>
+          <ul>
+            <li>Rotate mini board to face to direction.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Direction ( number ) : Face direction.</li>
+              <li>Putable test ( Combo ) : Mode of putable test.</li>
+              <ul>
+                <li>Options : [&quot;None&quot;,&quot;Empty&quot;,&quot;Putable&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h2>Face - Hexagon grid (Left-Right)      </h2>
+          <h3>Action:Face      </h3>
+          <ul>
+            <li>Rotate mini board to face to direction.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Direction ( Combo ) : Face direction.</li>
+              <ul>
+                <li>Options : [&quot;Right&quot;,&quot;Down-right&quot;,&quot;Down-left&quot;,&quot;Left&quot;,&quot;Up-left&quot;,&quot;Up-right&quot;]</li>
+              </ul>
+              <li>Putable test ( Combo ) : Mode of putable test.</li>
+              <ul>
+                <li>Options : [&quot;None&quot;,&quot;Empty&quot;,&quot;Putable&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h2>Face - Hexagon grid (Up-Down)      </h2>
+          <h3>Action:Face      </h3>
+          <ul>
+            <li>Rotate mini board to face to direction.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Direction ( Combo ) : Face direction.</li>
+              <ul>
+                <li>Options : [&quot;Down-right&quot;,&quot;Down&quot;,&quot;Down-left&quot;,&quot;Up-left&quot;,&quot;Up&quot;,&quot;Up-right&quot;]</li>
+              </ul>
+              <li>Putable test ( Combo ) : Mode of putable test.</li>
+              <ul>
+                <li>Options : [&quot;None&quot;,&quot;Empty&quot;,&quot;Putable&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h2>Face - Square grid      </h2>
+          <h3>Action:Face      </h3>
+          <ul>
+            <li>Rotate mini board to face to direction.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Direction ( Combo ) : Face direction.</li>
+              <ul>
+                <li>Options : [&quot;Right&quot;,&quot;Down&quot;,&quot;Left&quot;,&quot;Up&quot;]</li>
+              </ul>
+              <li>Putable test ( Combo ) : Mode of putable test.</li>
+              <ul>
+                <li>Options : [&quot;None&quot;,&quot;Empty&quot;,&quot;Putable&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h2>Flip      </h2>
+          <h3>Action:Flip      </h3>
+          <ul>
+            <li>Flip mini board by toggling sign of logic Y for each chess.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Putable test ( Combo ) : Mode of putable test.</li>
+              <ul>
+                <li>Options : [&quot;None&quot;,&quot;Empty&quot;,&quot;Putable&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h2>Mirror      </h2>
+          <h3>Action:Mirror      </h3>
+          <ul>
+            <li>Mirror mini board by toggling sign of logic X for each chess.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Putable test ( Combo ) : Mode of putable test.</li>
+              <ul>
+                <li>Options : [&quot;None&quot;,&quot;Empty&quot;,&quot;Putable&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h2>Rotate      </h2>
+          <h3>Action:Rotate      </h3>
+          <ul>
+            <li>Spin chess on mini board.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Direction ( number ) : Rotating direction.</li>
+              <li>Putable test ( Combo ) : Mode of putable test.</li>
+              <ul>
+                <li>Options : [&quot;None&quot;,&quot;Empty&quot;,&quot;Putable&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h2>Rotate - Hexagon grid      </h2>
+          <h3>Action:Rotate      </h3>
+          <ul>
+            <li>Spin chess on mini board.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Angle ( Combo ) : Spin angle</li>
+              <ul>
+                <li>Options : [&quot;0 degree&quot;,&quot;60 degrees&quot;,&quot;120 degrees&quot;,&quot;180 degrees&quot;,&quot;240 (-120) degrees&quot;,&quot;300 (-60) degrees&quot;]</li>
+              </ul>
+              <li>Putable test ( Combo ) : Mode of putable test.</li>
+              <ul>
+                <li>Options : [&quot;None&quot;,&quot;Empty&quot;,&quot;Putable&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h2>Rotate - Square grid      </h2>
+          <h3>Action:Rotate      </h3>
+          <ul>
+            <li>Spin chess on mini board.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Angle ( Combo ) : Spin angle</li>
+              <ul>
+                <li>Options : [&quot;0 degree&quot;,&quot;90 degrees&quot;,&quot;180 degrees&quot;,&quot;270 (-90) degrees&quot;]</li>
+              </ul>
+              <li>Putable test ( Combo ) : Mode of putable test.</li>
+              <ul>
+                <li>Options : [&quot;None&quot;,&quot;Empty&quot;,&quot;Putable&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">    
+        <div class="panel-title">    
+          <h2>Expressions</h2>
+        </div>
+        <div class="panel-body">           
+          <h2>Mini board    </h2>
+          <h3>Expression:Direction </h3>
+          <ul>
+            <li>Face direction of mini board.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">       
+          <h2>Conditions</h2>
+        </div>
+        <div class="panel-body">              
+          <h2>Face    </h2>
+          <h4>Condition:Can face                    </h4>
+          <ul>
+            <li>Return true if this mini board could face to direction.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Direction ( number ) : Face direction.    </li>
+              <li>Putable test ( Combo ) : Mode of putable test.    </li>
+              <ul>
+                <li>Options : [&quot;None&quot;,&quot;Empty&quot;,&quot;Putable&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h2>Face - Hexagon grid (Left-Right)    </h2>
+          <h4>Condition:Can face                    </h4>
+          <ul>
+            <li>Return true if this mini board could face to direction.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Direction ( Combo ) : Face direction.    </li>
+              <ul>
+                <li>Options : [&quot;Right&quot;,&quot;Down-right&quot;,&quot;Down-left&quot;,&quot;Left&quot;,&quot;Up-left&quot;,&quot;Up-right&quot;]</li>
+              </ul>
+              <li>Putable test ( Combo ) : Mode of putable test.    </li>
+              <ul>
+                <li>Options : [&quot;None&quot;,&quot;Empty&quot;,&quot;Putable&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h2>Face - Hexagon grid (Up-Down)    </h2>
+          <h4>Condition:Can face                    </h4>
+          <ul>
+            <li>Return true if this mini board could face to direction.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Direction ( Combo ) : Face direction.    </li>
+              <ul>
+                <li>Options : [&quot;Down-right&quot;,&quot;Down&quot;,&quot;Down-left&quot;,&quot;Up-left&quot;,&quot;Up&quot;,&quot;Up-right&quot;]</li>
+              </ul>
+              <li>Putable test ( Combo ) : Mode of putable test.    </li>
+              <ul>
+                <li>Options : [&quot;None&quot;,&quot;Empty&quot;,&quot;Putable&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h2>Face - Square grid    </h2>
+          <h4>Condition:Can face                    </h4>
+          <ul>
+            <li>Return true if this mini board could face to direction.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Direction ( Combo ) : Face direction.    </li>
+              <ul>
+                <li>Options : [&quot;Right&quot;,&quot;Down&quot;,&quot;Left&quot;,&quot;Up&quot;]</li>
+              </ul>
+              <li>Putable test ( Combo ) : Mode of putable test.    </li>
+              <ul>
+                <li>Options : [&quot;None&quot;,&quot;Empty&quot;,&quot;Putable&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h2>Flip    </h2>
+          <h4>Condition:Can flip                    </h4>
+          <ul>
+            <li>Return true if this mini board could flip.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Mode ( Combo ) : Mode of spin.    </li>
+              <ul>
+                <li>Options : [&quot;logically only&quot;,&quot;logically and physically&quot;]</li>
+              </ul>
+              <li>Putable test ( Combo ) : Mode of putable test.    </li>
+              <ul>
+                <li>Options : [&quot;None&quot;,&quot;Empty&quot;,&quot;Putable&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h2>Mirror    </h2>
+          <h4>Condition:Can mirror                    </h4>
+          <ul>
+            <li>Return true if this mini board could mirror.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Mode ( Combo ) : Mode of spin.    </li>
+              <ul>
+                <li>Options : [&quot;logically only&quot;,&quot;logically and physically&quot;]</li>
+              </ul>
+              <li>Putable test ( Combo ) : Mode of putable test.    </li>
+              <ul>
+                <li>Options : [&quot;None&quot;,&quot;Empty&quot;,&quot;Putable&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h2>Request - Rotate    </h2>
+          <h4>Condition:Rotating accepted                    </h4>
+          <ul>
+            <li>Return true if rotating request accepted.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On rotating accepted                    </h4>
+          <ul>
+            <li>Triggered when rotating request accepted.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On rotating rejected                    </h4>
+          <ul>
+            <li>Triggered when rotating request rejected.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Request- Flip    </h2>
+          <h4>Condition:Flipping accepted                    </h4>
+          <ul>
+            <li>Return true if flipping request accepted.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On flipping accepted                    </h4>
+          <ul>
+            <li>Triggered when flipping request accepted.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On flipping rejected                    </h4>
+          <ul>
+            <li>Triggered when flipping request rejected.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Request- Mirror    </h2>
+          <h4>Condition:Mirroring accepted                    </h4>
+          <ul>
+            <li>Return true if mirroring request accepted.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On mirroring accepted                    </h4>
+          <ul>
+            <li>Triggered when mirroring request accepted.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On mirroring rejected                    </h4>
+          <ul>
+            <li>Triggered when mirroring request rejected.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Rotate    </h2>
+          <h4>Condition:Can rotate                    </h4>
+          <ul>
+            <li>Return true if this mini board could be spined.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Direction ( number ) : Rotating direction.    </li>
+              <li>Putable test ( Combo ) : Mode of putable test.    </li>
+              <ul>
+                <li>Options : [&quot;None&quot;,&quot;Empty&quot;,&quot;Putable&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h2>Rotate - Hexagon grid    </h2>
+          <h4>Condition:Can rotate                    </h4>
+          <ul>
+            <li>Return true if this mini board could be spined.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Angle ( Combo ) : Spin angle    </li>
+              <ul>
+                <li>Options : [&quot;0 degree&quot;,&quot;90 degrees&quot;,&quot;180 degrees&quot;,&quot;270 (-90) degrees&quot;]</li>
+              </ul>
+              <li>Putable test ( Combo ) : Mode of putable test.    </li>
+              <ul>
+                <li>Options : [&quot;None&quot;,&quot;Empty&quot;,&quot;Putable&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h2>Rotate - Square grid    </h2>
+          <h4>Condition:Can rotate                    </h4>
+          <ul>
+            <li>Return true if this mini board could be spined.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Angle ( Combo ) : Spin angle    </li>
+              <ul>
+                <li>Options : [&quot;0 degree&quot;,&quot;90 degrees&quot;,&quot;180 degrees&quot;,&quot;270 (-90) degrees&quot;]</li>
+              </ul>
+              <li>Putable test ( Combo ) : Mode of putable test.    </li>
+              <ul>
+                <li>Options : [&quot;None&quot;,&quot;Empty&quot;,&quot;Putable&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

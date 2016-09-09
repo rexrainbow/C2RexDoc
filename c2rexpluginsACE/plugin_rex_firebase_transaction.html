@@ -1,0 +1,193 @@
+<!DOCTYPE 5>
+<html>
+  <head>
+    <title>Plugin : Transaction</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="js/jquery-3.1.0.min.js">                         </script>
+    <script src="js/bootstrap.min.js">         </script>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header"><a class="navbar-brand" href="./index.html">Home</a></div>
+        <ul class="nav navbar-nav">
+          <li><a href="./pluginsIndex.html">Plugins      </a></li>
+          <li><a href="./behaviorsIndex.html">Behaviors                   </a></li>
+          <li><a href="./effectsIndex.html">Effects    </a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Plugin : Transaction</h1>
+      <p>Author:Rex.Rainbow</p>
+      <ul>
+        <li>Read-modify-write the value.</li>
+      </ul>
+      <div class="panel panel-default">
+        <div class="panel-title">
+          <h2>Properties</h2>
+        </div>
+        <div class="panel-body">
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">   
+          <h2>Actions</h2>
+        </div>
+        <div class="panel-body">
+          <h2>Read      </h2>
+          <h3>Action:Transaction      </h3>
+          <ul>
+            <li>Transaction   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>DataRef ( string ) : The Firebase data ref URL</li>
+            </ul>
+          </ul>
+          <h2>Write      </h2>
+          <h3>Action:Return value      </h3>
+          <ul>
+            <li>Returns transaction value.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Value ( number or string ) : The value to set</li>
+            </ul>
+          </ul>
+          <h3>Action:Return JSON      </h3>
+          <ul>
+            <li>Returns transaction JSON.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>JSON value ( string ) : JSON value to set</li>
+            </ul>
+          </ul>
+          <h3>Action:Return null      </h3>
+          <ul>
+            <li>Returns transaction value to null. i.e. remove data.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Value ( number or string ) : The value to set</li>
+            </ul>
+          </ul>
+          <h3>Action:Return boolean      </h3>
+          <ul>
+            <li>Returns transaction value to true or false.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Boolean ( Combo ) : Boolean value.</li>
+              <ul>
+                <li>Options : [&quot;false&quot;,&quot;true&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h3>Action:Abort      </h3>
+          <ul>
+            <li>Abort transaction.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Write - JSON      </h2>
+          <h3>Action:Return value      </h3>
+          <ul>
+            <li>Set value in returned JSON.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Key ( number or string ) : The name of the key.</li>
+              <li>Value ( number or string ) : The value to set, could be number or string.</li>
+            </ul>
+          </ul>
+          <h3>Action:Return boolean      </h3>
+          <ul>
+            <li>Set boolean in returned JSON.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Key ( number or string ) : The name of the key.</li>
+              <li>Boolean ( Combo ) : Boolean value.</li>
+              <ul>
+                <li>Options : [&quot;false&quot;,&quot;true&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">    
+        <div class="panel-title">    
+          <h2>Expressions</h2>
+        </div>
+        <div class="panel-body">           
+          <h2>Read    </h2>
+          <h3>Expression:ValueIn </h3>
+          <ul>
+            <li>Read value, using under &quot;condition:On transaction&quot;. Add 1st parameter for specific key, 2nd parameter for default value if this key is not existed.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Result    </h2>
+          <h3>Expression:ValueOut </h3>
+          <ul>
+            <li>Transaction wrote result, using under &quot;condition:On completed&quot;. Add 1st parameter for specific key, 2nd parameter for default value if this key is not existed.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">       
+          <h2>Conditions</h2>
+        </div>
+        <div class="panel-body">              
+          <h2>Read    </h2>
+          <h4>Condition:ValueIn is null                    </h4>
+          <ul>
+            <li>Return true if ValueIn is null.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Result    </h2>
+          <h4>Condition:Is aborted                    </h4>
+          <ul>
+            <li>Return true if the transaction is aborted.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On complete                    </h4>
+          <ul>
+            <li>Triggered while transaction success.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On error                    </h4>
+          <ul>
+            <li>Triggered while transaction  error.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:ValueOut is null                    </h4>
+          <ul>
+            <li>Return true if ValueOut is null.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Write    </h2>
+          <h4>Condition:On transaction                    </h4>
+          <ul>
+            <li>Triggered by calling &quot;action: Transaction&quot;, to get return value.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,329 @@
+<!DOCTYPE 5>
+<html>
+  <head>
+    <title>Plugin : ScenarioJ Engine</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="js/jquery-3.1.0.min.js">                         </script>
+    <script src="js/bootstrap.min.js">         </script>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header"><a class="navbar-brand" href="./index.html">Home</a></div>
+        <ul class="nav navbar-nav">
+          <li><a href="./pluginsIndex.html">Plugins      </a></li>
+          <li><a href="./behaviorsIndex.html">Behaviors                   </a></li>
+          <li><a href="./effectsIndex.html">Effects    </a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Plugin : ScenarioJ Engine</h1>
+      <p>Author:Rex.Rainbow</p>
+      <ul>
+        <li>Execute Scenario-Json commands.</li>
+      </ul>
+      <div class="panel panel-default">
+        <div class="panel-title">
+          <h2>Properties</h2>
+        </div>
+        <div class="panel-body">
+          <h3>Debug mode</h3>
+          <ul>
+            <li>Enable to show log.                    </li>
+            <ul>
+              <li>Options : [&quot;No&quot;,&quot;Yes&quot;]</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">   
+          <h2>Actions</h2>
+        </div>
+        <div class="panel-body">
+          <h2>0: Load      </h2>
+          <h3>Action:Clean commands      </h3>
+          <ul>
+            <li>Clean all commands.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Action:Append      </h3>
+          <ul>
+            <li>Append commands.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Commands ( string ) : Commands in JSON format</li>
+            </ul>
+          </ul>
+          <h3>Action:Append from editor      </h3>
+          <ul>
+            <li>Append commands from editor, then clean the editor.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Editor ( object ) : ScenarioJ Editor</li>
+            </ul>
+          </ul>
+          <h2>Function      </h2>
+          <h3>Action:Set parameter      </h3>
+          <ul>
+            <li>Set parameter of function.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Name ( string ) : Parameter's name</li>
+              <li>Value ( number or string ) : The default value.</li>
+            </ul>
+          </ul>
+          <h2>Global      </h2>
+          <h3>Action:Set global variable      </h3>
+          <ul>
+            <li>Set global variable.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Name ( string ) : Variable name</li>
+              <li>Value ( number or string ) : value.</li>
+            </ul>
+          </ul>
+          <h3>Action:Add to global variable      </h3>
+          <ul>
+            <li>Set global variable.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Name ( string ) : Variable name</li>
+              <li>Value ( number or string ) : value.</li>
+            </ul>
+          </ul>
+          <h2>Setup      </h2>
+          <h3>Action:Setup timeline      </h3>
+          <ul>
+            <li>Setup timeline.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Timeline ( object ) : Timeline object to get timer</li>
+            </ul>
+          </ul>
+          <h3>Action:Setup callback      </h3>
+          <ul>
+            <li>Setup callback.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Callback ( Combo ) : Callback object.</li>
+              <ul>
+                <li>Options : [&quot;Official function&quot;,&quot;Rex function2&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h2>Status      </h2>
+          <h3>Action:Load status      </h3>
+          <ul>
+            <li>Load status from JSON string.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Status ( string ) : Saved status in JSON string</li>
+            </ul>
+          </ul>
+          <h3>Action:Clean status      </h3>
+          <ul>
+            <li>Clean all tasks and global variables.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Task      </h2>
+          <h3>Action:Set local variable      </h3>
+          <ul>
+            <li>Set local variable of a task.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Task ( string ) : Task name</li>
+              <li>Name ( string ) : Variable name</li>
+              <li>Value ( number or string ) : value.</li>
+            </ul>
+          </ul>
+          <h3>Action:Set task variable      </h3>
+          <ul>
+            <li>Set task variable.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Task ( string ) : Task name</li>
+              <li>Name ( string ) : Variable name</li>
+              <li>Value ( number or string ) : value.</li>
+            </ul>
+          </ul>
+          <h3>Action:Add to local variable      </h3>
+          <ul>
+            <li>Set local variable of a task.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Task ( string ) : Task name</li>
+              <li>Name ( string ) : Variable name</li>
+              <li>Value ( number or string ) : value.</li>
+            </ul>
+          </ul>
+          <h3>Action:Add to task variable      </h3>
+          <ul>
+            <li>Set task variable.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Task ( string ) : Task name</li>
+              <li>Name ( string ) : Variable name</li>
+              <li>Value ( number or string ) : value.</li>
+            </ul>
+          </ul>
+          <h2>Task - Control      </h2>
+          <h3>Action:Start      </h3>
+          <ul>
+            <li>Start task.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Task ( string ) : Task name</li>
+              <li>Function ( string ) : Function name.</li>
+            </ul>
+          </ul>
+          <h3>Action:Stop      </h3>
+          <ul>
+            <li>Stop task.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Task ( string ) : Task name</li>
+            </ul>
+          </ul>
+          <h3>Action:Pause      </h3>
+          <ul>
+            <li>Pause task.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Task ( string ) : Task name</li>
+            </ul>
+          </ul>
+          <h3>Action:Resume      </h3>
+          <ul>
+            <li>Rsume task.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Task ( string ) : Task name</li>
+            </ul>
+          </ul>
+          <h2>Wait - Signal      </h2>
+          <h3>Action:Fire signal      </h3>
+          <ul>
+            <li>Fire signal to resume task.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Signl ( string ) : Signl name.</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">    
+        <div class="panel-title">    
+          <h2>Expressions</h2>
+        </div>
+        <div class="panel-body">           
+          <h2>Function    </h2>
+          <h3>Expression:LastFunctionName </h3>
+          <ul>
+            <li>Get last function name under &quot;Condition: On function scope changed&quot;. Or add 1st parameter for task name to get last function name of a specific task.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Global    </h2>
+          <h3>Expression:GlobalVar </h3>
+          <ul>
+            <li>Get global variable value. Add 2nd parameter for default value if this variable is not existed.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Variable ( string ) : Variable name</li>
+            </ul>
+          </ul>
+          <h2>Status    </h2>
+          <h3>Expression:StatusAsJSON </h3>
+          <ul>
+            <li>Get status in JSON string.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Task    </h2>
+          <h3>Expression:LastTaskName </h3>
+          <ul>
+            <li>Get last finished task name.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:LocalVar </h3>
+          <ul>
+            <li>Get current local variable value in a function. Add 3rd parameter for default value if this variable is not existed.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Task ( string ) : Task name</li>
+              <li>Variable ( string ) : Variable name</li>
+            </ul>
+          </ul>
+          <h3>Expression:TaskVar </h3>
+          <ul>
+            <li>Get task's variable value. Add 3rd parameter for default value if this variable is not existed.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Task ( string ) : Task name</li>
+              <li>Variable ( string ) : Variable name</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">       
+          <h2>Conditions</h2>
+        </div>
+        <div class="panel-body">              
+          <h2>Control    </h2>
+          <h4>Condition:On task done                    </h4>
+          <ul>
+            <li>Triggered when task executed completed.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Task ( string ) : Task name    </li>
+            </ul>
+          </ul>
+          <h4>Condition:On any task done                    </h4>
+          <ul>
+            <li>Triggered when any task executed completed.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:Is running                    </h4>
+          <ul>
+            <li>Is task running.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Task ( string ) : Task name    </li>
+            </ul>
+          </ul>
+          <h2>Function    </h2>
+          <h4>Condition:Is function existed                    </h4>
+          <ul>
+            <li>Return true if function is existed.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Function ( string ) : Function name.    </li>
+            </ul>
+          </ul>
+          <h4>Condition:On function scope changed                    </h4>
+          <ul>
+            <li>Triggered when function scope changed.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

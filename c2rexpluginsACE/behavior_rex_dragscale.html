@@ -1,0 +1,179 @@
+<!DOCTYPE 5>
+<html>
+  <head>
+    <title>Behavior : Drag scale</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="js/jquery-3.1.0.min.js">                         </script>
+    <script src="js/bootstrap.min.js">         </script>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header"><a class="navbar-brand" href="./index.html">Home</a></div>
+        <ul class="nav navbar-nav">
+          <li><a href="./pluginsIndex.html">Plugins      </a></li>
+          <li><a href="./behaviorsIndex.html">Behaviors                   </a></li>
+          <li><a href="./effectsIndex.html">Effects    </a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Behavior : Drag scale</h1>
+      <p>Author:Rex.Rainbow</p>
+      <ul>
+        <li>Get scaling from two dragging points</li>
+      </ul>
+      <div class="panel panel-default">
+        <div class="panel-title">
+          <h2>Properties</h2>
+        </div>
+        <div class="panel-body">
+          <h3>Activated</h3>
+          <ul>
+            <li>Enable if you wish this to begin at the start of the layout.                    </li>
+            <ul>
+              <li>Options : [&quot;No&quot;,&quot;Yes&quot;]</li>
+            </ul>
+          </ul>
+          <h3>Auto scale</h3>
+          <ul>
+            <li>Auto scale instance size with dragging.                    </li>
+            <ul>
+              <li>Options : [&quot;No&quot;,&quot;Yes&quot;]</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">   
+          <h2>Actions</h2>
+        </div>
+        <div class="panel-body">
+          <h2>Active      </h2>
+          <h3>Action:Set activated      </h3>
+          <ul>
+            <li>Enable the object's drag scale behavior.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Activated ( Combo ) : Enable the drag scale behavior.</li>
+              <ul>
+                <li>Options : [&quot;No&quot;,&quot;Yes&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h2>Auto scale      </h2>
+          <h3>Action:Set auto scale      </h3>
+          <ul>
+            <li>Enable to auto scale instance size with dragging.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Auto scale ( Combo ) : Enable to auto scale instance size with dragging.</li>
+              <ul>
+                <li>Options : [&quot;No&quot;,&quot;Yes&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">    
+        <div class="panel-title">    
+          <h2>Expressions</h2>
+        </div>
+        <div class="panel-body">           
+          <h2>Dragging point    </h2>
+          <h3>Expression:P0X </h3>
+          <ul>
+            <li>Get the X co-ordinate of dragging point 0.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:P0Y </h3>
+          <ul>
+            <li>Get the Y co-ordinate of dragging point 0.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:P1X </h3>
+          <ul>
+            <li>Get the X co-ordinate of dragging point 1.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:P1Y </h3>
+          <ul>
+            <li>Get the Y co-ordinate of dragging point 1.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Scale    </h2>
+          <h3>Expression:Scale </h3>
+          <ul>
+            <li>Get scaling from dragging points.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>State    </h2>
+          <h3>Expression:CurState </h3>
+          <ul>
+            <li>Get current state.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">       
+          <h2>Conditions</h2>
+        </div>
+        <div class="panel-body">              
+          <h2>Cancel    </h2>
+          <h4>Condition:On canceled                    </h4>
+          <ul>
+            <li>Triggered when dragging canceled.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Drag    </h2>
+          <h4>Condition:On dragging start                    </h4>
+          <ul>
+            <li>Triggered when dragging start.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:Is dragging                    </h4>
+          <ul>
+            <li>Is dragging.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Dragging moving    </h2>
+          <h4>Condition:On dragging moving start                    </h4>
+          <ul>
+            <li>Triggered when object dragging moving start.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On dragging moving                    </h4>
+          <ul>
+            <li>Triggered when object dragging moving.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

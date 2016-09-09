@@ -1,0 +1,776 @@
+<!DOCTYPE 5>
+<html>
+  <head>
+    <title>Plugin : Message</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="js/jquery-3.1.0.min.js">                         </script>
+    <script src="js/bootstrap.min.js">         </script>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header"><a class="navbar-brand" href="./index.html">Home</a></div>
+        <ul class="nav navbar-nav">
+          <li><a href="./pluginsIndex.html">Plugins      </a></li>
+          <li><a href="./behaviorsIndex.html">Behaviors                   </a></li>
+          <li><a href="./effectsIndex.html">Effects    </a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Plugin : Message</h1>
+      <p>Author:Rex.Rainbow</p>
+      <ul>
+        <li>Send/receive messages.</li>
+      </ul>
+      <div class="panel panel-default">
+        <div class="panel-title">
+          <h2>Properties</h2>
+        </div>
+        <div class="panel-body">
+          <h3>Class</h3>
+          <ul>
+            <li>Class of the table.                    </li>
+          </ul>
+          <h3>Class name</h3>
+          <ul>
+            <li>Class name for storing messages structure.                    </li>
+          </ul>
+          <h3>Page</h3>
+          <ul>
+            <li>Paging for reading.                    </li>
+          </ul>
+          <h3>Lines</h3>
+          <ul>
+            <li>Line count of each page.                    </li>
+          </ul>
+          <h3>Order</h3>
+          <ul>
+            <li>Order.                    </li>
+            <ul>
+              <li>Options : [&quot;Earlier to later&quot;,&quot;Later to earlier&quot;]</li>
+            </ul>
+          </ul>
+          <h3>Linked tables</h3>
+          <ul>
+            <li>Linked tables.                    </li>
+          </ul>
+          <h3>Sender class name</h3>
+          <ul>
+            <li>Class name for storing sender data structure. Set &quot;&quot; to ignore sender data.                    </li>
+          </ul>
+          <h3>Receiver class name</h3>
+          <ul>
+            <li>Class name for storing receiver data structure. Set &quot;&quot; to ignore receiver data.                    </li>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">   
+          <h2>Actions</h2>
+        </div>
+        <div class="panel-body">
+          <h2>Filter - 1. new      </h2>
+          <h3>Action:New      </h3>
+          <ul>
+            <li>Create a new message filter.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Filter - 2. senderID      </h2>
+          <h3>Action:All senders      </h3>
+          <ul>
+            <li>Add all senders into filter.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Action:Add sender      </h3>
+          <ul>
+            <li>Add a sender into filter.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Sender ID ( string ) : Sender ID.</li>
+            </ul>
+          </ul>
+          <h2>Filter - 3. receiverID      </h2>
+          <h3>Action:All receivers      </h3>
+          <ul>
+            <li>Add all receivers into filter.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Action:Add receiver      </h3>
+          <ul>
+            <li>Add a receiver into filter.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Receiver ID ( string ) : Receiver ID.</li>
+            </ul>
+          </ul>
+          <h2>Filter - 4. category      </h2>
+          <h3>Action:All categories      </h3>
+          <ul>
+            <li>Add all categories into filter.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Action:Add category      </h3>
+          <ul>
+            <li>Add a category into filter.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Category ( string ) : Category.</li>
+            </ul>
+          </ul>
+          <h2>Filter - 5. status      </h2>
+          <h3>Action:All status      </h3>
+          <ul>
+            <li>Add all status into filter.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Action:Add status      </h3>
+          <ul>
+            <li>Add a status into filter.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Status ( string ) : Status.</li>
+            </ul>
+          </ul>
+          <h2>Filter - 6. timestamp      </h2>
+          <h3>Action:All timestamps      </h3>
+          <ul>
+            <li>Add all timestamps into filter.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Action:Add timestamp constraint      </h3>
+          <ul>
+            <li>Add a timestamp constraint into filter. They will be jointed by AND operation.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>When ( Combo ) : Before or after the timestamp.</li>
+              <ul>
+                <li>Options : [&quot;Before&quot;,&quot;After&quot;]</li>
+              </ul>
+              <li>Timestamp ( number ) : Timestamp in milliseconds.</li>
+              <li>Include ( Combo ) : Include compared timestamp or excluded.</li>
+              <ul>
+                <li>Options : [&quot;Excluded&quot;,&quot;Included&quot;]</li>
+              </ul>
+              <li>Type ( Combo ) : Type of compared timestamp.</li>
+              <ul>
+                <li>Options : [&quot;Created&quot;,&quot;Updated&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h2>Initial      </h2>
+          <h3>Action:Initial table      </h3>
+          <ul>
+            <li>Initial table.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Load      </h2>
+          <h3>Action:Request in a range      </h3>
+          <ul>
+            <li>Request messages in a range.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Start ( number ) : Start index, 0-based.</li>
+              <li>Lines ( number ) : Count of lines</li>
+              <li>Content ( Combo ) : Get content.</li>
+              <ul>
+                <li>Options : [&quot;without&quot;,&quot;with&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h3>Action:Request to page      </h3>
+          <ul>
+            <li>Request messages at page.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Index ( number ) : Page index, 0-based.</li>
+              <li>Content ( Combo ) : Get content.</li>
+              <ul>
+                <li>Options : [&quot;without&quot;,&quot;with&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h3>Action:Request current page      </h3>
+          <ul>
+            <li>Request messages at current page.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Content ( Combo ) : Get content.</li>
+              <ul>
+                <li>Options : [&quot;without&quot;,&quot;with&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h3>Action:Request next page      </h3>
+          <ul>
+            <li>Request messages at next page.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Content ( Combo ) : Get content.</li>
+              <ul>
+                <li>Options : [&quot;without&quot;,&quot;with&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h3>Action:Request previous page      </h3>
+          <ul>
+            <li>Request messages at previous page.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Content ( Combo ) : Get content.</li>
+              <ul>
+                <li>Options : [&quot;without&quot;,&quot;with&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h2>Load - all      </h2>
+          <h3>Action:Request all messages      </h3>
+          <ul>
+            <li>Load all messages.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Content ( Combo ) : Get content.</li>
+              <ul>
+                <li>Options : [&quot;without&quot;,&quot;with&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h2>Load - messageID      </h2>
+          <h3>Action:Load by messageID      </h3>
+          <ul>
+            <li>Load message by messageID.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Message ID ( string ) : Message ID.</li>
+            </ul>
+          </ul>
+          <h3>Action:Load by index      </h3>
+          <ul>
+            <li>Load message by index.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Index ( number ) : Index of queried rows.</li>
+            </ul>
+          </ul>
+          <h2>Queried messages count      </h2>
+          <h3>Action:Get messages count      </h3>
+          <ul>
+            <li>Get queried messages count. Maximum of 160 requests per minute.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Remove      </h2>
+          <h3>Action:Remove by messageID      </h3>
+          <ul>
+            <li>Remove message by messageID.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Message ID ( string ) : Message ID.</li>
+            </ul>
+          </ul>
+          <h3>Action:Remove queried messages      </h3>
+          <ul>
+            <li>Remove queried messages.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Action:Remove by index      </h3>
+          <ul>
+            <li>Remove message by index.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Index ( number ) : Index of queried rows.</li>
+            </ul>
+          </ul>
+          <h2>Send - Status      </h2>
+          <h3>Action:Set status      </h3>
+          <ul>
+            <li>Change status of message.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Message ID ( string ) : Message ID.</li>
+              <li>Status ( string ) : Status of this message.</li>
+            </ul>
+          </ul>
+          <h3>Action:Set status by index      </h3>
+          <ul>
+            <li>Change status of message by index.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Index ( number ) : Index of queried rows.</li>
+              <li>Status ( string ) : Status of this message.</li>
+            </ul>
+          </ul>
+          <h2>Send - message      </h2>
+          <h3>Action:Send      </h3>
+          <ul>
+            <li>Send message.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Receiver UserID ( string ) : UserID of receiver.</li>
+              <li>Title ( string ) : Title of this message.</li>
+              <li>Content ( string ) : Content of this message. String or JSON string for object.</li>
+              <li>Category ( string ) : Category of this message for filtering.</li>
+              <li>Status ( string ) : Status of this message.</li>
+            </ul>
+          </ul>
+          <h2>User info      </h2>
+          <h3>Action:Set user      </h3>
+          <ul>
+            <li>Set user info.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Sender ID ( string ) : Sender ID.</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">    
+        <div class="panel-title">    
+          <h2>Expressions</h2>
+        </div>
+        <div class="panel-body">           
+          <h2>Error    </h2>
+          <h3>Expression:ErrorCode </h3>
+          <ul>
+            <li>Error code.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:ErrorMessage </h3>
+          <ul>
+            <li>Error message.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Load - for each    </h2>
+          <h3>Expression:CurSenderID </h3>
+          <ul>
+            <li>Get the current senderID in a For Each loop.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:CurReceiverID </h3>
+          <ul>
+            <li>Get the current receiverID in a For Each loop.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:CurTitle </h3>
+          <ul>
+            <li>Get the current title in a For Each loop.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:CurContent </h3>
+          <ul>
+            <li>Get the current content in a For Each loop.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:CurMessageID </h3>
+          <ul>
+            <li>Get the current messageID in a For Each loop.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:CurSentAt </h3>
+          <ul>
+            <li>Get the current sent unix timestamp (number of milliseconds since the epoch) in a For Each loop.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:CurStatus </h3>
+          <ul>
+            <li>Get the current status of message in a For Each loop.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:CurSenderData </h3>
+          <ul>
+            <li>Get value of current sender data in a For Each loop.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:CurReceiverrData </h3>
+          <ul>
+            <li>Get value of current receiver data in a For Each loop.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Load - for each - index    </h2>
+          <h3>Expression:CurMessageIndex </h3>
+          <ul>
+            <li>Get the current message index in a For Each loop.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:CurStartIndex </h3>
+          <ul>
+            <li>Get start index in current received page.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:LoopIndex </h3>
+          <ul>
+            <li>Get loop index in current received page.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Queried messages count    </h2>
+          <h3>Expression:LastMessagesCount </h3>
+          <ul>
+            <li>Get last queried messages count under &quot;Condition: On get messages count complete&quot;.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Received    </h2>
+          <h3>Expression:MessagesToJSON </h3>
+          <ul>
+            <li>Get all read messages in JSON string.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:CurMessageCount </h3>
+          <ul>
+            <li>Get message count in current received page.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Received - index    </h2>
+          <h3>Expression:Index2SenderID </h3>
+          <ul>
+            <li>Get senderID by index.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Index ( number ) : Index of queried rows.</li>
+            </ul>
+          </ul>
+          <h3>Expression:Index2ReceiverID </h3>
+          <ul>
+            <li>Get receiverID by index.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Index ( number ) : Index of queried rows.</li>
+            </ul>
+          </ul>
+          <h3>Expression:Index2Title </h3>
+          <ul>
+            <li>Get title by index.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Index ( number ) : Index of queried rows.</li>
+            </ul>
+          </ul>
+          <h3>Expression:Index2Content </h3>
+          <ul>
+            <li>Get content by index.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Index ( number ) : Index of queried rows.</li>
+            </ul>
+          </ul>
+          <h3>Expression:Index2MessageID </h3>
+          <ul>
+            <li>Get messageID by index.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Index ( number ) : Index of queried rows.</li>
+            </ul>
+          </ul>
+          <h3>Expression:Index2SentAt </h3>
+          <ul>
+            <li>Get sent unix timestamp (number of milliseconds since the epoch) under &quot;Condition: On load by messageID complete&quot;.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Index ( number ) : Index of queried rows.</li>
+            </ul>
+          </ul>
+          <h3>Expression:Index2Status </h3>
+          <ul>
+            <li>Get status by index.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Index ( number ) : Index of queried rows.</li>
+            </ul>
+          </ul>
+          <h3>Expression:Index2SenderData </h3>
+          <ul>
+            <li>Get sender data by index.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Index ( number ) : Index of queried rows.</li>
+            </ul>
+          </ul>
+          <h3>Expression:Index2ReceiverData </h3>
+          <ul>
+            <li>Get receiver data by index.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Index ( number ) : Index of queried rows.</li>
+            </ul>
+          </ul>
+          <h2>Received - messageID    </h2>
+          <h3>Expression:LastFetchedSenderID </h3>
+          <ul>
+            <li>Get senderID under &quot;Condition: On load by messageID&quot;.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:LastFetchedReceiverID </h3>
+          <ul>
+            <li>Get receiverID under &quot;Condition: On load by messageID&quot;.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:LastFetchedTitle </h3>
+          <ul>
+            <li>Get title under &quot;Condition: On load by messageID&quot;.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:LastFetchedContent </h3>
+          <ul>
+            <li>Get content under &quot;Condition: On load by messageID&quot;.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:LastFetchedMessageID </h3>
+          <ul>
+            <li>Get messageID under &quot;Condition: On load by messageID&quot;.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:LastFetchedSentAt </h3>
+          <ul>
+            <li>Get sent unix timestamp (number of milliseconds since the epoch) under &quot;Condition: On load by messageID complete&quot;.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:LastFetchedStatus </h3>
+          <ul>
+            <li>Get status under &quot;Condition: On load by messageID&quot;.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:LastFetchedSenderData </h3>
+          <ul>
+            <li>Get sender data under &quot;Condition: On load by messageID&quot;.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:LastFetchedReceiverData </h3>
+          <ul>
+            <li>Get receiver data under &quot;Condition: On load by messageID&quot;.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Remove    </h2>
+          <h3>Expression:LastRemovedMessageID </h3>
+          <ul>
+            <li>Get last removed messageID under &quot;Condition:On remove complete&quot;.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Send    </h2>
+          <h3>Expression:LastSentMessageID </h3>
+          <ul>
+            <li>Get last sent messageID under &quot;Condition:On send complete&quot;.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>User info    </h2>
+          <h3>Expression:MyUserID </h3>
+          <ul>
+            <li>Get my userID.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">       
+          <h2>Conditions</h2>
+        </div>
+        <div class="panel-body">              
+          <h2>Load    </h2>
+          <h4>Condition:On received                    </h4>
+          <ul>
+            <li>Triggered when received messages.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On received error                    </h4>
+          <ul>
+            <li>Triggered when received messages error.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:Last page                    </h4>
+          <ul>
+            <li>Return true if current page is the last page.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Load - for each    </h2>
+          <h4>Condition:For each message                    </h4>
+          <ul>
+            <li>Repeat the event for each message.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:For each message in a range                    </h4>
+          <ul>
+            <li>Repeat the event for each message in a range.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Start ( number ) : Start from message index (0-based).    </li>
+              <li>End ( number ) : End to message index (0-based). This value should larger than Start.    </li>
+            </ul>
+          </ul>
+          <h2>Load by messageID    </h2>
+          <h4>Condition:On load by messageID                    </h4>
+          <ul>
+            <li>Triggered when load by messageID message complete.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On load by messageID error                    </h4>
+          <ul>
+            <li>Triggered when load by messageID message error.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Queried messages count    </h2>
+          <h4>Condition:On get messages count                    </h4>
+          <ul>
+            <li>Triggered when get messages count.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On get messages count error                    </h4>
+          <ul>
+            <li>Triggered when get messages count error.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Remove by messageID    </h2>
+          <h4>Condition:On remove by messageID                    </h4>
+          <ul>
+            <li>Triggered when remove complete.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On remove by messageID error                    </h4>
+          <ul>
+            <li>Triggered when remove error.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Remove queried messages    </h2>
+          <h4>Condition:On remove queried messages                    </h4>
+          <ul>
+            <li>Triggered when remove complete.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On remove queried messages error                    </h4>
+          <ul>
+            <li>Triggered when remove error.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Send - message    </h2>
+          <h4>Condition:On send                    </h4>
+          <ul>
+            <li>Triggered when send complete.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On send error                    </h4>
+          <ul>
+            <li>Triggered when send error.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Send - status    </h2>
+          <h4>Condition:On set status                    </h4>
+          <ul>
+            <li>Triggered when set status complete.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On set status error                    </h4>
+          <ul>
+            <li>Triggered when set status error.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

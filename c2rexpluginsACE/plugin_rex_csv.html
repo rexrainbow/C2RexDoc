@@ -1,0 +1,484 @@
+<!DOCTYPE 5>
+<html>
+  <head>
+    <title>Plugin : CSV</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="js/jquery-3.1.0.min.js">                         </script>
+    <script src="js/bootstrap.min.js">         </script>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header"><a class="navbar-brand" href="./index.html">Home</a></div>
+        <ul class="nav navbar-nav">
+          <li><a href="./pluginsIndex.html">Plugins      </a></li>
+          <li><a href="./behaviorsIndex.html">Behaviors                   </a></li>
+          <li><a href="./effectsIndex.html">Effects    </a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Plugin : CSV</h1>
+      <p>Author:Rex.Rainbow</p>
+      <ul>
+        <li>Read 2d table from cvs string.</li>
+      </ul>
+      <div class="panel panel-default">
+        <div class="panel-title">
+          <h2>Properties</h2>
+        </div>
+        <div class="panel-body">
+          <h3>Delimiter</h3>
+          <ul>
+            <li>Set delimiter for splitting items.                    </li>
+          </ul>
+          <h3>Eval mode</h3>
+          <ul>
+            <li>Enable &quot;Eval mode&quot; for parsing value.                    </li>
+            <ul>
+              <li>Options : [&quot;No&quot;,&quot;Yes&quot;]</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">   
+          <h2>Actions</h2>
+        </div>
+        <div class="panel-body">
+          <h2>0: Load      </h2>
+          <h3>Action:Load table      </h3>
+          <ul>
+            <li>Load table from csv string.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>CSV string ( string ) : The csv string for loading.</li>
+            </ul>
+          </ul>
+          <h3>Action:Load one table      </h3>
+          <ul>
+            <li>Load table from JSON string.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>JSON string ( string ) : JSON string.</li>
+            </ul>
+          </ul>
+          <h3>Action:Load all tables      </h3>
+          <ul>
+            <li>Load all tables from JSON string.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>JSON string ( string ) : JSON string.</li>
+            </ul>
+          </ul>
+          <h2>Convert      </h2>
+          <h3>Action:Convert row      </h3>
+          <ul>
+            <li>Convert entries type in a row.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Row ( string ) : The row index.</li>
+              <li>Type ( Combo ) : Conver type to numver.</li>
+              <ul>
+                <li>Options : [&quot;Integer&quot;,&quot;Float&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h3>Action:Convert col      </h3>
+          <ul>
+            <li>Convert entries type in a col.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Col ( string ) : The column index.</li>
+              <li>Type ( Combo ) : Conver type to numver.</li>
+              <ul>
+                <li>Options : [&quot;Integer&quot;,&quot;Float&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h2>Delimiter      </h2>
+          <h3>Action:Set delimiter      </h3>
+          <ul>
+            <li>Set delimiter for splitting items.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Delimiter ( string ) : Set delimiter for splitting items.</li>
+            </ul>
+          </ul>
+          <h2>Page      </h2>
+          <h3>Action:Turn page      </h3>
+          <ul>
+            <li>Turn the page.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Page ( string ) : The index of page.</li>
+            </ul>
+          </ul>
+          <h2>Resize      </h2>
+          <h3>Action:Append a column      </h3>
+          <ul>
+            <li>Append a column.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Col index ( string ) : Column index.</li>
+              <li>Value ( number or string ) : The initial value.</li>
+            </ul>
+          </ul>
+          <h3>Action:Append a row      </h3>
+          <ul>
+            <li>Append a row.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Row index ( string ) : Row index.</li>
+              <li>Value ( number or string ) : The initial value.</li>
+            </ul>
+          </ul>
+          <h3>Action:Remove a column      </h3>
+          <ul>
+            <li>Remove a column.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Col index ( string ) : Column index.</li>
+            </ul>
+          </ul>
+          <h3>Action:Remove a row      </h3>
+          <ul>
+            <li>Remove a row.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Row index ( string ) : Row index.</li>
+            </ul>
+          </ul>
+          <h2>Set      </h2>
+          <h3>Action:Set value      </h3>
+          <ul>
+            <li>Set the value in the table at current page.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Col ( string ) : The column index.</li>
+              <li>Row ( string ) : The row index.</li>
+              <li>Value ( number or string ) : The value to store.</li>
+            </ul>
+          </ul>
+          <h3>Action:Clear      </h3>
+          <ul>
+            <li>Clear all entries.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Action:Set value at page      </h3>
+          <ul>
+            <li>Set the value in the table at a specific page.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Col ( string ) : The column index.</li>
+              <li>Row ( string ) : The row index.</li>
+              <li>Page ( string ) : The index of page.</li>
+              <li>Value ( number or string ) : The value to store.</li>
+            </ul>
+          </ul>
+          <h3>Action:Add to      </h3>
+          <ul>
+            <li>Add to the value in the table at current page.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Col ( string ) : The column index.</li>
+              <li>Row ( string ) : The row index.</li>
+              <li>Value ( number or string ) : The value to store.</li>
+            </ul>
+          </ul>
+          <h3>Action:Add at page      </h3>
+          <ul>
+            <li>Add to the value in the table at a specific page.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Col ( string ) : The column index.</li>
+              <li>Row ( string ) : The row index.</li>
+              <li>Page ( string ) : The index of page.</li>
+              <li>Value ( number or string ) : The value to store.</li>
+            </ul>
+          </ul>
+          <h2>Sort      </h2>
+          <h3>Action:Sort items in col      </h3>
+          <ul>
+            <li>Sort items in col.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Col index ( string ) : Col index.</li>
+              <li>Order ( Combo ) : Sorting order of item.</li>
+              <ul>
+                <li>Options : [&quot;ascending&quot;,&quot;descending&quot;,&quot;logical ascending&quot;,&quot;logical descending&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h3>Action:Sort items in row      </h3>
+          <ul>
+            <li>Sort items in row.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Row index ( string ) : Row index.</li>
+              <li>Order ( Combo ) : Sorting order of item.</li>
+              <ul>
+                <li>Options : [&quot;ascending&quot;,&quot;descending&quot;,&quot;logical ascending&quot;,&quot;logical descending&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">    
+        <div class="panel-title">    
+          <h2>Expressions</h2>
+        </div>
+        <div class="panel-body">           
+          <h2>CSV    </h2>
+          <h3>Expression:TableToCSV </h3>
+          <ul>
+            <li>Transfer current table to csv string.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Col    </h2>
+          <h3>Expression:NextCol </h3>
+          <ul>
+            <li>Get next col index of a col index in current table. Add 2nd parameter to a specific col index, or uses AtCol if no col index assigned.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:PreviousCol </h3>
+          <ul>
+            <li>Get previous col index of a col index in current table. Add 2nd parameter to a specific col index, or uses AtCol if no col index assigned.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Delimiter    </h2>
+          <h3>Expression:Delimiter </h3>
+          <ul>
+            <li>Get delimiter.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>For Each    </h2>
+          <h3>Expression:CurCol </h3>
+          <ul>
+            <li>Get the current column index in a For Each loop.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:CurRow </h3>
+          <ul>
+            <li>Get the current row index in a For Each loop.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:CurValue </h3>
+          <ul>
+            <li>Get the current value in a For Each loop.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:CurPage </h3>
+          <ul>
+            <li>Get the current page index in a For Each loop.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>JSON    </h2>
+          <h3>Expression:TableToString </h3>
+          <ul>
+            <li>Transfer current table to JSON string.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:AllTalbesToString </h3>
+          <ul>
+            <li>Transfer all tables to a JSON string.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Page    </h2>
+          <h3>Expression:AtPage </h3>
+          <ul>
+            <li>Get the page index in the last At expression.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Row    </h2>
+          <h3>Expression:NextRow </h3>
+          <ul>
+            <li>Get next row index of a col index in current table. Add 2nd parameter to a specific rpw index, or uses AtRow if no row index assigned.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:PreviousRow </h3>
+          <ul>
+            <li>Get previous row index of a col index in current table. Add 2nd parameter to a specific rpw index, or uses AtRow if no row index assigned.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Table: At    </h2>
+          <h3>Expression:At </h3>
+          <ul>
+            <li>Get value from current table. Add page index at 3rd parameter to turn the page. Add default value at 4th parameter for invalid value.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Col ( number or string ) : The column index.</li>
+              <li>Row ( number or string ) : The row index.</li>
+            </ul>
+          </ul>
+          <h3>Expression:AtCol </h3>
+          <ul>
+            <li>Get the column index in the last At expression.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:AtRow </h3>
+          <ul>
+            <li>Get the row index in the last At expression.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Table: Count    </h2>
+          <h3>Expression:ColCnt </h3>
+          <ul>
+            <li>Get column count.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:RowCnt </h3>
+          <ul>
+            <li>Get row count.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">       
+          <h2>Conditions</h2>
+        </div>
+        <div class="panel-body">              
+          <h2>For each col    </h2>
+          <h4>Condition:For each col                    </h4>
+          <ul>
+            <li>Repeat the event for each column in the table.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:For each row in col                    </h4>
+          <ul>
+            <li>Repeat the event for each row in a column.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Col ( string ) : The column index.    </li>
+            </ul>
+          </ul>
+          <h2>For each page    </h2>
+          <h4>Condition:For each page                    </h4>
+          <ul>
+            <li>Repeat the event for each page.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>For each row    </h2>
+          <h4>Condition:For each row                    </h4>
+          <ul>
+            <li>Repeat the event for each row in the table.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:For each col in row                    </h4>
+          <ul>
+            <li>Repeat the event for each column in a row.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Row ( string ) : The row index.    </li>
+            </ul>
+          </ul>
+          <h2>In    </h2>
+          <h4>Condition:Data in col                    </h4>
+          <ul>
+            <li>Return true if data in col.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Data ( number or string ) : Data to compare.    </li>
+              <li>Col ( string ) : The col index.    </li>
+            </ul>
+          </ul>
+          <h4>Condition:Data in row                    </h4>
+          <ul>
+            <li>Return true if data in row.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Data ( number or string ) : Data to compare.    </li>
+              <li>Row ( string ) : The row index.    </li>
+            </ul>
+          </ul>
+          <h4>Condition:Key in col                    </h4>
+          <ul>
+            <li>Return true if key in col.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Key ( string ) : The col index.    </li>
+            </ul>
+          </ul>
+          <h4>Condition:Key in row                    </h4>
+          <ul>
+            <li>Return true if key in row.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Key ( string ) : The row index.    </li>
+            </ul>
+          </ul>
+          <h4>Condition:Entry is valid                    </h4>
+          <ul>
+            <li>Return true if the entry is valid.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Col ( string ) : The col index.    </li>
+              <li>Row ( string ) : The row index.    </li>
+            </ul>
+          </ul>
+          <h4>Condition:Has col                    </h4>
+          <ul>
+            <li>Return true if this column index is in table.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Col ( string ) : The col index.    </li>
+            </ul>
+          </ul>
+          <h4>Condition:Has row                    </h4>
+          <ul>
+            <li>Return true if this row index is in table.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Row ( string ) : The row index.    </li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

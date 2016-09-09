@@ -1,0 +1,348 @@
+<!DOCTYPE 5>
+<html>
+  <head>
+    <title>Plugin : Tween tasks</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="js/jquery-3.1.0.min.js">                         </script>
+    <script src="js/bootstrap.min.js">         </script>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header"><a class="navbar-brand" href="./index.html">Home</a></div>
+        <ul class="nav navbar-nav">
+          <li><a href="./pluginsIndex.html">Plugins      </a></li>
+          <li><a href="./behaviorsIndex.html">Behaviors                   </a></li>
+          <li><a href="./effectsIndex.html">Effects    </a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Plugin : Tween tasks</h1>
+      <p>Author:Rex.Rainbow</p>
+      <ul>
+        <li>Run tasks of tween functions</li>
+      </ul>
+      <div class="panel panel-default">
+        <div class="panel-title">
+          <h2>Properties</h2>
+        </div>
+        <div class="panel-body">
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">   
+          <h2>Actions</h2>
+        </div>
+        <div class="panel-body">
+          <h2>Control      </h2>
+          <h3>Action:Start      </h3>
+          <ul>
+            <li>Start task.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Task ( string ) : Name of task.</li>
+              <li>Destroy ( Combo ) : Destroy task after task done.</li>
+              <ul>
+                <li>Options : [&quot;Keep&quot;,&quot;Destroy&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h3>Action:Pause      </h3>
+          <ul>
+            <li>Pause task.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Task ( string ) : Name of task.</li>
+            </ul>
+          </ul>
+          <h3>Action:Resume      </h3>
+          <ul>
+            <li>Resume task.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Task ( string ) : Name of task.</li>
+            </ul>
+          </ul>
+          <h2>Destroy      </h2>
+          <h3>Action:Destroy task      </h3>
+          <ul>
+            <li>Destroy task.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Task ( string ) : Name of task.</li>
+            </ul>
+          </ul>
+          <h2>Function      </h2>
+          <h3>Action:Set parameter      </h3>
+          <ul>
+            <li>Assign start and end value of a function parameter.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Task ( string ) : Name of task.</li>
+              <li>Parameter ( string ) : Name of parameter.</li>
+              <li>Start ( number ) : Start value.</li>
+              <li>End ( number ) : End value</li>
+              <li>Type ( Combo ) : Function type of easing.</li>
+              <ul>
+                <li>Options : [&quot;Linear&quot;,&quot;EaseInQuad&quot;,&quot;EaseOutQuad&quot;,&quot;EaseInOutQuad&quot;,&quot;EaseInCubic&quot;,&quot;EaseOutCubic&quot;,&quot;EaseInOutCubic&quot;,&quot;EaseInQuart&quot;,&quot;EaseOutQuart&quot;,&quot;EaseInOutQuart&quot;,&quot;EaseInQuint&quot;,&quot;EaseOutQuint&quot;,&quot;EaseInOutQuint&quot;,&quot;EaseInCircle&quot;,&quot;EaseOutCircle&quot;,&quot;EaseInOutCircle&quot;,&quot;EaseInBack&quot;,&quot;EaseOutBack&quot;,&quot;EaseInOutBack&quot;,&quot;EaseInElastic&quot;,&quot;EaseOutElastic&quot;,&quot;EaseInOutElastic&quot;,&quot;EaseInBounce&quot;,&quot;EaseOutBounce&quot;,&quot;EaseInOutBounce&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h2>New - group task      </h2>
+          <h3>Action:New sequence task      </h3>
+          <ul>
+            <li>Create a new task to run tasks in sequence or parallel.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Task ( string ) : Name of task.</li>
+              <li>Repeat ( number ) : Repeat count. 0 is infinty.</li>
+              <li>Task {n} ( variadic ) : Tasks in sequence.</li>
+            </ul>
+          </ul>
+          <h3>Action:New parallel task      </h3>
+          <ul>
+            <li>Create a new task to run tasks in parallel.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Task ( string ) : Name of task.</li>
+              <li>Repeat ( number ) : Repeat count. 0 is infinty.</li>
+              <li>Child task {n} ( variadic ) : Tasks in parallel.</li>
+            </ul>
+          </ul>
+          <h3>Action:Add child task      </h3>
+          <ul>
+            <li>Add child task into group task.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Task ( string ) : Name of task.</li>
+              <li>child task ( string ) : Name of child task.</li>
+            </ul>
+          </ul>
+          <h2>New - tween task      </h2>
+          <h3>Action:New function task      </h3>
+          <ul>
+            <li>Create a new task to run functuion.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Task ( string ) : Name of task.</li>
+              <li>Function ( string ) : The name of the function that is being called.</li>
+              <li>Interval ( number ) : Interval, in seconds.</li>
+              <li>Repeat ( number ) : Repeat count. 0 is infinty.</li>
+            </ul>
+          </ul>
+          <h3>Action:New inversed task      </h3>
+          <ul>
+            <li>Create a new task inversed from function task.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Task ( string ) : Name of task.</li>
+              <li>Inverse from ( string ) : Name of inversed task.</li>
+            </ul>
+          </ul>
+          <h2>New - wait for signal task      </h2>
+          <h3>Action:New wait for signal task      </h3>
+          <ul>
+            <li>Create a new wait task.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Task ( string ) : Name of task.</li>
+              <li>Signal ( string ) : Name of waited signal.</li>
+            </ul>
+          </ul>
+          <h2>New - wait task      </h2>
+          <h3>Action:New wait task      </h3>
+          <ul>
+            <li>Create a new wait task.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Task ( string ) : Name of task.</li>
+              <li>Interval ( number ) : Wait interval, in seconds.</li>
+            </ul>
+          </ul>
+          <h2>On function      </h2>
+          <h3>Action:Apply easing      </h3>
+          <ul>
+            <li>Apply easing to function parameter, used under &quot;Condition: On function&quot;   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Parameter ( string ) : Name of parameter.</li>
+              <li>Type ( Combo ) : Function type of easing.</li>
+              <ul>
+                <li>Options : [&quot;Linear&quot;,&quot;EaseInQuad&quot;,&quot;EaseOutQuad&quot;,&quot;EaseInOutQuad&quot;,&quot;EaseInCubic&quot;,&quot;EaseOutCubic&quot;,&quot;EaseInOutCubic&quot;,&quot;EaseInQuart&quot;,&quot;EaseOutQuart&quot;,&quot;EaseInOutQuart&quot;,&quot;EaseInQuint&quot;,&quot;EaseOutQuint&quot;,&quot;EaseInOutQuint&quot;,&quot;EaseInCircle&quot;,&quot;EaseOutCircle&quot;,&quot;EaseInOutCircle&quot;,&quot;EaseInBack&quot;,&quot;EaseOutBack&quot;,&quot;EaseInOutBack&quot;,&quot;EaseInElastic&quot;,&quot;EaseOutElastic&quot;,&quot;EaseInOutElastic&quot;,&quot;EaseInBounce&quot;,&quot;EaseOutBounce&quot;,&quot;EaseInOutBounce&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h2>Task parameter      </h2>
+          <h3>Action:Set parameter      </h3>
+          <ul>
+            <li>Set a parameter of task.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Task ( string ) : Name of task.</li>
+              <li>Parameter ( number or string ) : Name of parameter</li>
+              <li>Value ( number or string ) : Value</li>
+            </ul>
+          </ul>
+          <h3>Action:Bind instance      </h3>
+          <ul>
+            <li>Bind instance to task.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Task ( string ) : Name of task.</li>
+              <li>Instance ( object ) : Bound instance.</li>
+              <li>Destroy ( Combo ) : Destroy bound instance after task done.</li>
+              <ul>
+                <li>Options : [&quot;Keep&quot;,&quot;Destroy&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h3>Action:Bind instance by UID      </h3>
+          <ul>
+            <li>Bind instance to task.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Task ( string ) : Name of task.</li>
+              <li>UID ( number ) : Instance UID.</li>
+              <li>Destroy ( Combo ) : Destroy bound instance after task done.</li>
+              <ul>
+                <li>Options : [&quot;Keep&quot;,&quot;Destroy&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h2>Wait for signal      </h2>
+          <h3>Action:Continue task      </h3>
+          <ul>
+            <li>Continue task.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Task ( string ) : Name of task.</li>
+              <li>Signal ( string ) : Name of waited signal.</li>
+            </ul>
+          </ul>
+          <h3>Action:Continue by signal      </h3>
+          <ul>
+            <li>Continue task.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Signal ( string ) : Name of waited signal.</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">    
+        <div class="panel-title">    
+          <h2>Expressions</h2>
+        </div>
+        <div class="panel-body">           
+          <h2>Function    </h2>
+          <h3>Expression:FnParam </h3>
+          <ul>
+            <li>Get tween value of parameter under &quot;Condition:On function&quot;. Add &quot;start&quot;, &quot;end&quot;, or &quot;delta&quot; to 2nd parameter to get start or end or delta value.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Parameter ( string ) : Name of parameter.</li>
+            </ul>
+          </ul>
+          <h2>Sequence    </h2>
+          <h3>Expression:ChildTaskName </h3>
+          <ul>
+            <li>Get current child task name in sequence task. Return &quot;&quot; if not avaiable.  Add 2nd parameter to child task name.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Task    </h2>
+          <h3>Expression:TaskParam </h3>
+          <ul>
+            <li>Get value of task parameter.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Task ( string ) : Name of task.</li>
+              <li>Parameter ( string ) : Parameter's name</li>
+            </ul>
+          </ul>
+          <h3>Expression:TaskName </h3>
+          <ul>
+            <li>Get task name.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:RootTaskName </h3>
+          <ul>
+            <li>Get root task name. Add 2nd parameter to child task name.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:BoundInstUID </h3>
+          <ul>
+            <li>Get bound instance UID.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">       
+          <h2>Conditions</h2>
+        </div>
+        <div class="panel-body">              
+          <h2>Control    </h2>
+          <h4>Condition:On task done                    </h4>
+          <ul>
+            <li>Triggered when a task is done.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Name ( string ) : Name of task.    </li>
+            </ul>
+          </ul>
+          <h4>Condition:On any task done                    </h4>
+          <ul>
+            <li>Triggered when any task is done.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On any task start                    </h4>
+          <ul>
+            <li>Triggered when any task is started.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On task started                    </h4>
+          <ul>
+            <li>Triggered when a task is started.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Name ( string ) : Name of task.    </li>
+            </ul>
+          </ul>
+          <h2>Function    </h2>
+          <h4>Condition:On function                    </h4>
+          <ul>
+            <li>Triggered when a function is called.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Name ( string ) : The name of the function that is being called.    </li>
+            </ul>
+          </ul>
+          <h2>Status    </h2>
+          <h4>Condition:Is task running                    </h4>
+          <ul>
+            <li>Return true if task is running.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Name ( string ) : Name of task.    </li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

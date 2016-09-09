@@ -1,0 +1,218 @@
+<!DOCTYPE 5>
+<html>
+  <head>
+    <title>Plugin : ANN</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="js/jquery-3.1.0.min.js">                         </script>
+    <script src="js/bootstrap.min.js">         </script>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header"><a class="navbar-brand" href="./index.html">Home</a></div>
+        <ul class="nav navbar-nav">
+          <li><a href="./pluginsIndex.html">Plugins      </a></li>
+          <li><a href="./behaviorsIndex.html">Behaviors                   </a></li>
+          <li><a href="./effectsIndex.html">Effects    </a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Plugin : ANN</h1>
+      <p>Author:Rex.Rainbow</p>
+      <ul>
+        <li>Artificial Neural Network, using back-propagation and one hidden layer.</li>
+      </ul>
+      <div class="panel panel-default">
+        <div class="panel-title">
+          <h2>Properties</h2>
+        </div>
+        <div class="panel-body">
+          <h3>Rate</h3>
+          <ul>
+            <li>Learning rate.                    </li>
+          </ul>
+          <h3>Momentum</h3>
+          <ul>
+            <li>Momentum factor.                    </li>
+          </ul>
+          <h3>Input variables</h3>
+          <ul>
+            <li>Input variables for Input layer like &quot;A&quot;,&quot;B&quot;                    </li>
+          </ul>
+          <h3>Hidden layer</h3>
+          <ul>
+            <li>Node count of Hidden layer.                    </li>
+          </ul>
+          <h3>Output variables</h3>
+          <ul>
+            <li>Output variables for Output layer like &quot;O&quot;                    </li>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">   
+          <h2>Actions</h2>
+        </div>
+        <div class="panel-body">
+          <h2>Define      </h2>
+          <h3>Action:Define learning rate and momentum factor      </h3>
+          <ul>
+            <li>Set learning rate and momentum factor.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Rate ( number ) : Learning rate</li>
+              <li>Moment ( number ) : Momentum factor</li>
+            </ul>
+          </ul>
+          <h2>Define: hidden layer      </h2>
+          <h3>Action:Define hidden node count      </h3>
+          <ul>
+            <li>Define node count of hidden layer.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Node count ( number ) : Node count of hidden layer</li>
+            </ul>
+          </ul>
+          <h2>Define: input      </h2>
+          <h3>Action:Define inputs      </h3>
+          <ul>
+            <li>Define input variables by name.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Input {n} ( variadic ) : Name of input variables.</li>
+            </ul>
+          </ul>
+          <h3>Action:Define inputs by dictionary      </h3>
+          <ul>
+            <li>Define input variables by the keys of dictionary.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Dictionary ( object ) : Dictionary object</li>
+            </ul>
+          </ul>
+          <h2>Define: output      </h2>
+          <h3>Action:Define outputs      </h3>
+          <ul>
+            <li>Define outputs variables by name.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Output {n} ( variadic ) : Name of output variables.</li>
+            </ul>
+          </ul>
+          <h3>Action:Define outputs by dictionary      </h3>
+          <ul>
+            <li>Define outputs variables by the keys of dictionary.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Dictionary ( object ) : Dictionary object</li>
+            </ul>
+          </ul>
+          <h2>Input      </h2>
+          <h3>Action:Set input      </h3>
+          <ul>
+            <li>Set input value.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Name ( number or string ) : Name of input variable</li>
+              <li>Value ( number ) : Value of input variable</li>
+            </ul>
+          </ul>
+          <h2>JSON      </h2>
+          <h3>Action:Load      </h3>
+          <ul>
+            <li>Load from an ANN previously encoded in JSON format.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>JSON ( string ) : A string of the JSON data to load.</li>
+            </ul>
+          </ul>
+          <h2>Recall      </h2>
+          <h3>Action:Recall      </h3>
+          <ul>
+            <li>Recall by current inputs, get output from &quot;expression:Output&quot;.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Reset      </h2>
+          <h3>Action:Reset      </h3>
+          <ul>
+            <li>Reset weights   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Target      </h2>
+          <h3>Action:Set target      </h3>
+          <ul>
+            <li>Set target output value for learning.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Name ( number or string ) : Name of output variable</li>
+              <li>Value ( number ) : Value of output variable</li>
+            </ul>
+          </ul>
+          <h2>Train      </h2>
+          <h3>Action:Train      </h3>
+          <ul>
+            <li>Train by current inputs and outputs to adjust the weights.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">    
+        <div class="panel-title">    
+          <h2>Expressions</h2>
+        </div>
+        <div class="panel-body">           
+          <h2>Input    </h2>
+          <h3>Expression:Input </h3>
+          <ul>
+            <li>Get input value.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Input ( string ) : Input name.</li>
+            </ul>
+          </ul>
+          <h2>JSON    </h2>
+          <h3>Expression:AsJSON </h3>
+          <ul>
+            <li>Return the contents of the ANN in JSON format.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Recall    </h2>
+          <h3>Expression:Output </h3>
+          <ul>
+            <li>Get output value.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Output ( string ) : Output name.</li>
+            </ul>
+          </ul>
+          <h2>Train    </h2>
+          <h3>Expression:TrainErr </h3>
+          <ul>
+            <li>Get error result of training.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">       
+          <h2>Conditions</h2>
+        </div>
+        <div class="panel-body">              
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

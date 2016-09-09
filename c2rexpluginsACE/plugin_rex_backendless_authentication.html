@@ -1,0 +1,280 @@
+<!DOCTYPE 5>
+<html>
+  <head>
+    <title>Plugin : Authentication</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="js/jquery-3.1.0.min.js">                         </script>
+    <script src="js/bootstrap.min.js">         </script>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header"><a class="navbar-brand" href="./index.html">Home</a></div>
+        <ul class="nav navbar-nav">
+          <li><a href="./pluginsIndex.html">Plugins      </a></li>
+          <li><a href="./behaviorsIndex.html">Behaviors                   </a></li>
+          <li><a href="./effectsIndex.html">Effects    </a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Plugin : Authentication</h1>
+      <p>Author:Rex.Rainbow</p>
+      <ul>
+        <li>Authentication which is provided by backendless. https://backendless.com/</li>
+      </ul>
+      <div class="panel panel-default">
+        <div class="panel-title">
+          <h2>Properties</h2>
+        </div>
+        <div class="panel-body">
+          <h3>Identity</h3>
+          <ul>
+            <li>Property name of identity.                    </li>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">   
+          <h2>Actions</h2>
+        </div>
+        <div class="panel-body">
+          <h2>Authentication provider      </h2>
+          <h3>Action:Login by facebook      </h3>
+          <ul>
+            <li>Login by facebook.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>scope ( string ) : A comma-delimited list of requested extended permissions</li>
+            </ul>
+          </ul>
+          <h3>Action:Login by facebook SDK      </h3>
+          <ul>
+            <li>Login by facebook SDK.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Action:Login by twitter      </h3>
+          <ul>
+            <li>Login by twitter.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>General      </h2>
+          <h3>Action:Logging out      </h3>
+          <ul>
+            <li>Logging out current account.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>User data      </h2>
+          <h3>Action:Set value      </h3>
+          <ul>
+            <li>Set value into current item.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Key ( string ) : The name of the key.</li>
+              <li>Value ( number or string ) : The value to set, could be number or string.</li>
+            </ul>
+          </ul>
+          <h3>Action:Set boolean value      </h3>
+          <ul>
+            <li>Set boolean value into current item.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Key ( string ) : The name of the key.</li>
+              <li>Boolean ( Combo ) : Boolean value.</li>
+              <ul>
+                <li>Options : [&quot;False&quot;,&quot;True&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h3>Action:Update      </h3>
+          <ul>
+            <li>Update user data.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>UserID &amp; Password      </h2>
+          <h3>Action:Create account      </h3>
+          <ul>
+            <li>Create account with UserID &amp; password.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>UserID ( string ) : UserID.</li>
+              <li>Password ( string ) : User password</li>
+            </ul>
+          </ul>
+          <h3>Action:Login      </h3>
+          <ul>
+            <li>Login with UserID &amp; password.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>UserID ( string ) : UserID.</li>
+              <li>Password ( string ) : User password.</li>
+              <li>Stay logged-in ( Combo ) : Stay logged-in.</li>
+              <ul>
+                <li>Options : [&quot;No&quot;,&quot;Yes&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h3>Action:Sending password reset email      </h3>
+          <ul>
+            <li>Sending password reset email   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Email ( string ) : Email</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">    
+        <div class="panel-title">    
+          <h2>Expressions</h2>
+        </div>
+        <div class="panel-body">           
+          <h2>Error    </h2>
+          <h3>Expression:ErrorCode </h3>
+          <ul>
+            <li>Error code.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:ErrorMessage </h3>
+          <ul>
+            <li>Error message.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>General auth data    </h2>
+          <h3>Expression:UserID </h3>
+          <ul>
+            <li>ObjectId of current user.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:Email </h3>
+          <ul>
+            <li>The user's primary email address as listed on their profile. Returned only if a valid email address is available, and the email permission was granted by the user. </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:UserName </h3>
+          <ul>
+            <li>The user's screen name, handle, or alias. Twitter screen names are unique, but subject to change. .</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>User data    </h2>
+          <h3>Expression:UserData </h3>
+          <ul>
+            <li>Get user data by key. Add 1st parameter for a specific key, add 2nd parameter for default value.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">       
+          <h2>Conditions</h2>
+        </div>
+        <div class="panel-body">              
+          <h2>General - logged out    </h2>
+          <h4>Condition:On logged out                    </h4>
+          <ul>
+            <li>Triggered when logged out.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On logged out error                    </h4>
+          <ul>
+            <li>Triggered when logged out error.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>General - login    </h2>
+          <h4>Condition:On login                    </h4>
+          <ul>
+            <li>Triggered when login success.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On login error                    </h4>
+          <ul>
+            <li>Triggered when login error.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:Is login                    </h4>
+          <ul>
+            <li>Return true if logging now.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>User data    </h2>
+          <h4>Condition:On updating user data                    </h4>
+          <ul>
+            <li>Triggered when updating user data success.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On updating user data error                    </h4>
+          <ul>
+            <li>Triggered when updating user data error.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>UserID &amp; Password - create account    </h2>
+          <h4>Condition:On creating account                    </h4>
+          <ul>
+            <li>Triggered when creating account success.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On creating account error                    </h4>
+          <ul>
+            <li>Triggered when creating account error.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>UserID &amp; Password - sending password result email    </h2>
+          <h4>Condition:On sending password result email                    </h4>
+          <ul>
+            <li>Triggered when sending password result email success.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On sending password result email error                    </h4>
+          <ul>
+            <li>Triggered when sending password result email error.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

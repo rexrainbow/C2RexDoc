@@ -1,0 +1,604 @@
+<!DOCTYPE 5>
+<html>
+  <head>
+    <title>Plugin : Tags</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="js/jquery-3.1.0.min.js">                         </script>
+    <script src="js/bootstrap.min.js">         </script>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header"><a class="navbar-brand" href="./index.html">Home</a></div>
+        <ul class="nav navbar-nav">
+          <li><a href="./pluginsIndex.html">Plugins      </a></li>
+          <li><a href="./behaviorsIndex.html">Behaviors                   </a></li>
+          <li><a href="./effectsIndex.html">Effects    </a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Plugin : Tags</h1>
+      <p>Author:Rex.Rainbow</p>
+      <ul>
+        <li>Paste tags on objects.</li>
+      </ul>
+      <div class="panel panel-default">
+        <div class="panel-title">
+          <h2>Properties</h2>
+        </div>
+        <div class="panel-body">
+          <h3>Class name</h3>
+          <ul>
+            <li>Class name of this tags system.                    </li>
+          </ul>
+          <h3>Lines</h3>
+          <ul>
+            <li>Line count of each page.                    </li>
+          </ul>
+          <h3>Owner class name</h3>
+          <ul>
+            <li>Class name of owner. &quot;&quot; would ignore this feature.                    </li>
+          </ul>
+          <h3>Target class name</h3>
+          <ul>
+            <li>Class name of target. &quot;&quot; would ignore this feature.                    </li>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">   
+          <h2>Actions</h2>
+        </div>
+        <div class="panel-body">
+          <h2>Filter - 1. new      </h2>
+          <h3>Action:New      </h3>
+          <ul>
+            <li>Create a new tag filter.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Filter - 2. ownerID      </h2>
+          <h3>Action:All owners      </h3>
+          <ul>
+            <li>Add all owners into filter.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Action:Add owner      </h3>
+          <ul>
+            <li>Add an owner into filter.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Owner ID ( string ) : Owner ID.</li>
+            </ul>
+          </ul>
+          <h2>Filter - 3. targetID      </h2>
+          <h3>Action:All targets      </h3>
+          <ul>
+            <li>Add all targets into filter.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Action:Add target      </h3>
+          <ul>
+            <li>Add a target into filter.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Target ID ( string ) : Target ID.</li>
+            </ul>
+          </ul>
+          <h2>Filter - 4. user tag      </h2>
+          <h3>Action:All user tags      </h3>
+          <ul>
+            <li>Add all user tags into filter.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Action:Add user tag      </h3>
+          <ul>
+            <li>Add a user tag into filter.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>User tag ( string ) : Target ID.</li>
+            </ul>
+          </ul>
+          <h2>Filter - 5. category      </h2>
+          <h3>Action:All categoies      </h3>
+          <ul>
+            <li>Add all categoies into filter.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Action:Add category      </h3>
+          <ul>
+            <li>Add a category into filter.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Category ( string ) : Category.</li>
+            </ul>
+          </ul>
+          <h2>Initial      </h2>
+          <h3>Action:Initial table      </h3>
+          <ul>
+            <li>Initial table.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Load      </h2>
+          <h3>Action:Request in a range      </h3>
+          <ul>
+            <li>Request tags in a range.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Start ( number ) : Start index, 0-based.</li>
+              <li>Lines ( number ) : Count of lines</li>
+              <li>Object ( Combo ) : Get owner and target object.</li>
+              <ul>
+                <li>Options : [&quot;without&quot;,&quot;with&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h3>Action:Request to page      </h3>
+          <ul>
+            <li>Request tags at page.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Index ( number ) : Page index, 0-based.</li>
+            </ul>
+          </ul>
+          <h3>Action:Request current page      </h3>
+          <ul>
+            <li>Request tags at current page.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Action:Request next page      </h3>
+          <ul>
+            <li>Request tags at next page.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Action:Request previous page      </h3>
+          <ul>
+            <li>Request tags at previous page.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Load - tags list      </h2>
+          <h3>Action:Request tags list      </h3>
+          <ul>
+            <li>Request tags list.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Paste      </h2>
+          <h3>Action:Paste tag      </h3>
+          <ul>
+            <li>Paste tag on an object.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>OwnerID ( string ) : Object ID of owner.</li>
+              <li>TargetID ( string ) : Object ID of tagged target.</li>
+              <li>User tag ( string ) : User tag.</li>
+              <li>Category ( string ) : Category.</li>
+              <li>Description ( string ) : (Optional) Description of this tag. Input &quot;&quot; to ignore this field</li>
+            </ul>
+          </ul>
+          <h2>Queried tags count      </h2>
+          <h3>Action:Get tags count      </h3>
+          <ul>
+            <li>Get queried tags count. Maximum of 160 requests per minute.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Remove      </h2>
+          <h3>Action:Remove queried tags      </h3>
+          <ul>
+            <li>Remove queried tags.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Reset targetID of an user tag      </h2>
+          <h3>Action:Add targetID      </h3>
+          <ul>
+            <li>Add targetID.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>TargetID ( string ) : TargetID.</li>
+              <li>Description ( string ) : (Optional) Description of this tag. Input &quot;&quot; to ignore this field</li>
+            </ul>
+          </ul>
+          <h3>Action:Reset targets      </h3>
+          <ul>
+            <li>Reset targetID of a user tag.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>OwnerID ( string ) : Object ID of owner.</li>
+              <li>User tag ( string ) : User tag.</li>
+              <li>Category ( string ) : Category.</li>
+            </ul>
+          </ul>
+          <h2>Reset user tags of a target      </h2>
+          <h3>Action:Add user tag      </h3>
+          <ul>
+            <li>Add user tag.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>User tag ( string ) : User tag.</li>
+              <li>Description ( string ) : (Optional) Description of this tag. Input &quot;&quot; to ignore this field</li>
+            </ul>
+          </ul>
+          <h3>Action:Reset user tags      </h3>
+          <ul>
+            <li>Reset user tags of a target.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>OwnerID ( string ) : Object ID of owner.</li>
+              <li>TargetID ( string ) : Object ID of tagged target.</li>
+              <li>Category ( string ) : Category.</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">    
+        <div class="panel-title">    
+          <h2>Expressions</h2>
+        </div>
+        <div class="panel-body">           
+          <h2>Error    </h2>
+          <h3>Expression:ErrorCode </h3>
+          <ul>
+            <li>Error code.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:ErrorMessage </h3>
+          <ul>
+            <li>Error message.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Load    </h2>
+          <h3>Expression:TagsToJSON </h3>
+          <ul>
+            <li>Get all read tags in JSON string.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Load - for each    </h2>
+          <h3>Expression:CurOwnerID </h3>
+          <ul>
+            <li>Get the current ownerID in a For Each loop.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:CurTargetID </h3>
+          <ul>
+            <li>Get the current targetID in a For Each loop.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:CurUserTag </h3>
+          <ul>
+            <li>Get the current user tag in a For Each loop.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:CurCategory </h3>
+          <ul>
+            <li>Get the current category in a For Each loop.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:CurDescription </h3>
+          <ul>
+            <li>Get the current description in a For Each loop.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:CurTagID </h3>
+          <ul>
+            <li>Get the current tagID in &quot;Condition: For each tag&quot; or &quot;Condition: For each kind of tag&quot;.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:CurOwnerObject </h3>
+          <ul>
+            <li>Get the current owner object in JSON string in a For Each loop. Add 1st parameter to get value at the specific key. Add 2nd parameter for default value if this key is not existed.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:CurTargetObject </h3>
+          <ul>
+            <li>Get the current target object in JSON string in a For Each loop. Add 1st parameter to get value at the specific key. Add 2nd parameter for default value if this key is not existed.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:CurTagCount </h3>
+          <ul>
+            <li>Get tag count in current received page.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Load - for each - index    </h2>
+          <h3>Expression:CurTagIndex </h3>
+          <ul>
+            <li>Get the current tag index in a For Each loop.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:CurStartIndex </h3>
+          <ul>
+            <li>Get start index in current received page.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:LoopIndex </h3>
+          <ul>
+            <li>Get loop index in current received page.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Paste    </h2>
+          <h3>Expression:LastPastedOwnerID </h3>
+          <ul>
+            <li>Get last pasted ownerID under &quot;Condition:On paste complete&quot;.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:LastPastedTargetID </h3>
+          <ul>
+            <li>Get last pasted targetID under &quot;Condition:On paste complete&quot;.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:LastPastedTagID </h3>
+          <ul>
+            <li>Get last pasted tagID under &quot;Condition:On paste complete&quot;.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:LastPastedUserTag </h3>
+          <ul>
+            <li>Get last pasted user tag under &quot;Condition:On paste complete&quot;.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:LastPastedCategory </h3>
+          <ul>
+            <li>Get last pasted category under &quot;Condition:On paste complete&quot;.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:LastPastedDescription </h3>
+          <ul>
+            <li>Get last pasted description under &quot;Condition:On paste complete&quot;.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Queried tags count    </h2>
+          <h3>Expression:LastTagsCount </h3>
+          <ul>
+            <li>Get last queried tags count under &quot;Condition: On get tags count complete&quot;.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Tags list    </h2>
+          <h3>Expression:TLTagNameCount </h3>
+          <ul>
+            <li>Get tags count in tags list.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:TLTotalTagsCount </h3>
+          <ul>
+            <li>Get total tags count in tags list.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:TLToJSON </h3>
+          <ul>
+            <li>Get tags List in JSON string.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Tags list - for each    </h2>
+          <h3>Expression:TLCurTagName </h3>
+          <ul>
+            <li>Get the current user tag under &quot;Condition: For each kind of tag&quot;.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:TLCurTagsCount </h3>
+          <ul>
+            <li>Get the current tags count under &quot;Condition: For each kind of tag&quot;.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">       
+          <h2>Conditions</h2>
+        </div>
+        <div class="panel-body">              
+          <h2>Load    </h2>
+          <h4>Condition:On received                    </h4>
+          <ul>
+            <li>Triggered when received tags.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On received error                    </h4>
+          <ul>
+            <li>Triggered when received tags error.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Load - for each    </h2>
+          <h4>Condition:For each tag                    </h4>
+          <ul>
+            <li>Repeat the event for each tag.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:For each tag in a range                    </h4>
+          <ul>
+            <li>Repeat the event for each tag in a range.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Start ( number ) : Start from message index (0-based).    </li>
+              <li>End ( number ) : End to message index (0-based). This value should larger than Start.    </li>
+            </ul>
+          </ul>
+          <h2>Paste    </h2>
+          <h4>Condition:On paste complete                    </h4>
+          <ul>
+            <li>Triggered when paste complete.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On paste error                    </h4>
+          <ul>
+            <li>Triggered when paste error.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Queried tags count    </h2>
+          <h4>Condition:On get tags count complete                    </h4>
+          <ul>
+            <li>Triggered when get tags count.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On get tags count error                    </h4>
+          <ul>
+            <li>Triggered when get tags count error.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Remove queried tags    </h2>
+          <h4>Condition:On remove queried tags complete                    </h4>
+          <ul>
+            <li>Triggered when remove complete.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On remove queried tags error                    </h4>
+          <ul>
+            <li>Triggered when remove error.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Reset targets of an user tag    </h2>
+          <h4>Condition:On reset targets complete                    </h4>
+          <ul>
+            <li>Triggered when reset targets complete.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On reset targets error                    </h4>
+          <ul>
+            <li>Triggered when reset targets error.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Reset user tags of a target    </h2>
+          <h4>Condition:On reset tags complete                    </h4>
+          <ul>
+            <li>Triggered when reset tags complete.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On reset tags error                    </h4>
+          <ul>
+            <li>Triggered when reset tags error.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Tags list    </h2>
+          <h4>Condition:On get tags list                    </h4>
+          <ul>
+            <li>Triggered when get tags list count.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On get tags list error                    </h4>
+          <ul>
+            <li>Triggered when get tags list error.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:For each kind of tag                    </h4>
+          <ul>
+            <li>Repeat the event for each kind of tag in tags list.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Order ( Combo ) : Sort by name or count.    </li>
+              <ul>
+                <li>Options : [&quot;Tag count in ascending order&quot;,&quot;Tag count in descending order&quot;,&quot;Tag name in ascending order&quot;,&quot;Tag name in descending order&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

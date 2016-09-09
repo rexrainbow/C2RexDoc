@@ -1,0 +1,279 @@
+<!DOCTYPE 5>
+<html>
+  <head>
+    <title>Plugin : Storage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="js/jquery-3.1.0.min.js">                         </script>
+    <script src="js/bootstrap.min.js">         </script>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header"><a class="navbar-brand" href="./index.html">Home</a></div>
+        <ul class="nav navbar-nav">
+          <li><a href="./pluginsIndex.html">Plugins      </a></li>
+          <li><a href="./behaviorsIndex.html">Behaviors                   </a></li>
+          <li><a href="./effectsIndex.html">Effects    </a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Plugin : Storage</h1>
+      <p>Author:Rex.Rainbow</p>
+      <ul>
+        <li>File storage in firebase serivice (v3.x only).</li>
+      </ul>
+      <div class="panel panel-default">
+        <div class="panel-title">
+          <h2>Properties</h2>
+        </div>
+        <div class="panel-body">
+          <h3>Sub domain</h3>
+          <ul>
+            <li>Sub domain for this function.                    </li>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">   
+          <h2>Actions</h2>
+        </div>
+        <div class="panel-body">
+          <h2>Delete      </h2>
+          <h3>Action:Detete      </h3>
+          <ul>
+            <li>Delete file at url of a firebase storage reference.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>DataRef ( string ) : The Firebase storage ref URL</li>
+            </ul>
+          </ul>
+          <h2>Domain      </h2>
+          <h3>Action:Set sub domain      </h3>
+          <ul>
+            <li>Set Sub domain ref.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Sub domain ( string ) : The Firebase data ref URL</li>
+            </ul>
+          </ul>
+          <h2>Download      </h2>
+          <h3>Action:Get download url      </h3>
+          <ul>
+            <li>Get download url of a firebase storage reference.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>DataRef ( string ) : The Firebase storage ref URL</li>
+            </ul>
+          </ul>
+          <h2>Upload      </h2>
+          <h3>Action:Upload from file chooser      </h3>
+          <ul>
+            <li>Upload file from file chooser to firebase storage.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>File chooser ( object ) : File chooser object.</li>
+              <li>DataRef ( string ) : The Firebase storage ref URL</li>
+            </ul>
+          </ul>
+          <h3>Action:Upload from sprite      </h3>
+          <ul>
+            <li>Upload image from sprite or canvas to firebase storage.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Sprite ( object ) : Sprite or canvas object.</li>
+              <li>DataRef ( string ) : The Firebase storage ref URL</li>
+            </ul>
+          </ul>
+          <h3>Action:Upload data URL      </h3>
+          <ul>
+            <li>Upload from data URI to firebase storage.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Data URI ( string ) : Data URI of file</li>
+              <li>DataRef ( string ) : The Firebase storage ref URL</li>
+            </ul>
+          </ul>
+          <h3>Action:Upload string      </h3>
+          <ul>
+            <li>Upload string to firebase storage.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Content ( string ) : String content</li>
+              <li>DataRef ( string ) : The Firebase storage ref URL</li>
+            </ul>
+          </ul>
+          <h2>Upload task      </h2>
+          <h3>Action:Cancel      </h3>
+          <ul>
+            <li>Cancel current uploading.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Action:Pause      </h3>
+          <ul>
+            <li>Pause current uploading.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Action:Resume      </h3>
+          <ul>
+            <li>Resume current uploading.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">    
+        <div class="panel-title">    
+          <h2>Expressions</h2>
+        </div>
+        <div class="panel-body">           
+          <h2>Error    </h2>
+          <h3>Expression:LastErrorCode </h3>
+          <ul>
+            <li>Error code.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:LastErrorMessage </h3>
+          <ul>
+            <li>Error message (error.serverResponse) .</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Upload    </h2>
+          <h3>Expression:LastDownloadURL </h3>
+          <ul>
+            <li>Get download URL of last upload file.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:Progress </h3>
+          <ul>
+            <li>Get the progress, from 0 to 1, of the request in 'On upload progress'.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:TransferredBytes </h3>
+          <ul>
+            <li>Get transferred bytes, of the request in 'On upload progress'.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:TotalBytes </h3>
+          <ul>
+            <li>Get total bytes, of the request in 'On upload progress'.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">       
+          <h2>Conditions</h2>
+        </div>
+        <div class="panel-body">              
+          <h2>Delete    </h2>
+          <h4>Condition:On deleted                    </h4>
+          <ul>
+            <li>Triggered when delete completed.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On deleted error                    </h4>
+          <ul>
+            <li>Triggered when delete error.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Download    </h2>
+          <h4>Condition:On get download URL                    </h4>
+          <ul>
+            <li>Triggered when get download URL success.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On get download URL error                    </h4>
+          <ul>
+            <li>Triggered when get download URL error.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:File doesn't exist                    </h4>
+          <ul>
+            <li>Return true if file doesn't exist.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Upload    </h2>
+          <h4>Condition:On upload complete                    </h4>
+          <ul>
+            <li>Triggered when uploading completed.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On upload error                    </h4>
+          <ul>
+            <li>Triggered when uploading error.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On canceled                    </h4>
+          <ul>
+            <li>Triggered when uploading canceled.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On paused                    </h4>
+          <ul>
+            <li>Triggered when uploading paused.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On uploading                    </h4>
+          <ul>
+            <li>Triggered when uploading.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:Is uploading                    </h4>
+          <ul>
+            <li>Return true if uploading.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On upload progress                    </h4>
+          <ul>
+            <li>Triggered when uploading progress.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

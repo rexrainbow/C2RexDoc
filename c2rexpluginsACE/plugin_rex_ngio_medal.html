@@ -1,0 +1,322 @@
+<!DOCTYPE 5>
+<html>
+  <head>
+    <title>Plugin : Medal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="js/jquery-3.1.0.min.js">                         </script>
+    <script src="js/bootstrap.min.js">         </script>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header"><a class="navbar-brand" href="./index.html">Home</a></div>
+        <ul class="nav navbar-nav">
+          <li><a href="./pluginsIndex.html">Plugins      </a></li>
+          <li><a href="./behaviorsIndex.html">Behaviors                   </a></li>
+          <li><a href="./effectsIndex.html">Effects    </a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Plugin : Medal</h1>
+      <p>Author:Rex.Rainbow</p>
+      <ul>
+        <li>Handles loading and unlocking of medals.</li>
+      </ul>
+      <div class="panel panel-default">
+        <div class="panel-title">
+          <h2>Properties</h2>
+        </div>
+        <div class="panel-body">
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">   
+          <h2>Actions</h2>
+        </div>
+        <div class="panel-body">
+          <h2>Medal      </h2>
+          <h3>Action:Get list      </h3>
+          <ul>
+            <li>Loads a list of medal objects.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Action:Unlock      </h3>
+          <ul>
+            <li>Unlock medal.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>ID ( number ) : The numeric ID of the medal to unlock.</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">    
+        <div class="panel-title">    
+          <h2>Expressions</h2>
+        </div>
+        <div class="panel-body">           
+          <h2>For each - index    </h2>
+          <h3>Expression:LoopIndex </h3>
+          <ul>
+            <li>Get loop index in for each loop.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Get list    </h2>
+          <h3>Expression:MedalsAsJSON </h3>
+          <ul>
+            <li>Get received medals as JSON.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Get list - for each    </h2>
+          <h3>Expression:CurMedalDescription </h3>
+          <ul>
+            <li>A short description of the medal in a For Each loop.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:CurMedalDifficulty </h3>
+          <ul>
+            <li>The difficulty id of the medal in a For Each loop.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:CurMedalIcon </h3>
+          <ul>
+            <li>The URL for the medal's icon in a For Each loop.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:CurMedalID </h3>
+          <ul>
+            <li>The numeric ID of the medal in a For Each loop.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:CurMedalName </h3>
+          <ul>
+            <li>The name of the medal in a For Each loop.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:CurMedalValue </h3>
+          <ul>
+            <li>The medal's point value in a For Each loop.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:CurMedalIsSecret </h3>
+          <ul>
+            <li>Get 1 if current medal is secret in a For Each loop.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:CurMedalIsUnlocked </h3>
+          <ul>
+            <li>Get 1 if current medal is unlocked in a For Each loop.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Get list - index    </h2>
+          <h3>Expression:Index2MedalDescription </h3>
+          <ul>
+            <li>A short description of the medal by index.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Index ( number ) : Medal line index, 0-based.</li>
+            </ul>
+          </ul>
+          <h3>Expression:Index2MedalDifficulty </h3>
+          <ul>
+            <li>The difficulty id of the medal by index.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Index ( number ) : Medal index, 0-based.</li>
+            </ul>
+          </ul>
+          <h3>Expression:Index2MedalIcon </h3>
+          <ul>
+            <li>The URL for the medal's icon by index.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Index ( number ) : Medal index, 0-based.</li>
+            </ul>
+          </ul>
+          <h3>Expression:Index2MedalID </h3>
+          <ul>
+            <li>The numeric ID of the medal by index.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Index ( number ) : Medal index, 0-based.</li>
+            </ul>
+          </ul>
+          <h3>Expression:Index2MedalName </h3>
+          <ul>
+            <li>The name of the medal by index.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Index ( number ) : Medal index, 0-based.</li>
+            </ul>
+          </ul>
+          <h3>Expression:Index2MedalValue </h3>
+          <ul>
+            <li>The medal's point value by index.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Index ( number ) : Medal index, 0-based.</li>
+            </ul>
+          </ul>
+          <h3>Expression:Index2MedalIsSecret </h3>
+          <ul>
+            <li>Get 1 if current medal is secret by index.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Index ( number ) : Medal index, 0-based.</li>
+            </ul>
+          </ul>
+          <h3>Expression:Index2MedalIsUnlocked </h3>
+          <ul>
+            <li>Get 1 if current medal is unlocked by index.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Index ( number ) : Medal index, 0-based.</li>
+            </ul>
+          </ul>
+          <h2>Result    </h2>
+          <h3>Expression:ErrorMessage </h3>
+          <ul>
+            <li>Get last error message from last result.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Unlock    </h2>
+          <h3>Expression:LastUnlockedMedalID </h3>
+          <ul>
+            <li>Get last unlocked medal ID.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">       
+          <h2>Conditions</h2>
+        </div>
+        <div class="panel-body">              
+          <h2>Get list    </h2>
+          <h4>Condition:On get medals list                    </h4>
+          <ul>
+            <li>Triggered when get medals list success.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On get medals list error                    </h4>
+          <ul>
+            <li>Triggered when get medals list error.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Get list - for each    </h2>
+          <h4>Condition:For each medal                    </h4>
+          <ul>
+            <li>Repeat the event for each medal.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:Is secret                    </h4>
+          <ul>
+            <li>Return true if current medal is secret in a For Each loop.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:Is unlocked                    </h4>
+          <ul>
+            <li>Return true if current medal is unlocked in a For Each loop.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:Compare difficulty                    </h4>
+          <ul>
+            <li>Compare difficulty of current medal in a For Each loop.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Comparison ( cmp ) : Choose the way to compare difficulty.    </li>
+              <li>Difficulty types ( Combo ) : Difficulty types.    </li>
+              <ul>
+                <li>Options : [&quot;Easy&quot;,&quot;Moderate&quot;,&quot;Challenging&quot;,&quot;Difficult&quot;,&quot;Brutal&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h2>Get list - index    </h2>
+          <h4>Condition:Is secret                    </h4>
+          <ul>
+            <li>Return true if medal is secret by index.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Index ( number ) : Local line index, 0-based.    </li>
+            </ul>
+          </ul>
+          <h4>Condition:Is unlocked                    </h4>
+          <ul>
+            <li>Return true if current medal is unlocked by index.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Index ( number ) : Local line index, 0-based.    </li>
+            </ul>
+          </ul>
+          <h4>Condition:Compare difficulty                    </h4>
+          <ul>
+            <li>Compare difficulty of medal by index.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Index ( number ) : Local line index, 0-based.    </li>
+              <li>Comparison ( cmp ) : Choose the way to compare difficulty.    </li>
+              <li>Difficulty types ( Combo ) : Difficulty types.    </li>
+              <ul>
+                <li>Options : [&quot;Easy&quot;,&quot;Moderate&quot;,&quot;Challenging&quot;,&quot;Difficult&quot;,&quot;Brutal&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h2>Unlock    </h2>
+          <h4>Condition:On unlock medal                    </h4>
+          <ul>
+            <li>Triggered when unlock medal success.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On unlock medal error                    </h4>
+          <ul>
+            <li>Triggered when unlock medal error.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

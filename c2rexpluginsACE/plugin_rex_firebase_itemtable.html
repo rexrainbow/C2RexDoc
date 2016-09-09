@@ -1,0 +1,359 @@
+<!DOCTYPE 5>
+<html>
+  <head>
+    <title>Plugin : Item table</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="js/jquery-3.1.0.min.js">                         </script>
+    <script src="js/bootstrap.min.js">         </script>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header"><a class="navbar-brand" href="./index.html">Home</a></div>
+        <ul class="nav navbar-nav">
+          <li><a href="./pluginsIndex.html">Plugins      </a></li>
+          <li><a href="./behaviorsIndex.html">Behaviors                   </a></li>
+          <li><a href="./effectsIndex.html">Effects    </a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Plugin : Item table</h1>
+      <p>Author:Rex.Rainbow</p>
+      <ul>
+        <li>Items table indexed by (itemID, key), supports writing a item or reading items back.</li>
+      </ul>
+      <div class="panel panel-default">
+        <div class="panel-title">
+          <h2>Properties</h2>
+        </div>
+        <div class="panel-body">
+          <h3>Domain</h3>
+          <ul>
+            <li>The root location of the Firebase data.                    </li>
+          </ul>
+          <h3>Sub domain</h3>
+          <ul>
+            <li>Sub domain for this function.                    </li>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">   
+          <h2>Actions</h2>
+        </div>
+        <div class="panel-body">
+          <h2>Domain      </h2>
+          <h3>Action:Set domain      </h3>
+          <ul>
+            <li>Set domain ref.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Domain ( string ) : The root location of the Firebase data.</li>
+              <li>Sub domain ( string ) : Sub domain for this function.</li>
+            </ul>
+          </ul>
+          <h2>ItemID      </h2>
+          <h3>Action:Generate      </h3>
+          <ul>
+            <li>Generate a new itemID. Get it by &quot;Expression:LastGeneratedKey&quot;. Or use &quot;Expression:GenerateKey&quot; directly.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Load      </h2>
+          <h3>Action:Add itemID      </h3>
+          <ul>
+            <li>Add load-request itemID.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>ID ( string ) : ID of item.</li>
+            </ul>
+          </ul>
+          <h3>Action:Load      </h3>
+          <ul>
+            <li>Load items.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Tag ( string ) : A tag, to distinguish between different save requests.</li>
+            </ul>
+          </ul>
+          <h3>Action:Load all      </h3>
+          <ul>
+            <li>Load all items.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Tag ( string ) : A tag, to distinguish between different save requests.</li>
+            </ul>
+          </ul>
+          <h2>On disconnected      </h2>
+          <h3>Action:Cancel disconnected handler      </h3>
+          <ul>
+            <li>Cancel all disconnected handlers.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Action:Auto remove      </h3>
+          <ul>
+            <li>Auto remov item when disconnected.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>ID ( string ) : ID of item.</li>
+            </ul>
+          </ul>
+          <h2>Prepare      </h2>
+          <h3>Action:Set value      </h3>
+          <ul>
+            <li>Set value into current item.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Key ( number or string ) : The name of the key.</li>
+              <li>Value ( number or string ) : The value to set, could be number or (JSON) string.</li>
+            </ul>
+          </ul>
+          <h3>Action:Set boolean value      </h3>
+          <ul>
+            <li>Set boolean value into current item.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Key ( number or string ) : The name of the key.</li>
+              <li>Boolean ( Combo ) : Boolean value.</li>
+              <ul>
+                <li>Options : [&quot;False&quot;,&quot;True&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h3>Action:Remove key      </h3>
+          <ul>
+            <li>Remove key in firebase server.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Key ( number or string ) : The name of the key.</li>
+            </ul>
+          </ul>
+          <h3>Action:Set to timestamp      </h3>
+          <ul>
+            <li>Set server timestamp value into current item.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Key ( number or string ) : The name of the key.</li>
+            </ul>
+          </ul>
+          <h2>Prepare - position      </h2>
+          <h3>Action:Set to position      </h3>
+          <ul>
+            <li>Set position value into current item.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>X ( number ) : The X position.</li>
+              <li>Y ( number ) : The Y position.</li>
+            </ul>
+          </ul>
+          <h2>Remove      </h2>
+          <h3>Action:Remove      </h3>
+          <ul>
+            <li>Remove item from server.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>ID ( string ) : ID of item.</li>
+              <li>Tag ( string ) : A tag, to distinguish between different save requests.</li>
+            </ul>
+          </ul>
+          <h3>Action:Remove all      </h3>
+          <ul>
+            <li>Remove all items.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Save      </h2>
+          <h3>Action:Save      </h3>
+          <ul>
+            <li>Save current item into server. Push item if ID is equal to &quot;&quot;.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>ID ( string ) : ID of item.</li>
+              <li>Set mode ( Combo ) : Update, or clean then set item values</li>
+              <ul>
+                <li>Options : [&quot;Update&quot;,&quot;Set&quot;]</li>
+              </ul>
+              <li>Tag ( string ) : A tag, to distinguish between different save requests.</li>
+            </ul>
+          </ul>
+          <h3>Action:Push      </h3>
+          <ul>
+            <li>Push current item into server. Get itemID by &quot;expression:LastItemID&quot;.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Tag ( string ) : A tag, to distinguish between different save requests.</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">    
+        <div class="panel-title">    
+          <h2>Expressions</h2>
+        </div>
+        <div class="panel-body">           
+          <h2>For Each    </h2>
+          <h3>Expression:CurItemID </h3>
+          <ul>
+            <li>Get current itemID in a For Each loop, in last load result. Or in save/remove callback.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:CurKey </h3>
+          <ul>
+            <li>Get current key in a For Each loop, in last load result.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:CurValue </h3>
+          <ul>
+            <li>Get current value in a For Each loop, in last load result.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:CurItemContent </h3>
+          <ul>
+            <li>Get current content in JSON stringin in a For Each loop, in last load result. Add 2nd parameter for specific key, 3rd parameter for default value if this key is not existed.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>ItemID    </h2>
+          <h3>Expression:LastItemID </h3>
+          <ul>
+            <li>Get last itemID.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:GenerateKey </h3>
+          <ul>
+            <li>Generate new key from push action.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:LastGeneratedKey </h3>
+          <ul>
+            <li>Get last generate a key from push action.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Load item    </h2>
+          <h3>Expression:ItemsCount </h3>
+          <ul>
+            <li>Get loaded items count.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Load items    </h2>
+          <h3>Expression:LoadResultToJSON </h3>
+          <ul>
+            <li>Get load reslt in JSON string.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Reference    </h2>
+          <h3>Expression:Ref </h3>
+          <ul>
+            <li>Get renerence in table, optional parameters are (itemID, key).</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Table    </h2>
+          <h3>Expression:At </h3>
+          <ul>
+            <li>Get value by itemId and key in last load result. Add 3rd parameter for default value if this key is not existed.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>ID ( string ) : ID of item.</li>
+              <li>Key ( number or string ) : The name of the key.</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">       
+          <h2>Conditions</h2>
+        </div>
+        <div class="panel-body">              
+          <h2>Load    </h2>
+          <h4>Condition:On load complete                    </h4>
+          <ul>
+            <li>Triggered when load current item complete.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Tag ( string ) : A tag, to distinguish between different save requests.    </li>
+            </ul>
+          </ul>
+          <h4>Condition:For each itemID                    </h4>
+          <ul>
+            <li>Repeat the event for each itemID of load result.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Order ( Combo ) : Order of itemID.    </li>
+              <ul>
+                <li>Options : [&quot;Small to large&quot;,&quot;Large to small&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h4>Condition:For each key                    </h4>
+          <ul>
+            <li>Repeat the event for each key of a item of load result.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>ID ( string ) : ID of item.    </li>
+            </ul>
+          </ul>
+          <h2>Remove    </h2>
+          <h4>Condition:On remove complete                    </h4>
+          <ul>
+            <li>Triggered when remove current item complete.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Tag ( string ) : A tag, to distinguish between different save requests.    </li>
+            </ul>
+          </ul>
+          <h4>Condition:On remove error                    </h4>
+          <ul>
+            <li>Triggered when remove current item error.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Tag ( string ) : A tag, to distinguish between different save requests.    </li>
+            </ul>
+          </ul>
+          <h2>Save    </h2>
+          <h4>Condition:On save complete                    </h4>
+          <ul>
+            <li>Triggered when save current item complete.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Tag ( string ) : A tag, to distinguish between different save requests.    </li>
+            </ul>
+          </ul>
+          <h4>Condition:On save error                    </h4>
+          <ul>
+            <li>Triggered when save current item error.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Tag ( string ) : A tag, to distinguish between different save requests.    </li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

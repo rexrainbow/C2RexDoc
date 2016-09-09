@@ -1,0 +1,589 @@
+<!DOCTYPE 5>
+<html>
+  <head>
+    <title>Plugin : Item book</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="js/jquery-3.1.0.min.js">                         </script>
+    <script src="js/bootstrap.min.js">         </script>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header"><a class="navbar-brand" href="./index.html">Home</a></div>
+        <ul class="nav navbar-nav">
+          <li><a href="./pluginsIndex.html">Plugins      </a></li>
+          <li><a href="./behaviorsIndex.html">Behaviors                   </a></li>
+          <li><a href="./effectsIndex.html">Effects    </a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Plugin : Item book</h1>
+      <p>Author:Rex.Rainbow</p>
+      <ul>
+        <li>Item tables to save and query items. Each value is indexed by (tableID, itemID, key).</li>
+      </ul>
+      <div class="panel panel-default">
+        <div class="panel-title">
+          <h2>Properties</h2>
+        </div>
+        <div class="panel-body">
+          <h3>Sub domain</h3>
+          <ul>
+            <li>Sub domain for this function.                    </li>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">   
+          <h2>Actions</h2>
+        </div>
+        <div class="panel-body">
+          <h2>Convert - Item list      </h2>
+          <h3>Action:Set key name      </h3>
+          <ul>
+            <li>Set key name of item list.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Table ( number or string ) : Key of table ID.</li>
+              <li>Item ( number or string ) : Key of item ID.</li>
+            </ul>
+          </ul>
+          <h2>Domain      </h2>
+          <h3>Action:Set sub domain      </h3>
+          <ul>
+            <li>Set sub domain ref.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Sub domain ( string ) : Sub domain for this function.</li>
+            </ul>
+          </ul>
+          <h2>Load      </h2>
+          <h3>Action:Clean result table      </h3>
+          <ul>
+            <li>Clean result table.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Table ( number or string ) : Table ID. Set to &quot;&quot; to clean all tables.</li>
+            </ul>
+          </ul>
+          <h2>Load - Signle query      </h2>
+          <h3>Action:Get items by &quot;In Range&quot;      </h3>
+          <ul>
+            <li>Get items by single condition-In Range with count limit in a table.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Table ( number or string ) : Table ID.</li>
+              <li>Key ( number or string ) : The name of the key.</li>
+              <li>Start ( number or string ) : Start value.</li>
+              <li>End ( number or string ) : End value.</li>
+              <li>Limit ( Combo ) : Limit types.</li>
+              <ul>
+                <li>Options : [&quot;Limit to first&quot;,&quot;Limit to last&quot;]</li>
+              </ul>
+              <li>Count ( number ) : Limit count. Set to (-1) to pick all queried items.</li>
+              <li>Tag ( string ) : A tag, to distinguish between different requests.</li>
+            </ul>
+          </ul>
+          <h3>Action:Get items by comparison      </h3>
+          <ul>
+            <li>Get items by single condition with count limit in a table.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Table ( number or string ) : Table ID.</li>
+              <li>Key ( number or string ) : The name of the key.</li>
+              <li>Comparison ( Combo ) : Comparison types.</li>
+              <ul>
+                <li>Options : [&quot;Equal to&quot;,&quot;Greater than or Equal to&quot;,&quot;Less than or Equal to&quot;]</li>
+              </ul>
+              <li>Value ( number or string ) : Compared value.</li>
+              <li>Limit ( Combo ) : Limit types.</li>
+              <ul>
+                <li>Options : [&quot;Limit to first&quot;,&quot;Limit to last&quot;]</li>
+              </ul>
+              <li>Count ( number ) : Limit count. Set to (-1) to pick all queried items.</li>
+              <li>Tag ( string ) : A tag, to distinguish between different requests.</li>
+            </ul>
+          </ul>
+          <h2>Load - queue      </h2>
+          <h3>Action:Start new request queue      </h3>
+          <ul>
+            <li>Start new request queue.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Tag ( string ) : A tag, to distinguish between different requests.</li>
+            </ul>
+          </ul>
+          <h3>Action:Process request queue      </h3>
+          <ul>
+            <li>Process all requests in queue.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Load - table/item      </h2>
+          <h3>Action:Load item      </h3>
+          <ul>
+            <li>Load an item or a table, or all tables.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Table ( number or string ) : Table ID. Set to &quot;&quot; to load all tables.</li>
+              <li>Item ( number or string ) : Item ID. Set to &quot;&quot; to load all items in the table.</li>
+              <li>Tag ( string ) : A tag, to distinguish between different requests.</li>
+            </ul>
+          </ul>
+          <h2>On disconnected - Enumeration      </h2>
+          <h3>Action:Remove key      </h3>
+          <ul>
+            <li>Remove key on disconnected.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Table ( number or string ) : Table ID. Set to &quot;&quot; to remove all tables.</li>
+              <li>Item ( number or string ) : Item ID. Set to &quot;&quot; to remove all items in the table.</li>
+              <li>Key ( number or string ) : The name of the key. Set to &quot;&quot; to remove all keys in the item.</li>
+            </ul>
+          </ul>
+          <h3>Action:Set server timesetamp      </h3>
+          <ul>
+            <li>Set to server timestamp on disconnected.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Table ( number or string ) : Table ID.</li>
+              <li>Item ( number or string ) : Item ID.</li>
+              <li>Key ( number or string ) : The name of the key.</li>
+            </ul>
+          </ul>
+          <h3>Action:Set server timesetamp      </h3>
+          <ul>
+            <li>Set value on disconnected.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Table ( number or string ) : Table ID.</li>
+              <li>Item ( number or string ) : Item ID.</li>
+              <li>Key ( number or string ) : The name of the key.</li>
+              <li>Value ( number or string ) : The value to set, could be number or string.</li>
+            </ul>
+          </ul>
+          <h3>Action:Set boolean value      </h3>
+          <ul>
+            <li>Set boolean value on disconnected.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Table ( number or string ) : Table ID.</li>
+              <li>Item ( number or string ) : Item ID.</li>
+              <li>Key ( number or string ) : The name of the key.</li>
+              <li>Boolean ( Combo ) : Boolean value.</li>
+              <ul>
+                <li>Options : [&quot;false&quot;,&quot;true&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h3>Action:Set server timesetamp      </h3>
+          <ul>
+            <li>Set JSON value on disconnected.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Table ( number or string ) : Table ID.</li>
+              <li>Item ( number or string ) : Item ID.</li>
+              <li>Key ( number or string ) : The name of the key.</li>
+              <li>JSON ( string ) : The JSON value to set.</li>
+            </ul>
+          </ul>
+          <h3>Action:Cancel      </h3>
+          <ul>
+            <li>Cancel all handlers of disconnected.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Table ( number or string ) : Table ID. Set to &quot;&quot; to remove all tables.</li>
+              <li>Item ( number or string ) : Item ID. Set to &quot;&quot; to remove all items in the table.</li>
+              <li>Key ( number or string ) : The name of the key. Set to &quot;&quot; to remove all keys in the item.</li>
+            </ul>
+          </ul>
+          <h2>On disconnected - Tree      </h2>
+          <h3>Action:Remove key      </h3>
+          <ul>
+            <li>Remove key on disconnected.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Key ( number or string ) : The name of the key.</li>
+            </ul>
+          </ul>
+          <h3>Action:Set server timesetamp      </h3>
+          <ul>
+            <li>Set to server timestamp on disconnected.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Key ( number or string ) : The name of the key.</li>
+            </ul>
+          </ul>
+          <h3>Action:Set value      </h3>
+          <ul>
+            <li>Set value on disconnected.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Key ( number or string ) : The name of the key.</li>
+              <li>Value ( number or string ) : The value to set, could be number or string.</li>
+            </ul>
+          </ul>
+          <h3>Action:Set boolean value      </h3>
+          <ul>
+            <li>Set boolean value on disconnected.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Key ( number or string ) : The name of the key.</li>
+              <li>Boolean ( Combo ) : Boolean value.</li>
+              <ul>
+                <li>Options : [&quot;false&quot;,&quot;true&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h3>Action:Set JSON      </h3>
+          <ul>
+            <li>Set JSON value on disconnected.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Key ( number or string ) : The name of the key.</li>
+              <li>JSON ( string ) : The JSON value to set.</li>
+            </ul>
+          </ul>
+          <h3>Action:Cancel all handlers      </h3>
+          <ul>
+            <li>Cancel all handlers of disconnected.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Key ( number or string ) : The name of the key.</li>
+            </ul>
+          </ul>
+          <h2>Prepare - Enumeration      </h2>
+          <h3>Action:Set value      </h3>
+          <ul>
+            <li>Set number or string value.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Table ( number or string ) : Table ID.</li>
+              <li>Item ( number or string ) : Item ID.</li>
+              <li>Key ( number or string ) : The name of the key.</li>
+              <li>Value ( number or string ) : The value to set, could be number or string.</li>
+            </ul>
+          </ul>
+          <h3>Action:Set boolean value      </h3>
+          <ul>
+            <li>Set boolean value.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Table ( number or string ) : Table ID.</li>
+              <li>Item ( number or string ) : Item ID.</li>
+              <li>Key ( number or string ) : The name of the key.</li>
+              <li>Boolean ( Combo ) : Boolean value.</li>
+              <ul>
+                <li>Options : [&quot;false&quot;,&quot;true&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h3>Action:Remove      </h3>
+          <ul>
+            <li>Remove key or item or table.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Table ( number or string ) : Table ID. Set to &quot;&quot; to remove all tables.</li>
+              <li>Item ( number or string ) : Item ID. Set to &quot;&quot; to remove all items in the table.</li>
+              <li>Key ( number or string ) : The name of the key. Set to &quot;&quot; to remove all keys in the item.</li>
+            </ul>
+          </ul>
+          <h3>Action:Set server timesetamp      </h3>
+          <ul>
+            <li>Set to server timestamp.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Table ( number or string ) : Table ID.</li>
+              <li>Item ( number or string ) : Item ID.</li>
+              <li>Key ( number or string ) : The name of the key.</li>
+            </ul>
+          </ul>
+          <h3>Action:Set JSON      </h3>
+          <ul>
+            <li>Set JSON value.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Table ( number or string ) : Table ID.</li>
+              <li>Item ( number or string ) : Item ID.</li>
+              <li>Key ( number or string ) : The name of the key.</li>
+              <li>JSON ( string ) : The JSON value to set.</li>
+            </ul>
+          </ul>
+          <h2>Prepare - Tree      </h2>
+          <h3>Action:Set value      </h3>
+          <ul>
+            <li>Set number or string value.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Key ( number or string ) : The name of the key.</li>
+              <li>Value ( number or string ) : The value to set, could be number or string.</li>
+            </ul>
+          </ul>
+          <h3>Action:Set boolean value      </h3>
+          <ul>
+            <li>Set boolean value.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Key ( number or string ) : The name of the key.</li>
+              <li>Boolean ( Combo ) : Boolean value.</li>
+              <ul>
+                <li>Options : [&quot;false&quot;,&quot;true&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h3>Action:Remove key      </h3>
+          <ul>
+            <li>Remove key.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Key ( number or string ) : The name of the key.</li>
+            </ul>
+          </ul>
+          <h3>Action:Remove all      </h3>
+          <ul>
+            <li>Remove all keys or items.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Action:Set server timesetamp      </h3>
+          <ul>
+            <li>Set to server timestamp.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Key ( number or string ) : The name of the key.</li>
+            </ul>
+          </ul>
+          <h3>Action:Set JSON      </h3>
+          <ul>
+            <li>Set JSON value.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Key ( number or string ) : The name of the key.</li>
+              <li>JSON ( string ) : The JSON value to set.</li>
+            </ul>
+          </ul>
+          <h2>Save      </h2>
+          <h3>Action:Update      </h3>
+          <ul>
+            <li>Update book.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">    
+        <div class="panel-title">    
+          <h2>Expressions</h2>
+        </div>
+        <div class="panel-body">           
+          <h2>Convert    </h2>
+          <h3>Expression:AsItemList </h3>
+          <ul>
+            <li>Convert table to item list (JSON string), optional parameters are (tableID, itemID).</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>For Each    </h2>
+          <h3>Expression:CurItemID </h3>
+          <ul>
+            <li>Get current itemID in a For Each loop.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:CurKey </h3>
+          <ul>
+            <li>Get current key in a For Each loop.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:CurValue </h3>
+          <ul>
+            <li>Get current value in a For Each loop.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:CurItemContent </h3>
+          <ul>
+            <li>Get current content in JSON stringin in a For Each loop. Add 2nd parameter for specific key, 3rd parameter for default value if this key is not existed.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Item count    </h2>
+          <h3>Expression:ItemCount </h3>
+          <ul>
+            <li>Get items count of all tables or add table ID in 1st parameter to get items count in that table.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>ItemID    </h2>
+          <h3>Expression:GenerateKey </h3>
+          <ul>
+            <li>Generate new key from push action.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:LastGeneratedKey </h3>
+          <ul>
+            <li>Get last generate a key from push action.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Load    </h2>
+          <h3>Expression:LastTableID </h3>
+          <ul>
+            <li>Get last tableID of request.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:LastItemID </h3>
+          <ul>
+            <li>Get last itemID of request.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Random    </h2>
+          <h3>Expression:RandomBase32 </h3>
+          <ul>
+            <li>Get a random base32 string.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Length ( number ) : Length of string.</li>
+            </ul>
+          </ul>
+          <h3>Expression:LastRandomBase32 </h3>
+          <ul>
+            <li>Get last random base32 string.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Reference    </h2>
+          <h3>Expression:Ref </h3>
+          <ul>
+            <li>Get renerence in book, optional parameters are (tableID, itemID, key).</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Value    </h2>
+          <h3>Expression:At </h3>
+          <ul>
+            <li>Get value in book, optional parameters are (tableID, itemID, key, defaultValue).</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">       
+          <h2>Conditions</h2>
+        </div>
+        <div class="panel-body">              
+          <h2>Load    </h2>
+          <h4>Condition:For each itemID                    </h4>
+          <ul>
+            <li>Repeat the event for each itemID of load result in a table.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Table ( number or string ) : Table ID.    </li>
+              <li>Order ( Combo ) : Order of itemID.    </li>
+              <ul>
+                <li>Options : [&quot;descending&quot;,&quot;ascending&quot;,&quot;logical descending&quot;,&quot;logical ascending&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h4>Condition:For each key                    </h4>
+          <ul>
+            <li>Repeat the event for each key of a item of load result in a table.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Table ( number or string ) : Table ID.    </li>
+              <li>Item ( number or string ) : ID of item.    </li>
+            </ul>
+          </ul>
+          <h4>Condition:Table is empty                    </h4>
+          <ul>
+            <li>Return true if no item in a table.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Table ( number or string ) : Table ID.    </li>
+            </ul>
+          </ul>
+          <h2>On disconnected - Tree    </h2>
+          <h4>Condition:Remove on disconnected                    </h4>
+          <ul>
+            <li>Remove node on disconnected.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:Cancel all handlers of disconnected                    </h4>
+          <ul>
+            <li>Cancel all handlers of disconnected.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Prepare - Tree structure    </h2>
+          <h4>Condition:Table node                    </h4>
+          <ul>
+            <li>Add a table node.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Table ( number or string ) : Table ID.    </li>
+            </ul>
+          </ul>
+          <h4>Condition:Item node                    </h4>
+          <ul>
+            <li>Add a item node.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>ItemID ( number or string ) : ItemID    </li>
+            </ul>
+          </ul>
+          <h2>Request    </h2>
+          <h4>Condition:On request complete                    </h4>
+          <ul>
+            <li>Triggered when request current item complete.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Tag ( number or string ) : A tag, to distinguish between different save requests.    </li>
+            </ul>
+          </ul>
+          <h2>Save    </h2>
+          <h4>Condition:On update complete                    </h4>
+          <ul>
+            <li>Triggered when update book complete.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On update error                    </h4>
+          <ul>
+            <li>Triggered when update book error.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

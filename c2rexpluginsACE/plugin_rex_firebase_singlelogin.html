@@ -1,0 +1,170 @@
+<!DOCTYPE 5>
+<html>
+  <head>
+    <title>Plugin : Single login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="js/jquery-3.1.0.min.js">                         </script>
+    <script src="js/bootstrap.min.js">         </script>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header"><a class="navbar-brand" href="./index.html">Home</a></div>
+        <ul class="nav navbar-nav">
+          <li><a href="./pluginsIndex.html">Plugins      </a></li>
+          <li><a href="./behaviorsIndex.html">Behaviors                   </a></li>
+          <li><a href="./effectsIndex.html">Effects    </a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Plugin : Single login</h1>
+      <p>Author:Rex.Rainbow</p>
+      <ul>
+        <li>Test if user account had been logined on one client only.</li>
+      </ul>
+      <div class="panel panel-default">
+        <div class="panel-title">
+          <h2>Properties</h2>
+        </div>
+        <div class="panel-body">
+          <h3>Domain</h3>
+          <ul>
+            <li>The root location of the Firebase data.                    </li>
+          </ul>
+          <h3>Sub domain</h3>
+          <ul>
+            <li>Sub domain for this function.                    </li>
+          </ul>
+          <h3>Kick mode</h3>
+          <ul>
+            <li>Choose the kicking action while multiple login.                    </li>
+            <ul>
+              <li>Options : [&quot;Do nothing&quot;,&quot;Kick previous&quot;,&quot;Kick current&quot;]</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">   
+          <h2>Actions</h2>
+        </div>
+        <div class="panel-body">
+          <h2>Domain      </h2>
+          <h3>Action:Set domain      </h3>
+          <ul>
+            <li>Set domain ref.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Domain ( string ) : The root location of the Firebase data.</li>
+              <li>Sub domain ( string ) : Sub domain for this function.</li>
+            </ul>
+          </ul>
+          <h2>General      </h2>
+          <h3>Action:Logging out      </h3>
+          <ul>
+            <li>Logging out.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Kick      </h2>
+          <h3>Action:Kick by index      </h3>
+          <ul>
+            <li>Kick login by index.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Index ( number ) : Index in login list.</li>
+            </ul>
+          </ul>
+          <h2>Login      </h2>
+          <h3>Action:Login      </h3>
+          <ul>
+            <li>Login.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>UserID ( string ) : User ID.</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">    
+        <div class="panel-title">    
+          <h2>Expressions</h2>
+        </div>
+        <div class="panel-body">           
+          <h2>Multiple login    </h2>
+          <h3>Expression:LoginCount </h3>
+          <ul>
+            <li>Get the current login cout.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Multiple login - for each    </h2>
+          <h3>Expression:CurLoginIndex </h3>
+          <ul>
+            <li>Get the current login index in a For Each loop.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:CurLoginTimestamp </h3>
+          <ul>
+            <li>Get the current login timestamp in a For Each loop.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">       
+          <h2>Conditions</h2>
+        </div>
+        <div class="panel-body">              
+          <h2>Login    </h2>
+          <h4>Condition:On success                    </h4>
+          <ul>
+            <li>Triggered when single login success.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On error                    </h4>
+          <ul>
+            <li>Triggered when single login error.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Multiple login    </h2>
+          <h4>Condition:On kicked                    </h4>
+          <ul>
+            <li>Triggered when kicked by multiple login.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On login list changed                    </h4>
+          <ul>
+            <li>Triggered when login list changed.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Multiple login - for each    </h2>
+          <h4>Condition:For each login                    </h4>
+          <ul>
+            <li>Repeat the event for each login.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

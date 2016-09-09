@@ -1,0 +1,243 @@
+<!DOCTYPE 5>
+<html>
+  <head>
+    <title>Plugin : Geocoding</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="js/jquery-3.1.0.min.js">                         </script>
+    <script src="js/bootstrap.min.js">         </script>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header"><a class="navbar-brand" href="./index.html">Home</a></div>
+        <ul class="nav navbar-nav">
+          <li><a href="./pluginsIndex.html">Plugins      </a></li>
+          <li><a href="./behaviorsIndex.html">Behaviors                   </a></li>
+          <li><a href="./effectsIndex.html">Effects    </a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Plugin : Geocoding</h1>
+      <p>Author:Rex.Rainbow</p>
+      <ul>
+        <li>Converting between geographic coordinates and human-readable address.</li>
+      </ul>
+      <div class="panel panel-default">
+        <div class="panel-title">
+          <h2>Properties</h2>
+        </div>
+        <div class="panel-body">
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">   
+          <h2>Actions</h2>
+        </div>
+        <div class="panel-body">
+          <h2>Address      </h2>
+          <h3>Action:Convert LatLng to address      </h3>
+          <ul>
+            <li>Request converting latitude-longitude to human-readable address.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Latitude ( number ) : Latitude.</li>
+              <li>Longitude ( number ) : Longitude.</li>
+            </ul>
+          </ul>
+          <h2>LatLng      </h2>
+          <h3>Action:Convert address to LatLng      </h3>
+          <ul>
+            <li>Request converting address to latitude-longitude.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Address ( string ) : Address.</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">    
+        <div class="panel-title">    
+          <h2>Expressions</h2>
+        </div>
+        <div class="panel-body">           
+          <h2>Address    </h2>
+          <h3>Expression:LastFormattedAddress </h3>
+          <ul>
+            <li>Get formatted address returned by the last successful request. Add 1st parameter to get formatted address at the specific level.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:SrcLatitude </h3>
+          <ul>
+            <li>Get source latitude of last request.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:SrcLongitude </h3>
+          <ul>
+            <li>Get source longitude of last request.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:LastAddressComponments </h3>
+          <ul>
+            <li>Get address components returned by the last successful request as JSON. Add 2nd parameter to get a specific component by a string type, or a number index.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Level ( number ) : Level of address.</li>
+            </ul>
+          </ul>
+          <h3>Expression:LastAddressResults </h3>
+          <ul>
+            <li>Get address results returned by the last successful request as JSON.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:LastPostalCode </h3>
+          <ul>
+            <li>Get postal code returned by the last successful request.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:LastCountry </h3>
+          <ul>
+            <li>Get country returned by the last successful request.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:LastCountryShort </h3>
+          <ul>
+            <li>Get country in short name returned by the last successful request.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:LastPolitical </h3>
+          <ul>
+            <li>Get  political returned by the last successful request.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:LastPoliticalShort </h3>
+          <ul>
+            <li>Get  political in short name returned by the last successful request.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:LastLocality </h3>
+          <ul>
+            <li>Get  locality returned by the last successful request.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:LastLocalityShort </h3>
+          <ul>
+            <li>Get  locality in short name returned by the last successful request.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:LastRoute </h3>
+          <ul>
+            <li>Get  route returned by the last successful request.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:LastRouteShort </h3>
+          <ul>
+            <li>Get  route in short name returned by the last successful request.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:LastStreetNumber </h3>
+          <ul>
+            <li>Get street number returned by the last successful request.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>LatLng    </h2>
+          <h3>Expression:LastLatitude </h3>
+          <ul>
+            <li>Get latitude returned by the last successful request.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:LastLongitude </h3>
+          <ul>
+            <li>Get longitude returned by the last successful request.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:SrcAddress </h3>
+          <ul>
+            <li>Get source address of last request.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:LastLatLngResults </h3>
+          <ul>
+            <li>Get latlng results returned by the last successful request as JSON.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">       
+          <h2>Conditions</h2>
+        </div>
+        <div class="panel-body">              
+          <h2>Address    </h2>
+          <h4>Condition:On completed                    </h4>
+          <ul>
+            <li>Triggered when a request of address converting completes successfully.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On error                    </h4>
+          <ul>
+            <li>Triggered when a request of address converting fails.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>LatLng    </h2>
+          <h4>Condition:On completed                    </h4>
+          <ul>
+            <li>Triggered when a request of LatLng converting completes successfully.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On error                    </h4>
+          <ul>
+            <li>Triggered when a request of LatLng converting fails.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
