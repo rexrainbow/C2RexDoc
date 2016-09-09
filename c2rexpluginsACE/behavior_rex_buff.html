@@ -1,0 +1,261 @@
+<!DOCTYPE 5>
+<html>
+  <head>
+    <title>Behavior : Buff</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="js/jquery-3.1.0.min.js">                         </script>
+    <script src="js/bootstrap.min.js">         </script>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header"><a class="navbar-brand" href="./index.html">Home</a></div>
+        <ul class="nav navbar-nav">
+          <li><a href="./pluginsIndex.html">Plugins      </a></li>
+          <li><a href="./behaviorsIndex.html">Behaviors                   </a></li>
+          <li><a href="./effectsIndex.html">Effects    </a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Behavior : Buff</h1>
+      <p>Author:Rex.Rainbow</p>
+      <ul>
+        <li>A variable which supports buffs. Get sum from base value and buffs.</li>
+      </ul>
+      <div class="panel panel-default">
+        <div class="panel-title">
+          <h2>Properties</h2>
+        </div>
+        <div class="panel-body">
+          <h3>Base</h3>
+          <ul>
+            <li>Initial base value.                    </li>
+          </ul>
+          <h3>Max</h3>
+          <ul>
+            <li>Maximum bound.                    </li>
+          </ul>
+          <h3>Min</h3>
+          <ul>
+            <li>Minimum bound.                    </li>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">   
+          <h2>Actions</h2>
+        </div>
+        <div class="panel-body">
+          <h2>Base      </h2>
+          <h3>Action:Set value      </h3>
+          <ul>
+            <li>Set base value.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Base ( number ) : Base value.</li>
+            </ul>
+          </ul>
+          <h3>Action:Add to      </h3>
+          <ul>
+            <li>Add to the base value.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Value ( number ) : Value to add to this variable.</li>
+            </ul>
+          </ul>
+          <h3>Action:Subtract from      </h3>
+          <ul>
+            <li>Subtract from the base value.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Value ( number ) : Value to subtract from this variable.</li>
+            </ul>
+          </ul>
+          <h2>Bound      </h2>
+          <h3>Action:Set maximum bound      </h3>
+          <ul>
+            <li>Set maximum bound.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Max ( number ) : Maximum bound.</li>
+            </ul>
+          </ul>
+          <h3>Action:Set minimum bound      </h3>
+          <ul>
+            <li>Set minimum bound.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Min ( number ) : Minimum bound.</li>
+            </ul>
+          </ul>
+          <h2>Buff      </h2>
+          <h3>Action:Add      </h3>
+          <ul>
+            <li>Add buff.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Name ( string ) : Buff name</li>
+              <li>Priority ( number ) : Priority of buff. -1 is not in accumulation queue</li>
+              <li>Value ( number or string ) : Buff value. Number (1), or string (&quot;10%&quot;) for percentage.</li>
+              <li>Clamp ( Combo ) : Clamp in boundaries or not.</li>
+              <ul>
+                <li>Options : [&quot;Without clamped&quot;,&quot;Clamped in boundaries&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h3>Action:Remove      </h3>
+          <ul>
+            <li>Remove buff.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Name ( string ) : Buff name</li>
+            </ul>
+          </ul>
+          <h3>Action:Remove all      </h3>
+          <ul>
+            <li>Remove all buffs.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">    
+        <div class="panel-title">    
+          <h2>Expressions</h2>
+        </div>
+        <div class="panel-body">           
+          <h2>Base    </h2>
+          <h3>Expression:Base </h3>
+          <ul>
+            <li>Get base value.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Bound    </h2>
+          <h3>Expression:Max </h3>
+          <ul>
+            <li>Get maximum bound.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:Min </h3>
+          <ul>
+            <li>Get minimum bound.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Buff    </h2>
+          <h3>Expression:Buff </h3>
+          <ul>
+            <li>Get total buff value, or add 2nd parameter to get specific buff value by name (string) or queue index (number).</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:NextPriority </h3>
+          <ul>
+            <li>Get next lower priority.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Queue    </h2>
+          <h3>Expression:BuffCount </h3>
+          <ul>
+            <li>Get total buff count in queue.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Queue - for each    </h2>
+          <h3>Expression:CurBuffName </h3>
+          <ul>
+            <li>Get current buff name in a for each loop.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:CurBuffValue </h3>
+          <ul>
+            <li>Get current buff value in a for each loop.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Queue - for each - index    </h2>
+          <h3>Expression:CurIndex </h3>
+          <ul>
+            <li>Get current index in a for each loop.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Queue - index    </h2>
+          <h3>Expression:Index2BuffName </h3>
+          <ul>
+            <li>Get buff name by queue index.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Index ( number ) : Queue index</li>
+            </ul>
+          </ul>
+          <h3>Expression:Index2BuffValue </h3>
+          <ul>
+            <li>Get buff value by queue index.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Index ( number ) : Queue index</li>
+            </ul>
+          </ul>
+          <h2>Result    </h2>
+          <h3>Expression:Sum </h3>
+          <ul>
+            <li>Get sum of base value and buffs.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">       
+          <h2>Conditions</h2>
+        </div>
+        <div class="panel-body">              
+          <h2>Queue    </h2>
+          <h4>Condition:For each buff                    </h4>
+          <ul>
+            <li>Repeat the event for each buff in queue.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Value    </h2>
+          <h4>Condition:On sum changing                    </h4>
+          <ul>
+            <li>Triggered when sum changing.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:Compare sum                    </h4>
+          <ul>
+            <li>Compare sum.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Comparison ( cmp ) : Choose the way to compare sum.    </li>
+              <li>Value ( number ) : The value to compare the sum to.    </li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

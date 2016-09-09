@@ -1,0 +1,118 @@
+<!DOCTYPE 5>
+<html>
+  <head>
+    <title>Behavior : Logic Pin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="js/jquery-3.1.0.min.js">                         </script>
+    <script src="js/bootstrap.min.js">         </script>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header"><a class="navbar-brand" href="./index.html">Home</a></div>
+        <ul class="nav navbar-nav">
+          <li><a href="./pluginsIndex.html">Plugins      </a></li>
+          <li><a href="./behaviorsIndex.html">Behaviors                   </a></li>
+          <li><a href="./effectsIndex.html">Effects    </a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Behavior : Logic Pin</h1>
+      <p>Author:Rex.Rainbow</p>
+      <ul>
+        <li>Change logic position (X, Y) with pined chess.</li>
+      </ul>
+      <div class="panel panel-default">
+        <div class="panel-title">
+          <h2>Properties</h2>
+        </div>
+        <div class="panel-body">
+          <h3>Activated</h3>
+          <ul>
+            <li>Enable if you wish this to begin at the start of the layout.                    </li>
+            <ul>
+              <li>Options : [&quot;No&quot;,&quot;Yes&quot;]</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">   
+          <h2>Actions</h2>
+        </div>
+        <div class="panel-body">
+          <h2>Enable      </h2>
+          <h3>Action:Set activated      </h3>
+          <ul>
+            <li>Enable this behavior.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Activated ( Combo ) : Enable the behavior.</li>
+              <ul>
+                <li>Options : [&quot;No&quot;,&quot;Yes&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h2>Pin      </h2>
+          <h3>Action:Pin to chess      </h3>
+          <ul>
+            <li>Pin the chess to another chess.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Pin to ( object ) : Choose the chess to pin to.</li>
+            </ul>
+          </ul>
+          <h3>Action:Pin to chess by UID       </h3>
+          <ul>
+            <li>Pin the chess to another chess by UID.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>UID of chess ( number ) : Choose the chess to pin to.</li>
+            </ul>
+          </ul>
+          <h2>Unpin      </h2>
+          <h3>Action:Unpin      </h3>
+          <ul>
+            <li>Unpin the chess.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">    
+        <div class="panel-title">    
+          <h2>Expressions</h2>
+        </div>
+        <div class="panel-body">           
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">       
+          <h2>Conditions</h2>
+        </div>
+        <div class="panel-body">              
+          <h2>Logical position    </h2>
+          <h4>Condition:On logical position changed                    </h4>
+          <ul>
+            <li>Triggered when logical position changed.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Pin    </h2>
+          <h4>Condition:Is pinned                    </h4>
+          <ul>
+            <li>Object is currently pinned to another object.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
