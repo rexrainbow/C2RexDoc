@@ -30,6 +30,13 @@
           <h2>Properties</h2>
         </div>
         <div class="panel-body">
+          <h3>Encoding</h3>
+          <ul>
+            <li>Encoding of compression result.                    </li>
+            <ul>
+              <li>Options : [&quot;None&quot;,&quot;Base64&quot;,&quot;UTF16&quot;,&quot;URI&quot;]</li>
+            </ul>
+          </ul>
         </div>
       </div>
       <div class="panel panel-default">
@@ -37,14 +44,16 @@
           <h2>Actions</h2>
         </div>
         <div class="panel-body">
-          <h2>Local      </h2>
-          <h3>Action:Set local value      </h3>
+          <h2>Encoding      </h2>
+          <h3>Action:Set encoding mode      </h3>
           <ul>
-            <li>Store a value in local storage (available in any session).   </li>
+            <li>Set encoding mode.   </li>
             <Parameters></Parameters>
             <ul>
-              <li>Key ( string ) : Enter the name of the key to associate the value with.</li>
-              <li>Value ( number or string ) : Enter the value to store.</li>
+              <li>Encoding ( Combo ) : Encoding mode.</li>
+              <ul>
+                <li>Options : [&quot;None&quot;,&quot;Base64&quot;,&quot;UTF16&quot;,&quot;URI&quot;]</li>
+              </ul>
             </ul>
           </ul>
         </div>
@@ -70,16 +79,6 @@
             <Parameters></Parameters>
             <ul>
               <li>Result ( string ) : Result string to decompress</li>
-            </ul>
-          </ul>
-          <h2>Local    </h2>
-          <h3>Expression:LocalValue </h3>
-          <ul>
-            <li>Get the value from a key in local storage. Return the default value if the key does not existed, and save the default value to webstorage.</li>
-            <Parameters></Parameters>
-            <ul>
-              <li>Key ( string ) : Key name</li>
-              <li>Default ( number or string ) : The default value if the key does not existed.</li>
             </ul>
           </ul>
         </div>

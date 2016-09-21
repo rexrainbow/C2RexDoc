@@ -23,7 +23,7 @@
       <h1>Plugin : Simulate key event</h1>
       <p>Author:Rex.Rainbow</p>
       <ul>
-        <li>Fire keyboard events.</li>
+        <li>Fire keyboard or touch events.</li>
       </ul>
       <div class="panel panel-default">
         <div class="panel-title">
@@ -60,6 +60,37 @@
               <ul>
                 <li>Options : [&quot;down&quot;,&quot;up&quot;]</li>
               </ul>
+            </ul>
+          </ul>
+          <h2>Touch      </h2>
+          <h3>Action:Simulate touch start      </h3>
+          <ul>
+            <li>Simulate touch start.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>X ( number ) : Touch X position.</li>
+              <li>Y ( number ) : Touch Y position.</li>
+              <li>Layer ( layer ) : Position related on layer.</li>
+              <li>Identifier ( number ) : Identifier of this touch start event.</li>
+            </ul>
+          </ul>
+          <h3>Action:Simulate touch end      </h3>
+          <ul>
+            <li>Simulate touch end.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Identifier ( number ) : Identifier of this touch start event.</li>
+            </ul>
+          </ul>
+          <h3>Action:Simulate touch move      </h3>
+          <ul>
+            <li>Simulate touch move.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>X ( number ) : Touch X position.</li>
+              <li>Y ( number ) : Touch Y position.</li>
+              <li>Layer ( layer ) : Position related on layer.</li>
+              <li>Identifier ( number ) : Identifier of this touch start event.</li>
             </ul>
           </ul>
         </div>

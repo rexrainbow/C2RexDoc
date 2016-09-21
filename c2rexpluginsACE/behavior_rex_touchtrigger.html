@@ -1,7 +1,7 @@
 <!DOCTYPE 5>
 <html>
   <head>
-    <title>Behavior : Text resize</title>
+    <title>Behavior : Trigger touch</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="css/bootstrap.min.css"/>
     <link rel="stylesheet" href="css/main.css"/>
@@ -20,30 +20,26 @@
       </div>
     </div>
     <div class="container">
-      <h1>Behavior : Text resize</h1>
+      <h1>Behavior : Trigger touch</h1>
       <p>Author:Rex.Rainbow</p>
       <ul>
-        <li>Resize text object and background to show all lines.</li>
+        <li>Trigger touch events manually.</li>
       </ul>
       <div class="panel panel-default">
         <div class="panel-title">
           <h2>Properties</h2>
         </div>
         <div class="panel-body">
-          <h3>Auto resize</h3>
+          <h3>Touch start</h3>
           <ul>
-            <li>Enable to resize object automatically.                    </li>
+            <li>Enable if you wish touch starting to begin at the start of the layout.                    </li>
             <ul>
               <li>Options : [&quot;No&quot;,&quot;Yes&quot;]</li>
             </ul>
           </ul>
-          <h3>Min width</h3>
+          <h3>Identifier</h3>
           <ul>
-            <li>Minimum text width, in pixels.                    </li>
-          </ul>
-          <h3>Min height</h3>
-          <ul>
-            <li>Minimum text height, in pixels.                    </li>
+            <li>Identifier of touch event.                    </li>
           </ul>
         </div>
       </div>
@@ -52,46 +48,25 @@
           <h2>Actions</h2>
         </div>
         <div class="panel-body">
-          <h2>Background      </h2>
-          <h3>Action:Add background      </h3>
+          <h2>Identifier      </h2>
+          <h3>Action:Set identifier      </h3>
           <ul>
-            <li>Add background object.   </li>
+            <li>Set identifier.   </li>
             <Parameters></Parameters>
             <ul>
-              <li>Baclground ( object ) : Baclground object.</li>
-              <li>Resize ( Combo ) : Resize mode</li>
+              <li>Identifier ( number ) : Identifier of touch event.</li>
+            </ul>
+          </ul>
+          <h2>Trigger      </h2>
+          <h3>Action:Trigger touch event      </h3>
+          <ul>
+            <li>Trigger touch event.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Type ( Combo ) : Trigger type.</li>
               <ul>
-                <li>Options : [&quot;width and height&quot;,&quot;heigh only&quot;]</li>
+                <li>Options : [&quot;start&quot;,&quot;end&quot;]</li>
               </ul>
-            </ul>
-          </ul>
-          <h2>Resize      </h2>
-          <h3>Action:Resize      </h3>
-          <ul>
-            <li>Resize text object to show all text with minimal height.   </li>
-            <Parameters></Parameters>
-            <ul>
-            </ul>
-          </ul>
-          <h3>Action:Set max width      </h3>
-          <ul>
-            <li>Set maximum width of this object.   </li>
-            <Parameters></Parameters>
-            <ul>
-            </ul>
-          </ul>
-          <h3>Action:Set min width      </h3>
-          <ul>
-            <li>Set minimum width of this object.   </li>
-            <Parameters></Parameters>
-            <ul>
-            </ul>
-          </ul>
-          <h3>Action:Set min height      </h3>
-          <ul>
-            <li>Set minimum height of this object.   </li>
-            <Parameters></Parameters>
-            <ul>
             </ul>
           </ul>
         </div>
@@ -108,10 +83,10 @@
           <h2>Conditions</h2>
         </div>
         <div class="panel-body">              
-          <h2>Resize    </h2>
-          <h4>Condition:On size changed                    </h4>
+          <h2>State    </h2>
+          <h4>Condition:Is touching                    </h4>
           <ul>
-            <li>Triggered when size changed.                    </li>
+            <li>Return true if touching                    </li>
             <Parameters></Parameters>
             <ul>
             </ul>
