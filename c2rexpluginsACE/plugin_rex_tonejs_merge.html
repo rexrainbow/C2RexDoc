@@ -1,7 +1,7 @@
 <!DOCTYPE 5>
 <html>
   <head>
-    <title>Behavior : Push Out Solid</title>
+    <title>Plugin : Merge</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="css/bootstrap.min.css"/>
     <link rel="stylesheet" href="css/main.css"/>
@@ -20,30 +20,16 @@
       </div>
     </div>
     <div class="container">
-      <h1>Behavior : Push Out Solid</h1>
+      <h1>Plugin : Merge</h1>
       <p>Author:Rex.Rainbow</p>
       <ul>
-        <li>Push out from solid object.</li>
+        <li>Brings two signals into the left and right channels of a single stereo channel.</li>
       </ul>
       <div class="panel panel-default">
         <div class="panel-title">
           <h2>Properties</h2>
         </div>
         <div class="panel-body">
-          <h3>Activated</h3>
-          <ul>
-            <li>Enable if you wish this to begin at the start of the layout.                    </li>
-            <ul>
-              <li>Options : [&quot;No&quot;,&quot;Yes&quot;]</li>
-            </ul>
-          </ul>
-          <h3>Obstacles</h3>
-          <ul>
-            <li>Choose whether solids obstruct or if to use custom objects added by events.                    </li>
-            <ul>
-              <li>Options : [&quot;Solids&quot;,&quot;Custom&quot;]</li>
-            </ul>
-          </ul>
         </div>
       </div>
       <div class="panel panel-default">
@@ -51,32 +37,17 @@
           <h2>Actions</h2>
         </div>
         <div class="panel-body">
-          <h2>Enable      </h2>
-          <h3>Action:Set enabled      </h3>
+          <h2>Plug      </h2>
+          <h3>Action:Plug      </h3>
           <ul>
-            <li>Set whether this behavior is enabled.   </li>
+            <li>Plug object.   </li>
             <Parameters></Parameters>
             <ul>
-              <li>State ( Combo ) : Set whether to enable or disable the behavior.</li>
+              <li>Object ( object ) : Object to plug.</li>
+              <li>Channel ( Combo ) : Channel type.</li>
               <ul>
-                <li>Options : [&quot;Disabled&quot;,&quot;Enabled&quot;]</li>
+                <li>Options : [&quot;left&quot;,&quot;right&quot;]</li>
               </ul>
-            </ul>
-          </ul>
-          <h2>Obstacle      </h2>
-          <h3>Action:Add obstacle      </h3>
-          <ul>
-            <li>Add a custom object as an obstacle to line-of-sight.   </li>
-            <Parameters></Parameters>
-            <ul>
-              <li>Obstacle ( object ) : Choose an object to add as an obstacle, obstructing line-of-sight.</li>
-            </ul>
-          </ul>
-          <h3>Action:Clear obstacles      </h3>
-          <ul>
-            <li>Remove all added obstacle objects.   </li>
-            <Parameters></Parameters>
-            <ul>
             </ul>
           </ul>
         </div>

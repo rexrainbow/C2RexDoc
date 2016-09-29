@@ -1,0 +1,156 @@
+<!DOCTYPE 5>
+<html>
+  <head>
+    <title>Plugin : Sequence</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="js/jquery-3.1.0.min.js">                         </script>
+    <script src="js/bootstrap.min.js">         </script>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header"><a class="navbar-brand" href="./index.html">Home</a></div>
+        <ul class="nav navbar-nav">
+          <li><a href="./pluginsIndex.html">Plugins      </a></li>
+          <li><a href="./behaviorsIndex.html">Behaviors                   </a></li>
+          <li><a href="./effectsIndex.html">Effects    </a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Plugin : Sequence</h1>
+      <p>Author:Rex.Rainbow</p>
+      <ul>
+        <li>An alternate notation of a part.</li>
+      </ul>
+      <div class="panel panel-default">
+        <div class="panel-title">
+          <h2>Properties</h2>
+        </div>
+        <div class="panel-body">
+          <h3>Subdivision</h3>
+          <ul>
+            <li>The subdivision between which events are placed.                    </li>
+          </ul>
+          <h3>Loop</h3>
+          <ul>
+            <li>Loop count. Set 0 to be an infinity loop.                    </li>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">   
+          <h2>Actions</h2>
+        </div>
+        <div class="panel-body">
+          <h2>Control      </h2>
+          <h3>Action:Start      </h3>
+          <ul>
+            <li>Start the part at the given time.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Time ( number or string ) : When the note should be triggered. Time in seconds(1), Notation(&quot;4n&quot;, &quot;8t&quot;), TransportTime(&quot;4:3:2&quot;), Frequency(&quot;8hz&quot;), Now-Relative(&quot;+1&quot;), Expressions(&quot;3:0 + 2 - (1m / 7)&quot;).</li>
+            </ul>
+          </ul>
+          <h3>Action:Stop      </h3>
+          <ul>
+            <li>Stop the part at the given time.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Time ( number or string ) : When the note should be triggered. Time in seconds(1), Notation(&quot;4n&quot;, &quot;8t&quot;), TransportTime(&quot;4:3:2&quot;), Frequency(&quot;8hz&quot;), Now-Relative(&quot;+1&quot;), Expressions(&quot;3:0 + 2 - (1m / 7)&quot;).</li>
+            </ul>
+          </ul>
+          <h2>Notes      </h2>
+          <h3>Action:Reload      </h3>
+          <ul>
+            <li>Stop and reload notes.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Notes ( string ) : Notes in array.</li>
+            </ul>
+          </ul>
+          <h3>Action:Remove all      </h3>
+          <ul>
+            <li>Remove all of the notes from the group.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Action:Add      </h3>
+          <ul>
+            <li>Add notes at an index, if there's already something at that index, overwrite it.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Index ( number ) : The index to add the event to.</li>
+              <li>Value ( number or string ) : Notes to add at that index, separated by &quot;,&quot;</li>
+            </ul>
+          </ul>
+          <h3>Action:Remove      </h3>
+          <ul>
+            <li>Remove a value from the sequence by index.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Index ( number ) : The index of the event to remove.</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">    
+        <div class="panel-title">    
+          <h2>Expressions</h2>
+        </div>
+        <div class="panel-body">           
+          <h2>Event    </h2>
+          <h3>Expression:Time </h3>
+          <ul>
+            <li>Get time of note event.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:Note </h3>
+          <ul>
+            <li>Get note of note event.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Notes    </h2>
+          <h3>Expression:At </h3>
+          <ul>
+            <li>Get note of the sequence. Add 2nd or more parameters to get note in subsequence.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Index ( number ) : The index of the event to remove.</li>
+            </ul>
+          </ul>
+          <h2>State    </h2>
+          <h3>Expression:Progress </h3>
+          <ul>
+            <li>The current progress of the loop interval.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">       
+          <h2>Conditions</h2>
+        </div>
+        <div class="panel-body">              
+          <h2>Event    </h2>
+          <h4>Condition:On event                    </h4>
+          <ul>
+            <li>Triggered when event fired.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

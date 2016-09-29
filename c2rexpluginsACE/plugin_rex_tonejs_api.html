@@ -1,7 +1,7 @@
 <!DOCTYPE 5>
 <html>
   <head>
-    <title>Behavior : Push Out Solid</title>
+    <title>Plugin : ToneJS api</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="css/bootstrap.min.css"/>
     <link rel="stylesheet" href="css/main.css"/>
@@ -20,29 +20,30 @@
       </div>
     </div>
     <div class="container">
-      <h1>Behavior : Push Out Solid</h1>
+      <h1>Plugin : ToneJS api</h1>
       <p>Author:Rex.Rainbow</p>
       <ul>
-        <li>Push out from solid object.</li>
+        <li>Api of tone.js. https://github.com/Tonejs/Tone.js</li>
       </ul>
       <div class="panel panel-default">
         <div class="panel-title">
           <h2>Properties</h2>
         </div>
         <div class="panel-body">
-          <h3>Activated</h3>
+          <h3>Transport</h3>
           <ul>
-            <li>Enable if you wish this to begin at the start of the layout.                    </li>
+            <li>Transport for timing musical events.                    </li>
+          </ul>
+          <h3>Start timeline</h3>
+          <ul>
+            <li>Set Yes to start timeline.                    </li>
             <ul>
               <li>Options : [&quot;No&quot;,&quot;Yes&quot;]</li>
             </ul>
           </ul>
-          <h3>Obstacles</h3>
+          <h3>BPM</h3>
           <ul>
-            <li>Choose whether solids obstruct or if to use custom objects added by events.                    </li>
-            <ul>
-              <li>Options : [&quot;Solids&quot;,&quot;Custom&quot;]</li>
-            </ul>
+            <li>The Beats Per Minute of the Transport.                    </li>
           </ul>
         </div>
       </div>
@@ -51,32 +52,38 @@
           <h2>Actions</h2>
         </div>
         <div class="panel-body">
-          <h2>Enable      </h2>
-          <h3>Action:Set enabled      </h3>
+          <h2>Property      </h2>
+          <h3>Action:Set value      </h3>
           <ul>
-            <li>Set whether this behavior is enabled.   </li>
+            <li>Set property of an object.   </li>
             <Parameters></Parameters>
             <ul>
-              <li>State ( Combo ) : Set whether to enable or disable the behavior.</li>
+              <li>Object ( object ) : Object to assign.</li>
+              <li>Property ( string ) : Property name in dot notation</li>
+              <li>Value ( number or string ) : Value to set</li>
+            </ul>
+          </ul>
+          <h3>Action:Set JSON      </h3>
+          <ul>
+            <li>Set property of an object.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Object ( object ) : Object to assign.</li>
+              <li>Property ( string ) : Property name in dot notation</li>
+              <li>JSON ( string ) : JSON value to set</li>
+            </ul>
+          </ul>
+          <h3>Action:Set boolean      </h3>
+          <ul>
+            <li>Set property of an object.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Object ( object ) : Object to assign.</li>
+              <li>Property ( string ) : Property name in dot notation</li>
+              <li>Boolean ( Combo ) : Boolean value.</li>
               <ul>
-                <li>Options : [&quot;Disabled&quot;,&quot;Enabled&quot;]</li>
+                <li>Options : [&quot;false&quot;,&quot;true&quot;]</li>
               </ul>
-            </ul>
-          </ul>
-          <h2>Obstacle      </h2>
-          <h3>Action:Add obstacle      </h3>
-          <ul>
-            <li>Add a custom object as an obstacle to line-of-sight.   </li>
-            <Parameters></Parameters>
-            <ul>
-              <li>Obstacle ( object ) : Choose an object to add as an obstacle, obstructing line-of-sight.</li>
-            </ul>
-          </ul>
-          <h3>Action:Clear obstacles      </h3>
-          <ul>
-            <li>Remove all added obstacle objects.   </li>
-            <Parameters></Parameters>
-            <ul>
             </ul>
           </ul>
         </div>
@@ -86,6 +93,24 @@
           <h2>Expressions</h2>
         </div>
         <div class="panel-body">           
+          <h2>Property    </h2>
+          <h3>Expression:Property </h3>
+          <ul>
+            <li>Get property of an instance.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>UID ( number ) : UID of a tone instance</li>
+              <li>Property ( string ) : Property name in dot notation</li>
+            </ul>
+          </ul>
+          <h2>Time    </h2>
+          <h3>Expression:Now </h3>
+          <ul>
+            <li>Get the currentTime from the AudioContext.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
         </div>
       </div>
       <div class="panel panel-default">

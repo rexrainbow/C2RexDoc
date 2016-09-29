@@ -205,6 +205,15 @@
             <ul>
             </ul>
           </ul>
+          <h2>User list      </h2>
+          <h3>Action:Get users list of room      </h3>
+          <ul>
+            <li>Get users list of room.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Room ID ( string ) : Room ID.</li>
+            </ul>
+          </ul>
         </div>
       </div>
       <div class="panel panel-default">    
@@ -274,14 +283,14 @@
             </ul>
           </ul>
           <h2>Rooms list    </h2>
-          <h3>Expression:CurCreaterName </h3>
+          <h3>Expression:CurCreatorName </h3>
           <ul>
             <li>Get the current creater name in a For Each loop.</li>
             <Parameters></Parameters>
             <ul>
             </ul>
           </ul>
-          <h3>Expression:CurCreaterID </h3>
+          <h3>Expression:CurCreatorID </h3>
           <ul>
             <li>Get the current creater ID in a For Each loop.</li>
             <Parameters></Parameters>
@@ -310,6 +319,13 @@
             <ul>
             </ul>
           </ul>
+          <h3>Expression:CurRoomMaxPeers </h3>
+          <ul>
+            <li>Get max peers of current room in a For Each loop.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
           <h2>Rooms list - index    </h2>
           <h3>Expression:Index2RoomName </h3>
           <ul>
@@ -322,6 +338,14 @@
           <h3>Expression:Index2RoomID </h3>
           <ul>
             <li>Get room ID by room index.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Index ( number ) : Room index.</li>
+            </ul>
+          </ul>
+          <h3>Expression:Index2RoomMaxPeers </h3>
+          <ul>
+            <li>Get room name by room index.</li>
             <Parameters></Parameters>
             <ul>
               <li>Index ( number ) : Room index.</li>
@@ -491,14 +515,6 @@
             <ul>
             </ul>
           </ul>
-          <h2>Room - metadata    </h2>
-          <h4>Condition:On receive metadata                    </h4>
-          <ul>
-            <li>Triggered when receive metadata.                    </li>
-            <Parameters></Parameters>
-            <ul>
-            </ul>
-          </ul>
           <h2>Rooms list    </h2>
           <h4>Condition:On update                    </h4>
           <ul>
@@ -578,6 +594,13 @@
           <h4>Condition:On become first user                    </h4>
           <ul>
             <li>Triggered when became first user of current room.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On get users list                    </h4>
+          <ul>
+            <li>Triggered when get users list.                    </li>
             <Parameters></Parameters>
             <ul>
             </ul>
