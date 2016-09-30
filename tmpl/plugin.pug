@@ -1,0 +1,89 @@
+extends layout
+
+block content
+    h1 #{title}
+    p Author:#{author}
+    ul
+        li #{description}
+    - url = "https://dl.dropboxusercontent.com/u/5779181/C2Repo/Zip/" + fileName.replace("_", "s/") + ".7z"
+    a.btn.btn-default(href=url) Download    
+        
+    .panel.panel-default
+        .panel-title
+            h2 Properties
+        .panel-body
+            each prop, i in properties
+                h3 #{prop.name}
+                ul
+                    li #{prop.description}                    
+                    if (prop.param != null)
+                        ul
+                            li Options : #{prop.param}
+    
+    .panel.panel-default
+        .panel-title    
+            h2 Actions
+        .panel-body
+            - var curCategory = ""        
+            each act, i in commands.actions
+                if !act.deprecated
+                    if curCategory != act.category                
+                        h2 #{act.category}      
+                    - var curCategory = act.category
+                    
+                    h3 Action:#{act.name}      
+                    ul
+                        li #{act.description}   
+                        Parameters
+                        ul
+                            each param, i in act.params                        
+                                li #{param.name} ( #{param.type} ) : #{param.description}
+                                if (param.options)
+                                    ul
+                                        li Options : #{param.options}
+                        
+                    
+    .panel.panel-default     
+        .panel-title     
+            h2 Expressions
+        .panel-body            
+            - var curCategory = ""        
+            each exp, i in commands.expressions     
+                if !exp.deprecated            
+                    if curCategory != exp.category                
+                        h2 #{exp.category}    
+                    - var curCategory = exp.category    
+                    
+                    h3 Expression:#{exp.name} 
+                    ul
+                        li #{exp.description}
+                        Parameters
+                        ul
+                            each param, i in exp.params                        
+                                li #{param.name} ( #{param.type} ) : #{param.description}
+                                if (param.options)
+                                    ul
+                                        li Options : #{param.options}                            
+    
+    
+    .panel.panel-default
+        .panel-title        
+            h2 Conditions
+        .panel-body               
+            - var curCategory = ""        
+            each cnd, i in commands.conditions
+                if !cnd.deprecated              
+                    if curCategory != cnd.category                
+                        h2 #{cnd.category}    
+                    - var curCategory = cnd.category                   
+                    
+                    h4 Condition:#{cnd.name}                    
+                    ul
+                        li #{cnd.description}                    
+                        Parameters
+                        ul
+                            each param, i in cnd.params                        
+                                li #{param.name} ( #{param.type} ) : #{param.description}    
+                                if (param.options)
+                                    ul
+                                        li Options : #{param.options}

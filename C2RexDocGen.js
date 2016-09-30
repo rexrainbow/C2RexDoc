@@ -6,7 +6,8 @@ var main = function()
         "filter": {
             "plugins": /rex_/gi,
             "behaviors": /rex_/gi,
-        }
+        },
+        "tmpl": "./tmpl",
     };
 
     var startTime = (new Date()).getTime();    

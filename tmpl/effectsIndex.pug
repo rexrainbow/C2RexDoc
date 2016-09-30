@@ -1,0 +1,17 @@
+extends layout
+
+block content
+    - var curCategory = ""
+    - var url = ""    
+        
+    h1 #{title}
+    each item, i in effects
+        if curCategory != item.category
+            h2 #{item.category}
+        - curCategory = item.category
+        
+        ul
+            li
+                - url = item.fileName + ".html"
+                a.btn.btn-default(href=url) #{item.name}
+                | : #{item.description}                         

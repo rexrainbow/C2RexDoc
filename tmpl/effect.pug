@@ -1,0 +1,15 @@
+extends layout
+
+block content
+    h1 #{title}
+    p <em>Author:#{author}</em>
+    ul
+        li #{description}
+        
+    .panel.panel-default
+        .panel-title
+            h2 Parameters
+        .panel-body            
+            ol
+                each param, i in params
+                   li #{param.name} ( #{param.type} ) : #{param.description}                

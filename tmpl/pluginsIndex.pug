@@ -1,0 +1,24 @@
+extends layout
+
+block content
+    - var curCategory = ""
+    - var url = ""    
+    
+    h1 #{title}  
+    each item, i in plugins
+        if curCategory != item.category
+            h2 #{item.category}
+        - curCategory = item.category
+        
+        ul
+            li
+                if item.deprecated
+                    | ( Deprecated ) 
+                    
+                - url = item.fileName + ".html"                
+                if !item.deprecated
+                    a.btn.btn-default(href=url) #{item.name}
+                else
+                    a(href=url) #{item.name}
+                    
+                |  : #{item.description}
