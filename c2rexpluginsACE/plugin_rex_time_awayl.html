@@ -54,9 +54,33 @@
               <li>Key ( string ) : Key name of local storage</li>
             </ul>
           </ul>
-          <h3>Action:Get elapsed time      </h3>
+          <h3>Action:Pause      </h3>
           <ul>
-            <li>Get elapsed time.   </li>
+            <li>Pause timer.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Key ( string ) : Key name of local storage</li>
+            </ul>
+          </ul>
+          <h3>Action:Resume      </h3>
+          <ul>
+            <li>Resume timer.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Key ( string ) : Key name of local storage</li>
+            </ul>
+          </ul>
+          <h3>Action:Get or start      </h3>
+          <ul>
+            <li>Get or start timer if the timer does not exist.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Key ( string ) : Key name of local storage</li>
+            </ul>
+          </ul>
+          <h3>Action:Get      </h3>
+          <ul>
+            <li>Get timer.   </li>
             <Parameters></Parameters>
             <ul>
               <li>Key ( string ) : Key name of local storage</li>
@@ -101,9 +125,50 @@
             </ul>
           </ul>
           <h2>Timer    </h2>
-          <h4>Condition:On elapsed time get                    </h4>
+          <h4>Condition:On get time                    </h4>
           <ul>
-            <li>Triggered after &quot;action: Get elapsed time&quot;, get elapsed time by &quot;expression:ElapsedTime&quot;.                    </li>
+            <li>Triggered after &quot;action: Get timer&quot;, get elapsed time by &quot;expression:ElapsedTime&quot;.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Key ( string ) : Key name of local storage    </li>
+            </ul>
+          </ul>
+          <h4>Condition:On start timer                    </h4>
+          <ul>
+            <li>Triggered after &quot;action: Start&quot;, when the timer has been written to local storage.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Key ( string ) : Key name of local storage    </li>
+            </ul>
+          </ul>
+          <h4>Condition:On remove timer                    </h4>
+          <ul>
+            <li>Triggered after &quot;action: Remove&quot;, when the timer has been deleted from local storage.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Key ( string ) : Key name of local storage    </li>
+            </ul>
+          </ul>
+          <h4>Condition:On pause timer                    </h4>
+          <ul>
+            <li>Triggered after &quot;action: Pause&quot;, when the timer has been written to local storage.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Key ( string ) : Key name of local storage    </li>
+            </ul>
+          </ul>
+          <h4>Condition:On resume timer                    </h4>
+          <ul>
+            <li>Triggered after &quot;action: Resume&quot;, when the timer has been written to local storage.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Key ( string ) : Key name of local storage    </li>
+            </ul>
+          </ul>
+          <h2>Valid    </h2>
+          <h4>Condition:Is valid                    </h4>
+          <ul>
+            <li>Return true if get valid timer.                    </li>
             <Parameters></Parameters>
             <ul>
               <li>Key ( string ) : Key name of local storage    </li>
