@@ -23,7 +23,7 @@
       <h1>Plugin : ToneJS api</h1>
       <p>Author:Rex.Rainbow</p>
       <ul>
-        <li>Api of tone.js. https://github.com/Tonejs/Tone.js</li>
+        <li>Base object of tone.js. https://github.com/Tonejs/Tone.js</li>
       </ul><a class="btn btn-default" href="https://dl.dropboxusercontent.com/u/5779181/C2Repo/Zip/plugins/rex_tonejs_api.7z">Download    </a>
       <div class="panel panel-default">
         <div class="panel-title">
@@ -94,6 +94,41 @@
               <ul>
                 <li>Options : [&quot;false&quot;,&quot;true&quot;]</li>
               </ul>
+            </ul>
+          </ul>
+          <h2>Transport      </h2>
+          <h3>Action:Set BPM      </h3>
+          <ul>
+            <li>Set BPM.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>BPM ( number ) : Beats Per Minute</li>
+            </ul>
+          </ul>
+          <h2>Transport - timeline      </h2>
+          <h3>Action:Start      </h3>
+          <ul>
+            <li>Start timeline.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Time ( number or string ) : The time when the transport should start. Time in seconds(1), Notation(&quot;4n&quot;, &quot;8t&quot;), TransportTime(&quot;4:3:2&quot;), Frequency(&quot;8hz&quot;), Now-Relative(&quot;+1&quot;), Expressions(&quot;3:0 + 2 - (1m / 7)&quot;)</li>
+              <li>Offset ( number or string ) : The timeline offset to start the transport. Time in seconds(1), Notation(&quot;4n&quot;, &quot;8t&quot;), TransportTime(&quot;4:3:2&quot;), Frequency(&quot;8hz&quot;), Now-Relative(&quot;+1&quot;), Expressions(&quot;3:0 + 2 - (1m / 7)&quot;)</li>
+            </ul>
+          </ul>
+          <h3>Action:Stop      </h3>
+          <ul>
+            <li>Stop timeline.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Time ( number or string ) : The time when the transport should stop. Time in seconds(1), Notation(&quot;4n&quot;, &quot;8t&quot;), TransportTime(&quot;4:3:2&quot;), Frequency(&quot;8hz&quot;), Now-Relative(&quot;+1&quot;), Expressions(&quot;3:0 + 2 - (1m / 7)&quot;)</li>
+            </ul>
+          </ul>
+          <h3>Action:Pause      </h3>
+          <ul>
+            <li>Pause timeline.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Time ( number or string ) : The time when the transport should pause. Time in seconds(1), Notation(&quot;4n&quot;, &quot;8t&quot;), TransportTime(&quot;4:3:2&quot;), Frequency(&quot;8hz&quot;), Now-Relative(&quot;+1&quot;), Expressions(&quot;3:0 + 2 - (1m / 7)&quot;)</li>
             </ul>
           </ul>
         </div>
