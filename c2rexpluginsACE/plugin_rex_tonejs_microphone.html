@@ -1,0 +1,169 @@
+<!DOCTYPE 5>
+<html>
+  <head>
+    <title>Plugin : Microphone</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="js/jquery-3.1.0.min.js">                         </script>
+    <script src="js/bootstrap.min.js">         </script>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header"><a class="navbar-brand" href="./index.html">Home</a></div>
+        <ul class="nav navbar-nav">
+          <li><a href="./pluginsIndex.html">Plugins      </a></li>
+          <li><a href="./behaviorsIndex.html">Behaviors                   </a></li>
+          <li><a href="./effectsIndex.html">Effects    </a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Plugin : Microphone</h1>
+      <p>Author:Rex.Rainbow</p>
+      <ul>
+        <li>Opens up the default source (typically the microphone).</li>
+      </ul><a class="btn btn-default" href="https://dl.dropboxusercontent.com/u/5779181/C2Repo/Zip/plugins/rex_tonejs_microphone.7z">Download    </a>
+      <div class="panel panel-default">
+        <div class="panel-title">
+          <h2>Properties</h2>
+        </div>
+        <div class="panel-body">
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">   
+          <h2>Actions</h2>
+        </div>
+        <div class="panel-body">
+          <h2>Control      </h2>
+          <h3>Action:Start      </h3>
+          <ul>
+            <li>Start the source at the specified time.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Time ( number or string ) : When the source should be started. Set &quot;&quot; to ignore this parameter.</li>
+            </ul>
+          </ul>
+          <h3>Action:Stop      </h3>
+          <ul>
+            <li>Stop the source at the specified time.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Time ( number or string ) : When the source should be stopped. Set &quot;&quot; to ignore this parameter.</li>
+            </ul>
+          </ul>
+          <h2>Creator      </h2>
+          <h3>Action:Create microphone      </h3>
+          <ul>
+            <li>Create and open microphone.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Dispose      </h2>
+          <h3>Action:Dispose      </h3>
+          <ul>
+            <li>Clean up.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Properties      </h2>
+          <h3>Action:Set JSON      </h3>
+          <ul>
+            <li>Set properties to JSON string.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Properties ( string ) : Properties in JSON</li>
+            </ul>
+          </ul>
+          <h2>Property      </h2>
+          <h3>Action:Set value      </h3>
+          <ul>
+            <li>Set property.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Property ( string ) : Property name in dot notation</li>
+              <li>Value ( number or string ) : Value to set</li>
+            </ul>
+          </ul>
+          <h3>Action:Set JSON      </h3>
+          <ul>
+            <li>Set property to JSON string.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Property ( string ) : Property name in dot notation</li>
+              <li>JSON ( string ) : JSON value to set</li>
+            </ul>
+          </ul>
+          <h3>Action:Set boolean      </h3>
+          <ul>
+            <li>Set property to a boolean value.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Property ( string ) : Property name in dot notation</li>
+              <li>Boolean ( Combo ) : Boolean value.</li>
+              <ul>
+                <li>Options : [&quot;false&quot;,&quot;true&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h2>Sync      </h2>
+          <h3>Action:Sync      </h3>
+          <ul>
+            <li>Sync the source to the Transport so that all subsequent calls to start and stop are synced to the TransportTime instead of the AudioContext time.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Action:Unsync      </h3>
+          <ul>
+            <li>Unsync the source to the Transport.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">    
+        <div class="panel-title">    
+          <h2>Expressions</h2>
+        </div>
+        <div class="panel-body">           
+          <h2>Property    </h2>
+          <h3>Expression:Property </h3>
+          <ul>
+            <li>Get property.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">       
+          <h2>Conditions</h2>
+        </div>
+        <div class="panel-body">              
+          <h2>open    </h2>
+          <h4>Condition:On opened                    </h4>
+          <ul>
+            <li>Triggered when the stream is open.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On opened error                    </h4>
+          <ul>
+            <li>Triggered when the media stream can't open. This is fired either because the browser doesn't support the media stream, or the user blocked opening the microphone.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE 5>
+<html>
+  <head>
+    <title>Plugin : Player</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="js/jquery-3.1.0.min.js">                         </script>
+    <script src="js/bootstrap.min.js">         </script>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header"><a class="navbar-brand" href="./index.html">Home</a></div>
+        <ul class="nav navbar-nav">
+          <li><a href="./pluginsIndex.html">Plugins      </a></li>
+          <li><a href="./behaviorsIndex.html">Behaviors                   </a></li>
+          <li><a href="./effectsIndex.html">Effects    </a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Plugin : Player</h1>
+      <p>Author:Rex.Rainbow</p>
+      <ul>
+        <li>An audio file player with start, loop, and stop functions.</li>
+      </ul><a class="btn btn-default" href="https://dl.dropboxusercontent.com/u/5779181/C2Repo/Zip/plugins/rex_tonejs_player.7z">Download    </a>
+      <div class="panel panel-default">
+        <div class="panel-title">
+          <h2>Properties</h2>
+        </div>
+        <div class="panel-body">
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">   
+          <h2>Actions</h2>
+        </div>
+        <div class="panel-body">
+          <h2>Control      </h2>
+          <h3>Action:Start      </h3>
+          <ul>
+            <li>Play the buffer.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Start time ( number or string ) : When the player should start. Set &quot;&quot; to ignore this parameter.</li>
+              <li>Offset ( number or string ) : The offset from the beginning of the sample to start at. Set &quot;&quot; to ignore this parameter.</li>
+              <li>Duration ( number or string ) : How long the sample should play. Set &quot;&quot; to play full length of the sample (minus any offset).</li>
+            </ul>
+          </ul>
+          <h3>Action:Stop      </h3>
+          <ul>
+            <li>Stop the source at the specified time.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Time ( number or string ) : When the source should be stopped. Set &quot;&quot; to ignore this parameter.</li>
+            </ul>
+          </ul>
+          <h3>Action:Seek      </h3>
+          <ul>
+            <li>Seek to a specific time in the player's buffer. If the source is no longer playing at that time, it will stop.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Offset ( number or string ) : The time to seek to.</li>
+              <li>Time ( number or string ) : The time for the seek event to occur. Set &quot;&quot; to ignore this parameter.</li>
+            </ul>
+          </ul>
+          <h2>Creator      </h2>
+          <h3>Action:Create player      </h3>
+          <ul>
+            <li>Create player.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>URL ( string ) : The url from which to load the AudioBuffer.</li>
+            </ul>
+          </ul>
+          <h2>Dispose      </h2>
+          <h3>Action:Dispose      </h3>
+          <ul>
+            <li>Clean up.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Load      </h2>
+          <h3>Action:Load      </h3>
+          <ul>
+            <li>Load the audio file as an audio buffer.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>URL ( string ) : The url from which to load the AudioBuffer.</li>
+            </ul>
+          </ul>
+          <h2>Loop      </h2>
+          <h3>Action:Set loop points      </h3>
+          <ul>
+            <li>Set the loop start and end. Will only loop if loop is set to true.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Loop start ( number or string ) : The loop start time.</li>
+              <li>Loop end ( number or string ) : The loop end time.</li>
+            </ul>
+          </ul>
+          <h2>Properties      </h2>
+          <h3>Action:Set JSON      </h3>
+          <ul>
+            <li>Set properties to JSON string.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Properties ( string ) : Properties in JSON</li>
+            </ul>
+          </ul>
+          <h2>Property      </h2>
+          <h3>Action:Set value      </h3>
+          <ul>
+            <li>Set property.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Property ( string ) : Property name in dot notation</li>
+              <li>Value ( number or string ) : Value to set</li>
+            </ul>
+          </ul>
+          <h3>Action:Set JSON      </h3>
+          <ul>
+            <li>Set property to JSON string.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Property ( string ) : Property name in dot notation</li>
+              <li>JSON ( string ) : JSON value to set</li>
+            </ul>
+          </ul>
+          <h3>Action:Set boolean      </h3>
+          <ul>
+            <li>Set property to a boolean value.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Property ( string ) : Property name in dot notation</li>
+              <li>Boolean ( Combo ) : Boolean value.</li>
+              <ul>
+                <li>Options : [&quot;false&quot;,&quot;true&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h2>Sync      </h2>
+          <h3>Action:Sync      </h3>
+          <ul>
+            <li>Sync the source to the Transport so that all subsequent calls to start and stop are synced to the TransportTime instead of the AudioContext time.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Action:Unsync      </h3>
+          <ul>
+            <li>Unsync the source to the Transport.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">    
+        <div class="panel-title">    
+          <h2>Expressions</h2>
+        </div>
+        <div class="panel-body">           
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">       
+          <h2>Conditions</h2>
+        </div>
+        <div class="panel-body">              
+          <h2>Sampler    </h2>
+          <h4>Condition:On load                    </h4>
+          <ul>
+            <li>Triggered when load audio file.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
