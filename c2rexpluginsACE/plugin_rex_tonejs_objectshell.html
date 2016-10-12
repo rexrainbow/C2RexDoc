@@ -1,7 +1,7 @@
 <!DOCTYPE 5>
 <html>
   <head>
-    <title>Plugin : Player</title>
+    <title>Plugin : Object shell</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="css/bootstrap.min.css"/>
     <link rel="stylesheet" href="css/main.css"/>
@@ -20,11 +20,11 @@
       </div>
     </div>
     <div class="container">
-      <h1>Plugin : Player</h1>
+      <h1>Plugin : Object shell</h1>
       <p>Author:Rex.Rainbow</p>
       <ul>
-        <li>An audio file player with start, loop, and stop functions.</li>
-      </ul><a class="btn btn-default" href="https://dl.dropboxusercontent.com/u/5779181/C2Repo/Zip/plugins/rex_tonejs_player.7z">Download    </a>
+        <li>Shell of tone object.</li>
+      </ul><a class="btn btn-default" href="https://dl.dropboxusercontent.com/u/5779181/C2Repo/Zip/plugins/rex_tonejs_objectshell.7z">Download    </a>
       <div class="panel panel-default">
         <div class="panel-title">
           <h2>Properties</h2>
@@ -47,41 +47,23 @@
               <li>Port ( string ) : Port name. set &quot;&quot; to ignore this parameter.</li>
             </ul>
           </ul>
-          <h2>Control      </h2>
-          <h3>Action:Start      </h3>
+          <h2>Create      </h2>
+          <h3>Action:Create object      </h3>
           <ul>
-            <li>Play the buffer.   </li>
+            <li>Create object.   </li>
             <Parameters></Parameters>
             <ul>
-              <li>Start time ( number or string ) : When the player should start. Set &quot;&quot; to ignore this parameter.</li>
-              <li>Offset ( number or string ) : The offset from the beginning of the sample to start at. Set &quot;&quot; to ignore this parameter.</li>
-              <li>Duration ( number or string ) : How long the sample should play. Set &quot;&quot; to play full length of the sample (minus any offset).</li>
+              <li>Type name ( string ) : Type name.</li>
+              <li>Parameter {n} ( variadic ) : Parameters of this function call.</li>
             </ul>
           </ul>
-          <h3>Action:Stop      </h3>
+          <h3>Action:Create object w JSON      </h3>
           <ul>
-            <li>Stop the source at the specified time.   </li>
+            <li>Create object.   </li>
             <Parameters></Parameters>
             <ul>
-              <li>Time ( number or string ) : When the source should be stopped. Set &quot;&quot; to ignore this parameter.</li>
-            </ul>
-          </ul>
-          <h3>Action:Seek      </h3>
-          <ul>
-            <li>Seek to a specific time in the player's buffer. If the source is no longer playing at that time, it will stop.   </li>
-            <Parameters></Parameters>
-            <ul>
-              <li>Offset ( number or string ) : The time to seek to.</li>
-              <li>Time ( number or string ) : The time for the seek event to occur. Set &quot;&quot; to ignore this parameter.</li>
-            </ul>
-          </ul>
-          <h2>Creator      </h2>
-          <h3>Action:Create player      </h3>
-          <ul>
-            <li>Create player.   </li>
-            <Parameters></Parameters>
-            <ul>
-              <li>URL ( string ) : The url from which to load the AudioBuffer.</li>
+              <li>Type name ( string ) : Type name.</li>
+              <li>JSON ( string ) : Options in JSON</li>
             </ul>
           </ul>
           <h2>Dispose      </h2>
@@ -92,23 +74,14 @@
             <ul>
             </ul>
           </ul>
-          <h2>Load      </h2>
-          <h3>Action:Load      </h3>
+          <h2>Function      </h2>
+          <h3>Action:Call      </h3>
           <ul>
-            <li>Load the audio file as an audio buffer.   </li>
+            <li>Call function.   </li>
             <Parameters></Parameters>
             <ul>
-              <li>URL ( string ) : The url from which to load the AudioBuffer.</li>
-            </ul>
-          </ul>
-          <h2>Loop      </h2>
-          <h3>Action:Set loop points      </h3>
-          <ul>
-            <li>Set the loop start and end. Will only loop if loop is set to true.   </li>
-            <Parameters></Parameters>
-            <ul>
-              <li>Loop start ( number or string ) : The loop start time.</li>
-              <li>Loop end ( number or string ) : The loop end time.</li>
+              <li>Function name ( string ) : Function name.</li>
+              <li>Parameter {n} ( variadic ) : Parameters of this function call.</li>
             </ul>
           </ul>
           <h2>Properties      </h2>
@@ -151,21 +124,6 @@
               </ul>
             </ul>
           </ul>
-          <h2>Sync      </h2>
-          <h3>Action:Sync      </h3>
-          <ul>
-            <li>Sync the source to the Transport so that all subsequent calls to start and stop are synced to the TransportTime instead of the AudioContext time.   </li>
-            <Parameters></Parameters>
-            <ul>
-            </ul>
-          </ul>
-          <h3>Action:Unsync      </h3>
-          <ul>
-            <li>Unsync the source to the Transport.   </li>
-            <Parameters></Parameters>
-            <ul>
-            </ul>
-          </ul>
         </div>
       </div>
       <div class="panel panel-default">    
@@ -173,6 +131,14 @@
           <h2>Expressions</h2>
         </div>
         <div class="panel-body">           
+          <h2>Property    </h2>
+          <h3>Expression:Property </h3>
+          <ul>
+            <li>Get property.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
         </div>
       </div>
       <div class="panel panel-default">
@@ -180,14 +146,6 @@
           <h2>Conditions</h2>
         </div>
         <div class="panel-body">              
-          <h2>Sampler    </h2>
-          <h4>Condition:On load                    </h4>
-          <ul>
-            <li>Triggered when load audio file.                    </li>
-            <Parameters></Parameters>
-            <ul>
-            </ul>
-          </ul>
         </div>
       </div>
     </div>
