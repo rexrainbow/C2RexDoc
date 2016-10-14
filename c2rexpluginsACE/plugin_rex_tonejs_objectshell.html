@@ -57,14 +57,6 @@
               <li>Parameter {n} ( variadic ) : Parameters of this function call.</li>
             </ul>
           </ul>
-          <h2>Dispose      </h2>
-          <h3>Action:Dispose      </h3>
-          <ul>
-            <li>Clean up.   </li>
-            <Parameters></Parameters>
-            <ul>
-            </ul>
-          </ul>
           <h2>Function      </h2>
           <h3>Action:Call      </h3>
           <ul>
@@ -122,6 +114,15 @@
           <h2>Expressions</h2>
         </div>
         <div class="panel-body">           
+          <h2>Callback    </h2>
+          <h3>Expression:Param </h3>
+          <ul>
+            <li>Get the value of a parameter passed to the callback.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Index ( number or string ) : The zero-based index of the parameter to get, or name in string.</li>
+            </ul>
+          </ul>
           <h2>Property    </h2>
           <h3>Expression:Property </h3>
           <ul>
@@ -138,18 +139,12 @@
         </div>
         <div class="panel-body">              
           <h2>Callback    </h2>
-          <h4>Condition:On completed                    </h4>
+          <h4>Condition:Callback                    </h4>
           <ul>
-            <li>Callback of completed (On load).                    </li>
+            <li>Callback.                    </li>
             <Parameters></Parameters>
             <ul>
-            </ul>
-          </ul>
-          <h4>Condition:On error                    </h4>
-          <ul>
-            <li>Callback of error.                    </li>
-            <Parameters></Parameters>
-            <ul>
+              <li>Tag ( string ) : A tag, which can be anything you like, to distinguish between different callback.    </li>
             </ul>
           </ul>
         </div>
