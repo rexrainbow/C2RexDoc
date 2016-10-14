@@ -23,7 +23,7 @@
       <h1>Plugin : ToneJS api</h1>
       <p>Author:Rex.Rainbow</p>
       <ul>
-        <li>Base object of tone.js. https://github.com/Tonejs/Tone.js</li>
+        <li>Tone objects in a dictionary. https://github.com/Tonejs/Tone.js</li>
       </ul><a class="btn btn-default" href="https://dl.dropboxusercontent.com/u/5779181/C2Repo/Zip/plugins/rex_tonejs_api.7z">Download    </a>
       <div class="panel panel-default">
         <div class="panel-title">
@@ -44,18 +44,7 @@
           <h2>Actions</h2>
         </div>
         <div class="panel-body">
-          <h2>Connect      </h2>
-          <h3>Action:Connect      </h3>
-          <ul>
-            <li>Connect to object.   </li>
-            <Parameters></Parameters>
-            <ul>
-              <li>A ( string ) : Variable name of this tone object</li>
-              <li>B ( string ) : Connect to object</li>
-              <li>Port ( string ) : Port name. set &quot;&quot; to ignore this parameter.</li>
-            </ul>
-          </ul>
-          <h2>Create      </h2>
+          <h2>0. Create      </h2>
           <h3>Action:Create object      </h3>
           <ul>
             <li>Create object.   </li>
@@ -64,6 +53,17 @@
               <li>Variable name ( number or string ) : Variable name of this tone object</li>
               <li>Type name ( string ) : Type name.</li>
               <li>Parameter {n} ( variadic ) : Parameters of this function call.</li>
+            </ul>
+          </ul>
+          <h2>Connect      </h2>
+          <h3>Action:Connect      </h3>
+          <ul>
+            <li>Connect to object.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>A ( number or string ) : Variable name of this tone object</li>
+              <li>B ( number or string ) : Connect to object</li>
+              <li>Port ( string ) : Port name. set &quot;&quot; to ignore this parameter.</li>
             </ul>
           </ul>
           <h2>Function      </h2>
