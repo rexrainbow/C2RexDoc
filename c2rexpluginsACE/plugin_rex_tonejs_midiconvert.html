@@ -30,6 +30,13 @@
           <h2>Properties</h2>
         </div>
         <div class="panel-body">
+          <h3>Timescale to playbackRate</h3>
+          <ul>
+            <li>Choose whether the playback rate changes with the time scale.                    </li>
+            <ul>
+              <li>Options : [&quot;No&quot;,&quot;Yes&quot;]</li>
+            </ul>
+          </ul>
         </div>
       </div>
       <div class="panel panel-default">
@@ -52,7 +59,7 @@
             <li>Start playing notes at the given time.   </li>
             <Parameters></Parameters>
             <ul>
-              <li>Time ( number or string ) : When the note should be triggered. Time in seconds(1), Notation(&quot;4n&quot;, &quot;8t&quot;), TransportTime(&quot;4:3:2&quot;), Frequency(&quot;8hz&quot;), Now-Relative(&quot;+1&quot;), Expressions(&quot;3:0 + 2 - (1m / 7)&quot;).</li>
+              <li>Time ( string ) : When the note should be triggered. Time in Now-Relative(&quot;+1&quot;), Expressions(&quot;3:0 + 2 - (1m / 7)&quot;).</li>
             </ul>
           </ul>
           <h3>Action:Stop      </h3>
@@ -60,7 +67,71 @@
             <li>Stop playing notes at the given time.   </li>
             <Parameters></Parameters>
             <ul>
-              <li>Time ( number or string ) : When the note should be triggered. Time in seconds(1), Notation(&quot;4n&quot;, &quot;8t&quot;), TransportTime(&quot;4:3:2&quot;), Frequency(&quot;8hz&quot;), Now-Relative(&quot;+1&quot;), Expressions(&quot;3:0 + 2 - (1m / 7)&quot;).</li>
+              <li>Time ( string ) : When the note should be triggered. Time in Now-Relative(&quot;+1&quot;), Expressions(&quot;3:0 + 2 - (1m / 7)&quot;).</li>
+            </ul>
+          </ul>
+          <h3>Action:Pause      </h3>
+          <ul>
+            <li>Pause playing notes at the given time.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Time ( string ) : When the note should be triggered. Time in Now-Relative(&quot;+1&quot;), Expressions(&quot;3:0 + 2 - (1m / 7)&quot;).</li>
+            </ul>
+          </ul>
+          <h3>Action:Resume      </h3>
+          <ul>
+            <li>Resume playing notes at the given time.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Time ( string ) : When the note should be triggered. Time in Now-Relative(&quot;+1&quot;), Expressions(&quot;3:0 + 2 - (1m / 7)&quot;).</li>
+            </ul>
+          </ul>
+          <h3>Action:Start      </h3>
+          <ul>
+            <li>Set playback rate.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Playback rate ( number ) : Playback rate to set</li>
+            </ul>
+          </ul>
+          <h2>Properties      </h2>
+          <h3>Action:Set JSON      </h3>
+          <ul>
+            <li>Set properties to JSON string.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Properties ( string ) : Properties in JSON</li>
+            </ul>
+          </ul>
+          <h2>Property      </h2>
+          <h3>Action:Set value      </h3>
+          <ul>
+            <li>Set property.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Property ( string ) : Property name in dot notation</li>
+              <li>Value ( number or string ) : Value to set</li>
+            </ul>
+          </ul>
+          <h3>Action:Set JSON      </h3>
+          <ul>
+            <li>Set property to JSON string.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Property ( string ) : Property name in dot notation</li>
+              <li>JSON ( string ) : JSON value to set</li>
+            </ul>
+          </ul>
+          <h3>Action:Set boolean      </h3>
+          <ul>
+            <li>Set property to a boolean value.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Property ( string ) : Property name in dot notation</li>
+              <li>Boolean ( Combo ) : Boolean value.</li>
+              <ul>
+                <li>Options : [&quot;false&quot;,&quot;true&quot;]</li>
+              </ul>
             </ul>
           </ul>
         </div>
@@ -128,6 +199,13 @@
             <ul>
             </ul>
           </ul>
+          <h3>Expression:EndTime </h3>
+          <ul>
+            <li>End time of current midi, in seconds.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
         </div>
       </div>
       <div class="panel panel-default">
@@ -150,10 +228,41 @@
             <ul>
             </ul>
           </ul>
-          <h2>Event    </h2>
+          <h2>Note    </h2>
+          <h4>Condition:Compare track index                    </h4>
+          <ul>
+            <li>Compare track index of note event.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Comparison ( cmp ) : Choose the way to compare the current track.    </li>
+              <li>Track index ( number ) : The track index, to compare to.    </li>
+            </ul>
+          </ul>
+          <h2>Play    </h2>
           <h4>Condition:On event                    </h4>
           <ul>
             <li>Triggered when event fired.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On ended                    </h4>
+          <ul>
+            <li>Triggered when playing ended.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On started                    </h4>
+          <ul>
+            <li>Triggered when playing started.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:Is playing                    </h4>
+          <ul>
+            <li>Is playing.                    </li>
             <Parameters></Parameters>
             <ul>
             </ul>
