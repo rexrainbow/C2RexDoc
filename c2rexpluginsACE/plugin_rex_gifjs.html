@@ -1,0 +1,121 @@
+<!DOCTYPE 5>
+<html>
+  <head>
+    <title>Plugin : GIF render</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="js/jquery-3.1.0.min.js">                         </script>
+    <script src="js/bootstrap.min.js">         </script>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header"><a class="navbar-brand" href="./index.html">Home</a></div>
+        <ul class="nav navbar-nav">
+          <li><a href="./pluginsIndex.html">Plugins      </a></li>
+          <li><a href="./behaviorsIndex.html">Behaviors                   </a></li>
+          <li><a href="./effectsIndex.html">Effects    </a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Plugin : GIF render</h1>
+      <p>Author:Rex.Rainbow</p>
+      <ul>
+        <li>JavaScript GIF encoder.</li>
+      </ul><a class="btn btn-default" href="https://dl.dropboxusercontent.com/u/5779181/C2Repo/Zip/plugins/rex_gifjs.7z">Download    </a>
+      <div class="panel panel-default">
+        <div class="panel-title">
+          <h2>Properties</h2>
+        </div>
+        <div class="panel-body">
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">   
+          <h2>Actions</h2>
+        </div>
+        <div class="panel-body">
+          <h2>0. Configuration      </h2>
+          <h3>Action:Set repeat      </h3>
+          <ul>
+            <li>Set repeat count.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Repeat ( number ) : Repeat count, -1 = no repeat, 0 = forever</li>
+            </ul>
+          </ul>
+          <h3>Action:Set quality      </h3>
+          <ul>
+            <li>Set pixel sample interval.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Quality ( number ) : Pixel sample interval, lower is better.</li>
+            </ul>
+          </ul>
+          <h3>Action:Set workers      </h3>
+          <ul>
+            <li>Set workers.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Workers ( number ) : Number of web workers to spawn</li>
+            </ul>
+          </ul>
+          <h2>1. Add frame      </h2>
+          <h3>Action:Add frame      </h3>
+          <ul>
+            <li>Add frame from canvas.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Frame ( object ) : Sprite, canvas object.</li>
+              <li>Delay ( number ) : Frame delay, in seconds</li>
+              <li>Action ( Combo ) : Copy or add frame.</li>
+              <ul>
+                <li>Options : [&quot;Add&quot;,&quot;Copy&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h2>2. Render      </h2>
+          <h3>Action:Render      </h3>
+          <ul>
+            <li>Render GIF.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">    
+        <div class="panel-title">    
+          <h2>Expressions</h2>
+        </div>
+        <div class="panel-body">           
+          <h2>Result    </h2>
+          <h3>Expression:ObjectURL </h3>
+          <ul>
+            <li>Get object URL of render result. Return &quot;&quot; if result is invalid.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">       
+          <h2>Conditions</h2>
+        </div>
+        <div class="panel-body">              
+          <h2>Event    </h2>
+          <h4>Condition:On finished                    </h4>
+          <ul>
+            <li>Trigger when render is finished                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
