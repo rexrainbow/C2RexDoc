@@ -77,7 +77,7 @@
           <h2>1. Add frame      </h2>
           <h3>Action:Add frame      </h3>
           <ul>
-            <li>Add frame from canvas.   </li>
+            <li>Add frame from sprite or canvas.   </li>
             <Parameters></Parameters>
             <ul>
               <li>Frame ( object ) : Current frame of Sprite, or canvas object.</li>
@@ -88,10 +88,27 @@
               </ul>
             </ul>
           </ul>
+          <h3>Action:Add uri      </h3>
+          <ul>
+            <li>Add frame from base64 string.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>URI ( string ) : Image in base64</li>
+              <li>Delay ( number ) : Frame delay, in seconds</li>
+            </ul>
+          </ul>
           <h2>2. Render      </h2>
           <h3>Action:Render      </h3>
           <ul>
             <li>Render GIF.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Result      </h2>
+          <h3>Action:Release      </h3>
+          <ul>
+            <li>Release object URL of render result.   </li>
             <Parameters></Parameters>
             <ul>
             </ul>
@@ -107,6 +124,13 @@
           <h3>Expression:ObjectURL </h3>
           <ul>
             <li>Get object URL of render result. Return &quot;&quot; if result is invalid.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:ContentType </h3>
+          <ul>
+            <li>Get content type of render result. Return &quot;&quot; if result is invalid.</li>
             <Parameters></Parameters>
             <ul>
             </ul>
