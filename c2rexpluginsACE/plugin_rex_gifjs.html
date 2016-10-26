@@ -23,7 +23,7 @@
       <h1>Plugin : GIF render</h1>
       <p>Author:Rex.Rainbow</p>
       <ul>
-        <li>GIF encoder.</li>
+        <li>GIF encoder. Reference: https://github.com/jnordberg/gif.js</li>
       </ul><a class="btn btn-default" href="https://dl.dropboxusercontent.com/u/5779181/C2Repo/Zip/plugins/rex_gifjs.7z">Download    </a>
       <div class="panel panel-default">
         <div class="panel-title">
@@ -41,6 +41,14 @@
           <h3>Workers</h3>
           <ul>
             <li>Number of web workers to spawn.                    </li>
+          </ul>
+          <h3>Background</h3>
+          <ul>
+            <li>Background color where source image is transparent.                    </li>
+          </ul>
+          <h3>Transparent</h3>
+          <ul>
+            <li>Transparent hex color, &quot;0x00FF00&quot; = green, &quot;&quot; = null.                    </li>
           </ul>
         </div>
       </div>
@@ -72,6 +80,22 @@
             <Parameters></Parameters>
             <ul>
               <li>Workers ( number ) : Number of web workers to spawn.</li>
+            </ul>
+          </ul>
+          <h3>Action:Set background color      </h3>
+          <ul>
+            <li>Set background color   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Background ( number or string ) : Background color where source image is transparent.</li>
+            </ul>
+          </ul>
+          <h3>Action:Set transparent      </h3>
+          <ul>
+            <li>Set transparent hex color   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Transparent ( number or string ) : Transparent hex color, &quot;0x00FF00&quot; = green, &quot;&quot; = null.</li>
             </ul>
           </ul>
           <h2>1. Add frame      </h2>
