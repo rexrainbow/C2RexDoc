@@ -57,6 +57,23 @@
           <h2>Actions</h2>
         </div>
         <div class="panel-body">
+          <h2>Job      </h2>
+          <h3>Action:Recognize      </h3>
+          <ul>
+            <li>Figures out what words are in image, where the words are in image.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Image ( object ) : Current frame of Sprite, or canvas object.</li>
+            </ul>
+          </ul>
+          <h3>Action:Detect      </h3>
+          <ul>
+            <li>Figures out what script (e.g. 'Latin', 'Chinese') the words in image are written in.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Image ( object ) : Current frame of Sprite, or canvas object.</li>
+            </ul>
+          </ul>
           <h2>Options      </h2>
           <h3>Action:Add property      </h3>
           <ul>
@@ -73,15 +90,6 @@
             <Parameters></Parameters>
             <ul>
               <li>Language ( string ) : Language.</li>
-            </ul>
-          </ul>
-          <h2>recognize      </h2>
-          <h3>Action:Recognize      </h3>
-          <ul>
-            <li>Recognize image.   </li>
-            <Parameters></Parameters>
-            <ul>
-              <li>Image ( object ) : Current frame of Sprite, or canvas object.</li>
             </ul>
           </ul>
         </div>
@@ -109,7 +117,14 @@
           <h2>Result    </h2>
           <h3>Expression:Result </h3>
           <ul>
-            <li>Get result text.</li>
+            <li>Get result text or script type.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:Error </h3>
+          <ul>
+            <li>Get error.</li>
             <Parameters></Parameters>
             <ul>
             </ul>
