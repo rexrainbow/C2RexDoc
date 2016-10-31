@@ -100,6 +100,16 @@
               <li>Value ( number or string ) : Value of extra data</li>
             </ul>
           </ul>
+          <h2>Global data      </h2>
+          <h3>Action:Set global data      </h3>
+          <ul>
+            <li>Set global data.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Index ( number or string ) : Index of extra data, can be number of string</li>
+              <li>Value ( number or string ) : Value of extra data</li>
+            </ul>
+          </ul>
           <h2>Import      </h2>
           <h3>Action:Import grids      </h3>
           <ul>
@@ -171,10 +181,9 @@
           <h2>Extra data    </h2>
           <h3>Expression:ExtraData </h3>
           <ul>
-            <li>Get extra data by index. Used in &quot;condition:On load&quot;. Add 2nd parameter for default value.</li>
+            <li>Get extra data. Used in &quot;condition:On load&quot;. Add 1st parameter for key, add 2nd parameter for default value.</li>
             <Parameters></Parameters>
             <ul>
-              <li>Index ( number or string ) : Index of extra data, can be number of string</li>
             </ul>
           </ul>
           <h2>For each    </h2>
@@ -202,6 +211,14 @@
           <h3>Expression:CurPY </h3>
           <ul>
             <li>Current Physical Y in a For Each loop.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Global data    </h2>
+          <h3>Expression:GlobalData </h3>
+          <ul>
+            <li>Get global data. Used in &quot;condition:On load&quot;. Add 1st parameter for key, add 2nd parameter for default value.</li>
             <Parameters></Parameters>
             <ul>
             </ul>
