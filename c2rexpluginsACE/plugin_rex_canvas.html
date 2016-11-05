@@ -1,0 +1,457 @@
+<!DOCTYPE 5>
+<html>
+  <head>
+    <title>Plugin : Canvas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="js/jquery-3.1.0.min.js">                         </script>
+    <script src="js/bootstrap.min.js">         </script>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header"><a class="navbar-brand" href="./index.html">Home</a></div>
+        <ul class="nav navbar-nav">
+          <li><a href="./pluginsIndex.html">Plugins      </a></li>
+          <li><a href="./behaviorsIndex.html">Behaviors                   </a></li>
+          <li><a href="./effectsIndex.html">Effects    </a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Plugin : Canvas</h1>
+      <p>Author:Rex.Rainbow</p>
+      <ul>
+        <li>Canvas element and api. https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D</li>
+      </ul><a class="btn btn-default" href="https://dl.dropboxusercontent.com/u/5779181/C2Repo/Zip/plugins/rex_canvas.7z">Download    </a>
+      <div class="panel panel-default">
+        <div class="panel-title">
+          <h2>Properties</h2>
+        </div>
+        <div class="panel-body">
+          <h3>Image</h3>
+          <ul>
+            <li>Click to edit the object's image.                    </li>
+          </ul>
+          <h3>Initial visibility</h3>
+          <ul>
+            <li>Choose whether the object is visible when the layout starts.                    </li>
+            <ul>
+              <li>Options : [&quot;Visible&quot;,&quot;Invisible&quot;]</li>
+            </ul>
+          </ul>
+          <h3>Hotspot</h3>
+          <ul>
+            <li>Choose the location of the hot spot in the object.                    </li>
+            <ul>
+              <li>Options : [&quot;Top-left&quot;,&quot;Top&quot;,&quot;Top-right&quot;,&quot;Left&quot;,&quot;Center&quot;,&quot;Right&quot;,&quot;Bottom-left&quot;,&quot;Bottom&quot;,&quot;Bottom-right&quot;]</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">   
+          <h2>Actions</h2>
+        </div>
+        <div class="panel-body">
+          <h2>Drawing paths      </h2>
+          <h3>Action:Fill      </h3>
+          <ul>
+            <li>Fills the subpaths with the current fill style.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Fill rule ( Combo ) : The algorithm by which to determine if a point is inside a path or outside a path.</li>
+              <ul>
+                <li>Options : [&quot;nonzero&quot;,&quot;evenodd&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h3>Action:Stroke      </h3>
+          <ul>
+            <li>Strokes the subpaths with the current stroke style.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Action:Clip      </h3>
+          <ul>
+            <li>Creates a clipping path from the current sub-paths. Everything drawn after clip() is called appears inside the clipping path only.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Fill rule ( Combo ) : The algorithm by which to determine if a point is inside a path or outside a path.</li>
+              <ul>
+                <li>Options : [&quot;nonzero&quot;,&quot;evenodd&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h2>Drawing rectangles      </h2>
+          <h3>Action:Clear rectangle      </h3>
+          <ul>
+            <li>Clear rectangle.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>x ( number ) : The x axis of the coordinate for the rectangle starting point.</li>
+              <li>y ( number ) : The y axis of the coordinate for the rectangle starting point.</li>
+              <li>width ( number ) : The rectangle's width.</li>
+              <li>height ( number ) : The rectangle's height.</li>
+            </ul>
+          </ul>
+          <h3>Action:Fill rectangle      </h3>
+          <ul>
+            <li>Fill rectangle.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>x ( number ) : The x axis of the coordinate for the rectangle starting point.</li>
+              <li>y ( number ) : The y axis of the coordinate for the rectangle starting point.</li>
+              <li>width ( number ) : The rectangle's width.</li>
+              <li>height ( number ) : The rectangle's height.</li>
+            </ul>
+          </ul>
+          <h3>Action:Stroke rectangle      </h3>
+          <ul>
+            <li>Stroke rectangle.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>x ( number ) : The x axis of the coordinate for the rectangle starting point.</li>
+              <li>y ( number ) : The y axis of the coordinate for the rectangle starting point.</li>
+              <li>width ( number ) : The rectangle's width.</li>
+              <li>height ( number ) : The rectangle's height.</li>
+            </ul>
+          </ul>
+          <h2>Drawing text      </h2>
+          <h3>Action:Fill text      </h3>
+          <ul>
+            <li>Fill text.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Text ( string ) : The text to render.</li>
+              <li>x ( number ) : The x axis of the coordinate for the text starting point.</li>
+              <li>y ( number ) : The y axis of the coordinate for the text starting point.</li>
+            </ul>
+          </ul>
+          <h3>Action:Stroke text      </h3>
+          <ul>
+            <li>Stroke text.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Text ( string ) : The text to render.</li>
+              <li>x ( number ) : The x axis of the coordinate for the text starting point.</li>
+              <li>y ( number ) : The y axis of the coordinate for the text starting point.</li>
+            </ul>
+          </ul>
+          <h2>Fill and stroke styles      </h2>
+          <h3>Action:Set fill color      </h3>
+          <ul>
+            <li>Set fill color.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Color ( string ) : A DOMString parsed as CSS &lt;color&gt; value.</li>
+            </ul>
+          </ul>
+          <h3>Action:Set stroke color      </h3>
+          <ul>
+            <li>Set stroke color.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Color ( string ) : A DOMString parsed as CSS &lt;color&gt; value.</li>
+            </ul>
+          </ul>
+          <h2>Line styles      </h2>
+          <h3>Action:Set line width      </h3>
+          <ul>
+            <li>Set line width.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Width ( number ) : A number specifying the line width in space units. Zero, negative, Infinity and NaN values are ignored.</li>
+            </ul>
+          </ul>
+          <h3>Action:Set line cap      </h3>
+          <ul>
+            <li>How the end points of every line are drawn.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Cap ( Combo ) : How the end points of every line are drawn.</li>
+              <ul>
+                <li>Options : [&quot;butt&quot;,&quot;round&quot;,&quot;square&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h3>Action:Set line cap #      </h3>
+          <ul>
+            <li>How the end points of every line are drawn.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Cap ( string ) : How the end points of every line are drawn.</li>
+            </ul>
+          </ul>
+          <h3>Action:Set line join      </h3>
+          <ul>
+            <li>How two connecting segments.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Join ( Combo ) : How two connecting segments.</li>
+              <ul>
+                <li>Options : [&quot;bevel&quot;,&quot;round&quot;,&quot;miter&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h3>Action:Set line join #      </h3>
+          <ul>
+            <li>How two connecting segments.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Join ( string ) : How two connecting segments.</li>
+            </ul>
+          </ul>
+          <h3>Action:Set miter limit      </h3>
+          <ul>
+            <li>Set miter limit.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Value ( number ) : A number specifying the line width in space units. Zero, negative, Infinity and NaN values are ignored.</li>
+            </ul>
+          </ul>
+          <h2>Load      </h2>
+          <h3>Action:Load image from URL      </h3>
+          <ul>
+            <li>Replace the currently displaying animation frame with an image loaded from a web address or data URI.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>URI ( string ) : Enter the URL on the web, or data URI, of an image to load.</li>
+              <li>Size ( Combo ) : Whether to resize the sprite to the size of the loaded image, or stretch it to the current size.</li>
+              <ul>
+                <li>Options : [&quot;Resize to image size&quot;,&quot;Keep current size&quot;,&quot;Scale down if larger than canvas&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h2>Paste      </h2>
+          <h3>Action:Erase object      </h3>
+          <ul>
+            <li>Erase objects.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>object ( object ) : Object to erase.</li>
+            </ul>
+          </ul>
+          <h2>Paths      </h2>
+          <h3>Action:Begin path      </h3>
+          <ul>
+            <li>Starts a new path by emptying the list of sub-paths. Call this method when you want to create a new path.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Action:Close path      </h3>
+          <ul>
+            <li>Causes the point of the pen to move back to the start of the current sub-path. It tries to draw a straight line from the current point to the start.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Action:Move to      </h3>
+          <ul>
+            <li>Moves the starting point of a new sub-path to the (x, y) coordinates.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>x ( number ) : The x axis of the point.</li>
+              <li>y ( number ) : The y axis of the point.</li>
+            </ul>
+          </ul>
+          <h3>Action:Line to      </h3>
+          <ul>
+            <li>Connects the last point in the subpath to the x, y coordinates with a straight line.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>x ( number ) : The x axis of the coordinate for the end of the line.</li>
+              <li>y ( number ) : The y axis of the coordinate for the end of the line.</li>
+            </ul>
+          </ul>
+          <h3>Action:Bezier curve to      </h3>
+          <ul>
+            <li>Adds a cubic Bezier curve to the path.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>cp1x ( number ) : The x axis of the coordinate for the first control point.</li>
+              <li>cp1y ( number ) : The y axis of the coordinate for first control point.</li>
+              <li>cp2x ( number ) : The x axis of the coordinate for the second control point.</li>
+              <li>cp2y ( number ) : ThThe y axis of the coordinate for the second control point.</li>
+              <li>x ( number ) : The x axis of the coordinate for the end point.</li>
+              <li>y ( number ) : The y axis of the coordinate for the end point.</li>
+            </ul>
+          </ul>
+          <h3>Action:Quadratic curve to      </h3>
+          <ul>
+            <li>Adds a quadratic Bézier curve to the current path.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>cpx ( number ) : The x axis of the coordinate for the control point.</li>
+              <li>cpy ( number ) : The y axis of the coordinate for the control point.</li>
+              <li>x ( number ) : The x axis of the coordinate for the end point.</li>
+              <li>y ( number ) : The y axis of the coordinate for the end point.</li>
+            </ul>
+          </ul>
+          <h3>Action:Arc      </h3>
+          <ul>
+            <li>Adds an arc to the path.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>x ( number ) : The x coordinate of the arc's center.</li>
+              <li>y ( number ) : The y coordinate of the arc's center.</li>
+              <li>radius ( number ) : The arc's radius.</li>
+              <li>start angle ( number ) : The angle at which the arc starts, measured clockwise from the positive x axis and expressed in degrees.</li>
+              <li>end angle ( number ) : The angle at which the arc ends, measured clockwise from the positive x axis and expressed in degrees.</li>
+              <li>Clockwise ( Combo ) : The arc to be drawn counter-clockwise between the two angles</li>
+              <ul>
+                <li>Options : [&quot;anti-clockwise&quot;,&quot;clockwise&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h3>Action:Arc      </h3>
+          <ul>
+            <li>Adds an arc to the path with the given control points and radius, connected to the previous point by a straight line.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>x1 ( number ) : The x axis of the coordinate for the second control point.</li>
+              <li>y1 ( number ) : The y axis of the coordinate for the first control point.</li>
+              <li>x2 ( number ) : The x axis of the coordinate for the first control point.</li>
+              <li>y2 ( number ) : The y axis of the coordinate for the second control point.</li>
+              <li>radius ( number ) : The arc's radius.</li>
+            </ul>
+          </ul>
+          <h3>Action:Fill rectangle      </h3>
+          <ul>
+            <li>Creates a path for a rectangle.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>x ( number ) : The x axis of the coordinate for the rectangle starting point.</li>
+              <li>y ( number ) : The y axis of the coordinate for the rectangle starting point.</li>
+              <li>width ( number ) : The rectangle's width.</li>
+              <li>height ( number ) : The rectangle's height.</li>
+            </ul>
+          </ul>
+          <h2>Script      </h2>
+          <h3>Action:Eval      </h3>
+          <ul>
+            <li>Run code to draw on canvas (ctx).   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Js code ( string ) : Code string for drawing.</li>
+            </ul>
+          </ul>
+          <h2>Shadows      </h2>
+          <h3>Action:Set shadow blur      </h3>
+          <ul>
+            <li>Set shadow blur.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>level ( number ) : A float specifying the level of the blurring effect. The default value is 0. Negative, Infinity or NaN values are ignored.</li>
+            </ul>
+          </ul>
+          <h3>Action:Set shadow color      </h3>
+          <ul>
+            <li>Set shadow color.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Color ( string ) : A DOMString parsed as CSS &lt;color&gt; value.</li>
+            </ul>
+          </ul>
+          <h3>Action:Set shadow offsetY      </h3>
+          <ul>
+            <li>Set shadow offsetY.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Offset ( number ) : A float specifying the distance that the shadow will be offset in vertical distance. The default value is 0. Infinity or NaN values are ignored.</li>
+            </ul>
+          </ul>
+          <h3>Action:Set shadow offsetX      </h3>
+          <ul>
+            <li>Set shadow offsetX.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Offset ( number ) : A float specifying the distance that the shadow will be offset in horizontal distance. The default value is 0. Infinity or NaN values are ignored.</li>
+            </ul>
+          </ul>
+          <h2>Text styles      </h2>
+          <h3>Action:Set font      </h3>
+          <ul>
+            <li>Set font.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Font ( string ) : A DOMString parsed as CSS font value.</li>
+            </ul>
+          </ul>
+          <h3>Action:Set text align      </h3>
+          <ul>
+            <li>Specifies the current text alignment being used when drawing text.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Align ( Combo ) : Specifies the current text alignment being used when drawing text.</li>
+              <ul>
+                <li>Options : [&quot;left&quot;,&quot;right&quot;,&quot;center&quot;,&quot;start&quot;,&quot;end&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h3>Action:Set text align #      </h3>
+          <ul>
+            <li>Specifies the current text alignment being used when drawing text.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Align ( string ) : Specifies the current text alignment being used when drawing text.</li>
+            </ul>
+          </ul>
+          <h3>Action:Set text baseline      </h3>
+          <ul>
+            <li>Specifies the current text alignment being used when drawing text.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Baseline ( Combo ) : Specifies the current text baseline.</li>
+              <ul>
+                <li>Options : [&quot;top&quot;,&quot;hanging&quot;,&quot;middle&quot;,&quot;alphabetic&quot;,&quot;ideographic&quot;,&quot;bottom&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h3>Action:Set text baseline #      </h3>
+          <ul>
+            <li>Specifies the current text alignment being used when drawing text.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Baseline ( string ) : Specifies the current text baseline.</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">    
+        <div class="panel-title">    
+          <h2>Expressions</h2>
+        </div>
+        <div class="panel-body">           
+          <h2>Drawing text    </h2>
+          <h3>Expression:TextWidth </h3>
+          <ul>
+            <li>Get text width in current ctx.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Text ( string ) : The text to render.</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">       
+          <h2>Conditions</h2>
+        </div>
+        <div class="panel-body">              
+          <h2>Web    </h2>
+          <h4>Condition:On image URL loaded                    </h4>
+          <ul>
+            <li>Triggered after 'Load image from URL' when the image has finished loading.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

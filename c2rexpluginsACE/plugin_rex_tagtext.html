@@ -189,6 +189,14 @@
               <li>Color ( number or string ) : The stroke color, in the form rgb(r, g, b).</li>
             </ul>
           </ul>
+          <h3>Action:Insert image      </h3>
+          <ul>
+            <li>Insert image.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Key ( string ) : Index of this image.</li>
+            </ul>
+          </ul>
           <h2>Canvas      </h2>
           <h3>Action:Lock canvas size      </h3>
           <ul>
@@ -202,6 +210,32 @@
           <h3>Action:Unlock canvas size      </h3>
           <ul>
             <li>Unlock canvas size.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Image bank      </h2>
+          <h3>Action:Add image      </h3>
+          <ul>
+            <li>Add image from sprite or canvas.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Key ( string ) : Index of this image.</li>
+              <li>Image ( object ) : Current frame of Sprite, or canvas object.</li>
+              <li>Y offset ( number ) : Y offset of this image.</li>
+            </ul>
+          </ul>
+          <h3>Action:Remove image      </h3>
+          <ul>
+            <li>Remove image by key.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Key ( string ) : Index of this image.</li>
+            </ul>
+          </ul>
+          <h3>Action:Remove all      </h3>
+          <ul>
+            <li>Remove all images.   </li>
             <Parameters></Parameters>
             <ul>
             </ul>
