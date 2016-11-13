@@ -9,19 +9,19 @@
 
 		<meta name="google-site-verification" content="AbKU1w_lq8tjMKAN0yt_O0WFqwDr4zH5bHiXJEpyErI" />
 		<link id="wsite-base-style" rel="stylesheet" type="text/css" href="http://cdn2.editmysite.com/css/sites.css?buildTime=1234" />
-<link rel="stylesheet" type="text/css" href="http://cdn1.editmysite.com/editor/libraries/fancybox/fancybox.css?1234" />
+<link rel="stylesheet" type="text/css" href="http://cdn2.editmysite.com/css/old/fancybox.css?1234" />
 <link rel="stylesheet" type="text/css" href="http://cdn2.editmysite.com/css/social-icons.css?buildtime=1234" media="screen,projection" />
-<link rel="stylesheet" type="text/css" href="files/main_style.css?1469150796" title="wsite-theme-css" />
+<link rel="stylesheet" type="text/css" href="files/main_style.css?1479003966" title="wsite-theme-css" />
 <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,200,700&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
 <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
 
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,700,400italic,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,700,400italic,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
 <style type='text/css'>
-.wsite-elements.wsite-not-footer div.paragraph, .wsite-elements.wsite-not-footer p, .wsite-elements.wsite-not-footer .product-block .product-title, .wsite-elements.wsite-not-footer .product-description, .wsite-elements.wsite-not-footer .wsite-form-field label, .wsite-elements.wsite-not-footer .wsite-form-field label, #wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {font-family:"Open Sans" !important;}
+.wsite-elements.wsite-not-footer:not(.wsite-header-elements) div.paragraph, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) p, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-block .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-description, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, #wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {font-family:"Open Sans" !important;}
 #wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {}
 .wsite-elements.wsite-footer div.paragraph, .wsite-elements.wsite-footer p, .wsite-elements.wsite-footer .product-block .product-title, .wsite-elements.wsite-footer .product-description, .wsite-elements.wsite-footer .wsite-form-field label, .wsite-elements.wsite-footer .wsite-form-field label{}
-.wsite-elements.wsite-not-footer h2, .wsite-elements.wsite-not-footer .product-long .product-title, .wsite-elements.wsite-not-footer .product-large .product-title, .wsite-elements.wsite-not-footer .product-small .product-title, #wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {font-family:"Open Sans" !important;}
+.wsite-elements.wsite-not-footer:not(.wsite-header-elements) h2, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-long .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-large .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-small .product-title, #wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {font-family:"Open Sans" !important;}
 #wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {}
 .wsite-elements.wsite-footer h2, .wsite-elements.wsite-footer .product-long .product-title, .wsite-elements.wsite-footer .product-large .product-title, .wsite-elements.wsite-footer .product-small .product-title{}
 #wsite-title {}
@@ -32,8 +32,8 @@
 .fancybox-title {}
 .wslide-caption-text {}
 .wsite-phone {}
-.wsite-headline {}
-.wsite-headline-paragraph {}
+.wsite-headline,.wsite-header-section .wsite-content-title {}
+.wsite-headline-paragraph,.wsite-header-section .paragraph {}
 .wsite-button-inner {}
 .wsite-not-footer blockquote {}
 .wsite-footer blockquote {}
@@ -44,6 +44,7 @@
 
 		<script><!--
 var STATIC_BASE = '//cdn1.editmysite.com/';
+var ASSETS_BASE = '//cdn2.editmysite.com/';
 var STYLE_PREFIX = 'wsite';
 //-->
 </script>
@@ -57,12 +58,12 @@ var STYLE_PREFIX = 'wsite';
 	(function(jQuery){
 		function initFlyouts(){
 			initPublishedFlyoutMenus(
-				[{"id":"608562111965458717","title":"Home","url":"index.html","target":"","nav_menu":false},{"id":"771034414327920939","title":"Map","url":"map.html","target":"","nav_menu":false},{"id":"807633210476052296","title":"Tutorial\/Templates","url":"tutorialtemplates.html","target":"","nav_menu":false},{"id":"462747272431172124","title":"News","url":"news.html","target":"","nav_menu":false},{"id":"661412759227518685","title":"About","url":"about.html","target":"","nav_menu":false}],
+				[{"id":"608562111965458717","title":"Home","url":"index.html","target":"","nav_menu":false,"nonclickable":false},{"id":"771034414327920939","title":"Map","url":"map.html","target":"","nav_menu":false,"nonclickable":false},{"id":"807633210476052296","title":"Tutorial\/Templates","url":"tutorialtemplates.html","target":"","nav_menu":false,"nonclickable":false},{"id":"462747272431172124","title":"News","url":"news.html","target":"","nav_menu":false,"nonclickable":false},{"id":"661412759227518685","title":"About","url":"about.html","target":"","nav_menu":false,"nonclickable":false}],
 				"874800275435870571",
 				'',
 				'active',
 				false,
-				{"navigation\/item":"<li {{#id}}id=\"{{id}}\"{{\/id}} class=\"wsite-menu-item-wrap\">\n\t<a\n\t\t{{^nav_menu}}\n\t\t\thref=\"{{url}}\"\n\t\t{{\/nav_menu}}\n\t\t{{#target}}\n\t\t\ttarget=\"{{target}}\"\n\t\t{{\/target}}\n\t\t{{#membership_required}}\n\t\t\tdata-membership-required=\"{{.}}\"\n\t\t{{\/membership_required}}\n\t\tclass=\"wsite-menu-item\"\n\t\t>\n\t\t{{{title_html}}}\n\t<\/a>\n\t{{#has_children}}{{> navigation\/flyout\/list}}{{\/has_children}}\n<\/li>\n","navigation\/flyout\/list":"<div class=\"wsite-menu-wrap\" style=\"display:none\">\n\t<ul class=\"wsite-menu\">\n\t\t{{#children}}{{> navigation\/flyout\/item}}{{\/children}}\n\t<\/ul>\n<\/div>\n","navigation\/flyout\/item":"<li {{#id}}id=\"{{id}}\"{{\/id}}\n\tclass=\"wsite-menu-subitem-wrap {{#is_current}}wsite-nav-current{{\/is_current}}\"\n\t>\n\t<a\n\t\t{{^nav_menu}}\n\t\t\thref=\"{{url}}\"\n\t\t{{\/nav_menu}}\n\t\t{{#target}}\n\t\t\ttarget=\"{{target}}\"\n\t\t{{\/target}}\n\t\tclass=\"wsite-menu-subitem\"\n\t\t>\n\t\t<span class=\"wsite-menu-title\">\n\t\t\t{{{title_html}}}\n\t\t<\/span>{{#has_children}}<span class=\"wsite-menu-arrow\">&gt;<\/span>{{\/has_children}}\n\t<\/a>\n\t{{#has_children}}{{> navigation\/flyout\/list}}{{\/has_children}}\n<\/li>\n"},
+				{"navigation\/item":"<li {{#id}}id=\"{{id}}\"{{\/id}} class=\"wsite-menu-item-wrap\">\n\t<a\n\t\t{{^nonclickable}}\n\t\t\t{{^nav_menu}}\n\t\t\t\thref=\"{{url}}\"\n\t\t\t{{\/nav_menu}}\n\t\t{{\/nonclickable}}\n\t\t{{#target}}\n\t\t\ttarget=\"{{target}}\"\n\t\t{{\/target}}\n\t\t{{#membership_required}}\n\t\t\tdata-membership-required=\"{{.}}\"\n\t\t{{\/membership_required}}\n\t\tclass=\"wsite-menu-item\"\n\t\t>\n\t\t{{{title_html}}}\n\t<\/a>\n\t{{#has_children}}{{> navigation\/flyout\/list}}{{\/has_children}}\n<\/li>\n","navigation\/flyout\/list":"<div class=\"wsite-menu-wrap\" style=\"display:none\">\n\t<ul class=\"wsite-menu\">\n\t\t{{#children}}{{> navigation\/flyout\/item}}{{\/children}}\n\t<\/ul>\n<\/div>\n","navigation\/flyout\/item":"<li {{#id}}id=\"{{id}}\"{{\/id}}\n\tclass=\"wsite-menu-subitem-wrap {{#is_current}}wsite-nav-current{{\/is_current}}\"\n\t>\n\t<a\n\t\t{{^nonclickable}}\n\t\t\t{{^nav_menu}}\n\t\t\t\thref=\"{{url}}\"\n\t\t\t{{\/nav_menu}}\n\t\t{{\/nonclickable}}\n\t\t{{#target}}\n\t\t\ttarget=\"{{target}}\"\n\t\t{{\/target}}\n\t\tclass=\"wsite-menu-subitem\"\n\t\t>\n\t\t<span class=\"wsite-menu-title\">\n\t\t\t{{{title_html}}}\n\t\t<\/span>{{#has_children}}<span class=\"wsite-menu-arrow\">&gt;<\/span>{{\/has_children}}\n\t<\/a>\n\t{{#has_children}}{{> navigation\/flyout\/list}}{{\/has_children}}\n<\/li>\n"},
 				{}
 			)
 		}
@@ -93,8 +94,8 @@ MathJax.Hub.Config({
 </script>
 <script type="text/javascript">(function(d,s,id){var z=d.createElement(s);z.type="text/javascript";z.id=id;z.async=true;z.src="http://static.zotabox.com/8/e/8e2816f3964c02518b40c1e9ba84b04e/widgets.js";var sz=d.getElementsByTagName(s)[0];sz.parentNode.insertBefore(z,sz)}(document,"script","zb-embed-code"));</script>
 	</head>
-	<body class="no-header  wsite-theme-light  wsite-page-rex_slg_movement full-width-on "><div class="body-wrap">
-	
+	<body class="no-header  wsite-page-rex_slg_movement  full-width-on  wsite-theme-dark"><div class="body-wrap">
+
 	<div id="header">
 		<div class="nav-trigger hamburger">
 			<div class="open-btn">
@@ -119,7 +120,7 @@ MathJax.Hub.Config({
 			<div id="navigation"><ul class="wsite-menu-default">
 		<li id="pg608562111965458717" class="wsite-menu-item-wrap">
 			<a
-					href="index.html"
+						href="index.html"
 				class="wsite-menu-item"
 				>
 				Home
@@ -128,7 +129,7 @@ MathJax.Hub.Config({
 		</li>
 		<li id="pg771034414327920939" class="wsite-menu-item-wrap">
 			<a
-					href="map.html"
+						href="map.html"
 				class="wsite-menu-item"
 				>
 				Map
@@ -137,7 +138,7 @@ MathJax.Hub.Config({
 		</li>
 		<li id="pg807633210476052296" class="wsite-menu-item-wrap">
 			<a
-					href="tutorialtemplates.html"
+						href="tutorialtemplates.html"
 				class="wsite-menu-item"
 				>
 				Tutorial/Templates
@@ -146,7 +147,7 @@ MathJax.Hub.Config({
 		</li>
 		<li id="pg462747272431172124" class="wsite-menu-item-wrap">
 			<a
-					href="news.html"
+						href="news.html"
 				class="wsite-menu-item"
 				>
 				News
@@ -155,7 +156,7 @@ MathJax.Hub.Config({
 		</li>
 		<li id="pg661412759227518685" class="wsite-menu-item-wrap">
 			<a
-					href="about.html"
+						href="about.html"
 				class="wsite-menu-item"
 				>
 				About
@@ -165,10 +166,15 @@ MathJax.Hub.Config({
 </ul>
 </div>
 			<div id="content-wrapper">
-				<div id="content"><div id='wsite-content' class='wsite-elements wsite-not-footer'>
-<h2 class="wsite-content-title" style="text-align:left;">rex_slg_movement</h2>
+				<div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div class="wsite-section-wrap">
+	<div class="wsite-section wsite-body-section wsite-background-30"  >
+		<div class="wsite-section-content">
+					<div class="container">
+			<div class="wsite-section-elements">
+				<h2 class="wsite-content-title" style="text-align:left;">rex_slg_movement</h2>
 
-<div class="paragraph" style="text-align:left;"><a title="" target="_blank" href="https://dl.dropboxusercontent.com/u/5779181/C2Repo/Zip/plugins/rex_slg_movement.7z">Plugin</a>,<span><span><span> <a title="" target="_blank" href="https://dl.dropboxusercontent.com/u/5779181/C2Repo/rex_slg_movement.html">ACE table</a>, </span></span></span><font color="#d5d5d5"><a href="https://www.scirra.com/forum/plugin-slg-movement_t75938" style="" title="" target="_blank">Discussion thread</a></font><br />Dependence: <a href="rex_board.html">rex_board</a>, <a title="" href="http://c2rexplugins.weebly.com/rex_ginstgroup.html"><span style="">rex_ginstgroup</span> plugin</a><br /></div>
+<div class="paragraph" style="text-align:left;"><a target="_blank" href="https://dl.dropboxusercontent.com/u/5779181/C2Repo/Zip/plugins/rex_slg_movement.7z">Plugin</a>,<span><span><span> <a target="_blank" href="https://rexrainbow.github.io/C2RexDoc/c2rexpluginsACE/plugin_rex_slg_movement.html">ACE table</a>, </span></span></span><font color="#d5d5d5"><a href="https://www.scirra.com/forum/plugin-slg-movement_t75938" target="_blank">Discussion thread</a></font><br />Dependence: <a href="rex_board.html">rex_board</a>, <a href="http://c2rexplugins.weebly.com/rex_ginstgroup.html"><span>rex_ginstgroup</span> plugin</a><br /></div>
 
 <div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
 <hr class="styled-hr" style="width:100%;"></hr>
@@ -192,9 +198,9 @@ MathJax.Hub.Config({
 
 <div class="paragraph" style="text-align:left;"><strong>Chess</strong><br /><span></span>"Chess" is the target of moved chess instance.</div>
 
-<div class="paragraph" style="text-align:left;"><strong>Moving points and Moving cost</strong><br /><strong><span>Concept</span></strong><br /><span>Target chess has an energy point named "moving points", and each tile has a cost called "moving cost" to reduce the energy point of chess when this chess moves on the tile. <br /><span></span>The tile is "move-able" if this chess could "stand on" with remainder </span>moving points is equal or more then 0.<span></span><br /></div>
+<div class="paragraph" style="text-align:left;"><strong>Moving points and Moving cost</strong><br /><strong><span>Concept</span></strong><br /><span>Target chess has an energy point named "moving points", and each tile has a cost called "moving cost" to reduce the energy point of chess when this chess moves on the tile.<br />The tile is "move-able" if this chess could "stand on" with remainder </span>moving points is equal or more then 0.</div>
 
-<div class="paragraph" style="text-align:left;"><strong><span style="">Moving cost</span></strong><br /><span>This parameter </span>could be a number type, or a string type.<span> <span></span>Each tile has an equal moving cost with this number value.</span><br /><span>Put "</span>Expression:INFINITY" in this parameter to be an infinity cost. User might set the path mode to "A*" to get better performance in this case.<br /></div>
+<div class="paragraph" style="text-align:left;"><strong><span>Moving cost</span></strong><br /><span>This parameter </span>could be a number type, or a string type.<span> Each tile has an equal moving cost with this number value.</span><br /><span>Put "</span>Expression:INFINITY" in this parameter to be an infinity cost. User might set the path mode to "A*" to get better performance in this case.<br /></div>
 
 <div class="paragraph" style="text-align:left;"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><strong>Cost function</strong><br />Moving cost of each tile could be got by a cost function named "Condition:On cost", if this parameter is a string.<br />There are some expressions could be used under this condition, </span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><ul><li><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400">Expression:ChessUID, to get target chess instance </span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></li><li><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400">Expression:TileUID, Expression:TileX, Expression:TileY, to get the target tile</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></li><li><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400">Expression:PreTileUID, Expression:PreTileX, Expression:PreTileY, to get previous tile&nbsp;</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></li><li><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400">Expression:PreTilePathCost, to get<span><span><span><span><span><span><span><span> path cost (accumulation cost from start tile) of previous tile</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></li><li><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400">Expression:StartTileUID, to test if previous tile is start tile by comparing<span><span><span><span><span><span><span><span><span><span><span><span><span><span> </span></span></span></span></span></span></span></span></span></span></span></span></span></span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>PreTileUID</span></span></span></span></span></span></span></span></span></span></span></span></span></span> to StartTileUID</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></li></ul></div>
 
@@ -202,7 +208,7 @@ MathJax.Hub.Config({
 
 <div class="paragraph" style="text-align:left;"><span style='text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); '><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); ">Then call "Action:Set cost" to set the moving cost of this tile.  <br /><span></span>"Expression:BLOCKING" could be used in the parameter of this action for a  no move-able. Tile is also no move-able if no "Action:Set cost" had been called (i.e. no moving cost had been return) under "Condition:On  cost".</span></span></div>
 
-<div class="paragraph" style="text-align:left;"><strong>&nbsp;Cache cost</strong><br /><span>If set "Cache cost" to "Yes" in property table, the </span>"Condition:On cost"Set " will only be triggered once for each tile in a request.<br />Set "Cache cost" to "No" if user need to reference previous tile in cost function.<br />If <span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400">Expression:PreTileUID, or ( Expression:PreTileX, Expression:PreTileY ) had been used under "Condition:On cost", </span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span>remember set "Cache cost" to "Yes"</span><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span> usually.<br /></div>
+<div class="paragraph" style="text-align:left;"><strong>Cache cost</strong><br /><span>If set "Cache cost" to "Yes" in property table, the </span>"Condition:On cost"Set " will only be triggered once for each tile in a request.<br />Set "Cache cost" to "No" if user need to reference previous tile in cost function.<br />If <span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400">Expression:PreTileUID, or ( Expression:PreTileX, Expression:PreTileY ) had been used under "Condition:On cost", </span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span>remember set "Cache cost" to "Yes"</span> usually.<br /></div>
 
 <div class="paragraph" style="text-align:left;"><strong>Shuffle neighbors</strong><br /><a target="_blank" href="https://onedrive.live.com/redir?resid=7497FD5EC94476E!976&amp;authkey=!AJRxJLiWfO0sHQw&amp;ithint=file%2ccapx"><span>Sample capx</span></a><br /><span>If "Shuffle neighbors" in properties table sets to "Yes", the order of visited neighbors will be random, i.e. the order of visited nodes is not the same for each request.</span></div>
 
@@ -240,7 +246,13 @@ MathJax.Hub.Config({
 
 <div class="paragraph" style="text-align:left;"><span style='text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); '><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><span style="text-decoration:none; font-style:normal; font-weight:400; color:rgb(119, 119, 119); "><strong>Exact or nearest</strong><br />Set "Exact" combo option to "</span><span style=""></span>nearest" could get <span style=""></span><span style=""></span>moving path from start tile to nearest target tile.<br />The result of instance group would be empty if <span style="">"Exact"</span> to "" and no path found from start tile to exact target tile.<br />Get nearest target tile UID by "Expression:NearestTileUID" after request for both </span><span style=""></span><span style=""><span style=""><span style=""><span style="">Exact or Nearest </span></span></span>modes.</span><br /></span></div>
 
-<div class="paragraph" style="text-align:left;"><strong>Path mode</strong><br /><span>There might have more then one shortest path</span>. Plugin will get one of them by setting of "Path mode" in properties table.<br /><ul><li>"Random" is picking the path randomly</li><li><span>"</span>Diagonal" is picking the path which has the maximum changing of moving direction</li><li>"Straight" is picking the path which has the minimum changing of moving direction</li><li>"A*" is using A-star algorithm to find path, this will have the best performance<br /></li></ul></div>
+<div class="paragraph" style="text-align:left;"><strong>Path mode</strong><br /><span>Set </span>property "Path mode"<span> to get a shorter path or shortest path.</span><br /></div>
+
+<div class="paragraph"><strong>Get shortest path</strong><br /><span>Set </span>property "Path mode"<span> to </span><ul><li>"Random": picking the shortest path randomly</li><li><span>"</span>Diagonal": picking the&nbsp;shortest path which has the maximum changing of moving direction</li><li>"Straight": picking the shortest&nbsp;path which has the minimum changing of moving direction</li><li>"Line": picking the shortest&nbsp;path which has the minimum changing of moving angle<br /></li></ul></div>
+
+<div class="paragraph"><strong>Get shorter path</strong><br /><span>Set </span>property "Path mode"<span> to </span><ul><li>"A*", "A* -line", "A* -random": using A-star algorithm to find path, this will have the best performance. It is recommended that using these mode only when moving point is set to <span>"</span>Expression:INFINITY".<br /></li></ul></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Start and end points</strong><br />Get tileUID or LX, LY of start and end point by these expressions<ul><li>Start point: Expression:StartTileUID, Expression:StartX, Expression:StartY</li><li>End point: Expression:EndTileUID, Expression:EndX, Expression:EndY</li></ul></div>
 
 <div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
 <hr class="styled-hr" style="width:100%;"></hr>
@@ -332,20 +344,27 @@ MathJax.Hub.Config({
 
 <div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
 <hr class="styled-hr" style="width:100%;"></hr>
-<div style="height: 20px; overflow: hidden; width: 100%;"></div></div></div>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+			</div>
+		</div>
+				</div>
+	</div>
 </div>
+
+</div>
+
 			</div>
 		</div>
 		<div id="footer">
-			<div id="footer-content">Create a <a target="_top" href="http://www.weebly.com/">free web site</a> with <a target="_top" href="http://www.weebly.com/" title="免费网站">Weebly</a></div>
+			<div id="footer-content">Create a <a target="_top" href="http://www.weebly.com/">free web site</a> with <a target="_top" href="http://www.weebly.com/" title="free web site">Weebly</a></div>
 		</div>
 	</div>
-	
+
 	<div class="navmobile-wrapper">
 		<div id="navmobile" class="nav"><ul class="wsite-menu-default">
 		<li id="pg608562111965458717" class="wsite-menu-item-wrap">
 			<a
-					href="index.html"
+						href="index.html"
 				class="wsite-menu-item"
 				>
 				Home
@@ -354,7 +373,7 @@ MathJax.Hub.Config({
 		</li>
 		<li id="pg771034414327920939" class="wsite-menu-item-wrap">
 			<a
-					href="map.html"
+						href="map.html"
 				class="wsite-menu-item"
 				>
 				Map
@@ -363,7 +382,7 @@ MathJax.Hub.Config({
 		</li>
 		<li id="pg807633210476052296" class="wsite-menu-item-wrap">
 			<a
-					href="tutorialtemplates.html"
+						href="tutorialtemplates.html"
 				class="wsite-menu-item"
 				>
 				Tutorial/Templates
@@ -372,7 +391,7 @@ MathJax.Hub.Config({
 		</li>
 		<li id="pg462747272431172124" class="wsite-menu-item-wrap">
 			<a
-					href="news.html"
+						href="news.html"
 				class="wsite-menu-item"
 				>
 				News
@@ -381,7 +400,7 @@ MathJax.Hub.Config({
 		</li>
 		<li id="pg661412759227518685" class="wsite-menu-item-wrap">
 			<a
-					href="about.html"
+						href="about.html"
 				class="wsite-menu-item"
 				>
 				About
@@ -395,9 +414,9 @@ MathJax.Hub.Config({
 </div>
 
 
-<script language="javascript" src="files/theme/plugins.js"></script>	 
+<script language="javascript" src="files/theme/plugins.js"></script>
 <script language="javascript" src="files/theme/custom.js"></script>
-<script language="javascript" src="files/theme/mobile.js"></script>	
+<script language="javascript" src="files/theme/mobile.js"></script>
 
 
 		<script>

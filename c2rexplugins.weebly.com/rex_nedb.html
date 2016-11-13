@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>rex_nedb - Rex's plugins for Construct2</title>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+		<meta name="google-site-verification" content="AbKU1w_lq8tjMKAN0yt_O0WFqwDr4zH5bHiXJEpyErI" />
+		<link id="wsite-base-style" rel="stylesheet" type="text/css" href="http://cdn2.editmysite.com/css/sites.css?buildTime=1234" />
+<link rel="stylesheet" type="text/css" href="http://cdn2.editmysite.com/css/old/fancybox.css?1234" />
+<link rel="stylesheet" type="text/css" href="http://cdn2.editmysite.com/css/social-icons.css?buildtime=1234" media="screen,projection" />
+<link rel="stylesheet" type="text/css" href="files/main_style.css?1479003966" title="wsite-theme-css" />
+<link href='http://fonts.googleapis.com/css?family=Raleway:400,300,200,700&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+<link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,700,400italic,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,700,400italic,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+<style type='text/css'>
+.wsite-elements.wsite-not-footer:not(.wsite-header-elements) div.paragraph, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) p, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-block .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-description, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, #wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {font-family:"Open Sans" !important;}
+#wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {}
+.wsite-elements.wsite-footer div.paragraph, .wsite-elements.wsite-footer p, .wsite-elements.wsite-footer .product-block .product-title, .wsite-elements.wsite-footer .product-description, .wsite-elements.wsite-footer .wsite-form-field label, .wsite-elements.wsite-footer .wsite-form-field label{}
+.wsite-elements.wsite-not-footer:not(.wsite-header-elements) h2, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-long .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-large .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-small .product-title, #wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {font-family:"Open Sans" !important;}
+#wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {}
+.wsite-elements.wsite-footer h2, .wsite-elements.wsite-footer .product-long .product-title, .wsite-elements.wsite-footer .product-large .product-title, .wsite-elements.wsite-footer .product-small .product-title{}
+#wsite-title {}
+.wsite-menu-default a {}
+.wsite-menu a {}
+.wsite-image div, .wsite-caption {}
+.galleryCaptionInnerText {}
+.fancybox-title {}
+.wslide-caption-text {}
+.wsite-phone {}
+.wsite-headline,.wsite-header-section .wsite-content-title {}
+.wsite-headline-paragraph,.wsite-header-section .paragraph {}
+.wsite-button-inner {}
+.wsite-not-footer blockquote {}
+.wsite-footer blockquote {}
+.blog-header h2 a {}
+#wsite-content h2.wsite-product-title {}
+.wsite-product .wsite-product-price a {}
+</style>
+
+		<script><!--
+var STATIC_BASE = '//cdn1.editmysite.com/';
+var ASSETS_BASE = '//cdn2.editmysite.com/';
+var STYLE_PREFIX = 'wsite';
+//-->
+</script>
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js'></script>
+
+<script type="text/javascript" src="http://cdn2.editmysite.com/js/lang/zh/stl.js?buildTime=1234&"></script>
+<script src="http://cdn2.editmysite.com/js/site/main.js?buildTime=1234"></script><script type="text/javascript">_W.configDomain = "www.weebly.com";</script><script>_W.relinquish && _W.relinquish()</script>
+<script type="text/javascript" src="http://cdn2.editmysite.com/js/lang/zh/stl.js?buildTime=1234&"></script><script> _W.themePlugins = [];</script><script type="text/javascript"><!--
+	var IS_ARCHIVE = 1;
+	
+	(function(jQuery){
+		function initFlyouts(){
+			initPublishedFlyoutMenus(
+				[{"id":"608562111965458717","title":"Home","url":"index.html","target":"","nav_menu":false,"nonclickable":false},{"id":"771034414327920939","title":"Map","url":"map.html","target":"","nav_menu":false,"nonclickable":false},{"id":"807633210476052296","title":"Tutorial\/Templates","url":"tutorialtemplates.html","target":"","nav_menu":false,"nonclickable":false},{"id":"462747272431172124","title":"News","url":"news.html","target":"","nav_menu":false,"nonclickable":false},{"id":"661412759227518685","title":"About","url":"about.html","target":"","nav_menu":false,"nonclickable":false}],
+				"875658531843951465",
+				'',
+				'active',
+				false,
+				{"navigation\/item":"<li {{#id}}id=\"{{id}}\"{{\/id}} class=\"wsite-menu-item-wrap\">\n\t<a\n\t\t{{^nonclickable}}\n\t\t\t{{^nav_menu}}\n\t\t\t\thref=\"{{url}}\"\n\t\t\t{{\/nav_menu}}\n\t\t{{\/nonclickable}}\n\t\t{{#target}}\n\t\t\ttarget=\"{{target}}\"\n\t\t{{\/target}}\n\t\t{{#membership_required}}\n\t\t\tdata-membership-required=\"{{.}}\"\n\t\t{{\/membership_required}}\n\t\tclass=\"wsite-menu-item\"\n\t\t>\n\t\t{{{title_html}}}\n\t<\/a>\n\t{{#has_children}}{{> navigation\/flyout\/list}}{{\/has_children}}\n<\/li>\n","navigation\/flyout\/list":"<div class=\"wsite-menu-wrap\" style=\"display:none\">\n\t<ul class=\"wsite-menu\">\n\t\t{{#children}}{{> navigation\/flyout\/item}}{{\/children}}\n\t<\/ul>\n<\/div>\n","navigation\/flyout\/item":"<li {{#id}}id=\"{{id}}\"{{\/id}}\n\tclass=\"wsite-menu-subitem-wrap {{#is_current}}wsite-nav-current{{\/is_current}}\"\n\t>\n\t<a\n\t\t{{^nonclickable}}\n\t\t\t{{^nav_menu}}\n\t\t\t\thref=\"{{url}}\"\n\t\t\t{{\/nav_menu}}\n\t\t{{\/nonclickable}}\n\t\t{{#target}}\n\t\t\ttarget=\"{{target}}\"\n\t\t{{\/target}}\n\t\tclass=\"wsite-menu-subitem\"\n\t\t>\n\t\t<span class=\"wsite-menu-title\">\n\t\t\t{{{title_html}}}\n\t\t<\/span>{{#has_children}}<span class=\"wsite-menu-arrow\">&gt;<\/span>{{\/has_children}}\n\t<\/a>\n\t{{#has_children}}{{> navigation\/flyout\/list}}{{\/has_children}}\n<\/li>\n"},
+				{}
+			)
+		}
+		if (jQuery) {
+			jQuery(document).ready(function() { jQuery(initFlyouts); });
+		}else{
+			if (Prototype.Browser.IE) window.onload = initFlyouts;
+			else document.observe('dom:loaded', initFlyouts);
+		}
+	})(window._W && _W.jQuery)
+//-->
+</script>
+		
+		<script
+  type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script "text/x-mathjax-config">
+MathJax.Hub.Config({
+	TeX: { extensions: [
+		"autoload-all.js"
+	]}
+}); </script>
+<script "text/x-mathjax-config">
+	MathJax.Hub.Register.StartupHook("TeX Jax Ready", function () {
+		MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{ cancel: ["Extension","cancel"] });
+	});
+</script>
+<script type="text/javascript">(function(d,s,id){var z=d.createElement(s);z.type="text/javascript";z.id=id;z.async=true;z.src="http://static.zotabox.com/8/e/8e2816f3964c02518b40c1e9ba84b04e/widgets.js";var sz=d.getElementsByTagName(s)[0];sz.parentNode.insertBefore(z,sz)}(document,"script","zb-embed-code"));</script>
+	</head>
+	<body class="no-header  wsite-page-rex_nedb  full-width-on  wsite-theme-dark"><div class="body-wrap">
+
+	<div id="header">
+		<div class="nav-trigger hamburger">
+			<div class="open-btn">
+				<span class="mobile"></span>
+				<span class="mobile"></span>
+				<span class="mobile"></span>
+			</div>
+		</div>
+		<div id="sitename"><span class="wsite-logo">
+
+	<a href="">
+	
+	<span id="wsite-title">Rex's plugins for Construct2</span>
+	
+	</a>
+
+</span></div>
+	</div>
+
+	<div id="wrapper">
+		<div class="bg-wrapper">
+			<div id="navigation"><ul class="wsite-menu-default">
+		<li id="pg608562111965458717" class="wsite-menu-item-wrap">
+			<a
+						href="index.html"
+				class="wsite-menu-item"
+				>
+				Home
+			</a>
+			
+		</li>
+		<li id="pg771034414327920939" class="wsite-menu-item-wrap">
+			<a
+						href="map.html"
+				class="wsite-menu-item"
+				>
+				Map
+			</a>
+			
+		</li>
+		<li id="pg807633210476052296" class="wsite-menu-item-wrap">
+			<a
+						href="tutorialtemplates.html"
+				class="wsite-menu-item"
+				>
+				Tutorial/Templates
+			</a>
+			
+		</li>
+		<li id="pg462747272431172124" class="wsite-menu-item-wrap">
+			<a
+						href="news.html"
+				class="wsite-menu-item"
+				>
+				News
+			</a>
+			
+		</li>
+		<li id="pg661412759227518685" class="wsite-menu-item-wrap">
+			<a
+						href="about.html"
+				class="wsite-menu-item"
+				>
+				About
+			</a>
+			
+		</li>
+</ul>
+</div>
+			<div id="content-wrapper">
+				<div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div class="wsite-section-wrap">
+	<div class="wsite-section wsite-body-section wsite-background-148"  >
+		<div class="wsite-section-content">
+					<div class="container">
+			<div class="wsite-section-elements">
+				<h2 class="wsite-content-title" style="text-align:left;">rex_nedb<br /></h2>
+
+<div class="paragraph" style="text-align:left;"><a target="_blank" href="https://dl.dropboxusercontent.com/u/5779181/C2Repo/Zip/plugins/rex_nedb.7z">Plugin</a>,<span><span><span> <a target="_blank" href="https://rexrainbow.github.io/C2RexDoc/c2rexpluginsACE/plugin_rex_nedb.html">ACE table</a>, </span></span></span><font color="#d5d5d5"><a target="_blank" href="https://www.scirra.com/forum/plugin-rex-taffydb-local-database_t149092">Discussion thread</a></font><br />Dependence: None<br /></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><strong><font size="3">Introduction</font></strong></span></span></span></span><br />Asynchronous database. <a target="_blank" href="https://github.com/louischatriot/nedb">Reference</a>.<br /></div>
+
+<div class="paragraph"><strong>Compare with <a href="rex_taffydb.html">rex_taffydb</a></strong><ul><li><a href="rex_taffydb.html">rex_taffydb</a> is a synchronous in-memory database.<br /></li><li>rex_nedb is an asynchronous persistence or in-memory database.</li></ul></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><strong><font size="3">Usage</font></strong><br /></div>
+
+<div class="paragraph"><strong>Storage type</strong><br />This plugin could store database into disk (persistence) or in memory.<ul><li>Persistence: set "Database name" to a non-empty string and set the property "Storage" to "Disk".&nbsp;</li><li>In memory: set property "Storage" to "In memory".</li></ul>"Storage" will be reset to "In memory" when the "Database name" is empty.<br /></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><font size="3"><strong>Write</strong></font></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Insert rows by CSV</strong><br /><a target="_blank" href="https://1drv.ms/u/s!Am5HlOzVf0kHlDSf42epT4MmgZjW">Sample capx</a><br />Call "Action:Insert CSV data" to insert rows by CSV string.<ul><li>The first row of CSV is the name of fields,</li><li>Other rows are data.</li></ul></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Data type</strong><br />All data will be string type if "Eval mode" is "No".<br />Call "Action:Define type" to define a column to be number type. i.e. all values in that column are number. (<a target="_blank" href="https://1drv.ms/u/s!Am5HlOzVf0kHlDWiI-Y4uCsZx5IE">sample capx</a>)<br /></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Eval mode</strong><br />Set "Eval mode" to "Yes" could parse value by "eval" function of javascrpt. It could assign number, string value. (eval function could return object/array of course, but the "Expression:At" only could return number or string.) For example,<ul><li>number: 10</li><li>string: 'hi'</li><li>javascript function: Math.random() -- it return a number</li></ul>For example,<br /></div>
+
+<blockquote style="text-align:left;">Name,HP,MP<br />'aaa',100,20<br />'bbb',80,30</blockquote>
+
+<div class="paragraph" style="text-align:left;">will insert 2 rows.<br />An error message will display on console while eval failed.<br /></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Insert rows by JSON</strong><br /><span>&#65279;</span><span>&#65279;</span><a target="_blank" href="https://1drv.ms/u/s!Am5HlOzVf0kHlDaioebAKjo83QLo">Sample capx</a><span>&#65279;</span><span>&#65279;</span><br />Call "Action:Insert JSON data" to insert rows by JSON string which exported by "Expression:AllRowsAsJSON", or "Expression:QueriedRowsAsJSON". These expressions will be described later.<br /></div>
+
+<div class="paragraph"><strong>Callback</strong><br />"Condition:On update" will be triggered when writing database success. Otherwise "Condition:On update error" will be triggered, get error message by "Expression:LastErrorMessage".<br /></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><strong>Insert a row</strong><br /><a target="_blank" href="https://onedrive.live.com/redir?resid=7497FD5EC94476E!2088&amp;authkey=!AEqmjrdaltuqUu4&amp;ithint=file%2ccapx">Sample capx</a><br />A row is composed by many key-value pairs. Follow these steps to insert 1 row-</span></span></span></span></span><br /><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400">1. First, prepare the row date by c</span></span></span></span></span><span><span><span><span><span>alling </span></span></span></span></span><ul><li>Action:Set value ( options: if greater , if less )<br /></li><li>Action:Set boolean value<br /></li><li>Action:Add to<br /></li></ul>many times.<br />2. Finally, call "Action:Save" to update or insert this prepared row.<br />&nbsp;Saved row ID could be read by "Expression:LastSavedRowID".<br /></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Update row by row ID</strong><br />Uses "Action:Set row ID" to assign row ID while prepare data, then call "Action:Save" to update this row by this row ID. Insert a row if row ID had not found.<br /></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Index keys</strong><br /><a target="_blank" href="https://1drv.ms/u/s!Am5HlOzVf0kHlDHLscmpHe_YtLox">Sample capx</a><br />There are 2 kinds of index keys-<ul><li>Unique index keys, a set of fields which the values are not repeated. Row could be indexed by these special keys.<br /></li><li>Index keys, to improve the performance&nbsp; when querying these keys.</li></ul></div>
+
+<div class="paragraph">Unique index keys and index keys could be set at property "Unique index keys" and "Index keys" , or set by "Action:Set index keys". Multiple keys are separated by ",". For example<br /></div>
+
+<blockquote style="text-align:left;">Name</blockquote>
+
+<div class="paragraph" style="text-align:left;">or</div>
+
+<blockquote style="text-align:left;">UID,VarName<br /></blockquote>
+
+<div class="paragraph" style="text-align:left;">Each saving ("Action:Save") will try to find row by index key first-<ul><li>If found, overwrite this row.</li><li>If not found, insert a new row.</li></ul></div>
+
+<div class="paragraph" style="text-align:left;">Reading by index keys will be described later section.<br /></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Update rows</strong><br /><a title="" target="_blank" href="https://1drv.ms/u/s!Am5HlOzVf0kHlDPJ_rq_3eKOY6QS">Sample capx</a><br />Call "Action:Update queried rows" to update queried rows by prepared row.</div>
+
+<div class="paragraph"><strong>Callback</strong><br />"Condition:On update" will be triggered when writing database success. Otherwise "Condition:On update error" will be triggered, get error message by "Expression:LastErrorMessage".<br /></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Remove row by row ID</strong><br />Call "Action:Remove by row ID" to remove a row by row ID.<br /></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Remove rows</strong><br />Call "Action:Remove all" to remove all rows. i.e. clean this database to empty.<br /></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Remove queried rows</strong><br />Call "Action:Remove queried rows" to remove queried rows. Querying will be described later.<br /></div>
+
+<div class="paragraph"><strong>Callback</strong><br />"Condition:On remove rows" will be triggered when writing database success. Otherwise "Condition:On remove rows error" will be triggered, get error message by "Expression:LastErrorMessage".<br /></div>
+
+<div><div style="height: 30px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 30px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Querying</strong><br /><a target="_blank" href="https://1drv.ms/u/s!Am5HlOzVf0kHlDeCzuUeHooae0sl">Sample capx</a><br />Querying is used to get rows by some conditions/filters. Follow these steps to build a query filter for read rows or update these rows, or remove them.</div>
+
+<div class="paragraph" style="text-align:left;"><strong>1. create a new filter</strong><br />Call "Action:1. New" to create a new filter start from all rows in database.<br />If querying does not have "Action:1. New" or "Condition:1. New", it will <strong>start from current queried rows</strong> (<a target="_blank" href="https://1drv.ms/u/s!Am5HlOzVf0kHlDjTKK8TqvjlPqqs">sample capx</a>)<br /></div>
+
+<div class="paragraph" style="text-align:left;"><strong>2. add conditions</strong><br />Then call<ul><li>"Action:2. value compare", or</li><li>"Action:2. boolean value compare", or<br /></li><li>"Action:2. regex matched'<br /></li></ul>to add a comparison condition.</div>
+
+<div class="paragraph" style="text-align:left;"><strong>3. set order</strong><br />Call "Action:3. order" to sort the queried rows if necessary.<br /></div>
+
+<div class="paragraph" style="text-align:left;">It will get all rows if there has no condition assigned.<br /></div>
+
+<div class="paragraph"><strong>Load</strong><br />Call "Action:Load queried rows" to load queried rows.<br /></div>
+
+<div class="paragraph"><strong>Callback</strong><br />"Condition:On load rows" will be triggered when loading rows success, get loaded rows in JSON string by "Expression:QueriedRowsAsJSON".<br />Otherwise "Condition:On load rows error" will be triggered, get error message by "Expression:LastErrorMessage".<br /></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Retrieve queried rows</strong><br /><a target="_blank" href="https://1drv.ms/u/s!Am5HlOzVf0kHlDeCzuUeHooae0sl">Sample capx</a><br />Retrieving each queried row by "Condition:For each row". Get the content of each retrieved row by "Expression:CurRowContent", and index of this row by "Expression:CurRowIndex".<br />There are 3 formats to use "Expression:CurRowContent".<ul><li><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>"Expression:CurRowContent</span></span></span></span></span></span></span></span>" without any parameter, will return key-value pairs of current item in JSON string.</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></li><li><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>"</span></span></span></span><span><span><span><span><span><span><span><span><span><span><span><span>Expression:CurRowContent</span></span></span></span></span></span></span></span></span></span></span></span>( key )" , will return the value of a specific key, or return 0 if the key does not exist.</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></li><li><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>"</span></span></span></span><span><span><span><span><span><span><span><span><span><span><span><span>Expression:</span></span></span></span></span></span></span></span></span></span></span></span>CurRowContent( key, default_value )" , will return the value of a specific key, or return default value if the key does not exist.</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></li></ul>Read rowID of current row by "Expression:CurRowID".<br /></div>
+
+<div class="paragraph" style="text-align:left;">These related expressions are the properties of queried rows<ul><li>"Expression:QueriedRowsCount",&nbsp; get current queried rows count.<br /></li><li>"Expression:QueriedSum( key )", get sum in current queried rows of a key.</li><li>"Expression:QueriedMin( key )", get min in current queried rows of a key.</li><li>"Expression:QueriedMax( key )", get max in current queried rows of a key.</li></ul></div>
+
+<div><div style="height: 30px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 30px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Indexes of queried rows</strong><br /><a target="_blank" href="https://1drv.ms/u/s!Am5HlOzVf0kHlDll2sZIrOKGHI2G">Sample capx</a><br />Queried rows could be indexed by row index from 0 to rows count -1.&nbsp; (rows count = "Expression:QueriedRowsCount")<br /></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Read value</strong><br />Value in each row could be read by "Expression:Index2QueriedRowContent". It also has 3 formats.<ul><li><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>"Expression:</span></span></span></span></span></span></span></span></span></span></span></span><span><span><span><span><span><span><span><span><span><span><span><span>Index2QueriedRowContent</span></span></span></span></span></span></span></span>( index )", will return key-value pairs of current item in JSON string.</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></li><li><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>"</span></span></span></span><span><span><span><span><span><span><span><span><span><span><span><span>Expression:Index2QueriedRowContent</span></span></span></span></span></span></span></span></span></span></span></span>( index, key )" , will return the value of a specific key, or return 0 if the key does not exist.</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></li><li><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>"</span></span></span></span><span><span><span><span><span><span><span><span><span><span><span><span>Expression:</span></span></span></span></span></span></span></span></span></span></span></span>Index2QueriedRowContent( index, key, default_value )" , will return the value of a specific key, or return default value if the key does not exist.</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><br /></li></ul><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>Read rowID from index of queried row by "Expression:Index2QueriedRowID( index )".<span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><br /></div>
+
+<div class="paragraph" style="text-align:left;"><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><strong>Set value</strong></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><br />Call "Action:Set row index"<span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span> to set row ID by this row index. </span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>Insert a row if row ID had not found.<br /></div>
+
+<div class="paragraph" style="text-align:left;"><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><strong>Remove row</strong><br />A queried row could be removed by "</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>Action:Remove by row index".</div>
+
+<div><div style="height: 30px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 30px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Database reference</strong><br /><a target="_blank" href="https://1drv.ms/u/s!Am5HlOzVf0kHlDtJKd5Pox20qaG0">Sample capx</a><br />"Database name" in properties table is the global name of database.<br />Set it to "" will make it to be a private database which will be destroyed while this instance had been destroyed.<br />If this database name is not "". It will reference to a global database, instances with the same "Database name" will reference to the same database. In this way, user could separate writing and reading into different database instance.<br /></div>
+
+<div><div style="height: 30px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 30px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Save &amp; load</strong><br />It supports official saving &amp; loading feature when using "<strong>Disk</strong>" storage mode, queried rows will also be saved.<br /></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph"><strong>Debug panel</strong><br />All rows will be shown at debug panel in JSON format.<br /></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+			</div>
+		</div>
+				</div>
+	</div>
+</div>
+
+</div>
+
+			</div>
+		</div>
+		<div id="footer">
+			<div id="footer-content">Create a <a target="_top" href="http://www.weebly.com/">free web site</a> with <a target="_top" href="http://www.weebly.com/" title="free web site">Weebly</a></div>
+		</div>
+	</div>
+
+	<div class="navmobile-wrapper">
+		<div id="navmobile" class="nav"><ul class="wsite-menu-default">
+		<li id="pg608562111965458717" class="wsite-menu-item-wrap">
+			<a
+						href="index.html"
+				class="wsite-menu-item"
+				>
+				Home
+			</a>
+			
+		</li>
+		<li id="pg771034414327920939" class="wsite-menu-item-wrap">
+			<a
+						href="map.html"
+				class="wsite-menu-item"
+				>
+				Map
+			</a>
+			
+		</li>
+		<li id="pg807633210476052296" class="wsite-menu-item-wrap">
+			<a
+						href="tutorialtemplates.html"
+				class="wsite-menu-item"
+				>
+				Tutorial/Templates
+			</a>
+			
+		</li>
+		<li id="pg462747272431172124" class="wsite-menu-item-wrap">
+			<a
+						href="news.html"
+				class="wsite-menu-item"
+				>
+				News
+			</a>
+			
+		</li>
+		<li id="pg661412759227518685" class="wsite-menu-item-wrap">
+			<a
+						href="about.html"
+				class="wsite-menu-item"
+				>
+				About
+			</a>
+			
+		</li>
+</ul>
+</div>
+	</div>
+
+</div>
+
+
+<script language="javascript" src="files/theme/plugins.js"></script>
+<script language="javascript" src="files/theme/custom.js"></script>
+<script language="javascript" src="files/theme/mobile.js"></script>
+
+
+		<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-50390733-1', 'weebly.com');
+  ga('send', 'pageview');
+
+</script>
+	</body>
+</html>

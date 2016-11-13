@@ -10,19 +10,19 @@
 
 		<meta name="google-site-verification" content="AbKU1w_lq8tjMKAN0yt_O0WFqwDr4zH5bHiXJEpyErI" />
 		<link id="wsite-base-style" rel="stylesheet" type="text/css" href="http://cdn2.editmysite.com/css/sites.css?buildTime=1234" />
-<link rel="stylesheet" type="text/css" href="http://cdn1.editmysite.com/editor/libraries/fancybox/fancybox.css?1234" />
+<link rel="stylesheet" type="text/css" href="http://cdn2.editmysite.com/css/old/fancybox.css?1234" />
 <link rel="stylesheet" type="text/css" href="http://cdn2.editmysite.com/css/social-icons.css?buildtime=1234" media="screen,projection" />
-<link rel="stylesheet" type="text/css" href="files/main_style.css?1469150796" title="wsite-theme-css" />
+<link rel="stylesheet" type="text/css" href="files/main_style.css?1479003966" title="wsite-theme-css" />
 <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,200,700&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
 <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
 
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,700,400italic,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,700,400italic,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
 <style type='text/css'>
-.wsite-elements.wsite-not-footer div.paragraph, .wsite-elements.wsite-not-footer p, .wsite-elements.wsite-not-footer .product-block .product-title, .wsite-elements.wsite-not-footer .product-description, .wsite-elements.wsite-not-footer .wsite-form-field label, .wsite-elements.wsite-not-footer .wsite-form-field label, #wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {font-family:"Open Sans" !important;}
+.wsite-elements.wsite-not-footer:not(.wsite-header-elements) div.paragraph, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) p, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-block .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-description, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, #wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {font-family:"Open Sans" !important;}
 #wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {}
 .wsite-elements.wsite-footer div.paragraph, .wsite-elements.wsite-footer p, .wsite-elements.wsite-footer .product-block .product-title, .wsite-elements.wsite-footer .product-description, .wsite-elements.wsite-footer .wsite-form-field label, .wsite-elements.wsite-footer .wsite-form-field label{}
-.wsite-elements.wsite-not-footer h2, .wsite-elements.wsite-not-footer .product-long .product-title, .wsite-elements.wsite-not-footer .product-large .product-title, .wsite-elements.wsite-not-footer .product-small .product-title, #wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {font-family:"Open Sans" !important;}
+.wsite-elements.wsite-not-footer:not(.wsite-header-elements) h2, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-long .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-large .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-small .product-title, #wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {font-family:"Open Sans" !important;}
 #wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {}
 .wsite-elements.wsite-footer h2, .wsite-elements.wsite-footer .product-long .product-title, .wsite-elements.wsite-footer .product-large .product-title, .wsite-elements.wsite-footer .product-small .product-title{}
 #wsite-title {}
@@ -33,8 +33,8 @@
 .fancybox-title {}
 .wslide-caption-text {}
 .wsite-phone {}
-.wsite-headline {}
-.wsite-headline-paragraph {}
+.wsite-headline,.wsite-header-section .wsite-content-title {}
+.wsite-headline-paragraph,.wsite-header-section .paragraph {}
 .wsite-button-inner {}
 .wsite-not-footer blockquote {}
 .wsite-footer blockquote {}
@@ -45,6 +45,7 @@
 
 		<script><!--
 var STATIC_BASE = '//cdn1.editmysite.com/';
+var ASSETS_BASE = '//cdn2.editmysite.com/';
 var STYLE_PREFIX = 'wsite';
 //-->
 </script>
@@ -58,12 +59,12 @@ var STYLE_PREFIX = 'wsite';
 	(function(jQuery){
 		function initFlyouts(){
 			initPublishedFlyoutMenus(
-				[{"id":"608562111965458717","title":"Home","url":"index.html","target":"","nav_menu":false},{"id":"771034414327920939","title":"Map","url":"map.html","target":"","nav_menu":false},{"id":"807633210476052296","title":"Tutorial\/Templates","url":"tutorialtemplates.html","target":"","nav_menu":false},{"id":"462747272431172124","title":"News","url":"news.html","target":"","nav_menu":false},{"id":"661412759227518685","title":"About","url":"about.html","target":"","nav_menu":false}],
+				[{"id":"608562111965458717","title":"Home","url":"index.html","target":"","nav_menu":false,"nonclickable":false},{"id":"771034414327920939","title":"Map","url":"map.html","target":"","nav_menu":false,"nonclickable":false},{"id":"807633210476052296","title":"Tutorial\/Templates","url":"tutorialtemplates.html","target":"","nav_menu":false,"nonclickable":false},{"id":"462747272431172124","title":"News","url":"news.html","target":"","nav_menu":false,"nonclickable":false},{"id":"661412759227518685","title":"About","url":"about.html","target":"","nav_menu":false,"nonclickable":false}],
 				"462747272431172124",
 				'',
 				'active',
 				false,
-				{"navigation\/item":"<li {{#id}}id=\"{{id}}\"{{\/id}} class=\"wsite-menu-item-wrap\">\n\t<a\n\t\t{{^nav_menu}}\n\t\t\thref=\"{{url}}\"\n\t\t{{\/nav_menu}}\n\t\t{{#target}}\n\t\t\ttarget=\"{{target}}\"\n\t\t{{\/target}}\n\t\t{{#membership_required}}\n\t\t\tdata-membership-required=\"{{.}}\"\n\t\t{{\/membership_required}}\n\t\tclass=\"wsite-menu-item\"\n\t\t>\n\t\t{{{title_html}}}\n\t<\/a>\n\t{{#has_children}}{{> navigation\/flyout\/list}}{{\/has_children}}\n<\/li>\n","navigation\/flyout\/list":"<div class=\"wsite-menu-wrap\" style=\"display:none\">\n\t<ul class=\"wsite-menu\">\n\t\t{{#children}}{{> navigation\/flyout\/item}}{{\/children}}\n\t<\/ul>\n<\/div>\n","navigation\/flyout\/item":"<li {{#id}}id=\"{{id}}\"{{\/id}}\n\tclass=\"wsite-menu-subitem-wrap {{#is_current}}wsite-nav-current{{\/is_current}}\"\n\t>\n\t<a\n\t\t{{^nav_menu}}\n\t\t\thref=\"{{url}}\"\n\t\t{{\/nav_menu}}\n\t\t{{#target}}\n\t\t\ttarget=\"{{target}}\"\n\t\t{{\/target}}\n\t\tclass=\"wsite-menu-subitem\"\n\t\t>\n\t\t<span class=\"wsite-menu-title\">\n\t\t\t{{{title_html}}}\n\t\t<\/span>{{#has_children}}<span class=\"wsite-menu-arrow\">&gt;<\/span>{{\/has_children}}\n\t<\/a>\n\t{{#has_children}}{{> navigation\/flyout\/list}}{{\/has_children}}\n<\/li>\n"},
+				{"navigation\/item":"<li {{#id}}id=\"{{id}}\"{{\/id}} class=\"wsite-menu-item-wrap\">\n\t<a\n\t\t{{^nonclickable}}\n\t\t\t{{^nav_menu}}\n\t\t\t\thref=\"{{url}}\"\n\t\t\t{{\/nav_menu}}\n\t\t{{\/nonclickable}}\n\t\t{{#target}}\n\t\t\ttarget=\"{{target}}\"\n\t\t{{\/target}}\n\t\t{{#membership_required}}\n\t\t\tdata-membership-required=\"{{.}}\"\n\t\t{{\/membership_required}}\n\t\tclass=\"wsite-menu-item\"\n\t\t>\n\t\t{{{title_html}}}\n\t<\/a>\n\t{{#has_children}}{{> navigation\/flyout\/list}}{{\/has_children}}\n<\/li>\n","navigation\/flyout\/list":"<div class=\"wsite-menu-wrap\" style=\"display:none\">\n\t<ul class=\"wsite-menu\">\n\t\t{{#children}}{{> navigation\/flyout\/item}}{{\/children}}\n\t<\/ul>\n<\/div>\n","navigation\/flyout\/item":"<li {{#id}}id=\"{{id}}\"{{\/id}}\n\tclass=\"wsite-menu-subitem-wrap {{#is_current}}wsite-nav-current{{\/is_current}}\"\n\t>\n\t<a\n\t\t{{^nonclickable}}\n\t\t\t{{^nav_menu}}\n\t\t\t\thref=\"{{url}}\"\n\t\t\t{{\/nav_menu}}\n\t\t{{\/nonclickable}}\n\t\t{{#target}}\n\t\t\ttarget=\"{{target}}\"\n\t\t{{\/target}}\n\t\tclass=\"wsite-menu-subitem\"\n\t\t>\n\t\t<span class=\"wsite-menu-title\">\n\t\t\t{{{title_html}}}\n\t\t<\/span>{{#has_children}}<span class=\"wsite-menu-arrow\">&gt;<\/span>{{\/has_children}}\n\t<\/a>\n\t{{#has_children}}{{> navigation\/flyout\/list}}{{\/has_children}}\n<\/li>\n"},
 				{}
 			)
 		}
@@ -94,8 +95,8 @@ MathJax.Hub.Config({
 </script>
 <script type="text/javascript">(function(d,s,id){var z=d.createElement(s);z.type="text/javascript";z.id=id;z.async=true;z.src="http://static.zotabox.com/8/e/8e2816f3964c02518b40c1e9ba84b04e/widgets.js";var sz=d.getElementsByTagName(s)[0];sz.parentNode.insertBefore(z,sz)}(document,"script","zb-embed-code"));</script>
 	</head>
-	<body class="no-header  wsite-theme-light  wsite-page-news wsite-blog-index full-width-on "><div class="body-wrap">
-	
+	<body class="no-header  wsite-page-news wsite-blog-index  full-width-on  wsite-theme-dark"><div class="body-wrap">
+
 	<div id="header">
 		<div class="nav-trigger hamburger">
 			<div class="open-btn">
@@ -120,7 +121,7 @@ MathJax.Hub.Config({
 			<div id="navigation"><ul class="wsite-menu-default">
 		<li id="pg608562111965458717" class="wsite-menu-item-wrap">
 			<a
-					href="index.html"
+						href="index.html"
 				class="wsite-menu-item"
 				>
 				Home
@@ -129,7 +130,7 @@ MathJax.Hub.Config({
 		</li>
 		<li id="pg771034414327920939" class="wsite-menu-item-wrap">
 			<a
-					href="map.html"
+						href="map.html"
 				class="wsite-menu-item"
 				>
 				Map
@@ -138,7 +139,7 @@ MathJax.Hub.Config({
 		</li>
 		<li id="pg807633210476052296" class="wsite-menu-item-wrap">
 			<a
-					href="tutorialtemplates.html"
+						href="tutorialtemplates.html"
 				class="wsite-menu-item"
 				>
 				Tutorial/Templates
@@ -147,7 +148,7 @@ MathJax.Hub.Config({
 		</li>
 		<li id="active" class="wsite-menu-item-wrap">
 			<a
-					href="news.html"
+						href="news.html"
 				class="wsite-menu-item"
 				>
 				News
@@ -156,7 +157,7 @@ MathJax.Hub.Config({
 		</li>
 		<li id="pg661412759227518685" class="wsite-menu-item-wrap">
 			<a
-					href="about.html"
+						href="about.html"
 				class="wsite-menu-item"
 				>
 				About
@@ -166,8 +167,8 @@ MathJax.Hub.Config({
 </ul>
 </div>
 			<div id="content-wrapper">
-				<div id="content"><div class='wsite-elements wsite-not-footer'>
-<table 
+				<div class="wsite-elements wsite-not-footer">
+	<table 
 	id="blogTable" 
 		class="wsite-not-footer" 
 	style="border: 0; width: 100%; table-layout: fixed" 
@@ -175,22 +176,22 @@ MathJax.Hub.Config({
 	<tr>
 	    <td valign="top">
 	        	<div id="462747272431172124-blog" class="blog-body" style="float: left;"> 
-		<div id="wsite-content">	<div id="blog-post-213859164111578986" class="blog-post">
+		<div id="wsite-content">	<div id="blog-post-390562738661249768" class="blog-post">
 	
 	
 		<div class="blog-header">
 			<h2 class="blog-title">
-					<a class="blog-title-link blog-link" href="http://UNSET/news/add-document-of-rex_google_webfontloader-plugin">Add document of rex_google_webfontloader plugin</a>
+					<a class="blog-title-link blog-link" href="http://UNSET/news/add-document-of-rex_ini-plugin">Add document of rex_ini plugin</a>
 
 			</h2>
 			<p class="blog-date">
 					<span class="date-text">
-		7/17/2016
+		10/20/2016
 	</span>
 
 			</p>
 			<p class="blog-comments">
-					<a href="http://UNSET/news/add-document-of-rex_google_webfontloader-plugin#comments" class="blog-link">
+					<a href="http://UNSET/news/add-document-of-rex_ini-plugin#comments" class="blog-link">
 		0 评论
 	</a>
 
@@ -208,29 +209,29 @@ MathJax.Hub.Config({
 		
 	
 		<div class="blog-comments-bottom">
-				<a href="http://UNSET/news/add-document-of-rex_google_webfontloader-plugin#comments" class="blog-link">
+				<a href="http://UNSET/news/add-document-of-rex_ini-plugin#comments" class="blog-link">
 		0 评论
 	</a>
 
 		</div>
 	
 		<div class="blog-post-separator"></div>
-	</div>	<div id="blog-post-686485256168249861" class="blog-post">
+	</div>	<div id="blog-post-113714578222317144" class="blog-post">
 	
 	
 		<div class="blog-header">
 			<h2 class="blog-title">
-					<a class="blog-title-link blog-link" href="http://UNSET/news/add-document-of-rex_interception-behavior">Add document of rex_interception behavior</a>
+					<a class="blog-title-link blog-link" href="http://UNSET/news/add-document-of-rex_gifjs-plugin">Add document of rex_gifjs plugin</a>
 
 			</h2>
 			<p class="blog-date">
 					<span class="date-text">
-		7/6/2016
+		10/18/2016
 	</span>
 
 			</p>
 			<p class="blog-comments">
-					<a href="http://UNSET/news/add-document-of-rex_interception-behavior#comments" class="blog-link">
+					<a href="http://UNSET/news/add-document-of-rex_gifjs-plugin#comments" class="blog-link">
 		0 评论
 	</a>
 
@@ -248,29 +249,29 @@ MathJax.Hub.Config({
 		
 	
 		<div class="blog-comments-bottom">
-				<a href="http://UNSET/news/add-document-of-rex_interception-behavior#comments" class="blog-link">
+				<a href="http://UNSET/news/add-document-of-rex_gifjs-plugin#comments" class="blog-link">
 		0 评论
 	</a>
 
 		</div>
 	
 		<div class="blog-post-separator"></div>
-	</div>	<div id="blog-post-885473412376145607" class="blog-post">
+	</div>	<div id="blog-post-929908700348855028" class="blog-post">
 	
 	
 		<div class="blog-header">
 			<h2 class="blog-title">
-					<a class="blog-title-link blog-link" href="http://UNSET/news/add-document-oif-rex_bfunction2-behavior">Add document oif rex_bfunction2 behavior</a>
+					<a class="blog-title-link blog-link" href="http://UNSET/news/add-document-of-rex_tonejs_midiconvert-plugin">Add document of rex_tonejs_midiconvert plugin</a>
 
 			</h2>
 			<p class="blog-date">
 					<span class="date-text">
-		6/20/2016
+		10/17/2016
 	</span>
 
 			</p>
 			<p class="blog-comments">
-					<a href="http://UNSET/news/add-document-oif-rex_bfunction2-behavior#comments" class="blog-link">
+					<a href="http://UNSET/news/add-document-of-rex_tonejs_midiconvert-plugin#comments" class="blog-link">
 		0 评论
 	</a>
 
@@ -288,7 +289,7 @@ MathJax.Hub.Config({
 		
 	
 		<div class="blog-comments-bottom">
-				<a href="http://UNSET/news/add-document-oif-rex_bfunction2-behavior#comments" class="blog-link">
+				<a href="http://UNSET/news/add-document-of-rex_tonejs_midiconvert-plugin#comments" class="blog-link">
 		0 评论
 	</a>
 
@@ -314,6 +315,12 @@ MathJax.Hub.Config({
 
 <h2 class="blog-archives-title" style="text-align:left;">Archives</h2>
 <p class="blog-archive-list">
+		<a href="news/archives/10-2016" class="blog-link">十月 2016</a>
+		<br />
+		<a href="news/archives/09-2016" class="blog-link">九月 2016</a>
+		<br />
+		<a href="news/archives/08-2016" class="blog-link">八月 2016</a>
+		<br />
 		<a href="news/archives/07-2016" class="blog-link">七月 2016</a>
 		<br />
 		<a href="news/archives/06-2016" class="blog-link">六月 2016</a>
@@ -388,20 +395,21 @@ MathJax.Hub.Config({
 	        </td>
 	</tr>
 </table>
+
 </div>
-</div>
+
 			</div>
 		</div>
 		<div id="footer">
-			<div id="footer-content">Create a <a target="_top" href="http://www.weebly.com/">free web site</a> with <a target="_top" href="http://www.weebly.com/" title="免费网站">Weebly</a></div>
+			<div id="footer-content">Create a <a target="_top" href="http://www.weebly.com/">free web site</a> with <a target="_top" href="http://www.weebly.com/" title="free web site">Weebly</a></div>
 		</div>
 	</div>
-	
+
 	<div class="navmobile-wrapper">
 		<div id="navmobile" class="nav"><ul class="wsite-menu-default">
 		<li id="pg608562111965458717" class="wsite-menu-item-wrap">
 			<a
-					href="index.html"
+						href="index.html"
 				class="wsite-menu-item"
 				>
 				Home
@@ -410,7 +418,7 @@ MathJax.Hub.Config({
 		</li>
 		<li id="pg771034414327920939" class="wsite-menu-item-wrap">
 			<a
-					href="map.html"
+						href="map.html"
 				class="wsite-menu-item"
 				>
 				Map
@@ -419,7 +427,7 @@ MathJax.Hub.Config({
 		</li>
 		<li id="pg807633210476052296" class="wsite-menu-item-wrap">
 			<a
-					href="tutorialtemplates.html"
+						href="tutorialtemplates.html"
 				class="wsite-menu-item"
 				>
 				Tutorial/Templates
@@ -428,7 +436,7 @@ MathJax.Hub.Config({
 		</li>
 		<li id="active" class="wsite-menu-item-wrap">
 			<a
-					href="news.html"
+						href="news.html"
 				class="wsite-menu-item"
 				>
 				News
@@ -437,7 +445,7 @@ MathJax.Hub.Config({
 		</li>
 		<li id="pg661412759227518685" class="wsite-menu-item-wrap">
 			<a
-					href="about.html"
+						href="about.html"
 				class="wsite-menu-item"
 				>
 				About
@@ -451,9 +459,9 @@ MathJax.Hub.Config({
 </div>
 
 
-<script language="javascript" src="files/theme/plugins.js"></script>	 
+<script language="javascript" src="files/theme/plugins.js"></script>
 <script language="javascript" src="files/theme/custom.js"></script>
-<script language="javascript" src="files/theme/mobile.js"></script>	
+<script language="javascript" src="files/theme/mobile.js"></script>
 
 
 		<script>

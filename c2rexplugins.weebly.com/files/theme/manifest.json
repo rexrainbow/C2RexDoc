@@ -12,6 +12,43 @@
 		"navigation-top",
 		"color-palettes"
 	],
+	"variations": [
+		{
+			"value": "teal",
+			"sample": "#5199a8",
+			"is-dark": false
+		},
+		{
+			"value": "orange",
+			"sample": "#ff9a22",
+			"is-dark": true
+		},
+		{
+			"value": "red",
+			"sample": "#f64c3f",
+			"is-dark": false
+		},
+		{
+			"value": "pink",
+			"sample": "#ff7f6e",
+			"is-dark": true
+		},
+		{
+			"value": "green",
+			"sample": "#52ae8c",
+			"is-dark": true
+		},
+		{
+			"value": "blue",
+			"sample": "#5b72dc",
+			"is-dark": false
+		},
+		{
+			"value": "yellow",
+			"sample": "#dea227",
+			"is-dark": false
+		}
+	],
 	"custom-options" : [
 		{
 			"name" : "full-width",
@@ -21,14 +58,5 @@
 			"is-body-class" : true,
 			"is-less-var" : false
 		}
-	],
-	"header-conversions": {
-        "user-id": "80949722",
-        "site-id": "989520993850532791",
-        "page-types": {
-            "tall-header": "214855551365749543",
-            "short-header": "352444955313769514",
-            "landing": "248642085764299258"
-        }
-    }
+	]
 }

@@ -9,19 +9,19 @@
 
 		<meta name="google-site-verification" content="AbKU1w_lq8tjMKAN0yt_O0WFqwDr4zH5bHiXJEpyErI" />
 		<link id="wsite-base-style" rel="stylesheet" type="text/css" href="http://cdn2.editmysite.com/css/sites.css?buildTime=1234" />
-<link rel="stylesheet" type="text/css" href="http://cdn1.editmysite.com/editor/libraries/fancybox/fancybox.css?1234" />
+<link rel="stylesheet" type="text/css" href="http://cdn2.editmysite.com/css/old/fancybox.css?1234" />
 <link rel="stylesheet" type="text/css" href="http://cdn2.editmysite.com/css/social-icons.css?buildtime=1234" media="screen,projection" />
-<link rel="stylesheet" type="text/css" href="files/main_style.css?1469150796" title="wsite-theme-css" />
+<link rel="stylesheet" type="text/css" href="files/main_style.css?1479003966" title="wsite-theme-css" />
 <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,200,700&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
 <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
 
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,700,400italic,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,700,400italic,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
 <style type='text/css'>
-.wsite-elements.wsite-not-footer div.paragraph, .wsite-elements.wsite-not-footer p, .wsite-elements.wsite-not-footer .product-block .product-title, .wsite-elements.wsite-not-footer .product-description, .wsite-elements.wsite-not-footer .wsite-form-field label, .wsite-elements.wsite-not-footer .wsite-form-field label, #wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {font-family:"Open Sans" !important;}
+.wsite-elements.wsite-not-footer:not(.wsite-header-elements) div.paragraph, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) p, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-block .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-description, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, #wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {font-family:"Open Sans" !important;}
 #wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {}
 .wsite-elements.wsite-footer div.paragraph, .wsite-elements.wsite-footer p, .wsite-elements.wsite-footer .product-block .product-title, .wsite-elements.wsite-footer .product-description, .wsite-elements.wsite-footer .wsite-form-field label, .wsite-elements.wsite-footer .wsite-form-field label{}
-.wsite-elements.wsite-not-footer h2, .wsite-elements.wsite-not-footer .product-long .product-title, .wsite-elements.wsite-not-footer .product-large .product-title, .wsite-elements.wsite-not-footer .product-small .product-title, #wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {font-family:"Open Sans" !important;}
+.wsite-elements.wsite-not-footer:not(.wsite-header-elements) h2, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-long .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-large .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-small .product-title, #wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {font-family:"Open Sans" !important;}
 #wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {}
 .wsite-elements.wsite-footer h2, .wsite-elements.wsite-footer .product-long .product-title, .wsite-elements.wsite-footer .product-large .product-title, .wsite-elements.wsite-footer .product-small .product-title{}
 #wsite-title {}
@@ -32,8 +32,8 @@
 .fancybox-title {}
 .wslide-caption-text {}
 .wsite-phone {}
-.wsite-headline {}
-.wsite-headline-paragraph {}
+.wsite-headline,.wsite-header-section .wsite-content-title {}
+.wsite-headline-paragraph,.wsite-header-section .paragraph {}
 .wsite-button-inner {}
 .wsite-not-footer blockquote {}
 .wsite-footer blockquote {}
@@ -44,6 +44,7 @@
 
 		<script><!--
 var STATIC_BASE = '//cdn1.editmysite.com/';
+var ASSETS_BASE = '//cdn2.editmysite.com/';
 var STYLE_PREFIX = 'wsite';
 //-->
 </script>
@@ -57,12 +58,12 @@ var STYLE_PREFIX = 'wsite';
 	(function(jQuery){
 		function initFlyouts(){
 			initPublishedFlyoutMenus(
-				[{"id":"608562111965458717","title":"Home","url":"index.html","target":"","nav_menu":false},{"id":"771034414327920939","title":"Map","url":"map.html","target":"","nav_menu":false},{"id":"807633210476052296","title":"Tutorial\/Templates","url":"tutorialtemplates.html","target":"","nav_menu":false},{"id":"462747272431172124","title":"News","url":"news.html","target":"","nav_menu":false},{"id":"661412759227518685","title":"About","url":"about.html","target":"","nav_menu":false}],
+				[{"id":"608562111965458717","title":"Home","url":"index.html","target":"","nav_menu":false,"nonclickable":false},{"id":"771034414327920939","title":"Map","url":"map.html","target":"","nav_menu":false,"nonclickable":false},{"id":"807633210476052296","title":"Tutorial\/Templates","url":"tutorialtemplates.html","target":"","nav_menu":false,"nonclickable":false},{"id":"462747272431172124","title":"News","url":"news.html","target":"","nav_menu":false,"nonclickable":false},{"id":"661412759227518685","title":"About","url":"about.html","target":"","nav_menu":false,"nonclickable":false}],
 				"740050256238108013",
 				'',
 				'active',
 				false,
-				{"navigation\/item":"<li {{#id}}id=\"{{id}}\"{{\/id}} class=\"wsite-menu-item-wrap\">\n\t<a\n\t\t{{^nav_menu}}\n\t\t\thref=\"{{url}}\"\n\t\t{{\/nav_menu}}\n\t\t{{#target}}\n\t\t\ttarget=\"{{target}}\"\n\t\t{{\/target}}\n\t\t{{#membership_required}}\n\t\t\tdata-membership-required=\"{{.}}\"\n\t\t{{\/membership_required}}\n\t\tclass=\"wsite-menu-item\"\n\t\t>\n\t\t{{{title_html}}}\n\t<\/a>\n\t{{#has_children}}{{> navigation\/flyout\/list}}{{\/has_children}}\n<\/li>\n","navigation\/flyout\/list":"<div class=\"wsite-menu-wrap\" style=\"display:none\">\n\t<ul class=\"wsite-menu\">\n\t\t{{#children}}{{> navigation\/flyout\/item}}{{\/children}}\n\t<\/ul>\n<\/div>\n","navigation\/flyout\/item":"<li {{#id}}id=\"{{id}}\"{{\/id}}\n\tclass=\"wsite-menu-subitem-wrap {{#is_current}}wsite-nav-current{{\/is_current}}\"\n\t>\n\t<a\n\t\t{{^nav_menu}}\n\t\t\thref=\"{{url}}\"\n\t\t{{\/nav_menu}}\n\t\t{{#target}}\n\t\t\ttarget=\"{{target}}\"\n\t\t{{\/target}}\n\t\tclass=\"wsite-menu-subitem\"\n\t\t>\n\t\t<span class=\"wsite-menu-title\">\n\t\t\t{{{title_html}}}\n\t\t<\/span>{{#has_children}}<span class=\"wsite-menu-arrow\">&gt;<\/span>{{\/has_children}}\n\t<\/a>\n\t{{#has_children}}{{> navigation\/flyout\/list}}{{\/has_children}}\n<\/li>\n"},
+				{"navigation\/item":"<li {{#id}}id=\"{{id}}\"{{\/id}} class=\"wsite-menu-item-wrap\">\n\t<a\n\t\t{{^nonclickable}}\n\t\t\t{{^nav_menu}}\n\t\t\t\thref=\"{{url}}\"\n\t\t\t{{\/nav_menu}}\n\t\t{{\/nonclickable}}\n\t\t{{#target}}\n\t\t\ttarget=\"{{target}}\"\n\t\t{{\/target}}\n\t\t{{#membership_required}}\n\t\t\tdata-membership-required=\"{{.}}\"\n\t\t{{\/membership_required}}\n\t\tclass=\"wsite-menu-item\"\n\t\t>\n\t\t{{{title_html}}}\n\t<\/a>\n\t{{#has_children}}{{> navigation\/flyout\/list}}{{\/has_children}}\n<\/li>\n","navigation\/flyout\/list":"<div class=\"wsite-menu-wrap\" style=\"display:none\">\n\t<ul class=\"wsite-menu\">\n\t\t{{#children}}{{> navigation\/flyout\/item}}{{\/children}}\n\t<\/ul>\n<\/div>\n","navigation\/flyout\/item":"<li {{#id}}id=\"{{id}}\"{{\/id}}\n\tclass=\"wsite-menu-subitem-wrap {{#is_current}}wsite-nav-current{{\/is_current}}\"\n\t>\n\t<a\n\t\t{{^nonclickable}}\n\t\t\t{{^nav_menu}}\n\t\t\t\thref=\"{{url}}\"\n\t\t\t{{\/nav_menu}}\n\t\t{{\/nonclickable}}\n\t\t{{#target}}\n\t\t\ttarget=\"{{target}}\"\n\t\t{{\/target}}\n\t\tclass=\"wsite-menu-subitem\"\n\t\t>\n\t\t<span class=\"wsite-menu-title\">\n\t\t\t{{{title_html}}}\n\t\t<\/span>{{#has_children}}<span class=\"wsite-menu-arrow\">&gt;<\/span>{{\/has_children}}\n\t<\/a>\n\t{{#has_children}}{{> navigation\/flyout\/list}}{{\/has_children}}\n<\/li>\n"},
 				{}
 			)
 		}
@@ -93,8 +94,8 @@ MathJax.Hub.Config({
 </script>
 <script type="text/javascript">(function(d,s,id){var z=d.createElement(s);z.type="text/javascript";z.id=id;z.async=true;z.src="http://static.zotabox.com/8/e/8e2816f3964c02518b40c1e9ba84b04e/widgets.js";var sz=d.getElementsByTagName(s)[0];sz.parentNode.insertBefore(z,sz)}(document,"script","zb-embed-code"));</script>
 	</head>
-	<body class="no-header  wsite-theme-light  wsite-page-rex_firebase_rooms full-width-on "><div class="body-wrap">
-	
+	<body class="no-header  wsite-page-rex_firebase_rooms  full-width-on  wsite-theme-dark"><div class="body-wrap">
+
 	<div id="header">
 		<div class="nav-trigger hamburger">
 			<div class="open-btn">
@@ -119,7 +120,7 @@ MathJax.Hub.Config({
 			<div id="navigation"><ul class="wsite-menu-default">
 		<li id="pg608562111965458717" class="wsite-menu-item-wrap">
 			<a
-					href="index.html"
+						href="index.html"
 				class="wsite-menu-item"
 				>
 				Home
@@ -128,7 +129,7 @@ MathJax.Hub.Config({
 		</li>
 		<li id="pg771034414327920939" class="wsite-menu-item-wrap">
 			<a
-					href="map.html"
+						href="map.html"
 				class="wsite-menu-item"
 				>
 				Map
@@ -137,7 +138,7 @@ MathJax.Hub.Config({
 		</li>
 		<li id="pg807633210476052296" class="wsite-menu-item-wrap">
 			<a
-					href="tutorialtemplates.html"
+						href="tutorialtemplates.html"
 				class="wsite-menu-item"
 				>
 				Tutorial/Templates
@@ -146,7 +147,7 @@ MathJax.Hub.Config({
 		</li>
 		<li id="pg462747272431172124" class="wsite-menu-item-wrap">
 			<a
-					href="news.html"
+						href="news.html"
 				class="wsite-menu-item"
 				>
 				News
@@ -155,7 +156,7 @@ MathJax.Hub.Config({
 		</li>
 		<li id="pg661412759227518685" class="wsite-menu-item-wrap">
 			<a
-					href="about.html"
+						href="about.html"
 				class="wsite-menu-item"
 				>
 				About
@@ -165,10 +166,15 @@ MathJax.Hub.Config({
 </ul>
 </div>
 			<div id="content-wrapper">
-				<div id="content"><div id='wsite-content' class='wsite-elements wsite-not-footer'>
-<h2 class="wsite-content-title" style="text-align:left;"><font color="#d5d5d5">rex_firebase_rooms</font><br /></h2>
+				<div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div class="wsite-section-wrap">
+	<div class="wsite-section wsite-body-section wsite-background-109"  >
+		<div class="wsite-section-content">
+					<div class="container">
+			<div class="wsite-section-elements">
+				<h2 class="wsite-content-title" style="text-align:left;"><font color="#d5d5d5">rex_firebase_rooms</font><br /></h2>
 
-<div class="paragraph" style="text-align:left;"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><a target="_blank" href="https://dl.dropboxusercontent.com/u/5779181/C2Repo/Zip/plugins/rex_firebase_rooms.7z">Plugin</a>,<span><span><span> <a target="_blank" href="https://dl.dropboxusercontent.com/u/5779181/C2Repo/rex_firebase_rooms.html">ACE table</a>, </span></span></span></span></span></span></span></span></span></span></span></span></span></span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><a target="_blank" href="https://www.scirra.com/forum/plugin-firebase_t121776">Discussion thread</a></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><br /><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span><span><span><span><span><span><span><span><span><span><span>Dependence: </span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span><span><span><span><span>one of these plugins</span></span></span></span></span></span></span></span></span></span><ul><li><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span><span><span><span><span><a href="http://c2rexplugins.weebly.com/rex_firebase_api.html">rex_firebase_api</a></span></span></span></span></span></span></span></span></span></span></li><li><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span><span><span><span><span><a href="http://c2rexplugins.weebly.com/rex_firebase_apiv3.html">rex_firebase_apiV3</a></span></span></span></span></span></span></span></span></span></span></span></li><li><a href="http://c2rexplugins.weebly.com/rex_wilddog_api.html">rex_wilddog_api</a></li></ul></div>
+<div class="paragraph" style="text-align:left;"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><a target="_blank" href="https://dl.dropboxusercontent.com/u/5779181/C2Repo/Zip/plugins/rex_firebase_rooms.7z">Plugin</a>,<span><span><span> <a target="_blank" href="https://rexrainbow.github.io/C2RexDoc/c2rexpluginsACE/plugin_rex_firebase_rooms.html">ACE table</a>, </span></span></span></span></span></span></span></span></span></span></span></span></span></span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><a target="_blank" href="https://www.scirra.com/forum/plugin-firebase_t121776">Discussion thread</a></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><br /><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span><span><span><span><span><span><span><span><span><span><span>Dependence:&nbsp;</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span><span><span><span><span><a href="http://c2rexplugins.weebly.com/rex_firebase_apiv3.html">rex_firebase_apiV3</a></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></div>
 
 <div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
 <hr class="styled-hr" style="width:100%;"></hr>
@@ -188,46 +194,105 @@ MathJax.Hub.Config({
 <hr class="styled-hr" style="width:100%;"></hr>
 <div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
 
-<div class="paragraph" style="text-align:left;"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><strong>Create a room</strong></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><br /><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>Call "</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>Action:Create<span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>" to</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><ul><li>Create a room, or</li><li>Leave current room, then create or join a room</li></ul>"Condition:On create" will be triggered while creating a room success, otherwise "Condition:On create error" will be triggered. Get room ID and room name of triggered room by "Expression:TriggeredRoomName", "Expression:TriggeredRoomID"<br />"Condition:On join" or "Condition:On join error" will also be fired while join the created room.<br /></div>
-
-<div class="paragraph" style="text-align:left;"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><strong>Join a room</strong><br />Call "</span>Action:Join" to</span></span></span></span><ul><li><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400">Join a room, or</span></span></span></span></li><li>Leave current room then join a room</li></ul>"Condition:On join" will be triggered while joining a room success, otherwise "Condition:On join error" will be triggered. Get room ID and room name of triggered room by "Expression:TriggeredRoomName", "Expression:TriggeredRoomID".<br /></div>
+<div class="paragraph" style="text-align:left;"><strong>Setup</strong><br />Call "Action:Set my info" to set user name and user ID of current user before create or join a room.<br />Read current user name and user ID back by "Expression:UserName", "Expression:UserID" under "My" category.<br /></div>
 
 <div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
 <hr class="styled-hr" style="width:100%;"></hr>
 <div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
 
-<div class="paragraph" style="text-align:left;"><strong>Rooms list</strong><br />Call "Action:Update" under "Rooms list" category will start listen rooms list changing automatically.<br />"Condition:On update" under "Rooms list" will be triggered while a room created or removed. Use "Condition:For each room" to travel all rooms, get each room name and room ID by "Expression:CurRoomName", "Expression:CurRoomID". Or get room name, room ID from index by "Expression:RoomIndex2Name", "Expression:RoomIndex2ID".<br />Stop updating by "Action:Stop updating" under "Rooms list" category.<br /></div>
+<div class="paragraph" style="text-align:left;"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><strong>Create a room</strong></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><br /><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>Call "</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>Action:Create<span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>" to</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><ul><li>Create a room, or</li><li>Leave current room, then create or join a room</li></ul>"Condition:On create" will be triggered while creating a room success, otherwise "Condition:On create error" will be triggered. <br />Get room ID and room name of triggered room by "Expression:TriggeredRoomName", "Expression:TriggeredRoomID"<br />"Condition:On join" or "Condition:On join error" will also be fired while join the created room.<br /></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Room name</strong><br />Parameter "Name" <span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>is a display name of this room.</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><br /></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Room type</strong><br />Parameter "Type" <span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>is a tag of this room, which is used in </span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>"Action:Update", see the "Rooms list" section.<br /></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Maximum peers</strong><br />Parameter "Max peers"<span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span> is the maximum amount of users in this room. Set it to 0 </span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>for unlimited.<br /></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Life period</strong><br />Set parameter "Life period" to "Temporary" to create a temporary room, which will be destroy when creator left.<br />Set it to "Persisted" to create a persisted room.<br /></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Door state</strong><br />Parameter "Door state" is used to set the initial room state to open or closed.<br />A possible use case of closed room is<ul><li>Create a closed room.</li><li>Initial data of this room.</li><li>Open this room by "Action:Open", see the "Door state" section.</li></ul></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Room ID</strong><br />Room ID is an unique ID of a room for joining, o<span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>r assign a roomID for a specific room.</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><br /></div>
 
 <div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
 <hr class="styled-hr" style="width:100%;"></hr>
 <div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
 
-<div class="paragraph" style="text-align:left;"><strong>Users list</strong><br />"Condition:On user joined", "Condition:On user left" will be triggered while a user has joined or left current room, get that joined or left user by "Expression:TriggeredUserName", "Expression:TriggeredUserID".<br />And "Condition:On update" under "Users list" category will also be triggered, use "Condition:For each user" and "Expression:CurUserName", "Expression:CurUserID" to get each user name, user ID of users in current room.<br />Also, get user name, user ID from index by "Expression:UserIndex2Name", "Expression:UserIndex2ID".<br /></div>
+<div class="paragraph" style="text-align:left;"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><strong>Join a room</strong><br />Call "</span>Action:Join" to</span></span></span></span><ul><li><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400">Join a room, or</span></span></span></span></li><li>Leave current room then join a room<br /></li></ul>by roomID.<br />"Condition:On join" will be triggered while joining a room success, otherwise "Condition:On join error" will be triggered. Get room ID and room name of triggered room by "Expression:TriggeredRoomName", "Expression:TriggeredRoomID".<br /></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Join random room</strong><br /><a target="_blank" href="https://1drv.ms/u/s!Am5HlOzVf0kHlCR8vKzpmaxhHtRa">Sample capx</a><br />Call "Action:Join random" to pick a random room from current rooms list (see next section), then join into this room.<br /></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Rooms list</strong><br />Call "Action:Update" under "Rooms list" category will start listen rooms list changing automatically. "Condition:On update" under "Rooms list" will be triggered when a room created or removed.<br />Stop updating by "Action:Stop updating" under "Rooms list" category.<br /></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Retrieve rooms</strong><br />Uses "Condition:For each room" to travel all monitored rooms, get each room name and room ID by "Expression:CurRoomName", "Expression:CurRoomID".<br />Or get room name, room ID from index by "Expression:RoomIndex2Name", "Expression:RoomIndex2ID". Amount of opened rooms by "Expression:RoomsCount".<br /></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Users list</strong><br />"Condition:On user joined", "Condition:On user left" will be triggered when a user has joined or left current room, get that joined or left user by "Expression:TriggeredUserName", "Expression:TriggeredUserID".<br />And "Condition:On update" under "Users list" category will also be triggered,<br /></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Retrieve users</strong><br />Uses "Condition:For each user" and "Expression:CurUserName", "Expression:CurUserID" to get each user name, user ID of users in current room.<br />Also, get user name, user ID from index by "Expression:Index2UserName", "Expression:Index2UserID". Amount of users in current rooms by "Expression:UsersCount".<br /></div>
 
 <div class="paragraph" style="text-align:left;"><strong>First user</strong><br />"Condition:On become first user" will be triggered while user became the first one in users list of current room, or ""Condition:I am first user" returns true in the same condition.<br />There is only one "first user" of a room, like <a href="rex_firebase_token.html">rex_firebase_token plugin</a> does.<br /></div>
 
+<div class="paragraph" style="text-align:left;"><strong>Kick user</strong><br />Call "Action:Kick user" to kick user by userID.<br /></div>
+
 <div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
 <hr class="styled-hr" style="width:100%;"></hr>
 <div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
 
-<div class="paragraph" style="text-align:left;"><strong>Chat message</strong><ul><li>Use <a href="rex_firebase_simplemessage.html">rex_firebase_simplemessage plugin</a> to build a broadcast message channel. The reference path of message in current room is got by "Expression:ChannelRef".<br /></li><li>Expression:ChannelRef : get reference path of room.</li><li>Expression:ChannelRef ( channel_name ) : get reference path of a channel in current room. = reference_path_of_room + "\channel-" + channel_name + "\"</li></ul></div>
+<div class="paragraph" style="text-align:left;"><strong>Door state - open or close room</strong><br />Set property "Door control" to "Auto" to close the room when room is full. Open the door when user left.<br />Set it to "Manual" will keep the door opened, However, user still could not join the room if room is full.<br />User also could open or close the room by "Action:Open".<br /></div>
 
 <div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
 <hr class="styled-hr" style="width:100%;"></hr>
-<div style="height: 20px; overflow: hidden; width: 100%;"></div></div></div>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Permission lists</strong><br />There are two possible permission lists, black-list and white-list -<ul><li>UserID in black-list will be banned.</li><li>UserID in white-list will be allowed to join.</li></ul>A room only has one kind of permission list.<br /></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Add or remove user</strong><br />Add or user into black-list or white-list by "Action:Add". Remove from list by "Action:Remove".<br /></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Get permission list</strong><br />Call "Action:Get metadata" to get permission lists. "Condition:On receive metadata" will be trigger when get the list.<br /></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Retrieve permission list</strong><br />Uses "Condition:For each user" in category "Permission list" and "Expression:CurUserName", "Expression:CurUserID" to retrieve each user in the white or black list.<br />Or dump the list by "Expression:WhiteListToJSON" or"Expression:BlackListToJSON".<br /></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Reference path</strong><br />Get reference path for other rex_firebase_xxx plugins by "Expression:ChannelRef"<ul><li>Expression:ChannelRef : get reference path of room.</li><li>Expression:ChannelRef ( channel_name ) : get reference path of a channel in current room. it is equal to <br /></li></ul></div>
+
+<blockquote style="text-align:left;">reference_path_of_room + "\channel-" + channel_name + "\"<br /></blockquote>
+
+<div class="paragraph" style="text-align:left;"><strong>Chat message</strong><br />Use <a href="rex_firebase_simplemessage.html">rex_firebase_simplemessage plugin</a> to build a broadcast message channel. The reference path of message in current room is got by "Expression:ChannelRef".<br /></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+			</div>
+		</div>
+				</div>
+	</div>
 </div>
+
+</div>
+
 			</div>
 		</div>
 		<div id="footer">
-			<div id="footer-content">Create a <a target="_top" href="http://www.weebly.com/">free web site</a> with <a target="_top" href="http://www.weebly.com/" title="免费网站">Weebly</a></div>
+			<div id="footer-content">Create a <a target="_top" href="http://www.weebly.com/">free web site</a> with <a target="_top" href="http://www.weebly.com/" title="free web site">Weebly</a></div>
 		</div>
 	</div>
-	
+
 	<div class="navmobile-wrapper">
 		<div id="navmobile" class="nav"><ul class="wsite-menu-default">
 		<li id="pg608562111965458717" class="wsite-menu-item-wrap">
 			<a
-					href="index.html"
+						href="index.html"
 				class="wsite-menu-item"
 				>
 				Home
@@ -236,7 +301,7 @@ MathJax.Hub.Config({
 		</li>
 		<li id="pg771034414327920939" class="wsite-menu-item-wrap">
 			<a
-					href="map.html"
+						href="map.html"
 				class="wsite-menu-item"
 				>
 				Map
@@ -245,7 +310,7 @@ MathJax.Hub.Config({
 		</li>
 		<li id="pg807633210476052296" class="wsite-menu-item-wrap">
 			<a
-					href="tutorialtemplates.html"
+						href="tutorialtemplates.html"
 				class="wsite-menu-item"
 				>
 				Tutorial/Templates
@@ -254,7 +319,7 @@ MathJax.Hub.Config({
 		</li>
 		<li id="pg462747272431172124" class="wsite-menu-item-wrap">
 			<a
-					href="news.html"
+						href="news.html"
 				class="wsite-menu-item"
 				>
 				News
@@ -263,7 +328,7 @@ MathJax.Hub.Config({
 		</li>
 		<li id="pg661412759227518685" class="wsite-menu-item-wrap">
 			<a
-					href="about.html"
+						href="about.html"
 				class="wsite-menu-item"
 				>
 				About
@@ -277,9 +342,9 @@ MathJax.Hub.Config({
 </div>
 
 
-<script language="javascript" src="files/theme/plugins.js"></script>	 
+<script language="javascript" src="files/theme/plugins.js"></script>
 <script language="javascript" src="files/theme/custom.js"></script>
-<script language="javascript" src="files/theme/mobile.js"></script>	
+<script language="javascript" src="files/theme/mobile.js"></script>
 
 
 		<script>

@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>rex_backendless_savedata - Rex's plugins for Construct2</title>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+		<meta name="google-site-verification" content="AbKU1w_lq8tjMKAN0yt_O0WFqwDr4zH5bHiXJEpyErI" />
+		<link id="wsite-base-style" rel="stylesheet" type="text/css" href="http://cdn2.editmysite.com/css/sites.css?buildTime=1234" />
+<link rel="stylesheet" type="text/css" href="http://cdn2.editmysite.com/css/old/fancybox.css?1234" />
+<link rel="stylesheet" type="text/css" href="http://cdn2.editmysite.com/css/social-icons.css?buildtime=1234" media="screen,projection" />
+<link rel="stylesheet" type="text/css" href="files/main_style.css?1479003966" title="wsite-theme-css" />
+<link href='http://fonts.googleapis.com/css?family=Raleway:400,300,200,700&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+<link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,700,400italic,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,700,400italic,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+<style type='text/css'>
+.wsite-elements.wsite-not-footer:not(.wsite-header-elements) div.paragraph, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) p, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-block .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-description, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, #wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {font-family:"Open Sans" !important;}
+#wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {}
+.wsite-elements.wsite-footer div.paragraph, .wsite-elements.wsite-footer p, .wsite-elements.wsite-footer .product-block .product-title, .wsite-elements.wsite-footer .product-description, .wsite-elements.wsite-footer .wsite-form-field label, .wsite-elements.wsite-footer .wsite-form-field label{}
+.wsite-elements.wsite-not-footer:not(.wsite-header-elements) h2, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-long .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-large .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-small .product-title, #wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {font-family:"Open Sans" !important;}
+#wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {}
+.wsite-elements.wsite-footer h2, .wsite-elements.wsite-footer .product-long .product-title, .wsite-elements.wsite-footer .product-large .product-title, .wsite-elements.wsite-footer .product-small .product-title{}
+#wsite-title {}
+.wsite-menu-default a {}
+.wsite-menu a {}
+.wsite-image div, .wsite-caption {}
+.galleryCaptionInnerText {}
+.fancybox-title {}
+.wslide-caption-text {}
+.wsite-phone {}
+.wsite-headline,.wsite-header-section .wsite-content-title {}
+.wsite-headline-paragraph,.wsite-header-section .paragraph {}
+.wsite-button-inner {}
+.wsite-not-footer blockquote {}
+.wsite-footer blockquote {}
+.blog-header h2 a {}
+#wsite-content h2.wsite-product-title {}
+.wsite-product .wsite-product-price a {}
+</style>
+
+		<script><!--
+var STATIC_BASE = '//cdn1.editmysite.com/';
+var ASSETS_BASE = '//cdn2.editmysite.com/';
+var STYLE_PREFIX = 'wsite';
+//-->
+</script>
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js'></script>
+
+<script type="text/javascript" src="http://cdn2.editmysite.com/js/lang/zh/stl.js?buildTime=1234&"></script>
+<script src="http://cdn2.editmysite.com/js/site/main.js?buildTime=1234"></script><script type="text/javascript">_W.configDomain = "www.weebly.com";</script><script>_W.relinquish && _W.relinquish()</script>
+<script type="text/javascript" src="http://cdn2.editmysite.com/js/lang/zh/stl.js?buildTime=1234&"></script><script> _W.themePlugins = [];</script><script type="text/javascript"><!--
+	var IS_ARCHIVE = 1;
+	
+	(function(jQuery){
+		function initFlyouts(){
+			initPublishedFlyoutMenus(
+				[{"id":"608562111965458717","title":"Home","url":"index.html","target":"","nav_menu":false,"nonclickable":false},{"id":"771034414327920939","title":"Map","url":"map.html","target":"","nav_menu":false,"nonclickable":false},{"id":"807633210476052296","title":"Tutorial\/Templates","url":"tutorialtemplates.html","target":"","nav_menu":false,"nonclickable":false},{"id":"462747272431172124","title":"News","url":"news.html","target":"","nav_menu":false,"nonclickable":false},{"id":"661412759227518685","title":"About","url":"about.html","target":"","nav_menu":false,"nonclickable":false}],
+				"933806528545434602",
+				'',
+				'active',
+				false,
+				{"navigation\/item":"<li {{#id}}id=\"{{id}}\"{{\/id}} class=\"wsite-menu-item-wrap\">\n\t<a\n\t\t{{^nonclickable}}\n\t\t\t{{^nav_menu}}\n\t\t\t\thref=\"{{url}}\"\n\t\t\t{{\/nav_menu}}\n\t\t{{\/nonclickable}}\n\t\t{{#target}}\n\t\t\ttarget=\"{{target}}\"\n\t\t{{\/target}}\n\t\t{{#membership_required}}\n\t\t\tdata-membership-required=\"{{.}}\"\n\t\t{{\/membership_required}}\n\t\tclass=\"wsite-menu-item\"\n\t\t>\n\t\t{{{title_html}}}\n\t<\/a>\n\t{{#has_children}}{{> navigation\/flyout\/list}}{{\/has_children}}\n<\/li>\n","navigation\/flyout\/list":"<div class=\"wsite-menu-wrap\" style=\"display:none\">\n\t<ul class=\"wsite-menu\">\n\t\t{{#children}}{{> navigation\/flyout\/item}}{{\/children}}\n\t<\/ul>\n<\/div>\n","navigation\/flyout\/item":"<li {{#id}}id=\"{{id}}\"{{\/id}}\n\tclass=\"wsite-menu-subitem-wrap {{#is_current}}wsite-nav-current{{\/is_current}}\"\n\t>\n\t<a\n\t\t{{^nonclickable}}\n\t\t\t{{^nav_menu}}\n\t\t\t\thref=\"{{url}}\"\n\t\t\t{{\/nav_menu}}\n\t\t{{\/nonclickable}}\n\t\t{{#target}}\n\t\t\ttarget=\"{{target}}\"\n\t\t{{\/target}}\n\t\tclass=\"wsite-menu-subitem\"\n\t\t>\n\t\t<span class=\"wsite-menu-title\">\n\t\t\t{{{title_html}}}\n\t\t<\/span>{{#has_children}}<span class=\"wsite-menu-arrow\">&gt;<\/span>{{\/has_children}}\n\t<\/a>\n\t{{#has_children}}{{> navigation\/flyout\/list}}{{\/has_children}}\n<\/li>\n"},
+				{}
+			)
+		}
+		if (jQuery) {
+			jQuery(document).ready(function() { jQuery(initFlyouts); });
+		}else{
+			if (Prototype.Browser.IE) window.onload = initFlyouts;
+			else document.observe('dom:loaded', initFlyouts);
+		}
+	})(window._W && _W.jQuery)
+//-->
+</script>
+		
+		<script
+  type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script "text/x-mathjax-config">
+MathJax.Hub.Config({
+	TeX: { extensions: [
+		"autoload-all.js"
+	]}
+}); </script>
+<script "text/x-mathjax-config">
+	MathJax.Hub.Register.StartupHook("TeX Jax Ready", function () {
+		MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{ cancel: ["Extension","cancel"] });
+	});
+</script>
+<script type="text/javascript">(function(d,s,id){var z=d.createElement(s);z.type="text/javascript";z.id=id;z.async=true;z.src="http://static.zotabox.com/8/e/8e2816f3964c02518b40c1e9ba84b04e/widgets.js";var sz=d.getElementsByTagName(s)[0];sz.parentNode.insertBefore(z,sz)}(document,"script","zb-embed-code"));</script>
+	</head>
+	<body class="no-header  wsite-page-rex_backendless_savedata  full-width-on  wsite-theme-dark"><div class="body-wrap">
+
+	<div id="header">
+		<div class="nav-trigger hamburger">
+			<div class="open-btn">
+				<span class="mobile"></span>
+				<span class="mobile"></span>
+				<span class="mobile"></span>
+			</div>
+		</div>
+		<div id="sitename"><span class="wsite-logo">
+
+	<a href="">
+	
+	<span id="wsite-title">Rex's plugins for Construct2</span>
+	
+	</a>
+
+</span></div>
+	</div>
+
+	<div id="wrapper">
+		<div class="bg-wrapper">
+			<div id="navigation"><ul class="wsite-menu-default">
+		<li id="pg608562111965458717" class="wsite-menu-item-wrap">
+			<a
+						href="index.html"
+				class="wsite-menu-item"
+				>
+				Home
+			</a>
+			
+		</li>
+		<li id="pg771034414327920939" class="wsite-menu-item-wrap">
+			<a
+						href="map.html"
+				class="wsite-menu-item"
+				>
+				Map
+			</a>
+			
+		</li>
+		<li id="pg807633210476052296" class="wsite-menu-item-wrap">
+			<a
+						href="tutorialtemplates.html"
+				class="wsite-menu-item"
+				>
+				Tutorial/Templates
+			</a>
+			
+		</li>
+		<li id="pg462747272431172124" class="wsite-menu-item-wrap">
+			<a
+						href="news.html"
+				class="wsite-menu-item"
+				>
+				News
+			</a>
+			
+		</li>
+		<li id="pg661412759227518685" class="wsite-menu-item-wrap">
+			<a
+						href="about.html"
+				class="wsite-menu-item"
+				>
+				About
+			</a>
+			
+		</li>
+</ul>
+</div>
+			<div id="content-wrapper">
+				<div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div class="wsite-section-wrap">
+	<div class="wsite-section wsite-body-section wsite-background-134"  >
+		<div class="wsite-section-content">
+					<div class="container">
+			<div class="wsite-section-elements">
+				<h2 class="wsite-content-title" style="text-align:left;"><span style="color:rgb(153, 153, 153); font-weight:400"><span><span><span></span></span></span></span><font color="#d5d5d5">rex_backendless_savedata</font><span style="color:rgb(153, 153, 153); font-weight:400"><span><span><span></span></span></span></span><br /></h2>
+
+<div class="paragraph" style="text-align:left;"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><a target="_blank" href="https://dl.dropboxusercontent.com/u/5779181/C2Repo/Zip/plugins/rex_backendless_savedata.7z">Plugin</a>,<span><span><span> <a target="_blank" href="https://rexrainbow.github.io/C2RexDoc/c2rexpluginsACE/plugin_rex_backendless_savedata.html">ACE table</a>, </span></span></span></span></span></span></span></span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><a target="_blank" href="https://www.scirra.com/forum/plugin-backendless-plugins_t180680">Discussion thread</a></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><br /><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400">Dependence: </span></span></span></span></span></span><a href="rex_backendless_api.html">rex_backendless_api</a><br /></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><strong><font size="3">Introduction</font></strong></span></span></span></span></span></span></span></span></span></span></span></span></span><br />Save slots on backendless.</span><br /></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><strong><font size="3">Usage</font></strong><br /><a target="_blank" href="https://1drv.ms/u/s!Am5HlOzVf0kHlEwVmIPet8iYXe8Q">Sample capx</a></span></span></span></span><br /></div>
+
+<div class="paragraph" style="text-align:left;"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><strong>Concept</strong></span></span></span></span></span></span><br />Each user has a dedicate slots set. Each slot is stores in a row, some keys are slot header.</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span> </span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><br /></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><strong>Prepare</strong></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><br />Add&nbsp;</span></span></span></span></span></span></span></span></span></span></span></span><a href="rex_backendless_api.html">rex_backendless_api</a><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"><span style="font-weight:400"> to set api id and javascript key.</span></span></span></span></span></span></span></span></span></span></span></span><br /></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><strong>Set Owner</strong></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><br /><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>Each user has a dedicate slots set.</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span> So first step is to set the owner user by "Action:Set owner".&nbsp;<br />Set "User ID"<span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"> to "</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>Expression:UserID" of <span style="color:rgb(119, 119, 119); font-weight:400"><span><span><span><a href="http://c2rexplugins.weebly.com/rex_backendless_authentication.html">rex_backendless_authentication</a></span></span></span></span>.<br /></div>
+
+<div class="paragraph"><strong>Set keys of header</strong><br />Header is some keys (fields) in a slot. Keys of header could be assigned in property "Header keys", or add keys by "Action:Add header key".<br /></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><strong>Load</strong><br />Follow these steps to load a slot from cloud after set owner.</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><br /></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Get headers</strong><br /><span style="color:rgb(119, 119, 119); font-weight:400"><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>1. Call "Action:Get all headers" to get all headers of this owner user. "Condition:On get headers" will be triggered if get all headers.<br />2. There are three ways to retrieve header for showing them at UI -<br />- a. "Condition:For each header", then get each slot name by "Expression:CurSlotName", and get value by "Expression:CurHeaderValue( key )". </span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400">Or retrieve each key of a header by "</span></span></span></span></span></span></span></span></span></span></span>Condition:For each key" under "Load - header<em>" </em>category, then read key and value by&nbsp; "Expression:CurKey", and "Expression:CurValue".<br /><span style="color:rgb(119, 119, 119); font-weight:400"><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>- b. get value by "Expression:HeaderValue(&nbsp; slotName, key )".<br />- c. get headers in items list by "</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>Expression:HeadersAsItemList", then put this list into <a href="rex_taffydb.html">rex_taffydb object</a>.<br /></div>
+
+<div class="paragraph" style="text-align:left;"><strong>Get body</strong><br /><span style="color:rgb(119, 119, 119); font-weight:400"><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>3. Call "Action:Get body" with a slot name parameter to get selected slot body. "Condition:On get body" will be triggered if get body. "Condition:On get body error" will be triggered if got nothing.<br />4. Get body value by "Expression:BodyValue( key )".</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"> Or retrieve each key of a body by "</span></span></span></span></span></span></span></span></span></span></span>Condition:For each key" under "Load - body<em>" </em>category, then read key and value by&nbsp; "Expression:CurKey", and "Expression:CurValue".</div>
+
+<div class="paragraph" style="text-align:left;"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>If there is only a slot, the slot body could be load directly by step 3, 4.</span></span></span></span></span></span></span></span></span></span><br /><span><span><span>After got headers, there are some conditions could be used to test if a slot is existed.</span></span></span></span></span></span></span></span></span></span></span></span><ul><li><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span><span><span><span><span><span><span><span><span><span>"</span>Condition:Empty" is used to test if there is no slot.</span></span></span></span></span></span></span></span></span></span></span></li><li><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span><span><span><span><span><span><span><span><span>"Condition:Is occupied" is used to test if a specific slot had been used.</span></span></span></span></span></span></span></span></span></span></span><br /></li></ul></div>
+
+<div class="paragraph"><strong>Get value by key and default value</strong><br /><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400">These expressions will read value by key,</span></span></span></span></span></span></span></span></span></span><ul><li style="color:rgb(119, 119, 119)"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400">Expression:CurHeaderValue( key )</span></span></span></span></span></span></span></span></span></span><br /></li><li><span style="color:rgb(119, 119, 119); font-weight:400"><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>Expression:HeaderValue( slotName, key )</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></li><li><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400">Expression:BodyValue( key )</span></span></span></span></span></span></span></span></span></span></span></li></ul>Or get value by key or return the default value if key does not exist.<ul><li><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400">Expression:CurHeaderValue( key , default_value )</span></span></span></span></span></span></span></span></span></span></span></li><li><span style="color:rgb(119, 119, 119); font-weight:400"><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>Expression:HeaderValue( slotName, key</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400">, default_value )</span></span></span></span></span></span></span></span></span></span></span></li><li><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400">Expression:BodyValue( key, default_value )</span></span></span></span></span></span></span></span></span></span></span></li></ul>Or get all keys in JSON string<ul><li><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400">Expression:CurHeaderValue</span></span></span></span></span></span></span></span></span></span></span></li><li><span style="color:rgb(119, 119, 119); font-weight:400"><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>Expression:HeaderValue( slotName ) , a header in JSON</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></li><li><span style="color:rgb(119, 119, 119); font-weight:400"><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>Expression:HeaderValue( slotName )</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span> , all header in JSON</li><li><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400">Expression:BodyValue</span></span></span></span></span></span></span></span></span></span></span></li></ul></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><strong>Clean</strong><br />Call "</span>Action:Clean slot" to clean a slot, header and body. Or call "Action:Clean all slots" to clean all slots.<br />"Condition:On clean" will be triggered if clean completed, otherwise "Condition:On clean error" will be triggered.<br />These actions will clean current loaded headers.</span></span></span><br /></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><strong>Save</strong><br />Follow these steps to save a slot on server.</span></span></span></span></span></span></span></span></span></span></span><ol><li><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400">Call "</span></span></span></span></span>Action:Set value" or "</span></span></span></span></span></span>Action:Set boolean value" <span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400">to assign value with key.</span></span></span></span></span></span></li><li><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400">Call "Action:Save" to save this slot on cloud by slot name. </span></span></span></span></span></span></li><li><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400">"Condition:On save" will be triggered if saving completed, otherwise "Condition:On save error" will be triggered. Get last saved slot name by "</span></span></span></span></span></span>Expression:LastSlotName", or error message by "Expression:ErrorMessage".</li></ol><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400">After saving, current loaded headers will be updated.</span></span></span><br /></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><strong>Last saved time</strong><br />Last saved time would be stored at key "updated" </span><span style="color:rgb(119, 119, 119); font-weight:400">( </span>Expression:KeyLastSaveTime ).<br />User could get the last saved time of a specific header by </span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>Expression:CurHeaderValue</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>( <span>Expression:KeyLastSaveTime</span> ), or get <span>the last saved time of body by </span></span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>Expression:BodyValue</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>( <span><span>Expression:KeyLastSaveTime</span> ).<br />These would return an unixtimestamp, put this value into <a href="rex_date.html">rex_date</a> to get Year/Month/Date, Hour/Minute/Second.</span></span></span></span></span></span></span><br /></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph"><strong>Cache</strong><br />Set property "Cache" to "Yes" to cache the objectId of slot. It could save 1 backendless access when saving slot.<br /></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><span style="color:rgb(119, 119, 119); font-weight:400"><strong>Access permission</strong></span></span></span></span></span></span><br />Data security is configured in dashboard. See <a target="_blank" href="https://backendless.com/documentation/data/js/data_security.htm">this page</a> for more detail.<br /></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph"><strong>Debug message</strong><br />Current loaded slot values will be shown at debug panel.<br /></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph"><strong>Compare with <a href="rex_parse_savedata.html">rex_parse_savedata plugin</a></strong><br />This plugin only uses 1 table to store header and body in a row. rex_parse_savedata plugin uses 2 tables.<br />One last important thing, parse service will be closed.<br /></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+			</div>
+		</div>
+				</div>
+	</div>
+</div>
+
+</div>
+
+			</div>
+		</div>
+		<div id="footer">
+			<div id="footer-content">Create a <a target="_top" href="http://www.weebly.com/">free web site</a> with <a target="_top" href="http://www.weebly.com/" title="free web site">Weebly</a></div>
+		</div>
+	</div>
+
+	<div class="navmobile-wrapper">
+		<div id="navmobile" class="nav"><ul class="wsite-menu-default">
+		<li id="pg608562111965458717" class="wsite-menu-item-wrap">
+			<a
+						href="index.html"
+				class="wsite-menu-item"
+				>
+				Home
+			</a>
+			
+		</li>
+		<li id="pg771034414327920939" class="wsite-menu-item-wrap">
+			<a
+						href="map.html"
+				class="wsite-menu-item"
+				>
+				Map
+			</a>
+			
+		</li>
+		<li id="pg807633210476052296" class="wsite-menu-item-wrap">
+			<a
+						href="tutorialtemplates.html"
+				class="wsite-menu-item"
+				>
+				Tutorial/Templates
+			</a>
+			
+		</li>
+		<li id="pg462747272431172124" class="wsite-menu-item-wrap">
+			<a
+						href="news.html"
+				class="wsite-menu-item"
+				>
+				News
+			</a>
+			
+		</li>
+		<li id="pg661412759227518685" class="wsite-menu-item-wrap">
+			<a
+						href="about.html"
+				class="wsite-menu-item"
+				>
+				About
+			</a>
+			
+		</li>
+</ul>
+</div>
+	</div>
+
+</div>
+
+
+<script language="javascript" src="files/theme/plugins.js"></script>
+<script language="javascript" src="files/theme/custom.js"></script>
+<script language="javascript" src="files/theme/mobile.js"></script>
+
+
+		<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-50390733-1', 'weebly.com');
+  ga('send', 'pageview');
+
+</script>
+	</body>
+</html>

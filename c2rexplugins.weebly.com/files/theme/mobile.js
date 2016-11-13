@@ -318,8 +318,11 @@ Weebly.mobile_navigation = (function($) {
           return false;
         });
 
-        var $sideMenuRoot = $parentAnchor.clone(true, true);
-        var $rootLink = $('<li class="wsite-menu-master-item"></li>').html($sideMenuRoot);
+
+        if ($parentAnchor.attr("href")) {
+          var $sideMenuRoot = $parentAnchor.clone(true, true);
+          var $rootLink = $('<li class="wsite-menu-master-item"></li>').html($sideMenuRoot);          
+        }
 
         $ul.prepend($rootLink);
         $ul.prepend($backLink);
