@@ -62,13 +62,7 @@ Uses `Condition:For each cell` to retrieve all cells, get current logical X, log
 
 ```mermaid
 graph TB
-CndForEachCell[Condition:For each cell] --- ExpCurLX[Expression:CurLX]
-CndForEachCell --- ExpCurLY[Expression:CurLY]
-
-subgraph Sub events
-ExpCurLX
-ExpCurLY
-end
+CndForEachCell[+Condition:For each cell] --- Subevent[+Sub events<br>Expression:CurLX, Expression:CurLY]
 ```
 
 
