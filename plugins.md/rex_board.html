@@ -2,7 +2,169 @@
 <html>
 <head>
 <meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
-<title>rex_board.md</title><link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css'><style type='text/css'>html, body {overflow-x: initial !important;}html { font-size: 14px; color: rgb(51, 51, 51); background-color: rgb(255, 255, 255); }
+<title>rex_board.md</title><link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css'><style type='text/css'>html, body {overflow-x: initial !important;}.mermaid .label { color: rgb(51, 51, 51); }
+.node rect, .node circle, .node ellipse, .node polygon { fill: rgb(236, 236, 255); stroke: rgb(204, 204, 255); stroke-width: 1px; }
+.edgePath .path { stroke: rgb(51, 51, 51); }
+.edgeLabel { background-color: rgb(232, 232, 232); }
+.cluster rect { fill: rgb(255, 255, 222) !important; rx: 4 !important; stroke: rgb(170, 170, 51) !important; stroke-width: 1px !important; }
+.cluster text { fill: rgb(51, 51, 51); }
+.actor { stroke: rgb(204, 204, 255); fill: rgb(236, 236, 255); }
+text.actor { fill: black; stroke: none; }
+.actor-line { stroke: grey; }
+.messageLine0 { stroke-width: 1.5; stroke: rgb(51, 51, 51); }
+.messageLine1 { stroke-width: 1.5; stroke: rgb(51, 51, 51); }
+#arrowhead { fill: rgb(51, 51, 51); }
+#crosshead path { fill: rgb(51, 51, 51) !important; stroke: rgb(51, 51, 51) !important; }
+.messageText { fill: rgb(51, 51, 51); stroke: none; }
+.labelBox { stroke: rgb(204, 204, 255); fill: rgb(236, 236, 255); }
+.labelText { fill: black; stroke: none; }
+.loopText { fill: black; stroke: none; }
+.loopLine { stroke-width: 2; stroke: rgb(204, 204, 255); }
+.note { stroke: rgb(170, 170, 51); fill: rgb(255, 245, 173); }
+.noteText { fill: black; stroke: none; font-family: "trebuchet ms", verdana, arial; font-size: 14px; }
+.section { stroke: none; opacity: 0.2; }
+.section0 { fill: rgba(102, 102, 255, 0.490196); }
+.section2 { fill: rgb(255, 244, 0); }
+.section1, .section3 { fill: white; opacity: 0.2; }
+.sectionTitle0 { fill: rgb(51, 51, 51); }
+.sectionTitle1 { fill: rgb(51, 51, 51); }
+.sectionTitle2 { fill: rgb(51, 51, 51); }
+.sectionTitle3 { fill: rgb(51, 51, 51); }
+.sectionTitle { text-anchor: start; font-size: 11px; }
+.grid .tick { stroke: lightgrey; opacity: 0.3; shape-rendering: crispEdges; }
+.grid path { stroke-width: 0; }
+.today { fill: none; stroke: red; stroke-width: 2px; }
+.task { stroke-width: 2; }
+.taskText { text-anchor: middle; font-size: 11px; }
+.taskTextOutsideRight { fill: black; text-anchor: start; font-size: 11px; }
+.taskTextOutsideLeft { fill: black; text-anchor: end; font-size: 11px; }
+.taskText0, .taskText1, .taskText2, .taskText3 { fill: white; }
+.task0, .task1, .task2, .task3 { fill: rgb(138, 144, 221); stroke: rgb(83, 79, 188); }
+.taskTextOutside0, .taskTextOutside2 { fill: black; }
+.taskTextOutside1, .taskTextOutside3 { fill: black; }
+.active0, .active1, .active2, .active3 { fill: rgb(191, 199, 255); stroke: rgb(83, 79, 188); }
+.activeText0, .activeText1, .activeText2, .activeText3 { fill: black !important; }
+.done0, .done1, .done2, .done3 { stroke: grey; fill: lightgrey; stroke-width: 2; }
+.doneText0, .doneText1, .doneText2, .doneText3 { fill: black !important; }
+.crit0, .crit1, .crit2, .crit3 { stroke: rgb(255, 136, 136); fill: red; stroke-width: 2; }
+.activeCrit0, .activeCrit1, .activeCrit2, .activeCrit3 { stroke: rgb(255, 136, 136); fill: rgb(191, 199, 255); stroke-width: 2; }
+.doneCrit0, .doneCrit1, .doneCrit2, .doneCrit3 { stroke: rgb(255, 136, 136); fill: lightgrey; stroke-width: 2; cursor: pointer; shape-rendering: crispEdges; }
+.doneCritText0, .doneCritText1, .doneCritText2, .doneCritText3 { fill: black !important; }
+.activeCritText0, .activeCritText1, .activeCritText2, .activeCritText3 { fill: black !important; }
+.titleText { text-anchor: middle; font-size: 18px; fill: black; }
+.node text { font-family: "trebuchet ms", verdana, arial; font-size: 14px; }
+div.mermaidTooltip { position: absolute; text-align: center; max-width: 200px; padding: 2px; font-family: "trebuchet ms", verdana, arial; font-size: 12px; border: 1px solid rgb(170, 170, 51); border-radius: 2px; pointer-events: none; z-index: 100; background: rgb(255, 255, 222); }
+
+
+.CodeMirror { height: auto; }
+.CodeMirror-scroll { overflow-y: hidden; overflow-x: auto; }
+.CodeMirror-lines { padding: 4px 0px; }
+.CodeMirror pre { }
+.CodeMirror-scrollbar-filler, .CodeMirror-gutter-filler { background-color: white; }
+.CodeMirror-gutters { border-right-width: 1px; border-right-style: solid; border-right-color: rgb(221, 221, 221); white-space: nowrap; background-color: rgb(247, 247, 247); }
+.CodeMirror-linenumbers { }
+.CodeMirror-linenumber { padding: 0px 3px 0px 5px; text-align: right; color: rgb(153, 153, 153); }
+.CodeMirror div.CodeMirror-cursor { border-left-width: 1px; border-left-style: solid; border-left-color: black; z-index: 3; }
+.CodeMirror div.CodeMirror-secondarycursor { border-left-width: 1px; border-left-style: solid; border-left-color: silver; }
+.CodeMirror.cm-keymap-fat-cursor div.CodeMirror-cursor { width: auto; border: 0px; z-index: 1; background: rgb(119, 238, 119); }
+.CodeMirror div.CodeMirror-cursor.CodeMirror-overwrite { }
+.cm-tab { display: inline-block; }
+.cm-s-typora-default .cm-header, .cm-s-typora-default .cm-property { color: rgb(217, 79, 138); }
+.cm-s-typora-default pre.cm-header1:not(.cm-atom) :not(.cm-overlay) { font-size: 2rem; line-height: 2rem; }
+.cm-s-typora-default pre.cm-header2:not(.cm-atom) :not(.cm-overlay) { font-size: 1.4rem; line-height: 1.4rem; }
+.cm-s-typora-default .cm-atom, .cm-s-typora-default .cm-number { color: rgb(149, 132, 134); }
+.cm-s-typora-default .cm-table-row, .cm-s-typora-default .cm-block-start { font-family: monospace; }
+.cm-s-typora-default .cm-comment, .cm-s-typora-default .cm-code { color: rgb(74, 90, 159); font-family: monospace; }
+.cm-s-typora-default .cm-tag { color: rgb(169, 68, 66); }
+.cm-s-typora-default .cm-string { color: rgb(126, 134, 169); }
+.cm-s-typora-default .cm-link { color: rgb(196, 122, 15); text-decoration: underline; }
+.cm-s-typora-default .cm-variable-2, .cm-s-typora-default .cm-variable-1 { color: inherit; }
+.cm-s-typora-default .cm-overlay { font-size: 1rem; font-family: monospace; }
+.CodeMirror.cm-s-typora-default div.CodeMirror-cursor { border-left-width: 3px; border-left-style: solid; border-left-color: rgb(228, 98, 154); }
+.cm-s-typora-default .CodeMirror-activeline-background { left: -60px; right: -30px; background: rgba(204, 204, 204, 0.2); }
+.cm-s-typora-default .CodeMirror-gutters { border-right-style: none; background-color: inherit; }
+.cm-s-typora-default .cm-trailing-space-new-line::after, .cm-startspace::after, .cm-starttab .cm-tab::after { content: "•"; position: absolute; left: 0px; opacity: 0; font-family: LetterGothicStd, monospace; }
+.os-windows .cm-startspace::after, .os-windows .cm-starttab .cm-tab::after { left: -0.1em; }
+.cm-starttab .cm-tab::after { content: " "; }
+.cm-startspace, .cm-tab, .cm-starttab, .cm-trailing-space-a, .cm-trailing-space-b, .cm-trailing-space-new-line { font-family: monospace; position: relative; }
+.cm-s-typora-default .cm-trailing-space-new-line::after { content: "↓"; opacity: 0.3; }
+.cm-s-inner .cm-keyword { color: rgb(119, 0, 136); }
+.cm-s-inner .cm-atom, .cm-s-inner.cm-atom { color: rgb(34, 17, 153); }
+.cm-s-inner .cm-number { color: rgb(17, 102, 68); }
+.cm-s-inner .cm-def { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-variable { color: black; }
+.cm-s-inner .cm-variable-2 { color: rgb(0, 85, 170); }
+.cm-s-inner .cm-variable-3 { color: rgb(0, 136, 85); }
+.cm-s-inner .cm-property { color: black; }
+.cm-s-inner .cm-operator { color: rgb(152, 26, 26); }
+.cm-s-inner .cm-comment, .cm-s-inner.cm-comment { color: rgb(170, 85, 0); }
+.cm-s-inner .cm-string { color: rgb(170, 17, 17); }
+.cm-s-inner .cm-string-2 { color: rgb(255, 85, 0); }
+.cm-s-inner .cm-meta { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-qualifier { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-builtin { color: rgb(51, 0, 170); }
+.cm-s-inner .cm-bracket { color: rgb(153, 153, 119); }
+.cm-s-inner .cm-tag { color: rgb(17, 119, 0); }
+.cm-s-inner .cm-attribute { color: rgb(0, 0, 204); }
+.cm-s-inner .cm-header, .cm-s-inner.cm-header { color: blue; }
+.cm-s-inner .cm-quote, .cm-s-inner.cm-quote { color: rgb(0, 153, 0); }
+.cm-s-inner .cm-hr, .cm-s-inner.cm-hr { color: rgb(153, 153, 153); }
+.cm-s-inner .cm-link, .cm-s-inner.cm-link { color: rgb(0, 0, 204); }
+.cm-negative { color: rgb(221, 68, 68); }
+.cm-positive { color: rgb(34, 153, 34); }
+.cm-header, .cm-strong { font-weight: bold; }
+.cm-del { text-decoration: line-through; }
+.cm-em { font-style: italic; }
+.cm-link { text-decoration: underline; }
+.cm-error { color: rgb(255, 0, 0); }
+.cm-invalidchar { color: rgb(255, 0, 0); }
+div.CodeMirror span.CodeMirror-matchingbracket { color: rgb(0, 255, 0); }
+div.CodeMirror span.CodeMirror-nonmatchingbracket { color: rgb(255, 34, 34); }
+.cm-s-inner .CodeMirror-activeline-background { background: inherit; }
+.CodeMirror { position: relative; overflow: hidden; }
+.CodeMirror-scroll { margin-bottom: -30px; margin-right: -30px; padding-bottom: 30px; padding-right: 30px; height: 100%; outline: none; position: relative; box-sizing: content-box; }
+.CodeMirror-sizer { position: relative; }
+.CodeMirror-vscrollbar, .CodeMirror-hscrollbar, .CodeMirror-scrollbar-filler, .CodeMirror-gutter-filler { position: absolute; z-index: 6; display: none; }
+.CodeMirror-vscrollbar { right: 0px; top: 0px; overflow-x: hidden; overflow-y: scroll; }
+.CodeMirror-hscrollbar { bottom: 0px; left: 0px; overflow-y: hidden; overflow-x: scroll; }
+.CodeMirror-scrollbar-filler { right: 0px; bottom: 0px; }
+.CodeMirror-gutter-filler { left: 0px; bottom: 0px; }
+.CodeMirror-gutters { position: absolute; left: 0px; top: 0px; padding-bottom: 30px; z-index: 3; }
+.CodeMirror-gutter { white-space: normal; height: 100%; box-sizing: content-box; padding-bottom: 30px; margin-bottom: -32px; display: inline-block; }
+.CodeMirror-gutter-elt { position: absolute; cursor: default; z-index: 4; }
+.CodeMirror-lines { cursor: text; }
+.CodeMirror pre { border-radius: 0px; border-width: 0px; font-family: inherit; font-size: inherit; margin: 0px; white-space: pre; word-wrap: normal; color: inherit; z-index: 2; position: relative; overflow: visible; background: transparent; }
+.CodeMirror-wrap pre { word-wrap: break-word; white-space: pre-wrap; word-break: normal; }
+.CodeMirror-code pre { border-right-width: 30px; border-right-style: solid; border-right-color: transparent; width: fit-content; }
+.CodeMirror-wrap .CodeMirror-code pre { border-right-style: none; width: auto; }
+.CodeMirror-linebackground { position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px; z-index: 0; }
+.CodeMirror-linewidget { position: relative; z-index: 2; overflow: auto; }
+.CodeMirror-widget { }
+.CodeMirror-wrap .CodeMirror-scroll { overflow-x: hidden; }
+.CodeMirror-measure { position: absolute; width: 100%; height: 0px; overflow: hidden; visibility: hidden; }
+.CodeMirror-measure pre { position: static; }
+.CodeMirror div.CodeMirror-cursor { position: absolute; visibility: hidden; border-right-style: none; width: 0px; }
+.CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+.CodeMirror-focused div.CodeMirror-cursor { visibility: inherit; }
+.CodeMirror-selected { background: rgb(217, 217, 217); }
+.CodeMirror-focused .CodeMirror-selected { background: rgb(215, 212, 240); }
+.cm-searching { background: rgba(255, 255, 0, 0.4); }
+.CodeMirror span { }
+@media print { 
+  .CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+}
+.CodeMirror-lint-markers { width: 16px; }
+.CodeMirror-lint-tooltip { border: 1px solid black; border-radius: 4px; color: infotext; font-family: monospace; overflow: hidden; padding: 2px 5px; position: fixed; white-space: pre-wrap; z-index: 10000; max-width: 600px; opacity: 0; transition: opacity 0.4s; font-size: 0.8em; background-color: infobackground; }
+.CodeMirror-lint-mark-error, .CodeMirror-lint-mark-warning { background-position: left bottom; background-repeat: repeat-x; }
+.CodeMirror-lint-mark-error { background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAADCAYAAAC09K7GAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9sJDw4cOCW1/KIAAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAAHElEQVQI12NggIL/DAz/GdA5/xkY/qPKMDAwAADLZwf5rvm+LQAAAABJRU5ErkJggg=="); }
+.CodeMirror-lint-marker-error, .CodeMirror-lint-marker-warning { cursor: pointer; display: inline-block; height: 16px; width: 16px; vertical-align: middle; position: relative; background-position: center center; background-repeat: no-repeat; }
+.CodeMirror-lint-message-error, .CodeMirror-lint-message-warning { padding-left: 18px; background-position: left top; background-repeat: no-repeat; }
+.CodeMirror-lint-marker-error, .CodeMirror-lint-message-error { background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAHlBMVEW7AAC7AACxAAC7AAC7AAAAAAC4AAC5AAD///+7AAAUdclpAAAABnRSTlMXnORSiwCK0ZKSAAAATUlEQVR42mWPOQ7AQAgDuQLx/z8csYRmPRIFIwRGnosRrpamvkKi0FTIiMASR3hhKW+hAN6/tIWhu9PDWiTGNEkTtIOucA5Oyr9ckPgAWm0GPBog6v4AAAAASUVORK5CYII="); }
+.CodeMirror-lint-marker-warning, .CodeMirror-lint-message-warning { background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAANlBMVEX/uwDvrwD/uwD/uwD/uwD/uwD/uwD/uwD/uwD6twD/uwAAAADurwD2tQD7uAD+ugAAAAD/uwDhmeTRAAAADHRSTlMJ8mN1EYcbmiixgACm7WbuAAAAVklEQVR42n3PUQqAIBBFUU1LLc3u/jdbOJoW1P08DA9Gba8+YWJ6gNJoNYIBzAA2chBth5kLmG9YUoG0NHAUwFXwO9LuBQL1giCQb8gC9Oro2vp5rncCIY8L8uEx5ZkAAAAASUVORK5CYII="); }
+.CodeMirror-lint-marker-multiple { width: 100%; height: 100%; background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAMAAADzjKfhAAAACVBMVEUAAAAAAAC/v7914kyHAAAAAXRSTlMAQObYZgAAACNJREFUeNo1ioEJAAAIwmz/H90iFFSGJgFMe3gaLZ0od+9/AQZ0ADosbYraAAAAAElFTkSuQmCC"); background-position: right bottom; background-repeat: no-repeat; }
+
+
+html { font-size: 14px; color: rgb(51, 51, 51); background-color: rgb(255, 255, 255); }
 body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; }
 a:active, a:hover { outline: 0px; }
 .in-text-selection, ::selection { text-shadow: none; background: rgb(181, 214, 252); }
@@ -207,6 +369,8 @@ header, .context-menu, .megamenu-content, footer { font-family: "Segoe UI", Aria
 </style>
 </head>
 <body class='typora-export' >
-<div  id='write'  class = 'is-node'><h1><a name='header-c1' class='md-header-anchor '></a><a href='index.html'>Index</a> &gt; <a href='board.index.html'>Board</a> &gt; rex_board</h1><p></p></div>
+<div  id='write'  class = 'is-node'><h1><a name='header-c359' class='md-header-anchor '></a><a href='index.html'>Index</a> &gt; <a href='board.index.html'>Board</a> &gt; rex_board</h1><div class='md-toc' mdtype='toc'><p class="md-toc-content"><span class="md-toc-item md-toc-h1" data-ref="c359"><a class="md-toc-inner" style="cursor: pointer;" href="#header-c359">Index &gt; Board &gt; rex_board</a></span><span class="md-toc-item md-toc-h2" data-ref="c362"><a class="md-toc-inner" style="cursor: pointer;" href="#header-c362">Introduction</a></span><span class="md-toc-item md-toc-h2" data-ref="c374"><a class="md-toc-inner" style="cursor: pointer;" href="#header-c374">Usage</a></span><span class="md-toc-item md-toc-h3" data-ref="c375"><a class="md-toc-inner" style="cursor: pointer;" href="#header-c375">Create chess</a></span><span class="md-toc-item md-toc-h4" data-ref="c378"><a class="md-toc-inner" style="cursor: pointer;" href="#header-c378">Setup layout</a></span><span class="md-toc-item md-toc-h4" data-ref="c392"><a class="md-toc-inner" style="cursor: pointer;" href="#header-c392">Size</a></span><span class="md-toc-item md-toc-h4" data-ref="c397"><a class="md-toc-inner" style="cursor: pointer;" href="#header-c397">Logical position</a></span><span class="md-toc-item md-toc-h4" data-ref="c410"><a class="md-toc-inner" style="cursor: pointer;" href="#header-c410">Retrieve each cell</a></span></p></div><h2><a name='header-c362' class='md-header-anchor '></a>Introduction</h2><p>This plugin is a data structure of <em>2d array</em>(x,y)+<em>1d hash-table(z)</em>, to store the logical position of chess. This 2d array could be an orthogonal, isometric or hexagonal tile map combined with <a href='rex_board_squaretx.html'>rex_board_squareTx</a> or <a href='rex_board_hextx.html'>rex_board_hexTx</a> plugin.</p><ul><li>rex_board +<a href='rex_board_squaretx.html'>rex_board_squareTx</a> = orthogonal or isometric, or staggered </li><li>rex_board + <a href='rex_board_hextx.html'>rex_board_hexTx</a> = hexagonal</li></ul><p>It is a based plugin of my board-series plugins/behaviors.</p><h2><a name='header-c374' class='md-header-anchor '></a>Usage</h2><h3><a name='header-c375' class='md-header-anchor '></a>Create chess</h3><p><a href='https://onedrive.live.com/redir?resid=7497FD5EC94476E%2521521&authkey=%2521ABKjYmMcxdof4EA&ithint=file%252c.capx'>Sample capx</a></p><h4><a name='header-c378' class='md-header-anchor '></a>Setup layout</h4><p>User should put one of board-layout plugin </p><ul><li><a href='rex_board_squaretx.html'>rex_board_squareTx</a> : orthogonal/isometric/staggered layout</li><li><a href='rex_board_hextx.html'>rex_board_hexTx</a> : hexagonal layout</li></ul><div class="md-diagram-panel"><svg id="mermaidChart29" width="320" xmlns="http://www.w3.org/2000/svg" height="162" viewBox="0 0 340 182" style="height: 222px;"><g><g class="output"><g class="clusters"></g><g class="edgePaths"><g class="edgePath" style="opacity: 1;"><path class="path" d="M94.30232558139535,63L135,38L160,38" marker-end="url(#arrowhead133)" style="stroke: #333; stroke-width: 1.5px;fill:none"></path><defs><marker id="arrowhead133" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 0 0 L 0 0 z" style="fill: #333"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M94.30232558139535,99L135,124L169.5,124" marker-end="url(#arrowhead134)" style="stroke: #333; stroke-width: 1.5px;fill:none"></path><defs><marker id="arrowhead134" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 0 0 L 0 0 z" style="fill: #333"></path></marker></defs></g></g><g class="edgeLabels"><g class="edgeLabel" transform="" style="opacity: 1;"><g transform="translate(0,0)" class="label"><rect rx="0" ry="0" width="0" height="0" style="fill:#e8e8e8;"></rect><text><tspan xml:space="preserve" dy="1em" x="1"></tspan></text></g></g><g class="edgeLabel" transform="" style="opacity: 1;"><g transform="translate(0,0)" class="label"><rect rx="0" ry="0" width="0" height="0" style="fill:#e8e8e8;"></rect><text><tspan xml:space="preserve" dy="1em" x="1"></tspan></text></g></g></g><g class="nodes"><g class="node" id="rexx_board" transform="translate(65,81)" style="opacity: 1;"><rect rx="0" ry="0" x="-45" y="-18" width="90" height="36"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-35,-8)"><text><tspan xml:space="preserve" dy="1em" x="1">rexx_board</tspan></text></g></g></g><g class="node" id="rex_boardsquareTx" transform="translate(230,38)" style="opacity: 1;"><rect rx="0" ry="0" x="-70" y="-18" width="140" height="36"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-60,-8)"><text><tspan xml:space="preserve" dy="1em" x="1">rex_boardsquareTx</tspan></text></g></g></g><g class="node" id="rex_boardhexTx" transform="translate(230,124)" style="opacity: 1;"><rect rx="0" ry="0" x="-60.5" y="-18" width="121" height="36"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-50.5,-8)"><text><tspan xml:space="preserve" dy="1em" x="1">rex_boardhexTx</tspan></text></g></g></g></g></g></g></svg></div><p></p><p>into project. Each board object should have a board-layout object.</p><p>If the project has more then one boards, and each board has different board-layout, they need to assign board-layout object manually by <code>Action:Setup layout</code>.</p><h4><a name='header-c392' class='md-header-anchor '></a>Size</h4><p>The board size could be set by <code>Width</code> and <code>Height</code> at properties table. Or use <code>Action:Set board width</code>, <code>Action:Set board height</code>.</p><p>Read size back by <code>Expression:BoardWidth</code>, <code>Expression:BoardHeight</code>.</p><h4><a name='header-c397' class='md-header-anchor '></a>Logical position</h4><p>Each chess or tile has a logical position <strong>(x,y,z)</strong>. Each logical position only could have one instance(chess/tile).
+x and y are number type,</p><ul><li>index x is start at 0, to <code>board.width</code>-1.</li><li>index y is start at 0, to <code>board.height</code>-1.</li></ul><p>z could be number or string,</p><ul><li><strong>z=0 is a tile</strong>. It will be used in other plugins  or behaviors.</li><li>other z indexes are chess.</li></ul><h4><a name='header-c410' class='md-header-anchor '></a>Retrieve each cell</h4><p><a href='https://onedrive.live.com/redir?resid=7497FD5EC94476E%25212190&authkey=%2521AO0wKF2e8k_pwoQ&ithint=file%252ccapx'>Sample capx</a>
+Uses <code>Condition:For each cell</code> to retrieve all cells, get current logical X, logical Y index by ( <code>Expression:CurLX</code>, <code>Expression:CurLY</code> ).</p><div class="md-diagram-panel"><svg id="mermaidChart73" width="386" xmlns="http://www.w3.org/2000/svg" height="162" viewBox="0 0 406 182" style="height: 222px;"><g><g class="output"><g class="clusters"></g><g class="edgePaths"><g class="edgePath" style="opacity: 1;"><path class="path" d="M149.62790697674419,63L213,38L238,38" marker-end="url(#arrowhead271)" style="stroke: #333; stroke-width: 1.5px;fill:none"></path><defs><marker id="arrowhead271" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" style="fill: #333"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M149.62790697674419,99L213,124L238,124" marker-end="url(#arrowhead272)" style="stroke: #333; stroke-width: 1.5px;fill:none"></path><defs><marker id="arrowhead272" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" style="fill: #333"></path></marker></defs></g></g><g class="edgeLabels"><g class="edgeLabel" transform="" style="opacity: 1;"><g transform="translate(0,0)" class="label"><rect rx="0" ry="0" width="0" height="0" style="fill:#e8e8e8;"></rect><text><tspan xml:space="preserve" dy="1em" x="1"></tspan></text></g></g><g class="edgeLabel" transform="" style="opacity: 1;"><g transform="translate(0,0)" class="label"><rect rx="0" ry="0" width="0" height="0" style="fill:#e8e8e8;"></rect><text><tspan xml:space="preserve" dy="1em" x="1"></tspan></text></g></g></g><g class="nodes"><g class="node" id="CndForEachCell" transform="translate(104,81)" style="opacity: 1;"><rect rx="0" ry="0" x="-84" y="-18" width="168" height="36"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-74,-8)"><text><tspan xml:space="preserve" dy="1em" x="1">Condition:For each cell</tspan></text></g></g></g><g class="node" id="ExpCurLX" transform="translate(302,38)" style="opacity: 1;"><rect rx="0" ry="0" x="-64" y="-18" width="128" height="36"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-54,-8)"><text><tspan xml:space="preserve" dy="1em" x="1">Expression:CurLX</tspan></text></g></g></g><g class="node" id="ExpCurLY" transform="translate(302,124)" style="opacity: 1;"><rect rx="0" ry="0" x="-64" y="-18" width="128" height="36"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-54,-8)"><text><tspan xml:space="preserve" dy="1em" x="1">Expression:CurLY</tspan></text></g></g></g></g></g></g></svg></div><p></p><p></p><p></p></div>
 </body>
 </html>
