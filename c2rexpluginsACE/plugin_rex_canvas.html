@@ -55,6 +55,34 @@
           <h2>Actions</h2>
         </div>
         <div class="panel-body">
+          <h2>Compositing      </h2>
+          <h3>Action:Set global alpha      </h3>
+          <ul>
+            <li>Set global alpha.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Value ( number ) : A number between 0.0 (fully transparent) and 1.0 (fully opaque).</li>
+            </ul>
+          </ul>
+          <h3>Action:Set global composite operation      </h3>
+          <ul>
+            <li>Set global composite operation.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Type ( Combo ) : Type of composite.</li>
+              <ul>
+                <li>Options : [&quot;source-over&quot;,&quot;source-in&quot;,&quot;source-out&quot;,&quot;source-atop&quot;,&quot;destination-over&quot;,&quot;destination-in&quot;,&quot;destination-out&quot;,&quot;destination-atop&quot;,&quot;lighter&quot;,&quot;copy&quot;,&quot;xor&quot;,&quot;multiply&quot;,&quot;screen&quot;,&quot;overlay&quot;,&quot;darken&quot;,&quot;lighten&quot;,&quot;color-dodge&quot;,&quot;color-burn&quot;,&quot;hard-light&quot;,&quot;soft-light&quot;,&quot;difference&quot;,&quot;exclusion&quot;,&quot;hue&quot;,&quot;saturation&quot;,&quot;color&quot;,&quot;luminosity&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h3>Action:Set global composite operation #      </h3>
+          <ul>
+            <li>Set global composite operation.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Type ( string ) : Type of composite.</li>
+            </ul>
+          </ul>
           <h2>Drawing paths      </h2>
           <h3>Action:Fill      </h3>
           <ul>
@@ -419,6 +447,61 @@
               <li>Baseline ( string ) : Specifies the current text baseline.</li>
             </ul>
           </ul>
+          <h2>The canvas state      </h2>
+          <h3>Action:Push      </h3>
+          <ul>
+            <li>saves the entire state of the canvas by pushing the current state onto a stack.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Action:Pop      </h3>
+          <ul>
+            <li>Restores the most recently saved canvas state by popping the top entry in the drawing state stack. If there is no saved state, this method does nothing.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Transformations      </h2>
+          <h3>Action:Rotate      </h3>
+          <ul>
+            <li>Adds a rotation to the transformation matrix.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>angle ( number ) : The angle to rotate clockwise in radians.</li>
+            </ul>
+          </ul>
+          <h3>Action:Scale      </h3>
+          <ul>
+            <li>Adds a scaling transformation   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>x ( number ) : Scaling factor in the horizontal direction.</li>
+              <li>y ( number ) : Scaling factor in the vertical direction.</li>
+            </ul>
+          </ul>
+          <h3>Action:Translate      </h3>
+          <ul>
+            <li>Adds a translation transformation.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>x ( number ) : Distance to move in the horizontal direction.</li>
+              <li>y ( number ) : Distance to move in the vertical direction.</li>
+            </ul>
+          </ul>
+          <h3>Action:Set transform      </h3>
+          <ul>
+            <li>Resets (overrides) the current transformation to the identity matrix and then invokes a transformation described by the arguments of this method.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>m11 ( number ) : Horizontal scaling.</li>
+              <li>m12 ( number ) : Horizontal skewing.</li>
+              <li>m21 ( number ) : Vertical skewing.</li>
+              <li>m22 ( number ) : Vertical scaling.</li>
+              <li>dx ( number ) : Horizontal moving.</li>
+              <li>dy ( number ) : Vertical moving.</li>
+            </ul>
+          </ul>
         </div>
       </div>
       <div class="panel panel-default">    
@@ -442,6 +525,33 @@
           <h2>Conditions</h2>
         </div>
         <div class="panel-body">              
+          <h2>Drawing paths    </h2>
+          <h4>Condition:Point in Path                    </h4>
+          <ul>
+            <li>Return true if point is in path.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>x ( number ) : The X coordinate of the point to check.    </li>
+              <li>y ( number ) : The Y coordinate of the point to check.    </li>
+              <li>Fill rule ( Combo ) : The algorithm by which to determine if a point is inside a path or outside a path.    </li>
+              <ul>
+                <li>Options : [&quot;nonzero&quot;,&quot;evenodd&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h4>Condition:Point in stroke                    </h4>
+          <ul>
+            <li>Return true if point is in stroke.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>x ( number ) : The X coordinate of the point to check.    </li>
+              <li>y ( number ) : The Y coordinate of the point to check.    </li>
+              <li>Fill rule ( Combo ) : The algorithm by which to determine if a point is inside a path or outside a path.    </li>
+              <ul>
+                <li>Options : [&quot;nonzero&quot;,&quot;evenodd&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
           <h2>Web    </h2>
           <h4>Condition:On image URL loaded                    </h4>
           <ul>
