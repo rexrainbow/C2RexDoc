@@ -15,7 +15,7 @@ It is a based plugin of my board-series plugins/behaviors.
 
 ### Create chess
 
-[Sample capx](https://onedrive.live.com/redir?resid=7497FD5EC94476E%21521&authkey=%21ABKjYmMcxdof4EA&ithint=file%2c.capx)
+[Sample capx](https://onedrive.live.com/redir?resid=7497FD5EC94476E!521&authkey=!ABKjYmMcxdof4EA&ithint=file%2c.capx)
 
 #### Setup layout
 
@@ -57,7 +57,7 @@ z could be number or string,
 
 #### Retrieve each cell
 
-[Sample capx](https://onedrive.live.com/redir?resid=7497FD5EC94476E%212190&authkey=%21AO0wKF2e8k_pwoQ&ithint=file%2ccapx)
+[Sample capx](https://onedrive.live.com/redir?resid=7497FD5EC94476E!2190&authkey=!AO0wKF2e8k_pwoQ&ithint=file%2ccapx)
 Uses `Condition:For each cell` to retrieve all cells, get current logical X, logical Y index by ( `Expression:CurLX`, `Expression:CurLY` ).
 
 ```mermaid
