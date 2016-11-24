@@ -1,7 +1,5 @@
 # [Index](index.html) > [Board](board.index.html) > rex_board
 
-[TOC]
-
 ## Introduction
 
 This plugin is a data structure of *2d array*(x,y)+*1d hash-table(z)*, to store the logical position of chess. This 2d array could be an orthogonal, isometric or hexagonal tile map combined with [rex_board_squareTx](rex_board_squaretx.html) or [rex_board_hexTx](rex_board_hextx.html) plugin.
@@ -10,6 +8,23 @@ This plugin is a data structure of *2d array*(x,y)+*1d hash-table(z)*, to store 
 - rex_board + [rex_board_hexTx](rex_board_hextx.html) = hexagonal
 
 It is a based plugin of my board-series plugins/behaviors.
+
+## Links
+
+- [Plugin](https://dl.dropboxusercontent.com/u/5779181/C2Repo/Zip/plugins/rex_board.7z)
+- [ACE table](https://rexrainbow.github.io/C2RexDoc/c2rexpluginsACE/plugin_rex_board.html), 
+- [Discussion thread](https://www.scirra.com/forum/plugin-board-layout2board-behavior-grid-move_t69647)
+
+----
+
+[TOC]
+
+## Dependence
+
+One of these board layout
+
+- [rex_board_squareTx](rex_board_squaretx.html)
+- [rex_board_hexTx](rex_board_hextx.html)
 
 ## Usage##
 

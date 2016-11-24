@@ -4,8 +4,8 @@
 
 - Core
   - [Board](rex_board.html)
-  - SquareTx
-  - HexTx
+  - [SquareTx](rex_board_squaretx.html)
+  - [HexTx](rex_board_hextx.html)
 - Application
   - Chess
   - Grid Move
