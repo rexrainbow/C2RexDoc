@@ -1,9 +1,12 @@
 # Documents of my plugins
 
-- [Board](board.index.html)
-- Backend
-  - Firebase
-  - Parse/Back4app
-  - Backendless
- 
-[List](list.index.html)
+- [Download all my plugins and behaviors](my-plugins-repository-v2.html)
+- Categories
+  - Movement behaviors
+  - [Board](board.index.html)
+  - Backend
+    - Firebase
+    - Parse/Back4app
+    - Backendless
+- [Plugin list](list.index.html)
+

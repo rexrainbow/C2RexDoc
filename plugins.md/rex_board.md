@@ -280,6 +280,15 @@ The code direction could be get in layout plugin ([rex_board_squareTx](rex_board
 
 ### Physical or logical position
 
+```mermaid
+graph LR
+UID --> |"(Expression:UID2PX,<br> Expression:UID2PY)"| PXY
+UID --> |"(Expression:UID2LX,<br> Expression:UID2LY,<br> Expression:UID2LZ)"| LXYZ
+LXYZ --> |"Expression:LXYZ2UID"| UID
+LXYZ --> |"(Expression:LXYZ2PX,<br> Expression:LXYZ2PY)"| PXY
+PXY --> |"(Expression:PXY2LX,<br> Expression:PXY2LY)"| LXYZ
+```
+
 #### Logical position and chess UID
 
 These expressions could get logical position by chess UID, return (-1) if the chess is not on the board.
@@ -325,15 +334,6 @@ These expressions could transfer physical position to logical position.
 
 - `Expression:PXY2LX`
 - `Expression:PXY2LY` 
-
-```mermaid
-graph LR
-UID --> |"(Expression:UID2PX,<br> Expression:UID2PY)"| PXY
-UID --> |"(Expression:UID2LX,<br> Expression:UID2LY,<br> Expression:UID2LZ)"| LXYZ
-LXYZ --> |"Expression:LXYZ2UID"| UID
-LXYZ --> |"(Expression:LXYZ2PX,<br> Expression:LXYZ2PY)"| PXY
-PXY --> |"(Expression:PXY2LX,<br> Expression:PXY2LY)"| LXYZ
-```
 
 ----
 
