@@ -30,7 +30,7 @@ StartMoving["Start moving:<br>---<br>Action:Move to neighbor<br>Action:Move to L
 
 subgraph Move-able testing
 ForceMove --> |No| IsNotCollided{Target LXYZ<br>is empty}
-IsNotCollided --> |Yes| IsNotSolid{"Target LXYZ<br>is Not solid<br>----<br>Custom solid"}
+IsNotCollided --> |Yes| IsNotSolid{"Target LXYZ<br>is empty, and<br>is Not solid<br>----<br>Custom solid"}
 IsNotCollided --> |No| CondOnColidedBegin["+Condition:On colliding begin"]
 CondOnColidedBegin --> IsNotSolid
 
@@ -98,7 +98,7 @@ Moving request will be accepted if
 After testing,
 
 - `Condition:On moving accepted` will be triggered if testing passes or `Force move` is `Yes`, then moves chess, see next section.
--  `Condition:On moving rejected` will be triggered if testing failed.
+- `Condition:On moving rejected` will be triggered if testing failed.
   - `Expression:BlockerUID` : UID of solid or occupied chess at target logical position
 
 #### Flow chart of *Condition:On colliding begin*
