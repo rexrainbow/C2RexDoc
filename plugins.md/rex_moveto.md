@@ -27,7 +27,7 @@ None
 ```mermaid
 graph TB
 Start["Moving start<br>----<br>Action:Move to XY<br>Action:Move to object<br>Action:Move to distance-angle<br>..."] --> Moving((+Every tick<br>-Set position))
-Moving --> |Reach to target| OnHitTarget["+Condition:On hit target position"]
+Moving --> |Reaching target| OnHitTarget["+Condition:On hit target position"]
 Moving --> |"Stop by solid = Yes<br>Collide with solid"| OnHitSolid["+Condition:On stop by solid"]
 ```
 
