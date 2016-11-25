@@ -1,4 +1,4 @@
-# List of my plugus
+# [Index](index.html) > List of my plugus
 
 1. *plugin*: [rex_board](rex_board.html)
 2. *plugin*: [rex_board_hextx](rex_board_hextx.html)
