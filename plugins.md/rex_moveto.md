@@ -1,4 +1,4 @@
-# [Index](index.html) > [Board](board.index.html) > rex_moveto
+# [Index](index.html) > [Movement](movement.index.html) > rex_moveto
 
 ## Introduction
 
