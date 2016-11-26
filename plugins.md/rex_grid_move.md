@@ -26,22 +26,29 @@ None
 
 ```mermaid
 graph TB
-StartMoving["Start moving:<br>---<br>Action:Move to neighbor<br>Action:Move to LXY<br>..."] --> ForceMove{Property: Force move}
+StartMoving["Start moving:<br>---<br>Action:Move to neighbor<br>Action:Move to LXY<br>..."] --- TargetLXYZ["Move from<br>( Expression:SourceLX , Expression:SourceLY , Expression:SourceLZ )<br>to<br>( Expression:DestinationLX , Expression:DestinationLY , Expression:DestinationLZ )<br>direction: Expression:Direction"]
+TargetLXYZ --> OverlappingTest{Target LXYZ<br>is empty}
 
-subgraph Move-able testing
-ForceMove --> |No| IsNotCollided{Target LXYZ<br>is empty}
-IsNotCollided --> |Yes| IsNotSolid{"Target LXYZ<br>is empty, and<br>is Not solid<br>----<br>Custom solid"}
-IsNotCollided --> |No| CondOnColidedBegin["+Condition:On colliding begin"]
-CondOnColidedBegin --> IsNotSolid
+subgraph Overlapping test
+OverlappingTest --> |No<br>Is logical overlapping| CondOnCollidingBegin[+Condition:On colliding begin]
+end
+
+OverlappingTest --> |Yes|IsInsideBoard{TargetLXYZ<br>is inside board}
+CondOnCollidingBegin --> IsInsideBoard
+
+subgraph Move-able test
+IsInsideBoard --> |Yes| ForceMove{Property: Force move}
+IsInsideBoard --> |No| CanNotMove["Can not move<br>----<br>Condition:On moving rejected"]
+ForceMove --> |No| IsNotSolid{"Target LXYZ<br>is empty, and<br>is Not solid<br>----<br>Custom solid"}
 
 IsNotSolid --> |Yes| CanMove["Can move<br>----<br>+Condition:On moving accepted"]
-IsNotSolid --> |No| CanNotMove["Can not move<br>----<br>Condition:On moving rejected"]
+IsNotSolid --> |No| CanNotMove
 ForceMove --> |Yes| CanMove
 end
 
 CanMove --> MoveLXYZ["Set logical position"]
 
-subgraph Moving
+subgraph Moving action
 
 subgraph Logical position
 MoveLXYZ
@@ -79,25 +86,29 @@ Chess will try to move
 - to ( `Expression:DestinationLX` , `Expression:DestinationLY` , `Expression:DestinationLZ` ) 
 - direction: `Expression:Direction` , if the target is a neighbor. 
 
+### Overlapping test
+
+Plugin first checks the target LXYZ is empty or not.
+
+- Trigger `Condition:On colliding begin` if target LXYZ is not empty
+  - Collided chess will be picked into an [instance group](rex_ginstgroup.html).
+  - Design could move away these collided chess under this condition to remove colliding situation. ([Sample capx](https://onedrive.live.com/redir?resid=7497FD5EC94476E!2243&authkey=!ALhHOnx4dkTw2rg&ithint=file%2ccapx))
+
 ### Moving accepted or rejected
 
-Moving request will be accepted if
+Next, it will test if chess could move to target LXYZ or not, when
 
-- property `Force move` is `Yes`
-- otherwise (`Force move` is `No`), moving is accepted if these conditions are all true-
-  1. There has a chess instance at (SourceLX, SourceLY, 0).
-  2. Target LXYZ is empty
-     - Trigger `Condition:On colliding begin` if target LXYZ is not empty
-       - Collided chess will be picked into an [instance group](rex_ginstgroup.html).
-       - Design could move away these collided chess under this condition to remove colliding situation. ([Sample capx](https://onedrive.live.com/redir?resid=7497FD5EC94476E!2243&authkey=!ALhHOnx4dkTw2rg&ithint=file%2ccapx))
-  3. Target LXY does not have *solid* chess
-     - Chess has [official solid behavior](https://www.scirra.com/manual/104/solid), or
-     - Has custom solid property set by `Condition:On get solid` ([Sample capx](https://onedrive.live.com/redir?resid=7497FD5EC94476E!523&authkey=!ADhjbRqVtUhW4V8&ithint=file%2ccapx))
-       - Return solid result by `Action:Set move-able` or `Condition:On get solid`
+1. target LXYZ is inside board, and
+2. property `Force move` is `Yes` , otherwise (`Force move` is `No`), 
+   1. Target LXYZ is empty
+   2. Target LXY does not have *solid* chess
+      - Chess has [official solid behavior](https://www.scirra.com/manual/104/solid), or
+      - Has custom solid property set by `Condition:On get solid` ([Sample capx](https://onedrive.live.com/redir?resid=7497FD5EC94476E!523&authkey=!ADhjbRqVtUhW4V8&ithint=file%2ccapx))
+        - Return solid result by `Action:Set move-able` or `Condition:On get solid`
 
 After testing,
 
-- `Condition:On moving accepted` will be triggered if testing passes or `Force move` is `Yes`, then moves chess, see next section.
+- `Condition:On moving accepted` will be triggered if testing passes, then moves chess.
 - `Condition:On moving rejected` will be triggered if testing failed.
   - `Expression:BlockerUID` : UID of solid or occupied chess at target logical position
 
