@@ -22,7 +22,7 @@ Move object to specific position.
 
 None
 
-## Usage##
+## Usage
 
 ```mermaid
 graph TB

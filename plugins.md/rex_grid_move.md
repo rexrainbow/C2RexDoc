@@ -22,7 +22,7 @@ Moves chess to target position, or neighbor tile.
 
 None
 
-## Usage##
+## Usage
 
 ```mermaid
 graph TB

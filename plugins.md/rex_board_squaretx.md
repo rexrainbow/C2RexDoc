@@ -18,7 +18,7 @@ This plugin provides orthogonal or isometric. or staggered physical layout for [
 
 None
 
-## Usage##
+## Usage
 
 ### Connect to board
 

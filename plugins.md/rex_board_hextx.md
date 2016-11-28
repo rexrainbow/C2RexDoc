@@ -22,7 +22,7 @@ This plugin provides hexagonal physical layout for [rex_board](rex_board.html) p
 
 None
 
-## Usage##
+## Usage
 
 ### Connect to board
 

@@ -22,7 +22,7 @@ This plugin provides some helper methods to get logical position of chess, or to
 
 None
 
-## Usage##
+## Usage
 
 ### Add
 

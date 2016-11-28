@@ -23,7 +23,7 @@ Get move-able area, or moving path between two chess/tiles on an orthogonal or i
 - [rex_board](rex_board.html)
 - [rex_ginstgroup plugin](rex_ginstgroup.html)
 
-## Usage##
+## Usage
 
 ### Get moveable area
 

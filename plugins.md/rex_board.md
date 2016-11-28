@@ -26,7 +26,7 @@ One of these board layout
 - [rex_board_squareTx](rex_board_squaretx.html)
 - [rex_board_hexTx](rex_board_hextx.html)
 
-## Usage##
+## Usage
 
 ### Configure board
 
