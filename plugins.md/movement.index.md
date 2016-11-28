@@ -1,4 +1,4 @@
-# [Index](index.html) > Movement behaviors
+# [Home](index.html) > Movement behaviors
 
 ## Movement
 

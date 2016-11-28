@@ -1,4 +1,4 @@
-# [Index](index.html) > My plugins repository v2
+# [Home](index.html) > My plugins repository v2
 
 ## Introduction
 

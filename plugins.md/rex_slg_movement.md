@@ -1,4 +1,4 @@
-# [Index](index.html) > [Board](board.index.html) > rex_slg_movement
+# [Categories](categories.index.html) > [Board](board.index.html) > rex_slg_movement
 
 ## Introduction
 
@@ -292,27 +292,29 @@ This sample capx shows how to implement the filter function and cost function to
 
 #### No overlapped with other chess
 
-To exclude the tiles which had occupied by other chess, it needs to change the picking result of 
-move-able area. Add the tile with no chess stand on, i.e. the cell of chess is empty, the other tiles which had not been added will be excluded.
+Filter tiles which the cell of chess is empty, to exclude the tiles which has been occupied by other chess.
 
-[![图片](http://c2rexplugins.weebly.com/uploads/1/4/2/6/14264557/703242163.png)](undefined)
+1. If (`Expression:TileX`, `Expression:TileY`, 0) is empty (`Condition:Is empty` of [board object](rex_board.html)) under `Condition:On filter`
+   1. Append tile UID `Expression:TileUID` by `Action:Append filter result`
 
 #### Pick enemies
 
-The `Action:Get moveable area` also could pick enemies in a range condition. It need to
- change the picking result from tiles to the enemies which stand on 
-these tiles.
+Append enemy instances which stand on tiles, to pick pick enemies in a range.
 
-[![图片](http://c2rexplugins.weebly.com/uploads/1/4/2/6/14264557/367123360.png)](undefined)
+1. Pick enemy chess by `Condition:Pick chess above tile` ([board object](rex_board.html)) under `Condition:On filter`
+   1. Append chess UID by `Action:Append filter result`
 
 #### No moving across enemies
 
-To
- set the enemies to be no across, just set the cost of these tiles which
- had enemies to be "BLOCKING" in "Action:Set cost" under "Condition:On  
-cost".
+Return `Expression:BLOCKING` if the enemy instance stands on tile under in cost function
 
-[![图片](http://c2rexplugins.weebly.com/uploads/1/4/2/6/14264557/284043493.png)](undefined)
+1. Pick enemy chess by (`Expression:TileX`, `Expression:TileY`, 1) ([board object](rex_board.html)) under `Condition:On cost`
+   1. Return `Expression:BLOCKING` if true
+
+#### More samples
+
+- [Sternhalma](https://onedrive.live.com/redir?resid=7497FD5EC94476E!1434&authkey=!AP_SV4mFTcXvszs&ithint=file%2ccapx)
+  - Note that `Cache cost` is set to `No`
 
 ----
 

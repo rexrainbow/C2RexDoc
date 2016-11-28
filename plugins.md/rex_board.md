@@ -1,4 +1,4 @@
-# [Index](index.html) > [Board](board.index.html) > rex_board
+# [Categories](categories.index.html) > [Board](board.index.html) > rex_board
 
 ## Introduction
 

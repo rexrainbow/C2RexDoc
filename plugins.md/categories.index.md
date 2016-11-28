@@ -1,4 +1,4 @@
-# Categories
+# [Home](index.html) > Categories
 
 - [Movement behaviors](movement.index.html)
 - [Board](board.index.html)

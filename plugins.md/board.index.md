@@ -1,4 +1,4 @@
-# [Index](index.html) > Board
+# [Home](index.html) > Board
 
 ## Board
 
@@ -8,7 +8,7 @@
   - [HexTx](rex_board_hextx.html)
 - Application
   - [Grid Move](rex_grid_move.html)
-  - Path finding
+  - [Path finding](rex_slg_movement.html)
   - Matching
   - [Chess](rex_chess.html)
   - Edge
