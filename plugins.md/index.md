@@ -1,12 +1,7 @@
-# Documents of my plugins
+# Documents of Rex's plugins
 
 - [Download all my plugins and behaviors](my-plugins-repository-v2.html)
-- Categories
-  - [Movement behaviors](movement.index.html)
-  - [Board](board.index.html)
-  - Backend
-    - Firebase
-    - Parse/Back4app
-    - Backendless
+- [Categories](categories.index.html)
 - [Plugin list](list.index.html)
+- [About](about.html)
 
