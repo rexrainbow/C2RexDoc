@@ -41,6 +41,12 @@ Each tile has a symbol indicated by a word, like  `1`, or null, stored in the sy
 
 `,` is a reserved symbol of delimiter.
 
+##### Wild card symbol
+
+Wild card symbol will not be compared, and returns matched directly.
+
+Set wildcard symbol in `Wildcard` property, or `Action:Set Wildcard`.  ([Sample capx](https://onedrive.live.com/redir?resid=7497FD5EC94476E!2121&authkey=!APtg1KMMaoBVbe4&ithint=file%2ccapx))
+
 #### Pattern
 
 ##### 1-d pattern
@@ -57,6 +63,8 @@ The pattern also could be two-dimensions represented by csv format, for example
 ```
 
 This pattern is composed of four "1" symbols within "T" shaped.
+
+
 
 ### Get matched tiles
 

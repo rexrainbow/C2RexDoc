@@ -9,7 +9,7 @@
 - Application
   - [Grid Move](rex_grid_move.html)
   - [Path finding](rex_slg_movement.html)
-  - Matching
+  - [Matching](rex_matcher.html)
   - [Chess](rex_chess.html)
   - Edge
   - Logic mask
