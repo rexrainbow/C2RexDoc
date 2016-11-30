@@ -20,8 +20,8 @@ Pick tiles which match the pattern on board object.
 
 ## Dependence
 
-- [rex_board](http://c2rexplugins.weebly.com/rex_board.html)
-- [rex_ginstgroup plugin](http://c2rexplugins.weebly.com/rex_ginstgroup.html)
+- [rex_board](rex_board.html)
+- [rex_ginstgroup plugin](rex_ginstgroup.html)
 
 
 
