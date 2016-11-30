@@ -1,5 +1,6 @@
 # [Home](index.html) > Categories
 
+- [Data structure](datastructure.index.html)
 - [Movement behaviors](movement.index.html)
 - [Board](board.index.html)
 - Backend

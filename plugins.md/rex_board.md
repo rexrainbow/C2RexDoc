@@ -97,14 +97,14 @@ These actions would not change the physical position of instance.
 
 The chess will be remove from board when instance had been destroyed automatically, at next tick of destroying action (C2 engine will destroy instance at the tick end). So that the destroyed chess will be still on
  the board at current tick.
-User should call one of these actions
+Calls one of these actions
 
 - `Action:Remove chess`
 - `Action:Remove chess by UID`
 
-manually to remove chess from board for remainder actions.
+to remove chess from board for remainder actions.
 
-Or use `Action:Destroy chess` to remove and destroy chess in one action.
+Or calls `Action:Destroy chess` to remove and destroy chess in one action.
 
 ### Clean board
 
@@ -143,7 +143,7 @@ Get maximum logic X, Y of all chess by `Expression:MaxLX`, `Expression:MaxLY`. G
 
 ### Move chess
 
-Uses one of these actions
+Calls one of these actions
 
 - `Action:Move chess`
 - `Action:Move chess by UID`

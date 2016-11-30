@@ -99,7 +99,7 @@ end
 AppendResult --> End[Result group]
 ```
 
-Get move-able area by one of these actions
+Get move-able area
 
 - `Action:Get moveable area`
 - `Action:Get moveable area by UID`
@@ -197,7 +197,7 @@ RetCost --- End
 CacheValue --- End
 ```
 
-Get shortest moving path between source chess to destination chess/tile by one of these actions
+Get shortest moving path between source chess to destination chess/tile
 
 - `Action:Get moving path`
 - `Action:Get moving path by UID`
