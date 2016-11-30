@@ -25,6 +25,10 @@ Get move-able area, or moving path between two chess/tiles on an orthogonal or i
 
 ## Usage
 
+### Prepare
+
+This plugin picks tiles of move-able area or moving path into a group. therefor [rex_board](http://c2rexplugins.weebly.com/rex_board.html) and [rex_ginstgroup](http://c2rexplugins.weebly.com/rex_ginstgroup.html) objects should be put into project first.
+
 ### Get moveable area
 
 #### Main flow
