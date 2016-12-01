@@ -19,6 +19,10 @@
 
 ## TMX
 
+- [TMX importer](rex_tmx_importer_v2.html)
+- [XML parser](rex_tmx_xml_parser.html)
+- [JSON parser](rex_tmx_json_parser.html)
+
 ## Random map
 
 

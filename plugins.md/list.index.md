@@ -10,4 +10,7 @@
 8. *behavior*: [rex_grid_move](rex_grid_move.html)
 9. *behavior*: [rex_moveto](rex_moveto.html)
 10. *plugin*: [rex_matcher](rex_matcher.html)
+11. *plugin*: [rex_tmx_importer_v2](rex_tmx_importer_v2.html)
+12. *plugin*: [rex_tmx_json_parser](rex_tmx_json_parser.html)
+13. *plugin*: [rex_tmx_xml_parser](rex_tmx_xml_parser.html)
 
