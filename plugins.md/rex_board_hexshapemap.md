@@ -25,9 +25,10 @@ Shape map of hex grid.
 
 `Action:Reset in hexagon`, [sample capx](https://onedrive.live.com/redir?resid=7497FD5EC94476E!2066&authkey=!AEynsvAluFgVTDo&ithint=file%2ccapx)
 
-![rex_board_hexshapemap_hexagon0](rex_board_hexshapemap_hexagon0.png)
-
-![rex_board_hexshapemap_hexagon1](rex_board_hexshapemap_hexagon1.png)
+| Axis       |                  Shape                   |
+| ---------- | :--------------------------------------: |
+| Left-Right | ![rex_board_hexshapemap_hexagon0](rex_board_hexshapemap_hexagon0.png) |
+| Up-Down    | ![rex_board_hexshapemap_hexagon1](rex_board_hexshapemap_hexagon1.png) |
 
 ----
 
@@ -35,24 +36,12 @@ Shape map of hex grid.
 
 `Action:Reset in triangle`, [sample capx](https://onedrive.live.com/redir?resid=7497FD5EC94476E!2068&authkey=!AIL2cZv4SMxquTU&ithint=file%2ccapx)
 
-- Down 
-
-![rex_board_hexshapemap_triangle0](rex_board_hexshapemap_triangle_down.png)
-
-- Top
-
-  ![rex_board_hexshapemap_triangle1](rex_board_hexshapemap_triangle_top.png)
-
-- Right 
-
-  ![rex_board_hexshapemap_triangle0](rex_board_hexshapemap_triangle_right.png)
-
-
-- Left
-
-![rex_board_hexshapemap_triangle_left](rex_board_hexshapemap_triangle_left.png)
-
-
+| Face  |                  Shape                   |
+| ----- | :--------------------------------------: |
+| Down  | ![rex_board_hexshapemap_triangle0](rex_board_hexshapemap_triangle_down.png) |
+| Top   | ![rex_board_hexshapemap_triangle1](rex_board_hexshapemap_triangle_top.png) |
+| Right | ![rex_board_hexshapemap_triangle0](rex_board_hexshapemap_triangle_right.png) |
+| Left  | ![rex_board_hexshapemap_triangle_left](rex_board_hexshapemap_triangle_left.png) |
 
 ----
 
@@ -60,15 +49,11 @@ Shape map of hex grid.
 
 `Action:Reset in parallelogram`, [sample capx](https://onedrive.live.com/redir?resid=7497FD5EC94476E!2069&authkey=!AFXhb2pUW93fUS4&ithint=file%2ccapx)
 
-- Type 0
+| Face   |                  Shape                   |
+| ------ | :--------------------------------------: |
+| Type 0 | ![rex_board_hexshapemap_parallelogram_type0](rex_board_hexshapemap_parallelogram_type0.png) |
+| Type 1 | ![rex_board_hexshapemap_parallelogram_type1](rex_board_hexshapemap_parallelogram_type1.png) |
+| Type 2 | ![rex_board_hexshapemap_parallelogram_type2](rex_board_hexshapemap_parallelogram_type2.png) |
 
-![rex_board_hexshapemap_parallelogram_type0](rex_board_hexshapemap_parallelogram_type0.png)
 
-- Type 1
-
-![rex_board_hexshapemap_parallelogram_type1](rex_board_hexshapemap_parallelogram_type1.png)
-
-- Type 2
-
-![rex_board_hexshapemap_parallelogram_type2](rex_board_hexshapemap_parallelogram_type2.png)
 
