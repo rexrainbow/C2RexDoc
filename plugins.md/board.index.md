@@ -1,4 +1,4 @@
-# [Home](index.html) > Board
+# [Categories](categories.index.html) > Board
 
 ## Board
 

@@ -1,4 +1,4 @@
-# [Home](index.html) > Data structure
+# [Categories](categories.index.html) > Data structure
 
 ## Data structure
 
