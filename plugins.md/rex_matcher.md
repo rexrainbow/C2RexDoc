@@ -73,8 +73,17 @@ graph TB
 
 PickMatched["+Condition:For each 1d pattern<br>+Condition:For each N symbols<br>...."] --> UpdateSymbolTable{Updating symbol table?}
 UpdateSymbolTable --> |No| ScanSymbolTable
-UpdateSymbolTable --> |Yes| CondOnGetSymbol["Get symbol of each tile<br>----<br>+Condition:On get symbol<br>tile Expression:TileUID<br>at (Expression:TileX, Expression:TileY)<br>-Action:Set symbol"]
+UpdateSymbolTable --> |Yes| CondOnGetSymbol["Get symbol of each tile<br>----<br>+Condition:On get symbol<br>Tile Expression:TileUID<br>at (Expression:TileX, Expression:TileY)<br>-Action:Set symbol"]
 CondOnGetSymbol --> ScanSymbolTable["Scan symbol table<br>----<br>For each matched tiles,<br>Pick tiles into group, and<br>trigger sub-event"]
+```
+
+Get symbol of a tile
+
+```mermaid
+graph TB
+
+CondOnGetSymbol["+Condition:On get symbol"] --- ExpTile["Tile Expression:TileUID<br>at (Expression:TileX, Expression:TileY)"]
+ExpTile --> SetSymbol["-Action:Set symbol"]
 ```
 
 
