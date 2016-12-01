@@ -41,16 +41,16 @@ SetNextState --> CondOnStateChanged["+Condition:On state changed<br>----<br>PreS
 GoToState["Action:Go to state"] --> CondOnStateChanged
 
 subgraph State changing action
-CondOnStateChanged --> HasCondOnTransfer{"Has<br>+Condition:On transfer"}
+CondOnStateChanged --> HasCondOnTransfer{"Has<br>+Condition:On transfer<br>in event sheet"}
 HasCondOnTransfer --> |Yes| CondOnTransfer["+Condition:On transfer<br>----<br>PreState --> CurState"]
-HasCondOnTransfer --> |No| HasCondOnExit{"Has<br>+Condition:On exit"}
+HasCondOnTransfer --> |No| HasCondOnExit{"Has<br>+Condition:On exit<br>in event sheet"}
 
 subgraph On exit
 HasCondOnExit --> |Yes| CondOnExit["+Condition:On exit<br>----<br>PreState"]
 HasCondOnExit --> |No| CondOndefaultExit["+Condition:On default exit"]
 end
 
-CondOnExit --> HasCondOnEnter{"Has<br>+Condition:On enter"}
+CondOnExit --> HasCondOnEnter{"Has<br>+Condition:On enter<br>in event sheet"}
 CondOndefaultExit --> HasCondOnEnter
 
 subgraph On enter
