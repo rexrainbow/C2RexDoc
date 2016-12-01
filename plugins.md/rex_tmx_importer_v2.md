@@ -38,13 +38,15 @@ Calls `Action:Import tmx` to import tmx string with a parser.
 The offset of tiles is defined in 
 
 - property `X at (0,0)`, `Y at (0,0)`, or
--  `Action:Set instance position of (0,0)`. 
+- `Action:Set instance position of (0,0)`. 
 
 It affects the created tiles (`Action:Create tiles`, or `Action:Create tiles in a duration`), and `Expression:PhysicalX`, `Expression:PhysicalY`.
 
 ### Create tiles
 
 Calls one of these action after importing tmx string  (`Action:Import tmx`)
+
+#### Single tick mode
 
 - `Action:Retrieve tile array`, retrieves each cell in a single tick.
   - Trigger `Condition:On each tile cell` for each cell
@@ -82,6 +84,9 @@ CreateTile --> MoreExpCell["More propreties:<br>Expression:Frame,<br>Expression:
 
 - `Action:Create tiles`, creates tile instances at the layer with the same name defined in tmx string, in a single tick.
   - Triggers `Condition:On each tile cell` for each cell, and picks created instance into SOL.
+
+#### Multiple ticks mode
+
 - `Action:Retrieve tile array in a duration`, retrieves each cell in multiple ticks. ([sample capx](https://onedrive.live.com/redir?resid=7497FD5EC94476E!2153&authkey=!AE_Wp947VpMJrPQ&ithint=file%2ccapx))
   - Triggers `Condition:On each tile cell` for each cell.
   - Triggers `Condition:On retrieving duration` for each processing tick, 
@@ -137,7 +142,7 @@ CondOnEachObject --- ExpObj["Expression:ObjectName, Expression:ObjectType<br>(Ex
 `Condition:For each layer`, to retrieve layers, 
 
 - `Expression:LayerName`
--  `Condition:For each layer property` , to retrieve layer properties
+- `Condition:For each layer property` , to retrieve layer properties
 
 #### Retrieve tiles at logic X,Y
 
