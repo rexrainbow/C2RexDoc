@@ -13,7 +13,7 @@
   - [Chess](rex_chess.html)
   - Edge
   - Logic mask
-  - Hex shape
+  - [Hex shape](rex_board_hexshapemap.html)
 
 ## Mini board
 

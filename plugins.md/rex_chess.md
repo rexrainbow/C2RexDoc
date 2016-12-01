@@ -10,9 +10,8 @@ This plugin provides some helper methods to get logical position of chess, or to
 
 - [ACE table](https://rexrainbow.github.io/C2RexDoc/c2rexpluginsACE/behavior_rex_chess.html)
 
-- [Discussion thread](https://www.scirra.com/forum/plugin-board-layout2board-behavior-grid-move_t69647)
+- [Discussion thread](https://www.scirra.com/forum/plugin-board-layout2board-behavior-grid-move_t69647)​
 
-  ​
 
 ----
 
