@@ -23,7 +23,9 @@ Shape map of hex grid.
 
 ### Hexagon shape
 
-`Action:Reset in hexagon`, [sample capx](https://onedrive.live.com/redir?resid=7497FD5EC94476E!2066&authkey=!AEynsvAluFgVTDo&ithint=file%2ccapx)
+[Sample capx](https://onedrive.live.com/redir?resid=7497FD5EC94476E!2066&authkey=!AEynsvAluFgVTDo&ithint=file%2ccapx)
+
+`Action:Reset in hexagon`
 
 | Axis       |                  Shape                   |
 | ---------- | :--------------------------------------: |
@@ -34,7 +36,9 @@ Shape map of hex grid.
 
 ### Triangle shape
 
-`Action:Reset in triangle`, [sample capx](https://onedrive.live.com/redir?resid=7497FD5EC94476E!2068&authkey=!AIL2cZv4SMxquTU&ithint=file%2ccapx)
+[Sample capx](https://onedrive.live.com/redir?resid=7497FD5EC94476E!2068&authkey=!AIL2cZv4SMxquTU&ithint=file%2ccapx)
+
+`Action:Reset in triangle`
 
 | Face  |                  Shape                   |
 | ----- | :--------------------------------------: |
@@ -47,7 +51,9 @@ Shape map of hex grid.
 
 ### Parallelogram shape
 
-`Action:Reset in parallelogram`, [sample capx](https://onedrive.live.com/redir?resid=7497FD5EC94476E!2069&authkey=!AFXhb2pUW93fUS4&ithint=file%2ccapx)
+[Sample capx](https://onedrive.live.com/redir?resid=7497FD5EC94476E!2069&authkey=!AFXhb2pUW93fUS4&ithint=file%2ccapx)
+
+`Action:Reset in parallelogram`
 
 | Face   |                  Shape                   |
 | ------ | :--------------------------------------: |

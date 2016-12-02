@@ -61,9 +61,8 @@ FilterResult --> Result[Result group<br>Group in InstGroup]
 ```mermaid
 graph TB
 
-Start --> GetCost{"parameter 'Moving cost'<br>is a string?"}
+Start[Get cost of tile] --> GetCost{"parameter 'Moving cost'<br>is a string?"}
 GetCost --> |No| ConstCost["Constant cost =<br>parameter 'Moving cost'"]
-ConstCost --- End
 GetCost --> |Yes| CacheCost{Property: Cache cost} 
 
 subgraph Cost function
@@ -77,9 +76,6 @@ ExpCost --- SetCost["-Action:Set cost<br>----<br>value >= 0, or<br>Expression:BL
 SetCost --> RetCost["Cost<br>= Return value"]
 SetCost --> AddToCache["Add cost to cache"]
 end
-
-RetCost --- End
-CacheValue --- End
 ```
 
 #### Flow chart of filter function
@@ -176,9 +172,8 @@ StackIsEmpty --> |Yes| GetPath
 ```mermaid
 graph TB
 
-Start --> GetCost{"parameter 'Moving cost'<br>is a string?"}
+Start[Get cost of tile] --> GetCost{"parameter 'Moving cost'<br>is a string?"}
 GetCost --> |No| ConstCost["Constant cost =<br>parameter 'Moving cost'"]
-ConstCost --- End
 GetCost --> |Yes| CacheCost{Property: Cache cost} 
 
 subgraph Cost function
@@ -189,12 +184,8 @@ CostInCache --> |Yes| CacheValue[Cost =<br>cache value]
 
 CondOnCost --- ExpCost["Chess: Expression:ChessUID<br>Start from Expression:StartTileUID<br>at (Expression:StartX, Expression:StartY, 0)<br>----<br>Move from tile:Expression:PreTileUID<br>at (Expression:PreTileX, Expression:PreTileY, 0)<br>accumulation cost: Expression:PreTilePathCost<br>----<br>To neighbor tile:Expression:TileUID<br>at (Expression:TileX, Expression:TileY, 0)<br>----<br>End at tile:Expression:EndTileUID<br>at (Expression:EndX, Expression:EndY, 0)"]
 ExpCost --- SetCost["-Action:Set cost<br>----<br>value >= 0, or<br>Expression:BLOCKING"]
-SetCost --> RetCost["Cost<br>= Return value"]
-SetCost --> AddToCache["Add cost to cache"]
+SetCost --> RetCost["Cost =<br>Return value<br>----<br>Add cost to cache"]
 end
-
-RetCost --- End
-CacheValue --- End
 ```
 
 Get shortest moving path between source chess to destination chess/tile
