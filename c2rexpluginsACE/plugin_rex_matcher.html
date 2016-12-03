@@ -14,8 +14,14 @@
       })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
       
       ga('create', 'UA-88123342-1', 'auto');
-      ga('send', 'pageview');        
+      ga('send', 'pageview');   
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
       
+      ga('create', 'UA-88123342-2', 'auto');
+      ga('send', 'pageview');            
       
     </script>
   </head>
@@ -168,15 +174,6 @@
             <Parameters></Parameters>
             <ul>
               <li>UID ( number or string ) : The UID of chess</li>
-            </ul>
-          </ul>
-          <h2>Wildcard      </h2>
-          <h3>Action:Set Wildcard      </h3>
-          <ul>
-            <li>Set Wildcard symbol.   </li>
-            <Parameters></Parameters>
-            <ul>
-              <li>Wildcard ( string ) : Wildcard symbol, Set to &quot;&quot; will ignore this feature.</li>
             </ul>
           </ul>
         </div>

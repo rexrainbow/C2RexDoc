@@ -14,8 +14,14 @@
       })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
       
       ga('create', 'UA-88123342-1', 'auto');
-      ga('send', 'pageview');        
+      ga('send', 'pageview');   
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
       
+      ga('create', 'UA-88123342-2', 'auto');
+      ga('send', 'pageview');            
       
     </script>
   </head>
@@ -492,6 +498,15 @@
       <h2>Rex - filechooser helper</h2>
       <ul>
         <li><a class="btn btn-default" href="behavior_rex_filechooser_media.html">Media input</a> : Accept media(camera/microphone/camcorder) input.
+        </li>
+      </ul>
+      <h2>Textbox</h2>
+      <ul>
+        <li><a class="btn btn-default" href="behavior_rex_textbox_range.html">Range input</a> : Accept range input
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="behavior_rex_textbox_scrolling.html">Scrolling</a> : Scroll textarea.
         </li>
       </ul>
       <h2>Timer</h2>
