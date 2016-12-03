@@ -17,7 +17,7 @@ var ContentGA = `
 function injectGoogleAnalytics(content)
 {
     if (content.indexOf(ContentGA) !== (-1))
-        return content;
+        return;
     
     var start = content.indexOf("</head>");
     content = content.slice(0, start) + ContentGA + content.slice(start, content.length);
@@ -34,10 +34,25 @@ names = names.filter(function(n)
 });
 
 async.map(names, function(name, cb){
-    console.log(name);
+
+    var needWrite = false;
     var content = fs.readFileSync(name, 'utf8');
-    content = injectGoogleAnalytics(content);
-    fs.writeFileSync(name, content);
+    var newContent = injectGoogleAnalytics(content);
+    if (newContent)
+    {
+        content = newContent;
+        needWrite = true;
+    }
+    
+    if (needWrite)
+    {
+        console.log("Update " + name);        
+        fs.writeFileSync(name, content);
+    }
+    else
+    {
+        console.log("Skip " + name);        
+    }
 }
 );
 // main
