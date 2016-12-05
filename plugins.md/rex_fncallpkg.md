@@ -110,8 +110,7 @@ FnQueue["Function calls queue"] --> CondForEachCmd["+Condition:Foreach package"]
 
 subgraph For each call
 CondForEachCmd --- ExpCall["Expression:CurName,<br>Expression:CurParam( index )"]
-ExpCall --> OverwriteParameter["-Action:Overwrite parameter"]
-ExpCall --> AddParameter["-Action:Add to parameter"]
+ExpCall --> OverwriteParameter["-Action:Overwrite parameter, or<br>-Action:Add to parameter"]
 end
 ```
 
