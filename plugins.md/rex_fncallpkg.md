@@ -91,11 +91,16 @@ end
 
 Multiple function calls are stored in a queue.
 
-1.  `Action:Clean`, clean function queue
-2.  `Action:Push` , push function call into queue.
-3. `Expression:FnQueuePkg`, serialize function queue.
+1. Push function calls into queue
+   - `Action:Clean`, clean queue
+   - `Action:Push` , push function call into queue.
+2. `Expression:FnQueuePkg`, serialize function queue. It returns a JSON string in this format
 
-`Action:Load`, to load serialize result created by  `Expression:FnQueuePkg`, or `Expression:FnCallPkg`.
+```json
+[[function_name,parameter0,parameter1, ...],[function_name,parameter0,parameter1, ...],...]
+```
+
+`Action:Load`, to load serialize result  `Expression:FnQueuePkg`, or `Expression:FnCallPkg`.
 
 #### Deserialize
 
