@@ -3,7 +3,7 @@
 ## Logic
 
 - Function
-  - Function serialize
+  - [Function serialize](rex_fncallpkg.html)
   - Copy function parameters
   - Function with name index parameters plugin , behavior
 - Finite state machine

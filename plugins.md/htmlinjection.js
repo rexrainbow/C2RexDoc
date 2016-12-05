@@ -30,7 +30,8 @@ function injectGoogleAnalytics(content)
 var names = fs.readdirSync(".");
 names = names.filter(function(n)
 {
-    return (n.split(".")[1] === "html");
+    n = n.split(".");
+    return (n[n.length-1] === "html");
 });
 
 async.map(names, function(name, cb){
