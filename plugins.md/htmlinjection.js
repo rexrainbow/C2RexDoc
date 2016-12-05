@@ -25,6 +25,19 @@ function injectGoogleAnalytics(content)
 };
 // inject GoogleAnalytics
 
+// modify font URL
+var fontURL0 = `http://fonts.googleapis.com/`;
+var fontURL1 = `https://fonts.googleapis.com/`;
+function modifyFontURL(content)
+{
+    if (content.indexOf(fontURL0) === (-1))
+        return;
+    
+    content=content.replace(fontURL0, fontURL1);
+    return content;
+};
+// modify font URL
+
 
 // main
 var names = fs.readdirSync(".");
@@ -38,12 +51,21 @@ async.map(names, function(name, cb){
 
     var needWrite = false;
     var content = fs.readFileSync(name, 'utf8');
+    
+    
     var newContent = injectGoogleAnalytics(content);
     if (newContent)
     {
         content = newContent;
         needWrite = true;
     }
+    var newContent = modifyFontURL(content);
+    if (newContent)
+    {
+        content = newContent;
+        needWrite = true;
+    }    
+    
     
     if (needWrite)
     {
