@@ -18,6 +18,9 @@
 
 ## Mini board
 
+- Core
+  - [Mini board](rex_miniboard.html)
+
 ## TMX
 
 - [TMX importer](rex_tmx_importer_v2.html)

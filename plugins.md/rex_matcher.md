@@ -94,11 +94,19 @@ Steps of picking matched tiles
 
 1. the matching procedure starts by these conditions
    - 1d pattern
-     - `Condition:For each 1d pattern`, `Condition:For each N symbols`
-     - `Condition:Any 1d pattern`, `Condition:Any N symbols` : to pick first matched tiles
+     - `Condition:For each 1d pattern`, 
+     - `Condition:For each N symbols`
+       - `Expression:MatchedSymbol`, to get matched symbol
+     - `Condition:Any 1d pattern`, to pick first matched pattern
+     - `Condition:Any N symbols`, to pick first matched pattern
+       - `Expression:MatchedSymbol`, to get matched symbol
    - 2d pattern
-     - `Condition:For each 2D pattern`, `Condition:For each 2D template pattern`
-     - `Condition:Any 2D pattern`, `Condition:Any 2D template pattern` : to pick first matched tiles
+     - `Condition:For each 2D pattern`,
+     -  `Condition:For each 2D template pattern`
+       - `Expression:MatchedSymbol`, to get matched symbol
+     - `Condition:Any 2D pattern`, to pick first matched pattern
+     - `Condition:Any 2D template pattern`, to pick first matched pattern
+       - `Expression:MatchedSymbol`, to get matched symbol
 2. updating symbol table for each tile if property `Update symbols` is set to `Auto`
    - `Condition:On get symbol`,
    - to get symbol on a tile `Expression:TileUID`at (`Expression:TileX`, `Expression:TileY`, 0)

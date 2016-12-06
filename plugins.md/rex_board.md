@@ -34,7 +34,7 @@ One of these board layout
 
 #### Setup layout
 
-User should put one of board-layout plugin 
+Puts one of board-layout plugin 
 
 - [rex_board_squareTx](rex_board_squaretx.html) : orthogonal/isometric/staggered layout
 - [rex_board_hexTx](rex_board_hextx.html) : hexagonal layout
@@ -45,11 +45,9 @@ Board --- SquareTx
 Board --- HexTx
 ```
 
-
-
 into project. Each board object should have a board-layout object.
 
-If the project has more then one boards, and each board has different board-layout, they need to assign board-layout object manually by `Action:Setup layout`.
+Assign board-layout object manually by `Action:Setup layout` if the project has more than one board, and each board has different board-layout.
 
 #### Size
 
