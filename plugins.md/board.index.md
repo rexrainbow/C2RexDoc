@@ -29,4 +29,20 @@
 
 ## Random map
 
+----
+
+## More Tutorials
+
+- Poptile, author: [Tz-heng Fu](https://www.scirra.com/users/jomo)
+
+  - [Part1. Board basic](https://www.scirra.com/tutorials/4997/rexrainbow-board-series-tutorial-1-board-basic)
+
+  - [Part2. Match detection](https://www.scirra.com/tutorials/5000/rexrainbow-board-series-tutorial-2-match-detection)
+
+  - [Part3. Chess remove, drop down, and add a row](https://www.scirra.com/tutorials/5003/rexrainbow-board-series-tutorial-3-chess-remove-drop-and-add-row)
+
+  - [Part4. click remove, and FSM](https://www.scirra.com/tutorials/5006/rexrainbow-board-series-tutorial-4-click-remove-and-make-it-a-game)
+
+    ​
+
 
