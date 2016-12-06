@@ -13,7 +13,7 @@
   - [Matching](rex_matcher.html)
   - [Monopoly](rex_monopoly_movement.html)
   - Edge
-  - Logic mask
+  - [Logic mask](rex_logicmask.html)
   - [Hex shape](rex_board_hexshapemap.html)
 
 ## Mini board
