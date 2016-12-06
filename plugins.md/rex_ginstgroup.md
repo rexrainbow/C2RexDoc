@@ -40,7 +40,7 @@ Add instance(s) into a group
 
 #### Copy group
 
-`"Action:Copy`, copies content of a group to another one.
+`Action:Copy`, copies content of a group to another one.
 
 #### Remove instance(s)
 
