@@ -21,8 +21,6 @@ It is a based plugin of my board-series plugins/behaviors.
 
 ## Dependence
 
-One of these board layout
-
 - [rex_board_squareTx](rex_board_squaretx.html)
 - [rex_board_hexTx](rex_board_hextx.html)
 
