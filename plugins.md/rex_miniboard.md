@@ -79,25 +79,46 @@ All chess in this mini board will be destroyed when the mini board is destroyed.
 ```mermaid
 graph TB
 
-ActPut["Action:Put"] --> PutableTesting["One of testing conditions:<br>- None, always true<br>- Is inside main board<br>- Cell is empty<br>- Condition:On put-able request"]
+RequestPut["Action:Put"] --> IsOnMainBoard{"Recover =<br>Is on main board"}
+IsOnMainBoard --> |Yes| PullOut["Pull out chess<br>from main board"]
+PullOut --> PositionOnMainboard["Map chess LXYZ<br>to main board"]
+IsOnMainBoard --> |No| PositionOnMainboard
 
-PutableTesting --> |Putable| CondOnPutAccepted["+Condition:On putting accepted"]
-PutableTesting --> |NOT putable| CondOnPutRejected["+Condition:On putting rejected"]
+subgraph Putable testing
+PositionOnMainboard --> PutableTesting["Putable testing<br>----<br>- None, always true<br>- Is inside main board<br>- Cell is empty<br>- Condition:On put-able request<br>----<br>For each chess"]
+PutableTesting --> AllChessPutable{"All chess<br>are putable"}
+end
+
+AllChessPutable --> |Yes| PutChess["Put chess<br>on main board"]
+PutChess --> CondOnRotateAccepted["+Condition:On rotating accepted"]
+AllChessPutable --> |No| IsRecover{Recover}
+IsRecover --> |No| CondOnRotateRejected["+Condition:On rotating rejected"]
+IsRecover --> |Yes| RecoverLXYZ["Recover LXYZ<br>of all chess"]
+
+subgraph Recover
+RecoverLXYZ --> PutChess1["Put chess<br>on main board"]
+end
+
+PutChess1 --> CondOnRotateRejected
 ```
 
 [Sample capx](https://onedrive.live.com/redir?resid=7497FD5EC94476E!978&authkey=!AOKCL_TloCfo8s0&ithint=file%2ccapx)
 
-`Action:Put`, will try to put this mini board on the main board, i.e. add chess which are in mini board into main board) , if result of put-able testing is true.
+1. `Action:Put`
 
-- Triggers `Condition:On putting accepted` if put-able.
-- Otherwise,`Condition:On putting rejected` will be triggered.
-- `Condition:Is putting accepted` returns true if put-able.
-
-If the mini board is on main board already, 
-
-1. Pull out from this main board,
-2. try to put on the target main board,
-3. back to previous state, i.e. put back to previous main board, if Not put-able.
+2. If this min board is on main board already
+   1. Save position of chess, Set *Recover = true*
+   2. Pull out from this main board
+3. Run put-able testing of all chess
+   - **Put-able**, all test results are true
+     1. Put chess to main board
+     2. Trigger `Condition:On putting accepted`
+   - **Not Put-able**, any test result are false
+     1. If *Recover = true*
+        1. Recover position of chess
+        2. Put chess to main board
+     2. Trigger `Condition:On putting rejected`
+   - `Condition:Is putting accepted` returns true if putable.
 
 ####Put-able testing
 
@@ -119,7 +140,7 @@ AllChessPutable --> |Yes| Putable["Putable"]
 AllChessPutable --> |No| NotPutable["Not putable"]
 ```
 
-`Action:Put`, or `Condition:Can put` will run one of put-able testing conditions for each chess on min board.
+`Action:Put`, or `Condition:Can put` will run one of put-able testing for each chess on min board.
 
 - `None` : always returns true.
 
@@ -135,11 +156,14 @@ AllChessPutable --> |No| NotPutable["Not putable"]
     - at (`Expression:RequestLX`, `Expression:RequestLY`, `Expression:RequestLZ`)
   - `Action:Set put-able`, or `Action:Set put-able by number` to return put-able result of this chess
     - Return Not put-able by default (i.e. no `Action:Set put-able` called)
-  - Put-able of this mini board is true when all chess are put-able.
 
 
+Put-able of mini board
 
-#### Pull out from main board
+- **Put-able**, if all put-able testing are true, 
+- **Not put-able**, if any put-able testing is false.
+
+### Pull out from main board
 
 `Action:Pull out` to put out this mini board from main board, i.e. remove the logical position of chess in this mini board.
 Do nothing if this mini board is not on any main board.
@@ -153,7 +177,7 @@ Do nothing if this mini board is not on any main board.
 
 ### Pin chess
 
-Set property `Pin mode` to `Yes` to move chess with mini board.
+Set property `Pin mode` to `Yes` to pin chess to mini board.
 
 ----
 

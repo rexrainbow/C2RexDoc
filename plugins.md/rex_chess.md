@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This plugin provides some helper methods to get logical position of chess, or to pick chess, or to move chess, etc.
+Provides some helper methods to get logical position of chess, or to pick chess, or to move chess, etc.
 
 ## Links
 

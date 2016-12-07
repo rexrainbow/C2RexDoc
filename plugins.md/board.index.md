@@ -20,6 +20,8 @@
 
 - Core
   - [Mini board](rex_miniboard.html)
+- Application
+  - [Rotate](rex_miniboard_rotate.html)
 
 ## TMX
 

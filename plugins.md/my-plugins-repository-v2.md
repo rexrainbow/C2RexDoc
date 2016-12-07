@@ -35,7 +35,7 @@ Drag the button scroll bar to right side to see the **Description** fields of ea
 ### Download
 
 Double click plugin to download it. Or click **menu bar -> List -> Download all** to download all  plugins and behaviors excepted **LATEST** plugins.
-**User might need to run C2Repo in administer mode if your C2 root path is on `C:\Program Files\Construct 2\`**.
+**Run C2Repo in administer mode if your C2 root path is on `C:\Program Files\Construct 2\`**.
 
 ### Other features
 
