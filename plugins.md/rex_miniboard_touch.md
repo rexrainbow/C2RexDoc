@@ -38,7 +38,7 @@ end
 Dragging --> |"Drop"| CondOnDrop["+Condition:On dropped"]
 CondOnDrop --> Idle
 
-subgraph State
+subgraph Idle
 Idle
 end
 ```
@@ -70,7 +70,7 @@ end
 
 - Drop (i.e. touch release), or `Action:Force to drop`.
   - `Condition:On dropped`
-  -  `Condition:On dropped at main board`
+  - `Condition:On dropped at main board`
 ###Logical position at overlapped main board
 
 
