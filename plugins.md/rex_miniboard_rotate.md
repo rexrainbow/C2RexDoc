@@ -2,7 +2,7 @@
 
 ## Introduction
 
-A behavior of [mini board](rex_miniboard.html), whihc spin chess on mini board logically and physically.
+A behavior of [mini board](rex_miniboard.html), which spin chess on mini board logically and physically.
 
 ## Links
 
@@ -17,7 +17,7 @@ A behavior of [mini board](rex_miniboard.html), whihc spin chess on mini board l
 
 ## Dependence
 
-[rex_miniboard](rex_miniboard.html)
+- [rex_miniboard](rex_miniboard.html)
 
 ## Usage
 
@@ -46,16 +46,16 @@ end
 
 end
 
-PutChess0 --> CondOnRotateAccepted["+Condition:On rotating accepted"]
-PutChess1 --> CondOnRotateRejected["+Condition:On rotating rejected"]
+PutChess0 --> CondOnAccepted["+Condition:On rotating accepted, or<br>+Condition:On flipping accepted, or<br>+Condition:On mirroring accepted"]
+PutChess1 --> CondOnRejected["+Condition:On rotating rejected<br>+Condition:On flipping rejected<br>+Condition:On mirroring rejected"]
 
 
 
 IsOnMainBoard --> |No| RotateLXYZ1["Transfer LXYZ<br>(rotate, mirror, flip)<br>of all chess"]
-RotateLXYZ1 --> CondOnRotateAccepted
+RotateLXYZ1 --> CondOnAccepted
 ```
 
-### Transfer (rotate, mirror, or flip)
+### Transfer
 
 [Sample capx](https://onedrive.live.com/redir?resid=7497FD5EC94476E!981&authkey=!ADyYTTeRfTxWu1Y&ithint=file%2ccapx)
 

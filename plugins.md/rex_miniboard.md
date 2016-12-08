@@ -104,8 +104,7 @@ PutChess1 --> CondOnRotateRejected
 
 [Sample capx](https://onedrive.live.com/redir?resid=7497FD5EC94476E!978&authkey=!AOKCL_TloCfo8s0&ithint=file%2ccapx)
 
-1. `Action:Put`
-
+1. `Action:Put`, or `Action:Put back`
 2. If this min board is on main board already
    1. Save position of chess, Set *Recover = true*
    2. Pull out from this main board
@@ -140,7 +139,7 @@ AllChessPutable --> |Yes| Putable["Putable"]
 AllChessPutable --> |No| NotPutable["Not putable"]
 ```
 
-`Action:Put`, or `Condition:Can put` will run one of put-able testing for each chess on min board.
+`Action:Put`, `Action:Put back`or `Condition:Can put` will run one of put-able testing for each chess on min board.
 
 - `None` : always returns true.
 

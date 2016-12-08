@@ -22,6 +22,7 @@
   - [Mini board](rex_miniboard.html)
 - Application
   - [Rotate](rex_miniboard_rotate.html)
+  - [Drag & drop](rex_miniboard_touch.html)
 
 ## TMX
 
