@@ -25,8 +25,8 @@ A behavior of [mini board](rex_miniboard.html), which move chess on main board l
 graph TB
 
 RequestPut["Action:Move to neighbor, or<br>Action:Move to offset, or<br>Action:Move to LXY, or<br>Action:Move to chess"] --> IsOnMainBoard{"Is on main board"}
-IsOnMainBoard --- TargetLXYZ["Move from<br>(Expression:SourceLX, Expression:SourceLY)<br>to<br>( Expression:DestinationLX, Expression:DestinationLY)<br>direction: Expression:Direction"]
-TargetLXYZ --> |Yes| PullOut["Pull out chess<br>from main board"]
+IsOnMainBoard --- |Yes| TargetLXYZ["Move from<br>(Expression:SourceLX, Expression:SourceLY)<br>to<br>(Expression:DestinationLX, Expression:DestinationLY)<br>direction: Expression:Direction"]
+TargetLXYZ --> PullOut["Pull out chess<br>from main board"]
 
 PullOut --> PositionOnMainboard["Map chess LXYZ<br>to main board"]
 
@@ -63,7 +63,7 @@ end
 
 1. Start moving
    - `Action:Move to neighbor`, or
-   -  `Action:Move to offset`, or 
+   - `Action:Move to offset`, or 
    - `Action:Move to LXY`, or 
    - `Action:Move to chess`
 2. If mini board is on main board
