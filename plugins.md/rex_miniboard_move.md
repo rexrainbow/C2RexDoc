@@ -92,6 +92,6 @@ end
 
 ----
 
-### More sample capx
+### More samples
 
 [Tetris](https://onedrive.live.com/redir?resid=7497FD5EC94476E!1001&authkey=!AHIF5LinGc3mLCw&ithint=file%2ccapx)
