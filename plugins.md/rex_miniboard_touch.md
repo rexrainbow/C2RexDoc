@@ -58,7 +58,7 @@ end
 
 
 - Dragging
-  - Move all chess with mini board, property `Pin mode` of [mini board](rex_miniboard.html) is `Yes`.
+  - Move all chess with mini board, if property `Pin mode` of [mini board](rex_miniboard.html) is `Yes`.
   - If any chess of this mini board is overlapped with the main board,
       - Align the physical position of all chess to main board
           - property `Align to grids` is `Yes`, or

@@ -83,6 +83,7 @@ end
         3. Trigger `Condition:On moving rejected`
    5. If put-able and property `MoveTo` is `Yes`
       1. [Grid move](rex_grid_move.html) mini board to target physical position (`Expression:TargetX`, `Expression:TargetY`)
+         1. Move all chess with mini board, if property `Pin mode` of [mini board](rex_miniboard.html) is `Yes`.
       2. Trigger `Condition:On hit target position` when reach target position
 
 ### Can move
