@@ -26,7 +26,7 @@ None
 
 ```mermaid
 graph TB
-StartMoving["Start moving:<br>---<br>Action:Move to neighbor<br>Action:Move to LXY<br>..."] --- TargetLXYZ["Move from<br>( Expression:SourceLX , Expression:SourceLY , Expression:SourceLZ )<br>to<br>( Expression:DestinationLX , Expression:DestinationLY , Expression:DestinationLZ )<br>direction: Expression:Direction"]
+StartMoving["Start moving:<br>---<br>Action:Move to neighbor<br>Action:Move to LXY<br>..."] --- TargetLXYZ["Move from<br>(Expression:SourceLX, Expression:SourceLY, Expression:SourceLZ)<br>to<br>(Expression:DestinationLX, Expression:DestinationLY, Expression:DestinationLZ)<br>direction: Expression:Direction"]
 TargetLXYZ --> OverlappingTest{Target LXYZ<br>is empty}
 
 subgraph Overlapping test
@@ -82,8 +82,8 @@ Call one of these action to start moving chess
 
 Chess will try to move
 
-- from ( `Expression:SourceLX` , `Expression:SourceLY` , `Expression:SourceLZ` ) 
-- to ( `Expression:DestinationLX` , `Expression:DestinationLY` , `Expression:DestinationLZ` ) 
+- from (`Expression:SourceLX`, `Expression:SourceLY`, `Expression:SourceLZ`) 
+- to (`Expression:DestinationLX`, `Expression:DestinationLY`, `Expression:DestinationLZ`) 
 - direction: `Expression:Direction` , if the target is a neighbor. 
 
 ### Overlapping test

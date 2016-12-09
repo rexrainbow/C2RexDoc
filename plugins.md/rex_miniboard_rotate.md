@@ -32,7 +32,7 @@ PullOut --> RotateLXYZ0["Transfer LXYZ<br>(rotate, mirror, flip)<br>of all chess
 RotateLXYZ0 --> PositionOnMainboard["Map chess LXYZ<br>to main board"]
 
 subgraph Putable testing
-PositionOnMainboard --> PutableTesting["Putable testing<br>----<br>- None, always true<br>- Is inside main board<br>- Cell is empty<br>- Condition:On put-able request<br>----<br>For each chess"]
+PositionOnMainboard --> PutableTesting["Putable testing<br>----<br>- None, always true<br>- Cell is empty<br>- Condition:On put-able request<br>----<br>For each chess"]
 PutableTesting --> AllChessPutable{"All chess<br>are putable"}
 end
 
@@ -68,7 +68,7 @@ RotateLXYZ1 --> CondOnAccepted
    - On main board
      1. Save position of chess, Set *Recover = true*
      2. Pull out from this main board
-     3. Transfer logical position of all chess
+     3. Transfer LXYZ of all chess
      4. Run **put-able testing** of all chess
         - **Put-able**, all test results are true
           1. Put chess to main board
@@ -79,7 +79,7 @@ RotateLXYZ1 --> CondOnAccepted
              2. Put chess to main board
           2. Trigger `Condition:On putting rejected`
    - Not on any main board
-     1. Rotate logical position of all chess
+     1. Rotate LXYZ of all chess
      2. Trigger `Condition:On putting accepted`
 
 Set property  `RotateTo` to `Yes` to change physical position of chess to its logical position.

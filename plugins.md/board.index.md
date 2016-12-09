@@ -21,8 +21,9 @@
 - Core
   - [Mini board](rex_miniboard.html)
 - Application
-  - [Rotate](rex_miniboard_rotate.html)
+  - [Move](rex_miniboard_move.html)
   - [Drag & drop](rex_miniboard_touch.html)
+  - [Rotate](rex_miniboard_rotate.html)
 
 ## TMX
 
