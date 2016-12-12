@@ -69,10 +69,10 @@ Property `Eval mode`
 ```mermaid
 graph TB
 
-subgraph Prepare row
-SetValue["Set value<br>Action:Set value"]
-SetRowID["Set row ID<br>Action:Set row ID<br>Action:Set row index"]
-SetIndexKey["Set index key<br>Action:Set value"]
+subgraph 1. Prepare row
+SetValue["Set value<br>----<br>Action:Set value"]
+SetRowID["Set row ID<br>----<br>Action:Set row ID<br>Action:Set row index"]
+SetIndexKey["Set index key<br>----<br>Action:Set value"]
 SetRowID --- SetValue
 SetIndexKey --- SetValue
 end
@@ -80,18 +80,22 @@ end
 SetValue --> Save["Action:Save"]
 
 Save --> HasRowID{Has<br>Row Id}
-HasRowID --> |Yes| FindRowByRowID["Find row by rowID"]
+HasRowID --> |Yes| FindRowByRowID{"Find row<br>by rowID"}
+FindRowByRowID --> |Found| UpdateRow["Update row"]
+
 HasRowID --> |No| HasIndexKey{Has index key}
-HasIndexKey --> |Yes| FindRowByIndexKey["Find row by index key"]
-FindRowByRowID --> FindRow{Is found}
-FindRowByIndexKey --> FindRow
-FindRow --> |Yes| UpdateRow["Update row"]
-FindRow --> |No| AppendRow["Appen new row"]
-HasIndexKey --> |No| AppendRow
+HasIndexKey --> |Yes| FindRowByIndexKey{"Find row<br>by index key"}
+FindRowByIndexKey --> |Found| UpdateRow["Update row"]
+FindRowByIndexKey --> |Not found| InsertRow["Insert new row"]
+HasIndexKey --> |No| InsertRow
+
+subgraph 2. Save
+Save
+end
 
 subgraph Save row
 UpdateRow
-AppendRow
+InsertRow
 end
 ```
 
@@ -125,10 +129,12 @@ end
 2. `Action:Save`
 
    - `Expression:LastSavedRowID`
-   - If found row (rowID or index keys)
-     - Update this row
+   - Pick row by rowID
+     - Update row if found
    - Else
-     - Append a new row
+     - Pick row by index keys
+       - Update row, if found, or
+       - Insert new row
 
 #### Update rows
 
@@ -191,8 +197,7 @@ CurrentFilter["Current filter"] --> Compare
 Compare --> Order["Sort<br>----<br>Condition:3. order"]
 end
 
-Order --- QueriedRows["Queried rows"]
-QueriedRows --> QueriedRowsAsJSON["Expression:QueriedRowsAsJSON"]
+Order --- QueriedRows["Queried rows<br>----<br>Expression:QueriedRowsAsJSON"]
 QueriedRows --> ExpIndexedQueriedRow["Expression:Index2QueriedRowContent(index)<br>Expression:QueriedRowsCount"]
 QueriedRows --> CondForEachQueriedRow["Condition:For each row"]
 CondForEachQueriedRow --- ExpCurQueriedRow["Expression:CurRowContent<br>Expression:CurRowIndex"]
@@ -251,7 +256,7 @@ Queried rows will be changed after database updated.
 
 Property `Database name`
 
-- Empty string`""` : private database, destroyed when instance had been destroyed
+- Empty string `""` : private database, destroyed when instance had been destroyed
 - Not empty string : a global database indexed by this `Database name` property
   - Separate writing and reading into different database instance
 
