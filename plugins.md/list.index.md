@@ -18,7 +18,8 @@
 16. *behavior*: [rex_miniboard_touch](rex_miniboard_touch.html)
 17. *behavior*: [rex_moveto](rex_moveto.html)
 18. *behavior*: [rex_monopoly_movement](rex_monopoly_movement.html)
-19. *plugin*: [rex_tmx_importer_v2](rex_tmx_importer_v2.html)
-20. *plugin*: [rex_tmx_json_parser](rex_tmx_json_parser.html)
-21. *plugin*: [rex_tmx_xml_parser](rex_tmx_xml_parser.html)
+19. *plugin*: [rex_taffydb](rex_taffydb.html)
+20. *plugin*: [rex_tmx_importer_v2](rex_tmx_importer_v2.html)
+21. *plugin*: [rex_tmx_json_parser](rex_tmx_json_parser.html)
+22. *plugin*: [rex_tmx_xml_parser](rex_tmx_xml_parser.html)
 
