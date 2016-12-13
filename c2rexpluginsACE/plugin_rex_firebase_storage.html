@@ -78,6 +78,24 @@
               <li>DataRef ( string ) : The Firebase storage ref URL</li>
             </ul>
           </ul>
+          <h2>Metadata      </h2>
+          <h3>Action:Get metadata      </h3>
+          <ul>
+            <li>Get metadata of a firebase storage reference.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>DataRef ( string ) : The Firebase storage ref URL</li>
+            </ul>
+          </ul>
+          <h3>Action:Update metadata      </h3>
+          <ul>
+            <li>Update metadata of a firebase storage reference.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>DataRef ( string ) : The Firebase storage ref URL</li>
+              <li>Metadata ( string ) : Metadata in JSON string.</li>
+            </ul>
+          </ul>
           <h2>Upload      </h2>
           <h3>Action:Upload from file chooser      </h3>
           <ul>
@@ -86,6 +104,7 @@
             <ul>
               <li>File chooser ( object ) : File chooser object.</li>
               <li>DataRef ( string ) : The Firebase storage ref URL</li>
+              <li>Metadata ( string ) : Metadata in JSON string. Set &quot;&quot; to use default metadata.</li>
             </ul>
           </ul>
           <h3>Action:Upload from sprite      </h3>
@@ -95,6 +114,7 @@
             <ul>
               <li>Sprite ( object ) : Sprite or canvas object.</li>
               <li>DataRef ( string ) : The Firebase storage ref URL</li>
+              <li>Metadata ( string ) : Metadata in JSON string. Set &quot;&quot; to use default metadata.</li>
             </ul>
           </ul>
           <h3>Action:Upload data URL      </h3>
@@ -104,6 +124,7 @@
             <ul>
               <li>Data URI ( string ) : Data URI of file</li>
               <li>DataRef ( string ) : The Firebase storage ref URL</li>
+              <li>Metadata ( string ) : Metadata in JSON string. Set &quot;&quot; to use default metadata.</li>
             </ul>
           </ul>
           <h3>Action:Upload string      </h3>
@@ -113,6 +134,7 @@
             <ul>
               <li>Content ( string ) : String content</li>
               <li>DataRef ( string ) : The Firebase storage ref URL</li>
+              <li>Metadata ( string ) : Metadata in JSON string. Set &quot;&quot; to use default metadata.</li>
             </ul>
           </ul>
           <h3>Action:Upload objectURL      </h3>
@@ -121,7 +143,7 @@
             <Parameters></Parameters>
             <ul>
               <li>ObjectURL ( string ) : ObjectURL.</li>
-              <li>Content type ( string ) : Content type.</li>
+              <li>Metadata ( string ) : Metadata in JSON, or content type.</li>
               <li>DataRef ( string ) : The Firebase storage ref URL</li>
             </ul>
           </ul>
@@ -169,10 +191,18 @@
             <ul>
             </ul>
           </ul>
+          <h2>Metadata    </h2>
+          <h3>Expression:LastMetadata </h3>
+          <ul>
+            <li>Get metadata of last upload file, or result of the last request. Add 1st parameter to get value at the specific key. Add 2nd parameter for default value if this key is not existed.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
           <h2>Upload    </h2>
           <h3>Expression:LastDownloadURL </h3>
           <ul>
-            <li>Get download URL of last upload file.</li>
+            <li>Get download URL of last upload file, or result of the last request.</li>
             <Parameters></Parameters>
             <ul>
             </ul>
@@ -238,6 +268,35 @@
           <h4>Condition:File doesn't exist                    </h4>
           <ul>
             <li>Return true if file doesn't exist.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Metadata    </h2>
+          <h4>Condition:On get metadata                    </h4>
+          <ul>
+            <li>Triggered when get metadata success.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On get metadata error                    </h4>
+          <ul>
+            <li>Triggered when get metadata error.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On update metadata                    </h4>
+          <ul>
+            <li>Triggered when update metadata success.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On update metadata error                    </h4>
+          <ul>
+            <li>Triggered when update metadata error.                    </li>
             <Parameters></Parameters>
             <ul>
             </ul>

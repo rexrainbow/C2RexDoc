@@ -5,6 +5,6 @@
 - [Movement behaviors](movement.index.html)
 - [Board](board.index.html)
 - Backend
-  - Firebase
+  - [Firebase](firebase.index.html)
   - Parse/Back4app
   - Backendless
