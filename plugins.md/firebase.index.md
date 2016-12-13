@@ -2,21 +2,21 @@
 
 ## API
 
-- API v3
+- [API v3.6.3](rex_firebase_apiv3.html)
 
-## Core
+## Authentication
 
 - Authentication
+
+## Database
+
 - Firebase access
 - Query
-
-## Application
 
 - Leaderboard
 - Save data
 - Broadcasting
 - Counter
-- Storage
 - Rooms
 - GEO
 
@@ -30,3 +30,6 @@
 - Timer
 - Current time
 
+## Storage
+
+- Storage
