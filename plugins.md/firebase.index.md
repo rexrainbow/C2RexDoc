@@ -6,7 +6,7 @@
 
 ## Authentication
 
-- Authentication
+- [Authentication](rex_firebase_authentication.html)
 
 ## Database
 
