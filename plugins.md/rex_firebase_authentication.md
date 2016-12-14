@@ -31,49 +31,50 @@ Authentication provided by [firebase](https://www.firebase.com/).
 ```mermaid
 graph TB
 
-ActCreateAccount["Action:Create account"] --> ActionIsSuccess{Action<br>is success}
+ActCreateAccount["Action:Create account"] --> ActionIsSuccess
 
 subgraph Callback
-ActionIsSuccess --> |Yes| CondOnSuccess["Condition:On created account"]
+ActionIsSuccess{Action<br>is success} --> |Yes| CondOnSuccess["Condition:On created account"]
 ActionIsSuccess --> |No| CondOnError["Condition:On created account error"]
 CondOnError --- ExpError["Expression:ErrorMessage<br>Expression:ErrorCode"]
 end
 ```
 
-`Action:Create account`
-
-- Success : `Condition:On created account`
-- Failed : `Condition:On created account error`
-  - Error :  `Expression:ErrorMessage`, `Expression:ErrorCode` ([reference](https://firebase.google.com/docs/reference/js/firebase.auth.Auth#createUserWithEmailAndPassword))
+1. `Action:Create account`
+2. Callback
+   - Success : `Condition:On created account`
+   - Failed : `Condition:On created account error`
+     - Error :  `Expression:ErrorMessage`, `Expression:ErrorCode` ([reference](https://firebase.google.com/docs/reference/js/firebase.auth.Auth#createUserWithEmailAndPassword))
 
 #### Login
 
 ```mermaid
 graph TB
 
-ActCreateAccount["Action:Login<br>(category: Email & Password)"] --> ActionIsSuccess{Action<br>is success}
+ActCreateAccount["Action:Login<br>(category: Email & Password)"] --> ActionIsSuccess
 
 subgraph Callback
-ActionIsSuccess --> |Yes| CondOnSuccess["Condition:On login"]
+ActionIsSuccess{Action<br>is success} --> |Yes| CondOnSuccess["Condition:On login"]
 ActionIsSuccess --> |No| CondOnError["Condition:On login error"]
 CondOnSuccess --- ExpUserInfo["UserID Expression:UserID<br>----<br>Expression:Provider<br>Expression:DisplayName<br>Expression:UserIDFromProvide<br>Expression:AccessToken<br>Expression:Email<br>Expression:PhotoURL"]
 CondOnError --- ExpError["Expression:ErrorMessage<br>Expression:ErrorCode"]
 end
 ```
 
-`Action:Login` (category: Email & Password)
+1. `Action:Login` (category: Email & Password)
+2. Callback
+   - Success : `Condition:On login`
+     - ``Expression:UserID`, an unique user ID
+     - `Expression:Provider`
+     - `Expression:DisplayName`
+     - `Expression:UserIDFromProvide`
+     - `Expression:AccessToken`
+     - `Expression:Email`
+     - `Expression:PhotoURL`
+   - Failed : `Condition:On login error`
+     - Error :  `Expression:ErrorMessage`, `Expression:ErrorCode` ([reference](https://firebase.google.com/docs/reference/js/firebase.auth.Auth#signInWithEmailAndPassword))
 
-- Success : `Condition:On login`
-  - `Expression:UserID`, an unique user ID
-  - `Expression:Provider`
-  - `Expression:DisplayName`
-  - `Expression:UserIDFromProvide`
-  - `Expression:AccessToken`
-  - `Expression:Email`
-  - `Expression:PhotoURL`
-- Failed : `Condition:On login error`
-  - Error :  `Expression:ErrorMessage`, `Expression:ErrorCode` ([reference](https://firebase.google.com/docs/reference/js/firebase.auth.Auth#signInWithEmailAndPassword))
-- `Condition:Is login`,  returns true if logging in.
+`Condition:Is login`,  returns true if logging in.
 
 #### Logging out
 
@@ -87,89 +88,88 @@ CondOnLoggedOut
 end
 ```
 
-`Action:Logging out`
-
-- `Condition:On logged out`
+1. `Action:Logging out`
+2. `Condition:On logged out`
 
 #### Change password
 
 ```mermaid
 graph TB
 
-ActCreateAccount["Action:Change password"] --> ActionIsSuccess{Action<br>is success}
+ActCreateAccount["Action:Change password"] --> ActionIsSuccess
 
 subgraph Callback
-ActionIsSuccess --> |Yes| CondOnSuccess["Condition:On changed password"]
+ActionIsSuccess{Action<br>is success} --> |Yes| CondOnSuccess["Condition:On changed password"]
 ActionIsSuccess --> |No| CondOnError["Condition:On changed password error"]
 CondOnError --- ExpError["Expression:ErrorMessage<br>Expression:ErrorCode"]
 end
 ```
 
-`Action:Change password`
-
-- Success : `Condition:On changed password`
-- Failed : `Condition:On changed password error`
-  - Error :  `Expression:ErrorMessage`, `Expression:ErrorCode`
+1. `Action:Change password`
+2. Callback
+   - Success : `Condition:On changed password`
+   - Failed : `Condition:On changed password error`
+     - Error :  `Expression:ErrorMessage`, `Expression:ErrorCode`
 
 #### Reset password
 
 ```mermaid
 graph TB
 
-ActCreateAccount["Action:Send password reset email"] --> ActionIsSuccess{Action<br>is success}
+ActCreateAccount["Action:Send password reset email"] --> ActionIsSuccess
 
 subgraph Callback
-ActionIsSuccess --> |Yes| CondOnSuccess["Condition:On sent password reset email"]
+ActionIsSuccess{Action<br>is success} --> |Yes| CondOnSuccess["Condition:On sent password reset email"]
 ActionIsSuccess --> |No| CondOnError["Condition:On sent password reset email error"]
 CondOnError --- ExpError["Expression:ErrorMessage<br>Expression:ErrorCode"]
 end
 ```
 
-`Action:Send password reset email`
-
-- Success : `Condition:On sent password reset email`
-- Failed : `Condition:On sent password reset email error`
-  - Error :  `Expression:ErrorMessage`, `Expression:ErrorCode` ([reference](https://firebase.google.com/docs/reference/js/firebase.auth.Auth#sendPasswordResetEmail))
+1. `Action:Send password reset email`
+2. Callback
+   - Success : `Condition:On sent password reset email`
+   - Failed : `Condition:On sent password reset email error`
+     - Error :  `Expression:ErrorMessage`, `Expression:ErrorCode` ([reference](https://firebase.google.com/docs/reference/js/firebase.auth.Auth#sendPasswordResetEmail))
 
 #### Update profile
 
 ```mermaid
 graph TB
 
-ActCreateAccount["Action:Update profile"] --> ActionIsSuccess{Action<br>is success}
+ActCreateAccount["Action:Update profile"] --> ActionIsSuccess
 
 subgraph Callback
-ActionIsSuccess --> |Yes| CondOnSuccess["Condition:On updated profile"]
+ActionIsSuccess{Action<br>is success} --> |Yes| CondOnSuccess["Condition:On updated profile"]
 ActionIsSuccess --> |No| CondOnError["Condition:On updated profile error"]
 CondOnError --- ExpError["Expression:ErrorMessage<br>Expression:ErrorCode"]
 end
 ```
 
-`Action:Update profile`
-
-- Success : `Condition:On updated profile`
-- Failed : `Condition:On updated profile error `
-  - Error :  `Expression:ErrorMessage`, `Expression:ErrorCode`
+1. `Action:Update profile`
+2. Callback
+   - Success : `Condition:On updated profile`
+   - Failed : `Condition:On updated profile error`
+     - Error :  `Expression:ErrorMessage`, `Expression:ErrorCode`
 
 #### Delete user
 
 ```mermaid
 graph TB
 
-ActCreateAccount["Action:Delete user "] --> ActionIsSuccess{Action<br>is success}
+ActCreateAccount["Action:Delete user "] --> ActionIsSuccess
 
 subgraph Callback
-ActionIsSuccess --> |Yes| CondOnSuccess["Condition:On deleted user"]
+ActionIsSuccess{Action<br>is success} --> |Yes| CondOnSuccess["Condition:On deleted user"]
 ActionIsSuccess --> |No| CondOnError["Condition:On deleted user error"]
 CondOnError --- ExpError["Expression:ErrorMessage<br>Expression:ErrorCode"]
 end
 ```
 
-`Action:Delete user`
-
-- Success : `Condition:On deleted user`
-- Failed : `Condition:On deleted user error `
-  - Error :  `Expression:ErrorMessage`, `Expression:ErrorCode`
+1. `Action:Delete user`
+2. Callback
+   - Success : `Condition:On deleted user`
+   - Failed : `Condition:On deleted user error`
+     - Error :  `Expression:ErrorMessage`, `Expression:ErrorCode`
 
 ----
 
@@ -184,10 +184,10 @@ end
 ```mermaid
 graph TB
 
-ActCreateAccount["Action:Login<br>(category: Authentication provider)"] --> ActionIsSuccess{Action<br>is success}
+ActCreateAccount["Action:Login<br>(category: Authentication provider)"] --> ActionIsSuccess
 
 subgraph Callback
-ActionIsSuccess --> |Yes| CondOnSuccess["Condition:On login"]
+ActionIsSuccess{Action<br>is success} --> |Yes| CondOnSuccess["Condition:On login"]
 ActionIsSuccess --> |No| CondOnError["Condition:On login error"]
 CondOnSuccess --- ExpUserInfo["UserID Expression:UserID<br>----<br>Expression:Provider<br>Expression:DisplayName<br>Expression:UserIDFromProvide<br>Expression:AccessToken<br>Expression:Email<br>Expression:PhotoURL"]
 CondOnError --- ExpError["Expression:ErrorMessage<br>Expression:ErrorCode"]
@@ -197,25 +197,27 @@ FBLogin[Facebook login] --> |Access token| ActConnectFB["Action:Connect Facebook
 ActConnectFB --> ActionIsSuccess
 ```
 
-`Action:Login` (category: Authentication provider)
+1. `Action:Login` (category: Authentication provider)
+2. Callback
+   - Success : `Condition:On login`
+     - `Expression:UserID`, an unique user ID
+     - `Expression:Provider`
+     - `Expression:DisplayName`
+     - `Expression:UserIDFromProvide`
+     - `Expression:AccessToken`
+     - `Expression:Email`
+     - `Expression:PhotoURL`
+   - Failed : `Condition:On login error`
+     - Error :  `Expression:ErrorMessage`, `Expression:ErrorCode` ([reference](https://firebase.google.com/docs/reference/js/firebase.auth.Auth#signInWithEmailAndPassword))
 
-- Success : `Condition:On login`
-  - `Expression:UserID`, an unique user ID
-  - `Expression:Provider`
-  - `Expression:DisplayName`
-  - `Expression:UserIDFromProvide`
-  - `Expression:AccessToken`
-  - `Expression:Email`
-  - `Expression:PhotoURL`
-- Failed : `Condition:On login error`
-  - Error :  `Expression:ErrorMessage`, `Expression:ErrorCode` ([reference](https://firebase.google.com/docs/reference/js/firebase.auth.Auth#signInWithEmailAndPassword))
-- `Condition:Is login`,  returns true if logging in.
+`Condition:Is login`,  returns true if logging in.
 
 ##### Login with access token
 
 1. [Facebook login](https://www.scirra.com/manual/112/facebook)
 2. `Action:Connect Facebook`
    - Assign parameter `Access token` if not using official facebook plugin.
+3. Callback
 
 #### Logging out
 
@@ -229,9 +231,8 @@ CondOnLoggedOut
 end
 ```
 
-`Action:Logging out`
-
-- `Condition:On logged out`
+1. `Action:Logging out`
+2. `Condition:On logged out`
 
 ----
 
@@ -241,50 +242,7 @@ end
 
 [Sample capx](https://1drv.ms/u/s!Am5HlOzVf0kHk2IWN7RToiZLz7L5)
 
-#### Login
-
-```mermaid
-graph TB
-
-ActCreateAccount["Action:Login<br>(category: Authentication provider)"] --> ActionIsSuccess{Action<br>is success}
-
-subgraph Callback
-ActionIsSuccess --> |Yes| CondOnSuccess["Condition:On login"]
-ActionIsSuccess --> |No| CondOnError["Condition:On login error"]
-CondOnSuccess --- ExpUserInfo["UserID Expression:UserID<br>----<br>Expression:Provider<br>Expression:DisplayName<br>Expression:UserIDFromProvide<br>Expression:AccessToken<br>Expression:Email<br>Expression:PhotoURL"]
-CondOnError --- ExpError["Expression:ErrorMessage<br>Expression:ErrorCode"]
-end
-```
-
-`Action:Login` (category: Authentication provider)
-
-- Success : `Condition:On login`
-  - `Expression:UserID`, an unique user ID
-  - `Expression:Provider`
-  - `Expression:DisplayName`
-  - `Expression:UserIDFromProvide`
-  - `Expression:AccessToken`
-  - `Expression:Email`
-  - `Expression:PhotoURL`
-- Failed : `Condition:On login error`
-  - Error :  `Expression:ErrorMessage`, `Expression:ErrorCode` ([reference](https://firebase.google.com/docs/reference/js/firebase.auth.Auth#signInWithEmailAndPassword))
-- `Condition:Is login`,  returns true if logging in.
-
-#### Logging out
-
-```mermaid
-graph TB
-
-ActCreateAccount["Action:Logging out"] --> CondOnLoggedOut["Condition:On logged out"]
-
-subgraph Callback
-CondOnLoggedOut
-end
-```
-
-`Action:Logging out`
-
-- `Condition:On logged out`
+See section of *Authenticate Using Facebook Login*.
 
 ----
 
@@ -292,7 +250,7 @@ end
 
 [Reference](https://firebase.google.com/docs/auth/web/github-auth)
 
-See section of *Authenticate Using Google Sign-In*.
+See section of *Authenticate Using Facebook Login*.
 
 ------
 
@@ -300,7 +258,7 @@ See section of *Authenticate Using Google Sign-In*.
 
 [Reference](https://firebase.google.com/docs/auth/web/twitter-login)
 
-See section of *Authenticate Using Google Sign-In*.
+See section of *Authenticate Using Facebook Login*.
 
 ----
 
@@ -313,31 +271,33 @@ See section of *Authenticate Using Google Sign-In*.
 ```mermaid
 graph TB
 
-ActCreateAccount["Action:Login<br>(category: Anonymous)"] --> ActionIsSuccess{Action<br>is success}
+ActCreateAccount["Action:Login<br>(category: Anonymous)"] --> ActionIsSuccess
 
 subgraph Callback
-ActionIsSuccess --> |Yes| CondOnSuccess["Condition:On login"]
+ActionIsSuccess{Action<br>is success} --> |Yes| CondOnSuccess["Condition:On login"]
 ActionIsSuccess --> |No| CondOnError["Condition:On login error"]
 CondOnSuccess --- ExpUserInfo["UserID Expression:UserID<br>----<br>Expression:Provider<br>Expression:DisplayName<br>Expression:UserIDFromProvide<br>Expression:AccessToken<br>Expression:Email<br>Expression:PhotoURL"]
 CondOnError --- ExpError["Expression:ErrorMessage<br>Expression:ErrorCode"]
 end
 ```
 
-`Action:Login` (category: Anonymous)
+1. `Action:Login` (category: Anonymous)
+2. Callback
+   - Success : `Condition:On login`
+     - `Expression:UserID`, an unique user ID
+     - `Expression:Provider`
+     - `Expression:DisplayName`
+     - `Expression:UserIDFromProvide`
+     - `Expression:AccessToken`
+     - `Expression:Email`
+     - `Expression:PhotoURL`
+     - *Every anonymous login will create a new account*
+   - Failed : `Condition:On login error`
+     - Error :  `Expression:ErrorMessage`, `Expression:ErrorCode` ([reference](https://firebase.google.com/docs/reference/js/firebase.auth.Auth#signInWithEmailAndPassword))
 
-- Success : `Condition:On login`
-  - `Expression:UserID`, an unique user ID
-  - `Expression:Provider`
-  - `Expression:DisplayName`
-  - `Expression:UserIDFromProvide`
-  - `Expression:AccessToken`
-  - `Expression:Email`
-  - `Expression:PhotoURL`
-  - *Every anonymous login will create a new account*
-- Failed : `Condition:On login error`
-  - Error :  `Expression:ErrorMessage`, `Expression:ErrorCode` ([reference](https://firebase.google.com/docs/reference/js/firebase.auth.Auth#signInWithEmailAndPassword))
-- `Condition:Is login`,  returns true if logging in.
-- `ondition:Is anonymous`,  returns true after *anonymous* login.
+`Condition:Is login`,  returns true if logging in.
+
+`ondition:Is anonymous`,  returns true after *anonymous* login.
 
 ----
 
@@ -348,10 +308,10 @@ end
 ```mermaid
 graph TB
 
-ActCreateAccount["Action:Login<br>(category: Authentication token)"] --> ActionIsSuccess{Action<br>is success}
+ActCreateAccount["Action:Login<br>(category: Authentication token)"] --> ActionIsSuccess
 
 subgraph Callback
-ActionIsSuccess --> |Yes| CondOnSuccess["Condition:On login"]
+ActionIsSuccess{Action<br>is success} --> |Yes| CondOnSuccess["Condition:On login"]
 ActionIsSuccess --> |No| CondOnError["Condition:On login error"]
 CondOnSuccess --- ExpUserInfo["UserID Expression:UserID<br>----<br>Expression:Provider<br>Expression:DisplayName<br>Expression:UserIDFromProvide<br>Expression:AccessToken<br>Expression:Email<br>Expression:PhotoURL"]
 CondOnError --- ExpError["Expression:ErrorMessage<br>Expression:ErrorCode"]
@@ -362,20 +322,21 @@ end
 
 #### Login
 
-`Action:Login` (category: Authentication token)
+1. `Action:Login` (category: Authentication token)
+2. Callback
+   - Success : `Condition:On login`
+     - `Expression:UserID`, an unique user ID
+     - `Expression:Provider`
+     - `Expression:DisplayName`
+     - `Expression:UserIDFromProvide`
+     - `Expression:AccessToken`
+     - `Expression:Email`
+     - `Expression:PhotoURL`
+     - *Every anonymous login will create a new account*
+   - Failed : `Condition:On login error`
+     - Error :  `Expression:ErrorMessage`, `Expression:ErrorCode` ([reference](https://firebase.google.com/docs/reference/js/firebase.auth.Auth#signInWithEmailAndPassword))
 
-- Success : `Condition:On login`
-  - `Expression:UserID`, an unique user ID
-  - `Expression:Provider`
-  - `Expression:DisplayName`
-  - `Expression:UserIDFromProvide`
-  - `Expression:AccessToken`
-  - `Expression:Email`
-  - `Expression:PhotoURL`
-  - *Every anonymous login will create a new account*
-- Failed : `Condition:On login error`
-  - Error :  `Expression:ErrorMessage`, `Expression:ErrorCode` ([reference](https://firebase.google.com/docs/reference/js/firebase.auth.Auth#signInWithEmailAndPassword))
-- `Condition:Is login`,  returns true if logging in.
+`Condition:Is login`,  returns true if logging in.
 
 ----
 

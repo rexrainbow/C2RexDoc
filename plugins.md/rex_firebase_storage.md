@@ -24,6 +24,36 @@ Files storage in [firebase](https://www.firebase.com/).
 
 #### Upload
 
+##### Brief flow
+
+```mermaid
+graph TB
+
+ActUpload["Action:Upload from data URL<br>Action:Upload from sprite<br>Action:Upload from file chooser"] --> ActionIsSuccess
+
+subgraph Callback
+ActionIsSuccess{Action<br>is success} --> |Yes| CondOnSuccess["Condition:On complete"]
+ActionIsSuccess --> |No| CondOnError["Condition:On error"]
+CondOnSuccess --> ExpResult["Expression:LastDownloadURL<br>Expression:LastMetadata"]
+CondOnError --- ExpError["Expression:LastErrorMessage<br>Expression:LastErrorCode"]
+end
+```
+
+1. Uploading
+   - `Action:Upload from data URL` ([sample capx](https://1drv.ms/u/s!Am5HlOzVf0kHkk87XiaGM-0IY9Tf))
+   - `Action:Upload from sprite`  ([sample capx](https://1drv.ms/u/s!Am5HlOzVf0kHkk7slML48Q6BA_Vv))
+   - `Action:Upload from file chooser`  ([sample capx](https://1drv.ms/u/s!Am5HlOzVf0kHkk1frphDDwMvRIBU))
+2. Callback
+   - Success : `Condition:On complete`
+     - `Expression:LastDownloadURL`
+     - `Expression:LastMetadata`, returns metadata in JSON string
+       - `Expression:LastMetadata( key )`, returns a key
+       - `Expression:LastMetadata( key, defaultValue )`, retruns `defaultValue` if key is not existed
+   - Failed : `Condition:On error`
+     - Error :  `Expression:LastErrorMessage`, `Expression:LastErrorCode` ([reference](https://firebase.google.com/docs/storage/web/handle-errors))
+
+##### Complete flow
+
 ```mermaid
 graph TB
 
@@ -106,10 +136,10 @@ Put or create this rex_firebase_storage object for each file uploading.
 ```mermaid
 graph TB
 
-ActDelete["Action:Get download url"] --> ActionIsSuccess{Action<br>is success}
+ActDelete["Action:Get download url"] --> ActionIsSuccess
 
 subgraph Callback
-ActionIsSuccess --> |Yes| CondOnSuccess["Condition:On get download URL"]
+ActionIsSuccess{Action<br>is success} --> |Yes| CondOnSuccess["Condition:On get download URL"]
 ActionIsSuccess --> |No| CondOnError["Condition:On get download URL error"]
 CondOnSuccess --> ExpResult["Expression:LastDownloadURL"]
 CondOnError --- ExpError["Condition:File doesn't exist<br> <br>Expression:LastErrorMessage<br>Expression:LastErrorCode"]
@@ -153,20 +183,20 @@ Follows [these steps](http://stackoverflow.com/questions/37760695/firebase-stora
 ```mermaid
 graph TB
 
-ActDelete["Action:Detete"] --> ActionIsSuccess{Action<br>is success}
+ActDelete["Action:Detete"] --> ActionIsSuccess
 
 subgraph Callback
-ActionIsSuccess --> |Yes| CondOnSuccess["Condition:On deleted"]
+ActionIsSuccess{Action<br>is success} --> |Yes| CondOnSuccess["Condition:On deleted"]
 ActionIsSuccess --> |No| CondOnError["Condition:On deleted error"]
 CondOnError --- ExpError["Expression:LastErrorMessage<br>Expression:LastErrorCode"]
 end
 ```
 
-`Action:Detete`
-
-- Success : `Condition:On deleted`
-- Failed : `Condition:On deleted error`
-  - Error :  `Expression:LastErrorMessage`, `Expression:LastErrorCode` ([reference](https://firebase.google.com/docs/storage/web/handle-errors))
+1. `Action:Detete`
+2. Callback
+   - Success : `Condition:On deleted`
+   - Failed : `Condition:On deleted error`
+     - Error :  `Expression:LastErrorMessage`, `Expression:LastErrorCode` ([reference](https://firebase.google.com/docs/storage/web/handle-errors))
 
 ----
 
@@ -177,49 +207,48 @@ end
 ```mermaid
 graph TB
 
-ActDelete["Action:Get metadata"] --> ActionIsSuccess{Action<br>is success}
+ActDelete["Action:Get metadata"] --> ActionIsSuccess
 
 subgraph Callback
-ActionIsSuccess --> |Yes| CondOnSuccess["Condition:On get metadata"]
+ActionIsSuccess{Action<br>is success} --> |Yes| CondOnSuccess["Condition:On get metadata"]
 ActionIsSuccess --> |No| CondOnError["Condition:On get metadata error"]
 CondOnSuccess --- ExpResult["Expression:LastMetadata"]
 CondOnError --- ExpError["Expression:LastErrorMessage<br>Expression:LastErrorCode"]
 end
 ```
 
-`Action:Get metadata`
-
-- Success : `Condition:On get metadata`
-  - ``Expression:LastMetadata`, returns metadata in JSON string
-    - `Expression:LastMetadata( key )`, returns a key
-    - `Expression:LastMetadata( key, defaultValue )`, retruns `defaultValue` if key is not existed
-- Failed : `Condition:On get metadata error `
-  - Error :  `Expression:LastErrorMessage`, `Expression:LastErrorCode` ([reference](https://firebase.google.com/docs/storage/web/handle-errors))
+1. `Action:Get metadata`
+2. Callback
+   - Success : `Condition:On get metadata`
+     - ``Expression:LastMetadata`, returns metadata in JSON string
+       - `Expression:LastMetadata( key )`, returns a key
+       - `Expression:LastMetadata( key, defaultValue )`, retruns `defaultValue` if key is not existed
+   - Failed : `Condition:On get metadata error`
+     - Error :  `Expression:LastErrorMessage`, `Expression:LastErrorCode` ([reference](https://firebase.google.com/docs/storage/web/handle-errors))
 
 #### Update
 
 ```mermaid
 graph TB
 
-ActDelete["Action:Update metadata"] --> ActionIsSuccess{Action<br>is success}
+ActDelete["Action:Update metadata"] --> ActionIsSuccess
 
 subgraph Callback
-ActionIsSuccess --> |Yes| CondOnSuccess["Condition:On update metadata"]
+ActionIsSuccess{Action<br>is success} --> |Yes| CondOnSuccess["Condition:On update metadata"]
 ActionIsSuccess --> |No| CondOnError["Condition:On update metadata error"]
 CondOnSuccess --- ExpResult["Expression:LastMetadata"]
 CondOnError --- ExpError["Expression:LastErrorMessage<br>Expression:LastErrorCode"]
 end
 ```
 
-`Action:Update metadata`
-
-- Success : `Condition:On update metadata`
-  - ``Expression:LastMetadata`, returns metadata in JSON string
-    - `Expression:LastMetadata( key )`, returns a key
-    - `Expression:LastMetadata( key, defaultValue )`, retruns `defaultValue` if key is not existed
-- Failed : `Condition:On update metadata error`
-  - Error :  `Expression:LastErrorMessage`, `Expression:LastErrorCode` ([reference](https://firebase.google.com/docs/storage/web/handle-errors))
-
+1. `Action:Update metadata`
+2. Callback
+   - Success : `Condition:On get metadata`
+     - ``Expression:LastMetadata`, returns metadata in JSON string
+       - `Expression:LastMetadata( key )`, returns a key
+       - `Expression:LastMetadata( key, defaultValue )`, retruns `defaultValue` if key is not existed
+   - Failed : `Condition:On get metadata error`
+     - Error :  `Expression:LastErrorMessage`, `Expression:LastErrorCode` ([reference](https://firebase.google.com/docs/storage/web/handle-errors))
 ----
 
 ### Security rules
