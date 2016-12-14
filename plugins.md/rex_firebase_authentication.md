@@ -16,7 +16,7 @@ Authentication provided by [firebase](https://www.firebase.com/).
 
 ## Dependence
 
-- [rex_firebase_apiV3](http://c2rexplugins.weebly.com/rex_firebase_apiv3.html)
+- [rex_firebase_apiv3](http://c2rexplugins.weebly.com/rex_firebase_apiv3.html)
 
 ## Usage
 
@@ -34,16 +34,16 @@ graph TB
 ActCreateAccount["Action:Create account"] --> ActionIsSuccess{Action<br>is success}
 
 subgraph Callback
-ActionIsSuccess --> |Yes| CondOnSuccess["Condition:On creating account"]
-ActionIsSuccess --> |No| CondOnError["Condition:On creating account error"]
+ActionIsSuccess --> |Yes| CondOnSuccess["Condition:On created account"]
+ActionIsSuccess --> |No| CondOnError["Condition:On created account error"]
 CondOnError --- ExpError["Expression:ErrorMessage<br>Expression:ErrorCode"]
 end
 ```
 
 `Action:Create account`
 
-- Success : `Condition:On creating account`
-- Failed : `Condition:On creating account error`
+- Success : `Condition:On created account`
+- Failed : `Condition:On created account error`
   - Error :  `Expression:ErrorMessage`, `Expression:ErrorCode` ([reference](https://firebase.google.com/docs/reference/js/firebase.auth.Auth#createUserWithEmailAndPassword))
 
 #### Login
@@ -99,16 +99,16 @@ graph TB
 ActCreateAccount["Action:Change password"] --> ActionIsSuccess{Action<br>is success}
 
 subgraph Callback
-ActionIsSuccess --> |Yes| CondOnSuccess["Condition:On changing password"]
-ActionIsSuccess --> |No| CondOnError["Condition:On changing password error"]
+ActionIsSuccess --> |Yes| CondOnSuccess["Condition:On changed password"]
+ActionIsSuccess --> |No| CondOnError["Condition:On changed password error"]
 CondOnError --- ExpError["Expression:ErrorMessage<br>Expression:ErrorCode"]
 end
 ```
 
 `Action:Change password`
 
-- Success : `Condition:On changing password`
-- Failed : `Condition:On changing password error`
+- Success : `Condition:On changed password`
+- Failed : `Condition:On changed password error`
   - Error :  `Expression:ErrorMessage`, `Expression:ErrorCode`
 
 #### Reset password
@@ -119,16 +119,16 @@ graph TB
 ActCreateAccount["Action:Send password reset email"] --> ActionIsSuccess{Action<br>is success}
 
 subgraph Callback
-ActionIsSuccess --> |Yes| CondOnSuccess["Condition:On sending password reset email"]
-ActionIsSuccess --> |No| CondOnError["Condition:On sending password reset email error"]
+ActionIsSuccess --> |Yes| CondOnSuccess["Condition:On sent password reset email"]
+ActionIsSuccess --> |No| CondOnError["Condition:On sent password reset email error"]
 CondOnError --- ExpError["Expression:ErrorMessage<br>Expression:ErrorCode"]
 end
 ```
 
 `Action:Send password reset email`
 
-- Success : `Condition:On sending password reset email`
-- Failed : `Condition:On sending password reset email error`
+- Success : `Condition:On sent password reset email`
+- Failed : `Condition:On sent password reset email error`
   - Error :  `Expression:ErrorMessage`, `Expression:ErrorCode` ([reference](https://firebase.google.com/docs/reference/js/firebase.auth.Auth#sendPasswordResetEmail))
 
 #### Update profile
@@ -139,16 +139,16 @@ graph TB
 ActCreateAccount["Action:Update profile"] --> ActionIsSuccess{Action<br>is success}
 
 subgraph Callback
-ActionIsSuccess --> |Yes| CondOnSuccess["Condition:On updating profile"]
-ActionIsSuccess --> |No| CondOnError["Condition:On updating profile error"]
+ActionIsSuccess --> |Yes| CondOnSuccess["Condition:On updated profile"]
+ActionIsSuccess --> |No| CondOnError["Condition:On updated profile error"]
 CondOnError --- ExpError["Expression:ErrorMessage<br>Expression:ErrorCode"]
 end
 ```
 
 `Action:Update profile`
 
-- Success : `Condition:On updating profile`
-- Failed : `Condition:On updating profile error `
+- Success : `Condition:On updated profile`
+- Failed : `Condition:On updated profile error `
   - Error :  `Expression:ErrorMessage`, `Expression:ErrorCode`
 
 #### Delete user
@@ -159,16 +159,16 @@ graph TB
 ActCreateAccount["Action:Delete user "] --> ActionIsSuccess{Action<br>is success}
 
 subgraph Callback
-ActionIsSuccess --> |Yes| CondOnSuccess["Condition:On deleting user"]
-ActionIsSuccess --> |No| CondOnError["Condition:On deleting user error"]
+ActionIsSuccess --> |Yes| CondOnSuccess["Condition:On deleted user"]
+ActionIsSuccess --> |No| CondOnError["Condition:On deleted user error"]
 CondOnError --- ExpError["Expression:ErrorMessage<br>Expression:ErrorCode"]
 end
 ```
 
 `Action:Delete user`
 
-- Success : `Condition:On deleting user`
-- Failed : `Condition:On deleting user error `
+- Success : `Condition:On deleted user`
+- Failed : `Condition:On deleted user error `
   - Error :  `Expression:ErrorMessage`, `Expression:ErrorCode`
 
 ----

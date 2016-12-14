@@ -23,7 +23,7 @@ None
 ```mermaid
 graph TB
 
-Start["Start"] --> HasAPIKey{"Property:Api key<br>is an empty string"}
+Start["Start"] --> HasAPIKey{"Property 'Api key'<br>is an empty string"}
 
 subgraph Initialize
 HasAPIKey --> |No| Init["Initialize<br>----<br>Api key<br>Auth domain<br>Database URL<br>Storage bucket"]
