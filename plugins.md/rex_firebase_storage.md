@@ -33,7 +33,7 @@ ActUpload["Action:Upload from data URL<br>Action:Upload from sprite<br>Action:Up
 Uploading --> |"Finished events"| CondDone["Event Completed:<br>+Condition:On completed<br>Expression:LastDownloadURL<br>Expression:LastMetadata<br> <br> <br>Event Error:<br>+Condition:On error<br>Expression:LastErrorMessage<br>Expression:LastErrorCode<br> <br> <br>Action:Cancel<br>+Condition:On canceled"]
 CondDone --> Idle
 
-Uploading --> |"Paused event"| CondPause["Action:Pause<br>+Condition:On paused"]
+Uploading --> |"Pause event"| CondPause["Action:Pause<br>+Condition:On paused"]
 
 CondPause --> Paused["Paused"]
 Paused --> |"Resume event"| CondResume["Action:Resume<br>+Condition:On resmue"]
