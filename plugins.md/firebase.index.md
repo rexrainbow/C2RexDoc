@@ -32,4 +32,4 @@
 
 ## Storage
 
-- Storage
+- [Storage](rex_firebase_storage.html)
