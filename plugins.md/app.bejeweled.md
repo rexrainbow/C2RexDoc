@@ -55,7 +55,7 @@ Event sheets
 ```mermaid
 graph TB
 
-OFF --> MATCH3["MATCH3<br>----<br>1. Get matched lines<br>2. Increase matched_cnt"]
+START["START<br>----<br>Set total_matchedline = 0"] --> MATCH3["MATCH3<br>----<br>1. Get matched lines<br>2. Increase total_matchedline"]
 MATCH3 --> HasMatched{Has matched line}
 HasMatched --> |No| End
 HasMatched --> |Yes| Elimination["Elimination<br>----<br>1. Destroy matched chess"]
