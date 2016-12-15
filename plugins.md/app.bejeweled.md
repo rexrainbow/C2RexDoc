@@ -31,8 +31,8 @@ START --> RESET["RESET<br>----<br>1. Remove all chess<br>2. Fill chess<br>3. Bre
 RESET --> HAS_POSSIBLE_MATCH3
 HAS_POSSIBLE_MATCH3 --> HasPossibleMatch3{Has possible match3<br>after swapped}
 HasPossibleMatch3 --> |No| RESET
-HasPossibleMatch3 --> |Yes| SELECT_1["SELECT_1<br>----<br>1. pich chess1_uid"]
-SELECT_1 --> SELECT_2["SELECT_2<br>----<br>1. pich chess2_uid"]
+HasPossibleMatch3 --> |Yes| SELECT_1["SELECT_1<br>----<br>1. Set chess1_uid"]
+SELECT_1 --> SELECT_2["SELECT_2<br>----<br>1. Set chess2_uid"]
 SELECT_2 --> AreNeighbors{chess1 and chess2<br>are neighbors}
 AreNeighbors --> |Yes| SWAP["SWAP<br>----<br>Swap chess1 and chess2"]
 AreNeighbors --> |No| SELECT_1
