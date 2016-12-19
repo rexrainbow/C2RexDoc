@@ -202,6 +202,20 @@ end
 
 ### Metadata
 
+[Reference](https://firebase.google.com/docs/storage/web/file-metadata)
+
+#### Set value
+
+[Sample capx](https://1drv.ms/u/s!Am5HlOzVf0kHlg4otTFewCb6YiHg)
+
+set metadata before uploading file.
+
+- `Action:Set value`
+- `Action:Remove key`
+- `Action:Load JSON`
+
+Metadata will be cleaned after uploading.
+
 #### Get
 
 ```mermaid
