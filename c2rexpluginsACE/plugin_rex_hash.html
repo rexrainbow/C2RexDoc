@@ -1,7 +1,7 @@
 <!DOCTYPE 5>
 <html>
   <head>
-    <title>Plugin : Hash</title>
+    <title>Plugin : JSON</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="css/bootstrap.min.css"/>
     <link rel="stylesheet" href="css/main.css"/>
@@ -30,10 +30,10 @@
       </div>
     </div>
     <div class="container">
-      <h1>Plugin : Hash</h1>
+      <h1>Plugin : JSON</h1>
       <p>Author:Rex.Rainbow</p>
       <ul>
-        <li>Access JSON structure table.</li>
+        <li>Manipulate JSON data.</li>
       </ul><a class="btn btn-default" href="https://dl.dropboxusercontent.com/u/5779181/C2Repo/Zip/plugins/rex_hash.7z">Download    </a>
       <div class="panel panel-default">
         <div class="panel-title">
@@ -51,7 +51,47 @@
           <h2>Actions</h2>
         </div>
         <div class="panel-body">
-          <h2>Array      </h2>
+          <h2>Array - Insert      </h2>
+          <h3>Action:Insert JSON      </h3>
+          <ul>
+            <li>Insert JSON into array.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Key string ( string ) : The key string of the hash table value to set.</li>
+              <li>JSON ( string ) : JSON string.</li>
+              <li>Index ( number ) : Index of this array to insert.</li>
+            </ul>
+          </ul>
+          <h3>Action:Insert value      </h3>
+          <ul>
+            <li>Insert value into array.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Key string ( string ) : The key string of the hash table value to set.</li>
+              <li>Value ( number or string ) : The value to push in the hash table.</li>
+              <li>Index ( number ) : Index of this array to insert.</li>
+            </ul>
+          </ul>
+          <h2>Array - Push      </h2>
+          <h3>Action:Push JSON      </h3>
+          <ul>
+            <li>Push JSON into array.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Key string ( string ) : The key string of the hash table value to set.</li>
+              <li>JSON ( string ) : JSON string.</li>
+            </ul>
+          </ul>
+          <h3>Action:Push value      </h3>
+          <ul>
+            <li>Push value into array.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Key string ( string ) : The key string of the hash table value to set.</li>
+              <li>Value ( number or string ) : The value to push in the hash table.</li>
+            </ul>
+          </ul>
+          <h2>Array - order      </h2>
           <h3>Action:Shuffle      </h3>
           <ul>
             <li>Shuffle items in array.   </li>
@@ -73,24 +113,6 @@
               </ul>
             </ul>
           </ul>
-          <h3>Action:Push JSON      </h3>
-          <ul>
-            <li>Push JSON into array.   </li>
-            <Parameters></Parameters>
-            <ul>
-              <li>Key string ( string ) : The key string of the hash table value to set.</li>
-              <li>JSON ( string ) : JSON string.</li>
-            </ul>
-          </ul>
-          <h3>Action:Push value      </h3>
-          <ul>
-            <li>Push value into array.   </li>
-            <Parameters></Parameters>
-            <ul>
-              <li>Key string ( string ) : The key string of the hash table value to set.</li>
-              <li>Value ( number or string ) : The value to push in the hash table.</li>
-            </ul>
-          </ul>
           <h2>Hash table      </h2>
           <h3>Action:Clean all      </h3>
           <ul>
@@ -110,7 +132,7 @@
             </ul>
           </ul>
           <h2>Load      </h2>
-          <h3>Action:Load from JSON      </h3>
+          <h3>Action:Load JSON      </h3>
           <ul>
             <li>Load content from JSON string.   </li>
             <Parameters></Parameters>
@@ -175,6 +197,15 @@
           <h2>Expressions</h2>
         </div>
         <div class="panel-body">           
+          <h2>Array    </h2>
+          <h3>Expression:Pop </h3>
+          <ul>
+            <li>Pop from array.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Key ( string ) : The key of the hash to get.</li>
+            </ul>
+          </ul>
           <h2>For each    </h2>
           <h3>Expression:CurKey </h3>
           <ul>
