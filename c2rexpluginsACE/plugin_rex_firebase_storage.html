@@ -93,7 +93,31 @@
             <Parameters></Parameters>
             <ul>
               <li>DataRef ( string ) : The Firebase storage ref URL</li>
-              <li>Metadata ( string ) : Metadata in JSON string.</li>
+            </ul>
+          </ul>
+          <h3>Action:Set value      </h3>
+          <ul>
+            <li>Set key of metadata.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Key ( string ) : Key string.</li>
+              <li>Value ( number or string ) : Value.</li>
+            </ul>
+          </ul>
+          <h3>Action:Load JSON      </h3>
+          <ul>
+            <li>Load metadata by JSON.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>JSON string ( string ) : JSON string.</li>
+            </ul>
+          </ul>
+          <h3>Action:Remove key      </h3>
+          <ul>
+            <li>Remove key of metadata.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Key ( string ) : Key string.</li>
             </ul>
           </ul>
           <h2>Upload      </h2>
@@ -104,7 +128,6 @@
             <ul>
               <li>File chooser ( object ) : File chooser object.</li>
               <li>DataRef ( string ) : The Firebase storage ref URL</li>
-              <li>Metadata ( string ) : Metadata in JSON string. Set &quot;&quot; to use default metadata.</li>
             </ul>
           </ul>
           <h3>Action:Upload from sprite      </h3>
@@ -114,7 +137,6 @@
             <ul>
               <li>Sprite ( object ) : Sprite or canvas object.</li>
               <li>DataRef ( string ) : The Firebase storage ref URL</li>
-              <li>Metadata ( string ) : Metadata in JSON string. Set &quot;&quot; to use default metadata.</li>
             </ul>
           </ul>
           <h3>Action:Upload data URL      </h3>
@@ -124,7 +146,6 @@
             <ul>
               <li>Data URI ( string ) : Data URI of file</li>
               <li>DataRef ( string ) : The Firebase storage ref URL</li>
-              <li>Metadata ( string ) : Metadata in JSON string. Set &quot;&quot; to use default metadata.</li>
             </ul>
           </ul>
           <h3>Action:Upload string      </h3>
@@ -134,7 +155,6 @@
             <ul>
               <li>Content ( string ) : String content</li>
               <li>DataRef ( string ) : The Firebase storage ref URL</li>
-              <li>Metadata ( string ) : Metadata in JSON string. Set &quot;&quot; to use default metadata.</li>
             </ul>
           </ul>
           <h3>Action:Upload objectURL      </h3>
@@ -143,7 +163,7 @@
             <Parameters></Parameters>
             <ul>
               <li>ObjectURL ( string ) : ObjectURL.</li>
-              <li>Metadata ( string ) : Metadata in JSON, or content type.</li>
+              <li>Content type ( string ) : Content type.</li>
               <li>DataRef ( string ) : The Firebase storage ref URL</li>
             </ul>
           </ul>
@@ -302,7 +322,7 @@
             </ul>
           </ul>
           <h2>Upload    </h2>
-          <h4>Condition:On completed                    </h4>
+          <h4>Condition:On complete                    </h4>
           <ul>
             <li>Triggered when uploading completed.                    </li>
             <Parameters></Parameters>
@@ -351,7 +371,7 @@
             <ul>
             </ul>
           </ul>
-          <h4>Condition:On starting                    </h4>
+          <h4>Condition:On start                    </h4>
           <ul>
             <li>Triggered when uploading starting.                    </li>
             <Parameters></Parameters>
