@@ -216,6 +216,12 @@ set metadata before uploading file.
 
 Metadata will be cleaned after uploading.
 
+##### Custom metadata
+
+Custom metadata is an object containing string->string mappings. For example,
+
+Set ``customMetadata.version` to `0.1.3.4` will add key `version`, value `0.1.3.4` in `customMetadata`.
+
 #### Get
 
 ```mermaid
