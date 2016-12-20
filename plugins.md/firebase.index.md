@@ -23,6 +23,7 @@
 - Counter
 - Rooms
 - GeoFire
+- [Alias ID](rex_firebase_userid2id.html)
 
 #### Table
 

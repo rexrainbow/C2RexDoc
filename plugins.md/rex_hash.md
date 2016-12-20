@@ -117,12 +117,23 @@ CondForEaachItem["+Condition:For each item"] --- ExpCurItem["Expression:CurKey<b
 
 #### Read
 
+##### Read a value
+
 - `Expression:At( keys )`, keys in a string with dot notation
 - `Expression:AtKeys( key0, key1, ... )`
 
 
 - `Expression:Pop`, pop the last item
   - `Expression:Pop(keys, index)`, pop item at index
+
+##### Retrieve keys in array
+
+- `Condition:For each item`  [Sample capx](https://onedrive.live.com/redir?resid=7497FD5EC94476E!234&authkey=!AAYxuMIQwwy2q58&ithint=file%2ccapx)
+  - `Condition:For each item`
+  - `Expression:CurKey`
+    - `Expression:CurValue( keys )`, child in current item
+  - `Expression:Loopindex`, loop index of current for each
+- `System condition:For`, from `0`  to `Expression:ItemCnt - 1`
 
 ------
 
