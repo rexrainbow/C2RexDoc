@@ -22,6 +22,17 @@ UserID might be provided after [authentication](rex_firebase_authentication.html
 
 ## Usage
 
+### Data structure on firebase
+
+```
+<sub-domain>\
+    <ID> - UserID
+```
+
+One-to-one mapping between UserId and alias ID.
+
+----
+
 ###Random number ID
 
 #### Get ID
@@ -96,6 +107,8 @@ end
    - Failed : `Condition:On remove User ID error`
      - `Expression:UserID`
 
+----
+
 ### Specific ID
 
 #### Set ID
@@ -149,6 +162,4 @@ Assume that sub domain is `UserID-ID` :
     }  
 }
 ```
-
-
 

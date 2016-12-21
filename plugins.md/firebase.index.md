@@ -18,7 +18,7 @@
 ### Application
 
 - Leaderboard
-- Save data
+- [Save slot](rex_firebase_savedata.html)
 - Message
 - Counter
 - Rooms
