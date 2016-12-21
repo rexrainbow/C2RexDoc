@@ -46,12 +46,16 @@ None
 
 - Properties `Shadow offset X`, `Shadow offset Y`, `Shadow blur`,  `Shadow color`, or `Action:Set shadow`
 
-#### Insert image
+#### Manage images
 
 [Sample capx](https://1drv.ms/u/s!Am5HlOzVf0kHlXdpmyObSIGPFO8P)
 
-1. `Action:Add image`, to add image with a key
-   - Parameter `Key`: any character except `]`
+- `Action:Add image`, to add image with a key
+  - Parameter `Key`: any character except `]`
+
+
+- `Action:Remove image`
+- `Action:Remove all`
 
 ----
 
@@ -69,7 +73,7 @@ None
 
 [Sample capx](https://1drv.ms/u/s!Am5HlOzVf0kHlXWDvVvubsxoUlkc)
 
-When resize text object,
+When resizing text object,
 
 - resize characters, if property `Lock canvas size` is `Yes`, or `Action:Lock canvas size`
 - keep size of characters to render more or less characters of a line, if property `Lock canvas size` is `No`, or `Action:Unlock canvas size`

@@ -28,7 +28,8 @@
 26. *behavior*: [rex_monopoly_movement](rex_monopoly_movement.html)
 27. *plugin*: [rex_nedb](rex_nedb.html)
 28. *plugin*: [rex_taffydb](rex_taffydb.html)
-29. *plugin*: [rex_tmx_importer_v2](rex_tmx_importer_v2.html)
-30. *plugin*: [rex_tmx_json_parser](rex_tmx_json_parser.html)
-31. *plugin*: [rex_tmx_xml_parser](rex_tmx_xml_parser.html)
+29. *plugin*: [rex_tagtext](rex_tagtext.html)
+30. *plugin*: [rex_tmx_importer_v2](rex_tmx_importer_v2.html)
+31. *plugin*: [rex_tmx_json_parser](rex_tmx_json_parser.html)
+32. *plugin*: [rex_tmx_xml_parser](rex_tmx_xml_parser.html)
 
