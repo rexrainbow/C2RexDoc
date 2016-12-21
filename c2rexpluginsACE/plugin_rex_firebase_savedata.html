@@ -33,7 +33,7 @@
       <h1>Plugin : Save slot</h1>
       <p>Author:Rex.Rainbow</p>
       <ul>
-        <li>Save slot on firebase.</li>
+        <li>Private save slots.</li>
       </ul><a class="btn btn-default" href="https://dl.dropboxusercontent.com/u/5779181/C2Repo/Zip/plugins/rex_firebase_savedata.7z">Download    </a>
       <div class="panel panel-default">
         <div class="panel-title">
@@ -150,6 +150,19 @@
               </ul>
             </ul>
           </ul>
+          <h3>Action:Set JSON      </h3>
+          <ul>
+            <li>Sets JSON into slot.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Key ( number or string ) : The name of the key.</li>
+              <li>JSON ( string ) : The JSON to set</li>
+              <li>Slot ( Combo ) : Header or body.</li>
+              <ul>
+                <li>Options : [&quot;Header&quot;,&quot;Body&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
           <h2>Save      </h2>
           <h3>Action:Save      </h3>
           <ul>
@@ -241,6 +254,14 @@
           <h2>Conditions</h2>
         </div>
         <div class="panel-body">              
+          <h2>Body    </h2>
+          <h4>Condition:Invalid body                    </h4>
+          <ul>
+            <li>Current loaded body is invalid.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
           <h2>Body - for each    </h2>
           <h4>Condition:For each key                    </h4>
           <ul>
@@ -250,7 +271,7 @@
             </ul>
           </ul>
           <h2>Clean    </h2>
-          <h4>Condition:On clean complete                    </h4>
+          <h4>Condition:On clean                    </h4>
           <ul>
             <li>Triggered when clean slots complete on server complete.                    </li>
             <Parameters></Parameters>
@@ -265,14 +286,14 @@
             </ul>
           </ul>
           <h2>Header    </h2>
-          <h4>Condition:Empty                    </h4>
+          <h4>Condition:All slots are empty                    </h4>
           <ul>
             <li>All slots are unused. Call it after load headers from server.                    </li>
             <Parameters></Parameters>
             <ul>
             </ul>
           </ul>
-          <h4>Condition:Is occupied                    </h4>
+          <h4>Condition:Slot is occupied                    </h4>
           <ul>
             <li>Slot is occupied. Call it after load headers from server.                    </li>
             <Parameters></Parameters>
@@ -290,7 +311,7 @@
             </ul>
           </ul>
           <h2>Load - body    </h2>
-          <h4>Condition:On get body complete                    </h4>
+          <h4>Condition:On get body                    </h4>
           <ul>
             <li>Triggered when get slot body complete from server complete.                    </li>
             <Parameters></Parameters>
@@ -320,7 +341,7 @@
             </ul>
           </ul>
           <h2>Save    </h2>
-          <h4>Condition:On save complete                    </h4>
+          <h4>Condition:On save                    </h4>
           <ul>
             <li>Triggered when save complete.                    </li>
             <Parameters></Parameters>
@@ -330,14 +351,6 @@
           <h4>Condition:On save error                    </h4>
           <ul>
             <li>Triggered when save error.                    </li>
-            <Parameters></Parameters>
-            <ul>
-            </ul>
-          </ul>
-          <h2>Slot    </h2>
-          <h4>Condition:Empty                    </h4>
-          <ul>
-            <li>Current loaded slot is unused.                    </li>
             <Parameters></Parameters>
             <ul>
             </ul>
