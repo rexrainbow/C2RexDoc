@@ -4,7 +4,7 @@
 
 - Text objects
   - [BBcode text](rex_bbcodetext.html)
-  - [Tag text](rex_tagtext.htm)
+  - [Tag text](rex_tagtext.html)
 - Behaviors
   - Typing
   - Scrolling
