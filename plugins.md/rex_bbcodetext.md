@@ -57,6 +57,8 @@ None
 - `Action:Remove image`
 - `Action:Remove all`
 
+Images are *shared* for all tag text and bbcode text.
+
 ----
 
 ### Baseline

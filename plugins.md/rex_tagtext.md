@@ -64,6 +64,8 @@ None
 
    - `<class=tag_name> characters </class>`
 
+Tags are *private* for each tag text instance.
+
 #### Manage images
 
 - `Action:Add image`, to add image with a key
@@ -72,6 +74,8 @@ None
 
 - `Action:Remove image`
 - `Action:Remove all`
+
+Images are *shared* for all tag text and bbcode text.
 
 ----
 
