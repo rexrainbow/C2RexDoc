@@ -8,3 +8,4 @@
   - [Firebase](firebase.index.html)
   - Parse/Back4app
   - Backendless
+- [Text](text.index.html)
