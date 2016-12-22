@@ -113,13 +113,18 @@ Property `Eval mode`
 - `Action:Set value at page`, `Action:Add at page`
 - `Action:Clear`, to clean all cells
 
-#### Append/remove column or row
+#### Append column or row 
 
-- `Action:Append a column`, `Action:Remove a column`
+- `Action:Append a column`
+- `Action:Append a row`
+
+#### Remove column or row
+
+- `Action:Remove a column`
   - Parameter `Col`
     - String : column name
     - Number : index of column
-- `Action:Append a row`, `Action:Remove a row`
+-  `Action:Remove a row`
   - Parameter `Row`
     - String : Row name
     - Number : index of row
