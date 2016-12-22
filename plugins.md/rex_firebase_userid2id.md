@@ -48,7 +48,7 @@ subgraph Callback
 ActionIsSuccess{Action<br>is success} --> |Yes| CondOnSuccess["Condition:On request ID"]
 CondOnSuccess --- ExpResult["Expression:UserID<br>Expression:ID"]
 ActionIsSuccess --> |No| CondOnError["Condition:On request ID error"]
-CondOnError --- ExpError["Expression:UserID"]
+CondOnError --- ExpError["Expression:LastErrorMessage<br>Expression:LastErrorCode<br> <br>Expression:UserID"]
 end
 ```
 
@@ -61,6 +61,8 @@ end
    - Success : `Condition:On request ID`
      - `Expression:UserID`, `Expression:ID`
    - Failed : `Condition:On request ID error`
+     - Error : `Expression:LastErrorMessage`, `Expression:LastErrorCode`
+     - `Expression:UserID`
 
 #### Get UserID
 
@@ -75,7 +77,7 @@ subgraph Callback
 ActionIsSuccess{Action<br>is success} --> |Yes| CondOnSuccess["Condition:On request User ID"]
 CondOnSuccess --- ExpResult["Expression:UserID<br>Expression:ID"]
 ActionIsSuccess --> |No| CondOnError["Condition:On request User ID error"]
-CondOnError --- ExpError["Expression:ID"]
+CondOnError --- ExpError["Expression:LastErrorMessage<br>Expression:LastErrorCode<br> <br>Expression:ID"]
 end
 ```
 
@@ -84,6 +86,8 @@ end
    - Success : `Condition:On request User ID`
      - `Expression:UserID`, `Expression:ID`
    - Failed : `Condition:On request User ID error`
+     - Error : `Expression:LastErrorMessage`, `Expression:LastErrorCode`
+     - `Expression:ID`
 
 #### Remove UserID
 
@@ -96,7 +100,7 @@ subgraph Callback
 ActionIsSuccess{Action<br>is success} --> |Yes| CondOnSuccess["Condition:On remove User ID"]
 CondOnSuccess --- ExpResult["Expression:UserID"]
 ActionIsSuccess --> |No| CondOnError["Condition:On remove User ID error"]
-CondOnError --- ExpError["Expression:UserID"]
+CondOnError --- ExpError["Expression:LastErrorMessage<br>Expression:LastErrorCode<br> <br>Expression:UserID"]
 end
 ```
 
@@ -105,6 +109,7 @@ end
    - Success : `Condition:On remove User ID`
      - `Expression:UserID`
    - Failed : `Condition:On remove User ID error`
+     - Error : `Expression:LastErrorMessage`, `Expression:LastErrorCode`
      - `Expression:UserID`
 
 ----
@@ -122,7 +127,7 @@ subgraph Callback
 ActionIsSuccess{Action<br>is success} --> |Yes| CondOnSuccess["Condition:On request ID"]
 CondOnSuccess --- ExpResult["Expression:UserID<br>Expression:ID"]
 ActionIsSuccess --> |No| CondOnError["Condition:On request ID error"]
-CondOnError --- ExpError["Expression:UserID"]
+CondOnError --- ExpError["Expression:LastErrorMessage<br>Expression:LastErrorCode<br> <br>Expression:UserID"]
 end
 ```
 
@@ -133,6 +138,8 @@ end
    - Success : `Condition:On request ID`, if UserID has not been registered
      - `Expression:UserID`, `Expression:ID`
    - Failed : `Condition:On request ID error`
+     - Error : `Expression:LastErrorMessage`, `Expression:LastErrorCode`
+     - `Expression:UserID`
 
 #### Get UserID
 

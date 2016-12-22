@@ -57,6 +57,7 @@ ActSave --> ActionIsSuccess
 subgraph Callback
 ActionIsSuccess{Action<br>is success} --> |Yes| CondOnSuccess["Condition:On save"]
 ActionIsSuccess --> |No| CondOnError["Condition:On save error"]
+CondOnError --- ExpError["Expression:LastErrorMessage<br>Expression:LastErrorCode"]
 end
 ```
 
@@ -92,6 +93,7 @@ end
 
    - Success : `Condition:On save`
    - Failed : `Condition:On save error`
+     - Error :  `Expression:LastErrorMessage`, `Expression:LastErrorCode` 
 
 ### Load
 
@@ -99,53 +101,71 @@ end
 graph TB
 
 ActSetOwner[Action:Set owner] --> ActGetHeaders["Action:Get all headers"]
-ActGetHeaders --> CondOnGetHeaders["Condition:On get headers<br> <br>Slot:<br>Condition:All slots are empty<br>Condition:Slot is occupied<br> <br>Header value:<br>Expression:HeaderValue(slotName, key)<br>Expression:HeadersToJSON"]
+
 
 subgraph Display headers
+ActGetHeaders --> ActionIsSuccess0
+ActionIsSuccess0{Action<br>is success} --> |Yes| CondOnGetHeaders["Condition:On get headers<br> <br>Slot:<br>Condition:All slots are empty<br>Condition:Slot is occupied<br> <br>Header value:<br>Expression:HeaderValue(slotName, key)<br>Expression:HeadersToJSON"]
 CondOnGetHeaders --- |Headers| CondForEachHeader["Condition:For each header<br> <br>Expression:CurSlotName<br>Expression:CurHeaderValue(key)"]
 CondForEachHeader --- |Keys in a header| CondForEachKeyInHeader["Condition:For each key<br> <br>Expression:CurKey<br>Expression:CurValue"]
+
+ActionIsSuccess0 --> |No| CondOnGetAllHeadersError["Condition:On get headers error<br> <br>Expression:LastErrorMessage<br>Expression:LastErrorCode"]
 end
 
-ActSetOwner --> ActGetBody["Action:Get body"]
-CondForEachKeyInHeader --> |User selects a slot| ActGetBody
 
-ActGetBody --> CondOnGetBody["Condition:On get body<br> <br>Expression:BodyValue(key)<br>Expression:BodyToJSON"]
+
+subgraph Get body
+ActGetBody["Action:Get body"] --> ActionIsSuccess1{Action<br>is success}
+ActionIsSuccess1 --> |Yes| NullBody{Body is Null}
+NullBody --> |No| CondOnGetBody["Condition:On get body<br> <br>Expression:BodyValue(key)<br>Expression:BodyToJSON"]
 CondOnGetBody --- |Keys in body| CondForEachKeyInBody["Condition:For each key<br> <br>Expression:CurKey<br>Expression:CurValue"]
-ActGetBody --> CondOngetUnusedBody["Condition:On get unused body<br> <br>Condition:Body is invalid"]
+NullBody --> |Yes| CondOngetUnusedBody["Condition:On get unused body<br> <br>Condition:Body is invalid"]
+
+ActionIsSuccess1 --> |No| CondOnGetBodyError["Condition:On get body error<br> <br>Expression:LastErrorMessage<br>Expression:LastErrorCode"]
+end
+
+ActSetOwner --> ActGetBody
+CondForEachKeyInHeader --> |User selects a slot| ActGetBody
 ```
 
 1. `Action:Set owner`
    - Get UserID from [authentication](rex_firebase_authentication.html)
 2. Read headers, optional
    1. `Action:Get all headers`
-   2. `Condition:On get headers`
-      - `Expression:HeaderValue(slotName, key)`, returns a value
-        - `Expression:HeaderValue(slotName, key, defaultValue)`
-      - `Expression:HeadersToJSON`, returns a header in JSON string
-        - `Expression:HeaderValue(slotName)`
-      - `Condition:For each header`, retrieves each header
-        - `Expression:CurSlotName`
-        - `Expression:CurHeaderValue(key)`
-          - `Expression:CurHeaderValue(key, defaultValue)`
-      - `Condition:For each key`, in *Load - header* category, retrieves each key in a header
-        - `Expression:CurKey`
-        - `Expression:CurValue`
-      - Slot
-        - `Condition:All slots are empty`, returns true if no slot is used
-        - `Condition:Slot is occupied`, returns true if a slot is used
+   2. Callback
+      - Success : `Condition:On get headers`
+        - `Expression:HeaderValue(slotName, key)`, returns a value
+          - `Expression:HeaderValue(slotName, key, defaultValue)`
+        - `Expression:HeadersToJSON`, returns a header in JSON string
+          - `Expression:HeaderValue(slotName)`
+        - `Condition:For each header`, retrieves each header
+          - `Expression:CurSlotName`
+          - `Expression:CurHeaderValue(key)`
+            - `Expression:CurHeaderValue(key, defaultValue)`
+        - `Condition:For each key`, in *Load - header* category, retrieves each key in a header
+          - `Expression:CurKey`
+          - `Expression:CurValue`
+        - Slot
+          - `Condition:All slots are empty`, returns true if no slot is used
+          - `Condition:Slot is occupied`, returns true if a slot is used
+      - Failed : `Condition:On get headers error`
+        - Error :  `Expression:LastErrorMessage`, `Expression:LastErrorCode` 
 3. Read a body
    1. `Action:Get body`
    2. Callback
-       - `Condition:On get body`
-           - `Expression:BodyValue(key)`, returns a value
-               - `Expression:BodyValue(key, defaultValue)`
-           - `Expression:BodyToJSON`, returns body in JSON string
-               - `Expression:BodyValue`
-           - `Condition:For each key`, in *Load - body* category, retrieves each key in a header
-               - `Expression:CurKey`
-               - `Expression:CurValue`
-       - `Condition:On get unused body`, triggered when *this body has not been saved before*
-           - `Condition:Body is invalid`, returns true
+       - Success :
+           - Body is valid (i.e. not null) : `Condition:On get body`
+               - `Expression:BodyValue(key)`, returns a value
+                   - `Expression:BodyValue(key, defaultValue)`
+               - `Expression:BodyToJSON`, returns body in JSON string
+                   - `Expression:BodyValue`
+               - `Condition:For each key`, in *Load - body* category, retrieves each key in a header
+                   - `Expression:CurKey`
+                   - `Expression:CurValue`
+           - Else, `Condition:On get unused body`
+               - `Condition:Body is invalid`, returns true
+       - Failed : `Condition:On get body error`
+           - Error :  `Expression:LastErrorMessage`, `Expression:LastErrorCode` 
 
 ### Clean
 
@@ -158,6 +178,7 @@ ActClean --> ActionIsSuccess
 subgraph Callback
 ActionIsSuccess{Action<br>is success} --> |Yes| CondOnSuccess["Condition:On clean"]
 ActionIsSuccess --> |No| CondOnError["Condition:On clean error"]
+CondOnError --- ExpError["Expression:LastErrorMessage<br>Expression:LastErrorCode"]
 end
 ```
 
@@ -168,6 +189,7 @@ end
    - Success : `Condition:On clean`
      - Slot will become *unused*
    - Failed : `Condition:On clean error`
+     - Error :  `Expression:LastErrorMessage`, `Expression:LastErrorCode` 
 
 ----
 
