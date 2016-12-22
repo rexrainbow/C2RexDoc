@@ -3,6 +3,7 @@
 ## Data structure
 
 - CSV
+  - [2D tables](rex_csv.html)
 - JSON
   - JSON [plugin](rex_hash.html), [behavior](rex_bhash.html)
 - Database
