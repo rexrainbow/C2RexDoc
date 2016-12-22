@@ -132,7 +132,7 @@
             <li>Append a column.   </li>
             <Parameters></Parameters>
             <ul>
-              <li>Col index ( string ) : Column index.</li>
+              <li>Col ( number or string ) : Column index.</li>
               <li>Value ( number or string ) : The initial value.</li>
             </ul>
           </ul>
@@ -141,7 +141,7 @@
             <li>Append a row.   </li>
             <Parameters></Parameters>
             <ul>
-              <li>Row index ( string ) : Row index.</li>
+              <li>Row ( number or string ) : Row index.</li>
               <li>Value ( number or string ) : The initial value.</li>
             </ul>
           </ul>
@@ -150,7 +150,7 @@
             <li>Remove a column.   </li>
             <Parameters></Parameters>
             <ul>
-              <li>Col index ( string ) : Column index.</li>
+              <li>Col index ( number or string ) : Column index.</li>
             </ul>
           </ul>
           <h3>Action:Remove a row      </h3>
@@ -158,7 +158,7 @@
             <li>Remove a row.   </li>
             <Parameters></Parameters>
             <ul>
-              <li>Row index ( string ) : Row index.</li>
+              <li>Row index ( number or string ) : Row index.</li>
             </ul>
           </ul>
           <h2>Set      </h2>
@@ -318,14 +318,6 @@
             <ul>
             </ul>
           </ul>
-          <h2>Page    </h2>
-          <h3>Expression:AtPage </h3>
-          <ul>
-            <li>Get the page index in the last At expression.</li>
-            <Parameters></Parameters>
-            <ul>
-            </ul>
-          </ul>
           <h2>Row    </h2>
           <h3>Expression:NextRow </h3>
           <ul>
@@ -361,6 +353,13 @@
           <h3>Expression:AtRow </h3>
           <ul>
             <li>Get the row index in the last At expression.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:AtPage </h3>
+          <ul>
+            <li>Get the page index in the last At expression.</li>
             <Parameters></Parameters>
             <ul>
             </ul>
