@@ -12,7 +12,7 @@
 
 ## Related plugins
 
-- Finite state machine [plugin](https://rexrainbow.github.io/C2RexDoc/plugins.md/rex_gfsm.html)
+- [Finite state machine](https://rexrainbow.github.io/C2RexDoc/plugins.md/rex_gfsm.html)
 - [Board](https://rexrainbow.github.io/C2RexDoc/plugins.md/rex_board.html)
   - [SquareTx](https://rexrainbow.github.io/C2RexDoc/plugins.md/rex_board_squaretx.html)
   - [Matching](https://rexrainbow.github.io/C2RexDoc/plugins.md/rex_matcher.html)
