@@ -45,10 +45,10 @@ None
 
   - For example, table :
 
-    |      | a    | b    |
-    | ---- | ---- | ---- |
-    | c    | 10   | 20   |
-    | d    | 30   | 40   |
+    |       | a    | b    |
+    | ----- | ---- | ---- |
+    | **c** | 10   | 20   |
+    | **d** | 30   | 40   |
 
     exported csv string :
 
@@ -144,10 +144,10 @@ Property `Eval mode`
 
     For example
 
-    |      | a    | b    |
-    | ---- | ---- | ---- |
-    | c    | 10   | 20   |
-    | d    | 30   | 40   |
+    |       | a    | b    |
+    | ----- | ---- | ---- |
+    | **c** | 10   | 20   |
+    | **d** | 30   | 40   |
 
     Expression:At("b", "d") = Expression:At(1, 1) = 40
 
