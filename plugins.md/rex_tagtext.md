@@ -70,6 +70,8 @@ Tags are *private* for each tag text instance.
 
 - `Action:Add image`, to add image with a key
   - Parameter `Key`: any character except `]`
+  - Parameter `Image` : [official sprite object](https://www.scirra.com/manual/115/sprite)
+    - Image size is equal to sprite size, i.e. set sprite size before added
 
 
 - `Action:Remove image`
