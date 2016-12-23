@@ -94,7 +94,7 @@ end
      - URL of font file
        - [Load from web](https://1drv.ms/u/s!Am5HlOzVf0kHk3afO6p31AIXAYf_)
        - [Load from local](https://1drv.ms/u/s!Am5HlOzVf0kHk3GkDZpbGS7Clfpy)
-3. ``Action:Loading`
+3. `Action:Loading`
    - `Condition:On loading`
    - `Condition:On font loading`, when a font is loading started
      - `Expression:LastFamilyName`
