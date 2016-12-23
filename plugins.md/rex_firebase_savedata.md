@@ -97,35 +97,41 @@ end
 
 ### Load
 
+#### Flow chart of load headers
+
 ```mermaid
 graph TB
 
 ActSetOwner[Action:Set owner] --> ActGetHeaders["Action:Get all headers"]
+ActGetHeaders --> ActionIsSuccess
 
-
-subgraph Display headers
-ActGetHeaders --> ActionIsSuccess0
-ActionIsSuccess0{Action<br>is success} --> |Yes| CondOnGetHeaders["Condition:On get headers<br> <br>Slot:<br>Condition:All slots are empty<br>Condition:Slot is occupied<br> <br>Header value:<br>Expression:HeaderValue(slotName, key)<br>Expression:HeadersToJSON"]
+subgraph Callback
+ActionIsSuccess{Action<br>is success} --> |Yes| CondOnGetHeaders["Condition:On get headers<br> <br>Slot:<br>Condition:All slots are empty<br>Condition:Slot is occupied<br> <br>Header value:<br>Expression:HeaderValue(slotName, key)<br>Expression:HeadersToJSON"]
 CondOnGetHeaders --- |Headers| CondForEachHeader["Condition:For each header<br> <br>Expression:CurSlotName<br>Expression:CurHeaderValue(key)"]
 CondForEachHeader --- |Keys in a header| CondForEachKeyInHeader["Condition:For each key<br> <br>Expression:CurKey<br>Expression:CurValue"]
 
-ActionIsSuccess0 --> |No| CondOnGetAllHeadersError["Condition:On get headers error<br> <br>Expression:LastErrorMessage<br>Expression:LastErrorCode"]
+ActionIsSuccess --> |No| CondOnGetAllHeadersError["Condition:On get headers error<br> <br>Expression:LastErrorMessage<br>Expression:LastErrorCode"]
 end
+```
 
+#### Flow chart of load body
 
+```mermaid
+graph TB
 
-subgraph Get body
-ActGetBody["Action:Get body"] --> ActionIsSuccess1{Action<br>is success}
-ActionIsSuccess1 --> |Yes| NullBody{Body is Null}
+ActSetOwner[Action:Set owner] --> GetHeaders["Get & display headers"]
+ActSetOwner --> ActGetBody["Action:Get body"]
+ActGetBody --> ActionIsSuccess
+GetHeaders --> |User selects a slot| ActGetBody
+
+subgraph Callback
+ActionIsSuccess{Action<br>is success} --> |Yes| NullBody{Body is Null}
 NullBody --> |No| CondOnGetBody["Condition:On get body<br> <br>Expression:BodyValue(key)<br>Expression:BodyToJSON"]
 CondOnGetBody --- |Keys in body| CondForEachKeyInBody["Condition:For each key<br> <br>Expression:CurKey<br>Expression:CurValue"]
 NullBody --> |Yes| CondOngetUnusedBody["Condition:On get unused body<br> <br>Condition:Body is invalid"]
 
-ActionIsSuccess1 --> |No| CondOnGetBodyError["Condition:On get body error<br> <br>Expression:LastErrorMessage<br>Expression:LastErrorCode"]
+ActionIsSuccess --> |No| CondOnGetBodyError["Condition:On get body error<br> <br>Expression:LastErrorMessage<br>Expression:LastErrorCode"]
 end
-
-ActSetOwner --> ActGetBody
-CondForEachKeyInHeader --> |User selects a slot| ActGetBody
 ```
 
 1. `Action:Set owner`
