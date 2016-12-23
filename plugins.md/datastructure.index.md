@@ -5,6 +5,7 @@
 - CSV
   - [2D tables](rex_csv.html)
   - [CSV --> official array object](rex_csv2array.html)
+  - [CSV --> official dictionary object](rex_csv2dictionary.html)
 - JSON
   - JSON [plugin](rex_hash.html), [behavior](rex_bhash.html)
 - Database
