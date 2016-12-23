@@ -3,4 +3,4 @@
 ## System
 
 - Create instance
-  - Nickname [plugin](rex_nickname.html)
+  - Nickname [plugin](rex_nickname.html), [behavior](rex_bnickname.html)

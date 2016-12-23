@@ -42,10 +42,10 @@ ActCreate --- ExpResult["Expression:LastCreatedInstUID"]
 ### Pick instance by nickname
 
 - Matching name string exactly  ([Sample capx](https://onedrive.live.com/redir?resid=7497FD5EC94476E!257&authkey=!ACzbVtkHwjsP7_U&ithint=file%2c.capx))
-  - `Condition:Pick instances`,
-  -  `Action:Pick all instances`
+  - `Condition:Pick instances`
+  - `Action:Pick all instances`
 - Matching sub-string  ([Sample capx](https://onedrive.live.com/redir?resid=7497FD5EC94476E%21470&authkey=%21AF-n_bkjnteyT50&ithint=file%2c.capx))
-  - `Condition:Pick  matched instances`, 
+  - `Condition:Pick  matched instances`,
   - `Action:Pick matched instances`
 
 ### Debug panel
