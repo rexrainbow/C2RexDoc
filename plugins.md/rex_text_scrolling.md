@@ -35,12 +35,17 @@ ActSetContent --> |Line| ActScrollByLines["Action:Next line<br>Action:Previous l
 ActSetContent --> |Page| ActScrollByPages["Action:Next page<br>Action:Previous page<br>Action:To page<br>Condition:Last page"]
 ```
 
-1. Set content
+1. Put this behavior under
+   - [official text](https://www.scirra.com/manual/116/text)
+   - [official sprite font](https://www.scirra.com/manual/166/sprite-font)
+   - [rex_tagtext](rex_tagtext.html)
+   - [rex_bbcodetext](rex_bbcodetext.html)
+2. Set content
    - `Action:Set content`
    - `Action:Append content`
    - `Expression:Text` : content of text
    - `Expression:Lines` : string from start line to end line
-2. Scroll to
+3. Scroll to
    - Percentage  ([Sample capx](https://onedrive.live.com/redir?resid=7497FD5EC94476E%21313&authkey=%21AFWNzbks2FVsGvU&ithint=file%2c.capx))
      - `Action:To percentage`
    - Line  ([Sample capx](https://onedrive.live.com/redir?resid=7497FD5EC94476E%21314&authkey=%21APZUzXpRfAt_7_4&ithint=file%2c.capx))
