@@ -71,7 +71,7 @@ Tags are *private* for each tag text instance.
 - `Action:Add image`, to add image with a key
   - Parameter `Key`: any character except `]`
   - Parameter `Image` : [official sprite object](https://www.scirra.com/manual/115/sprite)
-    - Image size is equal to sprite size, i.e. set sprite size before added
+    - Image size is equal to sprite size, i.e. set sprite size before added  ([Sample capx](https://1drv.ms/u/s!Am5HlOzVf0kHlhMpTLQ2_V8goUkq))
 
 
 - `Action:Remove image`
