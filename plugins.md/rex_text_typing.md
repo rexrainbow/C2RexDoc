@@ -35,6 +35,8 @@ IsCompleted --> |No| CondForEachText
 IsCompleted --> |Yes| CondOnTypingCompleted["Condition:On typing completed"]
 ```
 
+[Sample capx](https://onedrive.live.com/redir?resid=7497FD5EC94476E!2047&authkey=!AAfO-p2R2vAlo1k&ithint=file%2ccapx)
+
 1. Put this behavior under
    - [official text](https://www.scirra.com/manual/116/text)
    - [official sprite font](https://www.scirra.com/manual/166/sprite-font)
@@ -42,7 +44,7 @@ IsCompleted --> |Yes| CondOnTypingCompleted["Condition:On typing completed"]
    - [rex_bbcodetext](rex_bbcodetext.html)
 2. `Action:Type text`, to start typing
 3. Type next character
-   - `Condition:On text typing`
+   - `Condition:On text typing`  ([Sample capx](https://onedrive.live.com/redir?resid=7497FD5EC94476E!2046&authkey=!AF-iVMgJ132nB4U&ithint=file%2ccapx))
    - `Condition:Is text typing`, returns true
    - `Expression:TypingIndex`
    - Timer of typing
