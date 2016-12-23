@@ -10,4 +10,4 @@
   - [Scrolling](rex_text_scrolling.html)
   - Resize
   - Properties access
-- Load web font
+- [Load web font](rex_google_webfontloader.html)
