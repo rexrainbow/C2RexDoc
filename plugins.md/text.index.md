@@ -6,7 +6,7 @@
   - [BBcode text](rex_bbcodetext.html)
   - [Tag text](rex_tagtext.html)
 - Behaviors
-  - Typing
+  - [Typing](rex_text_typing.html)
   - [Scrolling](rex_text_scrolling.html)
   - Resize
   - Properties access

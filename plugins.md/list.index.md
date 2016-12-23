@@ -33,7 +33,8 @@
 31. *plugin*: [rex_taffydb](rex_taffydb.html)
 32. *plugin*: [rex_tagtext](rex_tagtext.html)
 33. *behavior*: [rex_text_scrolling](rex_text_scrolling.html)
-34. *plugin*: [rex_tmx_importer_v2](rex_tmx_importer_v2.html)
-35. *plugin*: [rex_tmx_json_parser](rex_tmx_json_parser.html)
-36. *plugin*: [rex_tmx_xml_parser](rex_tmx_xml_parser.html)
+34. *behavior*: [rex_text_typing](rex_text_typing.html)
+35. *plugin*: [rex_tmx_importer_v2](rex_tmx_importer_v2.html)
+36. *plugin*: [rex_tmx_json_parser](rex_tmx_json_parser.html)
+37. *plugin*: [rex_tmx_xml_parser](rex_tmx_xml_parser.html)
 
