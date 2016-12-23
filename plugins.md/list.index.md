@@ -32,7 +32,8 @@
 30. *plugin*: [rex_nedb](rex_nedb.html)
 31. *plugin*: [rex_taffydb](rex_taffydb.html)
 32. *plugin*: [rex_tagtext](rex_tagtext.html)
-33. *plugin*: [rex_tmx_importer_v2](rex_tmx_importer_v2.html)
-34. *plugin*: [rex_tmx_json_parser](rex_tmx_json_parser.html)
-35. *plugin*: [rex_tmx_xml_parser](rex_tmx_xml_parser.html)
+33. *plugin*: [rex_text_scrolling](rex_text_scrolling.html)
+34. *plugin*: [rex_tmx_importer_v2](rex_tmx_importer_v2.html)
+35. *plugin*: [rex_tmx_json_parser](rex_tmx_json_parser.html)
+36. *plugin*: [rex_tmx_xml_parser](rex_tmx_xml_parser.html)
 

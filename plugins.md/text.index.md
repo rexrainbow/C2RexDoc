@@ -7,7 +7,7 @@
   - [Tag text](rex_tagtext.html)
 - Behaviors
   - Typing
-  - Scrolling
+  - [Scrolling](rex_text_scrolling.html)
   - Resize
   - Properties access
 - Load web font

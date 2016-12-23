@@ -1,4 +1,4 @@
-# Document of Rex's plugins
+# Rex's *Construct 2* plugins
 
 - [Download all my plugins and behaviors](my-plugins-repository-v2.html)
 - [Categories](categories.index.html)
