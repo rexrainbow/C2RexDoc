@@ -2,5 +2,5 @@
 
 ## System
 
-- Create instance
+- Create instance by string
   - Nickname [plugin](rex_nickname.html), [behavior](rex_bnickname.html)

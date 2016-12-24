@@ -3,6 +3,8 @@
 ## Text
 
 - Text objects
+  - [Official text](https://www.scirra.com/manual/116/text)
+  - [Official sprite font](https://www.scirra.com/manual/166/sprite-font)
   - [BBcode text](rex_bbcodetext.html)
   - [Tag text](rex_tagtext.html)
 - Behaviors
