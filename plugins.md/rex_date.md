@@ -63,7 +63,13 @@ Or get current date directly by
 - `Expression:Milliseconds`
 - `Expression:LocalExpression`
 
-(*not recommended*)
+(*not recommended*, [sample capx](https://onedrive.live.com/redir?resid=7497FD5EC94476E%21518&authkey=%21AE0tB7g9lHRUElM&ithint=file%2c.capx)) 
+
+#### Get delta time
+
+[sample capx](https://onedrive.live.com/redir?resid=7497FD5EC94476E!970&authkey=!AN7Tkw1wSgjrxyE&ithint=file%2ccapx)
+
+Subtract two timestamp (`Expression:UnixTimestamp`)
 
 ----
 
@@ -72,7 +78,7 @@ Or get current date directly by
 ```mermaid
 graph TB
 
-Start["Action:Start<br>----<br>T0 = current timestamp"] --> ExpEscapedTime["Expression:Timer<br>----<br>T1 = current timestamp,<br>Escaped time = T1 - T0"]
+Start["Action:Start<br>----<br>T0 = current timestamp"] --> ExpEscapedTime["Expression:Timer<br>----<br>T1 = current timestamp,<br>Escaped time = (T1 - T0)/1000"]
 ```
 
 [Sample capx](https://onedrive.live.com/redir?resid=7497FD5EC94476E!731&authkey=!APfM6TAxdgfHDn0&ithint=file%2ccapx)
@@ -81,7 +87,8 @@ Start["Action:Start<br>----<br>T0 = current timestamp"] --> ExpEscapedTime["Expr
 
 2. `Expression:Timer`, to get escaped time, in seconds
 
-   - `Action:Pause`
-   - `Action:Resume`
+   - Control
+     - `Action:Pause`
+     - `Action:Resume`
 
    ​
