@@ -35,6 +35,8 @@ TimeStamp --> ExpLocalExpression["Expression:LocalExpression(unixtimestamp)"]
 
 ```
 
+[Sample capx](https://1drv.ms/u/s!Am5HlOzVf0kHhAc65AULXTBdPqJ-)
+
 1. `Expression:UnixTimestamp`, to get current timestamp
    - `Expression:UnixTimestamp(year, month, day)`, to get timestamp at year/month/day
    - `Expression:UnixTimestamp(year, month, day, hours, minutes, seconds)`, to get timestamp at year/month/day/hours/minutes/seconds
@@ -47,7 +49,21 @@ TimeStamp --> ExpLocalExpression["Expression:LocalExpression(unixtimestamp)"]
    - `Expression:Minutes(timestamp)`
    - `Expression:Seconds(timestamp)`
    - `Expression:Milliseconds(timestamp)`
-   - `Expression:LocalExpression(unixtimestamp)`
+   - `Expression:LocalExpression(unixtimestamp)`, to get  local date expression string  ([Sample capx](https://onedrive.live.com/redir?resid=7497FD5EC94476E!2005&authkey=!ALPkWoHGnr0yflU&ithint=file%2ccapx))
+
+Or get current date directly by
+
+- `Expression:Year`
+- `Expression:Month`
+- `Expression:Date`
+- `Expression:Day`
+- `Expression:Hours`
+- `Expression:Minutes`
+- `Expression:Seconds`
+- `Expression:Milliseconds`
+- `Expression:LocalExpression`
+
+(*not recommended*)
 
 ----
 
@@ -56,8 +72,10 @@ TimeStamp --> ExpLocalExpression["Expression:LocalExpression(unixtimestamp)"]
 ```mermaid
 graph TB
 
-Start["Action:Start"] --> ExpEscapedTime["Expression:Timer"]
+Start["Action:Start<br>----<br>T0 = current timestamp"] --> ExpEscapedTime["Expression:Timer<br>----<br>T1 = current timestamp,<br>Escaped time = T1 - T0"]
 ```
+
+[Sample capx](https://onedrive.live.com/redir?resid=7497FD5EC94476E!731&authkey=!APfM6TAxdgfHDn0&ithint=file%2ccapx)
 
 1. `Action:Start`, to start a timer
 
