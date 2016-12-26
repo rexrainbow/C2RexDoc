@@ -40,7 +40,11 @@ TimeStamp --> ExpLocalExpression["Expression:LocalExpression(unixtimestamp)"]
 1. `Expression:UnixTimestamp`, to get current timestamp
    - `Expression:UnixTimestamp(year, month, day)`, to get timestamp at year/month/day
    - `Expression:UnixTimestamp(year, month, day, hours, minutes, seconds)`, to get timestamp at year/month/day/hours/minutes/seconds
+
 2. Get date
+
+   *It is recommended using [rex_momentjs](rex_momentjs.html) to get formatted date string*
+
    - `Expression:Year(timestamp)`
    - `Expression:Month(timestamp)`
    - `Expression:Date(timestamp)`
