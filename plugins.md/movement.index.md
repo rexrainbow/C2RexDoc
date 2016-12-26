@@ -1,5 +1,9 @@
 # [Categories](categories.index.html) > Movement behaviors
 
-## Movement
+## Position
 
-- [moveTo](rex_moveto.html)​
+- [Move to](rex_moveto.html)
+
+## Angle
+
+- [Rotate to](rex_rotateto.html)
