@@ -46,7 +46,7 @@ StateClicked --> |Action:Deactivate| StateInactive
 
 ```
 
-### finite-state machine
+### Finite-state machine
 
 - State **OFF**
   - Property `Activated`
