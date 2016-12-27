@@ -1,4 +1,4 @@
-# [Categories](categories.index.html) > [Input](inputd.index.html) > rex_touchwrap
+# [Categories](categories.index.html) > [Input](input.index.html) > rex_touchwrap
 
 ## Introduction
 

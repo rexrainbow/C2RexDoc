@@ -1,4 +1,4 @@
-# [Categories](categories.index.html) > [Input](inputd.index.html) > rex_button
+# [Categories](categories.index.html) > [Input](input.index.html) > rex_button
 
 ## Introduction
 
