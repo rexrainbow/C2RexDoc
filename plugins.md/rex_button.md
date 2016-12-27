@@ -103,17 +103,25 @@ StateClicked --> |Action:Deactivate| StateInactive
 - `Action:Manual trigger`
 
   - `On clicked`
-
   - `On click cancel`
-
   - `On click detecting start`
-
   - `On activated`
-
   - `On inactivated`
-
   - `On rolling in`
-
   - `On rolling out`
 
-    ​
+
+----
+
+### Animation of each state
+
+- `Action:Set display of states`
+  - State
+    - `Normal`
+    - `Click`
+    - `INACTIVE`
+    - `Rolling-in`
+  - Parameter type of each state
+    - string : animation name
+      - `""` : ignore
+    - number : frame index
