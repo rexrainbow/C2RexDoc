@@ -45,4 +45,5 @@
 43. *plugin*: [rex_tmx_importer_v2](rex_tmx_importer_v2.html)
 44. *plugin*: [rex_tmx_json_parser](rex_tmx_json_parser.html)
 45. *plugin*: [rex_tmx_xml_parser](rex_tmx_xml_parser.html)
+46. *plugin*: [rex_touchwrap](rex_touchwrap.html)
 

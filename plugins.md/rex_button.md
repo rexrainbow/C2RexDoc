@@ -46,6 +46,8 @@ StateClicked --> |Action:Deactivate| StateInactive
 
 ```
 
+[Sample capx](https://onedrive.live.com/redir?resid=7497FD5EC94476E!507&authkey=!AKFdJ_JUMvmdKrQ&ithint=file%2c.capx)
+
 ### Finite-state machine
 
 - State **OFF**
