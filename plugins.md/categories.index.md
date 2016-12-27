@@ -6,6 +6,7 @@
 - [Date & time](date.index.html)
 - [Text](text.index.html)
 - [Movement behaviors](movement.index.html)
+- [Input](input.index.html)
 - [Board](board.index.html)
 - Backend
   - [Firebase](firebase.index.html)

@@ -73,8 +73,6 @@ end
 
 [Sample capx](https://onedrive.live.com/redir?resid=7497FD5EC94476E%21341&authkey=%21AMZnEBTIPc2ENTI&ithint=file%2ccapx)
 
-Call one of these action to start moving chess
-
 - `Action:Move to neighbor` to move chess to neighbor
 - `Action:Move to chess`, `Action:Move to chess by UID` to move chess to target chess/tile
 - `Action:Move to LXY`, `Action:Move to offset` to move to the specific logical position. 
