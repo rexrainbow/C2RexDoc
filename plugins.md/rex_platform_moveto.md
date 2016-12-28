@@ -50,3 +50,7 @@ Target position is (`Expression:TargetX` , `Expression:TargetY`).
 ### Reach target
 
 - `Condition:On hit target position`
+
+### Stop
+
+- `Action:Stop`
