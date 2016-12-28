@@ -43,8 +43,9 @@
 41. *plugin*: [rex_tagtext](rex_tagtext.html)
 42. *behavior*: [rex_text_scrolling](rex_text_scrolling.html)
 43. *behavior*: [rex_text_typing](rex_text_typing.html)
-44. *plugin*: [rex_tmx_importer_v2](rex_tmx_importer_v2.html)
-45. *plugin*: [rex_tmx_json_parser](rex_tmx_json_parser.html)
-46. *plugin*: [rex_tmx_xml_parser](rex_tmx_xml_parser.html)
-47. *plugin*: [rex_touchwrap](rex_touchwrap.html)
+44. *plugin*: [rex_timeline](rex_timeline.html)
+45. *plugin*: [rex_tmx_importer_v2](rex_tmx_importer_v2.html)
+46. *plugin*: [rex_tmx_json_parser](rex_tmx_json_parser.html)
+47. *plugin*: [rex_tmx_xml_parser](rex_tmx_xml_parser.html)
+48. *plugin*: [rex_touchwrap](rex_touchwrap.html)
 
