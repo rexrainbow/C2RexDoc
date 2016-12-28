@@ -3,6 +3,7 @@
 - [System](system.index.html)
 - [Data structure](datastructure.index.html)
 - [Logic](logic.index.html)
+- [String](string.index.html)
 - [Date & time](date.index.html)
 - [Timer](timer.index.html)
 - [Text](text.index.html)
