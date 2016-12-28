@@ -4,7 +4,7 @@
 
 Logic-less templates to render text content.
 
-Reference - [mustache](https://github.com/janl/mustache.js)](https://github.com/npm/ini)
+Reference - [mustache](https://github.com/janl/mustache.js)
 
 ## Links
 
