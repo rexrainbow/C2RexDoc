@@ -8,3 +8,7 @@
 ## Angle
 
 - [Rotate to](rex_rotateto.html)
+
+### Platformer
+
+- [Move to](rex_platform_moveto.html)
