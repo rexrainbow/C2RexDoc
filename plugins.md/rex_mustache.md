@@ -75,5 +75,7 @@ BuiltInData["Action:Clean<br>Action:Set value"] --> View
 
 ### Delimiter
 
+[Sample capx](https://onedrive.live.com/redir?resid=7497FD5EC94476E!2300&authkey=!APT_VlA8kUH9hUE&ithint=file%2ccapx)
+
 - Properties `Left delimiter`, `Right delimiter`
 - `Action:Set delimiters`
