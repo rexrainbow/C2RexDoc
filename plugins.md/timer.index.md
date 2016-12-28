@@ -2,5 +2,5 @@
 
 ## Timer
 
-- Based object
+- Base object
   - [Timeline](rex_timeline.html)

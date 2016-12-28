@@ -2,7 +2,7 @@
 
 ## Touch
 
-- Based object
+- Base object
   - [Touch wrap](rex_touchwrap.html)
 - Behaviors
   - [Button](rex_button.html)
