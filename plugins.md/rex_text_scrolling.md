@@ -46,13 +46,13 @@ ActSetContent --> |Page| ActScrollByPages["Action:Next page<br>Action:Previous p
    - `Expression:Text` : content of text
    - `Expression:Lines` : string from start line to end line
 3. Scroll to
-   - Percentage  ([Sample capx](https://onedrive.live.com/redir?resid=7497FD5EC94476E%21313&authkey=%21AFWNzbks2FVsGvU&ithint=file%2c.capx))
+   - Percentage  ([Sample capx](https://1drv.ms/u/s!Am5HlOzVf0kHgjlVjnJEr9medikG))
      - `Action:To percentage`
-   - Line  ([Sample capx](https://onedrive.live.com/redir?resid=7497FD5EC94476E%21314&authkey=%21APZUzXpRfAt_7_4&ithint=file%2c.capx))
+   - Line  ([Sample capx](https://1drv.ms/u/s!Am5HlOzVf0kHgjr2V3KH0n3AZb05))
      - `Action:Next line`
      - `Action:Previous line`
      - `Action:Tto line`
-   - Page  ([Sample capx](https://onedrive.live.com/redir?resid=7497FD5EC94476E%21542&authkey=%21AJIMaJEVk9SB8_I&ithint=file%2c.capx))
+   - Page  ([Sample capx](https://1drv.ms/u/s!Am5HlOzVf0kHhB6SDGiRFZPUgfPy))
      - `Action:Next page`
        - [Sample capx](https://onedrive.live.com/redir?resid=7497FD5EC94476E!543&authkey=!AGMFvkNzNVQGiBE&ithint=file%2c.capx) : [Typing](rex_text_typing.html) text page by page
      - `Action:Previous page`
