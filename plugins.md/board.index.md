@@ -33,6 +33,8 @@
 
 ## Random map
 
+- [Maze generator](rex_maze_gen.html)
+
 ----
 
 ## More Tutorials
@@ -44,5 +46,4 @@
   - [Part3. Chess remove, drop down, and add a row](https://www.scirra.com/tutorials/5003/rexrainbow-board-series-tutorial-3-chess-remove-drop-and-add-row)
   - [Part4. click remove, and FSM](https://www.scirra.com/tutorials/5006/rexrainbow-board-series-tutorial-4-click-remove-and-make-it-a-game)
 - [Bejeweled](app.bejeweled.html)
-
 
