@@ -1,4 +1,4 @@
-# [Home](index.html) > List of plugus
+# [Home](index.html) > List of plugins
 
 1. *plugin*: [rex_bbcodetext](rex_bbcodetext.html)
 2. *behavior*: [rex_bhash](rex.bhash.html)
