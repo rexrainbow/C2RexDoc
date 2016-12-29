@@ -15,6 +15,7 @@
   - Edge
   - [Logic mask](rex_logicmask.html)
   - [Hex shape](rex_board_hexshapemap.html)
+  - [Layout to board](rex_layout2board.html)
 
 ## Mini board
 
