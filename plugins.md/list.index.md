@@ -53,4 +53,5 @@
 51. *plugin*: [rex_tmx_json_parser](rex_tmx_json_parser.html)
 52. *plugin*: [rex_tmx_xml_parser](rex_tmx_xml_parser.html)
 53. *plugin*: [rex_touchwrap](rex_touchwrap.html)
+54. *plugin*: [rex_uid2prop](rex_uid2prop.html)
 
