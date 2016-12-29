@@ -47,6 +47,7 @@ CondOnCompleted --- ExpCell["Expression:MapWidth<br>Expression:MapHeight<br> <br
        - `1` : wall
        - `-1` : not in map
      - `Condition:Is a wall`, returns true if a tile is a wall (or an empty space)
+     - `Expression:MapAsJson`
    - A possible solution to create map
      - Create tiles in multi-ticks : [rex_eventbalancer plugin](rex_eventbalancer.html) + [rex_loopiterator plugin](rex_loopiterator.html)
      - Position of each tile in orthogonal or isometric map :  [rex_board_squareTx plugin](rex_board_squaretx.html)
