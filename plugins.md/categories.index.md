@@ -14,3 +14,4 @@
   - [Firebase](firebase.index.html)
   - Parse/Back4app
   - Backendless
+  - [Newgrounds.io](ngio.index.html)

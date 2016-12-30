@@ -24,8 +24,10 @@ None
 ```mermaid
 graph TB
 
-StateRun["Run<br>----<br>Restore timescale<br> <br>Condition:On resume"] --> |"Pause<br> <br>Action:Set pause state (Pause)<br>Action:Toggle pause"| StatePause["Pause<br>----<br>Save timescale,<br>Set timescale to 0<br> <br>Condition:On pause"]
-StatePause --> |"Resume<br> <br>Action:Set pause state (Run)<br>Action:Toggle pause"| StateRun
+StateRun["Run"] --> |"Pause<br> <br>Action:Set pause state (Pause)<br>Action:Toggle pause"| TransitionRun2Pause["Run --> Pause<br>----<br>Save timescale,<br>Set timescale to 0<br> <br>Condition:On pause"]
+TransitionRun2Pause --> StatePause["Pause"]
+StatePause --> |"Resume<br> <br>Action:Set pause state (Run)<br>Action:Toggle pause"| TransitionPause2Run["Pause --> Run<br>----<br>Restore timescale<br> <br>Condition:On resume"]
+TransitionPause2Run --> StateRun
 ```
 
 [Sample capx](https://onedrive.live.com/redir?resid=7497FD5EC94476E!536&authkey=!AHOh24sxVxcT6VQ&ithint=file%2c.capx)
