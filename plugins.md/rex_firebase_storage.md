@@ -34,7 +34,7 @@ ActUpload["Action:Upload from data URL<br>Action:Upload from sprite<br>Action:Up
 subgraph Callback
 ActionIsSuccess{Action<br>is success} --> |Yes| CondOnSuccess["Condition:On complete"]
 ActionIsSuccess --> |No| CondOnError["Condition:On error"]
-CondOnSuccess --> ExpResult["Expression:LastDownloadURL<br>Expression:LastMetadata"]
+CondOnSuccess --- ExpResult["Expression:LastDownloadURL<br>Expression:LastMetadata"]
 CondOnError --- ExpError["Expression:LastErrorMessage<br>Expression:LastErrorCode"]
 end
 ```
@@ -141,7 +141,7 @@ ActDelete["Action:Get download url"] --> ActionIsSuccess
 subgraph Callback
 ActionIsSuccess{Action<br>is success} --> |Yes| CondOnSuccess["Condition:On get download URL"]
 ActionIsSuccess --> |No| CondOnError["Condition:On get download URL error"]
-CondOnSuccess --> ExpResult["Expression:LastDownloadURL"]
+CondOnSuccess --- ExpResult["Expression:LastDownloadURL"]
 CondOnError --- ExpError["Condition:File doesn't exist<br> <br>Expression:LastErrorMessage<br>Expression:LastErrorCode"]
 end
 ```
