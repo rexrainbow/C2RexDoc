@@ -25,17 +25,17 @@ A behavior of [mini board](rex_miniboard.html), which drag & drop chess on mini 
 ```mermaid
 graph TB
 
-Idle --> |"Drag"| PullOut["Property: Drag Pull<br>----<br>Pull out from main board"]
-PullOut --> CondOnDraggingStart["+Condition:On dragging start"]
+Idle --> |"Drag<br>Action:Try to drag"| PullOut["Property: Drag Pull<br>----<br>Pull out from main board"]
+PullOut --> CondOnDraggingStart["Condition:On dragging start"]
 
 subgraph Dragging
 CondOnDraggingStart --> Dragging["Dragging"]
 Dragging --- AlignPhysicalPosition["Property: Align to grids<br>----<br>Align physical position<br>with main board"]
 
-AlignPhysicalPosition --- CondOnDragAtMB["+Condition:On dragging at main board"]
+AlignPhysicalPosition --- CondOnDragAtMB["Condition:On dragging at main board"]
 end
 
-Dragging --> |"Drop"| CondOnDrop["+Condition:On dropped"]
+Dragging --> |"Drop<br>Action:Force to drop"| CondOnDrop["Condition:On dropped"]
 CondOnDrop --> Idle
 
 subgraph Idle
@@ -68,7 +68,7 @@ end
 
 ### Drop
 
-- Drop (i.e. touch release), or `Action:Force to drop`.
+- Drop (i.e. touch release), or `Action:Drop`.
   - `Condition:On dropped`
   - `Condition:On dropped at main board`
 ###Logical position at overlapped main board
