@@ -5,7 +5,7 @@
 - Function
   - Function objects
     - [Official function](https://www.scirra.com/manual/149/function)
-    - Function with name index parameters plugin , behavior
+    - Function with name index parameters [plugin](rex_function2.html) , behavior
   - [Function serialize](rex_fncallpkg.html)
   - [Copy function parameters](rex_fnParam2array.html)
 - Finite state machine
