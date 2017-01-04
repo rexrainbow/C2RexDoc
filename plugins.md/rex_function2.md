@@ -4,7 +4,7 @@
 
 - Call function with key(string) - value parameters (parameter table), or parameter list
 - Input parameters with default value
-- Return single value, or key - value pairs
+- Return single value, or JSON structure
 
 ## Links
 
@@ -105,10 +105,12 @@ CallFn --> CondOnFunction
       - Return single value
         - `Action:Set return value` under `Return` category
         - `Expression:ReturnValue`
-      - Return key - value pairs  ([Sample capx](https://1drv.ms/u/s!Am5HlOzVf0kHk0QsiKDYrhvsIeVD))
+      - Return JSON  ([Sample capx](https://1drv.ms/u/s!Am5HlOzVf0kHk0QsiKDYrhvsIeVD))
         - `Action:Set return value` under `Return: dictionary` category
+          - Parameter `Name` is a string with dot notation, like `Action:Set value` in  [JSON plugin](https://rexrainbow.github.io/C2RexDoc/plugins.md/rex_hash.html)
         - `Expression:ReturnValue`, returns all keys in JSON string
           - `Expression:ReturnValue( key )`, returns value of the key
+            - Parameter `Key` is a string with dot notation, like `Expression:At( keys )` in  [JSON plugin](https://rexrainbow.github.io/C2RexDoc/plugins.md/rex_hash.html)
           - `Expression:ReturnValue( key, defaultValue )`, returns `defaultValue` if key is not existed
 
 ----
