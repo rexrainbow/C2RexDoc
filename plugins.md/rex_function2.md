@@ -86,9 +86,9 @@ CallFn --> CondOnFunction
 
         ```javascript
         + On "SetPos"
-        - Parameter "x", default to 0      // set Param["x"] = 100  (1st parameter)
-        - Parameter "y", default to 0      // set Param["y"] = 200  (2nd parameter)
-        - Parameter "layer", default to 0  // set Param["layer"] = 0  (default value)
+        - Parameter "x", default to 0      // Param("x") = Param(0) = 100  (1st parameter)
+        - Parameter "y", default to 0      // Param("y") = Param(1) = 200  (2nd parameter)
+        - Parameter "layer", default to 0  // Param("layer") = 0  (default value)
         ```
 
    3. Get value of input parameters
