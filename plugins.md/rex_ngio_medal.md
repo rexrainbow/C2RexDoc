@@ -39,7 +39,7 @@ graph TB
 Action["Action:Get list"] --> ActionIsSuccess
 
 subgraph Callback
-ActionIsSuccess{Action<br>is success} --> |Yes| CondOnSuccess["Condition:On get medals list<br> <br>Expression:MedalsAsJSON<br>Expression:MedalCount"]
+ActionIsSuccess{Action<br>is success} --> |Yes| CondOnSuccess["Condition:On get medals list<br> <br>Expression:MedalsAsJSON<br>Expression:MedalsCount"]
 ActionIsSuccess --> |No| CondOnError["Condition:On get medals list error"]
 CondOnSuccess --- CondForEachMedal["Condition:For each medal<br> <br>Expression:CurMedalName<br>Expression:CurMedalID<br>Expression:CurMedalIcon<br>Expression:CurMedalDifficulty<br>Expression:CurMedalDescription<br>Expression:CurMedalValue<br>Expression:CurMedalIsSecret<br>Expression:CurMedalIsUnlocked<br> <br>Condition:Is secret<br>Condition:Is unlocked<br>Condition:Compare difficulty"]
 CondOnError --- ExpError["Expression:ErrorMessage"]
@@ -53,7 +53,7 @@ end
 2. Callback
    - Success : `Condition:On get medals list error`
      - `Expression:MedalsAsJSON`
-     - `Expression:MedalCount`
+     - `Expression:MedalsCount`
      - `Condition:For each medal`
        - `Expression:CurMedalName`
        - `Expression:CurMedalID`
