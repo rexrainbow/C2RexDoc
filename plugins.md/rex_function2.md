@@ -79,7 +79,7 @@ CallFn --> CondOnFunction
       - For example,
 
         ```javascript
-        Call SetPos(100, 200)
+        Call "SetPos"(100, 200)
         ```
 
         to trigger condition
