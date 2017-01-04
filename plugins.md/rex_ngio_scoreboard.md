@@ -145,13 +145,14 @@ end
    - Success : `Condition:On get scores`
      - `Expression:ScoresAsJSON`
      - `Expression:ScoresCount`
+     - `Expression:StartIndex`
      - `Condition:For each score`
        - `Expression:CurUserName`
        - `Expression:CurUserID`
        - `Expression:CurFormattedValue`
        - `xpression:CurValue`
        - `Expression:LoopIndex`, index in this for each loop
-     - Get board by index
+     - Get score by index of current received scores
        - `Expression:Index2UserName( index )`
        - `Expression:Index2UserID( index )`
        - `Expression:Index2FormattedValue( index )`
