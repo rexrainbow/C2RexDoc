@@ -1,7 +1,7 @@
 <!DOCTYPE 5>
 <html>
   <head>
-    <title>Plugin : ToneJS api</title>
+    <title>Plugin : Fabric</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="css/bootstrap.min.css"/>
     <link rel="stylesheet" href="css/main.css"/>
@@ -30,21 +30,35 @@
       </div>
     </div>
     <div class="container">
-      <h1>Plugin : ToneJS api</h1>
+      <h1>Plugin : Fabric</h1>
       <p>Author:Rex.Rainbow</p>
       <ul>
-        <li>Tone objects in a dictionary. https://github.com/Tonejs/Tone.js</li>
-      </ul><a class="btn btn-default" href="https://dl.dropboxusercontent.com/u/5779181/C2Repo/Zip/plugins/rex_tonejs_api.7z">Download    </a>
+        <li>Canvas library. http://fabricjs.com/</li>
+      </ul><a class="btn btn-default" href="https://dl.dropboxusercontent.com/u/5779181/C2Repo/Zip/plugins/rex_fabricjs.7z">Download    </a>
       <div class="panel panel-default">
         <div class="panel-title">
           <h2>Properties</h2>
         </div>
         <div class="panel-body">
-          <h3>Play in background</h3>
+          <h3>Interaction</h3>
           <ul>
-            <li>Keep playing audio even when the tab or app goes in to the background.                    </li>
+            <li>Set to &quot;No&quot; to have a light weight api.                    </li>
             <ul>
               <li>Options : [&quot;No&quot;,&quot;Yes&quot;]</li>
+            </ul>
+          </ul>
+          <h3>Initial visibility</h3>
+          <ul>
+            <li>Choose whether the object is visible when the layout starts.                    </li>
+            <ul>
+              <li>Options : [&quot;Invisible&quot;,&quot;Visible&quot;]</li>
+            </ul>
+          </ul>
+          <h3>Hotspot</h3>
+          <ul>
+            <li>Choose the location of the hot spot in the object.                    </li>
+            <ul>
+              <li>Options : [&quot;Top-left&quot;,&quot;Top&quot;,&quot;Top-right&quot;,&quot;Left&quot;,&quot;Center&quot;,&quot;Right&quot;,&quot;Bottom-left&quot;,&quot;Bottom&quot;,&quot;Bottom-right&quot;]</li>
             </ul>
           </ul>
         </div>
@@ -54,7 +68,26 @@
           <h2>Actions</h2>
         </div>
         <div class="panel-body">
-          <h2>0. Create      </h2>
+          <h2>Canvas      </h2>
+          <h3>Action:Render      </h3>
+          <ul>
+            <li>Render all objects on canvas.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Event      </h2>
+          <h3>Action:Add event listener      </h3>
+          <ul>
+            <li>Add event listener.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Variable name ( number or string ) : Variable name of this tone object</li>
+              <li>Event name ( string ) : Event name.</li>
+              <li>Tag ( string ) : A tag, which can be anything you like, to distinguish between different callback.</li>
+            </ul>
+          </ul>
+          <h2>Object      </h2>
           <h3>Action:Create object      </h3>
           <ul>
             <li>Create object.   </li>
@@ -62,47 +95,27 @@
             <ul>
               <li>Variable name ( number or string ) : Variable name of this tone object</li>
               <li>Type name ( string ) : Type name.</li>
-              <li>Parameter {n} ( variadic ) : Parameters of this function call.</li>
+              <li>JSON ( string ) : JSON value to set</li>
+              <li>Add ( Combo ) : Add to canvas.</li>
+              <ul>
+                <li>Options : [&quot;&quot;,&quot;, add to canvas&quot;]</li>
+              </ul>
             </ul>
           </ul>
-          <h2>Connect      </h2>
-          <h3>Action:Connect to Master      </h3>
+          <h3>Action:Add      </h3>
           <ul>
-            <li>Connect to Master.   </li>
+            <li>Add object to canvas.   </li>
             <Parameters></Parameters>
             <ul>
               <li>Variable name ( number or string ) : Variable name of this tone object</li>
             </ul>
           </ul>
-          <h3>Action:Connect      </h3>
+          <h3>Action:Remove      </h3>
           <ul>
-            <li>Connect to object.   </li>
-            <Parameters></Parameters>
-            <ul>
-              <li>A ( number or string ) : Variable name of this tone object</li>
-              <li>B ( number or string ) : Connect to object</li>
-              <li>Port ( string ) : Port name. set &quot;&quot; to ignore this parameter.</li>
-            </ul>
-          </ul>
-          <h2>Function      </h2>
-          <h3>Action:Call      </h3>
-          <ul>
-            <li>Call function.   </li>
+            <li>Remove object from canvas.   </li>
             <Parameters></Parameters>
             <ul>
               <li>Variable name ( number or string ) : Variable name of this tone object</li>
-              <li>Function name ( string ) : Function name.</li>
-              <li>Parameter {n} ( variadic ) : Parameters of this function call.</li>
-            </ul>
-          </ul>
-          <h2>Properties      </h2>
-          <h3>Action:Set JSON      </h3>
-          <ul>
-            <li>Set properties to JSON string.   </li>
-            <Parameters></Parameters>
-            <ul>
-              <li>Variable name ( number or string ) : Variable name of this tone object</li>
-              <li>Properties ( string ) : Properties in JSON</li>
             </ul>
           </ul>
           <h2>Property      </h2>
@@ -139,18 +152,6 @@
               </ul>
             </ul>
           </ul>
-          <h3>Action:Set by return      </h3>
-          <ul>
-            <li>Set property by return value.   </li>
-            <Parameters></Parameters>
-            <ul>
-              <li>Object A ( number or string ) : Variable name of this tone object</li>
-              <li>Property ( string ) : Property name in dot notation</li>
-              <li>Object B ( number or string ) : Variable name of this tone object</li>
-              <li>Function name ( string ) : Function name.</li>
-              <li>Parameter {n} ( variadic ) : Parameters of this function call.</li>
-            </ul>
-          </ul>
         </div>
       </div>
       <div class="panel panel-default">    
@@ -172,15 +173,6 @@
             <li>Get the number of parameters passed to callback.</li>
             <Parameters></Parameters>
             <ul>
-            </ul>
-          </ul>
-          <h2>Function    </h2>
-          <h3>Expression:ReturnValue </h3>
-          <ul>
-            <li>Get return value.</li>
-            <Parameters></Parameters>
-            <ul>
-              <li>Variable name ( number or string ) : Variable name of this tone object</li>
             </ul>
           </ul>
           <h2>Property    </h2>
