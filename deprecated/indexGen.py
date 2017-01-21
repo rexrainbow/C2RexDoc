@@ -7,6 +7,6 @@ serverRoot = "https://rexrainbow.github.io/C2RexDoc/deprecated/"
 
 for f in glob.glob(op.join(myPath, "*.7z")):
   name = op.split(f)[1]
-  mdF.write("- [{name}]({server}{name}.7z)  \n".format(name=name, server=serverRoot))
+  mdF.write("- [{name}]({server}{name})  \n".format(name=name, server=serverRoot))
 
 mdF.close()
