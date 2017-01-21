@@ -12,7 +12,7 @@ for f in glob.glob(op.join(myPath, "*.json")):
   
   pluginJson = json.load(open(f, "r"))
   repoJson.append( pluginJson )
-  mdF.write("- [{name}]({server}/{name}.7z)  \n".format(name=pluginJson.get("name"), server=serverRoot))
+  mdF.write("- [{name}]({server}{name}.7z)  \n".format(name=pluginJson.get("name"), server=serverRoot))
 
 json.dump(repoJson, open(op.join(myPath , "repo.json"), 'w'), sort_keys=True, indent=4, separators=(',', ': ')  )
 mdF.close()
