@@ -40,7 +40,8 @@ def main():
     json.dump(data, fp)
     fp.close()
 
-  os.system('python "' + op.join(outFolder, "repo.py")+'"') 
+  from _indexGen import indexGen
+  indexGen()
     
 # -----------------------------------------------------------------------------  
 try:
