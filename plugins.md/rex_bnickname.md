@@ -6,7 +6,7 @@ Assign a nickname of this object
 
 ## Links
 
-- [Plugin](https://dl.dropboxusercontent.com/u/5779181/C2Repo/Zip/plugins/rex_nickname.7z)
+- [Plugin](https://dl.dropboxusercontent.com/u/5779181/C2Repo/Zip/behaviors/rex_bnickname.7z)
 - [ACE table](https://rexrainbow.github.io/C2RexDoc/c2rexpluginsACE/plugin_rex_nickname.html)
 - [Discussion thread](https://www.scirra.com/forum/plugin-nickname-behavior-nickname_t74522)
 
