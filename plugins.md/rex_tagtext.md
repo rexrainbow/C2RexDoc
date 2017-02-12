@@ -32,7 +32,7 @@ None
      - `Action:Set font size`
      - `Action:Set font color`
      - `Action:Set font style`
-     - `Action:Set stroke color`
+     - `Action:Set stroke`
      - `Action:Set shadow`
      - `Action:Set underline`
      - `Action:Insert image`
@@ -47,12 +47,12 @@ None
          font-size:20pt;
          text-shadow:2px 2px 2px #000;
          underline:yellow 5px 0px;
-         stroke: blue;
+         stroke: blue 2px;
      }
      ```
 
      - Color: `color:color`
-     - Stroke color: `stroke:color`
+     - Stroke: `stroke:color lineWidth`
      - Font size: `font-size:size`
      - Font: `font:font-weight font-size font-family`
        - `font:900 20pt arial,sans-serif`
@@ -86,7 +86,7 @@ Images are *shared* for all tag text and bbcode text.
 [Sample capx](https://onedrive.live.com/redir?resid=7497FD5EC94476E!432&authkey=!AKGgARJjJ8IFd68&ithint=file%2c.capx)
 
 - Color: `<style="color:#F00;">Some text</style>`
-- Stroke color: `<style="stroke:blue;">Some text</style>`
+- Stroke color: `<style="stroke:blue 2px;">Some text</style>`
 - Font family: `<style="font-family:Georgia;">Some text</style>`
 - Font size: `<style="font-size:20px;">Some text</style>`
 - Font weight: `<style="font-weight:bold;">Some text</style>`

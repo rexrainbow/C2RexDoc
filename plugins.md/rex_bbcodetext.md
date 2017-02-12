@@ -35,6 +35,10 @@ None
 - Insert image: `[img=key]`
 - Transparent text filling: `[color=none]text[/color]`
 
+#### Stroke
+
+- Property `Stroke line width`, or `Action:Set line width`
+
 #### Underline
 
 [Sample capx](https://onedrive.live.com/redir?resid=7497FD5EC94476E!2321&authkey=!AJgGSLeKNaRgPCE&ithint=file%2ccapx)
