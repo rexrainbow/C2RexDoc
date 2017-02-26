@@ -144,7 +144,6 @@
 - [rex_light](https://rexrainbow.github.io/C2RexDoc/repo/rex_light.7z)  
 - [rex_line](https://rexrainbow.github.io/C2RexDoc/repo/rex_line.7z)  
 - [rex_listCtrl](https://rexrainbow.github.io/C2RexDoc/repo/rex_listCtrl.7z)  
-- [rex_live2d](https://rexrainbow.github.io/C2RexDoc/repo/rex_live2d.7z)  
 - [rex_LJpotential](https://rexrainbow.github.io/C2RexDoc/repo/rex_LJpotential.7z)  
 - [rex_logicmask](https://rexrainbow.github.io/C2RexDoc/repo/rex_logicmask.7z)  
 - [rex_lookup](https://rexrainbow.github.io/C2RexDoc/repo/rex_lookup.7z)  

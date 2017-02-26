@@ -730,11 +730,6 @@
         "timestamp": 1484992008176
     },
     {
-        "category": "plugins",
-        "name": "rex_live2d",
-        "timestamp": 1484992008334
-    },
-    {
         "category": "behaviors",
         "name": "rex_LJpotential",
         "timestamp": 1484992047912
