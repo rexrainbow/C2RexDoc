@@ -531,11 +531,6 @@
     },
     {
         "category": "plugins",
-        "name": "rex_firebase_timerv2",
-        "timestamp": 1489394973785
-    },
-    {
-        "category": "plugins",
         "name": "rex_firebase_token",
         "timestamp": 1489394973793
     },
@@ -1383,11 +1378,6 @@
         "category": "plugins",
         "name": "rex_tonejs_part",
         "timestamp": 1489394974887
-    },
-    {
-        "category": "plugins",
-        "name": "rex_tonejs_playermgr",
-        "timestamp": 1489394974895
     },
     {
         "category": "plugins",
