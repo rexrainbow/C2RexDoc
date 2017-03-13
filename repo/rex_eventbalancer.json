@@ -1,1 +1,5 @@
-{"category": "plugins", "timestamp": 1489284647066, "name": "rex_eventbalancer"}
+{
+    "category": "plugins",
+    "name": "rex_eventbalancer",
+    "timestamp": 1489394973523
+}

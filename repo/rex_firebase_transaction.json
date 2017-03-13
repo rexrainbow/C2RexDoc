@@ -1,1 +1,5 @@
-{"category": "plugins", "timestamp": 1484992006333, "name": "rex_firebase_transaction"}
+{
+    "category": "plugins",
+    "name": "rex_firebase_transaction",
+    "timestamp": 1489394973803
+}

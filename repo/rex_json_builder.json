@@ -1,1 +1,5 @@
-{"category": "plugins", "timestamp": 1489284647967, "name": "rex_json_builder"}
+{
+    "category": "plugins",
+    "name": "rex_json_builder",
+    "timestamp": 1489394974033
+}

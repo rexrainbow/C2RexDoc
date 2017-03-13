@@ -1,1 +1,5 @@
-{"category": "plugins", "timestamp": 1489284647497, "name": "rex_firebase_syncqueue"}
+{
+    "category": "plugins",
+    "name": "rex_firebase_syncqueue",
+    "timestamp": 1489394973769
+}

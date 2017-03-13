@@ -1,1 +1,5 @@
-{"category": "plugins", "timestamp": 1489284648121, "name": "rex_luavm"}
+{
+    "category": "plugins",
+    "name": "rex_luavm",
+    "timestamp": 1489394974153
+}

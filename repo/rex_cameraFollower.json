@@ -1,1 +1,5 @@
-{"category": "behaviors", "timestamp": 1489284688516, "name": "rex_cameraFollower"}
+{
+    "category": "behaviors",
+    "name": "rex_cameraFollower",
+    "timestamp": 1489395253748
+}

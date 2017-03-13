@@ -1,1 +1,5 @@
-{"category": "plugins", "timestamp": 1489284647960, "name": "rex_JSMidiParser"}
+{
+    "category": "plugins",
+    "name": "rex_JSMidiParser",
+    "timestamp": 1489394974027
+}

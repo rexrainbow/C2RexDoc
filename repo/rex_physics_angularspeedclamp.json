@@ -1,1 +1,5 @@
-{"category": "behaviors", "timestamp": 1489284689233, "name": "rex_physics_angularspeedclamp"}
+{
+    "category": "behaviors",
+    "name": "rex_physics_angularspeedclamp",
+    "timestamp": 1489395254112
+}

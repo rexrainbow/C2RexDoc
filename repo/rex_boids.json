@@ -1,1 +1,5 @@
-{"category": "behaviors", "timestamp": 1489284688487, "name": "rex_boids"}
+{
+    "category": "behaviors",
+    "name": "rex_boids",
+    "timestamp": 1489395253720
+}

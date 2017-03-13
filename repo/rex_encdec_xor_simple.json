@@ -1,1 +1,5 @@
-{"category": "plugins", "timestamp": 1489284647055, "name": "rex_encdec_xor_simple"}
+{
+    "category": "plugins",
+    "name": "rex_encdec_xor_simple",
+    "timestamp": 1489394973517
+}

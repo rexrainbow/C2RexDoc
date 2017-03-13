@@ -1,1 +1,5 @@
-{"category": "plugins", "timestamp": 1489284648760, "name": "rex_sequence_matcher"}
+{
+    "category": "plugins",
+    "name": "rex_sequence_matcher",
+    "timestamp": 1489394974557
+}

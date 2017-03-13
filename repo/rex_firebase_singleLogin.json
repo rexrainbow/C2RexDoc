@@ -1,1 +1,5 @@
-{"category": "plugins", "timestamp": 1489284647468, "name": "rex_firebase_singleLogin"}
+{
+    "category": "plugins",
+    "name": "rex_firebase_singleLogin",
+    "timestamp": 1489394973748
+}

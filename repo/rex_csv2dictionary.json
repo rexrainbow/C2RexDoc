@@ -1,1 +1,5 @@
-{"category": "plugins", "timestamp": 1489284646965, "name": "rex_csv2dictionary"}
+{
+    "category": "plugins",
+    "name": "rex_csv2dictionary",
+    "timestamp": 1489394973460
+}

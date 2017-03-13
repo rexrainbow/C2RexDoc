@@ -1,1 +1,5 @@
-{"category": "plugins", "timestamp": 1489284648360, "name": "rex_ngio_gateway"}
+{
+    "category": "plugins",
+    "name": "rex_ngio_gateway",
+    "timestamp": 1489394974287
+}

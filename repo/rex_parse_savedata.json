@@ -1,1 +1,5 @@
-{"category": "plugins", "timestamp": 1489284648600, "name": "rex_parse_savedata"}
+{
+    "category": "plugins",
+    "name": "rex_parse_savedata",
+    "timestamp": 1489394974439
+}

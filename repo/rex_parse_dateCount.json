@@ -1,1 +1,5 @@
-{"category": "plugins", "timestamp": 1489284648493, "name": "rex_parse_dateCount"}
+{
+    "category": "plugins",
+    "name": "rex_parse_dateCount",
+    "timestamp": 1489394974366
+}

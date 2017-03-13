@@ -1,1 +1,5 @@
-{"category": "plugins", "timestamp": 1489284648480, "name": "rex_parse_curTime"}
+{
+    "category": "plugins",
+    "name": "rex_parse_curTime",
+    "timestamp": 1489394974360
+}

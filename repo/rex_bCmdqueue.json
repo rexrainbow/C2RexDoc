@@ -1,1 +1,5 @@
-{"category": "behaviors", "timestamp": 1489284688385, "name": "rex_bCmdqueue"}
+{
+    "category": "behaviors",
+    "name": "rex_bCmdqueue",
+    "timestamp": 1489395253689
+}
