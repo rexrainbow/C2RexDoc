@@ -536,11 +536,6 @@
     },
     {
         "category": "plugins",
-        "name": "rex_firebase_transaction",
-        "timestamp": 1489394973803
-    },
-    {
-        "category": "plugins",
         "name": "rex_firebase_userid2id",
         "timestamp": 1489394973811
     },
@@ -780,11 +775,6 @@
         "timestamp": 1489394974066
     },
     {
-        "category": "plugins",
-        "name": "rex_live2d",
-        "timestamp": 1489394974087
-    },
-    {
         "category": "behaviors",
         "name": "rex_LJpotential",
         "timestamp": 1489395254033
@@ -983,11 +973,6 @@
         "category": "plugins",
         "name": "rex_parse_dateInARow",
         "timestamp": 1489394974372
-    },
-    {
-        "category": "plugins",
-        "name": "rex_parse_filesystem",
-        "timestamp": 1489394974380
     },
     {
         "category": "plugins",
