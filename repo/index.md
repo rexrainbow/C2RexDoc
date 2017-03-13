@@ -251,8 +251,6 @@
 - [rex_tesseractjs](https://rexrainbow.github.io/C2RexDoc/repo/rex_tesseractjs.7z)  
 - [rex_textbox_color](https://rexrainbow.github.io/C2RexDoc/repo/rex_textbox_color.7z)  
 - [rex_textbox_date](https://rexrainbow.github.io/C2RexDoc/repo/rex_textbox_date.7z)  
-- [rex_textbox_range](https://rexrainbow.github.io/C2RexDoc/repo/rex_textbox_range.7z)  
-- [rex_textbox_scrolling](https://rexrainbow.github.io/C2RexDoc/repo/rex_textbox_scrolling.7z)  
 - [rex_text_fpsmonitor](https://rexrainbow.github.io/C2RexDoc/repo/rex_text_fpsmonitor.7z)  
 - [rex_text_properties](https://rexrainbow.github.io/C2RexDoc/repo/rex_text_properties.7z)  
 - [rex_text_resize](https://rexrainbow.github.io/C2RexDoc/repo/rex_text_resize.7z)  

@@ -1266,16 +1266,6 @@
     },
     {
         "category": "behaviors",
-        "name": "rex_textbox_range",
-        "timestamp": 1489284688093
-    },
-    {
-        "category": "behaviors",
-        "name": "rex_textbox_scrolling",
-        "timestamp": 1489284688120
-    },
-    {
-        "category": "behaviors",
         "name": "rex_text_fpsmonitor",
         "timestamp": 1489395254227
     },
