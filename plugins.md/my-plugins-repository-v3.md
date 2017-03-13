@@ -8,7 +8,7 @@ This tool could help C2 designers to get my plugins and behaviors -- download an
 
 ## Links
 
-- [Tool](https://1drv.ms/u/s!Am5HlOzVf0kHlnTQ68zSnmnOe3X9)
+- [Tool](https://rexrainbow.github.io/C2RexDoc/repo/RexRepo_v3.7z)
 
   ​
 
