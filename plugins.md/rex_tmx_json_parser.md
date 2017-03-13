@@ -6,7 +6,7 @@ A parser of [tile map editor](http://www.mapeditor.org/) exported file in JSON f
 
 ## Links
 
-- [Plugin](https://dl.dropboxusercontent.com/u/5779181/C2Repo/Zip/plugins/rex_tmx_JSON_parser.7z)
+- [Plugin](https://rexrainbow.github.io/C2RexDoc/repo/rex_tmx_JSON_parser.7z)
 - [ACE table](https://rexrainbow.github.io/C2RexDoc/c2rexpluginsACE/plugin_rex_tmx_json_parser.html)
 - [Discussion thread](https://www.scirra.com/forum/plugin-rex-tmx-importer-v2_t103854)
 

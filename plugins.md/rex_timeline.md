@@ -6,7 +6,7 @@ Run function when time-out. It is also a base plugin for my timer-related plugin
 
 ## Links
 
-- [Plugin](https://dl.dropboxusercontent.com/u/5779181/C2Repo/Zip/plugins/rex_timeline.7z)
+- [Plugin](https://rexrainbow.github.io/C2RexDoc/repo/rex_timeline.7z)
 - [ACE table](https://rexrainbow.github.io/C2RexDoc/c2rexpluginsACE/plugin_rex_timeline.html)
 - [Discussion thread](https://www.scirra.com/forum/plugin-timeline_t64376)
 

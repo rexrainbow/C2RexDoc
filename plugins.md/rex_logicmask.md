@@ -6,7 +6,7 @@ Display a logical area on a very large board.
 
 ## Links
 
-- [Plugin](https://dl.dropboxusercontent.com/u/5779181/C2Repo/Zip/plugins/rex_logicmask.7z)
+- [Plugin](https://rexrainbow.github.io/C2RexDoc/repo/rex_logicmask.7z)
 - [ACE table](https://rexrainbow.github.io/C2RexDoc/c2rexpluginsACE/plugin_rex_logicmask.html)
 - [Discussion thread](https://www.scirra.com/forum/plugin-rex-logicmask_t118875)
 

@@ -8,7 +8,7 @@ Reference - [mustache](https://github.com/janl/mustache.js)
 
 ## Links
 
-- [Plugin](https://dl.dropboxusercontent.com/u/5779181/C2Repo/Zip/plugins/rex_mustache.7z)
+- [Plugin](https://rexrainbow.github.io/C2RexDoc/repo/rex_mustache.7z)
 - [ACE table](https://rexrainbow.github.io/C2RexDoc/c2rexpluginsACE/plugin_rex_mustache.html)
 - [Discussion thread](https://www.scirra.com/forum/plugin-rex-mustache_t171137)
 

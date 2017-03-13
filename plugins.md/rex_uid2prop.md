@@ -6,7 +6,7 @@ Get/set properties (x,y,angle,opacity,private variable) by UID without picking f
 
 ## Links
 
-- [Plugin](https://dl.dropboxusercontent.com/u/5779181/C2Repo/Zip/plugins/rex_uid2prop.7z)
+- [Plugin](https://rexrainbow.github.io/C2RexDoc/repo/rex_uid2prop.7z)
 - [ACE table](https://rexrainbow.github.io/C2RexDoc/c2rexpluginsACE/plugin_rex_uid2prop.html)
 - [Discussion thread](https://www.scirra.com/forum/plugin-rex-uid2prop-get-properties-by-uid_t109149)
 

@@ -6,7 +6,7 @@ This plugin provides orthogonal or isometric. or staggered physical layout for [
 
 ## Links
 
-- [Plugin](https://dl.dropboxusercontent.com/u/5779181/C2Repo/Zip/plugins/rex_board_squareTx.7z)
+- [Plugin](https://rexrainbow.github.io/C2RexDoc/repo/rex_board_squareTx.7z)
 - [ACE table](https://rexrainbow.github.io/C2RexDoc/c2rexpluginsACE/plugin_rex_board_squaretx.html)
 - [Discussion thread](https://www.scirra.com/forum/plugin-board-layout2board-behavior-grid-move_t69647)
 

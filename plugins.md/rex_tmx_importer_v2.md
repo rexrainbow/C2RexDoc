@@ -6,7 +6,7 @@ Retrieve or create tiles by tmx string which is the exported file of [tile map e
 
 ## Links
 
-- [Plugin](https://dl.dropboxusercontent.com/u/5779181/C2Repo/Zip/plugins/rex_tmx_importer_v2.7z)
+- [Plugin](https://rexrainbow.github.io/C2RexDoc/repo/rex_tmx_importer_v2.7z)
 
 - [ACE table](https://rexrainbow.github.io/C2RexDoc/c2rexpluginsACE/plugin_rex_tmx_importer_v2.html)
 

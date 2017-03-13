@@ -6,7 +6,7 @@ Displays text with [BBCode](https://www.scirra.com/forum/faq.php?mode=bbcode) en
 
 ## Links
 
-- [Plugin](https://dl.dropboxusercontent.com/u/5779181/C2Repo/Zip/plugins/rex_bbcodeText.7z)
+- [Plugin](https://rexrainbow.github.io/C2RexDoc/repo/rex_bbcodeText.7z)
 - [ACE table](https://rexrainbow.github.io/C2RexDoc/c2rexpluginsACE/plugin_rex_bbcodetext.html)
 - [Discussion thread](https://www.scirra.com/forum/plugin-bbcode-text_t169377)
 

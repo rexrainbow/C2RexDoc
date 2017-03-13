@@ -6,7 +6,7 @@ Pick tiles which match the pattern on board object.
 
 ## Links
 
-- [Plugin](https://dl.dropboxusercontent.com/u/5779181/C2Repo/Zip/plugins/rex_matcher.7z)
+- [Plugin](https://rexrainbow.github.io/C2RexDoc/repo/rex_matcher.7z)
 
 - [ACE table](https://rexrainbow.github.io/C2RexDoc/c2rexpluginsACE/plugin_rex_matcher.html)
 

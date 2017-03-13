@@ -6,7 +6,7 @@ Move object to specific position.
 
 ## Links
 
-- [Plugin](https://dl.dropboxusercontent.com/u/5779181/C2Repo/Zip/behaviors/rex_moveto.7z)
+- [Plugin](https://rexrainbow.github.io/C2RexDoc/repo/rex_moveto.7z)
 
 - [ACE table](https://rexrainbow.github.io/C2RexDoc/c2rexpluginsACE/behavior_rex_moveto.html)
 

@@ -6,7 +6,7 @@ Create an [official array](https://www.scirra.com/manual/108/array) and dump par
 
 ## Links
 
-- [Plugin](https://dl.dropboxusercontent.com/u/5779181/C2Repo/Zip/plugins/rex_fnParam2array.7z)
+- [Plugin](https://rexrainbow.github.io/C2RexDoc/repo/rex_fnParam2array.7z)
 - [ACE table](https://rexrainbow.github.io/C2RexDoc/c2rexpluginsACE/plugin_rex_fnparam2array.html)
 - Discussion thread
 

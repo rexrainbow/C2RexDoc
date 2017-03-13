@@ -6,7 +6,7 @@ Describe [finite state machine](http://en.wikipedia.org/wiki/Finite-state_machin
 
 ## Links
 
-- [Plugin](https://dl.dropboxusercontent.com/u/5779181/C2Repo/Zip/behaviors/rex_fsm.7z)
+- [Plugin](https://rexrainbow.github.io/C2RexDoc/repo/rex_fsm.7z)
 - [ACE table](https://rexrainbow.github.io/C2RexDoc/c2rexpluginsACE/behavior_rex_fsm.html)
 - [Discussion thread](https://www.scirra.com/forum/plugin-rex-gfsm-behavior-rex-fsm_t104075)
 

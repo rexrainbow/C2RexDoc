@@ -6,7 +6,7 @@ Get *touch end* event.
 
 ## Links
 
-- [Plugin](https://dl.dropboxusercontent.com/u/5779181/C2Repo/Zip/behaviors/rex_button.7z)
+- [Plugin](https://rexrainbow.github.io/C2RexDoc/repo/rex_button.7z)
 - [ACE table](https://rexrainbow.github.io/C2RexDoc/c2rexpluginsACE/behavior_rex_button.html)
 - [Discussion thread](https://www.scirra.com/forum/behaviors-rex-button_t76546)
 

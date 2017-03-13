@@ -6,7 +6,7 @@ In-memory [database](http://www.taffydb.com/) for storing data.
 
 ## Links
 
-- [Plugin](https://dl.dropboxusercontent.com/u/5779181/C2Repo/Zip/plugins/rex_taffydb.7z)
+- [Plugin](https://rexrainbow.github.io/C2RexDoc/repo/rex_taffydb.7z)
 - [ACE table](https://rexrainbow.github.io/C2RexDoc/c2rexpluginsACE/plugin_rex_taffydb.html)
 - [Discussion thread](https://www.scirra.com/forum/plugin-rex-taffydb-local-database_t149092)
 

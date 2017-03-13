@@ -6,7 +6,7 @@ Handles loading various URLs and tracking referral stats.
 
 ## Links
 
-- [Plugin](https://dl.dropboxusercontent.com/u/5779181/C2Repo/Zip/plugins/rex_ngio_loader.7z)
+- [Plugin](https://rexrainbow.github.io/C2RexDoc/repo/rex_ngio_loader.7z)
 - [ACE table](https://rexrainbow.github.io/C2RexDoc/c2rexpluginsACE/plugin_rex_ngio_loader.html)
 - [Discussion thread](https://www.scirra.com/forum/plugin-new-grounds-api-v3_t179642)
 

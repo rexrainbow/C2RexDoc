@@ -8,7 +8,7 @@
 
 ## Links
 
-- [Plugin](https://dl.dropboxusercontent.com/u/5779181/C2Repo/Zip/plugins/rex_function2.7z)
+- [Plugin](https://rexrainbow.github.io/C2RexDoc/repo/rex_function2.7z)
 - [ACE table](https://rexrainbow.github.io/C2RexDoc/c2rexpluginsACE/plugin_rex_function2.html)
 - [Discussion thread](https://www.scirra.com/forum/plugin-rex-function2_t64334)
 

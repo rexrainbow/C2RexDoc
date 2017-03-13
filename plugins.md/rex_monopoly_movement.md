@@ -6,7 +6,7 @@ Get forwarding path using Monopoly-like behavior.
 
 ## Links
 
-- [Plugin](https://dl.dropboxusercontent.com/u/5779181/C2Repo/Zip/behaviors/rex_monopoly_movement.7z)
+- [Plugin](https://rexrainbow.github.io/C2RexDoc/repo/rex_monopoly_movement.7z)
 - [ACE table](https://rexrainbow.github.io/C2RexDoc/c2rexpluginsACE/behavior_rex_monopoly_movement.html)
 - [Discussion thread](https://www.scirra.com/forum/behavior-monopoly-movement_t79801)
 

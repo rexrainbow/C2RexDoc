@@ -6,7 +6,7 @@ A behavior of [mini board](rex_miniboard.html), which drag & drop chess on mini 
 
 ## Links
 
-- [Plugin](https://dl.dropboxusercontent.com/u/5779181/C2Repo/Zip/behaviors/rex_miniboard_touch.7z)
+- [Plugin](https://rexrainbow.github.io/C2RexDoc/repo/rex_miniboard_touch.7z)
 - [ACE table](https://rexrainbow.github.io/C2RexDoc/c2rexpluginsACE/behavior_rex_miniboard_touch.html)
 - [Discussion thread](https://www.scirra.com/forum/plugin-mini-board_t116865)
 

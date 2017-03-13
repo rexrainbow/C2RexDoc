@@ -6,7 +6,7 @@ Serialize [function call](https://www.scirra.com/manual/149/function) to a JSON 
 
 ## Links
 
-- [Plugin](https://dl.dropboxusercontent.com/u/5779181/C2Repo/Zip/plugins/rex_fncallpkg.7z)
+- [Plugin](https://rexrainbow.github.io/C2RexDoc/repo/rex_fncallpkg.7z)
 - [ACE table](https://rexrainbow.github.io/C2RexDoc/c2rexpluginsACE/plugin_rex_fncallpkg.html)
 - [Discussion thread](https://www.scirra.com/forum/plugin-rex-fncallpkg_t106856)
 

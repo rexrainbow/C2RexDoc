@@ -8,7 +8,7 @@ Reference: [rot.js](http://ondras.github.io/rot.js/hp/)
 
 ## Links
 
-- [Plugin](https://dl.dropboxusercontent.com/u/5779181/C2Repo/Zip/plugins/rex_maze_gen.7z)
+- [Plugin](https://rexrainbow.github.io/C2RexDoc/repo/rex_maze_gen.7z)
 - [ACE table](https://rexrainbow.github.io/C2RexDoc/c2rexpluginsACE/plugin_rex_maze_gen.html)
 - [Discussion thread](https://www.scirra.com/forum/plugin-rex-maze-gen_t167845)
 

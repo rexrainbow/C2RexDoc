@@ -6,7 +6,7 @@ Moves chess to target position, or neighbor tile.
 
 ## Links
 
-- [Plugin](https://dl.dropboxusercontent.com/u/5779181/C2Repo/Zip/behaviors/rex_grid_move.7z)
+- [Plugin](https://rexrainbow.github.io/C2RexDoc/repo/rex_grid_move.7z)
 
 - [ACE table](https://rexrainbow.github.io/C2RexDoc/c2rexpluginsACE/behavior_rex_grid_move.html)
 

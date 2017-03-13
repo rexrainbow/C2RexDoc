@@ -6,7 +6,7 @@ Displays text with multi-color, font face, or font size with tags.
 
 ## Links
 
-- [Plugin](https://dl.dropboxusercontent.com/u/5779181/C2Repo/Zip/plugins/rex_TagText.7z)
+- [Plugin](https://rexrainbow.github.io/C2RexDoc/repo/rex_TagText.7z)
 - [ACE table](https://rexrainbow.github.io/C2RexDoc/c2rexpluginsACE/plugin_rex_tagtext.html)
 - [Discussion thread](https://www.scirra.com/forum/plugin-tag-text_t92363)
 

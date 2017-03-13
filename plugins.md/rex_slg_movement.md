@@ -6,7 +6,7 @@ Get move-able area, or moving path between two chess/tiles on an orthogonal or i
 
 ## Links
 
-- [Plugin](https://dl.dropboxusercontent.com/u/5779181/C2Repo/Zip/plugins/rex_slg_movement.7z)
+- [Plugin](https://rexrainbow.github.io/C2RexDoc/repo/rex_slg_movement.7z)
 
 - [ACE table](https://rexrainbow.github.io/C2RexDoc/c2rexpluginsACE/plugin_rex_slg_movement.html)
 

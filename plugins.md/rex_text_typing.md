@@ -6,7 +6,7 @@ Typing text.
 
 ## Links
 
-- [Plugin](https://dl.dropboxusercontent.com/u/5779181/C2Repo/Zip/behaviors/rex_text_typing.7z)
+- [Plugin](https://rexrainbow.github.io/C2RexDoc/repo/rex_text_typing.7z)
 - [ACE table](https://rexrainbow.github.io/C2RexDoc/c2rexpluginsACE/behavior_rex_text_typing.html)
 - [Discussion thread](https://www.scirra.com/forum/behavior-typing-for-text-sprite-font-plugin_t67927)
 

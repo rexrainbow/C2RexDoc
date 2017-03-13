@@ -6,7 +6,7 @@ Asynchronous [database](https://github.com/louischatriot/nedb).
 
 ## Links
 
-- [Plugin](https://dl.dropboxusercontent.com/u/5779181/C2Repo/Zip/plugins/rex_nedb.7z)
+- [Plugin](https://rexrainbow.github.io/C2RexDoc/repo/rex_nedb.7z)
 - [ACE table](https://rexrainbow.github.io/C2RexDoc/c2rexpluginsACE/plugin_rex_nedb.html)
 - [Discussion thread](https://www.scirra.com/forum/plugin-rex-taffydb-local-database_t149092)
 

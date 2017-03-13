@@ -8,7 +8,7 @@ UserID might be provided after [authentication](rex_firebase_authentication.html
 
 ## Links
 
-- [Plugin](https://dl.dropboxusercontent.com/u/5779181/C2Repo/Zip/plugins/rex_firebase_userid2id.7z)
+- [Plugin](https://rexrainbow.github.io/C2RexDoc/repo/rex_firebase_userid2id.7z)
 - [ACE table](https://rexrainbow.github.io/C2RexDoc/c2rexpluginsACE/plugin_rex_firebase_userid2id.html)
 - [Discussion thread](https://www.scirra.com/forum/plugin-firebase_t121776)
 

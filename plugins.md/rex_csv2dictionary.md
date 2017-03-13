@@ -6,7 +6,7 @@ Load content of official dictionary object from [csv](https://en.wikipedia.org/w
 
 ##Links
 
-- [Plugin](https://dl.dropboxusercontent.com/u/5779181/C2Repo/Zip/plugins/rex_csv2dictionary.7z)
+- [Plugin](https://rexrainbow.github.io/C2RexDoc/repo/rex_csv2dictionary.7z)
 - [ACE table](https://rexrainbow.github.io/C2RexDoc/c2rexpluginsACE/plugin_rex_csv2dictionary.html)
 - [Discussion thread](https://www.scirra.com/forum/plugin-csv-csv2array-csv2dictionary_t64326)
 

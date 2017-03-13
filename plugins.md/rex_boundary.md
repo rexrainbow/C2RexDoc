@@ -6,7 +6,7 @@ Clamp or wrap position.
 
 ## Links
 
-- [Plugin](https://dl.dropboxusercontent.com/u/5779181/C2Repo/Zip/behaviors/rex_boundary.7z)
+- [Plugin](https://rexrainbow.github.io/C2RexDoc/repo/rex_boundary.7z)
 - [ACE table](https://rexrainbow.github.io/C2RexDoc/c2rexpluginsACE/behavior_rex_boundary.html)
 - [Discussion thread](https://www.scirra.com/forum/behavior-boundary_t70160)
 

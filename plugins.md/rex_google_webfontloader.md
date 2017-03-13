@@ -8,7 +8,7 @@ Reference: [webfontloader](https://github.com/typekit/webfontloader)
 
 ## Links
 
-- [Plugin](https://dl.dropboxusercontent.com/u/5779181/C2Repo/Zip/plugins/rex_google_webfontloader.7z)
+- [Plugin](https://rexrainbow.github.io/C2RexDoc/repo/rex_google_webfontloader.7z)
 - [ACE table](https://rexrainbow.github.io/C2RexDoc/c2rexpluginsACE/plugin_rex_google_webfontloader.html)
 - [Discussion thread](https://www.scirra.com/forum/plugin-web-font-loader_t179201)
 

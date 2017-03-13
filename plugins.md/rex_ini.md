@@ -8,7 +8,7 @@ Reference - [ini](https://github.com/npm/ini)
 
 ## Links
 
-- [Plugin](https://dl.dropboxusercontent.com/u/5779181/C2Repo/Zip/plugins/rex_ini.7z)
+- [Plugin](https://rexrainbow.github.io/C2RexDoc/repo/rex_ini.7z)
 - [ACE table](https://rexrainbow.github.io/C2RexDoc/c2rexpluginsACE/plugin_rex_ini.html)
 - Discussion thread
 

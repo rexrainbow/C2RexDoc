@@ -6,7 +6,7 @@ Drag and drop this object.
 
 ## Links
 
-- [Plugin](https://dl.dropboxusercontent.com/u/5779181/C2Repo/Zip/behaviors/rex_dragdrop2.7z)
+- [Plugin](https://rexrainbow.github.io/C2RexDoc/repo/rex_dragdrop2.7z)
 - [ACE table](https://rexrainbow.github.io/C2RexDoc/c2rexpluginsACE/behavior_rex_dragdrop2.html)
 - [Discussion thread](https://www.scirra.com/forum/behavior-moveto_t63156)
 

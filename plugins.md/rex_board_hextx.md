@@ -6,7 +6,7 @@ This plugin provides hexagonal physical layout for [rex_board](rex_board.html) p
 
 ## Links
 
-- [Plugin](https://dl.dropboxusercontent.com/u/5779181/C2Repo/Zip/plugins/rex_board_hexTx.7z)
+- [Plugin](https://rexrainbow.github.io/C2RexDoc/repo/rex_board_hexTx.7z)
 
 - [ACE table](https://rexrainbow.github.io/C2RexDoc/c2rexpluginsACE/plugin_rex_board_hextx.html)
 

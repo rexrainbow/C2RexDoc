@@ -6,7 +6,7 @@ Add chess/tiles on board object, these chess/tiles could be placed at layout edi
 
 ## Links
 
-- [Plugin](https://dl.dropboxusercontent.com/u/5779181/C2Repo/Zip/plugins/rex_layout2board.7z)
+- [Plugin](https://rexrainbow.github.io/C2RexDoc/repo/rex_layout2board.7z)
 - [ACE table](https://rexrainbow.github.io/C2RexDoc/c2rexpluginsACE/plugin_rex_layout2board.html)
 - [Discussion thread](https://www.scirra.com/forum/plugin-board-layout2board-behavior-grid-move_t69647)
 

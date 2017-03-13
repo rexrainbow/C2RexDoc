@@ -6,7 +6,7 @@ Store the logical position of chess, based plugin of my board-series plugins/beh
 
 ## Links
 
-- [Plugin](https://dl.dropboxusercontent.com/u/5779181/C2Repo/Zip/plugins/rex_board.7z)
+- [Plugin](https://rexrainbow.github.io/C2RexDoc/repo/rex_board.7z)
 - [ACE table](https://rexrainbow.github.io/C2RexDoc/c2rexpluginsACE/plugin_rex_board.html), 
 - [Discussion thread](https://www.scirra.com/forum/plugin-board-layout2board-behavior-grid-move_t69647)
 

@@ -6,7 +6,7 @@ Shape map of hex grid.
 
 ## Links
 
-- [Plugin](https://dl.dropboxusercontent.com/u/5779181/C2Repo/Zip/plugins/rex_board_hexshapemap.7z)
+- [Plugin](https://rexrainbow.github.io/C2RexDoc/repo/rex_board_hexshapemap.7z)
 - [ACE table](https://rexrainbow.github.io/C2RexDoc/c2rexpluginsACE/plugin_rex_board_hexshapemap.html)
 - [Discussion thread](https://www.scirra.com/forum/plugin-board-layout2board-behavior-grid-move_t69647)
 
