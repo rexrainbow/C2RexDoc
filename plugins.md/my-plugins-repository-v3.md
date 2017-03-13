@@ -1,14 +1,14 @@
-# [Home](index.html) > My plugins repository v2
+# [Home](index.html) > My plugins repository v3
 
 ## Introduction
 
-This tool could help C2 designers to get my plugins and behaviors -- download and unzip them into their C2 folder.
+This tool could help C2 designers to get my plugins and behaviors -- download and unzip them into their C2 folder from my [github](https://github.com/rexrainbow/C2RexDoc/blob/master/repo/index.md).
 
 
 
 ## Links
 
-- [Tool](https://skydrive.live.com/redir?resid=7497FD5EC94476E!407&authkey=!AFz5551glaa8VVE)
+- [Tool](https://1drv.ms/u/s!Am5HlOzVf0kHlnTQ68zSnmnOe3X9)
 
   ​
 
