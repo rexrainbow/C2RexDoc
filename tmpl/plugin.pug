@@ -6,8 +6,7 @@ block content
     ul
         li #{description}
 
-    - s=fileName.split("_")
-    - url = "https://rexrainbow.github.io/C2RexDoc/repo/" + s[1] + "_" + s[2] + ".7z"
+    - url = "https://rexrainbow.github.io/C2RexDoc/repo/" + srcFileName + ".7z"
     a.btn.btn-default(href=url) Download    
         
     .panel.panel-default
