@@ -1,0 +1,328 @@
+<!DOCTYPE 5>
+<html>
+  <head>
+    <title>Behavior : Monopoly movement</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="js/jquery-3.1.0.min.js">                         </script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      
+      ga('create', 'UA-88123342-2', 'auto');
+      ga('send', 'pageview');            
+      
+    </script>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header"><a class="navbar-brand" href="./index.html">Home</a></div>
+        <ul class="nav navbar-nav">
+          <li><a href="./pluginsIndex.html">Plugins      </a></li>
+          <li><a href="./behaviorsIndex.html">Behaviors                   </a></li>
+          <li><a href="./effectsIndex.html">Effects    </a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Behavior : Monopoly movement</h1>
+      <p>Author:Rex.Rainbow</p>
+      <ul>
+        <li>Get forwarding path on the board, used in Monopoly-like game.</li>
+      </ul><a class="btn btn-default" href="https://rexrainbow.github.io/C2RexDoc/repo/rex_monopoly.7z">Download    </a>
+      <div class="panel panel-default">
+        <div class="panel-title">
+          <h2>Properties</h2>
+        </div>
+        <div class="panel-body">
+          <h3>Face to (Square)</h3>
+          <ul>
+            <li>Face direction in square board.                    </li>
+            <ul>
+              <li>Options : [&quot;Right&quot;,&quot;Down&quot;,&quot;Left&quot;,&quot;Up&quot;]</li>
+            </ul>
+          </ul>
+          <h3>Face to (Hexagon Up-Down)</h3>
+          <ul>
+            <li>Face direction in Up-Down hexagon board.                    </li>
+            <ul>
+              <li>Options : [&quot;Down-right&quot;,&quot;Down&quot;,&quot;Down-left&quot;,&quot;Up-left&quot;,&quot;Up&quot;,&quot;Up-right&quot;]</li>
+            </ul>
+          </ul>
+          <h3>Face to (Hexagon Left-Right)</h3>
+          <ul>
+            <li>Face direction in Left-Right hexagon board.                    </li>
+            <ul>
+              <li>Options : [&quot;Right&quot;,&quot;Down-right&quot;,&quot;Down-left&quot;,&quot;Left&quot;,&quot;Up-left&quot;,&quot;Up-right&quot;]</li>
+            </ul>
+          </ul>
+          <h3>Forked road</h3>
+          <ul>
+            <li>Direction selection on forked road.                    </li>
+            <ul>
+              <li>Options : [&quot;Forwarding&quot;,&quot;Random&quot;]</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">   
+          <h2>Actions</h2>
+        </div>
+        <div class="panel-body">
+          <h2>Face direction      </h2>
+          <h3>Action:Set face by number      </h3>
+          <ul>
+            <li>Set face direction by number.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Face to ( number ) : Face direction.</li>
+            </ul>
+          </ul>
+          <h2>Face direction: Left-Right hexagon      </h2>
+          <h3>Action:Set face      </h3>
+          <ul>
+            <li>Set face direction in hexagon board.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Face to ( Combo ) : Face direction.</li>
+              <ul>
+                <li>Options : [&quot;Right&quot;,&quot;Down-right&quot;,&quot;Down-left&quot;,&quot;Left&quot;,&quot;Up-left&quot;,&quot;Up-right&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h2>Face direction: Up-Down hexagon      </h2>
+          <h3>Action:Set face      </h3>
+          <ul>
+            <li>Set face direction in hexagon board.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Face to ( Combo ) : Face direction.</li>
+              <ul>
+                <li>Options : [&quot;Down-right&quot;,&quot;Down&quot;,&quot;Down-left&quot;,&quot;Up-left&quot;,&quot;Up&quot;,&quot;Up-right&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h2>Face direction: square      </h2>
+          <h3>Action:Set face      </h3>
+          <ul>
+            <li>Set face direction in square board.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Face to ( Combo ) : Face direction.</li>
+              <ul>
+                <li>Options : [&quot;Right&quot;,&quot;Down&quot;,&quot;Left&quot;,&quot;Up&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h2>Forked road      </h2>
+          <h3>Action:Set direction selection      </h3>
+          <ul>
+            <li>Set direction selection on forked road.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Mode ( Combo ) : Direction selection on forked road .</li>
+              <ul>
+                <li>Options : [&quot;Forwarding&quot;,&quot;Random&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h2>Forwarding path      </h2>
+          <h3>Action:Get forwarding path      </h3>
+          <ul>
+            <li>Get forwarding path.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Moving points ( number ) : Moving points.</li>
+            </ul>
+          </ul>
+          <h2>Moving cost      </h2>
+          <h3>Action:Set cost      </h3>
+          <ul>
+            <li>Set moving cost. used under &quot;condition:On get moving cost&quot;   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Cost ( number ) : Moving cost.</li>
+            </ul>
+          </ul>
+          <h2>Random      </h2>
+          <h3>Action:Set random generator      </h3>
+          <ul>
+            <li>Set random generator object.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Random generator ( object ) : Random generator object</li>
+            </ul>
+          </ul>
+          <h2>Solid      </h2>
+          <h3>Action:Set solid      </h3>
+          <ul>
+            <li>Set solid. Used under 'condition: On get solid'.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Solid ( Combo ) : Solid property.</li>
+              <ul>
+                <li>Options : [&quot;No&quot;,&quot;Yes&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h3>Action:Set solid by number      </h3>
+          <ul>
+            <li>Set solid. Used under 'condition: On get solid'.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Solid ( number ) : Solid property. 0=Disable, 1=Enable.</li>
+            </ul>
+          </ul>
+          <h3>Action:Set move-able      </h3>
+          <ul>
+            <li>Set move-able. Used under 'condition: On get solid'.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Move-able ( Combo ) : Move-able.</li>
+              <ul>
+                <li>Options : [&quot;No&quot;,&quot;Yes&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h3>Action:Set move-able by number      </h3>
+          <ul>
+            <li>Set move-able. Used under 'condition: On get solid'.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Move-able ( number ) : Move-able. 0=Disable, 1=Enable.</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">    
+        <div class="panel-title">    
+          <h2>Expressions</h2>
+        </div>
+        <div class="panel-body">           
+          <h2>Moving cost    </h2>
+          <h3>Expression:STOP </h3>
+          <ul>
+            <li>STOP property used in cost function, used in action:&quot;Set moving cost&quot;. The value is (-1)</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Moving ponts    </h2>
+          <h3>Expression:TotalMovingPoints </h3>
+          <ul>
+            <li>Get total moving points of current moving.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Moving result    </h2>
+          <h3>Expression:TargetFaceDir </h3>
+          <ul>
+            <li>Get the latest face direction</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:TargetLX </h3>
+          <ul>
+            <li>Get target logic X of the latest moving result</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:TargetLY </h3>
+          <ul>
+            <li>Get target logic Y of the latest moving result</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Target tile    </h2>
+          <h3>Expression:TileUID </h3>
+          <ul>
+            <li>Get UID of target tile. Used under &quot;condition: On get moving cost&quot;, &quot;condition: On forked road&quot;, &quot;condition: On get solid&quot;</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:TileLX </h3>
+          <ul>
+            <li>Get logic X of target tile. Used under &quot;condition: On get moving cost&quot;, &quot;condition: On forked road&quot;, &quot;condition: On get solid&quot;</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:TileLY </h3>
+          <ul>
+            <li>Get logic Y of target tile. Used under &quot;condition: On get moving cost&quot;, &quot;condition: On forked road&quot;, &quot;condition: On get solid&quot;</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">       
+          <h2>Conditions</h2>
+        </div>
+        <div class="panel-body">              
+          <h2>Forked road    </h2>
+          <h4>Condition:On forked road                    </h4>
+          <ul>
+            <li>Triggered when moving on forked road, assign direction by &quot;action: Set face&quot;.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Forwarding path    </h2>
+          <h4>Condition:Empty                    </h4>
+          <ul>
+            <li>Return ture if forwarding path is empty.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Moving cost    </h2>
+          <h4>Condition:On get moving cost                    </h4>
+          <ul>
+            <li>Customize moving cost of each target tile.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>SOL: forwarding path    </h2>
+          <h4>Condition:Pop tile                    </h4>
+          <ul>
+            <li>Pop one tile instance of forwarding path.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Object ( object ) : Object for picking    </li>
+            </ul>
+          </ul>
+          <h4>Condition:Pop the last tile                    </h4>
+          <ul>
+            <li>Pop the last tile of forwarding path. It will clean all tiles of forwarding path.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Object ( object ) : Object for picking    </li>
+            </ul>
+          </ul>
+          <h2>Solid    </h2>
+          <h4>Condition:On get solid                    </h4>
+          <ul>
+            <li>Customize solid of each target tile.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

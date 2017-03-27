@@ -1,0 +1,197 @@
+<!DOCTYPE 5>
+<html>
+  <head>
+    <title>Plugin : UserID to ID</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="js/jquery-3.1.0.min.js">                         </script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      
+      ga('create', 'UA-88123342-2', 'auto');
+      ga('send', 'pageview');            
+      
+    </script>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header"><a class="navbar-brand" href="./index.html">Home</a></div>
+        <ul class="nav navbar-nav">
+          <li><a href="./pluginsIndex.html">Plugins      </a></li>
+          <li><a href="./behaviorsIndex.html">Behaviors                   </a></li>
+          <li><a href="./effectsIndex.html">Effects    </a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Plugin : UserID to ID</h1>
+      <p>Author:Rex.Rainbow</p>
+      <ul>
+        <li>Each UserID could register an alias ID.</li>
+      </ul><a class="btn btn-default" href="https://rexrainbow.github.io/C2RexDoc/repo/rex_firebase.7z">Download    </a>
+      <div class="panel panel-default">
+        <div class="panel-title">
+          <h2>Properties</h2>
+        </div>
+        <div class="panel-body">
+          <h3>Domain</h3>
+          <ul>
+            <li>The root location of the Firebase data.                    </li>
+          </ul>
+          <h3>Sub domain</h3>
+          <ul>
+            <li>Sub domain for this function.                    </li>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">   
+          <h2>Actions</h2>
+        </div>
+        <div class="panel-body">
+          <h2>Remove      </h2>
+          <h3>Action:Remove User ID      </h3>
+          <ul>
+            <li>Remove User ID.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>User ID ( string ) : Key of User ID.</li>
+            </ul>
+          </ul>
+          <h2>Request - ID      </h2>
+          <h3>Action:Get random ID      </h3>
+          <ul>
+            <li>Request random ID.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>User ID ( string ) : Key of User ID.</li>
+              <li>Digits ( number ) : Count of digit characters for default value.</li>
+              <li>Retry ( number ) : Retry count to get default value.</li>
+            </ul>
+          </ul>
+          <h3>Action:Try set ID      </h3>
+          <ul>
+            <li>Request try set ID.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>User ID ( string ) : Key of User ID.</li>
+              <li>ID ( string ) : ID.</li>
+            </ul>
+          </ul>
+          <h3>Action:Get ID      </h3>
+          <ul>
+            <li>Request ID.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>User ID ( string ) : Key of User ID.</li>
+            </ul>
+          </ul>
+          <h2>Request - User ID      </h2>
+          <h3>Action:Get User ID      </h3>
+          <ul>
+            <li>Request User ID.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>ID ( string ) : ID.</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">    
+        <div class="panel-title">    
+          <h2>Expressions</h2>
+        </div>
+        <div class="panel-body">           
+          <h2>Error    </h2>
+          <h3>Expression:LastErrorCode </h3>
+          <ul>
+            <li>Error code.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:LastErrorMessage </h3>
+          <ul>
+            <li>Error message (error.serverResponse) .</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Request - result    </h2>
+          <h3>Expression:ID </h3>
+          <ul>
+            <li>Get ID of result.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:UserID </h3>
+          <ul>
+            <li>Get User ID of result.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">       
+          <h2>Conditions</h2>
+        </div>
+        <div class="panel-body">              
+          <h2>Remove    </h2>
+          <h4>Condition:On remove User ID                    </h4>
+          <ul>
+            <li>Triggered when removed User ID successful.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On remove User ID error                    </h4>
+          <ul>
+            <li>Triggered when removed User ID error.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Request - ID    </h2>
+          <h4>Condition:On request ID                    </h4>
+          <ul>
+            <li>Triggered when requested ID successful.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On request ID error                    </h4>
+          <ul>
+            <li>Triggered when requested ID error.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Request - User ID    </h2>
+          <h4>Condition:On request User ID                    </h4>
+          <ul>
+            <li>Triggered when requested User ID successful.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On request User ID error                    </h4>
+          <ul>
+            <li>Triggered when requested User ID error.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

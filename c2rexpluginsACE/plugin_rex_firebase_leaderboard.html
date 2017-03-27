@@ -1,0 +1,313 @@
+<!DOCTYPE 5>
+<html>
+  <head>
+    <title>Plugin : Leader board</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="js/jquery-3.1.0.min.js">                         </script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      
+      ga('create', 'UA-88123342-2', 'auto');
+      ga('send', 'pageview');            
+      
+    </script>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header"><a class="navbar-brand" href="./index.html">Home</a></div>
+        <ul class="nav navbar-nav">
+          <li><a href="./pluginsIndex.html">Plugins      </a></li>
+          <li><a href="./behaviorsIndex.html">Behaviors                   </a></li>
+          <li><a href="./effectsIndex.html">Effects    </a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Plugin : Leader board</h1>
+      <p>Author:Rex.Rainbow</p>
+      <ul>
+        <li>Leader board built on firebase.</li>
+      </ul><a class="btn btn-default" href="https://rexrainbow.github.io/C2RexDoc/repo/rex_firebase.7z">Download    </a>
+      <div class="panel panel-default">
+        <div class="panel-title">
+          <h2>Properties</h2>
+        </div>
+        <div class="panel-body">
+          <h3>Domain</h3>
+          <ul>
+            <li>The root location of the Firebase data.                    </li>
+          </ul>
+          <h3>ID</h3>
+          <ul>
+            <li>ID of leader board, i.e. &quot;Sub domain&quot;.                    </li>
+          </ul>
+          <h3>Order</h3>
+          <ul>
+            <li>Ranking order.                    </li>
+            <ul>
+              <li>Options : [&quot;Small to large&quot;,&quot;Large to small&quot;]</li>
+            </ul>
+          </ul>
+          <h3>Update</h3>
+          <ul>
+            <li>Manual update or auto update.                    </li>
+            <ul>
+              <li>Options : [&quot;Manual&quot;,&quot;Auto&quot;]</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">   
+          <h2>Actions</h2>
+        </div>
+        <div class="panel-body">
+          <h2>Domain      </h2>
+          <h3>Action:Set domain      </h3>
+          <ul>
+            <li>Set domain ref.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Domain ( string ) : The root location of the Firebase data.</li>
+              <li>ID ( string ) : ID of leader board, i.e. &quot;Sub domain&quot;.</li>
+            </ul>
+          </ul>
+          <h2>Remove      </h2>
+          <h3>Action:Remove post      </h3>
+          <ul>
+            <li>Remove post by User ID.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>UserID ( string ) : UserID from authentication.</li>
+            </ul>
+          </ul>
+          <h2>Send      </h2>
+          <h3>Action:Post score      </h3>
+          <ul>
+            <li>Post score by user ID.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>UserID ( string ) : UserID from authentication.</li>
+              <li>Name ( string ) : Player name.</li>
+              <li>Score ( number or string ) : Player Score</li>
+              <li>Extra ( number or string ) : Extra data, could be number or (JSON) string.</li>
+              <li>Post condition ( Combo ) : Post if score is greater or less then saved score.</li>
+              <ul>
+                <li>Options : [&quot;&quot;,&quot;if greater&quot;,&quot;if less&quot;,&quot;if not existed&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h3>Action:Add to score      </h3>
+          <ul>
+            <li>Add score by user ID.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>UserID ( string ) : UserID from authentication.</li>
+              <li>Name ( string ) : (Optional) Player name.</li>
+              <li>Add ( number or string ) : Add score</li>
+              <li>Extra ( number or string ) : (Optional) Extra data, could be number or (JSON) string.</li>
+            </ul>
+          </ul>
+          <h2>Update      </h2>
+          <h3>Action:Update all      </h3>
+          <ul>
+            <li>Update all ranks.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Action:Update top      </h3>
+          <ul>
+            <li>Update top ranks.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Count ( number ) : The count of top ranks.</li>
+            </ul>
+          </ul>
+          <h3>Action:Stop updating      </h3>
+          <ul>
+            <li>Stop updating ranks.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">    
+        <div class="panel-title">    
+          <h2>Expressions</h2>
+        </div>
+        <div class="panel-body">           
+          <h2>Post    </h2>
+          <h3>Expression:PostPlayerName </h3>
+          <ul>
+            <li>The post player name. Uses under &quot;condition:On post complete&quot;.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:PostPlayerScore </h3>
+          <ul>
+            <li>Get posted current player score under &quot;condition:On post complete&quot;.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:PostPlayerUserID </h3>
+          <ul>
+            <li>Get posted current user id under &quot;condition:On post complete&quot;.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:PostExtraData </h3>
+          <ul>
+            <li>Get posted current extra data under &quot;condition:On post complete&quot;.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Rank    </h2>
+          <h3>Expression:RankCount </h3>
+          <ul>
+            <li>Get total rank count.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:UserID2Rank </h3>
+          <ul>
+            <li>Get rank by user ID. Return (-1) if not found.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>UserID ( string ) : UserID from authentication.</li>
+            </ul>
+          </ul>
+          <h2>Rank index    </h2>
+          <h3>Expression:Rank2PlayerName </h3>
+          <ul>
+            <li>Get player name by rank index.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Rank ( number ) : Rank index (0-based).</li>
+            </ul>
+          </ul>
+          <h3>Expression:Rank2PlayerScore </h3>
+          <ul>
+            <li>Get player score by rank index.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Rank ( number ) : Rank index (0-based).</li>
+            </ul>
+          </ul>
+          <h3>Expression:Rank2ExtraData </h3>
+          <ul>
+            <li>Get extra data by rank index.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Rank ( number ) : Rank index (0-based).</li>
+            </ul>
+          </ul>
+          <h3>Expression:Rank2PlayerUserID </h3>
+          <ul>
+            <li>Get userID by rank index. Add default value at 2nd parameter.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Rank ( number ) : Rank index (0-based).</li>
+            </ul>
+          </ul>
+          <h2>Update - for each    </h2>
+          <h3>Expression:CurPlayerName </h3>
+          <ul>
+            <li>Get the current player name in a For Each loop.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:CurPlayerScore </h3>
+          <ul>
+            <li>Get the current player score in a For Each loop.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:CurPlayerRank </h3>
+          <ul>
+            <li>Get the current player rank (0-based) in a For Each loop.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:CurUserID </h3>
+          <ul>
+            <li>Get the current user id in a For Each loop.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:CurExtraData </h3>
+          <ul>
+            <li>Get the current extra data in a For Each loop.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">       
+          <h2>Conditions</h2>
+        </div>
+        <div class="panel-body">              
+          <h2>Send    </h2>
+          <h4>Condition:On post complete                    </h4>
+          <ul>
+            <li>Triggered when post complete.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On post error                    </h4>
+          <ul>
+            <li>Triggered when post error.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Update    </h2>
+          <h4>Condition:On update                    </h4>
+          <ul>
+            <li>Triggered when ranks updated.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Update - for each    </h2>
+          <h4>Condition:For each rank                    </h4>
+          <ul>
+            <li>Repeat the event for each rank.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:For each rank in a range                    </h4>
+          <ul>
+            <li>Repeat the event for each rank in a range.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Start ( number ) : Start from rank index (0-based).    </li>
+              <li>End ( number ) : End to rank index (0-based). This value should larger than Start.    </li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

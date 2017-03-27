@@ -1,0 +1,871 @@
+<!DOCTYPE 5>
+<html>
+  <head>
+    <title>Plugins</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="js/jquery-3.1.0.min.js">                         </script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      
+      ga('create', 'UA-88123342-2', 'auto');
+      ga('send', 'pageview');            
+      
+    </script>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header"><a class="navbar-brand" href="./index.html">Home</a></div>
+        <ul class="nav navbar-nav">
+          <li><a href="./pluginsIndex.html">Plugins      </a></li>
+          <li><a href="./behaviorsIndex.html">Behaviors                   </a></li>
+          <li><a href="./effectsIndex.html">Effects    </a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Plugins  </h1>
+      <h2>Board</h2>
+      <ul>
+        <li>( Deprecated ) <a href="plugin_rex_board_cubetx.html">Cube Tx</a> : Transfer logic position to physical position with 3D orthogonal or isometric layout
+        </li>
+      </ul>
+      <h2>Control flow</h2>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_roundfsm.html">Round FSM</a> : A finite state machine to descript a round
+        </li>
+      </ul>
+      <h2>Data &amp; Storage</h2>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_container.html">Container</a> : Put sprites or other objects into this box.
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_instbank.html">Instance Bank</a> : Save/Load instances.
+        </li>
+      </ul>
+      <ul>
+        <li>( Deprecated ) <a href="plugin_rex_spritebank.html">Sprite Bank</a> : (Deprecated) Save/Load sprites.
+        </li>
+      </ul>
+      <h2>Deprecated</h2>
+      <ul>
+        <li>( Deprecated ) <a href="plugin_rex_function.html">Function</a> : (Deprecated) Call named events from actions and expressions.
+        </li>
+      </ul>
+      <h2>General</h2>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_saveloadstatus.html">SaveLoad</a> : Get status string, or set status by string
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_token.html">Token</a> : Round-robin player index, used in turn based game.
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_webstorage_ext.html">Webstorage Ext</a> : Provide some methods to access webstorage.
+        </li>
+      </ul>
+      <h2>Input</h2>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_window_orientation.html">Orientation</a> : Get orientation of window. (landspcape or portrait)
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_spritearrowkey.html">Sprite to ArrowKey</a> : Get arrow key event from sprites' &quot;is in touch&quot;.
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_tiltalpha2leftrightkey.html">Tilt alpha to left/right key</a> : Get left or right key event from tilt's alpha input.
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_tilt2angle.html">Tilt to angle</a> : Get angle from tilt's beta and gamma input.
+        </li>
+      </ul>
+      <h2>Rex - AI</h2>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_ann.html">ANN</a> : Artificial Neural Network, using back-propagation and one hidden layer.
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_fuzzy.html">Fuzzy</a> : Fuzzy logic
+        </li>
+      </ul>
+      <h2>Rex - Arrow key</h2>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_angle2arrowkeymap.html">Angle to ArrowKey</a> : Mapping angle input to arrow key event.
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_dragarrowkey.html">Dragging to ArrowKey</a> : Get arrow key event from dragging input.
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_tilt2arrowkey.html">Tilt to arrow key</a> : Get arrow key event from tilt's beta and gamma input.
+        </li>
+      </ul>
+      <h2>Rex - Audio - Tone</h2>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_tonejs_api.html">ToneJS api</a> : Tone objects in a dictionary. https://github.com/Tonejs/Tone.js
+        </li>
+      </ul>
+      <h2>Rex - Audio - Tone - midi</h2>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_tonejs_midiconvert.html">MidiConvert</a> : Convert MIDI into Tone.js-friendly JSON, and play it.
+        </li>
+      </ul>
+      <h2>Rex - Audio - Tone - object</h2>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_tonejs_objectshell.html">Object shell</a> : Shell of tone object.
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_tonejs_part.html">Part</a> : An alternate notation of a part.
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_tonejs_sequence.html">Sequence</a> : An alternate notation of a part.
+        </li>
+      </ul>
+      <h2>Rex - Board - application</h2>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_board_edge.html">Edge</a> : Maintain edges on a board.
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_board_hexshapemap.html">Hex shape map</a> : Shape map of hex grid
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_layout2board.html">Layout to Board</a> : Put layout's instances into board.
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_logicmask.html">Logical mask</a> : A logical area to test which tiles had been entered coverage, or had been exited coverage.
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_matcher.html">Matcher</a> : Get tiles with matched patterns.
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_slg_movement.html">SLG movement</a> : Movement on the chess board of strategy game.
+        </li>
+      </ul>
+      <h2>Rex - Board - application - mini board</h2>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_miniboard.html">Mini board</a> : A board-container to group chess and move them together.
+        </li>
+      </ul>
+      <h2>Rex - Board - core</h2>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_board.html">Board</a> : Store the logical position of chess, based plugin of my board-series plugins/behaviors.
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_board_hextx.html">Hex Tx</a> : Transfer logic position to physical position with hexagonal layout
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_board_projectiontx.html">Projection Tx</a> : Transfer logic position to physical position with projection layout
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_board_squaretx.html">Square Tx</a> : Transfer logic position to physical position with orthogonal or isometric layout
+        </li>
+      </ul>
+      <h2>Rex - Board - random map</h2>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_dungeon_gen.html">Dungeon gen</a> : Generate random dungeon map asynchronously.
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_maze_gen.html">Maze gen</a> : Generate random maze asynchronously. Reference: http://ondras.github.io/rot.js/hp/
+        </li>
+      </ul>
+      <h2>Rex - Board - tmx importer v2.x</h2>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_tmx_importer_v2.html">TMX Importer v2</a> : Create sprites according to tmx exported file.
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_tmx_json_parser.html">TMX-JSON Parser</a> : A TMX-JSON parser.
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_tmx_xml_parser.html">TMX-XML Parser</a> : A TMX-XML parser.
+        </li>
+      </ul>
+      <h2>Rex - Browser helper</h2>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_copytoclipboard.html">Copy to clipboard</a> : Copy string to clipboard
+        </li>
+      </ul>
+      <h2>Rex - Canvas</h2>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_canvas.html">Canvas</a> : Canvas element and api. https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_fabricjs.html">Fabric</a> : Canvas library. http://fabricjs.com/
+        </li>
+      </ul>
+      <h2>Rex - CocoonJS helper</h2>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_prompt_wrap.html">Prompt wrap</a> : Prompt wrap for web and cocoonJS
+        </li>
+      </ul>
+      <h2>Rex - Comment</h2>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_comment.html">Comments</a> : Show comments in actions.
+        </li>
+      </ul>
+      <h2>Rex - Data structure</h2>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_fnparam2array.html">FnParam to Array</a> : Create an array and dump parameters of current function into this array.
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_ini.html">INI</a> : INI &lt;--&gt; JSON. Reference: https://github.com/npm/ini
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_ginstgroup.html">Inst Group</a> : A set/list to store instances by uid
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_undoredo.html">Undo &amp; Redo</a> : A data structure to support undo&amp;redo steps/states.
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_xmlwriter.html">XML Writer</a> : Build XML structure. Reference: http://flesler.blogspot.com/2008/03/xmlwriter-for-javascript.html
+        </li>
+      </ul>
+      <h2>Rex - Data structure - CSV</h2>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_achievements.html">Achievements</a> : Achievements in csv table.
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_csv.html">CSV</a> : Read 2d table from csv string.
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_csv2array.html">CSV to Array</a> : Transfer csv string to array object
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_csv2dictionary.html">CSV to Dictionary</a> : Transfer csv string to dictionary object
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_lookup.html">Look up</a> : Check conditions to find passed tests listed in a csv table.
+        </li>
+      </ul>
+      <h2>Rex - Data structure - Database</h2>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_nedb.html">Nedb</a> : Asynchronous database. Reference from https://github.com/louischatriot/nedb
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_taffydb.html">Taffydb</a> : Database. Reference from http://www.taffydb.com/
+        </li>
+      </ul>
+      <h2>Rex - Data structure - JSON</h2>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_hash.html">JSON</a> : Manipulate JSON data.
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_json_builder.html">JSON buider</a> : Build JSON structure.
+        </li>
+      </ul>
+      <h2>Rex - Date &amp; time</h2>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_date.html">Date</a> : Get system data and time
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_dateinarow.html">Date in a row</a> : Get continuous date count.
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_lunar.html">Lunar</a> : Transfer date from solar to lunar (solar 1900~ 2049)
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_stopwatch.html">Stopwatch</a> : Accumulate escaped time.
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_time_away.html">Time away</a> : Get elapsed interval of turned off game from webstroage.
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_time_awayl.html">Time away L</a> : Get elapsed interval of turned off game from local storage.
+        </li>
+      </ul>
+      <h2>Rex - Date &amp; time - Moment</h2>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_momentjs.html">Moment</a> : Parse, validate, manipulate, and display dates. http://momentjs.com/
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_momenttimezonejs.html">Time zone</a> : Parse and display dates in any timezone. http://momentjs.com/timezone/
+        </li>
+      </ul>
+      <h2>Rex - GUI controller</h2>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_gridctrl.html">Grid control</a> : Manipulate instances of each grid in a table.
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_listctrl.html">List control</a> : Manipulate instances of each line in a list.
+        </li>
+      </ul>
+      <h2>Rex - Graph</h2>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_graph.html">Graph</a> : Graph with vertices and edges.
+        </li>
+      </ul>
+      <h2>Rex - Graph - Application</h2>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_graph_movement.html">graph movement</a> : Get moveable or moving path on the graph.
+        </li>
+      </ul>
+      <h2>Rex - Iframe</h2>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_frame_message.html">Frame message</a> : Call function (postMessage) on other frames.
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_iframe_filter.html">Iframe filter</a> : Check if current page is in an iframe or not.
+        </li>
+      </ul>
+      <h2>Rex - Image</h2>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_exif_parser.html">Exif parser</a> : Get exif inforamtion. https://github.com/jseidelin/exif-js
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_gifjs.html">GIF render</a> : GIF encoder. Reference: https://github.com/jnordberg/gif.js
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_tesseractjs.html">Tesseract</a> : Pure Javascript OCR for 62 Languages. Reference: https://github.com/naptha/tesseract.js
+        </li>
+      </ul>
+      <h2>Rex - Input</h2>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_simulate_keyevent.html">Simulate key event</a> : Fire keyboard or touch events.
+        </li>
+      </ul>
+      <h2>Rex - Instance properties</h2>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_uid2prop.html">UID to Properties</a> : Get/set properties (x,y,angle,opacity,private variable) by UID without picking first.
+        </li>
+      </ul>
+      <h2>Rex - Kongregate</h2>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_kongregate.html">Kongregate</a> : Api of kongregate. Reference: https://docs.kongregate.com/v1.0/docs/javascript-api
+        </li>
+      </ul>
+      <h2>Rex - Layer/layout</h2>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_layer.html">Layer</a> : Adding behavior to change the scale/anlge/opacity/visible of layer.
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_zsorter.html">Z Sorter</a> : Sorts Objects in Layer By Y
+        </li>
+      </ul>
+      <h2>Rex - Layouter</h2>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_glayouter.html">Layouter</a> : Layout instances to get position and angle.
+        </li>
+      </ul>
+      <h2>Rex - Local storage</h2>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_dictionarylcache.html">Dictionary Cache</a> : Dictionary cache for local storage.
+        </li>
+      </ul>
+      <h2>Rex - Logic</h2>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_pause.html">Pause</a> : Pause timescale
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_sequence_matcher.html">Sequence matcher</a> : To find sequence pattern.
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_tweentasks.html">Tween tasks</a> : Run tasks of tween functions
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_waker.html">Waker</a> : Running ticks during suspended status.
+        </li>
+      </ul>
+      <h2>Rex - Logic - flow control</h2>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_eventbalancer.html">Event balancer</a> : Divide heavy looping into ticks
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_loopiterator.html">Loop iterator</a> : An iterator to return loop index
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_waitevent.html">Wait Event</a> : Wait events finished.
+        </li>
+      </ul>
+      <h2>Rex - Logic - function</h2>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_fncallpkg.html">Function call package</a> : Pack function call(s) into JSON string, or call function(s) by this JSON string.
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_function2.html">Function2</a> : Run other events in an action, like functions in programming languages.
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_function2m.html">Function2M</a> : Run other events in an action, like functions in programming languages. Support multiple instances to organize functions more better.
+        </li>
+      </ul>
+      <h2>Rex - Logic -finite state machine</h2>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_gfsm.html">FSM</a> : Finite state machine
+        </li>
+      </ul>
+      <h2>Rex - Media</h2>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_audio_helper.html">Audio helper</a> : Some helper methods for audio object
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_jsmidiparser.html">JSMIDIparser</a> : Convert a midi binary data to JSON to get note events.
+        </li>
+      </ul>
+      <h2>Rex - Multiplayer helper</h2>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_mpsyncfunction.html">MP Sync function</a> : Trigger &quot;On function&quot; for each peer.
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_mpwrap.html">MP wrap</a> : A hub of official multi-player plugin
+        </li>
+      </ul>
+      <h2>Rex - NW.js</h2>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_nwjs_ext.html">NW.js extend</a> : Extend function of nw.js
+        </li>
+      </ul>
+      <h2>Rex - Nickname</h2>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_nickname.html">Nickname</a> : Create object by nickname.
+        </li>
+      </ul>
+      <h2>Rex - Random</h2>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_dice.html">Dice</a> : Roll dice
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_patterngen.html">Gashapon</a> : Gashapon in shuffle or random mode.
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_noisejsmod.html">Noise</a> : Provide 2d/3d perlin noise and simplex noise . Reference: https://github.com/josephg/noisejs/blob/master/perlin.js
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_randomgen.html">Random gen</a> : Generate random number with a seed.
+        </li>
+      </ul>
+      <h2>Rex - Save-load</h2>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_gridfreezer.html">Grid freezer</a> : Save/load instances with grids.
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_instbank2.html">Instance Bank 2</a> : Save/Load instances.
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_layoutfreezer.html">Layout freezer</a> : Save/Load non-global instances on the layout.
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_savedata_index.html">Save-data index </a> : A wrap of save/load game.
+        </li>
+      </ul>
+      <h2>Rex - Script</h2>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_luavm.html">Lua VM</a> : Run lua script. The lua vm was referenced from http://kripken.github.io/lua.vm.js/lua.vm.js.html.
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_scenario.html">Scenario</a> : Executing function from a csv table while time-out
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_scenariojeditor.html">ScenarioJ Editor</a> : Create Scenario-Json commands.
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_scenariojengine.html">ScenarioJ Engine</a> : Execute Scenario-Json commands.
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_worksheet.html">Work Sheet</a> : Executing instructions from a string while time-out
+        </li>
+      </ul>
+      <h2>Rex - String</h2>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_lzstring.html">Lz-string</a> : Compress string using LZ-based compression algorithm. Reference - https://github.com/pieroxy/lz-string
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_mustache.html">Mustache</a> : Logic-less templates to render text content. Reference - https://github.com/janl/mustache.js
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_encdec_xor_simple.html">Simple XOR Encryption</a> : Encryption &amp; Decryption by XOR Encryption algorithm.
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_verbalexpressions.html">Verbal Expressions</a> : Create Regular expression. https://github.com/VerbalExpressions/JSVerbalExpressions/blob/master/VerbalExpressions.js
+        </li>
+      </ul>
+      <ul>
+        <li>( Deprecated ) <a href="plugin_rex_encdec_xor.html">XOR Encryption</a> : Encryption &amp; Decryption by XOR Encryption algorithm.
+        </li>
+      </ul>
+      <h2>Rex - System helper</h2>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_systemext.html">SysExt</a> : System extension
+        </li>
+      </ul>
+      <h2>Rex - Text</h2>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_bbcodetext.html">BBcode Text</a> : Displays text with bbcode protocol.
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_tagtext.html">Tag Text</a> : Displays text with multi-color, font face, or font size with tags. http://www.canvastext.com/
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_google_webfontloader.html">Web font loader</a> : Loads web font then gets web font loaded events.
+        </li>
+      </ul>
+      <h2>Rex - Timeline</h2>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_tarp.html">TARP</a> : Time-Action Recorder and Player
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_timeline.html">TimeLine</a> : TimeLine &amp; Timer, to execute function while time-out.
+        </li>
+      </ul>
+      <h2>Rex - Touch</h2>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_touchwrap.html">Touch wrap</a> : A wrap from official Touch plugin to export touch/mouse input to other plugins.
+        </li>
+      </ul>
+      <h2>Rex - Variable</h2>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_ptoggleswitch.html">Toggle switch</a> : A switch for toggling between on and off.
+        </li>
+      </ul>
+      <h2>Rex - Web - Backendless</h2>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_backendless_authentication.html">Authentication</a> : Authentication which is provided by backendless. https://backendless.com/
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_backendless_counter.html">Counter</a> : Atomic Counters to increase or decrease value.
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_backendless_files.html">Files</a> : Files stored in backendless serivice.
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_backendless_itemtable.html">Item table</a> : Items table indexed by (itemID, key), supports writing an item or reading items back.
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_backendless_leaderboard.html">Leaderboard</a> : Leader board built on backendless.
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_backendless_message.html">Message</a> : Send/receive messages.
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_backendless_savedata.html">Save slot</a> : Save slot on backendless.
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_backendless_timer.html">Timer</a> : Get elapsed interval from backendless.
+        </li>
+      </ul>
+      <h2>Rex - Web - Backendless - api</h2>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_backendless_api.html">Backendless API</a> : API of database-as-a-service. https://backendless.com/
+        </li>
+      </ul>
+      <h2>Rex - Web - Firebase</h2>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_firebase_counter.html">Counter</a> : Counter to increase or decrease value.
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_firebase_geofire.html">Geofire</a> : Realtime location queries with Firebase.
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_firebase_itembook.html">Item book</a> : Item tables to save and query items. Each value is indexed by (tableID, itemID, key).
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_firebase_itemmonitor.html">Item monitor</a> : Monitor items' values.
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_firebase_itemtable.html">Item table</a> : Items table indexed by (itemID, key), supports writing a item or reading items back.
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_firebase_leaderboard.html">Leader board</a> : Leader board built on firebase.
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_firebase_rooms.html">Rooms</a> : Rooms management.
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_firebase_savedata.html">Save slot</a> : Private save slots.
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_firebase_simplemessage.html">Simple message</a> : Send message to ID.
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_firebase_singlelogin.html">Single login</a> : Test if user account had been logined on one client only.
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_firebase_storage.html">Storage</a> : File storage in firebase serivice (v3.x only).
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_firebase_token.html">Token</a> : The first user of a group.
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_firebase_userlist.html">User list</a> : User lists on firebase.
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_firebase_userid2id.html">UserID to ID</a> : Each UserID could register an alias ID.
+        </li>
+      </ul>
+      <h2>Rex - Web - Firebase - api</h2>
+      <ul>
+        <li>( Deprecated ) <a href="plugin_rex_firebase_api.html">Firebase API</a> : API of real time database-as-a-service. https://www.firebase.com/
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_firebase_apiv3.html">Firebase API v3</a> : 3.x API of real time database-as-a-service. https://firebase.google.com/
+        </li>
+      </ul>
+      <h2>Rex - Web - Firebase - core</h2>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_firebase_authentication.html">Authentication</a> : Authentication which is provided by firebase. https://www.firebase.com/
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_firebase.html">Firebase</a> : Real time database-as-a-service. https://www.firebase.com/
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_firebase_query.html">Query</a> : Query in firebase.
+        </li>
+      </ul>
+      <h2>Rex - Web - Firebase - date</h2>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_firebase_curtime.html">Current timestamp</a> : Get server timestamp periodically.
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_firebase_timer.html">Timer</a> : Get elapsed interval from firebase.
+        </li>
+      </ul>
+      <h2>Rex - Web - Google map</h2>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_geocoding.html">Geocoding</a> : Converting between geographic coordinates and human-readable address.
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_googlemap.html">Google map</a> : Display google map at a div element.
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_googlemap_api.html">Google map api</a> : Load google map api.
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_googlemap_infowindow.html">Info window</a> : Info window of google map.
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_googlemap_marker.html">Marker</a> : Marker of google map.
+        </li>
+      </ul>
+      <h2>Rex - Web - Wild dog</h2>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_wilddog_api.html">Wilddog API</a> : API of real time database-as-a-service. https://www.wilddog.com/ It is compatiable with firebase service.
+        </li>
+      </ul>
+      <h2>Rex - Web - YQL</h2>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_bahamut.html">Bahamut</a> : Get user data from Bahamut website. http://www.gamer.com.tw/
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_webpage_reader.html">Web page reader</a> : Read web page by cross domain request.
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_yahoofinance.html">Yahoo finance</a> : Read stocks info from yahoo.finance.
+        </li>
+      </ul>
+      <h2>Rex - Web - appwarp</h2>
+      <ul>
+        <li>( Deprecated ) <a href="plugin_rex_appwarp_timer.html">Timer</a> : Timer service. http://api.shephertz.com/app42-docs/timer-service/
+        </li>
+      </ul>
+      <h2>Rex - Web - firebase</h2>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_firebase_itemfilter.html">Item filter</a> : Query itemIDs with condition filters.
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_firebase_message.html">Message</a> : Send/receive messages.
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_firebase_syncqueue.html">Sync queue</a> : Sync queue on firebase.
+        </li>
+      </ul>
+      <h2>Rex - Web - newgrounds.io</h2>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_ngio_authentication.html">Authentication</a> : Authentication which is provided by Newgrounds.io.
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_ngio_event.html">Event</a> : Handles logging of custom events.
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_ngio_gateway.html">Gateway</a> : Provides information about the gateway server.
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_ngio_loader.html">Loader</a> : Handles loading various URLs and tracking referral stats.
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_ngio_medal.html">Medal</a> : Handles loading and unlocking of medals.
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_ngio_scoreboard.html">Scoreboard</a> : Handles loading and posting of high scores and scoreboards.
+        </li>
+      </ul>
+      <h2>Rex - Web - parse</h2>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_parse_authentication.html">Authentication</a> : Authentication which is provided by parse.
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_parse_tokenauth.html">Authentication by token</a> : Authentication by tokens in cloud code.
+        </li>
+      </ul>
+      <ul>
+        <li>( Deprecated ) <a href="plugin_rex_parse_fileupload.html">File Upload</a> : Upload image to parse server, then get public URL.
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_parse_itemtable.html">Item table</a> : Items table indexed by (itemID, key), supports writing an item or reading items back.
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_parse_leaderboard.html">Leader board</a> : Leader board built on parse.
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_parse_message.html">Message</a> : Send/receive messages.
+        </li>
+      </ul>
+      <ul>
+        <li>( Deprecated ) <a href="plugin_rex_parse_quicklogin.html">Quick Login</a> : Try to login parse server. Creates account if it had not existed.
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_parse_savedata.html">Save slot</a> : Save slot on parse.
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_parse_string.html">String</a> : Save string with any kind of size. This plugin will divide string into many rows for saving.
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_parse_tag.html">Tags</a> : Paste tags on objects.
+        </li>
+      </ul>
+      <h2>Rex - Web - parse - api</h2>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_parse_initialize.html">Parse initialize</a> : Set api key, javascript key and server URL of parse service.
+        </li>
+      </ul>
+      <h2>Rex - Web - parse - date</h2>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_parse_curtime.html">Current timestamp</a> : Get current time from parse server.
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_parse_datecount.html">Date count</a> : Get date count of each monoth.
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_parse_dateinarow.html">Date in a row</a> : Get continuous date count.
+        </li>
+      </ul>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_parse_timer.html">Timer</a> : Get elapsed interval from parse.
+        </li>
+      </ul>
+      <h2>Rex - Web - service</h2>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_weixin_share.html">Weixin share</a> : Post messages on Weixin.
+        </li>
+      </ul>
+      <h2>Web - Youtube</h2>
+      <ul>
+        <li><a class="btn btn-default" href="plugin_rex_youtube_player.html">Youtube player</a> : Play youtube video at iframe.
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,391 @@
+<!DOCTYPE 5>
+<html>
+  <head>
+    <title>Plugin : Save slot</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="js/jquery-3.1.0.min.js">                         </script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      
+      ga('create', 'UA-88123342-2', 'auto');
+      ga('send', 'pageview');            
+      
+    </script>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header"><a class="navbar-brand" href="./index.html">Home</a></div>
+        <ul class="nav navbar-nav">
+          <li><a href="./pluginsIndex.html">Plugins      </a></li>
+          <li><a href="./behaviorsIndex.html">Behaviors                   </a></li>
+          <li><a href="./effectsIndex.html">Effects    </a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Plugin : Save slot</h1>
+      <p>Author:Rex.Rainbow</p>
+      <ul>
+        <li>Private save slots.</li>
+      </ul><a class="btn btn-default" href="https://rexrainbow.github.io/C2RexDoc/repo/rex_firebase.7z">Download    </a>
+      <div class="panel panel-default">
+        <div class="panel-title">
+          <h2>Properties</h2>
+        </div>
+        <div class="panel-body">
+          <h3>Domain</h3>
+          <ul>
+            <li>The root location of the Firebase data.                    </li>
+          </ul>
+          <h3>Sub domain</h3>
+          <ul>
+            <li>Sub domain of this function.                    </li>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">   
+          <h2>Actions</h2>
+        </div>
+        <div class="panel-body">
+          <h2>0. Setup      </h2>
+          <h3>Action:Set owner      </h3>
+          <ul>
+            <li>Set user ID of slot owner.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>User ID ( string ) : User ID from authentication.</li>
+            </ul>
+          </ul>
+          <h2>Clean      </h2>
+          <h3>Action:Clean all slots      </h3>
+          <ul>
+            <li>Clean all slots on server.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Action:Clean slot      </h3>
+          <ul>
+            <li>Clean slot on server.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Name ( number or string ) : The slot name.</li>
+            </ul>
+          </ul>
+          <h2>Load      </h2>
+          <h3>Action:Get all headers      </h3>
+          <ul>
+            <li>Get all slot headers from server.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Action:Get body      </h3>
+          <ul>
+            <li>Get slot body from server.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Name ( number or string ) : The slot name.</li>
+            </ul>
+          </ul>
+          <h2>Prepare      </h2>
+          <h3>Action:Set value      </h3>
+          <ul>
+            <li>Sets value into slot.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Key ( number or string ) : The name of the key.</li>
+              <li>Value ( number or string ) : The value to set</li>
+              <li>Slot ( Combo ) : Header or body.</li>
+              <ul>
+                <li>Options : [&quot;Header&quot;,&quot;Body&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h3>Action:Set boolean value      </h3>
+          <ul>
+            <li>Sets boolean value into slot.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Key ( number or string ) : The name of the key.</li>
+              <li>Boolean ( Combo ) : Boolean value.</li>
+              <ul>
+                <li>Options : [&quot;False&quot;,&quot;True&quot;]</li>
+              </ul>
+              <li>Slot ( Combo ) : Header or body.</li>
+              <ul>
+                <li>Options : [&quot;Header&quot;,&quot;Body&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h3>Action:Set to current server timestamp      </h3>
+          <ul>
+            <li>Sets current server timestamp into slot.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Key ( number or string ) : The name of the key.</li>
+              <li>Slot ( Combo ) : Header or body.</li>
+              <ul>
+                <li>Options : [&quot;Header&quot;,&quot;Body&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h3>Action:Remove key      </h3>
+          <ul>
+            <li>Remove from slot.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Key ( number or string ) : The name of the key.</li>
+              <li>Slot ( Combo ) : Header or body.</li>
+              <ul>
+                <li>Options : [&quot;Header&quot;,&quot;Body&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h3>Action:Set JSON      </h3>
+          <ul>
+            <li>Sets JSON into slot.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Key ( number or string ) : The name of the key.</li>
+              <li>JSON ( string ) : The JSON to set</li>
+              <li>Slot ( Combo ) : Header or body.</li>
+              <ul>
+                <li>Options : [&quot;Header&quot;,&quot;Body&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h2>Save      </h2>
+          <h3>Action:Save      </h3>
+          <ul>
+            <li>Save slot into server.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Name ( number or string ) : The slot name.</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">    
+        <div class="panel-title">    
+          <h2>Expressions</h2>
+        </div>
+        <div class="panel-body">           
+          <h2>Body    </h2>
+          <h3>Expression:BodyValue </h3>
+          <ul>
+            <li>Get body value by key. Add key at 1st parameter, add default value at 2nd parameter if read data is null</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:LastSlotName </h3>
+          <ul>
+            <li>Get last loaded slot name.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Error    </h2>
+          <h3>Expression:LastErrorCode </h3>
+          <ul>
+            <li>Error code.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:LastErrorMessage </h3>
+          <ul>
+            <li>Error message (error.serverResponse) .</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>For each header    </h2>
+          <h3>Expression:CurSlotName </h3>
+          <ul>
+            <li>Get current slot name in a For Each loop.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:CurHeaderValue </h3>
+          <ul>
+            <li>Get current header value by key in a For Each loop. Add default value at 2nd parameter if read data is null.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>For each key    </h2>
+          <h3>Expression:CurKey </h3>
+          <ul>
+            <li>Get current key in a For Each loop.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:CurValue </h3>
+          <ul>
+            <li>Get current value in a For Each loop.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Headers    </h2>
+          <h3>Expression:HeaderValue </h3>
+          <ul>
+            <li>Get header value by slot name and key. Add default value at 3rd parameter if read data is null.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>JSON    </h2>
+          <h3>Expression:HeadersToJSON </h3>
+          <ul>
+            <li>Get all headers in JSON string.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:BodyToJSON </h3>
+          <ul>
+            <li>Get all body values in JSON string.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">       
+          <h2>Conditions</h2>
+        </div>
+        <div class="panel-body">              
+          <h2>Body    </h2>
+          <h4>Condition:Invalid body                    </h4>
+          <ul>
+            <li>Current loaded body is invalid.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Body - for each    </h2>
+          <h4>Condition:For each key                    </h4>
+          <ul>
+            <li>Repeat the event for each key in body.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Clean    </h2>
+          <h4>Condition:On clean                    </h4>
+          <ul>
+            <li>Triggered when clean slots complete on server complete.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On clean error                    </h4>
+          <ul>
+            <li>Triggered when clean slots error on server error.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Header    </h2>
+          <h4>Condition:All slots are empty                    </h4>
+          <ul>
+            <li>All slots are unused. Call it after load headers from server.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:Slot is occupied                    </h4>
+          <ul>
+            <li>Slot is occupied. Call it after load headers from server.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Name ( number or string ) : The slot name.    </li>
+            </ul>
+          </ul>
+          <h2>Header - for each    </h2>
+          <h4>Condition:For each key                    </h4>
+          <ul>
+            <li>Repeat the event for each key in a header.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Name ( number or string ) : The slot name.    </li>
+            </ul>
+          </ul>
+          <h2>Load - body    </h2>
+          <h4>Condition:On get body                    </h4>
+          <ul>
+            <li>Triggered when get slot body complete from server complete.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On get unused body                    </h4>
+          <ul>
+            <li>Triggered when get unused body.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On get body error                    </h4>
+          <ul>
+            <li>Triggered when get slot body error.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Load - header    </h2>
+          <h4>Condition:On get headers                    </h4>
+          <ul>
+            <li>Triggered when get all slot headers from server.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:For each header                    </h4>
+          <ul>
+            <li>Repeat the event for each slot header.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On get headers error                    </h4>
+          <ul>
+            <li>Triggered when get all slot headers error.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Save    </h2>
+          <h4>Condition:On save                    </h4>
+          <ul>
+            <li>Triggered when save complete.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On save error                    </h4>
+          <ul>
+            <li>Triggered when save error.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -15,7 +15,7 @@ block content
                 if item.deprecated
                     | ( Deprecated ) 
                     
-                - url = item.fileName + ".html"                
+                - url = item.fileName.toLowerCase() + ".html"                
                 if !item.deprecated
                     a.btn.btn-default(href=url) #{item.name}
                 else

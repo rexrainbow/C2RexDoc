@@ -1,0 +1,111 @@
+<!DOCTYPE 5>
+<html>
+  <head>
+    <title>Behavior : Pin offsetXY</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="js/jquery-3.1.0.min.js">                         </script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      
+      ga('create', 'UA-88123342-2', 'auto');
+      ga('send', 'pageview');            
+      
+    </script>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header"><a class="navbar-brand" href="./index.html">Home</a></div>
+        <ul class="nav navbar-nav">
+          <li><a href="./pluginsIndex.html">Plugins      </a></li>
+          <li><a href="./behaviorsIndex.html">Behaviors                   </a></li>
+          <li><a href="./effectsIndex.html">Effects    </a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Behavior : Pin offsetXY</h1>
+      <p>Author:Rex.Rainbow</p>
+      <ul>
+        <li>Stick to another object maintaining a relative offsetXY.</li>
+      </ul><a class="btn btn-default" href="https://rexrainbow.github.io/C2RexDoc/repo/rex_pinoffsetxy.7z">Download    </a>
+      <div class="panel panel-default">
+        <div class="panel-title">
+          <h2>Properties</h2>
+        </div>
+        <div class="panel-body">
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">   
+          <h2>Actions</h2>
+        </div>
+        <div class="panel-body">
+          <h2>Pin      </h2>
+          <h3>Action:Pin to object with offset      </h3>
+          <ul>
+            <li>Pin the object to another object with offset.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Pin to ( object ) : Choose the object to pin to.</li>
+              <li>Offset x ( number ) : Offset x in pixel</li>
+              <li>Offset y ( number ) : Offset y in pixel</li>
+            </ul>
+          </ul>
+          <h3>Action:Pin to object      </h3>
+          <ul>
+            <li>Pin the object to another object with current offset.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Pin to ( object ) : Choose the object to pin to.</li>
+            </ul>
+          </ul>
+          <h2>Unpin      </h2>
+          <h3>Action:Unpin      </h3>
+          <ul>
+            <li>Unpin the object.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">    
+        <div class="panel-title">    
+          <h2>Expressions</h2>
+        </div>
+        <div class="panel-body">           
+          <h2>    </h2>
+          <h3>Expression:PinnedUID </h3>
+          <ul>
+            <li>Get the UID of the object pinned to, or -1 if not pinned.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">       
+          <h2>Conditions</h2>
+        </div>
+        <div class="panel-body">              
+          <h2>    </h2>
+          <h4>Condition:Is pinned                    </h4>
+          <ul>
+            <li>Object is currently pinned to another object.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

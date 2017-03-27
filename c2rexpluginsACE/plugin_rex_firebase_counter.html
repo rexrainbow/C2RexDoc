@@ -1,0 +1,249 @@
+<!DOCTYPE 5>
+<html>
+  <head>
+    <title>Plugin : Counter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="js/jquery-3.1.0.min.js">                         </script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      
+      ga('create', 'UA-88123342-2', 'auto');
+      ga('send', 'pageview');            
+      
+    </script>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header"><a class="navbar-brand" href="./index.html">Home</a></div>
+        <ul class="nav navbar-nav">
+          <li><a href="./pluginsIndex.html">Plugins      </a></li>
+          <li><a href="./behaviorsIndex.html">Behaviors                   </a></li>
+          <li><a href="./effectsIndex.html">Effects    </a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Plugin : Counter</h1>
+      <p>Author:Rex.Rainbow</p>
+      <ul>
+        <li>Counter to increase or decrease value.</li>
+      </ul><a class="btn btn-default" href="https://rexrainbow.github.io/C2RexDoc/repo/rex_firebase.7z">Download    </a>
+      <div class="panel panel-default">
+        <div class="panel-title">
+          <h2>Properties</h2>
+        </div>
+        <div class="panel-body">
+          <h3>Domain</h3>
+          <ul>
+            <li>The root location of the Firebase data.                    </li>
+          </ul>
+          <h3>Sub domain</h3>
+          <ul>
+            <li>Sub domain for this function.                    </li>
+          </ul>
+          <h3>Initial</h3>
+          <ul>
+            <li>Initial value if counter value is null.                    </li>
+          </ul>
+          <h3>Upper bound</h3>
+          <ul>
+            <li>Upper bound of counter, &quot;&quot; is none. Counter value will be clamped at upper bound.                    </li>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">   
+          <h2>Actions</h2>
+        </div>
+        <div class="panel-body">
+          <h2>Add      </h2>
+          <h3>Action:Try add to      </h3>
+          <ul>
+            <li>Try add to.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Value ( number or string ) : Value to add. Positive or negative number, or &quot;+10%&quot; string based on current value.</li>
+            </ul>
+          </ul>
+          <h2>Configure      </h2>
+          <h3>Action:Set boundaries      </h3>
+          <ul>
+            <li>Set initial value and upper bound. &quot;&quot; is none.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Init ( number ) : Initial value.</li>
+              <li>Upper bound ( number or string ) : Upper bound value. &quot;&quot; is none.</li>
+            </ul>
+          </ul>
+          <h2>Custom add      </h2>
+          <h3>Action:Try add by function      </h3>
+          <ul>
+            <li>Try add by function.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Function ( string ) : Function for increasing counter.</li>
+            </ul>
+          </ul>
+          <h3>Action:Add to      </h3>
+          <ul>
+            <li>Try add to, used under &quot;Condition:On custom add&quot;.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Value ( number ) : Value to add. Positive or negative number.</li>
+            </ul>
+          </ul>
+          <h3>Action:Abort      </h3>
+          <ul>
+            <li>Abort current action, used under &quot;Condition:On custom add&quot;.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Domain      </h2>
+          <h3>Action:Set domain      </h3>
+          <ul>
+            <li>Set domain ref.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Domain ( string ) : The root location of the Firebase data.</li>
+              <li>Sub domain ( string ) : Sub domain for this function.</li>
+            </ul>
+          </ul>
+          <h2>Set      </h2>
+          <h3>Action:Force set to      </h3>
+          <ul>
+            <li>Force set value, it will cancel any pending adding action.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Value ( number ) : Value to set.</li>
+            </ul>
+          </ul>
+          <h2>Update      </h2>
+          <h3>Action:Start      </h3>
+          <ul>
+            <li>Start update.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Action:Stop      </h3>
+          <ul>
+            <li>Stop update.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">    
+        <div class="panel-title">    
+          <h2>Expressions</h2>
+        </div>
+        <div class="panel-body">           
+          <h2>Add    </h2>
+          <h3>Expression:LastWroteValue </h3>
+          <ul>
+            <li>Get my last wrote value. Valid under &quot;condition:On my writing&quot;.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:LastAddedValue </h3>
+          <ul>
+            <li>Get my last added value. Valid under &quot;condition:On my writing&quot;.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Counter    </h2>
+          <h3>Expression:LastValue </h3>
+          <ul>
+            <li>Get last value. Return Init value if last value is null.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Custom add    </h2>
+          <h3>Expression:CustomAddIn </h3>
+          <ul>
+            <li>Get current value, used under &quot;Condition:On custom add&quot;.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">       
+          <h2>Conditions</h2>
+        </div>
+        <div class="panel-body">              
+          <h2>Add    </h2>
+          <h4>Condition:On my writing                    </h4>
+          <ul>
+            <li>Triggered when my writing successfully.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:Compare my last wrote value                    </h4>
+          <ul>
+            <li>Compare my last wrote value.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Comparison ( cmp ) : Choose the way to compare my last wrote value.    </li>
+              <li>Value ( number ) : The value to compare my last wrote value to.    </li>
+            </ul>
+          </ul>
+          <h4>Condition:Compare last counter value                    </h4>
+          <ul>
+            <li>Compare last counter value.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Comparison ( cmp ) : Choose the way to compare last counter value.    </li>
+              <li>Value ( number ) : The value to compare last counter value to.    </li>
+            </ul>
+          </ul>
+          <h4>Condition:On my writing abort                    </h4>
+          <ul>
+            <li>Triggered when my writing abort.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On my writing error                    </h4>
+          <ul>
+            <li>Triggered when my writing error.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Custom add    </h2>
+          <h4>Condition:On custom add                    </h4>
+          <ul>
+            <li>Custom add function.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Function ( string ) : Function for increasing counter.    </li>
+            </ul>
+          </ul>
+          <h2>Update    </h2>
+          <h4>Condition:On update                    </h4>
+          <ul>
+            <li>Triggered when counter updated.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE 5>
+<html>
+  <head>
+    <title>Plugin : Frame message</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="js/jquery-3.1.0.min.js">                         </script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      
+      ga('create', 'UA-88123342-2', 'auto');
+      ga('send', 'pageview');            
+      
+    </script>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header"><a class="navbar-brand" href="./index.html">Home</a></div>
+        <ul class="nav navbar-nav">
+          <li><a href="./pluginsIndex.html">Plugins      </a></li>
+          <li><a href="./behaviorsIndex.html">Behaviors                   </a></li>
+          <li><a href="./effectsIndex.html">Effects    </a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Plugin : Frame message</h1>
+      <p>Author:Rex.Rainbow</p>
+      <ul>
+        <li>Call function (postMessage) on other frames.</li>
+      </ul><a class="btn btn-default" href="https://rexrainbow.github.io/C2RexDoc/repo/rex_frame.7z">Download    </a>
+      <div class="panel panel-default">
+        <div class="panel-title">
+          <h2>Properties</h2>
+        </div>
+        <div class="panel-body">
+          <h3>Frame name</h3>
+          <ul>
+            <li>My frame name for receiving.                    </li>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">   
+          <h2>Actions</h2>
+        </div>
+        <div class="panel-body">
+          <h2>Console      </h2>
+          <h3>Action:Log      </h3>
+          <ul>
+            <li>Log a message to the top frame console, which can be useful for debugging.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Type ( Combo ) : Choose the type of message to log to the browser console.</li>
+              <ul>
+                <li>Options : [&quot;Log&quot;,&quot;Warn&quot;,&quot;Error&quot;]</li>
+              </ul>
+              <li>Message ( number or string ) : Enter the message text to log to the browser console.</li>
+            </ul>
+          </ul>
+          <h2>Function      </h2>
+          <h3>Action:Set return value      </h3>
+          <ul>
+            <li>In an 'On function' event, set the return value.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Value ( number or string ) : A number or some text to return from the function call.</li>
+            </ul>
+          </ul>
+          <h2>Receive      </h2>
+          <h3>Action:Set my frame name      </h3>
+          <ul>
+            <li>Set my frame name for receiving.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Frame name ( string ) : My frame name for receiving.</li>
+            </ul>
+          </ul>
+          <h2>Send      </h2>
+          <h3>Action:Call function      </h3>
+          <ul>
+            <li>Call function on other frame.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Receiver ( string ) : Frame name of receiver. Set &quot;&quot; to broadcast to all frames.</li>
+              <li>Name ( string ) : The name of the function to call.</li>
+              <li>Parameter {n} ( variadic ) : A parameter to pass for the function call, which can be accessed with Function.Param({n}).</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">    
+        <div class="panel-title">    
+          <h2>Expressions</h2>
+        </div>
+        <div class="panel-body">           
+          <h2>Frame name    </h2>
+          <h3>Expression:MyFrameName </h3>
+          <ul>
+            <li>Get my frame name.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Function    </h2>
+          <h3>Expression:ParamCount </h3>
+          <ul>
+            <li>Get the number of parameters passed to this function.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:Param </h3>
+          <ul>
+            <li>Get the value of a parameter passed to the function.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Index ( number ) : The zero-based index of the parameter to get.</li>
+            </ul>
+          </ul>
+          <h3>Expression:ReturnValue </h3>
+          <ul>
+            <li>Get the value set by 'Set return value'.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Message    </h2>
+          <h3>Expression:LastSender </h3>
+          <ul>
+            <li>Get Frame name of last sender.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">       
+          <h2>Conditions</h2>
+        </div>
+        <div class="panel-body">              
+          <h2>Function    </h2>
+          <h4>Condition:On function                    </h4>
+          <ul>
+            <li>Triggered when a function is called.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Name ( string ) : The name of the function that is being called.    </li>
+            </ul>
+          </ul>
+          <h4>Condition:On Return                    </h4>
+          <ul>
+            <li>Triggered when a function is returned.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Name ( string ) : The name of the function that is being returned.    </li>
+            </ul>
+          </ul>
+          <h2>Parent    </h2>
+          <h4>Condition:Top frame                    </h4>
+          <ul>
+            <li>Return true if current frame is top frame. i.e. not in iframe or pop-up window                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

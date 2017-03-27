@@ -1,0 +1,340 @@
+<!DOCTYPE 5>
+<html>
+  <head>
+    <title>Behavior : JSON</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="js/jquery-3.1.0.min.js">                         </script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      
+      ga('create', 'UA-88123342-2', 'auto');
+      ga('send', 'pageview');            
+      
+    </script>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header"><a class="navbar-brand" href="./index.html">Home</a></div>
+        <ul class="nav navbar-nav">
+          <li><a href="./pluginsIndex.html">Plugins      </a></li>
+          <li><a href="./behaviorsIndex.html">Behaviors                   </a></li>
+          <li><a href="./effectsIndex.html">Effects    </a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Behavior : JSON</h1>
+      <p>Author:Rex.Rainbow</p>
+      <ul>
+        <li>Access JSON structure table.</li>
+      </ul><a class="btn btn-default" href="https://rexrainbow.github.io/C2RexDoc/repo/rex_bHash.7z">Download    </a>
+      <div class="panel panel-default">
+        <div class="panel-title">
+          <h2>Properties</h2>
+        </div>
+        <div class="panel-body">
+          <h3>Initial data</h3>
+          <ul>
+            <li>Set initial data. ex:&quot;{&quot;a&quot;:10,&quot;b&quot;:{&quot;c&quot;:&quot;d&quot;}}&quot;.                    </li>
+          </ul>
+          <h3>Indent</h3>
+          <ul>
+            <li>Indent for pretty print. Set (-1) to disable this feature.                    </li>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">   
+          <h2>Actions</h2>
+        </div>
+        <div class="panel-body">
+          <h2>Array      </h2>
+          <h3>Action:Shuffle      </h3>
+          <ul>
+            <li>Shuffle items in array.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Key string ( string ) : The key string of the hash table value to set.</li>
+            </ul>
+          </ul>
+          <h3>Action:Sort      </h3>
+          <ul>
+            <li>Sort items in array.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Entry ( string ) : The entry key string of the hash table.</li>
+              <li>Key ( string ) : The key string for sorting.</li>
+              <li>Sort ( Combo ) : Sort method.</li>
+              <ul>
+                <li>Options : [&quot;descending&quot;,&quot;ascending&quot;,&quot;logical descending&quot;,&quot;logical ascending&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h2>Array - Insert      </h2>
+          <h3>Action:Insert JSON      </h3>
+          <ul>
+            <li>Insert JSON into array.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Key string ( string ) : The key string of the hash table value to set.</li>
+              <li>JSON ( string ) : JSON string.</li>
+              <li>Index ( number ) : Index of this array to insert.</li>
+            </ul>
+          </ul>
+          <h3>Action:Insert value      </h3>
+          <ul>
+            <li>Insert value into array.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Key string ( string ) : The key string of the hash table value to set.</li>
+              <li>Value ( number or string ) : The value to push in the hash table.</li>
+              <li>Index ( number ) : Index of this array to insert.</li>
+            </ul>
+          </ul>
+          <h2>Array - Push      </h2>
+          <h3>Action:Push JSON      </h3>
+          <ul>
+            <li>Push JSON into array.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Key string ( string ) : The key string of the hash table value to set.</li>
+              <li>JSON ( string ) : JSON string.</li>
+            </ul>
+          </ul>
+          <h3>Action:Push value      </h3>
+          <ul>
+            <li>Push value into array.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Key string ( string ) : The key string of the hash table value to set.</li>
+              <li>Value ( number or string ) : The value to push in the hash table.</li>
+            </ul>
+          </ul>
+          <h2>Hash table      </h2>
+          <h3>Action:Clean all      </h3>
+          <ul>
+            <li>{my} clean table.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Indent      </h2>
+          <h3>Action:Set indent      </h3>
+          <ul>
+            <li>Set indent for pretty print. Set (-1) to disable this feature.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Value ( number or string ) : The value to push in the hash table.</li>
+            </ul>
+          </ul>
+          <h2>Keys      </h2>
+          <h3>Action:Pick keys      </h3>
+          <ul>
+            <li>Pick keys into an array.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Key string ( string ) : The key string of the hash table.</li>
+              <li>Array ( object ) : Array instance to put result.</li>
+            </ul>
+          </ul>
+          <h2>Load      </h2>
+          <h3>Action:Load from JSON      </h3>
+          <ul>
+            <li>Load content from JSON string.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>JSON string ( string ) : JSON string.</li>
+            </ul>
+          </ul>
+          <h2>Merge      </h2>
+          <h3>Action:Merge      </h3>
+          <ul>
+            <li>Merge hash table with other hash table.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Hash table B ( object ) : Hash table instance to merge.</li>
+              <li>Mode ( Combo ) : Merge mode.</li>
+              <ul>
+                <li>Options : [&quot;Overwrite from hash B&quot;,&quot;Merge new keys from hash table B&quot;,&quot;Clean then copy from hash table B&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h2>Remove      </h2>
+          <h3>Action:Remove key      </h3>
+          <ul>
+            <li>Remove key.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Key string ( string ) : The key string of the hash table value to remove.</li>
+            </ul>
+          </ul>
+          <h2>Value      </h2>
+          <h3>Action:Set value      </h3>
+          <ul>
+            <li>Set value by a key string.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Key string ( string ) : The key string of the hash table value to set.</li>
+              <li>Value ( number or string ) : The value to store in the hash table.</li>
+            </ul>
+          </ul>
+          <h3>Action:Set JSON      </h3>
+          <ul>
+            <li>Set JSON by a key string.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Key string ( string ) : The key string of the hash table value to set.</li>
+              <li>JSON ( string ) : JSON string.</li>
+            </ul>
+          </ul>
+          <h3>Action:Add to      </h3>
+          <ul>
+            <li>Add to the value of key.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Key string ( string ) : The key string of the hash table value to add.</li>
+              <li>Value ( number or string ) : The value to store in the hash table.</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">    
+        <div class="panel-title">    
+          <h2>Expressions</h2>
+        </div>
+        <div class="panel-body">           
+          <h2>Array    </h2>
+          <h3>Expression:Pop </h3>
+          <ul>
+            <li>Pop from array.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Key ( string ) : The key of the hash to get.</li>
+            </ul>
+          </ul>
+          <h2>For each    </h2>
+          <h3>Expression:CurKey </h3>
+          <ul>
+            <li>Get the current key in a For Each loop.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:CurValue </h3>
+          <ul>
+            <li>Get the current value in a For Each loop. Add 2nd parameter to return sub-item by keys. Add 3rd parameter to return default value when got invalid value.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:Loopindex </h3>
+          <ul>
+            <li>Get loop index in a for each loop.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Items    </h2>
+          <h3>Expression:ItemCnt </h3>
+          <ul>
+            <li>Get item count. 0 means the item is number or string type, (-1) means the item does not exist.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Key ( string ) : The key of the hash to get.</li>
+            </ul>
+          </ul>
+          <h3>Expression:Keys2ItemCnt </h3>
+          <ul>
+            <li>Get item count by keys, each parameter is a key. 0 means the item is number or string type, (-1) means the item does not exist.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Key ( number or string ) : The key of the hash to get.</li>
+            </ul>
+          </ul>
+          <h2>JSON    </h2>
+          <h3>Expression:ToString </h3>
+          <ul>
+            <li>Create a hash table and transfer it to JSON string. If there has no parameter, transfer current hash table to JSON string.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:AsJSON </h3>
+          <ul>
+            <li>Get content as JSON string.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Key    </h2>
+          <h3>Expression:RandomKeyAt </h3>
+          <ul>
+            <li>Get random key in a table. Add 2nd parameter to return default value when got invalid value.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Key ( string ) : The key of the hash to get.</li>
+            </ul>
+          </ul>
+          <h2>Value    </h2>
+          <h3>Expression:At </h3>
+          <ul>
+            <li>Get value from the hash by key string, return JSON string if the item is an object. Add 2nd parameter to return default value when got invalid value.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Key ( string ) : The key string of the hash to get.</li>
+            </ul>
+          </ul>
+          <h3>Expression:AtKeys </h3>
+          <ul>
+            <li>Get value from the hash by keys, each parameter is a key.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Key ( number or string ) : The key of the hash to get.</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">       
+          <h2>Conditions</h2>
+        </div>
+        <div class="panel-body">              
+          <h2>Entry    </h2>
+          <h4>Condition:Is empty                    </h4>
+          <ul>
+            <li>Return true if an entry is empty i.e. has no key.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Key string ( string ) : The key string of the hash table.    </li>
+            </ul>
+          </ul>
+          <h2>For Each    </h2>
+          <h4>Condition:For each key                    </h4>
+          <ul>
+            <li>Repeat the event for each item in key.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Key string ( string ) : The key string of the hash table.    </li>
+            </ul>
+          </ul>
+          <h2>Key    </h2>
+          <h4>Condition:Key exists                    </h4>
+          <ul>
+            <li>Return true if a key exists in hash table.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Key string ( string ) : The key string of the hash table.    </li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

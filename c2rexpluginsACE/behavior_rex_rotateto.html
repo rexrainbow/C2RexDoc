@@ -1,0 +1,261 @@
+<!DOCTYPE 5>
+<html>
+  <head>
+    <title>Behavior : RotateTo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="js/jquery-3.1.0.min.js">                         </script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      
+      ga('create', 'UA-88123342-2', 'auto');
+      ga('send', 'pageview');            
+      
+    </script>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header"><a class="navbar-brand" href="./index.html">Home</a></div>
+        <ul class="nav navbar-nav">
+          <li><a href="./pluginsIndex.html">Plugins      </a></li>
+          <li><a href="./behaviorsIndex.html">Behaviors                   </a></li>
+          <li><a href="./effectsIndex.html">Effects    </a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Behavior : RotateTo</h1>
+      <p>Author:Rex.Rainbow</p>
+      <ul>
+        <li>Spin sprite to specific angle</li>
+      </ul><a class="btn btn-default" href="https://rexrainbow.github.io/C2RexDoc/repo/rex_rotateto.7z">Download    </a>
+      <div class="panel panel-default">
+        <div class="panel-title">
+          <h2>Properties</h2>
+        </div>
+        <div class="panel-body">
+          <h3>Activated</h3>
+          <ul>
+            <li>Enable if you wish this to begin at the start of the layout.                    </li>
+            <ul>
+              <li>Options : [&quot;No&quot;,&quot;Yes&quot;]</li>
+            </ul>
+          </ul>
+          <h3>Max speed</h3>
+          <ul>
+            <li>Maximum speed, in degree per second.                    </li>
+          </ul>
+          <h3>Acceleration</h3>
+          <ul>
+            <li>Acceleration, in degree per second per second.                    </li>
+          </ul>
+          <h3>Deceleration</h3>
+          <ul>
+            <li>Deceleration, in degree per second per second.                    </li>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">   
+          <h2>Actions</h2>
+        </div>
+        <div class="panel-body">
+          <h2>      </h2>
+          <h3>Action:Set enable      </h3>
+          <ul>
+            <li>Enable the object's RotateTo behavior.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Activated ( Combo ) : Enable the behavior.</li>
+              <ul>
+                <li>Options : [&quot;No&quot;,&quot;Yes&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h2>Speed      </h2>
+          <h3>Action:Set maximum speed      </h3>
+          <ul>
+            <li>Set the object's maximum speed.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Max speed ( number ) : Maximum speed, in degree per second.</li>
+            </ul>
+          </ul>
+          <h3>Action:Set acceleration      </h3>
+          <ul>
+            <li>Set the object's acceleration.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Acceleration ( number ) : The acceleration setting, in degree per second per second.</li>
+            </ul>
+          </ul>
+          <h3>Action:Set deceleration      </h3>
+          <ul>
+            <li>Set the object's deceleration.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Deceleration ( number ) : The deceleration setting, in degrees per second per second.</li>
+            </ul>
+          </ul>
+          <h3>Action:Set current speed      </h3>
+          <ul>
+            <li>Set the object's Current speed.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Current speed ( number ) : Current speed, in degree per second.</li>
+            </ul>
+          </ul>
+          <h2>Stop      </h2>
+          <h3>Action:Stop      </h3>
+          <ul>
+            <li>Stop moving.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Target angle      </h2>
+          <h3>Action:Rotate to angle      </h3>
+          <ul>
+            <li>Set target angle to rotate toward.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Angle ( number ) : The angle to rotate toward.</li>
+              <li>Clockwise ( Combo ) : Rotate clockwise or anti-clockwise.</li>
+              <ul>
+                <li>Options : [&quot;Anti-Clockwise&quot;,&quot;Clockwise&quot;,&quot;Nearest side&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h3>Action:Rotate to object      </h3>
+          <ul>
+            <li>Set target angle to rotate toward.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Target ( object ) : Target object.</li>
+              <li>Clockwise ( Combo ) : Rotate clockwise or anti-clockwise.</li>
+              <ul>
+                <li>Options : [&quot;Anti-Clockwise&quot;,&quot;Clockwise&quot;,&quot;Nearest side&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h3>Action:Rotate by delta angle      </h3>
+          <ul>
+            <li>Set target angle to rotate toward by delta angle.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>dA ( number ) : The delta angle to rotate toward, in degree.</li>
+              <li>Clockwise ( Combo ) : Rotate clockwise or anti-clockwise.</li>
+              <ul>
+                <li>Options : [&quot;Anti-Clockwise&quot;,&quot;Clockwise&quot;,&quot;Nearest side&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h3>Action:Rotate toward to position      </h3>
+          <ul>
+            <li>Set target angle toward to position.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>X ( number ) : X co-ordinate of target position.</li>
+              <li>Y ( number ) : Y co-ordinate of target position.</li>
+              <li>Clockwise ( Combo ) : Rotate clockwise or anti-clockwise.</li>
+              <ul>
+                <li>Options : [&quot;Anti-Clockwise&quot;,&quot;Clockwise&quot;,&quot;Nearest side&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">    
+        <div class="panel-title">    
+          <h2>Expressions</h2>
+        </div>
+        <div class="panel-body">           
+          <h2>Current    </h2>
+          <h3>Expression:Activated </h3>
+          <ul>
+            <li>The current activated state of behavior.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:Speed </h3>
+          <ul>
+            <li>The current object speed, in degree per second.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Setting    </h2>
+          <h3>Expression:MaxSpeed </h3>
+          <ul>
+            <li>The maximum speed setting, in degree per second.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:Acc </h3>
+          <ul>
+            <li>The acceleration setting, in degree per second per second.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:Dec </h3>
+          <ul>
+            <li>The deceleration setting, in degree per second per second.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Target    </h2>
+          <h3>Expression:TargetAngle </h3>
+          <ul>
+            <li>The angle to spin toward.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">       
+          <h2>Conditions</h2>
+        </div>
+        <div class="panel-body">              
+          <h2>    </h2>
+          <h4>Condition:Is rotating                    </h4>
+          <ul>
+            <li>Is object rotating.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Speed    </h2>
+          <h4>Condition:Compare speed                    </h4>
+          <ul>
+            <li>Compare the current speed of the object.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Comparison ( cmp ) : Choose the way to compare the current speed.    </li>
+              <li>Speed ( number ) : The speed, in degree per second, to compare the current speed to.    </li>
+            </ul>
+          </ul>
+          <h2>Target    </h2>
+          <h4>Condition:On hit target angle                    </h4>
+          <ul>
+            <li>Triggered when hit target angle.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

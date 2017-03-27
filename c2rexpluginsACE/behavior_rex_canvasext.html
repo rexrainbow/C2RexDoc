@@ -1,0 +1,143 @@
+<!DOCTYPE 5>
+<html>
+  <head>
+    <title>Behavior : Canvas Ext</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="js/jquery-3.1.0.min.js">                         </script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      
+      ga('create', 'UA-88123342-2', 'auto');
+      ga('send', 'pageview');            
+      
+    </script>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header"><a class="navbar-brand" href="./index.html">Home</a></div>
+        <ul class="nav navbar-nav">
+          <li><a href="./pluginsIndex.html">Plugins      </a></li>
+          <li><a href="./behaviorsIndex.html">Behaviors                   </a></li>
+          <li><a href="./effectsIndex.html">Effects    </a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Behavior : Canvas Ext</h1>
+      <p>Author:Rex.Rainbow</p>
+      <ul>
+        <li>Extension of canvas.</li>
+      </ul><a class="btn btn-default" href="https://rexrainbow.github.io/C2RexDoc/repo/rex_canvasext.7z">Download    </a>
+      <div class="panel panel-default">
+        <div class="panel-title">
+          <h2>Properties</h2>
+        </div>
+        <div class="panel-body">
+          <h3>Override SL</h3>
+          <ul>
+            <li>Enable if you wish override original saving/loading.                    </li>
+            <ul>
+              <li>Options : [&quot;No&quot;,&quot;Zlib&quot;]</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">   
+          <h2>Actions</h2>
+        </div>
+        <div class="panel-body">
+          <h2>Canvas      </h2>
+          <h3>Action:Erase object      </h3>
+          <ul>
+            <li>Erase objects.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>object ( object ) : Object to erase.</li>
+            </ul>
+          </ul>
+          <h2>Script      </h2>
+          <h3>Action:Eval      </h3>
+          <ul>
+            <li>Run code to draw on canvas (ctx).   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Js code ( string ) : Code string for drawing.</li>
+            </ul>
+          </ul>
+          <h2>Shadow      </h2>
+          <h3>Action:Set shadow      </h3>
+          <ul>
+            <li>Set shadow.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Offset X ( number ) : Offset X of shadow, in pixels.</li>
+              <li>Offset Y ( number ) : Offset Y of shadow, in pixels.</li>
+              <li>Blur ( number ) : Blur of shadow, in pixels.</li>
+              <li>Color ( number or string ) : The new font color, in the form rgb(r, g, b).</li>
+            </ul>
+          </ul>
+          <h2>Web      </h2>
+          <h3>Action:Load image from URL      </h3>
+          <ul>
+            <li>Replace the currently displaying animation frame with an image loaded from a web address or data URI.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>URI ( string ) : Enter the URL on the web, or data URI, of an image to load.</li>
+              <li>Size ( Combo ) : Whether to resize the sprite to the size of the loaded image, or stretch it to the current size.</li>
+              <ul>
+                <li>Options : [&quot;Resize to image size&quot;,&quot;Keep current size&quot;,&quot;Scale down if larger than canvas&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h2>Zlib      </h2>
+          <h3>Action:Load      </h3>
+          <ul>
+            <li>Load from a image data previously encoded in zipped JSON format.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>JSON ( string ) : A string of the zp data to load.</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">    
+        <div class="panel-title">    
+          <h2>Expressions</h2>
+        </div>
+        <div class="panel-body">           
+          <h2>Zlib    </h2>
+          <h3>Expression:AsJSON </h3>
+          <ul>
+            <li>Return the image data in JSON format after zip.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">       
+          <h2>Conditions</h2>
+        </div>
+        <div class="panel-body">              
+          <h2>Web    </h2>
+          <h4>Condition:On image URL loaded                    </h4>
+          <ul>
+            <li>Triggered after 'Load image from URL' when the image has finished loading.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

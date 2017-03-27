@@ -1,0 +1,453 @@
+<!DOCTYPE 5>
+<html>
+  <head>
+    <title>Plugin : Files</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="js/jquery-3.1.0.min.js">                         </script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      
+      ga('create', 'UA-88123342-2', 'auto');
+      ga('send', 'pageview');            
+      
+    </script>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header"><a class="navbar-brand" href="./index.html">Home</a></div>
+        <ul class="nav navbar-nav">
+          <li><a href="./pluginsIndex.html">Plugins      </a></li>
+          <li><a href="./behaviorsIndex.html">Behaviors                   </a></li>
+          <li><a href="./effectsIndex.html">Effects    </a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Plugin : Files</h1>
+      <p>Author:Rex.Rainbow</p>
+      <ul>
+        <li>Files stored in backendless serivice.</li>
+      </ul><a class="btn btn-default" href="https://rexrainbow.github.io/C2RexDoc/repo/rex_backendless.7z">Download    </a>
+      <div class="panel panel-default">
+        <div class="panel-title">
+          <h2>Properties</h2>
+        </div>
+        <div class="panel-body">
+          <h3>Lines</h3>
+          <ul>
+            <li>Line count of each page.                    </li>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">   
+          <h2>Actions</h2>
+        </div>
+        <div class="panel-body">
+          <h2>Copy      </h2>
+          <h3>Action:Copy      </h3>
+          <ul>
+            <li>Copy file or directory.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Directory path ( string ) : Directory path without the name of the file in the Backendless file storage.</li>
+              <li>File name ( string ) : Name of the file. Set to &quot;&quot; to renane directory.</li>
+              <li>New name ( string ) : New name for the file or directory.</li>
+            </ul>
+          </ul>
+          <h2>Delete      </h2>
+          <h3>Action:Detete      </h3>
+          <ul>
+            <li>Delete file or directory.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Directory path ( string ) : Directory path without the name of the file in the Backendless file storage.</li>
+              <li>File name ( string ) : Name of the file where the byte content should be written to. Set to &quot;&quot; to delete directory.</li>
+            </ul>
+          </ul>
+          <h2>List      </h2>
+          <h3>Action:Request in a range      </h3>
+          <ul>
+            <li>Load in a range.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Start ( number ) : Start index, 0-based.</li>
+              <li>Lines ( number ) : Count of lines</li>
+            </ul>
+          </ul>
+          <h2>List - 0. setting      </h2>
+          <h3>Action:Set directory      </h3>
+          <ul>
+            <li>Set listing directory path.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Directory path ( string ) : Directory path without the name of the file in the Backendless file storage.</li>
+              <li>Sub directory ( Combo ) : Include sub directory or not.</li>
+              <ul>
+                <li>Options : [&quot;&quot;,&quot;include sub folders&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h3>Action:Set pattern      </h3>
+          <ul>
+            <li>Set listing pattern.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Pattern ( string ) : A pattern which the returned files and directories must match, which can include wildcard characters.</li>
+            </ul>
+          </ul>
+          <h2>List - all      </h2>
+          <h3>Action:Request all      </h3>
+          <ul>
+            <li>Load all files list.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>List - page      </h2>
+          <h3>Action:Update current page      </h3>
+          <ul>
+            <li>Update current page.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Action:Turn to next page      </h3>
+          <ul>
+            <li>Turn to next page.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Action:Turn to previous page      </h3>
+          <ul>
+            <li>Turn to previous page.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Load - page      </h2>
+          <h3>Action:Turn to page      </h3>
+          <ul>
+            <li>Turn to page.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Index ( number ) : Page index, 0-based.</li>
+            </ul>
+          </ul>
+          <h2>Move      </h2>
+          <h3>Action:Move      </h3>
+          <ul>
+            <li>Move file or directory.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Directory path ( string ) : Directory path without the name of the file in the Backendless file storage.</li>
+              <li>File name ( string ) : Name of the file. Set to &quot;&quot; to renane directory.</li>
+              <li>New directory path ( string ) : New name for the file or directory.</li>
+            </ul>
+          </ul>
+          <h2>Rename      </h2>
+          <h3>Action:Rename      </h3>
+          <ul>
+            <li>Rename file or directory.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Directory path ( string ) : Directory path without the name of the file in the Backendless file storage.</li>
+              <li>File name ( string ) : Name of the file. Set to &quot;&quot; to renane directory.</li>
+              <li>New name ( string ) : New name for the file or directory.</li>
+            </ul>
+          </ul>
+          <h2>Upload      </h2>
+          <h3>Action:Upload from file chooser      </h3>
+          <ul>
+            <li>Upload file from file chooser to file storage.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>File chooser ( object ) : File chooser object.</li>
+              <li>Directory path ( string ) : Directory path without the name of the file in the Backendless file storage.</li>
+            </ul>
+          </ul>
+          <h3>Action:Upload from sprite      </h3>
+          <ul>
+            <li>Upload image from sprite or canvas to firebase storage.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Sprite ( object ) : Sprite or canvas object.</li>
+              <li>Directory path ( string ) : Directory path without the name of the file in the Backendless file storage.</li>
+              <li>File name ( string ) : Name of the file where the byte content should be written to.</li>
+            </ul>
+          </ul>
+          <h3>Action:Upload data URL      </h3>
+          <ul>
+            <li>Upload data URI to firebase storage.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Data URI ( string ) : Data URI of file</li>
+              <li>Directory path ( string ) : Directory path without the name of the file in the Backendless file storage.</li>
+              <li>File name ( string ) : Name of the file where the byte content should be written to.</li>
+            </ul>
+          </ul>
+          <h3>Action:Upload string      </h3>
+          <ul>
+            <li>Upload string to firebase storage.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Content ( string ) : String content</li>
+              <li>Directory path ( string ) : Directory path without the name of the file in the Backendless file storage.</li>
+              <li>File name ( string ) : Name of the file where the byte content should be written to.</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">    
+        <div class="panel-title">    
+          <h2>Expressions</h2>
+        </div>
+        <div class="panel-body">           
+          <h2>Error    </h2>
+          <h3>Expression:ErrorCode </h3>
+          <ul>
+            <li>Error code.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:ErrorMessage </h3>
+          <ul>
+            <li>Error message.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>List - for each    </h2>
+          <h3>Expression:CurFileName </h3>
+          <ul>
+            <li>Get current file name in a For Each loop.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:CurPublicUrl </h3>
+          <ul>
+            <li>Get current public url in a For Each loop.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:CurDirectory </h3>
+          <ul>
+            <li>Get current directory in a For Each loop.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:CurCreated </h3>
+          <ul>
+            <li>Get current created timestamp in a For Each loop.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:CurFileSize </h3>
+          <ul>
+            <li>Get current file size in a For Each loop.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>List - index    </h2>
+          <h3>Expression:Index2FileName </h3>
+          <ul>
+            <li>Get file name by index.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Index ( number ) : Global index, 0-based.</li>
+            </ul>
+          </ul>
+          <h3>Expression:Index2PublicUrl </h3>
+          <ul>
+            <li>Get public url by index.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Index ( number ) : Global index, 0-based.</li>
+            </ul>
+          </ul>
+          <h3>Expression:Index2Directory </h3>
+          <ul>
+            <li>Get directory by index.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Index ( number ) : Global index, 0-based.</li>
+            </ul>
+          </ul>
+          <h3>Expression:Index2Created </h3>
+          <ul>
+            <li>Get created timestamp by index.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Index ( number ) : Global index, 0-based.</li>
+            </ul>
+          </ul>
+          <h3>Expression:Index2FileSize </h3>
+          <ul>
+            <li>Get file size by index.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Index ( number ) : Global index, 0-based.</li>
+            </ul>
+          </ul>
+          <h2>Load - for each - index    </h2>
+          <h3>Expression:CurStartIndex </h3>
+          <ul>
+            <li>Get start index in current received page.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:LoopIndex </h3>
+          <ul>
+            <li>Get loop index in current received page.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:CurFileIndex </h3>
+          <ul>
+            <li>Get the current file index in a For Each loop.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Result    </h2>
+          <h3>Expression:LastDownloadURL </h3>
+          <ul>
+            <li>Get download URL of last action (upload/copy/move/rename) result.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>URL    </h2>
+          <h3>Expression:DownloadURL </h3>
+          <ul>
+            <li>Get download URL, add directory path in 1st parameter, fileName in 2nd parameter.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">       
+          <h2>Conditions</h2>
+        </div>
+        <div class="panel-body">              
+          <h2>Copy    </h2>
+          <h4>Condition:On copy                    </h4>
+          <ul>
+            <li>Triggered when copy success.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On copy error                    </h4>
+          <ul>
+            <li>Triggered when copy error.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Delete    </h2>
+          <h4>Condition:On deleted                    </h4>
+          <ul>
+            <li>Triggered when delete completed.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On deleted error                    </h4>
+          <ul>
+            <li>Triggered when delete error.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>List    </h2>
+          <h4>Condition:On get files list                    </h4>
+          <ul>
+            <li>Triggered when get files list success.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On get files list error                    </h4>
+          <ul>
+            <li>Triggered when get files list error.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>List - for each    </h2>
+          <h4>Condition:For each files                    </h4>
+          <ul>
+            <li>Repeat the event for each file of listing result.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Move    </h2>
+          <h4>Condition:On move                    </h4>
+          <ul>
+            <li>Triggered when move success.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On move error                    </h4>
+          <ul>
+            <li>Triggered when move error.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Rename    </h2>
+          <h4>Condition:On rename                    </h4>
+          <ul>
+            <li>Triggered when rename success.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On rename error                    </h4>
+          <ul>
+            <li>Triggered when rename error.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Upload    </h2>
+          <h4>Condition:On upload                    </h4>
+          <ul>
+            <li>Triggered when uploading completed.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On upload error                    </h4>
+          <ul>
+            <li>Triggered when uploading error.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

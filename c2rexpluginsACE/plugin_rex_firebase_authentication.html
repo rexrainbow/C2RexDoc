@@ -1,0 +1,471 @@
+<!DOCTYPE 5>
+<html>
+  <head>
+    <title>Plugin : Authentication</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="js/jquery-3.1.0.min.js">                         </script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      
+      ga('create', 'UA-88123342-2', 'auto');
+      ga('send', 'pageview');            
+      
+    </script>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header"><a class="navbar-brand" href="./index.html">Home</a></div>
+        <ul class="nav navbar-nav">
+          <li><a href="./pluginsIndex.html">Plugins      </a></li>
+          <li><a href="./behaviorsIndex.html">Behaviors                   </a></li>
+          <li><a href="./effectsIndex.html">Effects    </a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Plugin : Authentication</h1>
+      <p>Author:Rex.Rainbow</p>
+      <ul>
+        <li>Authentication which is provided by firebase. https://www.firebase.com/</li>
+      </ul><a class="btn btn-default" href="https://rexrainbow.github.io/C2RexDoc/repo/rex_firebase.7z">Download    </a>
+      <div class="panel panel-default">
+        <div class="panel-title">
+          <h2>Properties</h2>
+        </div>
+        <div class="panel-body">
+          <h3>Domain</h3>
+          <ul>
+            <li>The root location of the Firebase data. Deprecated in firebase3.x.                    </li>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">   
+          <h2>Actions</h2>
+        </div>
+        <div class="panel-body">
+          <h2>Anonymous      </h2>
+          <h3>Action:Login      </h3>
+          <ul>
+            <li>Login with anonymous.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Remember ( Combo ) : Persisting type</li>
+              <ul>
+                <li>Options : [&quot;default&quot;,&quot;sessionOnly&quot;,&quot;never&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h2>Authentication provider      </h2>
+          <h3>Action:Login      </h3>
+          <ul>
+            <li>Login by authentication provider.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Provider ( Combo ) : Authentication provider</li>
+              <ul>
+                <li>Options : [&quot;Facebook&quot;,&quot;Twitter&quot;,&quot;Github&quot;,&quot;Google&quot;]</li>
+              </ul>
+              <li>Type  ( Combo ) : Type of login window</li>
+              <ul>
+                <li>Options : [&quot;popup&quot;,&quot;redirect&quot;]</li>
+              </ul>
+              <li>Remember  ( Combo ) : Persisting type</li>
+              <ul>
+                <li>Options : [&quot;default&quot;,&quot;sessionOnly&quot;,&quot;never&quot;]</li>
+              </ul>
+              <li>scope ( string ) : A comma-delimited list of requested extended permissions</li>
+            </ul>
+          </ul>
+          <h3>Action:Login (provider name)      </h3>
+          <ul>
+            <li>Login by authentication provider.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Provider ( string ) : Code of authentication provider.</li>
+              <li>Type  ( Combo ) : Type of login window</li>
+              <ul>
+                <li>Options : [&quot;popup&quot;,&quot;redirect&quot;]</li>
+              </ul>
+              <li>Remember  ( Combo ) : Persisting type</li>
+              <ul>
+                <li>Options : [&quot;default&quot;,&quot;sessionOnly&quot;,&quot;never&quot;]</li>
+              </ul>
+              <li>scope ( string ) : A comma-delimited list of requested extended permissions</li>
+            </ul>
+          </ul>
+          <h2>Authentication token      </h2>
+          <h3>Action:Login      </h3>
+          <ul>
+            <li>Login with authentication token.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Token ( string ) : Token</li>
+              <li>Remember ( Combo ) : Persisting type</li>
+              <ul>
+                <li>Options : [&quot;default&quot;,&quot;sessionOnly&quot;,&quot;never&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h2>Authentication with token      </h2>
+          <h3>Action:Connect Facebook      </h3>
+          <ul>
+            <li>Authentication with Facebook access token, call it after facebook login.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Access token ( string ) : Access token from other plugin. Set &quot;&quot; if using official facebook to login.</li>
+              <li>Remember  ( Combo ) : Persisting type</li>
+              <ul>
+                <li>Options : [&quot;default&quot;,&quot;sessionOnly&quot;,&quot;never&quot;]</li>
+              </ul>
+              <li>scope ( string ) : A comma-delimited list of requested extended permissions</li>
+            </ul>
+          </ul>
+          <h2>Email &amp; Password      </h2>
+          <h3>Action:Create account      </h3>
+          <ul>
+            <li>Create account with email &amp; password.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Email ( string ) : User email</li>
+              <li>Password ( string ) : User password</li>
+            </ul>
+          </ul>
+          <h3>Action:Login      </h3>
+          <ul>
+            <li>Login with email &amp; password.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Email ( string ) : User email</li>
+              <li>Password ( string ) : User password</li>
+              <li>Remember ( Combo ) : Persisting type</li>
+              <ul>
+                <li>Options : [&quot;default&quot;,&quot;sessionOnly&quot;,&quot;never&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h3>Action:Change password      </h3>
+          <ul>
+            <li>Change password of current user.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Email ( string ) : (2.x) User email</li>
+              <li>Old password ( string ) : (2.x) Old password</li>
+              <li>New password ( string ) : New password</li>
+            </ul>
+          </ul>
+          <h3>Action:Send password reset email      </h3>
+          <ul>
+            <li>Send password reset email   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Email ( string ) : User email</li>
+            </ul>
+          </ul>
+          <h3>Action:Delete user      </h3>
+          <ul>
+            <li>Delete current user.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Email ( string ) : (2.x) User email</li>
+              <li>Password ( string ) : (2.x) User password</li>
+            </ul>
+          </ul>
+          <h3>Action:Update profile      </h3>
+          <ul>
+            <li>Update profile. 3.x only.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Display name ( string ) : Display name of current user.</li>
+              <li>Photo URL ( string ) : Photo URL of current user</li>
+            </ul>
+          </ul>
+          <h2>General      </h2>
+          <h3>Action:Logging out      </h3>
+          <ul>
+            <li>Logging out current account.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Link multiple auth providers      </h2>
+          <h3>Action:Link to facebook      </h3>
+          <ul>
+            <li>Link to facebook account by access token.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Access token ( string ) : Access token from other plugin. Set &quot;&quot; if using official facebook to login.</li>
+            </ul>
+          </ul>
+          <h3>Action:Link to google      </h3>
+          <ul>
+            <li>Link to google account by ID token.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>ID token ( string ) : ID token from other plugin.</li>
+            </ul>
+          </ul>
+          <h3>Action:Link to email-password      </h3>
+          <ul>
+            <li>Link to email-password.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Email ( string ) : User email</li>
+              <li>Password ( string ) : User password</li>
+            </ul>
+          </ul>
+          <h2>Online      </h2>
+          <h3>Action:Go offline      </h3>
+          <ul>
+            <li>Manually disconnect the Firebase client from the server and disable automatic reconnection.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Action:Go online      </h3>
+          <ul>
+            <li>Manually reestablish a connection to the Firebase server and enable automatic reconnection.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">    
+        <div class="panel-title">    
+          <h2>Expressions</h2>
+        </div>
+        <div class="panel-body">           
+          <h2>Error    </h2>
+          <h3>Expression:ErrorCode </h3>
+          <ul>
+            <li>Error code.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:ErrorMessage </h3>
+          <ul>
+            <li>Error message.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:ErrorDetail </h3>
+          <ul>
+            <li>Error detail.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>General auth data    </h2>
+          <h3>Expression:UserID </h3>
+          <ul>
+            <li>Unique user ID, intended as the user's unique key across all providers.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:Provider </h3>
+          <ul>
+            <li>The authentication method used.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:DisplayName </h3>
+          <ul>
+            <li>Display name.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:UserIDFromProvider </h3>
+          <ul>
+            <li>User ID from provider.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:AccessToken </h3>
+          <ul>
+            <li>The FOAuth 2.0 access token granted by provider during user authentication.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:Email </h3>
+          <ul>
+            <li>The user's primary email address as listed on their profile. Returned only if a valid email address is available, and the email permission was granted by the user. </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:PhotoURL </h3>
+          <ul>
+            <li>Photo URL.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">       
+          <h2>Conditions</h2>
+        </div>
+        <div class="panel-body">              
+          <h2>Anonymous    </h2>
+          <h4>Condition:Is anonymous                    </h4>
+          <ul>
+            <li>Return true if current user is anonymous.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Email &amp; Password - change password    </h2>
+          <h4>Condition:On changed password                    </h4>
+          <ul>
+            <li>Triggered when changed password success.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On changed password error                    </h4>
+          <ul>
+            <li>Triggered when changed password error.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Email &amp; Password - create account    </h2>
+          <h4>Condition:On created account                    </h4>
+          <ul>
+            <li>Triggered when created account success.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On created account error                    </h4>
+          <ul>
+            <li>Triggered when created account error.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Email &amp; Password - delete user    </h2>
+          <h4>Condition:On deleted user                    </h4>
+          <ul>
+            <li>Triggered when deleted user success.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On deleted user error                    </h4>
+          <ul>
+            <li>Triggered when deleted user error.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Email &amp; Password - send password reset email    </h2>
+          <h4>Condition:On sent password reset email                    </h4>
+          <ul>
+            <li>Triggered when sent password reset email success.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On sent password reset email error                    </h4>
+          <ul>
+            <li>Triggered when sent password reset email error.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Email &amp; Password - update profile    </h2>
+          <h4>Condition:On updated profile                    </h4>
+          <ul>
+            <li>Triggered when updated profile success.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On updated profile error                    </h4>
+          <ul>
+            <li>Triggered when updated profile error.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>General - logged out    </h2>
+          <h4>Condition:On logged out                    </h4>
+          <ul>
+            <li>Triggered when logged out.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On logged out by other app                    </h4>
+          <ul>
+            <li>Triggered when logged out by other app.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>General - login    </h2>
+          <h4>Condition:On login                    </h4>
+          <ul>
+            <li>Triggered when login success.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On login error                    </h4>
+          <ul>
+            <li>Triggered when login error.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:Is login                    </h4>
+          <ul>
+            <li>Return true if logging now.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On login by other app                    </h4>
+          <ul>
+            <li>Triggered when login by other app.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Link multiple auth providers    </h2>
+          <h4>Condition:On link                    </h4>
+          <ul>
+            <li>Triggered when link success.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On link error                    </h4>
+          <ul>
+            <li>Triggered when link error.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

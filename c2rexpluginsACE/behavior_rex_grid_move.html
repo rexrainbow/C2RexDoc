@@ -1,0 +1,607 @@
+<!DOCTYPE 5>
+<html>
+  <head>
+    <title>Behavior : Grid Move</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="js/jquery-3.1.0.min.js">                         </script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      
+      ga('create', 'UA-88123342-2', 'auto');
+      ga('send', 'pageview');            
+      
+    </script>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header"><a class="navbar-brand" href="./index.html">Home</a></div>
+        <ul class="nav navbar-nav">
+          <li><a href="./pluginsIndex.html">Plugins      </a></li>
+          <li><a href="./behaviorsIndex.html">Behaviors                   </a></li>
+          <li><a href="./effectsIndex.html">Effects    </a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Behavior : Grid Move</h1>
+      <p>Author:Rex.Rainbow</p>
+      <ul>
+        <li>Move sprite to neighbor on board object</li>
+      </ul><a class="btn btn-default" href="https://rexrainbow.github.io/C2RexDoc/repo/rex_grid.7z">Download    </a>
+      <div class="panel panel-default">
+        <div class="panel-title">
+          <h2>Properties</h2>
+        </div>
+        <div class="panel-body">
+          <h3>Activated</h3>
+          <ul>
+            <li>Enable if you wish this to begin at the start of the layout.                    </li>
+            <ul>
+              <li>Options : [&quot;No&quot;,&quot;Yes&quot;]</li>
+            </ul>
+          </ul>
+          <h3>Max speed</h3>
+          <ul>
+            <li>Maximum speed, in pixel per second.                    </li>
+          </ul>
+          <h3>Acceleration</h3>
+          <ul>
+            <li>Acceleration, in pixel per second per second.                    </li>
+          </ul>
+          <h3>Deceleration</h3>
+          <ul>
+            <li>Deceleration, in pixel per second per second.                    </li>
+          </ul>
+          <h3>Wander range x</h3>
+          <ul>
+            <li>Random moving in the boundary.                    </li>
+          </ul>
+          <h3>Wander range y</h3>
+          <ul>
+            <li>Random moving in the boundary.                    </li>
+          </ul>
+          <h3>Force move</h3>
+          <ul>
+            <li>Enable if you wish to ignore solid checking. It will change z index when logical overlapping.                    </li>
+            <ul>
+              <li>Options : [&quot;No&quot;,&quot;Yes&quot;]</li>
+            </ul>
+          </ul>
+          <h3>MoveTo</h3>
+          <ul>
+            <li>Set Yes to move chess physically by built-in moveTo behavior. Set No will only change the logical position.                    </li>
+            <ul>
+              <li>Options : [&quot;No&quot;,&quot;Yes&quot;]</li>
+            </ul>
+          </ul>
+          <h3>Continued mode</h3>
+          <ul>
+            <li>Moving as in continued-time.                    </li>
+            <ul>
+              <li>Options : [&quot;No&quot;,&quot;Yes&quot;]</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">   
+          <h2>Actions</h2>
+        </div>
+        <div class="panel-body">
+          <h2>AI: Approach/Depart      </h2>
+          <h3>Action:Approach/Depart      </h3>
+          <ul>
+            <li>Approach to chess or depart from chess.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Chess ( object ) : Chess object.</li>
+              <li>Mode ( Combo ) : Approach or Depart.</li>
+              <ul>
+                <li>Options : [&quot;Approach to&quot;,&quot;Depart from&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h3>Action:Approach/Depart chess by UID      </h3>
+          <ul>
+            <li>Approach to chess or depart from chess.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Chess UID ( number or string ) : The UID of chess</li>
+              <li>Mode ( Combo ) : Approach or Depart.</li>
+              <ul>
+                <li>Options : [&quot;Approach to&quot;,&quot;Depart from&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h2>AI: Wander      </h2>
+          <h3>Action:Wander      </h3>
+          <ul>
+            <li>Random moving in the boundary.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Action:Set range x      </h3>
+          <ul>
+            <li>Set the object's wander range x.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Range x ( number ) : Wander range x, in logic unit</li>
+            </ul>
+          </ul>
+          <h3>Action:Set range y      </h3>
+          <ul>
+            <li>Set the object's wander range y.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Range y ( number ) : Wander range y, in logic unit</li>
+            </ul>
+          </ul>
+          <h3>Action:Set random generator      </h3>
+          <ul>
+            <li>Set random generator object.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Random generator ( object ) : Random generator object</li>
+            </ul>
+          </ul>
+          <h3>Action:Reset center position      </h3>
+          <ul>
+            <li>Reset wander center position to current logic position.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Collisions      </h2>
+          <h3>Action:Set instance group       </h3>
+          <ul>
+            <li>Set instance group object.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Group ( object ) : Instance group object</li>
+            </ul>
+          </ul>
+          <h2>Configuration      </h2>
+          <h3>Action:Set activated      </h3>
+          <ul>
+            <li>Enable the object's Square-grid Move behavior.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Activated ( Combo ) : Enable the behavior.</li>
+              <ul>
+                <li>Options : [&quot;No&quot;,&quot;Yes&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h3>Action:Enable force moving      </h3>
+          <ul>
+            <li>Enable if you wish to ignore solid checking. It will change z index when logical overlapping.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Force move ( Combo ) : Enable the force moving feature.</li>
+              <ul>
+                <li>Options : [&quot;No&quot;,&quot;Yes&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h2>Request      </h2>
+          <h3>Action:Move to offset      </h3>
+          <ul>
+            <li>Move to relatived offset target.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>X offset ( number ) : Relatived X offset.</li>
+              <li>Y offset ( number ) : Relatived Y offset.</li>
+            </ul>
+          </ul>
+          <h3>Action:Move to LXY      </h3>
+          <ul>
+            <li>Move to logical position.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Logic X ( number ) : The X index (0-based).</li>
+              <li>Logic Y ( number ) : The Y index (0-based).</li>
+            </ul>
+          </ul>
+          <h3>Action:Move to neighbor      </h3>
+          <ul>
+            <li>Move to neighbor.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Direction ( number ) : The direction of neighbor.</li>
+            </ul>
+          </ul>
+          <h3>Action:Move to chess      </h3>
+          <ul>
+            <li>Move to target chess/tile.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Target ( object ) : Target object.</li>
+            </ul>
+          </ul>
+          <h3>Action:Move to chess by UID      </h3>
+          <ul>
+            <li>Move to target chess/tile.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>UID ( number or string ) : Target chess UID</li>
+            </ul>
+          </ul>
+          <h2>Request: Hexagon grid (Left-Right)      </h2>
+          <h3>Action:Move to neighbor      </h3>
+          <ul>
+            <li>Move to neighbor.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Direction ( Combo ) : Moving direction.</li>
+              <ul>
+                <li>Options : [&quot;Right&quot;,&quot;Down-right&quot;,&quot;Down-left&quot;,&quot;Left&quot;,&quot;Up-left&quot;,&quot;Up-right&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h2>Request: Hexagon grid (Up-Down)      </h2>
+          <h3>Action:Move to neighbor      </h3>
+          <ul>
+            <li>Move to neighbor.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Direction ( Combo ) : Moving direction.</li>
+              <ul>
+                <li>Options : [&quot;Down-right&quot;,&quot;Down&quot;,&quot;Down-left&quot;,&quot;Up-left&quot;,&quot;Up&quot;,&quot;Up-right&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h2>Request: Square grid      </h2>
+          <h3>Action:Move to neighbor      </h3>
+          <ul>
+            <li>Move to neighbor.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Direction ( Combo ) : Moving direction.</li>
+              <ul>
+                <li>Options : [&quot;Right&quot;,&quot;Down&quot;,&quot;Left&quot;,&quot;Up&quot;,&quot;Right-down&quot;,&quot;Left-down&quot;,&quot;Left-up&quot;,&quot;Right-up&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h2>Solid      </h2>
+          <h3>Action:Set solid      </h3>
+          <ul>
+            <li>Set solid. Used under 'condition: On get solid'.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Solid ( Combo ) : Solid property.</li>
+              <ul>
+                <li>Options : [&quot;No&quot;,&quot;Yes&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h3>Action:Set solid by number      </h3>
+          <ul>
+            <li>Set solid. Used under 'condition: On get solid'.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Solid ( number ) : Solid property. 0=Disable, 1=Enable.</li>
+            </ul>
+          </ul>
+          <h3>Action:Set move-able      </h3>
+          <ul>
+            <li>Set move-able. Used under 'condition: On get solid'.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Move-able ( Combo ) : Move-able.</li>
+              <ul>
+                <li>Options : [&quot;No&quot;,&quot;Yes&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h3>Action:Set move-able by number      </h3>
+          <ul>
+            <li>Set move-able. Used under 'condition: On get solid'.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Move-able ( number ) : Move-able. 0=Disable, 1=Enable.</li>
+            </ul>
+          </ul>
+          <h2>Speed      </h2>
+          <h3>Action:Set maximum speed      </h3>
+          <ul>
+            <li>Set the object's maximum speed.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Max speed ( number ) : Maximum speed, in pixel per second.</li>
+            </ul>
+          </ul>
+          <h3>Action:Set acceleration      </h3>
+          <ul>
+            <li>Set the object's acceleration.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Acceleration ( number ) : The acceleration setting, in pixel per second per second.</li>
+            </ul>
+          </ul>
+          <h3>Action:Set deceleration      </h3>
+          <ul>
+            <li>Set the object's deceleration.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Deceleration ( number ) : The deceleration setting, in pixels per second per second.</li>
+            </ul>
+          </ul>
+          <h3>Action:Set current speed      </h3>
+          <ul>
+            <li>Set the object's Current speed.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Current speed ( number ) : Current speed, in pixel per second.</li>
+            </ul>
+          </ul>
+          <h2>Stop      </h2>
+          <h3>Action:Stop      </h3>
+          <ul>
+            <li>Stop moving.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Swap      </h2>
+          <h3>Action:Swap      </h3>
+          <ul>
+            <li>Swap with target chess.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>UID ( number or string ) : Target UID.</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">    
+        <div class="panel-title">    
+          <h2>Expressions</h2>
+        </div>
+        <div class="panel-body">           
+          <h2>Current    </h2>
+          <h3>Expression:Activated </h3>
+          <ul>
+            <li>The current activated state of behavior.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:Speed </h3>
+          <ul>
+            <li>The current object speed, in pixel per second.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Request    </h2>
+          <h3>Expression:BlockerUID </h3>
+          <ul>
+            <li>Get UID of blocker when moving request rejected.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:Direction </h3>
+          <ul>
+            <li>Get last moving direction of moving request. Return (-1) if not moving to neighbor.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:DestinationLX </h3>
+          <ul>
+            <li>Get logic X of destination X when moving request.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:DestinationLY </h3>
+          <ul>
+            <li>Get logic Y of destination when moving request.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:DestinationLZ </h3>
+          <ul>
+            <li>Get logic Z of destination when moving request.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:SourceLX </h3>
+          <ul>
+            <li>Get logic X of source when moving request.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:SourceLY </h3>
+          <ul>
+            <li>Get logic Y of source when moving request.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:SourceLZ </h3>
+          <ul>
+            <li>Get logic Z of source when moving request.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Setting    </h2>
+          <h3>Expression:MaxSpeed </h3>
+          <ul>
+            <li>The maximum speed setting, in pixel per second.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:Acc </h3>
+          <ul>
+            <li>The acceleration setting, in pixel per second per second.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:Dec </h3>
+          <ul>
+            <li>The deceleration setting, in pixel per second per second.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Target    </h2>
+          <h3>Expression:TargetX </h3>
+          <ul>
+            <li>The X co-ordinate of target position to move toward.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:TargetY </h3>
+          <ul>
+            <li>The Y co-ordinate of target position to move toward.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">       
+          <h2>Conditions</h2>
+        </div>
+        <div class="panel-body">              
+          <h2>Collisions    </h2>
+          <h4>Condition:On colliding begin - group                    </h4>
+          <ul>
+            <li>Triggered when this chess collides begin with another chess.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Chess ( object ) : Chess object.    </li>
+              <li>Group ( string ) : Put result in this group    </li>
+            </ul>
+          </ul>
+          <h4>Condition:On colliding begin                    </h4>
+          <ul>
+            <li>Triggered when this chess collides begin with another chess.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Chess ( object ) : Chess object.    </li>
+            </ul>
+          </ul>
+          <h2>Move    </h2>
+          <h4>Condition:Is moving                    </h4>
+          <ul>
+            <li>Test if object is moving.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Reach    </h2>
+          <h4>Condition:On reach target position                    </h4>
+          <ul>
+            <li>Triggered when reach target position.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Request    </h2>
+          <h4>Condition:On moving accepted                    </h4>
+          <ul>
+            <li>Triggered when moving request accepted.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On moving rejected                    </h4>
+          <ul>
+            <li>Triggered when moving request rejected.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:Moving accepted                    </h4>
+          <ul>
+            <li>Return true if moving request accepted.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:Can move to neighbor                    </h4>
+          <ul>
+            <li>Test if object can move to neighbor.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Direction ( number ) : The direction of neighbor.    </li>
+            </ul>
+          </ul>
+          <h2>Solid    </h2>
+          <h4>Condition:On get solid                    </h4>
+          <ul>
+            <li>Triggered by plugin to get solid property from event sheet.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Test    </h2>
+          <h4>Condition:Can move to                    </h4>
+          <ul>
+            <li>Test if object can move to relatived offset target.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>X offset ( number ) : Relatived X offset.    </li>
+              <li>Y offset ( number ) : Relatived Y offset.    </li>
+            </ul>
+          </ul>
+          <h2>Test: Hexagon grid (Left-Right)    </h2>
+          <h4>Condition:Can move to neighbor                    </h4>
+          <ul>
+            <li>Test if object can move to neighbor.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Direction ( Combo ) : Moving direction.    </li>
+              <ul>
+                <li>Options : [&quot;Right&quot;,&quot;Down-right&quot;,&quot;Down-left&quot;,&quot;Left&quot;,&quot;Up-left&quot;,&quot;Up-right&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h2>Test: Hexagon grid (Up-Down)    </h2>
+          <h4>Condition:Can move to neighbor                    </h4>
+          <ul>
+            <li>Test if object can move to neighbor.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Direction ( Combo ) : Moving direction.    </li>
+              <ul>
+                <li>Options : [&quot;Down-right&quot;,&quot;Down&quot;,&quot;Down-left&quot;,&quot;Up-left&quot;,&quot;Up&quot;,&quot;Up-right&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h2>Test: Square grid    </h2>
+          <h4>Condition:Can move to neighbor                    </h4>
+          <ul>
+            <li>Test if object can move to neighbor.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Direction ( Combo ) : Moving direction.    </li>
+              <ul>
+                <li>Options : [&quot;Right&quot;,&quot;Down&quot;,&quot;Left&quot;,&quot;Up&quot;,&quot;Right-down&quot;,&quot;Left-down&quot;,&quot;Left-up&quot;,&quot;Right-up&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

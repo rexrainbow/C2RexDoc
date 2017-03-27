@@ -5,7 +5,9 @@ block content
     p Author:#{author}
     ul
         li #{description}
-    - url = "https://dl.dropboxusercontent.com/u/5779181/C2Repo/Zip/" + fileName.replace("_", "s/") + ".7z"
+
+    - s=fileName.split("_")
+    - url = "https://rexrainbow.github.io/C2RexDoc/repo/" + s[1] + "_" + s[2] + ".7z"
     a.btn.btn-default(href=url) Download    
         
     .panel.panel-default

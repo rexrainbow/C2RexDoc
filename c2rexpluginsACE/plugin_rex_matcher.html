@@ -1,0 +1,372 @@
+<!DOCTYPE 5>
+<html>
+  <head>
+    <title>Plugin : Matcher</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="js/jquery-3.1.0.min.js">                         </script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      
+      ga('create', 'UA-88123342-2', 'auto');
+      ga('send', 'pageview');            
+      
+    </script>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header"><a class="navbar-brand" href="./index.html">Home</a></div>
+        <ul class="nav navbar-nav">
+          <li><a href="./pluginsIndex.html">Plugins      </a></li>
+          <li><a href="./behaviorsIndex.html">Behaviors                   </a></li>
+          <li><a href="./effectsIndex.html">Effects    </a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Plugin : Matcher</h1>
+      <p>Author:Rex.Rainbow</p>
+      <ul>
+        <li>Get tiles with matched patterns.</li>
+      </ul><a class="btn btn-default" href="https://rexrainbow.github.io/C2RexDoc/repo/rex_matcher.7z">Download    </a>
+      <div class="panel panel-default">
+        <div class="panel-title">
+          <h2>Properties</h2>
+        </div>
+        <div class="panel-body">
+          <h3>Axis of square board</h3>
+          <ul>
+            <li>The axis to get symbol for 1d pattern matched on square board. Ignored it when using hex board                    </li>
+          </ul>
+          <h3>Horizontal</h3>
+          <ul>
+            <li>Compare at horizontal axis                    </li>
+            <ul>
+              <li>Options : [&quot;No&quot;,&quot;Yes&quot;]</li>
+            </ul>
+          </ul>
+          <h3>Vertical</h3>
+          <ul>
+            <li>Compare at vertical axis                    </li>
+            <ul>
+              <li>Options : [&quot;No&quot;,&quot;Yes&quot;]</li>
+            </ul>
+          </ul>
+          <h3>Isometric</h3>
+          <ul>
+            <li>Compare at isometric axis                    </li>
+            <ul>
+              <li>Options : [&quot;No&quot;,&quot;Yes&quot;]</li>
+            </ul>
+          </ul>
+          <h3>Update symbols</h3>
+          <ul>
+            <li>Auto or manual update symbol table                    </li>
+            <ul>
+              <li>Options : [&quot;Manual&quot;,&quot;Auto&quot;]</li>
+            </ul>
+          </ul>
+          <h3>Wildcard</h3>
+          <ul>
+            <li>Wildcard symbol. Set to &quot;&quot; will ignore this feature.                    </li>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">   
+          <h2>Actions</h2>
+        </div>
+        <div class="panel-body">
+          <h2>Request: Symbol      </h2>
+          <h3>Action:Set symbol      </h3>
+          <ul>
+            <li>Set symbol. Used in &quot;Condition: On get symbol function&quot;.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Symbol ( string ) : Symbol. &quot;&quot; is null symbol.</li>
+            </ul>
+          </ul>
+          <h2>Setup      </h2>
+          <h3>Action:Setup      </h3>
+          <ul>
+            <li>Set board object and instance group object.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Board ( object ) : Board object</li>
+              <li>Group ( object ) : Instance group object</li>
+            </ul>
+          </ul>
+          <h2>Square board      </h2>
+          <h3>Action:Compare at horizontal axis      </h3>
+          <ul>
+            <li>Enable the Comparing at horizontal axis.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Horizontal ( Combo ) : Horizontal axis.</li>
+              <ul>
+                <li>Options : [&quot;No&quot;,&quot;Yes&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h3>Action:Compare at vertical axis      </h3>
+          <ul>
+            <li>Enable the Comparing at vertical axis.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Vertical ( Combo ) : Vertical axis.</li>
+              <ul>
+                <li>Options : [&quot;No&quot;,&quot;Yes&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h3>Action:Compare at isometric axis      </h3>
+          <ul>
+            <li>Enable the Comparing at isometric axis.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Isometric ( Combo ) : Isometric axis.</li>
+              <ul>
+                <li>Options : [&quot;No&quot;,&quot;Yes&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h2>Symbol array: force update      </h2>
+          <h3>Action:Update all      </h3>
+          <ul>
+            <li>Force updating symbol array.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Action:Update cell by LXY      </h3>
+          <ul>
+            <li>Force updating symbol at logical XY.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Logic X ( number ) : The X index (0-based) of the chess.</li>
+              <li>Logic Y ( number ) : The Y index (0-based) of the chess.</li>
+            </ul>
+          </ul>
+          <h3>Action:Update cell by chess      </h3>
+          <ul>
+            <li>Force updating symbol at tile.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Tile ( object ) : Tile object.</li>
+            </ul>
+          </ul>
+          <h3>Action:Update cell by chess uid      </h3>
+          <ul>
+            <li>Force updating symbol at tile by UID.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>UID ( number or string ) : The UID of chess</li>
+            </ul>
+          </ul>
+          <h2>Wildcard      </h2>
+          <h3>Action:Set wildcard      </h3>
+          <ul>
+            <li>Set wildcard symbol.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Wildcard ( string ) : Wildcard symbol, Set to &quot;&quot; will ignore this feature.</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">    
+        <div class="panel-title">    
+          <h2>Expressions</h2>
+        </div>
+        <div class="panel-body">           
+          <h2>Request    </h2>
+          <h3>Expression:TileUID </h3>
+          <ul>
+            <li>Get UID of target tile.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:TileX </h3>
+          <ul>
+            <li>Get logic X of target tile.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:TileY </h3>
+          <ul>
+            <li>Get logic Y of target tile.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:MatchedSymbol </h3>
+          <ul>
+            <li>Get matched symobl under &quot;Condition:On N symbols&quot;, or &quot;Condition:On 2D template pattern&quot;.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Symbol    </h2>
+          <h3>Expression:NOSYMBOL </h3>
+          <ul>
+            <li>Get value of NOSYMBOL.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:Wildcard </h3>
+          <ul>
+            <li>Get value of wildcard symbol.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:LXY2Symbol </h3>
+          <ul>
+            <li>Get symobl on logic X ,Y.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Logic X ( number ) : The X index (0-based) of the chess.</li>
+              <li>Logic Y ( number ) : The Y index (0-based) of the chess.</li>
+            </ul>
+          </ul>
+          <h3>Expression:UID2Symbol </h3>
+          <ul>
+            <li>Get symobl by tile/chess UID.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>UID ( number or string ) : The UID of chess</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">       
+          <h2>Conditions</h2>
+        </div>
+        <div class="panel-body">              
+          <h2>Any: 1D Patern    </h2>
+          <h4>Condition:Any 1d pattern                     </h4>
+          <ul>
+            <li>Return true if there has any 1d pattern matched. Put 1 matched result into group if found.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Pattern ( string ) : Pattern. It could splitted by &quot;,&quot;.    </li>
+              <li>Group ( string ) : Put result in this group    </li>
+            </ul>
+          </ul>
+          <h4>Condition:Any N symbols                    </h4>
+          <ul>
+            <li>Return true if there has any N continuous symbols matched. Put 1 matched result into group if found.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Count ( number ) : Continuous symbols count.    </li>
+              <li>Group ( string ) : Put result in this group    </li>
+            </ul>
+          </ul>
+          <h2>Any: 2D Patern    </h2>
+          <h4>Condition:Any 2D pattern                    </h4>
+          <ul>
+            <li>Return true if there has any 2d pattern matched. Put 1 matched result into group if found.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Pattern ( string ) : Pattern, splitted by &quot;,&quot;    </li>
+              <li>Group ( string ) : Put result in this group    </li>
+            </ul>
+          </ul>
+          <h4>Condition:Any 2D template pattern                    </h4>
+          <ul>
+            <li>Return true if there has any 2d template pattern matched. Put 1 matched result into group if found.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Template ( string ) : Pattern template, splitted by &quot;,&quot;.    </li>
+              <li>Group ( string ) : Put result in this group    </li>
+            </ul>
+          </ul>
+          <h2>For each: 1D Patern    </h2>
+          <h4>Condition:For each 1d pattern                     </h4>
+          <ul>
+            <li>Repeat the event for each 1d pattern matched.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Pattern ( string ) : Pattern. It could splitted by &quot;,&quot;.    </li>
+              <li>Group ( string ) : Put result in this group    </li>
+            </ul>
+          </ul>
+          <h4>Condition:For each N symbols                    </h4>
+          <ul>
+            <li>Repeat the event for each N continuous symbols matched.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Count ( number ) : Continuous symbols count.    </li>
+              <li>Group ( string ) : Put result in this group    </li>
+            </ul>
+          </ul>
+          <h2>For each: 2D Patern    </h2>
+          <h4>Condition:For each 2D pattern                    </h4>
+          <ul>
+            <li>Repeat the event for each 2d pattern matched.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Pattern ( string ) : Pattern, splitted by &quot;,&quot;    </li>
+              <li>Group ( string ) : Put result in this group    </li>
+            </ul>
+          </ul>
+          <h4>Condition:For each 2D template pattern                    </h4>
+          <ul>
+            <li>Repeat the event for each 2d template pattern matched.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Template ( string ) : Pattern template, splitted by &quot;,&quot;.    </li>
+              <li>Group ( string ) : Put result in this group    </li>
+            </ul>
+          </ul>
+          <h2>If: No matched    </h2>
+          <h4>Condition:No pattern                    </h4>
+          <ul>
+            <li>Return true if no matched pattern in latest &quot;action:Get matched tiles&quot;.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Matched axis    </h2>
+          <h4>Condition:Matched axis (Square)                    </h4>
+          <ul>
+            <li>Return true if matched at specifics axis, used under &quot;condition: On N symbols&quot;, or &quot;condition: On 1d pattern&quot;.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Axis ( Combo ) : Matched axis.    </li>
+              <ul>
+                <li>Options : [&quot;Horizontal&quot;,&quot;Vertical&quot;,&quot;Isometric&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h4>Condition:Matched axis (Hex)                    </h4>
+          <ul>
+            <li>Return true if matched at specifics axis, used under &quot;condition: On N symbols&quot;, or &quot;condition: On 1d pattern&quot;.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Axis ( number ) : Axis index, in 0,1,2.    </li>
+            </ul>
+          </ul>
+          <h2>Symbol    </h2>
+          <h4>Condition:On get symbol                    </h4>
+          <ul>
+            <li>Get symbol of a tile.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

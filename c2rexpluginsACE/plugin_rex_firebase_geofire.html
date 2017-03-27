@@ -1,0 +1,328 @@
+<!DOCTYPE 5>
+<html>
+  <head>
+    <title>Plugin : Geofire</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="js/jquery-3.1.0.min.js">                         </script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      
+      ga('create', 'UA-88123342-2', 'auto');
+      ga('send', 'pageview');            
+      
+    </script>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header"><a class="navbar-brand" href="./index.html">Home</a></div>
+        <ul class="nav navbar-nav">
+          <li><a href="./pluginsIndex.html">Plugins      </a></li>
+          <li><a href="./behaviorsIndex.html">Behaviors                   </a></li>
+          <li><a href="./effectsIndex.html">Effects    </a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Plugin : Geofire</h1>
+      <p>Author:Rex.Rainbow</p>
+      <ul>
+        <li>Realtime location queries with Firebase.</li>
+      </ul><a class="btn btn-default" href="https://rexrainbow.github.io/C2RexDoc/repo/rex_firebase.7z">Download    </a>
+      <div class="panel panel-default">
+        <div class="panel-title">
+          <h2>Properties</h2>
+        </div>
+        <div class="panel-body">
+          <h3>Sub domain</h3>
+          <ul>
+            <li>Sub domain for this function.                    </li>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">   
+          <h2>Actions</h2>
+        </div>
+        <div class="panel-body">
+          <h2>Domain      </h2>
+          <h3>Action:Set sub domain      </h3>
+          <ul>
+            <li>Set sub domain ref.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Sub domain ( string ) : Sub domain for this function.</li>
+            </ul>
+          </ul>
+          <h2>Get      </h2>
+          <h3>Action:Get item      </h3>
+          <ul>
+            <li>Get item.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>ID ( string ) : ItemID.</li>
+            </ul>
+          </ul>
+          <h2>Monitor      </h2>
+          <h3>Action:Monitor at      </h3>
+          <ul>
+            <li>Monitor an area   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Latitude ( number ) : Latitude of center.</li>
+              <li>Longitude ( number ) : Longitude of center.</li>
+              <li>Radius ( number ) : Radius, in kilometers, from the center of this monitor in which to include results.</li>
+            </ul>
+          </ul>
+          <h3>Action:Stop      </h3>
+          <ul>
+            <li>Stop monitor   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>On disconnected      </h2>
+          <h3>Action:Remove item      </h3>
+          <ul>
+            <li>Remove item on disconnected.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>ID ( string ) : ItemID.</li>
+            </ul>
+          </ul>
+          <h3>Action:Cancel all handlers      </h3>
+          <ul>
+            <li>Cancel all handlers of disconnected.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>ID ( string ) : ItemID.</li>
+            </ul>
+          </ul>
+          <h2>Set      </h2>
+          <h3>Action:Set location      </h3>
+          <ul>
+            <li>Set location of an item.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>ID ( string ) : ItemID.</li>
+              <li>Latitude ( number ) : Latitude.</li>
+              <li>Longitude ( number ) : Longitude.</li>
+            </ul>
+          </ul>
+          <h3>Action:Remove item      </h3>
+          <ul>
+            <li>Remove item.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>ID ( string ) : ItemID.</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">    
+        <div class="panel-title">    
+          <h2>Expressions</h2>
+        </div>
+        <div class="panel-body">           
+          <h2>Event    </h2>
+          <h3>Expression:LastItemID </h3>
+          <ul>
+            <li>Get itemID returned by the last triggered event.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:LastLatitude </h3>
+          <ul>
+            <li>Get latitude returned by the last triggered event.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:LastLongitude </h3>
+          <ul>
+            <li>Get longitude returned by the last triggered event.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:LastDistance </h3>
+          <ul>
+            <li>Get distance between triggered item to monitor point returned by the last triggered event.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>For Each    </h2>
+          <h3>Expression:CurItemID </h3>
+          <ul>
+            <li>Get current itemID in a For Each loop.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:CurLatitude </h3>
+          <ul>
+            <li>Get current latitude in a For Each loop.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:CurLongitude </h3>
+          <ul>
+            <li>Get current longitude in a For Each loop.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:CurDistance </h3>
+          <ul>
+            <li>Get current distance between triggered item to monitor point in a For Each loop.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Helper    </h2>
+          <h3>Expression:Distance </h3>
+          <ul>
+            <li>Get distance between two points, in kilometers.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Latitude A ( number ) : Latitude of point A.</li>
+              <li>Longitude A ( number ) : Longitude of point A.</li>
+              <li>Latitude B ( number ) : Latitude of point B.</li>
+              <li>Longitude B ( number ) : Longitude of point B.</li>
+            </ul>
+          </ul>
+          <h2>ItemID    </h2>
+          <h3>Expression:GenerateKey </h3>
+          <ul>
+            <li>Generate new key from push action.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:LastGeneratedKey </h3>
+          <ul>
+            <li>Get last generate a key from push action.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Monitor area    </h2>
+          <h3>Expression:MonitorLatitude </h3>
+          <ul>
+            <li>Get latitude of monitor center.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:MonitorLongitude </h3>
+          <ul>
+            <li>Get longitude of monitor center.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:MonitorRadius </h3>
+          <ul>
+            <li>Get radius of monitor, in kilometers.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">       
+          <h2>Conditions</h2>
+        </div>
+        <div class="panel-body">              
+          <h2>Get    </h2>
+          <h4>Condition:On get item                    </h4>
+          <ul>
+            <li>Triggered when get item.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On get item error                    </h4>
+          <ul>
+            <li>Triggered when get item error.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:Item is not found                    </h4>
+          <ul>
+            <li>Return true if item is not found.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Monitor    </h2>
+          <h4>Condition:On item entered                    </h4>
+          <ul>
+            <li>Triggered when item entered.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On item exited                    </h4>
+          <ul>
+            <li>Triggered when item exited.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On item moved                    </h4>
+          <ul>
+            <li>Triggered when item moved.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On initial ready                    </h4>
+          <ul>
+            <li>Triggered when initial data has loaded and fired all other events.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:For each itemID                    </h4>
+          <ul>
+            <li>Repeat the event for each itemID of monitor result.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Order ( Combo ) : Order of itemID.    </li>
+              <ul>
+                <li>Options : [&quot;descending&quot;,&quot;ascending&quot;,&quot;logical descending&quot;,&quot;logical ascending&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h2>Set    </h2>
+          <h4>Condition:On update                    </h4>
+          <ul>
+            <li>Triggered when update location complete.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On update error                    </h4>
+          <ul>
+            <li>Triggered when update location error.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

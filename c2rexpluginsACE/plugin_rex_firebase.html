@@ -1,0 +1,569 @@
+<!DOCTYPE 5>
+<html>
+  <head>
+    <title>Plugin : Firebase</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="js/jquery-3.1.0.min.js">                         </script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      
+      ga('create', 'UA-88123342-2', 'auto');
+      ga('send', 'pageview');            
+      
+    </script>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header"><a class="navbar-brand" href="./index.html">Home</a></div>
+        <ul class="nav navbar-nav">
+          <li><a href="./pluginsIndex.html">Plugins      </a></li>
+          <li><a href="./behaviorsIndex.html">Behaviors                   </a></li>
+          <li><a href="./effectsIndex.html">Effects    </a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Plugin : Firebase</h1>
+      <p>Author:Rex.Rainbow</p>
+      <ul>
+        <li>Real time database-as-a-service. https://www.firebase.com/</li>
+      </ul><a class="btn btn-default" href="https://rexrainbow.github.io/C2RexDoc/repo/rex_firebase.7z">Download    </a>
+      <div class="panel panel-default">
+        <div class="panel-title">
+          <h2>Properties</h2>
+        </div>
+        <div class="panel-body">
+          <h3>Domain</h3>
+          <ul>
+            <li>The root location of the Firebase data.                    </li>
+          </ul>
+          <h3>Connection detection</h3>
+          <ul>
+            <li>Enable connection detection.                    </li>
+            <ul>
+              <li>Options : [&quot;No&quot;,&quot;Yes&quot;]</li>
+            </ul>
+          </ul>
+          <h3>Server time offset detection</h3>
+          <ul>
+            <li>Enable server time offset detection.                    </li>
+            <ul>
+              <li>Options : [&quot;No&quot;,&quot;Yes&quot;]</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">   
+          <h2>Actions</h2>
+        </div>
+        <div class="panel-body">
+          <h2>Domain      </h2>
+          <h3>Action:Set domain      </h3>
+          <ul>
+            <li>Set domain ref.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Domain ( string ) : The Firebase data ref URL</li>
+            </ul>
+          </ul>
+          <h2>On disconnect      </h2>
+          <h3>Action:Remove      </h3>
+          <ul>
+            <li>Remove all values at data ref when disconnected. Uses under &quot;condition: On received&quot;.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>DataRef ( string ) : The Firebase data ref URL</li>
+            </ul>
+          </ul>
+          <h3>Action:Set value      </h3>
+          <ul>
+            <li>Sets value at data ref when disconnected. Uses under &quot;condition: On received&quot;.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>DataRef ( string ) : The Firebase data ref URL</li>
+              <li>Value ( number or string ) : The value to set</li>
+            </ul>
+          </ul>
+          <h3>Action:Update JSON      </h3>
+          <ul>
+            <li>Updates JSON values at the data ref when disconnected. Uses under &quot;condition: On received&quot;.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>DataRef ( string ) : The Firebase data ref URL</li>
+              <li>JSON value ( string ) : JSON value to set</li>
+            </ul>
+          </ul>
+          <h3>Action:Cancel      </h3>
+          <ul>
+            <li>Cancel disconnected writing.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>DataRef ( string ) : The Firebase data ref URL</li>
+            </ul>
+          </ul>
+          <h2>Online      </h2>
+          <h3>Action:Go offline      </h3>
+          <ul>
+            <li>Manually disconnect the Firebase client from the server and disable automatic reconnection. .   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Action:Go online      </h3>
+          <ul>
+            <li>Manually reestablish a connection to the Firebase server and enable automatic reconnection. . .   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Query      </h2>
+          <h3>Action:Add callback      </h3>
+          <ul>
+            <li>Add received callback.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Query ( object ) : Query object.</li>
+              <li>Type  ( Combo ) : Event type</li>
+              <ul>
+                <li>Options : [&quot;Value changed&quot;,&quot;Child added&quot;,&quot;Child changed&quot;,&quot;Child removed&quot;,&quot;Child moved&quot;]</li>
+              </ul>
+              <li>Callback function ( string ) : Callback function.</li>
+            </ul>
+          </ul>
+          <h3>Action:Add callback once      </h3>
+          <ul>
+            <li>Add received callback once.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Query ( object ) : Query object.</li>
+              <li>Type  ( Combo ) : Event type</li>
+              <ul>
+                <li>Options : [&quot;Value changed&quot;,&quot;Child added&quot;,&quot;Child changed&quot;,&quot;Child removed&quot;,&quot;Child moved&quot;]</li>
+              </ul>
+              <li>Callback function ( string ) : Callback function.</li>
+            </ul>
+          </ul>
+          <h2>Receive - Add      </h2>
+          <h3>Action:Add callback      </h3>
+          <ul>
+            <li>Add received callback.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>DataRef ( string ) : The Firebase data ref URL</li>
+              <li>Type  ( Combo ) : Event type</li>
+              <ul>
+                <li>Options : [&quot;Value changed&quot;,&quot;Child added&quot;,&quot;Child changed&quot;,&quot;Child removed&quot;,&quot;Child moved&quot;]</li>
+              </ul>
+              <li>Callback function ( string ) : Callback function.</li>
+            </ul>
+          </ul>
+          <h2>Receive - Add once      </h2>
+          <h3>Action:Add once      </h3>
+          <ul>
+            <li>Add received callback once.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>DataRef ( string ) : The Firebase data ref URL</li>
+              <li>Type  ( Combo ) : Event type</li>
+              <ul>
+                <li>Options : [&quot;Value changed&quot;,&quot;Child added&quot;,&quot;Child changed&quot;,&quot;Child removed&quot;,&quot;Child moved&quot;]</li>
+              </ul>
+              <li>Callback function ( string ) : Callback function.</li>
+            </ul>
+          </ul>
+          <h2>Receive - Remove      </h2>
+          <h3>Action:Remove callback      </h3>
+          <ul>
+            <li>Remove received callback.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>DataRef ( string ) : The Firebase data ref URL</li>
+              <li>Type  ( Combo ) : Event type</li>
+              <ul>
+                <li>Options : [&quot;Value changed&quot;,&quot;Child added&quot;,&quot;Child changed&quot;,&quot;Child removed&quot;,&quot;Child moved&quot;]</li>
+              </ul>
+              <li>Callback function ( string ) : Callback function.</li>
+            </ul>
+          </ul>
+          <h3>Action:Remove callback by type      </h3>
+          <ul>
+            <li>Remove all received callbacks by type.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>DataRef ( string ) : The Firebase data ref URL</li>
+              <li>Type  ( Combo ) : Event type</li>
+              <ul>
+                <li>Options : [&quot;Value changed&quot;,&quot;Child added&quot;,&quot;Child changed&quot;,&quot;Child removed&quot;,&quot;Child moved&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h3>Action:Remove all callbacks at ref      </h3>
+          <ul>
+            <li>Remove all received callbacks at ref.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>DataRef ( string ) : The Firebase data ref URL</li>
+            </ul>
+          </ul>
+          <h3>Action:Remove all callbacks      </h3>
+          <ul>
+            <li>Remove all registered received callbacks.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Send - Push      </h2>
+          <h3>Action:Push value      </h3>
+          <ul>
+            <li>Push value at data ref.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>DataRef ( string ) : The Firebase data ref URL</li>
+              <li>Value ( number or string ) : The value to set</li>
+              <li>On complete ( string ) : On complete callback, ignored if enter an empty string &quot;&quot;.</li>
+            </ul>
+          </ul>
+          <h3>Action:Push JSON      </h3>
+          <ul>
+            <li>Push JSON value at data ref.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>DataRef ( string ) : The Firebase data ref URL</li>
+              <li>JSON value ( string ) : JSON value to set</li>
+              <li>On complete ( string ) : On complete callback, ignored if enter an empty string &quot;&quot;.</li>
+            </ul>
+          </ul>
+          <h3>Action:Push boolean value      </h3>
+          <ul>
+            <li>Push boolean value at data ref.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>DataRef ( string ) : The Firebase data ref URL</li>
+              <li>Boolean ( Combo ) : Boolean value.</li>
+              <ul>
+                <li>Options : [&quot;False&quot;,&quot;True&quot;]</li>
+              </ul>
+              <li>On complete ( string ) : On complete callback, ignored if enter an empty string &quot;&quot;.</li>
+            </ul>
+          </ul>
+          <h3>Action:Push server timestamp      </h3>
+          <ul>
+            <li>Push server timestamp at data ref.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>DataRef ( string ) : The Firebase data ref URL</li>
+              <li>On complete ( string ) : On complete callback, ignored if enter an empty string &quot;&quot;.</li>
+            </ul>
+          </ul>
+          <h2>Send - Remove      </h2>
+          <h3>Action:Remove      </h3>
+          <ul>
+            <li>Remove all values at data ref.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>DataRef ( string ) : The Firebase data ref URL</li>
+              <li>On complete ( string ) : On complete callback, ignored if enter an empty string &quot;&quot;.</li>
+            </ul>
+          </ul>
+          <h2>Send - Set      </h2>
+          <h3>Action:Set value      </h3>
+          <ul>
+            <li>Sets value at data ref.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>DataRef ( string ) : The Firebase data ref URL</li>
+              <li>Value ( number or string ) : The value to set</li>
+              <li>On complete ( string ) : On complete callback, ignored if enter an empty string &quot;&quot;.</li>
+            </ul>
+          </ul>
+          <h3>Action:Set JSON      </h3>
+          <ul>
+            <li>Sets JSON value at data ref.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>DataRef ( string ) : The Firebase data ref URL</li>
+              <li>JSON value ( string ) : JSON value to set</li>
+              <li>On complete ( string ) : On complete callback, ignored if enter an empty string &quot;&quot;.</li>
+            </ul>
+          </ul>
+          <h3>Action:Set boolean value      </h3>
+          <ul>
+            <li>Sets boolean value at data ref.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>DataRef ( string ) : The Firebase data ref URL</li>
+              <li>Boolean ( Combo ) : Boolean value.</li>
+              <ul>
+                <li>Options : [&quot;False&quot;,&quot;True&quot;]</li>
+              </ul>
+              <li>On complete ( string ) : On complete callback, ignored if enter an empty string &quot;&quot;.</li>
+            </ul>
+          </ul>
+          <h3>Action:Set server timestamp      </h3>
+          <ul>
+            <li>Sets server timestamp at data ref.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>DataRef ( string ) : The Firebase data ref URL</li>
+              <li>On complete ( string ) : On complete callback, ignored if enter an empty string &quot;&quot;.</li>
+            </ul>
+          </ul>
+          <h2>Send - Transaction      </h2>
+          <h3>Action:Transaction      </h3>
+          <ul>
+            <li>Transaction value with callback.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>DataRef ( string ) : The Firebase data ref URL</li>
+              <li>On transaction ( string ) : On transaction function.</li>
+              <li>On complete ( string ) : On complete callback, ignored if enter an empty string &quot;&quot;.</li>
+            </ul>
+          </ul>
+          <h3>Action:Set value      </h3>
+          <ul>
+            <li>Returns transaction value.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Value ( number or string ) : The value to set</li>
+            </ul>
+          </ul>
+          <h3>Action:Set JSON      </h3>
+          <ul>
+            <li>Returns transaction JSON.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>JSON value ( string ) : JSON value to set</li>
+            </ul>
+          </ul>
+          <h2>Send - Update JSON      </h2>
+          <h3>Action:Update JSON      </h3>
+          <ul>
+            <li>Updates JSON values at the data ref.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>DataRef ( string ) : The Firebase data ref URL</li>
+              <li>JSON value ( string ) : JSON value to set</li>
+              <li>On complete ( string ) : On complete callback, ignored if enter an empty string &quot;&quot;.</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">    
+        <div class="panel-title">    
+          <h2>Expressions</h2>
+        </div>
+        <div class="panel-body">           
+          <h2>Domain    </h2>
+          <h3>Expression:Domain </h3>
+          <ul>
+            <li>Get root location reference.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Error    </h2>
+          <h3>Expression:LastErrorCode </h3>
+          <ul>
+            <li>Error code.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:LastErrorMessage </h3>
+          <ul>
+            <li>Error message (error.serverResponse) .</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>ItemID    </h2>
+          <h3>Expression:GenerateKey </h3>
+          <ul>
+            <li>Generate new key from push action.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:LastGeneratedKey </h3>
+          <ul>
+            <li>Get last generate a key from push action.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Push    </h2>
+          <h3>Expression:LastPushRef </h3>
+          <ul>
+            <li>Data reference at last push.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Receive    </h2>
+          <h3>Expression:LastData </h3>
+          <ul>
+            <li>Received data, using under &quot;condition:On received&quot;. JSON will be stringified. Add default value at 1st parameter if read data is null.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:LastKey </h3>
+          <ul>
+            <li>Key of received data, using under &quot;condition:On received&quot;</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:PrevChildName </h3>
+          <ul>
+            <li>Previous child name, using under &quot;condition:On received&quot; with one of &quot;Child added&quot;, &quot;Child changed&quot;, &quot;Child moved&quot; type. Add default value at 1st parameter if read data is null.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Send - Transaction    </h2>
+          <h3>Expression:TransactionIn </h3>
+          <ul>
+            <li>Transaction input parameter, using under &quot;condition:On transaction&quot;, JSON will be stringified. Add default value at 1st parameter if read data is null.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:TransactionResult </h3>
+          <ul>
+            <li>Transaction wrote result, using under &quot;condition:On completed&quot;, JSON will be stringified. Add default value at 1st parameter if read data is null.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Server time offset    </h2>
+          <h3>Expression:ServerTimeOffset </h3>
+          <ul>
+            <li>Get current server time offset.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:EstimatedTime </h3>
+          <ul>
+            <li>Get estimated time from curent time + current server time offset.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">       
+          <h2>Conditions</h2>
+        </div>
+        <div class="panel-body">              
+          <h2>Connection    </h2>
+          <h4>Condition:On connected                    </h4>
+          <ul>
+            <li>Triggered while connecting start.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On disconnected                    </h4>
+          <ul>
+            <li>Triggered while disconnected.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:Is connected                    </h4>
+          <ul>
+            <li>Return true if connected to firebase server.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Receive    </h2>
+          <h4>Condition:On received                    </h4>
+          <ul>
+            <li>Triggered when registered received event received.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Callback function ( string ) : Callback function.    </li>
+            </ul>
+          </ul>
+          <h4>Condition:LastData is null                    </h4>
+          <ul>
+            <li>Return true if LastData is null.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Send    </h2>
+          <h4>Condition:On complete                    </h4>
+          <ul>
+            <li>Triggered after any sending action success.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Callback function ( string ) : Callback function.    </li>
+            </ul>
+          </ul>
+          <h4>Condition:On error                    </h4>
+          <ul>
+            <li>Triggered after any sending action error.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Callback function ( string ) : Callback function.    </li>
+            </ul>
+          </ul>
+          <h2>Transaction    </h2>
+          <h4>Condition:On transaction                    </h4>
+          <ul>
+            <li>Triggered by calling &quot;action: Transaction&quot;, to get return value.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Callback function ( string ) : Callback function.    </li>
+            </ul>
+          </ul>
+          <h4>Condition:TransactionIn is null                    </h4>
+          <ul>
+            <li>Return true if TransactionIn is null.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Transaction - completed    </h2>
+          <h4>Condition:On complete                    </h4>
+          <ul>
+            <li>Triggered when transaction success.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Callback function ( string ) : Callback function.    </li>
+            </ul>
+          </ul>
+          <h4>Condition:On error                    </h4>
+          <ul>
+            <li>Triggered when transaction error.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Callback function ( string ) : Callback function.    </li>
+            </ul>
+          </ul>
+          <h4>Condition:On aborted                    </h4>
+          <ul>
+            <li>Triggered when transaction aborted.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Callback function ( string ) : Callback function.    </li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE 5>
+<html>
+  <head>
+    <title>Behavior : Platform MoveTo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="js/jquery-3.1.0.min.js">                         </script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      
+      ga('create', 'UA-88123342-2', 'auto');
+      ga('send', 'pageview');            
+      
+    </script>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header"><a class="navbar-brand" href="./index.html">Home</a></div>
+        <ul class="nav navbar-nav">
+          <li><a href="./pluginsIndex.html">Plugins      </a></li>
+          <li><a href="./behaviorsIndex.html">Behaviors                   </a></li>
+          <li><a href="./effectsIndex.html">Effects    </a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Behavior : Platform MoveTo</h1>
+      <p>Author:Rex.Rainbow</p>
+      <ul>
+        <li>Move platformer to specific position</li>
+      </ul><a class="btn btn-default" href="https://rexrainbow.github.io/C2RexDoc/repo/rex_platform.7z">Download    </a>
+      <div class="panel panel-default">
+        <div class="panel-title">
+          <h2>Properties</h2>
+        </div>
+        <div class="panel-body">
+          <h3>Activated</h3>
+          <ul>
+            <li>Enable if you wish this to begin at the start of the layout.                    </li>
+            <ul>
+              <li>Options : [&quot;No&quot;,&quot;Yes&quot;]</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">   
+          <h2>Actions</h2>
+        </div>
+        <div class="panel-body">
+          <h2>      </h2>
+          <h3>Action:Set activated      </h3>
+          <ul>
+            <li>Enable the object's MoveTo behavior.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Activated ( Combo ) : Enable the behavior.</li>
+              <ul>
+                <li>Options : [&quot;No&quot;,&quot;Yes&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h2>MoveTo      </h2>
+          <h3>Action:Move to X      </h3>
+          <ul>
+            <li>Move to specific position by X.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>X ( number ) : The X co-ordinate to move toward.</li>
+            </ul>
+          </ul>
+          <h3>Action:Move to object      </h3>
+          <ul>
+            <li>Move to object.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Target ( object ) : Target object.</li>
+            </ul>
+          </ul>
+          <h3>Action:Move to delta X      </h3>
+          <ul>
+            <li>Move to specific position by deltaX.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>dX ( number ) : The delta X to move toward, in pixel.</li>
+            </ul>
+          </ul>
+          <h3>Action:Move to distance      </h3>
+          <ul>
+            <li>Move to specific position by distance.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Distance ( number ) : The destance to move toward, in pixel.</li>
+              <li>Direction ( Combo ) : Direction of moving.</li>
+              <ul>
+                <li>Options : [&quot;Left&quot;,&quot;Right&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h2>Stop      </h2>
+          <h3>Action:Stop      </h3>
+          <ul>
+            <li>Stop moving.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">    
+        <div class="panel-title">    
+          <h2>Expressions</h2>
+        </div>
+        <div class="panel-body">           
+          <h2>Current    </h2>
+          <h3>Expression:Activated </h3>
+          <ul>
+            <li>The current activated state of behavior.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Target    </h2>
+          <h3>Expression:TargetX </h3>
+          <ul>
+            <li>The X co-ordinate of target position to move toward.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:TargetY </h3>
+          <ul>
+            <li>The Y co-ordinate of target position to move toward.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">       
+          <h2>Conditions</h2>
+        </div>
+        <div class="panel-body">              
+          <h2>    </h2>
+          <h4>Condition:On hit target position                    </h4>
+          <ul>
+            <li>Triggered when hit target position.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:Is moving                    </h4>
+          <ul>
+            <li>Is object moving.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

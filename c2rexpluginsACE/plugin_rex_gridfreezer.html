@@ -1,0 +1,288 @@
+<!DOCTYPE 5>
+<html>
+  <head>
+    <title>Plugin : Grid freezer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="js/jquery-3.1.0.min.js">                         </script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      
+      ga('create', 'UA-88123342-2', 'auto');
+      ga('send', 'pageview');            
+      
+    </script>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header"><a class="navbar-brand" href="./index.html">Home</a></div>
+        <ul class="nav navbar-nav">
+          <li><a href="./pluginsIndex.html">Plugins      </a></li>
+          <li><a href="./behaviorsIndex.html">Behaviors                   </a></li>
+          <li><a href="./effectsIndex.html">Effects    </a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Plugin : Grid freezer</h1>
+      <p>Author:Rex.Rainbow</p>
+      <ul>
+        <li>Save/load instances with grids.</li>
+      </ul><a class="btn btn-default" href="https://rexrainbow.github.io/C2RexDoc/repo/rex_gridfreezer.7z">Download    </a>
+      <div class="panel panel-default">
+        <div class="panel-title">
+          <h2>Properties</h2>
+        </div>
+        <div class="panel-body">
+          <h3>Initial state</h3>
+          <ul>
+            <li>Whether to initially have the object enabled or disabled.                    </li>
+            <ul>
+              <li>Options : [&quot;Disabled&quot;,&quot;Enabled&quot;]</li>
+            </ul>
+          </ul>
+          <h3>Save mode</h3>
+          <ul>
+            <li>Save all properties of each instance, or save it manually.                    </li>
+            <ul>
+              <li>Options : [&quot;All properties&quot;,&quot;Manual&quot;]</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">   
+          <h2>Actions</h2>
+        </div>
+        <div class="panel-body">
+          <h2>Define mask      </h2>
+          <h3>Action:Clean      </h3>
+          <ul>
+            <li>Clean mask.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Action:Fill a rectangle      </h3>
+          <ul>
+            <li>Fill a rectangle mask.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Left-top X ( number ) : Logical X position of Left-top point related by origin point.</li>
+              <li>Left-top Y ( number ) : Logical Y position of Left-top point related by origin point.</li>
+              <li>Width ( number ) : Witdh of area.</li>
+              <li>Height ( number ) : Height of area.</li>
+            </ul>
+          </ul>
+          <h3>Action:Flood fill      </h3>
+          <ul>
+            <li>Flood fill the mask. This action need to have rex_SquareTx or rex_HexTx object.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Range ( number ) : Range of filled.</li>
+            </ul>
+          </ul>
+          <h2>Enable      </h2>
+          <h3>Action:Set enabled      </h3>
+          <ul>
+            <li>Set whether this object is enabled.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>State ( Combo ) : Set whether to enable or disable the behavior.</li>
+              <ul>
+                <li>Options : [&quot;Disabled&quot;,&quot;Enabled&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h2>Extra data      </h2>
+          <h3>Action:Set extra data      </h3>
+          <ul>
+            <li>Set extra data. Used in &quot;condition:On save&quot;.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Index ( number or string ) : Index of extra data, can be number of string</li>
+              <li>Value ( number or string ) : Value of extra data</li>
+            </ul>
+          </ul>
+          <h2>Global data      </h2>
+          <h3>Action:Set global data      </h3>
+          <ul>
+            <li>Set global data.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Index ( number or string ) : Index of extra data, can be number of string</li>
+              <li>Value ( number or string ) : Value of extra data</li>
+            </ul>
+          </ul>
+          <h2>Import      </h2>
+          <h3>Action:Import grids      </h3>
+          <ul>
+            <li>Import grids data.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Grids data ( string ) : Grids data exported before.</li>
+            </ul>
+          </ul>
+          <h2>Load      </h2>
+          <h3>Action:Load all instances      </h3>
+          <ul>
+            <li>Load all instances.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Masked area      </h2>
+          <h3>Action:Clean      </h3>
+          <ul>
+            <li>Clean Masked area.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Put      </h2>
+          <h3>Action:Put mask      </h3>
+          <ul>
+            <li>Put mask at physical position.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>X ( number ) : The physical X position of origin point.</li>
+              <li>Y ( number ) : The physical Y position of origin point.</li>
+            </ul>
+          </ul>
+          <h2>Save      </h2>
+          <h3>Action:Save all      </h3>
+          <ul>
+            <li>Save all target instances into grids.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Setup      </h2>
+          <h3>Action:Setup layout      </h3>
+          <ul>
+            <li>Setup layout for flood filling.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Layout ( object ) : Layout to get neighbors</li>
+            </ul>
+          </ul>
+          <h2>Target      </h2>
+          <h3>Action:Add object to target      </h3>
+          <ul>
+            <li>Add an object or family to target automatically.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Object ( object ) : Object type.</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">    
+        <div class="panel-title">    
+          <h2>Expressions</h2>
+        </div>
+        <div class="panel-body">           
+          <h2>Export    </h2>
+          <h3>Expression:GridData </h3>
+          <ul>
+            <li>Export the grids data.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Extra data    </h2>
+          <h3>Expression:ExtraData </h3>
+          <ul>
+            <li>Get extra data. Used in &quot;condition:On load&quot;. Add 1st parameter for key, add 2nd parameter for default value.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>For each    </h2>
+          <h3>Expression:CurLX </h3>
+          <ul>
+            <li>Current Logical X in a For Each loop.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:CurLY </h3>
+          <ul>
+            <li>Current Logical Y in a For Each loop.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:CurPX </h3>
+          <ul>
+            <li>Current Physical X in a For Each loop.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:CurPY </h3>
+          <ul>
+            <li>Current Physical Y in a For Each loop.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Global data    </h2>
+          <h3>Expression:GlobalData </h3>
+          <ul>
+            <li>Get global data. Used in &quot;condition:On load&quot;. Add 1st parameter for key, add 2nd parameter for default value.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Load    </h2>
+          <h3>Expression:LoadInstUID </h3>
+          <ul>
+            <li>Get UID of current loaded instance. Used in &quot;condition:On load&quot;.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">       
+          <h2>Conditions</h2>
+        </div>
+        <div class="panel-body">              
+          <h2>Load    </h2>
+          <h4>Condition:On load                    </h4>
+          <ul>
+            <li>Triggered when load object from grid.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Masked area    </h2>
+          <h4>Condition:For each masked LXY                    </h4>
+          <ul>
+            <li>Repeat the event for each logic position of masked area.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Save    </h2>
+          <h4>Condition:On save                    </h4>
+          <ul>
+            <li>Triggered when save object into grid.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Object ( object ) : Object type.    </li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

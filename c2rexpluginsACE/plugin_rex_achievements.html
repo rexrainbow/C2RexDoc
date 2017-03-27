@@ -1,0 +1,192 @@
+<!DOCTYPE 5>
+<html>
+  <head>
+    <title>Plugin : Achievements</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="js/jquery-3.1.0.min.js">                         </script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      
+      ga('create', 'UA-88123342-2', 'auto');
+      ga('send', 'pageview');            
+      
+    </script>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header"><a class="navbar-brand" href="./index.html">Home</a></div>
+        <ul class="nav navbar-nav">
+          <li><a href="./pluginsIndex.html">Plugins      </a></li>
+          <li><a href="./behaviorsIndex.html">Behaviors                   </a></li>
+          <li><a href="./effectsIndex.html">Effects    </a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Plugin : Achievements</h1>
+      <p>Author:Rex.Rainbow</p>
+      <ul>
+        <li>Achievements in csv table.</li>
+      </ul><a class="btn btn-default" href="https://rexrainbow.github.io/C2RexDoc/repo/rex_achievements.7z">Download    </a>
+      <div class="panel panel-default">
+        <div class="panel-title">
+          <h2>Properties</h2>
+        </div>
+        <div class="panel-body">
+          <h3>Delimiter</h3>
+          <ul>
+            <li>Set delimiter for splitting items.                    </li>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">   
+          <h2>Actions</h2>
+        </div>
+        <div class="panel-body">
+          <h2>Execute      </h2>
+          <h3>Action:Run tests      </h3>
+          <ul>
+            <li>Run tests.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Force      </h2>
+          <h3>Action:Force obtain      </h3>
+          <ul>
+            <li>Force obtain or take out an achievement.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Level ( string ) : Level or game name.</li>
+              <li>Achievement ( string ) : achievement name.</li>
+              <li>Action ( Combo ) : Obtain or take out this achievement.</li>
+              <ul>
+                <li>Options : [&quot;take out&quot;,&quot;obtain&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h2>JSON      </h2>
+          <h3>Action:Load      </h3>
+          <ul>
+            <li>Load from an accomplishments previously encoded in JSON format.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>JSON ( string ) : A string of the JSON data to load.</li>
+            </ul>
+          </ul>
+          <h3>Action:Load states      </h3>
+          <ul>
+            <li>Load states from an accomplishments previously encoded in JSON format.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>JSON ( string ) : A string of the JSON data to load.</li>
+            </ul>
+          </ul>
+          <h2>Load      </h2>
+          <h3>Action:Load rules      </h3>
+          <ul>
+            <li>Load rules in csv table for condition-items.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Data ( string ) : Data in CSV format.</li>
+            </ul>
+          </ul>
+          <h2>Prepare      </h2>
+          <h3>Action:Set level name      </h3>
+          <ul>
+            <li>Set level name.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Level ( string ) : Level or game name.</li>
+            </ul>
+          </ul>
+          <h3>Action:Set property      </h3>
+          <ul>
+            <li>Set property.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Property ( string ) : Property name.</li>
+              <li>Value ( number or string ) : The value to set.</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">    
+        <div class="panel-title">    
+          <h2>Expressions</h2>
+        </div>
+        <div class="panel-body">           
+          <h2>For each    </h2>
+          <h3>Expression:CurAchievementName </h3>
+          <ul>
+            <li>Get achievement name in a For Each loop.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>JSON    </h2>
+          <h3>Expression:AsJSON </h3>
+          <ul>
+            <li>Return the contents of achievements in JSON format, include states and rules.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:StatesAsJSON </h3>
+          <ul>
+            <li>Return the states of accomplishments in JSON format.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Level    </h2>
+          <h3>Expression:LevelName </h3>
+          <ul>
+            <li>Level name of current achievements.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">       
+          <h2>Conditions</h2>
+        </div>
+        <div class="panel-body">              
+          <h2>Achievements    </h2>
+          <h4>Condition:Is obtained                    </h4>
+          <ul>
+            <li>Return true if this achievement is obtained.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Level ( string ) : Level or game name.    </li>
+              <li>Achievement ( string ) : achievement name.    </li>
+              <li>Latest ( Combo ) : obtain this achievement in the latest test.    </li>
+              <ul>
+                <li>Options : [&quot;&quot;,&quot;in the latest test&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h2>For each    </h2>
+          <h4>Condition:For each achievement                    </h4>
+          <ul>
+            <li>Repeat the event for each achievement.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Level ( string ) : Level or game name.    </li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

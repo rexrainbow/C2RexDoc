@@ -1,0 +1,350 @@
+<!DOCTYPE 5>
+<html>
+  <head>
+    <title>Plugin : Kongregate</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="js/jquery-3.1.0.min.js">                         </script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      
+      ga('create', 'UA-88123342-2', 'auto');
+      ga('send', 'pageview');            
+      
+    </script>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header"><a class="navbar-brand" href="./index.html">Home</a></div>
+        <ul class="nav navbar-nav">
+          <li><a href="./pluginsIndex.html">Plugins      </a></li>
+          <li><a href="./behaviorsIndex.html">Behaviors                   </a></li>
+          <li><a href="./effectsIndex.html">Effects    </a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Plugin : Kongregate</h1>
+      <p>Author:Rex.Rainbow</p>
+      <ul>
+        <li>Api of kongregate. Reference: https://docs.kongregate.com/v1.0/docs/javascript-api</li>
+      </ul><a class="btn btn-default" href="https://rexrainbow.github.io/C2RexDoc/repo/rex_kongregate.7z">Download    </a>
+      <div class="panel panel-default">
+        <div class="panel-title">
+          <h2>Properties</h2>
+        </div>
+        <div class="panel-body">
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">   
+          <h2>Actions</h2>
+        </div>
+        <div class="panel-body">
+          <h2>Authentication      </h2>
+          <h3>Action:Show registration box      </h3>
+          <ul>
+            <li>Show a dialog prompting the user to register an account.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Custom Chat      </h2>
+          <h3>Action:Show tab      </h3>
+          <ul>
+            <li>Displays a custom chat tab.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Tab name ( string ) : Name of the tab.</li>
+              <li>Description ( string ) : Description of the tab.</li>
+              <li>Options ( string ) : Extra options for the tab, in JSON</li>
+            </ul>
+          </ul>
+          <h3>Action:Display message      </h3>
+          <ul>
+            <li>Displays a custom chat tab.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Message ( string ) : The message to display.</li>
+            </ul>
+          </ul>
+          <h3>Action:Clear messages      </h3>
+          <ul>
+            <li>Remove all chat messages from the custom tab.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Action:Close tab      </h3>
+          <ul>
+            <li>Close a custom chat tab.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Action:Add event listener      </h3>
+          <ul>
+            <li>Listen for chat messages from the user.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Event ( Combo ) : Type of event to listen for.</li>
+              <ul>
+                <li>Options : [&quot;message&quot;,&quot;room.message&quot;,&quot;tab_visible&quot;]</li>
+              </ul>
+              <li>Callback ( string ) : A tag, which can be anything you like, to distinguish between different callback.</li>
+            </ul>
+          </ul>
+          <h2>Feeds &amp; User Messaging      </h2>
+          <h3>Action:Show feed post box      </h3>
+          <ul>
+            <li>Create a post in the user's activity feed.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Content ( string ) : A string containing the text for the feed post.</li>
+              <li>Image URI ( string ) : Link to an image to use as an icon for the feed post.</li>
+              <li>kv_params ( string ) : Optional parameters to be passed into the game when the feed post link is followed.</li>
+            </ul>
+          </ul>
+          <h3>Action:Show shout box      </h3>
+          <ul>
+            <li>Post a shout on the user's profile page.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Message ( string ) : The message text to add to the shout.</li>
+            </ul>
+          </ul>
+          <h3>Action:Show invitation box      </h3>
+          <ul>
+            <li>Post a shout on the user's profile page.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Content ( string ) : The text content of the invitation.</li>
+              <li>Filter ( string ) : One of these values: &quot;&quot;, &quot;played&quot;, &quot;not_played&quot;, a list of userID ex &quot;123 8219&quot;</li>
+              <li>kv_params ( string ) : Optional parameters to be passed into the game when the feed post link is followed.</li>
+            </ul>
+          </ul>
+          <h3>Action:Private message      </h3>
+          <ul>
+            <li>Send a private message to the user.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Content ( string ) : The message to send.</li>
+            </ul>
+          </ul>
+          <h2>Incentivized Ads      </h2>
+          <h3>Action:1. Initialize incentivized Ads      </h3>
+          <ul>
+            <li>Initialize the incentivized ad system.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Action:3. Show incentivized Ad      </h3>
+          <ul>
+            <li>Attempt to display an incentivized ad to the user.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Kreds &amp; Virtual Goods      </h2>
+          <h3>Action:Request user item list      </h3>
+          <ul>
+            <li>Request user item list.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Callback ( string ) : A tag, which can be anything you like, to distinguish between different callback.</li>
+            </ul>
+          </ul>
+          <h3>Action:Request item list      </h3>
+          <ul>
+            <li>Request item list.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Tags ( string ) : Item tags, separated by &quot;,&quot;.</li>
+              <li>Callback ( string ) : A tag, which can be anything you like, to distinguish between different callback.</li>
+            </ul>
+          </ul>
+          <h3>Action:Purchase items      </h3>
+          <ul>
+            <li>Start the purchase flow for predefined items.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Identifiers ( string ) : Item identifier strings, separated by &quot;,&quot;.</li>
+              <li>Callback ( string ) : A tag, which can be anything you like, to distinguish between different callback.</li>
+            </ul>
+          </ul>
+          <h3>Action:Show Kred purchase dialog      </h3>
+          <ul>
+            <li>Opens the Kred Purchase lightbox.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Type ( Combo ) : Optional type of offer to display.</li>
+              <ul>
+                <li>Options : [&quot;default&quot;,&quot;OfferPal&quot;,&quot;Mobile/Zong&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h2>Shared Content      </h2>
+          <h3>Action:Save      </h3>
+          <ul>
+            <li>Save a custom level or other shared content.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>type ( string ) : Type of content the user wishes to save, 12 characters max.</li>
+              <li>Content ( string ) : Value of content to be saved.</li>
+              <li>Label ( string ) : Optional label for sub-classing the shared content.</li>
+              <li>Callback ( string ) : A tag, which can be anything you like, to distinguish between different callback.</li>
+            </ul>
+          </ul>
+          <h3>Action:Browse      </h3>
+          <ul>
+            <li>Allow the player to browse shared content.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>type ( string ) : Type of content the user wishes to save, 12 characters max.</li>
+              <li>Sort by ( Combo ) : How to sort the content.</li>
+              <ul>
+                <li>Options : [&quot;own&quot;,&quot;newest&quot;,&quot;load count&quot;,&quot;friends&quot;]</li>
+              </ul>
+              <li>Label ( string ) : Optional label for sub-classing the shared content.</li>
+            </ul>
+          </ul>
+          <h3>Action:Add load listener      </h3>
+          <ul>
+            <li>Receive notifications when shared content is loaded.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>type ( string ) : Type of content to listen for.</li>
+              <li>Callback ( string ) : A tag, which can be anything you like, to distinguish between different callback.</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">    
+        <div class="panel-title">    
+          <h2>Expressions</h2>
+        </div>
+        <div class="panel-body">           
+          <h2>Authentication    </h2>
+          <h3>Expression:UserID </h3>
+          <ul>
+            <li>Return the current user's ID, or 0 if guest.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:UserName </h3>
+          <ul>
+            <li>Return the current user's name, or a guest name if not logged in.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:GameAuthToken </h3>
+          <ul>
+            <li>Get the game authentication token for the current user.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Callback    </h2>
+          <h3>Expression:Result </h3>
+          <ul>
+            <li>Get result of callback, in JSON string.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">       
+          <h2>Conditions</h2>
+        </div>
+        <div class="panel-body">              
+          <h2>API Load    </h2>
+          <h4>Condition:On api loaded                    </h4>
+          <ul>
+            <li>Triggered when api loaded.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:Is api loaded                    </h4>
+          <ul>
+            <li>Return true if api is loaded.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Authentication    </h2>
+          <h4>Condition:On login                    </h4>
+          <ul>
+            <li>Triggered when the user logs in (either automatically or during the game).                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:Is guest                    </h4>
+          <ul>
+            <li>True if the user is a guest (not logged in).                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Callback    </h2>
+          <h4>Condition:Callback                    </h4>
+          <ul>
+            <li>Callback of request.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Callback ( string ) : A tag, which can be anything you like, to distinguish between different callback.    </li>
+            </ul>
+          </ul>
+          <h2>Incentivized Ads    </h2>
+          <h4>Condition:2. On ads available                    </h4>
+          <ul>
+            <li>Triggered when ads is available.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:2. On ads unavailable                    </h4>
+          <ul>
+            <li>Triggered when ads is unavailable.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:4. On ads opened                    </h4>
+          <ul>
+            <li>Triggered when ads is opened.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:5. On ads completed                    </h4>
+          <ul>
+            <li>Triggered when ads is completed.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:5. On ads abandoned                    </h4>
+          <ul>
+            <li>Triggered when ads is abandoned.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

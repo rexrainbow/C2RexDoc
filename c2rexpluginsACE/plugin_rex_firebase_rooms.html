@@ -1,0 +1,622 @@
+<!DOCTYPE 5>
+<html>
+  <head>
+    <title>Plugin : Rooms</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="js/jquery-3.1.0.min.js">                         </script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      
+      ga('create', 'UA-88123342-2', 'auto');
+      ga('send', 'pageview');            
+      
+    </script>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header"><a class="navbar-brand" href="./index.html">Home</a></div>
+        <ul class="nav navbar-nav">
+          <li><a href="./pluginsIndex.html">Plugins      </a></li>
+          <li><a href="./behaviorsIndex.html">Behaviors                   </a></li>
+          <li><a href="./effectsIndex.html">Effects    </a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Plugin : Rooms</h1>
+      <p>Author:Rex.Rainbow</p>
+      <ul>
+        <li>Rooms management.</li>
+      </ul><a class="btn btn-default" href="https://rexrainbow.github.io/C2RexDoc/repo/rex_firebase.7z">Download    </a>
+      <div class="panel panel-default">
+        <div class="panel-title">
+          <h2>Properties</h2>
+        </div>
+        <div class="panel-body">
+          <h3>Domain</h3>
+          <ul>
+            <li>The root location of the Firebase data.                    </li>
+          </ul>
+          <h3>Sub domain</h3>
+          <ul>
+            <li>Sub domain for this function.                    </li>
+          </ul>
+          <h3>Door control</h3>
+          <ul>
+            <li>Set &quot;Auto&quot; to close or open door when room is full or not.                    </li>
+            <ul>
+              <li>Options : [&quot;Manual&quot;,&quot;Auto&quot;]</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">   
+          <h2>Actions</h2>
+        </div>
+        <div class="panel-body">
+          <h2>0. My info      </h2>
+          <h3>Action:Set my info      </h3>
+          <ul>
+            <li>Set user info.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>UserID ( string ) : UserID from authentication.</li>
+              <li>Name ( string ) : User name.</li>
+            </ul>
+          </ul>
+          <h2>Door state      </h2>
+          <h3>Action:Open      </h3>
+          <ul>
+            <li>Open or close current room.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Door state ( Combo ) : Door state of this room.</li>
+              <ul>
+                <li>Options : [&quot;Close&quot;,&quot;Open&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h2>Permission list      </h2>
+          <h3>Action:Add      </h3>
+          <ul>
+            <li>Add user to permission list.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>UserID ( string ) : UserID from authentication.</li>
+              <li>Name ( string ) : Player name.</li>
+              <li>List ( Combo ) : List type.</li>
+              <ul>
+                <li>Options : [&quot;white - list&quot;,&quot;black - lisk&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h3>Action:Remove      </h3>
+          <ul>
+            <li>Remove user from permission list.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>UserID ( string ) : UserID from authentication.</li>
+              <li>List ( Combo ) : List type.</li>
+              <ul>
+                <li>Options : [&quot;white - list&quot;,&quot;black - lisk&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h2>Room      </h2>
+          <h3>Action:Create      </h3>
+          <ul>
+            <li>Create then join this room.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Name ( string ) : Room name.</li>
+              <li>Type ( string ) : Room type. &quot;public&quot;, &quot;private&quot;, or others.</li>
+              <li>Max peers ( number ) : The maximum number of peers that can join this room. Leave 0 for unlimited.</li>
+              <li>Life period  ( Combo ) : Life period of this room.</li>
+              <ul>
+                <li>Options : [&quot;Temporary&quot;,&quot;Persisted&quot;]</li>
+              </ul>
+              <li>Door state ( Combo ) : Door state of this room.</li>
+              <ul>
+                <li>Options : [&quot;Closed&quot;,&quot;Open&quot;]</li>
+              </ul>
+              <li>Room ID ( string ) : Room ID. Leave &quot;&quot; to use timestamp form server.</li>
+              <li>Create action ( Combo ) : Create action.</li>
+              <ul>
+                <li>Options : [&quot;Create&quot;,&quot;Leave current room, then create or join&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h3>Action:Create (#)      </h3>
+          <ul>
+            <li>Create then join this room.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Name ( string ) : Room name.</li>
+              <li>Type ( string ) : Room type. &quot;public&quot;, &quot;private&quot;, or others.</li>
+              <li>Max peers ( number ) : The maximum number of peers that can join this room. Leave 0 for unlimited.</li>
+              <li>Life period ( number ) : 0=Temporary, 1=Persisted.</li>
+              <li>Door state ( number ) : 0=Closed, 1=Open.</li>
+              <li>oin permission ( number ) : 0=Anyone, 1=Black list, 2=White list.</li>
+              <li>Room ID ( string ) : Room ID. Leave &quot;&quot; to use timestamp form server.</li>
+              <li>Create action ( Combo ) : Create action.</li>
+              <ul>
+                <li>Options : [&quot;Create&quot;,&quot;Create then join&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h3>Action:Join      </h3>
+          <ul>
+            <li>Join room.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Room ID ( string ) : Room ID.</li>
+              <li>Join action ( Combo ) : Join action.</li>
+              <ul>
+                <li>Options : [&quot;Join&quot;,&quot;Leave current room then join&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h3>Action:Leave      </h3>
+          <ul>
+            <li>Leave current room.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Action:Kick user      </h3>
+          <ul>
+            <li>Kick user.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>UserID ( string ) : UserID from authentication.</li>
+            </ul>
+          </ul>
+          <h3>Action:Join random      </h3>
+          <ul>
+            <li>Join random room from current rooms list.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Join action ( Combo ) : Join action.</li>
+              <ul>
+                <li>Options : [&quot;Join&quot;,&quot;Leave current room then join&quot;]</li>
+              </ul>
+              <li>Retry ( number ) : Retry count to get default value.</li>
+            </ul>
+          </ul>
+          <h2>Room - metadata      </h2>
+          <h3>Action:Get metadata      </h3>
+          <ul>
+            <li>Get metadata included white list and black list.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Room list      </h2>
+          <h3>Action:Update      </h3>
+          <ul>
+            <li>Update opened rooms list.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Type ( string ) : Room type. &quot;public&quot;, &quot;private&quot;, or others. Leave &quot;&quot; to get all &quot;open&quot; rooms for all types.</li>
+            </ul>
+          </ul>
+          <h3>Action:Stop updating      </h3>
+          <ul>
+            <li>Stop updating opened rooms list.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>User list      </h2>
+          <h3>Action:Get users list of room      </h3>
+          <ul>
+            <li>Get users list of room.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Room ID ( string ) : Room ID.</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">    
+        <div class="panel-title">    
+          <h2>Expressions</h2>
+        </div>
+        <div class="panel-body">           
+          <h2>Custom channel    </h2>
+          <h3>Expression:ChannelRef </h3>
+          <ul>
+            <li>Get custom channel absolute reference. Add 2nd parameter for roomID.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>For each - index    </h2>
+          <h3>Expression:LoopIndex </h3>
+          <ul>
+            <li>Get loop index in for each loop.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>My    </h2>
+          <h3>Expression:MyUserName </h3>
+          <ul>
+            <li>Get my user name.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:MyUserID </h3>
+          <ul>
+            <li>Get my user ID.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Permission list    </h2>
+          <h3>Expression:WhiteListToJSON </h3>
+          <ul>
+            <li>Get white list in JSON string.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:BlackListToJSON </h3>
+          <ul>
+            <li>Get black list in JSON string.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Room    </h2>
+          <h3>Expression:RoomName </h3>
+          <ul>
+            <li>Get current room name.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:RoomID </h3>
+          <ul>
+            <li>Get current room ID.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Rooms list    </h2>
+          <h3>Expression:CurCreatorName </h3>
+          <ul>
+            <li>Get the current creater name in a For Each loop.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:CurCreatorID </h3>
+          <ul>
+            <li>Get the current creater ID in a For Each loop.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:RoomsCount </h3>
+          <ul>
+            <li>Get amount of opened rooms.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Rooms list - for each    </h2>
+          <h3>Expression:CurRoomName </h3>
+          <ul>
+            <li>Get the current room name in a For Each loop.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:CurRoomID </h3>
+          <ul>
+            <li>Get the current room ID in a For Each loop.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:CurRoomMaxPeers </h3>
+          <ul>
+            <li>Get max peers of current room in a For Each loop.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Rooms list - index    </h2>
+          <h3>Expression:Index2RoomName </h3>
+          <ul>
+            <li>Get room name by room index.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Index ( number ) : Room index.</li>
+            </ul>
+          </ul>
+          <h3>Expression:Index2RoomID </h3>
+          <ul>
+            <li>Get room ID by room index.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Index ( number ) : Room index.</li>
+            </ul>
+          </ul>
+          <h3>Expression:Index2RoomMaxPeers </h3>
+          <ul>
+            <li>Get room name by room index.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Index ( number ) : Room index.</li>
+            </ul>
+          </ul>
+          <h2>Triggered    </h2>
+          <h3>Expression:TriggeredRoomName </h3>
+          <ul>
+            <li>Get triggered room name.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:TriggeredRoomID </h3>
+          <ul>
+            <li>Get triggered room ID.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Users list    </h2>
+          <h3>Expression:TriggeredUserName </h3>
+          <ul>
+            <li>Get triggered user name.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:TriggeredUserID </h3>
+          <ul>
+            <li>Get triggered user ID.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:UsersCount </h3>
+          <ul>
+            <li>Get amount of users in users list.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Users list - for each    </h2>
+          <h3>Expression:CurUserName </h3>
+          <ul>
+            <li>Get the current user name in a For Each loop.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:CurUserID </h3>
+          <ul>
+            <li>Get the current user ID in a For Each loop.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Users list - index    </h2>
+          <h3>Expression:Index2UserName </h3>
+          <ul>
+            <li>Get user name by user index.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Index ( number ) : User index.</li>
+            </ul>
+          </ul>
+          <h3>Expression:Index2UserID </h3>
+          <ul>
+            <li>Get user ID by user index.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Index ( number ) : User index.</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">       
+          <h2>Conditions</h2>
+        </div>
+        <div class="panel-body">              
+          <h2>Action    </h2>
+          <h4>Condition:Locked                    </h4>
+          <ul>
+            <li>Return true if plugin is locked which could not run any action.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Create room    </h2>
+          <h4>Condition:On create                    </h4>
+          <ul>
+            <li>Triggered when room created.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On create error                    </h4>
+          <ul>
+            <li>Triggered when room created error.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Door state    </h2>
+          <h4>Condition:On opened                    </h4>
+          <ul>
+            <li>Triggered when room is opened.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On closed                    </h4>
+          <ul>
+            <li>Triggered when room is closed.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Join room    </h2>
+          <h4>Condition:On join                    </h4>
+          <ul>
+            <li>Triggered when join room.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On join error                    </h4>
+          <ul>
+            <li>Triggered when join room error.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Leave room    </h2>
+          <h4>Condition:On left                    </h4>
+          <ul>
+            <li>Triggered when left room or room removed                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On kicked                    </h4>
+          <ul>
+            <li>Triggered when user kicked out or room removed.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Permission list    </h2>
+          <h4>Condition:For each user                    </h4>
+          <ul>
+            <li>Repeat the event for each user in permission list.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>List ( Combo ) : List type.    </li>
+              <ul>
+                <li>Options : [&quot;white - list&quot;,&quot;black - lisk&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h2>Room    </h2>
+          <h4>Condition:In room                    </h4>
+          <ul>
+            <li>Return true if current user is in a room.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Rooms list    </h2>
+          <h4>Condition:On update                    </h4>
+          <ul>
+            <li>Triggered when rooms list updated.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:For each room                    </h4>
+          <ul>
+            <li>Repeat the event for each room in rooms list.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:For each room in a range                    </h4>
+          <ul>
+            <li>Repeat the event for each room in a range.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Start ( number ) : Start from index (0-based).    </li>
+              <li>End ( number ) : End to index (0-based). This value should larger than Start.    </li>
+            </ul>
+          </ul>
+          <h2>Users list    </h2>
+          <h4>Condition:On update                    </h4>
+          <ul>
+            <li>Triggered when user list updated.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:For each user                    </h4>
+          <ul>
+            <li>Repeat the event for each user in users list.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:For each user in a range                    </h4>
+          <ul>
+            <li>Repeat the event for each user in a range.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Start ( number ) : Start from index (0-based).    </li>
+              <li>End ( number ) : End to index (0-based). This value should larger than Start.    </li>
+            </ul>
+          </ul>
+          <h4>Condition:On user joined                    </h4>
+          <ul>
+            <li>Triggered when user joined.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On user left                    </h4>
+          <ul>
+            <li>Triggered when user left.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:I am first user                    </h4>
+          <ul>
+            <li>Return true if client is the first user of current room.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:Is full                    </h4>
+          <ul>
+            <li>Return true if room is full of users.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On become first user                    </h4>
+          <ul>
+            <li>Triggered when became first user of current room.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On get users list                    </h4>
+          <ul>
+            <li>Triggered when get users list.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

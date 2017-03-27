@@ -1,0 +1,235 @@
+<!DOCTYPE 5>
+<html>
+  <head>
+    <title>Behavior : Button</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="js/jquery-3.1.0.min.js">                         </script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      
+      ga('create', 'UA-88123342-2', 'auto');
+      ga('send', 'pageview');            
+      
+    </script>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header"><a class="navbar-brand" href="./index.html">Home</a></div>
+        <ul class="nav navbar-nav">
+          <li><a href="./pluginsIndex.html">Plugins      </a></li>
+          <li><a href="./behaviorsIndex.html">Behaviors                   </a></li>
+          <li><a href="./effectsIndex.html">Effects    </a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Behavior : Button</h1>
+      <p>Author:Rex.Rainbow</p>
+      <ul>
+        <li>Get click event while &quot;touch end&quot;.</li>
+      </ul><a class="btn btn-default" href="https://rexrainbow.github.io/C2RexDoc/repo/rex_button.7z">Download    </a>
+      <div class="panel panel-default">
+        <div class="panel-title">
+          <h2>Properties</h2>
+        </div>
+        <div class="panel-body">
+          <h3>Activated</h3>
+          <ul>
+            <li>Enable if you wish this goto ACTIVE state at the start of the layout.                    </li>
+            <ul>
+              <li>Options : [&quot;No&quot;,&quot;Yes&quot;]</li>
+            </ul>
+          </ul>
+          <h3>Click mode</h3>
+          <ul>
+            <li>Clicking when touch released or pressed.                    </li>
+            <ul>
+              <li>Options : [&quot;Released&quot;,&quot;Pressed&quot;]</li>
+            </ul>
+          </ul>
+          <h3>Activated after Clicked</h3>
+          <ul>
+            <li>Auto back to ACTIVE state after CLICKED state.                    </li>
+            <ul>
+              <li>Options : [&quot;No&quot;,&quot;Yes&quot;]</li>
+            </ul>
+          </ul>
+          <h3>Visible checking</h3>
+          <ul>
+            <li>Set Yes to enable button if visible.                    </li>
+            <ul>
+              <li>Options : [&quot;No&quot;,&quot;Yes&quot;]</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">   
+          <h2>Actions</h2>
+        </div>
+        <div class="panel-body">
+          <h2>Click detecting state      </h2>
+          <h3>Action:Cancel click detecting      </h3>
+          <ul>
+            <li>Cancel click detecting at click detecting state.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Condition      </h2>
+          <h3>Action:Manual trigger      </h3>
+          <ul>
+            <li>Manual trigger condition.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Condition type ( Combo ) : Condition type.</li>
+              <ul>
+                <li>Options : [&quot;On clicked&quot;,&quot;On click cancel&quot;,&quot;On click detecting start&quot;,&quot;On activated&quot;,&quot;On inactivated&quot;,&quot;On rolling in&quot;,&quot;On rolling out&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h2>Display      </h2>
+          <h3>Action:Set display of states      </h3>
+          <ul>
+            <li>Set display of states.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Normal ( number or string ) : Frame index (number) or animation name (string) at normal state, &quot;&quot; is ignored.</li>
+              <li>Click ( number or string ) : Frame index (number) or animation name (string) at click state, &quot;&quot; is ignored.</li>
+              <li>INACTIVE ( number or string ) : Frame index (number) or animation name (string) at INACTIVE state, &quot;&quot; is ignored.</li>
+              <li>Rolling-in ( number or string ) : Frame index (number) or animation name (string) at rolling-un state, &quot;&quot; is ignored.</li>
+            </ul>
+          </ul>
+          <h2>Request - Activate      </h2>
+          <h3>Action:Activate      </h3>
+          <ul>
+            <li>Goto ACTIVE state.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Action:Activate in layer      </h3>
+          <ul>
+            <li>Goto ACTIVE state if in layer, else goto INACTIVE state.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Layer ( layer ) : Layer name of number.</li>
+            </ul>
+          </ul>
+          <h2>Request - Deactivate      </h2>
+          <h3>Action:Deactivate      </h3>
+          <ul>
+            <li>Goto INACTIVE state.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Action:Deactivate in layer      </h3>
+          <ul>
+            <li>Goto INACTIVE state if in layer, else goto ACTIVE state.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Layer ( layer ) : Layer name of number.</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">    
+        <div class="panel-title">    
+          <h2>Expressions</h2>
+        </div>
+        <div class="panel-body">           
+          <h2>State    </h2>
+          <h3>Expression:CurState </h3>
+          <ul>
+            <li>Get current button state.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:PreState </h3>
+          <ul>
+            <li>Get previous button state.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">       
+          <h2>Conditions</h2>
+        </div>
+        <div class="panel-body">              
+          <h2>Button    </h2>
+          <h4>Condition:On activated                    </h4>
+          <ul>
+            <li>Triggered when button activated.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On inactivated                    </h4>
+          <ul>
+            <li>Triggered when button inactivated.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Click    </h2>
+          <h4>Condition:On clicked                    </h4>
+          <ul>
+            <li>Triggered when clicked.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On click cancel                    </h4>
+          <ul>
+            <li>Triggered when clicking canceled.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On click detecting start                    </h4>
+          <ul>
+            <li>Triggered when clicking detecting start.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Enable    </h2>
+          <h4>Condition:Is enable                    </h4>
+          <ul>
+            <li>Return true if this button is enable.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Rolling over    </h2>
+          <h4>Condition:On rolling in                    </h4>
+          <ul>
+            <li>Triggered when rolling-in.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On rolling out                    </h4>
+          <ul>
+            <li>Triggered when rolling-out.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
