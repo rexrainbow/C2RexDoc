@@ -716,6 +716,11 @@
     },
     {
         "category": "plugins",
+        "name": "rex_kongregate",
+        "timestamp": 1490633854308
+    },
+    {
+        "category": "plugins",
         "name": "rex_layer",
         "timestamp": 1490590041358
     },
