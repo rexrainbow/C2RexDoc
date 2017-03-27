@@ -1,0 +1,224 @@
+<!DOCTYPE 5>
+<html>
+  <head>
+    <title>Behavior : Doughnut chart</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="js/jquery-3.1.0.min.js">                         </script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      
+      ga('create', 'UA-88123342-2', 'auto');
+      ga('send', 'pageview');            
+      
+    </script>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header"><a class="navbar-brand" href="./index.html">Home</a></div>
+        <ul class="nav navbar-nav">
+          <li><a href="./pluginsIndex.html">Plugins      </a></li>
+          <li><a href="./behaviorsIndex.html">Behaviors                   </a></li>
+          <li><a href="./effectsIndex.html">Effects    </a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Behavior : Doughnut chart</h1>
+      <p>Author:Rex.Rainbow</p>
+      <ul>
+        <li>Draw a doughnut chart on the canvas. The api of chart - http://www.chartjs.org/</li>
+      </ul><a class="btn btn-default" href="https://dl.dropboxusercontent.com/u/5779181/C2Repo/Zip/behaviors/rex_canvas_chart_doughnut.7z">Download    </a>
+      <div class="panel panel-default">
+        <div class="panel-title">
+          <h2>Properties</h2>
+        </div>
+        <div class="panel-body">
+          <h3>Segment stroke</h3>
+          <ul>
+            <li>Show a stroke on each segment.                    </li>
+            <ul>
+              <li>Options : [&quot;No&quot;,&quot;Yes&quot;]</li>
+            </ul>
+          </ul>
+          <h3>Segment stroke color</h3>
+          <ul>
+            <li>The colour of each segment stroke.                    </li>
+          </ul>
+          <h3>Segment stroke width</h3>
+          <ul>
+            <li>The width of each segment stroke.                    </li>
+          </ul>
+          <h3>Percentage inner cutout</h3>
+          <ul>
+            <li>The percentage of the chart that we cut out of the middle.                    </li>
+          </ul>
+          <h3>Animation</h3>
+          <ul>
+            <li>Animate the chart.                    </li>
+            <ul>
+              <li>Options : [&quot;No&quot;,&quot;Yes&quot;]</li>
+            </ul>
+          </ul>
+          <h3>Animation easing</h3>
+          <ul>
+            <li>Animate the chart.                    </li>
+            <ul>
+              <li>Options : [&quot;Linear&quot;,&quot;EaseInQuad&quot;,&quot;EaseOutQuad&quot;,&quot;EaseInOutQuad&quot;,&quot;EaseInCubic&quot;,&quot;EaseOutCubic&quot;,&quot;EaseInOutCubic&quot;,&quot;EaseInQuart&quot;,&quot;EaseOutQuart&quot;,&quot;EaseInOutQuart&quot;,&quot;EaseInQuint&quot;,&quot;EaseOutQuint&quot;,&quot;EaseInOutQuint&quot;,&quot;EaseInSine&quot;,&quot;EaseOutSine&quot;,&quot;EaseInOutSine&quot;,&quot;EaseInExpo&quot;,&quot;EaseOutExpo&quot;,&quot;EaseInOutExpo&quot;,&quot;EaseInCirc&quot;,&quot;EaseOutCirc&quot;,&quot;EaseInOutCirc&quot;,&quot;EaseInElastic&quot;,&quot;EaseOutElastic&quot;,&quot;EaseInOutElastic&quot;,&quot;EaseInBack&quot;,&quot;EaseOutBack&quot;,&quot;EaseInOutBack&quot;,&quot;EaseInBounce&quot;,&quot;EaseOutBounce&quot;,&quot;EaseInOutBounce&quot;]</li>
+            </ul>
+          </ul>
+          <h3>Animate rotate</h3>
+          <ul>
+            <li>Animate the rotation of the Doughnut.                    </li>
+            <ul>
+              <li>Options : [&quot;No&quot;,&quot;Yes&quot;]</li>
+            </ul>
+          </ul>
+          <h3>Animate scale</h3>
+          <ul>
+            <li>Animate scaling the Doughnut from the centre.                    </li>
+            <ul>
+              <li>Options : [&quot;No&quot;,&quot;Yes&quot;]</li>
+            </ul>
+          </ul>
+          <h3>Duration</h3>
+          <ul>
+            <li>Duration of animation in seconds.                    </li>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">   
+          <h2>Actions</h2>
+        </div>
+        <div class="panel-body">
+          <h2>Chart - data      </h2>
+          <h3>Action:Add data      </h3>
+          <ul>
+            <li>Add data.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Value ( number ) : Data value.</li>
+              <li>Color ( string ) : Color, hex &quot;#FFA500&quot;, &quot;rgb(0-255,0-255,0-255)&quot;, &quot;rgba(0-255,0-255,0-255,0-1)&quot;, &quot;hsl(0-360,0-100%,0-100%)&quot;, or &quot;hsla(0-360,0-100%,0-100%,0-1)&quot; </li>
+            </ul>
+          </ul>
+          <h3>Action:Clean all data      </h3>
+          <ul>
+            <li>Clean all data.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Configure - Animation      </h2>
+          <h3>Action:Enable animation      </h3>
+          <ul>
+            <li>Set whether the animation is enabled.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>State ( Combo ) : Set whether to enable or disable the animation.</li>
+              <ul>
+                <li>Options : [&quot;Disabled&quot;,&quot;Enabled&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h3>Action:Set duration      </h3>
+          <ul>
+            <li>Set animation duration.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Duration ( number ) : Duration of animation in seconds.</li>
+            </ul>
+          </ul>
+          <h3>Action:Enable animation type      </h3>
+          <ul>
+            <li>Set whether the animation types are enabled.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Rotate ( Combo ) : Set whether to animate the rotation of the Doughnut.</li>
+              <ul>
+                <li>Options : [&quot;Disabled&quot;,&quot;Enabled&quot;]</li>
+              </ul>
+              <li>Scale ( Combo ) : Set whether to animate scaling the Doughnut from the centre.</li>
+              <ul>
+                <li>Options : [&quot;Disabled&quot;,&quot;Enabled&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h2>Configure - Inner cutout      </h2>
+          <h3>Action:Set percentage of inner cutout      </h3>
+          <ul>
+            <li>Set percentage of inner cutout.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Percentage ( number ) : The percentage of the chart that we cut out of the middle.</li>
+            </ul>
+          </ul>
+          <h2>Configure - Segment stroke      </h2>
+          <h3>Action:Enable bar stroke      </h3>
+          <ul>
+            <li>Set whether the segment stroke is enabled.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>State ( Combo ) : Set whether to enable or disable the segment stroke.</li>
+              <ul>
+                <li>Options : [&quot;Disabled&quot;,&quot;Enabled&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h3>Action:Set segment stroke      </h3>
+          <ul>
+            <li>Set segment stroke.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Color ( string ) : Stroke color, hex &quot;#FFA500&quot;, &quot;rgb(0-255,0-255,0-255)&quot;, &quot;rgba(0-255,0-255,0-255,0-1)&quot;, &quot;hsl(0-360,0-100%,0-100%)&quot;, or &quot;hsla(0-360,0-100%,0-100%,0-1)&quot; </li>
+              <li>Width ( number ) : Stroke width.</li>
+            </ul>
+          </ul>
+          <h2>Draw      </h2>
+          <h3>Action:Draw      </h3>
+          <ul>
+            <li>Draw chart.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">    
+        <div class="panel-title">    
+          <h2>Expressions</h2>
+        </div>
+        <div class="panel-body">           
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">       
+          <h2>Conditions</h2>
+        </div>
+        <div class="panel-body">              
+          <h2>Drawing    </h2>
+          <h4>Condition:On drawing finished                    </h4>
+          <ul>
+            <li>Triggered when drawing finished.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:Is drawing                    </h4>
+          <ul>
+            <li>Return true while drawing.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

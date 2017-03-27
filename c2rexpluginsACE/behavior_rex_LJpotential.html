@@ -1,0 +1,360 @@
+<!DOCTYPE 5>
+<html>
+  <head>
+    <title>Behavior : LJ potential</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="js/jquery-3.1.0.min.js">                         </script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      
+      ga('create', 'UA-88123342-2', 'auto');
+      ga('send', 'pageview');            
+      
+    </script>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header"><a class="navbar-brand" href="./index.html">Home</a></div>
+        <ul class="nav navbar-nav">
+          <li><a href="./pluginsIndex.html">Plugins      </a></li>
+          <li><a href="./behaviorsIndex.html">Behaviors                   </a></li>
+          <li><a href="./effectsIndex.html">Effects    </a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Behavior : LJ potential</h1>
+      <p>Author:Rex.Rainbow</p>
+      <ul>
+        <li>Lennard-Jones potential formula - ( (A/r^n)-(B/r^m) ) for attracting or rejecting objects.</li>
+      </ul><a class="btn btn-default" href="https://dl.dropboxusercontent.com/u/5779181/C2Repo/Zip/behaviors/rex_LJpotential.7z">Download    </a>
+      <div class="panel panel-default">
+        <div class="panel-title">
+          <h2>Properties</h2>
+        </div>
+        <div class="panel-body">
+          <h3>Source</h3>
+          <ul>
+            <li>Source for attracting or rejecting.                    </li>
+            <ul>
+              <li>Options : [&quot;No&quot;,&quot;Yes&quot;]</li>
+            </ul>
+          </ul>
+          <h3>Source tag</h3>
+          <ul>
+            <li>Target will attract or reject to sources which have the same tag.                    </li>
+          </ul>
+          <h3>A</h3>
+          <ul>
+            <li>Parameter A, for attracting magnitude. (A/r^n)-(B/r^m)                    </li>
+          </ul>
+          <h3>n</h3>
+          <ul>
+            <li>Parameter n, for attracting declined. (A/r^n)-(B/r^m)                    </li>
+          </ul>
+          <h3>B</h3>
+          <ul>
+            <li>Parameter B, for rejecting magnitude. (A/r^n)-(B/r^m)                    </li>
+          </ul>
+          <h3>m</h3>
+          <ul>
+            <li>Parameter m, for rejecting declined. (A/r^n)-(B/r^m)                    </li>
+          </ul>
+          <h3>Sensitivity range</h3>
+          <ul>
+            <li>Affecting when distance is less then this range. 0 is infinity. Source only.                    </li>
+          </ul>
+          <h3>Target</h3>
+          <ul>
+            <li>Attract or reject to source.                    </li>
+            <ul>
+              <li>Options : [&quot;No&quot;,&quot;Yes&quot;]</li>
+            </ul>
+          </ul>
+          <h3>Target tag</h3>
+          <ul>
+            <li>Target will attract or reject to sources which have the same tag.                    </li>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">   
+          <h2>Actions</h2>
+        </div>
+        <div class="panel-body">
+          <h2>Activated      </h2>
+          <h3>Action:Set source enable      </h3>
+          <ul>
+            <li>Enable to be a gravitation source.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Source ( Combo ) : Enable to be source.</li>
+              <ul>
+                <li>Options : [&quot;No&quot;,&quot;Yes&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h3>Action:Set target enable      </h3>
+          <ul>
+            <li>Enable to be a gravitation target.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Target ( Combo ) : Enable to be target.</li>
+              <ul>
+                <li>Options : [&quot;No&quot;,&quot;Yes&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h2>LJ potential      </h2>
+          <h3>Action:Set parameter      </h3>
+          <ul>
+            <li>Set parameters of LJ potential.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Parameter ( Combo ) : Parameter of LJ potential.</li>
+              <ul>
+                <li>Options : [&quot;A&quot;,&quot;n&quot;,&quot;B&quot;,&quot;m&quot;]</li>
+              </ul>
+              <li>Value ( number ) : Value of parameter.</li>
+            </ul>
+          </ul>
+          <h2>Sensitivity      </h2>
+          <h3>Action:Set sensitivity range      </h3>
+          <ul>
+            <li>Set sensitivity range for source.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Range ( number ) : Sensitivity range.</li>
+            </ul>
+          </ul>
+          <h2>Tag      </h2>
+          <h3>Action:Set source tag      </h3>
+          <ul>
+            <li>Set source tag.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Source tag ( string ) : Source tag.</li>
+            </ul>
+          </ul>
+          <h3>Action:Set target tag      </h3>
+          <ul>
+            <li>Set target tag.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Target tag ( string ) : Target tag.</li>
+            </ul>
+          </ul>
+          <h2>Update      </h2>
+          <h3>Action:Update      </h3>
+          <ul>
+            <li>Update output force.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Update wo tag      </h2>
+          <h3>Action:Clean      </h3>
+          <ul>
+            <li>Clean output force to 0.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Action:Attracted by source      </h3>
+          <ul>
+            <li>Attracted by source.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Source ( object ) : Source for attracting or rejecting.</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">    
+        <div class="panel-title">    
+          <h2>Expressions</h2>
+        </div>
+        <div class="panel-body">           
+          <h2>Enable    </h2>
+          <h3>Expression:IsSource </h3>
+          <ul>
+            <li>1 is source.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:IsTarget </h3>
+          <ul>
+            <li>1 is target.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Output    </h2>
+          <h3>Expression:ForceAngle </h3>
+          <ul>
+            <li>Get angle of total attracting force.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:ForceMagnitude </h3>
+          <ul>
+            <li>Get magnitude of total attracting force.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:ForceDx </h3>
+          <ul>
+            <li>Get dx of total attracting force.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:ForceDy </h3>
+          <ul>
+            <li>Get dy of total attracting force.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Parameters    </h2>
+          <h3>Expression:A </h3>
+          <ul>
+            <li>Get param A (attracting force)</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:n </h3>
+          <ul>
+            <li>Get param n (attracting declined)</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:B </h3>
+          <ul>
+            <li>Get param B (rejecting force)</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:m </h3>
+          <ul>
+            <li>Get param m (rejecting declined)</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Sensitivity    </h2>
+          <h3>Expression:Range </h3>
+          <ul>
+            <li>Get sensitivity range.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Source    </h2>
+          <h3>Expression:SourceUID </h3>
+          <ul>
+            <li>Get attracting source uid.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Tag    </h2>
+          <h3>Expression:SourceTag </h3>
+          <ul>
+            <li>Get source tag.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:TargetTag </h3>
+          <ul>
+            <li>Get target tag.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Target    </h2>
+          <h3>Expression:TargetUID </h3>
+          <ul>
+            <li>Get attracted target uid.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">       
+          <h2>Conditions</h2>
+        </div>
+        <div class="panel-body">              
+          <h2>Output    </h2>
+          <h4>Condition:Has force                    </h4>
+          <ul>
+            <li>Return true if force is not 0.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Source    </h2>
+          <h4>Condition:Begin attracting                    </h4>
+          <ul>
+            <li>Triggered when attracting beginning, to get attracted target uid.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:End attracting                    </h4>
+          <ul>
+            <li>Triggered when attracting end, to get attracted target uid.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:Has attracting                    </h4>
+          <ul>
+            <li>Return true if source has attracting target.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Target    </h2>
+          <h4>Condition:Has been attracted                    </h4>
+          <ul>
+            <li>Return true if target has been attracted by source.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:Begin attracted                    </h4>
+          <ul>
+            <li>Triggered when attracted beginning, to get attracted source uid.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:End attracted                    </h4>
+          <ul>
+            <li>Triggered when attracted ending, to get attracted source uid.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

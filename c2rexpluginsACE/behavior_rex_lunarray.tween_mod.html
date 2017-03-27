@@ -1,0 +1,549 @@
+<!DOCTYPE 5>
+<html>
+  <head>
+    <title>Behavior : EaseTween Mod</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="js/jquery-3.1.0.min.js">                         </script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      
+      ga('create', 'UA-88123342-2', 'auto');
+      ga('send', 'pageview');            
+      
+    </script>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header"><a class="navbar-brand" href="./index.html">Home</a></div>
+        <ul class="nav navbar-nav">
+          <li><a href="./pluginsIndex.html">Plugins      </a></li>
+          <li><a href="./behaviorsIndex.html">Behaviors                   </a></li>
+          <li><a href="./effectsIndex.html">Effects    </a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Behavior : EaseTween Mod</h1>
+      <p>Author:Yeremia AI (lunarray)</p>
+      <ul>
+        <li>Tween an object's position, size, angle or other properties using an easing function.</li>
+      </ul><a class="btn btn-default" href="https://dl.dropboxusercontent.com/u/5779181/C2Repo/Zip/behaviors/rex_lunarray.tween_mod.7z">Download    </a>
+      <div class="panel panel-default">
+        <div class="panel-title">
+          <h2>Properties</h2>
+        </div>
+        <div class="panel-body">
+          <h3>Active on start</h3>
+          <ul>
+            <li>Enable the behavior at the beginning of the layout.                    </li>
+            <ul>
+              <li>Options : [&quot;No&quot;,&quot;Yes&quot;]</li>
+            </ul>
+          </ul>
+          <h3>Tweened Property</h3>
+          <ul>
+            <li>Select what property of the object to modify.                    </li>
+            <ul>
+              <li>Options : [&quot;Position&quot;,&quot;Size(Ratio)&quot;,&quot;Width&quot;,&quot;Height&quot;,&quot;Angle&quot;,&quot;Opacity&quot;,&quot;Value&quot;,&quot;Size(Pixel)&quot;]</li>
+            </ul>
+          </ul>
+          <h3>Function</h3>
+          <ul>
+            <li>Select the kind of easing function used to calculate the movement.                    </li>
+            <ul>
+              <li>Options : [&quot;Linear&quot;,&quot;EaseInQuad&quot;,&quot;EaseOutQuad&quot;,&quot;EaseInOutQuad&quot;,&quot;EaseInCubic&quot;,&quot;EaseOutCubic&quot;,&quot;EaseInOutCubic&quot;,&quot;EaseInQuart&quot;,&quot;EaseOutQuart&quot;,&quot;EaseInOutQuart&quot;,&quot;EaseInQuint&quot;,&quot;EaseOutQuint&quot;,&quot;EaseInOutQuint&quot;,&quot;EaseInCircle&quot;,&quot;EaseOutCircle&quot;,&quot;EaseInOutCircle&quot;,&quot;EaseInBack&quot;,&quot;EaseOutBack&quot;,&quot;EaseInOutBack&quot;,&quot;EaseInElastic&quot;,&quot;EaseOutElastic&quot;,&quot;EaseInOutElastic&quot;,&quot;EaseInBounce&quot;,&quot;EaseOutBounce&quot;,&quot;EaseInOutBounce&quot;,&quot;EaseInSmoothstep&quot;,&quot;EaseOutSmoothstep&quot;,&quot;EaseInOutSmoothstep&quot;]</li>
+            </ul>
+          </ul>
+          <h3>Initial</h3>
+          <ul>
+            <li>Initial position of the tweened object, 'current' will use current object position, angle, size, etc.                    </li>
+          </ul>
+          <h3>Target</h3>
+          <ul>
+            <li>Tween target relative to current position, angle, size, etc                    </li>
+          </ul>
+          <h3>Duration</h3>
+          <ul>
+            <li>Duration of tween in seconds.                    </li>
+          </ul>
+          <h3>Wait</h3>
+          <ul>
+            <li>Wait period before doing tween                    </li>
+          </ul>
+          <h3>Playback Mode</h3>
+          <ul>
+            <li>Control the playback of the tween after finish                    </li>
+            <ul>
+              <li>Options : [&quot;Play Once&quot;,&quot;Repeat&quot;,&quot;Ping Pong&quot;,&quot;Play once and destroy&quot;,&quot;Loop&quot;,&quot;Ping Pong Stop&quot;,&quot;Play and stop&quot;]</li>
+            </ul>
+          </ul>
+          <h3>Value</h3>
+          <ul>
+            <li>If you are tweening value, then this will help you set the initial value                    </li>
+          </ul>
+          <h3>Coordinate Mode</h3>
+          <ul>
+            <li>Absolute or relative coordinate                    </li>
+            <ul>
+              <li>Options : [&quot;Absolute&quot;,&quot;Relative&quot;]</li>
+            </ul>
+          </ul>
+          <h3>Force Initial on start</h3>
+          <ul>
+            <li>Set the initial to target's property on the beginning of the layout.                    </li>
+            <ul>
+              <li>Options : [&quot;No&quot;,&quot;Yes&quot;]</li>
+            </ul>
+          </ul>
+          <h3>Tween group</h3>
+          <ul>
+            <li>Set the tween group name. Object with same tween family group progress is shared and can be manipulated using group actions.                    </li>
+          </ul>
+          <h3>Repeat count</h3>
+          <ul>
+            <li>Repeat count, 0 is continue.                    </li>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">   
+          <h2>Actions</h2>
+        </div>
+        <div class="panel-body">
+          <h2>Alias      </h2>
+          <h3>Action:Set alias of easing function      </h3>
+          <ul>
+            <li>Set the alias of easing function.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Alias ( string ) : Alias of easing function.</li>
+              <li>Function ( Combo ) : Select the easing function to apply.</li>
+              <ul>
+                <li>Options : [&quot;Linear&quot;,&quot;EaseInQuad&quot;,&quot;EaseOutQuad&quot;,&quot;EaseInOutQuad&quot;,&quot;EaseInCubic&quot;,&quot;EaseOutCubic&quot;,&quot;EaseInOutCubic&quot;,&quot;EaseInQuart&quot;,&quot;EaseOutQuart&quot;,&quot;EaseInOutQuart&quot;,&quot;EaseInQuint&quot;,&quot;EaseOutQuint&quot;,&quot;EaseInOutQuint&quot;,&quot;EaseInCircle&quot;,&quot;EaseOutCircle&quot;,&quot;EaseInOutCircle&quot;,&quot;EaseInBack&quot;,&quot;EaseOutBack&quot;,&quot;EaseInOutBack&quot;,&quot;EaseInElastic&quot;,&quot;EaseOutElastic&quot;,&quot;EaseInOutElastic&quot;,&quot;EaseInBounce&quot;,&quot;EaseOutBounce&quot;,&quot;EaseInOutBounce&quot;,&quot;EaseInSmoothstep&quot;,&quot;EaseOutSmoothstep&quot;,&quot;EaseInOutSmoothstep&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h3>Action:Parameter set      </h3>
+          <ul>
+            <li>Set all parameter at once.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Tweened property ( Combo ) : Select the tweened property to.</li>
+              <ul>
+                <li>Options : [&quot;Position&quot;,&quot;Size (Ratio)&quot;,&quot;Width&quot;,&quot;Height&quot;,&quot;Angle&quot;,&quot;Opacity&quot;,&quot;Value&quot;,&quot;Size (Pixel)&quot;]</li>
+              </ul>
+              <li>Playback Mode ( Combo ) : Set the playback mode of the tween.</li>
+              <ul>
+                <li>Options : [&quot;Play Once&quot;,&quot;Repeat&quot;,&quot;Ping Pong&quot;,&quot;Play once and destroy&quot;,&quot;Loop&quot;,&quot;Ping Pong Stop&quot;,&quot;Play and Stop&quot;]</li>
+              </ul>
+              <li>Function ( string ) : The easing function to apply by alias.</li>
+              <li>Initial ( string ) : Initial value of position, angle, or whatever to tween from (for position it is x,y).</li>
+              <li>Target ( string ) : Target value of position, angle, or whatever to tween to (for position it is x,y).</li>
+              <li>Duration ( number ) : The time in seconds for the duration of the tween.</li>
+              <li>Wait ( string ) : The time in seconds to wait before and after tweening.</li>
+              <li>Mode ( Combo ) : Select the coordinate mode.</li>
+              <ul>
+                <li>Options : [&quot;Absolute&quot;,&quot;Relative&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h2>Group      </h2>
+          <h3>Action:Group Start      </h3>
+          <ul>
+            <li>Start the group tween.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Force Mode ( Combo ) : Set wether to force start or not.</li>
+              <ul>
+                <li>Options : [&quot;Start&quot;,&quot;Force Start&quot;]</li>
+              </ul>
+              <li>Group ( string ) : Group to start, set to empty for all group in SOL</li>
+            </ul>
+          </ul>
+          <h3>Action:Group Stop      </h3>
+          <ul>
+            <li>Stop the group tween.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Stop Mode ( Combo ) : Set wether to stop at the beginning, current position or tween target.</li>
+              <ul>
+                <li>Options : [&quot;Stop at tween target&quot;,&quot;Stop at current position&quot;,&quot;Stop at tween start&quot;]</li>
+              </ul>
+              <li>Group ( string ) : Group to stop, set to empty for all group in all selected objects</li>
+            </ul>
+          </ul>
+          <h3>Action:Group Reverse      </h3>
+          <ul>
+            <li>Reverse the group tween.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Force Mode ( Combo ) : Set wether to force start or not.</li>
+              <ul>
+                <li>Options : [&quot;Reverse&quot;,&quot;Force Reverse&quot;]</li>
+              </ul>
+              <li>Reverse Mode ( Combo ) : Set the reverse mode.</li>
+              <ul>
+                <li>Options : [&quot;Reverse&quot;,&quot;Rewind&quot;]</li>
+              </ul>
+              <li>Group ( string ) : Group to reverse, set to empty for all group in SOL</li>
+            </ul>
+          </ul>
+          <h2>Parameter      </h2>
+          <h3>Action:Set duration      </h3>
+          <ul>
+            <li>Set the time in seconds for the duration of the tween.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Duration ( number ) : The time in seconds for the duration of the tween.</li>
+            </ul>
+          </ul>
+          <h3>Action:Set wait      </h3>
+          <ul>
+            <li>Set the time in seconds to wait before and after tweening.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Wait ( string ) : The time in seconds to wait before and after tweening.</li>
+            </ul>
+          </ul>
+          <h3>Action:Set initial      </h3>
+          <ul>
+            <li>Set the initial value of the tween.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Initial ( string ) : Initial value of position, angle, or whatever to tween from (for position it is x,y).</li>
+            </ul>
+          </ul>
+          <h3>Action:Set target      </h3>
+          <ul>
+            <li>Set the target value of the tween.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Target ( string ) : Target value of position, angle, or whatever to tween to (for position it is x,y).</li>
+            </ul>
+          </ul>
+          <h3>Action:Set value      </h3>
+          <ul>
+            <li>Set the current/initial value of a value tweening.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Value ( number ) : Set the tweened value for value tweening</li>
+            </ul>
+          </ul>
+          <h3>Action:Set tweened property      </h3>
+          <ul>
+            <li>Set the type of tweened property.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Tweened property ( Combo ) : Select the tweened property to.</li>
+              <ul>
+                <li>Options : [&quot;Position&quot;,&quot;Size (Ratio)&quot;,&quot;Width&quot;,&quot;Height&quot;,&quot;Angle&quot;,&quot;Opacity&quot;,&quot;Value&quot;,&quot;Size (Pixel)&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h3>Action:Set easing      </h3>
+          <ul>
+            <li>Set the easing function used to calculate movement.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Function ( Combo ) : Select the easing function to apply.</li>
+              <ul>
+                <li>Options : [&quot;Linear&quot;,&quot;EaseInQuad&quot;,&quot;EaseOutQuad&quot;,&quot;EaseInOutQuad&quot;,&quot;EaseInCubic&quot;,&quot;EaseOutCubic&quot;,&quot;EaseInOutCubic&quot;,&quot;EaseInQuart&quot;,&quot;EaseOutQuart&quot;,&quot;EaseInOutQuart&quot;,&quot;EaseInQuint&quot;,&quot;EaseOutQuint&quot;,&quot;EaseInOutQuint&quot;,&quot;EaseInCircle&quot;,&quot;EaseOutCircle&quot;,&quot;EaseInOutCircle&quot;,&quot;EaseInBack&quot;,&quot;EaseOutBack&quot;,&quot;EaseInOutBack&quot;,&quot;EaseInElastic&quot;,&quot;EaseOutElastic&quot;,&quot;EaseInOutElastic&quot;,&quot;EaseInBounce&quot;,&quot;EaseOutBounce&quot;,&quot;EaseInOutBounce&quot;,&quot;EaseInSmoothstep&quot;,&quot;EaseOutSmoothstep&quot;,&quot;EaseInOutSmoothstep&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h3>Action:Playback Mode      </h3>
+          <ul>
+            <li>Setting playback mode of the tween.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Playback Mode ( Combo ) : Set the playback mode of the tween.</li>
+              <ul>
+                <li>Options : [&quot;Play Once&quot;,&quot;Repeat&quot;,&quot;Ping Pong&quot;,&quot;Play once and destroy&quot;,&quot;Loop&quot;,&quot;Ping Pong Stop&quot;,&quot;Play and Stop&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h3>Action:Set initial X      </h3>
+          <ul>
+            <li>Set the initial x for the tween.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Initial X ( number ) : The initial X of the tween</li>
+            </ul>
+          </ul>
+          <h3>Action:Set initial Y      </h3>
+          <ul>
+            <li>Set the initial y for the tween.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Initial Y ( number ) : The initial Y of the tween</li>
+            </ul>
+          </ul>
+          <h3>Action:Set target X      </h3>
+          <ul>
+            <li>Set the target x for the tween.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Target X ( number ) : The target X of the tween</li>
+            </ul>
+          </ul>
+          <h3>Action:Set target Y      </h3>
+          <ul>
+            <li>Set the target y for the tween.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Target Y ( number ) : The target Y of the tween</li>
+            </ul>
+          </ul>
+          <h3>Action:Parameter set      </h3>
+          <ul>
+            <li>Set all parameter at once.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Tweened property ( Combo ) : Select the tweened property to.</li>
+              <ul>
+                <li>Options : [&quot;Position&quot;,&quot;Size (Ratio)&quot;,&quot;Width&quot;,&quot;Height&quot;,&quot;Angle&quot;,&quot;Opacity&quot;,&quot;Value&quot;,&quot;Size (Pixel)&quot;]</li>
+              </ul>
+              <li>Playback Mode ( Combo ) : Set the playback mode of the tween.</li>
+              <ul>
+                <li>Options : [&quot;Play Once&quot;,&quot;Repeat&quot;,&quot;Ping Pong&quot;,&quot;Play once and destroy&quot;,&quot;Loop&quot;,&quot;Ping Pong Stop&quot;,&quot;Play and Stop&quot;]</li>
+              </ul>
+              <li>Function ( Combo ) : Select the easing function to apply.</li>
+              <ul>
+                <li>Options : [&quot;Linear&quot;,&quot;EaseInQuad&quot;,&quot;EaseOutQuad&quot;,&quot;EaseInOutQuad&quot;,&quot;EaseInCubic&quot;,&quot;EaseOutCubic&quot;,&quot;EaseInOutCubic&quot;,&quot;EaseInQuart&quot;,&quot;EaseOutQuart&quot;,&quot;EaseInOutQuart&quot;,&quot;EaseInQuint&quot;,&quot;EaseOutQuint&quot;,&quot;EaseInOutQuint&quot;,&quot;EaseInCircle&quot;,&quot;EaseOutCircle&quot;,&quot;EaseInOutCircle&quot;,&quot;EaseInBack&quot;,&quot;EaseOutBack&quot;,&quot;EaseInOutBack&quot;,&quot;EaseInElastic&quot;,&quot;EaseOutElastic&quot;,&quot;EaseInOutElastic&quot;,&quot;EaseInBounce&quot;,&quot;EaseOutBounce&quot;,&quot;EaseInOutBounce&quot;,&quot;EaseInSmoothstep&quot;,&quot;EaseOutSmoothstep&quot;,&quot;EaseInOutSmoothstep&quot;]</li>
+              </ul>
+              <li>Initial ( string ) : Initial value of position, angle, or whatever to tween from (for position it is x,y).</li>
+              <li>Target ( string ) : Target value of position, angle, or whatever to tween to (for position it is x,y).</li>
+              <li>Duration ( number ) : The time in seconds for the duration of the tween.</li>
+              <li>Wait ( string ) : The time in seconds to wait before and after tweening.</li>
+              <li>Mode ( Combo ) : Select the coordinate mode.</li>
+              <ul>
+                <li>Options : [&quot;Absolute&quot;,&quot;Relative&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h3>Action:Set target object      </h3>
+          <ul>
+            <li>Set the target object of the tween.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Set target object ( object ) : Choose the object to follow as target to.</li>
+            </ul>
+          </ul>
+          <h3>Action:Set repeat count      </h3>
+          <ul>
+            <li>Set repeat count of the tween.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Repeat count ( number ) : Repeat count, 0 is continue.</li>
+            </ul>
+          </ul>
+          <h2>Playback control      </h2>
+          <h3>Action:Start      </h3>
+          <ul>
+            <li>Start the tween.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Action:Reverse      </h3>
+          <ul>
+            <li>Reverse the tween.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Reverse Mode ( Combo ) : Set the reverse mode.</li>
+              <ul>
+                <li>Options : [&quot;Reverse&quot;,&quot;Rewind&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h3>Action:Pause      </h3>
+          <ul>
+            <li>Pause the tween. (Same as set active false)   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Action:Resume      </h3>
+          <ul>
+            <li>Resume the tween. (Same as set active true)   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Action:Stop      </h3>
+          <ul>
+            <li>Stop the tween.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Stop Mode ( Combo ) : Set wether to stop at the beginning, current position or tween target.</li>
+              <ul>
+                <li>Options : [&quot;Stop at tween target&quot;,&quot;Stop at current position&quot;,&quot;Stop at tween start&quot;]</li>
+              </ul>
+            </ul>
+          </ul>
+          <h3>Action:Force Start      </h3>
+          <ul>
+            <li>Force start the tween.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Action:Force Reverse      </h3>
+          <ul>
+            <li>Force reverse the tween.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">    
+        <div class="panel-title">    
+          <h2>Expressions</h2>
+        </div>
+        <div class="panel-body">           
+          <h2>    </h2>
+          <h3>Expression:Progress </h3>
+          <ul>
+            <li>Return the current progress of the tween as a number from 0 to 1.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:ProgressTime </h3>
+          <ul>
+            <li>Return the current tween progress in secs.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:Target </h3>
+          <ul>
+            <li>Return the tween target value.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:Initiating </h3>
+          <ul>
+            <li>Return the tween initiating wait.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:Duration </h3>
+          <ul>
+            <li>Return the tween duration.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:Cooldown </h3>
+          <ul>
+            <li>Return the tween cooldown wait.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:Value </h3>
+          <ul>
+            <li>Return the tweened value.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:isPaused </h3>
+          <ul>
+            <li>Return the tween status, is paused or not.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:Group </h3>
+          <ul>
+            <li>Return the tween group name.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">       
+          <h2>Conditions</h2>
+        </div>
+        <div class="panel-body">              
+          <h2>    </h2>
+          <h4>Condition:Is active                    </h4>
+          <ul>
+            <li>True if the movement is currently active.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:Compare progress                    </h4>
+          <ul>
+            <li>Compare the current progress of the tween process.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Comparison ( cmp ) : Select how to compare the tweening progress.    </li>
+              <li>Value ( number ) : Value to compare the progress to.    </li>
+            </ul>
+          </ul>
+          <h4>Condition:On start                    </h4>
+          <ul>
+            <li>Triggered when tween starts.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On wait end                    </h4>
+          <ul>
+            <li>Triggered when tween finished initial wait and is starting.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On tween end                    </h4>
+          <ul>
+            <li>Triggered when the tween finished and is entering cooldown state.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:On cooldown end                    </h4>
+          <ul>
+            <li>Triggered when tween end playing and is cooldown.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h4>Condition:Compare group progress                    </h4>
+          <ul>
+            <li>Compare the slowest in tween group progress to a value .                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Comparison ( cmp ) : Select how to compare the group tweening progress.    </li>
+              <li>Value ( number ) : Value to compare the progress to.    </li>
+            </ul>
+          </ul>
+          <h2>Finish    </h2>
+          <h4>Condition:On count end                    </h4>
+          <ul>
+            <li>Triggered when the tween counting finished and is entering cooldown state.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

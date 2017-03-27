@@ -1,0 +1,113 @@
+<!DOCTYPE 5>
+<html>
+  <head>
+    <title>Behavior : Flood fill</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="js/jquery-3.1.0.min.js">                         </script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      
+      ga('create', 'UA-88123342-2', 'auto');
+      ga('send', 'pageview');            
+      
+    </script>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header"><a class="navbar-brand" href="./index.html">Home</a></div>
+        <ul class="nav navbar-nav">
+          <li><a href="./pluginsIndex.html">Plugins      </a></li>
+          <li><a href="./behaviorsIndex.html">Behaviors                   </a></li>
+          <li><a href="./effectsIndex.html">Effects    </a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Behavior : Flood fill</h1>
+      <p>Author:Rex.Rainbow</p>
+      <ul>
+        <li>Flood fill on canvas. Reference:https://github.com/binarymax/floodfill.js</li>
+      </ul><a class="btn btn-default" href="https://dl.dropboxusercontent.com/u/5779181/C2Repo/Zip/behaviors/rex_canvas_floodfill.7z">Download    </a>
+      <div class="panel panel-default">
+        <div class="panel-title">
+          <h2>Properties</h2>
+        </div>
+        <div class="panel-body">
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">   
+          <h2>Actions</h2>
+        </div>
+        <div class="panel-body">
+          <h2>One tick      </h2>
+          <h3>Action:Fill      </h3>
+          <ul>
+            <li>Fill flood.   </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h2>Prepare      </h2>
+          <h3>Action:Set fill color      </h3>
+          <ul>
+            <li>Set fill color.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Color ( string ) : A DOMString parsed as CSS &lt;color&gt; value.</li>
+            </ul>
+          </ul>
+          <h3>Action:Set start point      </h3>
+          <ul>
+            <li>Set start point.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>x ( number ) : The x axis of the coordinate for the starting point.</li>
+              <li>y ( number ) : The y axis of the coordinate for the starting point.</li>
+            </ul>
+          </ul>
+          <h3>Action:Set tolerance      </h3>
+          <ul>
+            <li>Set tolerance.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Tolerance ( number ) : 0: fills pixels exactly matching that of the starting x,y coordinate; 128: anti-alias; 254: fill over all other pixels.</li>
+            </ul>
+          </ul>
+          <h3>Action:Set bounding box      </h3>
+          <ul>
+            <li>Set bounding box.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Left ( number ) : Prevent the fill from occuring at any pixel coordinate with x less than this left value.</li>
+              <li>Top ( number ) : Prevent the fill from occuring at any pixel coordinate with y less than this top value.</li>
+              <li>Right ( number ) : Prevent the fill from occuring at any pixel coordinate with x greater than this left value.</li>
+              <li>Bottom ( number ) : Prevent the fill from occuring at any pixel coordinate with y greater than this top value.</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">    
+        <div class="panel-title">    
+          <h2>Expressions</h2>
+        </div>
+        <div class="panel-body">           
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-title">       
+          <h2>Conditions</h2>
+        </div>
+        <div class="panel-body">              
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
