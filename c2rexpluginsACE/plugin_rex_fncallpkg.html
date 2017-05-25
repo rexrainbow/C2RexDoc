@@ -77,9 +77,9 @@
               <li>Parameter {n} ( variadic ) : A parameter to pass for the function call, which can be accessed with Function.Param({n}).</li>
             </ul>
           </ul>
-          <h3>Action:Load      </h3>
+          <h3>Action:Load queue      </h3>
           <ul>
-            <li>Load function queue.   </li>
+            <li>Load new items into function queue.   </li>
             <Parameters></Parameters>
             <ul>
               <li>Package ( string ) : Function call package in json string.</li>
@@ -114,6 +114,14 @@
             <li>Reverse function queue.   </li>
             <Parameters></Parameters>
             <ul>
+            </ul>
+          </ul>
+          <h3>Action:Append queue      </h3>
+          <ul>
+            <li>Append new items into function queue.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Package ( string ) : Function call package in json string.</li>
             </ul>
           </ul>
           <h2>Function queue : For each      </h2>
