@@ -716,6 +716,11 @@
     },
     {
         "category": "plugins",
+        "name": "rex_jsshell",
+        "timestamp": 1495786565134
+    },
+    {
+        "category": "plugins",
         "name": "rex_kongregate",
         "timestamp": 1490633854308
     },

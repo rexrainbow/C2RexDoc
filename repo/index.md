@@ -141,6 +141,7 @@
 - [rex_interception](https://rexrainbow.github.io/C2RexDoc/repo/rex_interception.7z)  
 - [rex_JSMidiParser](https://rexrainbow.github.io/C2RexDoc/repo/rex_JSMidiParser.7z)  
 - [rex_json_builder](https://rexrainbow.github.io/C2RexDoc/repo/rex_json_builder.7z)  
+- [rex_jsshell](https://rexrainbow.github.io/C2RexDoc/repo/rex_jsshell.7z)  
 - [rex_kongregate](https://rexrainbow.github.io/C2RexDoc/repo/rex_kongregate.7z)  
 - [rex_layer](https://rexrainbow.github.io/C2RexDoc/repo/rex_layer.7z)  
 - [rex_layout2board](https://rexrainbow.github.io/C2RexDoc/repo/rex_layout2board.7z)  
