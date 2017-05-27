@@ -2,14 +2,14 @@
 <html>
 <head>
 <meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
-<title>logic.index.md</title><link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css'><style type='text/css'>html, body {overflow-x: initial !important;}html { font-size: 14px; background-color: rgb(255, 255, 255); color: rgb(51, 51, 51); }
+<title>logic.index.md</title><link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}html { font-size: 14px; background-color: rgb(255, 255, 255); color: rgb(51, 51, 51); }
 body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; }
 a:active, a:hover { outline: 0px; }
 .in-text-selection, ::selection { background: rgb(181, 214, 252); text-shadow: none; }
-#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; padding-bottom: 70px; white-space: pre-wrap; overflow-x: auto; }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; padding-bottom: 70px; white-space: pre-wrap; overflow-x: visible; }
 .for-image #write { padding-left: 8px; padding-right: 8px; }
 body.typora-export { padding-left: 30px; padding-right: 30px; }
-@media screen and (max-width: 500px) { 
+@media screen and (max-width: 500px) {
   body.typora-export { padding-left: 0px; padding-right: 0px; }
   .CodeMirror-sizer { margin-left: 0px !important; }
   .CodeMirror-gutters { display: none !important; }
@@ -34,6 +34,7 @@ p { -webkit-margin-before: 1rem; -webkit-margin-after: 1rem; -webkit-margin-star
 .hidden { display: none; }
 .md-blockmeta { color: rgb(204, 204, 204); font-weight: bold; font-style: italic; }
 a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.701961); color: rgb(85, 85, 85); border-radius: 4px; }
 #write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; margin: 4px 0px 0px; }
 tr { break-inside: avoid; break-after: auto; }
 thead { display: table-header-group; }
@@ -63,7 +64,7 @@ li { margin: 0px; position: relative; }
 blockquote > :last-child { margin-bottom: 0px; }
 blockquote > :first-child { margin-top: 0px; }
 .footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; }
-@media print { 
+@media print {
   html, body { height: 100%; }
   .typora-export * { -webkit-print-color-adjust: exact; }
   h1, h2, h3, h4, h5, h6 { break-after: avoid-page; orphans: 2; }
@@ -98,7 +99,7 @@ p + .mathjax-block { margin-top: -1.143rem; }
 .md-toc-h4 .md-toc-inner { margin-left: 6em; }
 .md-toc-h5 .md-toc-inner { margin-left: 8em; }
 .md-toc-h6 .md-toc-inner { margin-left: 10em; }
-@media screen and (max-width: 48em) { 
+@media screen and (max-width: 48em) {
   .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
   .md-toc-h4 .md-toc-inner { margin-left: 5em; }
   .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
@@ -163,7 +164,6 @@ ul:last-child, ol:last-child { margin-bottom: 0px; }
 blockquote { border-left: 4px solid rgb(221, 221, 221); padding: 0px 15px; color: rgb(119, 119, 119); }
 blockquote blockquote { padding-right: 0px; }
 table { padding: 0px; word-break: initial; }
-#write { overflow-x: auto; }
 table tr { border-top: 1px solid rgb(204, 204, 204); background-color: white; margin: 0px; padding: 0px; }
 table tr:nth-child(2n) { background-color: rgb(248, 248, 248); }
 table tr th { font-weight: bold; border: 1px solid rgb(204, 204, 204); text-align: left; margin: 0px; padding: 6px 13px; }
@@ -176,9 +176,9 @@ table tr th:last-child, table tr td:last-child { margin-bottom: 0px; }
 .task-list { padding-left: 0px; }
 .task-list-item { padding-left: 32px; }
 .task-list-item input { top: 3px; left: 8px; }
-@media screen and (min-width: 914px) { 
+@media screen and (min-width: 914px) {
 }
-@media print { 
+@media print {
   html { font-size: 13px; }
   table, pre { break-inside: avoid; }
   pre { word-wrap: break-word; }
@@ -205,19 +205,8 @@ header, .context-menu, .megamenu-content, footer { font-family: "Segoe UI", Aria
 
 
 </style>
-
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-88123342-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
 </head>
 <body class='typora-export' >
-<div  id='write'  class = 'is-node'><h1><a name='header-c1' class='md-header-anchor '></a><a href='categories.index.html'>Categories</a> &gt; Logic</h1><h2><a name='header-c6' class='md-header-anchor '></a>Logic</h2><ul><li><p>Function</p><ul><li><p>Function objects</p><ul><li><p><a href='https://www.scirra.com/manual/149/function'>Official function</a></p></li><li><p>Function with name index parameters </p><ul><li><a href='rex_function2.html'>Singleton plugin</a></li><li><a href='rex_function2m.html'>Multiple instances plugin</a></li><li>Behavior</li></ul></li></ul></li><li><p><a href='rex_fncallpkg.html'>Function serialize</a></p></li><li><p><a href='rex_fnParam2array.html'>Copy function parameters</a></p></li></ul></li><li><p>Finite state machine</p><ul><li><p>Finite state machine</p><ul><li><a href='rex_gfsm.html'>Plugin</a></li><li><a href='rex_fsm.html'>Behavior</a></li></ul></li></ul></li><li><p>Flow control</p><ul><li>Wait event</li><li>Event balancer</li><li>Loop iterator</li><li>Tween tasks</li></ul></li><li><p>Table control</p><ul><li>Grid control</li><li>List control</li></ul></li></ul></div>
+<div  id='write'  class = 'is-node'><h1><a name='header-n0' class='md-header-anchor '></a><a href='categories.index.html'>Categories</a> &gt; Logic</h1><h2><a name='header-n2' class='md-header-anchor '></a>Logic</h2><ul><li><p>Function</p><ul><li><p>Function objects</p><ul><li><p><a href='https://www.scirra.com/manual/149/function'>Official function</a></p></li><li><p>Function with name index parameters </p><ul><li><a href='rex_function2.html'>Singleton plugin</a></li><li><a href='rex_function2m.html'>Multiple instances plugin</a></li><li>Behavior</li></ul></li></ul></li><li><p><a href='rex_fncallpkg.html'>Function serialize</a></p></li><li><p><a href='rex_fnParam2array.html'>Copy function parameters</a></p></li><li><p><a href='rex_jsshell.html'>Invoke javascript function</a></p></li></ul></li><li><p>Finite state machine</p><ul><li><p>Finite state machine</p><ul><li><a href='rex_gfsm.html'>Plugin</a></li><li><a href='rex_fsm.html'>Behavior</a></li></ul></li></ul></li><li><p>Flow control</p><ul><li>Wait event</li><li>Event balancer</li><li>Loop iterator</li><li>Tween tasks</li></ul></li><li><p>Table control</p><ul><li>Grid control</li><li>List control</li></ul></li></ul></div>
 </body>
 </html>
