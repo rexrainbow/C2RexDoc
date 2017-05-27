@@ -31,6 +31,17 @@ AddParam --> Invoke["Action:Invoke<br>Expression:ReturnValue"]
 ExecJS["Action:Execute Javascript<br>(Official browser plugin)"] --> SetFnName
 
 Invoke --> Callback["Condition:Callback<br>Expression:Param"]
+
+subgraph Load javascript
+LoadJSCode
+ExecJS
+end
+
+subgraph Invoke javascript function
+SetFnName
+AddParam
+Invoke
+end
 ```
 
 
