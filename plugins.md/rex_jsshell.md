@@ -8,7 +8,7 @@ Invoke javascript function.
 
 - [Plugin](https://rexrainbow.github.io/C2RexDoc/repo/rex_jsshell.7z)
 - [ACE table](https://rexrainbow.github.io/C2RexDoc/c2rexpluginsACE/plugin_rex_jsshell.html)
-- Discussion thread
+- [Discussion thread](https://www.scirra.com/forum/plugin-rex-jsshell-invoke-javascript-function_t192080)
 
 
 ----
