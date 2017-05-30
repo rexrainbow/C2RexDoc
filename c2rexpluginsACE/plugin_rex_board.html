@@ -69,6 +69,39 @@
           <h2>Actions</h2>
         </div>
         <div class="panel-body">
+          <h2>Add      </h2>
+          <h3>Action:Add tile      </h3>
+          <ul>
+            <li>Add tile on the board.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Tile ( object ) : Tile object.</li>
+              <li>Logic X ( number ) : The X index (0-based) of the tile.</li>
+              <li>Logic Y ( number ) : The Y index (0-based) of the tile.</li>
+            </ul>
+          </ul>
+          <h3>Action:Add chess      </h3>
+          <ul>
+            <li>Add chess on the board.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Chess ( object ) : Chess object.</li>
+              <li>Logic X ( number ) : The X index (0-based) of the chess.</li>
+              <li>Logic Y ( number ) : The Y index (0-based) of the chess.</li>
+              <li>Logic Z ( number or string ) : The Z index (0-based) of the chess. 0 is tile.</li>
+            </ul>
+          </ul>
+          <h3>Action:Add chess by UID      </h3>
+          <ul>
+            <li>Add chess on the board.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>UID ( number or string ) : The UID of chess, or a symbol of chess.</li>
+              <li>Logic X ( number ) : The X index (0-based) of the chess.</li>
+              <li>Logic Y ( number ) : The Y index (0-based) of the chess.</li>
+              <li>Logic Z ( number or string ) : The Z index (0-based) of the chess. 0 is tile.</li>
+            </ul>
+          </ul>
           <h2>Board      </h2>
           <h3>Action:Reset board      </h3>
           <ul>
@@ -106,136 +139,7 @@
               </ul>
             </ul>
           </ul>
-          <h2>Destroy      </h2>
-          <h3>Action:Destroy chess      </h3>
-          <ul>
-            <li>Destroy chess and remove them from the board.   </li>
-            <Parameters></Parameters>
-            <ul>
-              <li>Chess ( object ) : Chess object.</li>
-            </ul>
-          </ul>
-          <h2>Logic: Add      </h2>
-          <h3>Action:Add tile      </h3>
-          <ul>
-            <li>Add tile on the board.   </li>
-            <Parameters></Parameters>
-            <ul>
-              <li>Tile ( object ) : Tile object.</li>
-              <li>Logic X ( number ) : The X index (0-based) of the tile.</li>
-              <li>Logic Y ( number ) : The Y index (0-based) of the tile.</li>
-            </ul>
-          </ul>
-          <h3>Action:Add chess      </h3>
-          <ul>
-            <li>Add chess on the board.   </li>
-            <Parameters></Parameters>
-            <ul>
-              <li>Chess ( object ) : Chess object.</li>
-              <li>Logic X ( number ) : The X index (0-based) of the chess.</li>
-              <li>Logic Y ( number ) : The Y index (0-based) of the chess.</li>
-              <li>Logic Z ( number or string ) : The Z index (0-based) of the chess. 0 is tile.</li>
-            </ul>
-          </ul>
-          <h3>Action:Add chess by UID      </h3>
-          <ul>
-            <li>Add chess on the board.   </li>
-            <Parameters></Parameters>
-            <ul>
-              <li>UID ( number or string ) : The UID of chess, or a symbol of chess.</li>
-              <li>Logic X ( number ) : The X index (0-based) of the chess.</li>
-              <li>Logic Y ( number ) : The Y index (0-based) of the chess.</li>
-              <li>Logic Z ( number or string ) : The Z index (0-based) of the chess. 0 is tile.</li>
-            </ul>
-          </ul>
-          <h2>Logic: Move      </h2>
-          <h3>Action:Move chess      </h3>
-          <ul>
-            <li>Move chess on the board.   </li>
-            <Parameters></Parameters>
-            <ul>
-              <li>Chess ( object ) : Chess object.</li>
-              <li>Tile ( object ) : Tile object.</li>
-            </ul>
-          </ul>
-          <h3>Action:Move chess by UID      </h3>
-          <ul>
-            <li>Move chess by UID on the board.   </li>
-            <Parameters></Parameters>
-            <ul>
-              <li>Chess UID ( number or string ) : The UID of chess</li>
-              <li>Tile UID ( number or string ) : The UID of tile</li>
-            </ul>
-          </ul>
-          <h3>Action:Move chess to xyz      </h3>
-          <ul>
-            <li>Move chess on the board.   </li>
-            <Parameters></Parameters>
-            <ul>
-              <li>Chess ( object ) : Chess object.</li>
-              <li>Logic X ( number ) : The X index (0-based) of the chess.</li>
-              <li>Logic Y ( number ) : The Y index (0-based) of the chess.</li>
-              <li>Logic Z ( number or string ) : The Z index (0-based) of the chess. 0 is tile.</li>
-            </ul>
-          </ul>
-          <h3>Action:Move chess to xyz by UID      </h3>
-          <ul>
-            <li>Move chess to xyz index by UID on the board.   </li>
-            <Parameters></Parameters>
-            <ul>
-              <li>Chess UID ( number or string ) : The UID of chess</li>
-              <li>Logic X ( number ) : The X index (0-based) of the chess.</li>
-              <li>Logic Y ( number ) : The Y index (0-based) of the chess.</li>
-              <li>Logic Z ( number or string ) : The Z index (0-based) of the chess. 0 is tile.</li>
-            </ul>
-          </ul>
-          <h3>Action:Move chess to z      </h3>
-          <ul>
-            <li>Move chess's LZ on the board.   </li>
-            <Parameters></Parameters>
-            <ul>
-              <li>Chess ( object ) : Chess object.</li>
-              <li>Logic Z ( number or string ) : The Z index (0-based) of the chess. 0 is tile.</li>
-            </ul>
-          </ul>
-          <h3>Action:Move chess to xy      </h3>
-          <ul>
-            <li>Move chess to logic X,Y on the board.   </li>
-            <Parameters></Parameters>
-            <ul>
-              <li>Chess ( object ) : Chess object.</li>
-              <li>Logic X ( number ) : The X index (0-based) of the tile.</li>
-              <li>Logic Y ( number ) : The Y index (0-based) of the tile.</li>
-            </ul>
-          </ul>
-          <h2>Logic: Remove      </h2>
-          <h3>Action:Remove chess      </h3>
-          <ul>
-            <li>Remove chess from the board.   </li>
-            <Parameters></Parameters>
-            <ul>
-              <li>Chess ( object ) : Chess object.</li>
-            </ul>
-          </ul>
-          <h3>Action:Remove chess by UID      </h3>
-          <ul>
-            <li>Remove chess by UID from the board.   </li>
-            <Parameters></Parameters>
-            <ul>
-              <li>UID ( number or string ) : The UID of chess</li>
-            </ul>
-          </ul>
-          <h2>Logic: Swap      </h2>
-          <h3>Action:Swap chess by UID      </h3>
-          <ul>
-            <li>Swap two chess by UID.   </li>
-            <Parameters></Parameters>
-            <ul>
-              <li>UID of chess ( number or string ) : UID of chess A.</li>
-              <li>UID of chess ( number or string ) : UID of chess B.</li>
-            </ul>
-          </ul>
-          <h2>Physical: Create      </h2>
+          <h2>Create      </h2>
           <h3>Action:Create tile      </h3>
           <ul>
             <li>Create tile on the board.   </li>
@@ -300,7 +204,105 @@
               <li>Layer ( layer ) : Layer name of number.</li>
             </ul>
           </ul>
-          <h2>SOL      </h2>
+          <h2>Destroy      </h2>
+          <h3>Action:Destroy chess      </h3>
+          <ul>
+            <li>Destroy chess and remove them from the board.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Chess ( object ) : Chess object.</li>
+            </ul>
+          </ul>
+          <h2>Layout      </h2>
+          <h3>Action:Setup layout      </h3>
+          <ul>
+            <li>Setup layout to transfer logic index to physical position.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Layout ( object ) : Layout to transfer logic index to physical position</li>
+            </ul>
+          </ul>
+          <h2>Move      </h2>
+          <h3>Action:Move chess      </h3>
+          <ul>
+            <li>Move chess on the board.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Chess ( object ) : Chess object.</li>
+              <li>Tile ( object ) : Tile object.</li>
+            </ul>
+          </ul>
+          <h3>Action:Move chess by UID      </h3>
+          <ul>
+            <li>Move chess by UID on the board.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Chess UID ( number or string ) : The UID of chess</li>
+              <li>Tile UID ( number or string ) : The UID of tile</li>
+            </ul>
+          </ul>
+          <h3>Action:Move chess to xyz      </h3>
+          <ul>
+            <li>Move chess on the board.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Chess ( object ) : Chess object.</li>
+              <li>Logic X ( number ) : The X index (0-based) of the chess.</li>
+              <li>Logic Y ( number ) : The Y index (0-based) of the chess.</li>
+              <li>Logic Z ( number or string ) : The Z index (0-based) of the chess. 0 is tile.</li>
+            </ul>
+          </ul>
+          <h3>Action:Move chess to xyz by UID      </h3>
+          <ul>
+            <li>Move chess to xyz index by UID on the board.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Chess UID ( number or string ) : The UID of chess</li>
+              <li>Logic X ( number ) : The X index (0-based) of the chess.</li>
+              <li>Logic Y ( number ) : The Y index (0-based) of the chess.</li>
+              <li>Logic Z ( number or string ) : The Z index (0-based) of the chess. 0 is tile.</li>
+            </ul>
+          </ul>
+          <h3>Action:Swap chess by UID      </h3>
+          <ul>
+            <li>Swap two chess by UID.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>UID of chess ( number or string ) : UID of chess A.</li>
+              <li>UID of chess ( number or string ) : UID of chess B.</li>
+            </ul>
+          </ul>
+          <h3>Action:Move chess to z      </h3>
+          <ul>
+            <li>Move chess's LZ on the board.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Chess ( object ) : Chess object.</li>
+              <li>Logic Z ( number or string ) : The Z index (0-based) of the chess. 0 is tile.</li>
+            </ul>
+          </ul>
+          <h3>Action:Move chess to xy      </h3>
+          <ul>
+            <li>Move chess to logic X,Y on the board.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Chess ( object ) : Chess object.</li>
+              <li>Logic X ( number ) : The X index (0-based) of the tile.</li>
+              <li>Logic Y ( number ) : The Y index (0-based) of the tile.</li>
+            </ul>
+          </ul>
+          <h2>Neighbors      </h2>
+          <h3>Action:Pick neighbor chess      </h3>
+          <ul>
+            <li>Pick neighbor chess.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Origin ( object ) : Origin chess.</li>
+              <li>Direction ( number or string ) : Direction of neighbor. (-1) for all directions</li>
+              <li>Neighbor ( object ) : Neighbor chess object for pickking</li>
+            </ul>
+          </ul>
+          <h2>Pick chess      </h2>
           <h3>Action:Pick all chess      </h3>
           <ul>
             <li>Pick all chess on the board.   </li>
@@ -316,7 +318,7 @@
               <li>Chess ( object ) : Chess object.</li>
             </ul>
           </ul>
-          <h2>SOL - above tile      </h2>
+          <h2>Pick chess above tiles      </h2>
           <h3>Action:Pick chess above tile      </h3>
           <ul>
             <li>Pick chess above tile.   </li>
@@ -335,7 +337,7 @@
               <li>Tile UID ( number or string ) : Tile UID. Can be number or a tile UID list in JSON string.</li>
             </ul>
           </ul>
-          <h2>SOL - logical position      </h2>
+          <h2>Pick chess by lxyz      </h2>
           <h3>Action:Pick chess at Logic X,Y,Z      </h3>
           <ul>
             <li>Pick chess at Logic X,Y,Z.   </li>
@@ -396,24 +398,21 @@
               <li>Logic Y of bottom ( number ) : The Y index (0-based) of the bottom tile.</li>
             </ul>
           </ul>
-          <h2>SOL - neighbor      </h2>
-          <h3>Action:Pick neighbor chess      </h3>
+          <h2>Remove      </h2>
+          <h3>Action:Remove chess      </h3>
           <ul>
-            <li>Pick neighbor chess.   </li>
+            <li>Remove chess from the board.   </li>
             <Parameters></Parameters>
             <ul>
-              <li>Origin ( object ) : Origin chess.</li>
-              <li>Direction ( number or string ) : Direction of neighbor. (-1) for all directions</li>
-              <li>Neighbor ( object ) : Neighbor chess object for pickking</li>
+              <li>Chess ( object ) : Chess object.</li>
             </ul>
           </ul>
-          <h2>Setup      </h2>
-          <h3>Action:Setup layout      </h3>
+          <h3>Action:Remove chess by UID      </h3>
           <ul>
-            <li>Setup layout to transfer logic index to physical position.   </li>
+            <li>Remove chess by UID from the board.   </li>
             <Parameters></Parameters>
             <ul>
-              <li>Layout ( object ) : Layout to transfer logic index to physical position</li>
+              <li>UID ( number or string ) : The UID of chess</li>
             </ul>
           </ul>
         </div>
@@ -438,49 +437,7 @@
             <ul>
             </ul>
           </ul>
-          <h3>Expression:PXY2NearestPX </h3>
-          <ul>
-            <li>Get nearest X co-ordinate of cell from physical position.</li>
-            <Parameters></Parameters>
-            <ul>
-              <li>X ( number ) : The physical X.</li>
-              <li>Y ( number ) : The physical Y.</li>
-            </ul>
-          </ul>
-          <h3>Expression:PXY2NearestPY </h3>
-          <ul>
-            <li>Get nearest Y co-ordinate of cell from physical position.</li>
-            <Parameters></Parameters>
-            <ul>
-              <li>X ( number ) : The physical X.</li>
-              <li>Y ( number ) : The physical Y.</li>
-            </ul>
-          </ul>
-          <h2>Chess    </h2>
-          <h3>Expression:UID2LX </h3>
-          <ul>
-            <li>Get X index of chess by UID. Return (-1) if the chess is not on the board.</li>
-            <Parameters></Parameters>
-            <ul>
-              <li>UID ( number or string ) : The UID of chess.</li>
-            </ul>
-          </ul>
-          <h3>Expression:UID2LY </h3>
-          <ul>
-            <li>Get Y index of chess by UID. Return (-1) if the chess is not on the board.</li>
-            <Parameters></Parameters>
-            <ul>
-              <li>UID ( number or string ) : The UID of chess.</li>
-            </ul>
-          </ul>
-          <h3>Expression:UID2LZ </h3>
-          <ul>
-            <li>Get Z index of chess by UID. Return (-1) if the chess is not on the board.</li>
-            <Parameters></Parameters>
-            <ul>
-              <li>UID ( number or string ) : The UID of chess.</li>
-            </ul>
-          </ul>
+          <h2>Chess uid    </h2>
           <h3>Expression:LXYZ2UID </h3>
           <ul>
             <li>Get UID by XYZ index. Return (-1) if this position has no chess.</li>
@@ -498,23 +455,6 @@
             <ul>
               <li>UID ( number or string ) : The UID of chess.</li>
               <li>Z ( number or string ) : The logic Z.</li>
-            </ul>
-          </ul>
-          <h3>Expression:UID2LA </h3>
-          <ul>
-            <li>Get Logic angle by UID, in degree. (-1) is invalid angle.</li>
-            <Parameters></Parameters>
-            <ul>
-              <li>Origin ( number or string ) : The UID of chess at origin.</li>
-              <li>FaceTo ( number or string ) : The UID of chess to face.</li>
-            </ul>
-          </ul>
-          <h3>Expression:UID2ZCnt </h3>
-          <ul>
-            <li>Get z count at select chess by UID. Return 0 if the chess is not on the board.</li>
-            <Parameters></Parameters>
-            <ul>
-              <li>UID ( number or string ) : The UID of chess.</li>
             </ul>
           </ul>
           <h3>Expression:DIR2UID </h3>
@@ -582,6 +522,47 @@
             </ul>
           </ul>
           <h2>Logic    </h2>
+          <h3>Expression:UID2LX </h3>
+          <ul>
+            <li>Get X index of chess by UID. Return (-1) if the chess is not on the board.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>UID ( number or string ) : The UID of chess.</li>
+            </ul>
+          </ul>
+          <h3>Expression:UID2LY </h3>
+          <ul>
+            <li>Get Y index of chess by UID. Return (-1) if the chess is not on the board.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>UID ( number or string ) : The UID of chess.</li>
+            </ul>
+          </ul>
+          <h3>Expression:UID2LZ </h3>
+          <ul>
+            <li>Get Z index of chess by UID. Return (-1) if the chess is not on the board.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>UID ( number or string ) : The UID of chess.</li>
+            </ul>
+          </ul>
+          <h3>Expression:UID2LA </h3>
+          <ul>
+            <li>Get Logic angle by UID, in degree. (-1) is invalid angle.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Origin ( number or string ) : The UID of chess at origin.</li>
+              <li>FaceTo ( number or string ) : The UID of chess to face.</li>
+            </ul>
+          </ul>
+          <h3>Expression:UID2ZCnt </h3>
+          <ul>
+            <li>Get z count at select chess by UID. Return 0 if the chess is not on the board.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>UID ( number or string ) : The UID of chess.</li>
+            </ul>
+          </ul>
           <h3>Expression:LXY2ZCnt </h3>
           <ul>
             <li>Get z count at logic X,Y index. Return 0 if this position does not exist.</li>
@@ -719,6 +700,24 @@
               <li>Z ( number or string ) : The logic Z.</li>
             </ul>
           </ul>
+          <h3>Expression:PXY2NearestPX </h3>
+          <ul>
+            <li>Get nearest X co-ordinate of cell from physical position.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>X ( number ) : The physical X.</li>
+              <li>Y ( number ) : The physical Y.</li>
+            </ul>
+          </ul>
+          <h3>Expression:PXY2NearestPY </h3>
+          <ul>
+            <li>Get nearest Y co-ordinate of cell from physical position.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>X ( number ) : The physical X.</li>
+              <li>Y ( number ) : The physical Y.</li>
+            </ul>
+          </ul>
         </div>
       </div>
       <div class="panel panel-default">
@@ -742,25 +741,6 @@
             <Parameters></Parameters>
             <ul>
               <li>Chess ( object ) : Chess object.    </li>
-            </ul>
-          </ul>
-          <h2>Collisions    </h2>
-          <h4>Condition:On collision                    </h4>
-          <ul>
-            <li>Triggered when the object collides with another object.                    </li>
-            <Parameters></Parameters>
-            <ul>
-              <li>Chess ( object ) : Chess object A.    </li>
-              <li>Chess ( object ) : Chess object B.    </li>
-            </ul>
-          </ul>
-          <h4>Condition:Is overlapping                    </h4>
-          <ul>
-            <li>Test if the object is overlapping another object.                    </li>
-            <Parameters></Parameters>
-            <ul>
-              <li>Chess ( object ) : Chess object A.    </li>
-              <li>Chess ( object ) : Chess object B.    </li>
             </ul>
           </ul>
           <h2>Empty    </h2>
@@ -849,16 +829,26 @@
               <li>Chess ( object ) : Kicked chess object.    </li>
             </ul>
           </ul>
-          <h2>Neighborhood    </h2>
-          <h4>Condition:Are neighbors (UID)                    </h4>
+          <h2>Logic    </h2>
+          <h4>Condition:On collision                    </h4>
           <ul>
-            <li>Testing if two chess are neighbors.                    </li>
+            <li>Triggered when the object collides with another object.                    </li>
             <Parameters></Parameters>
             <ul>
-              <li>UID of chess ( number or string ) : UID of chess A.    </li>
-              <li>UID of chess ( number or string ) : UID of chess B.    </li>
+              <li>Chess ( object ) : Chess object A.    </li>
+              <li>Chess ( object ) : Chess object B.    </li>
             </ul>
           </ul>
+          <h4>Condition:Is overlapping                    </h4>
+          <ul>
+            <li>Test if the object is overlapping another object.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Chess ( object ) : Chess object A.    </li>
+              <li>Chess ( object ) : Chess object B.    </li>
+            </ul>
+          </ul>
+          <h2>Neighborhood    </h2>
           <h4>Condition:Are wrapped neighbors (UID)                    </h4>
           <ul>
             <li>Testing if two chess are wrapped neighbors.                    </li>
@@ -868,7 +858,27 @@
               <li>UID of chess ( number or string ) : UID of chess B.    </li>
             </ul>
           </ul>
-          <h2>SOL    </h2>
+          <h2>Neighbors    </h2>
+          <h4>Condition:Are neighbors (UID)                    </h4>
+          <ul>
+            <li>Testing if two chess are neighbors.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>UID of chess ( number or string ) : UID of chess A.    </li>
+              <li>UID of chess ( number or string ) : UID of chess B.    </li>
+            </ul>
+          </ul>
+          <h4>Condition:Pick neighbor chess                    </h4>
+          <ul>
+            <li>Pick neighbor chess.                    </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Origin ( object ) : Origin chess.    </li>
+              <li>Direction ( number or string ) : Direction of neighbor. (-1) for all directions    </li>
+              <li>Neighbor ( object ) : Neighbor chess object for pickking    </li>
+            </ul>
+          </ul>
+          <h2>Pick chess    </h2>
           <h4>Condition:Pick all chess                    </h4>
           <ul>
             <li>Pick all chess on the board.                    </li>
@@ -884,7 +894,7 @@
               <li>Chess ( object ) : Chess object.    </li>
             </ul>
           </ul>
-          <h2>SOL - above tile    </h2>
+          <h2>Pick chess above tiles    </h2>
           <h4>Condition:Pick chess above tile                    </h4>
           <ul>
             <li>Pick chess above tile.                    </li>
@@ -903,7 +913,7 @@
               <li>Tile UID ( number or string ) : Tile UID. Can be tile UID/symbol or a tile UID list in JSON string.    </li>
             </ul>
           </ul>
-          <h2>SOL - logical position    </h2>
+          <h2>Pick chess by lxyz    </h2>
           <h4>Condition:Pick chess at LX,LY                    </h4>
           <ul>
             <li>Pick chess at Logic X,Y.                    </li>
@@ -962,17 +972,6 @@
               <li>Logic X of right ( number ) : The X index (0-based) of the right tile.    </li>
               <li>Logic Y of top ( number ) : The Y index (0-based) of the top tile.    </li>
               <li>Logic Y of bottom ( number ) : The Y index (0-based) of the bottom tile.    </li>
-            </ul>
-          </ul>
-          <h2>SOL - neighbor    </h2>
-          <h4>Condition:Pick neighbor chess                    </h4>
-          <ul>
-            <li>Pick neighbor chess.                    </li>
-            <Parameters></Parameters>
-            <ul>
-              <li>Origin ( object ) : Origin chess.    </li>
-              <li>Direction ( number or string ) : Direction of neighbor. (-1) for all directions    </li>
-              <li>Neighbor ( object ) : Neighbor chess object for pickking    </li>
             </ul>
           </ul>
         </div>
