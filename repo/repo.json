@@ -125,11 +125,6 @@
         "timestamp": 1495982287633
     },
     {
-        "category": "repo",
-        "name": "rex_board",
-        "timestamp": 1496185141532
-    },
-    {
         "category": "plugins",
         "name": "rex_board_cubeTx",
         "timestamp": 1490590032815
