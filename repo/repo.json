@@ -126,6 +126,11 @@
     },
     {
         "category": "plugins",
+        "name": "rex_board",
+        "timestamp": 1496191479552
+    },
+    {
+        "category": "plugins",
         "name": "rex_board_cubeTx",
         "timestamp": 1490590032815
     },
