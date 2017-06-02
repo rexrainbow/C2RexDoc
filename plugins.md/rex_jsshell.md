@@ -21,11 +21,13 @@ None
 
 ## Usage
 
+### Invoke function
+
 ```mermaid
 graph TB
 
 LoadJSCode["Action:Load API"] --> SetFnName["Action:Set function name"]
-SetFnName --> AddParam["Action:Add value<br>Action:Add boolean<br>Action:Add null<br>Action:Add JSON<br>Action:Add callback"]
+SetFnName --> AddParam["Add parameters<br>----<br>Action:Add value<br>Action:Add boolean<br>Action:Add null<br>Action:Add JSON<br>Action:Add callback"]
 AddParam --> Invoke["Action:Invoke<br>Expression:ReturnValue"]
 
 ExecJS["Action:Execute Javascript<br>(Official browser plugin)"] --> SetFnName
@@ -65,3 +67,25 @@ end
    - `Expression:Param(n)`, to get nth parameter of callback
    - `Expression:Param(n, key)`, to get property of nth parameter of callback
    - `Expression:Param(n, key, defaultValue)`
+
+### Create instance
+
+```mermaid
+graph TB
+
+SetFnName["Action:Set object type"] --> AddParam["Add parameters<br>----<br>Action:Add value<br>Action:Add boolean<br>Action:Add null<br>Action:Add JSON<br>Action:Add callback"]
+AddParam --> CreateInstance["Action:Create instance<br>Expression:Prop"]
+```
+
+[Sample capx](https://1drv.ms/u/s!Am5HlOzVf0kHlynuEYccVuGBndAk)
+
+1. `Action:Set object type`
+2. Add parameters
+   - Action:Add value
+   - Action:Add boolean
+   - Action:Add null
+   - Action:Add JSON
+   - Action:Add callback
+3. `Action:Create instance`
+   - `Expression:Prop(key)`
+   - `Expression:Prop(key, defaultValue)`
