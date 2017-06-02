@@ -80,7 +80,7 @@ end
      - `Expression:Param(n)`, to get nth parameter of callback
      - `Expression:Param(n, key)`, to get property of nth parameter of callback
      - `Expression:Param(n, key, defaultValue)`
-   - `Condition:On function` of official function object, from C2 function callback (`Action:Add C2 function callback`)
+   - `Condition:On function` of official function object, from C2 function callback (`Action:Add C2 function callback`)  ([Sample capx](https://1drv.ms/u/s!Am5HlOzVf0kHlyyCKZIOXvR8XInG))
      - `Expression:Param(n)`, to get nth parameter of callback
 
 ### Create instance
