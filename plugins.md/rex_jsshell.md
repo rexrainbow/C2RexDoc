@@ -28,7 +28,8 @@ graph TB
 
 LoadJSCode["Action:Load API"] --> SetFnName["Action:Set function name"]
 SetFnName --> AddParam["Add parameters<br>----<br>Action:Add value<br>Action:Add boolean<br>Action:Add null<br>Action:Add JSON<br>Action:Add callback"]
-AddParam --> Invoke["Action:Invoke<br>Expression:ReturnValue"]
+AddParam --> Invoke["Action:Invoke"]
+Invoke --> ReturnValue["Return value<br>----<br>Expression:ReturnValue<br>Expression:Prop"]
 
 ExecJS["Action:Execute Javascript<br>(Official browser plugin)"] --> SetFnName
 
@@ -43,6 +44,8 @@ subgraph Invoke javascript function
 SetFnName
 AddParam
 Invoke
+ReturnValue
+Callback
 end
 ```
 
@@ -60,9 +63,14 @@ end
    - Action:Add JSON
    - Action:Add callback
 4. `Action:Invoke`
-   - `Expression:ReturnValue`
-   - `Expression:ReturnValue(key)`, to get property of return value
-   - `Expression:ReturnValue(key, defaultValue)`
+   - Return value
+     - `Expression:ReturnValue`
+     - `Expression:ReturnValue(key)`, to get property of return value
+     - `Expression:ReturnValue(key, defaultValue)`
+     - `Expression:Prop(key)`
+   - Store return object to variable  ([Sample capx](https://1drv.ms/u/s!Am5HlOzVf0kHlypUxGKJJmQVHHh7))
+     - `Expression:Prop(key)`
+     - `Expression:Prop(key, defaultValue)`
 5. `Condition:Callback`, from callback parameter
    - `Expression:Param(n)`, to get nth parameter of callback
    - `Expression:Param(n, key)`, to get property of nth parameter of callback
