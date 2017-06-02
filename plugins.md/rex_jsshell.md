@@ -88,7 +88,7 @@ end
 ```mermaid
 graph TB
 
-SetFnName["Action:Set object type"] --> AddParam["Add parameters<br>----<br>Action:Add value<br>Action:Add boolean<br>Action:Add null<br>Action:Add JSON<br>Action:Add callback<br>Action:Add object"]
+SetFnName["Action:Set object type"] --> AddParam["Add parameters<br>----<br>Action:Add value<br>Action:Add boolean<br>Action:Add null<br>Action:Add JSON<br>Action:Add callback<br>Add C2 function callback<br>Action:Add object"]
 AddParam --> CreateInstance["Action:Create instance<br>Expression:Prop"]
 ```
 
