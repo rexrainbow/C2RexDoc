@@ -27,7 +27,7 @@ None
 graph TB
 
 LoadJSCode["Action:Load API"] --> SetFnName["Action:Set function name"]
-SetFnName --> AddParam["Add parameters<br>----<br>Action:Add value<br>Action:Add boolean<br>Action:Add null<br>Action:Add JSON<br>Action:Add callback"]
+SetFnName --> AddParam["Add parameters<br>----<br>Action:Add value<br>Action:Add boolean<br>Action:Add null<br>Action:Add JSON<br>Action:Add callback<br>Action:Add object"]
 AddParam --> Invoke["Action:Invoke"]
 Invoke --> ReturnValue["Return value<br>----<br>Expression:ReturnValue<br>Expression:Prop"]
 
@@ -81,7 +81,7 @@ end
 ```mermaid
 graph TB
 
-SetFnName["Action:Set object type"] --> AddParam["Add parameters<br>----<br>Action:Add value<br>Action:Add boolean<br>Action:Add null<br>Action:Add JSON<br>Action:Add callback"]
+SetFnName["Action:Set object type"] --> AddParam["Add parameters<br>----<br>Action:Add value<br>Action:Add boolean<br>Action:Add null<br>Action:Add JSON<br>Action:Add callback<br>Action:Add object"]
 AddParam --> CreateInstance["Action:Create instance<br>Expression:Prop"]
 ```
 
