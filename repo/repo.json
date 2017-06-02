@@ -117,7 +117,7 @@
     {
         "category": "behaviors",
         "name": "rex_bHash",
-        "timestamp": 1490590066112
+        "timestamp": 1496372915184
     },
     {
         "category": "behaviors",
@@ -672,7 +672,7 @@
     {
         "category": "plugins",
         "name": "rex_hash",
-        "timestamp": 1490590040862
+        "timestamp": 1496372899538
     },
     {
         "category": "behaviors",
@@ -717,7 +717,7 @@
     {
         "category": "plugins",
         "name": "rex_jsshell",
-        "timestamp": 1495848532347
+        "timestamp": 1496372905263
     },
     {
         "category": "plugins",
