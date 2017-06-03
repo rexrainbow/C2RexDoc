@@ -50,7 +50,7 @@
           <h2>Invoke      </h2>
           <h3>Action:Invoke      </h3>
           <ul>
-            <li>Invoke function.   </li>
+            <li>Invoke javascript function.   </li>
             <Parameters></Parameters>
             <ul>
               <li>Name ( string ) : Variable name in dot notation</li>
@@ -191,6 +191,71 @@
             <li>Get return value.</li>
             <Parameters></Parameters>
             <ul>
+            </ul>
+          </ul>
+          <h2>Invoke    </h2>
+          <h3>Expression:Call </h3>
+          <ul>
+            <li>Call a javascript function with parameters and return its return value.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Name ( string ) : Function name in dot notation</li>
+            </ul>
+          </ul>
+          <h2>Prepare - Parameter    </h2>
+          <h3>Expression:ValueParam </h3>
+          <ul>
+            <li>Add number or string parameter.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Value ( number or string ) : Number or string value.</li>
+            </ul>
+          </ul>
+          <h3>Expression:JSONParam </h3>
+          <ul>
+            <li>Add JSON parameter.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>JSON ( string ) : JSON string.</li>
+            </ul>
+          </ul>
+          <h3>Expression:BooleanParam </h3>
+          <ul>
+            <li>Add boolean parameter.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Boolean ( number ) : Boolean value. 1=true, 0=false.</li>
+            </ul>
+          </ul>
+          <h3>Expression:CallbackParam </h3>
+          <ul>
+            <li>Add callback parameter.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Callback ( string ) : Callback name.</li>
+            </ul>
+          </ul>
+          <h3>Expression:NullParam </h3>
+          <ul>
+            <li>Add null parameter.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:ObjectParam </h3>
+          <ul>
+            <li>Add object parameter.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>Name ( string ) : Variable name in dot notation</li>
+            </ul>
+          </ul>
+          <h3>Expression:C2FnParam </h3>
+          <ul>
+            <li>Add C2 function callback parameter.</li>
+            <Parameters></Parameters>
+            <ul>
+              <li>C2 function name ( string ) : C2 function name.</li>
             </ul>
           </ul>
           <h2>Properties    </h2>
