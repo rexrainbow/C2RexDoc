@@ -11,7 +11,6 @@
       - Behavior
   - [Function serialize](rex_fncallpkg.html)
   - [Copy function parameters](rex_fnParam2array.html)
-  - [Invoke javascript function](rex_jsshell.html)
 - Finite state machine
   - Finite state machine
     - [Plugin](rex_gfsm.html)
@@ -24,3 +23,5 @@
 - Table control
   - Grid control
   - List control
+- Invoke Javascript function
+  - [Invoke javascript function](rex_jsshell.html)

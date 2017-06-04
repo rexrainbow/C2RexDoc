@@ -21,7 +21,7 @@ None
 
 ## Usage
 
-### Invoke function
+### Invoke function by actions
 
 ```mermaid
 graph TB
@@ -55,8 +55,7 @@ end
 
 1. Load javascript
    - `Action:Load API`  ([Sample capx](https://1drv.ms/u/s!Am5HlOzVf0kHlw7eyf712LjnrFUD))
-   - `Action:Execute Javascript`  ([Sample capx](https://1drv.ms/u/s!Am5HlOzVf0kHlw3JugBBOi6bIQwm))
-     - (Official browser plugin)
+   - Official browser plugin: `Action:Execute Javascript`  ([Sample capx](https://1drv.ms/u/s!Am5HlOzVf0kHlw3JugBBOi6bIQwm))
 2. `Action:Set function name`
 3. Add parameters
    - `Action:Add value`
@@ -82,6 +81,20 @@ end
      - `Expression:Param(n, key, defaultValue)`
    - `Condition:On function` of official function object, from C2 function callback (`Action:Add C2 function callback`)  ([Sample capx](https://1drv.ms/u/s!Am5HlOzVf0kHlyyCKZIOXvR8XInG))
      - `Expression:Param(n)`, to get nth parameter of callback
+
+### Invoke function by expression
+
+[Sample capx](https://1drv.ms/u/s!Am5HlOzVf0kHly1VRiJovsC-hVie)
+
+- `Expression:Call(functionName, parameter0, parameter1, ...) `
+  - Parameter
+    - Number, or string: `Expression:ValueParam`
+    - Boolean: `Expression:BooleanParam`
+    - Null: `Expression:NullParam`
+    - JSON: `Expression:JSONParam`
+    - Callback: `Expression:CallbackParam`
+    - C2 callback: `Expression:C2FnParam`
+    - Object: `Expression:ObjectParam`
 
 ### Create instance
 
