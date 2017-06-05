@@ -4,14 +4,15 @@ from zipfile import ZipFile as __zipFile
 from zipfile import ZIP_DEFLATED
 
 
-def zipFolder(source_folder, out_file_path):
+def zipFolder(source_folder, out_file_path):    
     zout =  __zipFile(out_file_path, "w", ZIP_DEFLATED)
     source_list = []
     target_list = []
+    target_root = op.split(source_folder)[-1]
     for root, dirs, files in os.walk(source_folder):
         for f in files:
             source_list.append( op.join(root, f) )
-            target_list.append( op.join( op.split(source_folder)[-1], f) )
+            target_list.append( op.join( target_root, f) )
 
     for source, target in zip(source_list, target_list):
         zout.write(source, target)
