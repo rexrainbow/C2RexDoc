@@ -102,7 +102,7 @@ end
 graph TB
 
 SetFnName["Action:Set object type"] --> AddParam["Add parameters<br>----<br>Action:Add value<br>Action:Add boolean<br>Action:Add null<br>Action:Add JSON<br>Action:Add callback<br>Add C2 function callback<br>Action:Add object"]
-AddParam --> CreateInstance["Action:Create instance<br>Expression:Prop"]
+AddParam --> CreateInstance["Action:New instance<br>Expression:Prop"]
 ```
 
 [Sample capx](https://1drv.ms/u/s!Am5HlOzVf0kHlynuEYccVuGBndAk)
@@ -116,6 +116,6 @@ AddParam --> CreateInstance["Action:Create instance<br>Expression:Prop"]
    - `Action:Add callback`
    - `Action:Add C2 function callback`
    - `Action:Add object`
-3. `Action:Create instance`
+3. `Action:New instance`
    - `Expression:Prop(key)`
    - `Expression:Prop(key, defaultValue)`
