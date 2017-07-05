@@ -27,7 +27,7 @@ None
 graph TB
 
 LoadJSCode["Action:Load API"] --> SetFnName["Action:Set function name"]
-SetFnName --> AddParam["Add parameters<br>----<br>Action:Add value<br>Action:Add boolean<br>Action:Add null<br>Action:Add JSON<br>Action:Add callback<br>Add C2 function callback<br>Action:Add object"]
+SetFnName --> AddParam["Add parameters<br>----<br>Action:Add value<br>Action:Add boolean<br>Action:Add null<br>Action:Add JSON<br>Action:Add callback<br>Action:Add C2 function callback<br>Action:Add object"]
 AddParam --> Invoke["Action:Invoke"]
 Invoke --> ReturnValue["Return value<br>----<br>Expression:ReturnValue<br>Expression:Prop"]
 
