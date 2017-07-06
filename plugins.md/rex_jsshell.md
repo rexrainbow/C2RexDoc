@@ -119,3 +119,9 @@ AddParam --> CreateInstance["Action:New instance<br>Expression:Prop"]
 3. `Action:New instance`
    - `Expression:Prop(key)`
    - `Expression:Prop(key, defaultValue)`
+
+### More examples
+
+- [A simple test of deepstream.io's client](https://1drv.ms/u/s!Am5HlOzVf0kHl3BvqIquJD5kNRfk)
+  - [Deepstream.io](https://deepstream.io/docs/client-js/client/)
+  - [DeepstreamHub](https://deepstreamhub.com/)
