@@ -124,6 +124,7 @@ end
      - `Action:Set value`
        - options: `if greater` , `if less`
      - `Action:Set boolean value`
+     - `Action:Set JSON`
      - `Action:Add to`
 
 2. `Action:Save`
