@@ -88,6 +88,15 @@
               <li>UserID ( string ) : UserID from authentication.</li>
             </ul>
           </ul>
+          <h2>Score      </h2>
+          <h3>Action:Get score      </h3>
+          <ul>
+            <li>Get score.   </li>
+            <Parameters></Parameters>
+            <ul>
+              <li>UserID ( string ) : UserID from authentication.</li>
+            </ul>
+          </ul>
           <h2>Send      </h2>
           <h3>Action:Post score      </h3>
           <ul>
@@ -223,6 +232,28 @@
               <li>Rank ( number ) : Rank index (0-based).</li>
             </ul>
           </ul>
+          <h2>Request    </h2>
+          <h3>Expression:LastUserID </h3>
+          <ul>
+            <li>Get requested userID. Return &quot;&quot; if invalided.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:LastScore </h3>
+          <ul>
+            <li>Get requested score. Return 0 if invalided.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
+          <h3>Expression:LastPlayerName </h3>
+          <ul>
+            <li>Get requested score. Return &quot;&quot; if invalided.</li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
           <h2>Update - for each    </h2>
           <h3>Expression:CurPlayerName </h3>
           <ul>
@@ -266,6 +297,14 @@
           <h2>Conditions</h2>
         </div>
         <div class="panel-body">              
+          <h2>Score - get    </h2>
+          <h4>Condition:On get score                    </h4>
+          <ul>
+            <li>Triggered when get score.                    </li>
+            <Parameters></Parameters>
+            <ul>
+            </ul>
+          </ul>
           <h2>Send    </h2>
           <h4>Condition:On post complete                    </h4>
           <ul>
