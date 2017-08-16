@@ -17,7 +17,7 @@ Handles loading and posting of high scores and scoreboards.
 
 ## Dependence
 
-- [rex_ngio_authentication](rex_ngio_gateway.html)
+- [rex_ngio_authentication](rex_ngio_authentication.html)
 
 ## Usage
 
@@ -78,6 +78,8 @@ ActionIsSuccess --> |No| CondOnError["Condition:On post score error"]
 CondOnError --- ExpError["Expression:ErrorMessage"]
 end
 ```
+
+[Sample capx](https://1drv.ms/u/s!Am5HlOzVf0kHlA9Gp1xOszDng-HH)
 
 1. Set board ID
    - Property `ID`, or
