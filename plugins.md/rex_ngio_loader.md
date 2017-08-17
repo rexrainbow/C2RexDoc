@@ -17,7 +17,7 @@ Handles loading various URLs and tracking referral stats.
 
 ## Dependence
 
-- [rex_ngio_authentication](rex_ngio_gateway.html)
+- [rex_ngio_authentication](rex_ngio_authentication.html)
 
 ## Usage
 
@@ -25,7 +25,7 @@ Handles loading various URLs and tracking referral stats.
 
 ### Prepare
 
-Put [rex_ngio_authentication](http://c2rexplugins.weebly.com/rex_ngio_gateway.html) into project, and set property `App id` and `AES key`.
+Put [rex_ngio_authentication](rex_ngio_authentication.html) into project, and set property `App id` and `AES key`.
 
 ### Host
 

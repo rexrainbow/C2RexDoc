@@ -17,7 +17,7 @@ Provides information about the gateway server.
 
 ## Dependence
 
-- [rex_ngio_authentication](rex_ngio_gateway.html)
+- [rex_ngio_authentication](rex_ngio_authentication.html)
 
 ## Usage
 
@@ -25,7 +25,7 @@ Provides information about the gateway server.
 
 ### Prepare
 
-Put [rex_ngio_authentication](http://c2rexplugins.weebly.com/rex_ngio_gateway.html) into project, and set property `App id` and `AES key`.
+Put [rex_ngio_authentication](rex_ngio_authentication.html) into project, and set property `App id` and `AES key`.
 
 ### Get date-time
 
