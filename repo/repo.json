@@ -1315,6 +1315,11 @@
         "timestamp": 1490590048750
     },
     {
+        "category": "behaviors",
+        "name": "rex_tinycolor",
+        "timestamp": 1503795897171
+    },
+    {
         "category": "plugins",
         "name": "rex_tmx_importer_v2",
         "timestamp": 1498180770298
