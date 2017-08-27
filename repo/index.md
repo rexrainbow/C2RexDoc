@@ -261,6 +261,7 @@
 - [rex_timer](https://rexrainbow.github.io/C2RexDoc/repo/rex_timer.7z)  
 - [rex_time_away](https://rexrainbow.github.io/C2RexDoc/repo/rex_time_away.7z)  
 - [rex_time_awayL](https://rexrainbow.github.io/C2RexDoc/repo/rex_time_awayL.7z)  
+- [rex_tinycolor](https://rexrainbow.github.io/C2RexDoc/repo/rex_tinycolor.7z)  
 - [rex_tmx_importer_v2](https://rexrainbow.github.io/C2RexDoc/repo/rex_tmx_importer_v2.7z)  
 - [rex_tmx_JSON_parser](https://rexrainbow.github.io/C2RexDoc/repo/rex_tmx_JSON_parser.7z)  
 - [rex_tmx_XML_parser](https://rexrainbow.github.io/C2RexDoc/repo/rex_tmx_XML_parser.7z)  
