@@ -1,0 +1,25 @@
+# Logic
+
+- Function
+  - Function objects
+    - [Official function](https://www.scirra.com/manual/149/function)
+    - Function with name index parameters 
+      - [Singleton plugin](rex_function2.md)
+      - [Multiple instances plugin](rex_function2m.md)
+      - Behavior
+  - [Function serialize](rex_fncallpkg.md)
+  - [Copy function parameters](rex_fnParam2array.md)
+- Finite state machine
+  - Finite state machine
+    - [Plugin](rex_gfsm.md)
+    - [Behavior](rex_fsm.md)
+- Flow control
+  - Wait event
+  - Event balancer
+  - Loop iterator
+  - Tween tasks
+- Table control
+  - Grid control
+  - List control
+- Invoke Javascript function
+  - [Invoke javascript function](rex_jsshell.md)
