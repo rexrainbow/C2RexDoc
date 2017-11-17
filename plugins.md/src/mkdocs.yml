@@ -1,6 +1,7 @@
-site_name: Rex's Construct 2 plugins¶
+site_name: Rex's Construct 2 plugins
+
 pages:
-    - Home: 'categories.index.md'
+    - Home: 'index.md'
     - Download tool: 'my-plugins-repository-v3.md'
     - Categories: 
         - System: 'system.index.md'
