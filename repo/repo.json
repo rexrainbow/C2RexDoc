@@ -122,7 +122,7 @@
     {
         "category": "behaviors",
         "name": "rex_bnickname",
-        "timestamp": 1516331886914
+        "timestamp": 1516333632604
     },
     {
         "category": "plugins",
@@ -942,7 +942,7 @@
     {
         "category": "plugins",
         "name": "rex_nickname",
-        "timestamp": 1516331899770
+        "timestamp": 1516333618402
     },
     {
         "category": "behaviors",
@@ -1102,7 +1102,7 @@
     {
         "category": "behaviors",
         "name": "rex_replacer",
-        "timestamp": 1490590068192
+        "timestamp": 1516333632601
     },
     {
         "category": "behaviors",
